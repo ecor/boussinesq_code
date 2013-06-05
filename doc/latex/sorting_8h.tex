@@ -1,0 +1,157 @@
+\hypertarget{sorting_8h}{\section{B\-G\-E\-O\-M\-E\-T\-R\-Y/sorting.h File Reference}
+\label{sorting_8h}\index{B\-G\-E\-O\-M\-E\-T\-R\-Y/sorting.\-h@{B\-G\-E\-O\-M\-E\-T\-R\-Y/sorting.\-h}}
+}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{sorting_8h_a4518361731787136d6a20efab1bac01f}{bubble\-\_\-sort} (\hyperlink{struct_l_o_n_g_v_e_c_t_o_r}{L\-O\-N\-G\-V\-E\-C\-T\-O\-R} $\ast$v, short print)
+\item 
+\hyperlink{struct_l_o_n_g_v_e_c_t_o_r}{L\-O\-N\-G\-V\-E\-C\-T\-O\-R} $\ast$ \hyperlink{sorting_8h_ac0aa2d42f8ffcc87b98ccd3ed194a9d4}{addresses\-\_\-bubble\-\_\-sort} (\hyperlink{struct_l_o_n_g_v_e_c_t_o_r}{L\-O\-N\-G\-V\-E\-C\-T\-O\-R} $\ast$v, short print)
+\item 
+int \hyperlink{sorting_8h_a9b723c07e2e14905a20ffc0fa2e7d616}{bubble\-\_\-sort\-\_\-matrix} (\hyperlink{struct_l_o_n_g_v_e_c_t_o_r}{L\-O\-N\-G\-V\-E\-C\-T\-O\-R} $\ast$v, \hyperlink{struct_l_o_n_g_m_a_t_r_i_x}{L\-O\-N\-G\-M\-A\-T\-R\-I\-X} $\ast$m, short print)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{sorting_8h_ac0aa2d42f8ffcc87b98ccd3ed194a9d4}{\index{sorting.\-h@{sorting.\-h}!addresses\-\_\-bubble\-\_\-sort@{addresses\-\_\-bubble\-\_\-sort}}
+\index{addresses\-\_\-bubble\-\_\-sort@{addresses\-\_\-bubble\-\_\-sort}!sorting.h@{sorting.\-h}}
+\subsubsection[{addresses\-\_\-bubble\-\_\-sort}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\-O\-N\-G\-V\-E\-C\-T\-O\-R}$\ast$ addresses\-\_\-bubble\-\_\-sort (
+\begin{DoxyParamCaption}
+\item[{{\bf L\-O\-N\-G\-V\-E\-C\-T\-O\-R} $\ast$}]{v, }
+\item[{short}]{print}
+\end{DoxyParamCaption}
+)}}\label{sorting_8h_ac0aa2d42f8ffcc87b98ccd3ed194a9d4}
+
+\begin{DoxyParams}{Parameters}
+{\em v} & (\hyperlink{struct_l_o_n_g_v_e_c_t_o_r}{L\-O\-N\-G\-V\-E\-C\-T\-O\-R} $\ast$) -\/ vector to be sorted\\
+\hline
+\end{DoxyParams}
+\begin{DoxyDate}{Date}
+March 2008 
+\end{DoxyDate}
+\begin{DoxyAuthor}{Author}
+Emanuele Cordano
+\end{DoxyAuthor}
+it makes a bubble sort of the vector v (see the pseudo-\/code on \href{http://en.wikipedia.org/wiki/Bubble_sort#Pseudocode_implementation}{\tt http\-://en.\-wikipedia.\-org/wiki/\-Bubble\-\_\-sort\#\-Pseudocode\-\_\-implementation} )
+
+\begin{DoxyReturn}{Returns}
+the address of the \char`\"{}old\char`\"{} array to be sorted.
+\end{DoxyReturn}
+swap v-\/$>$element\mbox{[}i\mbox{]} and v-\/$>$element\mbox{[}i+1\mbox{]}
+
+swap v-\/$>$element\mbox{[}i\mbox{]} and v-\/$>$element\mbox{[}i+1\mbox{]} 
+
+Definition at line 88 of file sorting.\-c.
+
+
+
+References new\-\_\-longvector(), L\-O\-N\-G\-V\-E\-C\-T\-O\-R\-::nh, L\-O\-N\-G\-V\-E\-C\-T\-O\-R\-::nl, and print\-\_\-longvector\-\_\-elements().
+
+
+
+Referenced by bubble\-\_\-sort\-\_\-matrix().
+
+\hypertarget{sorting_8h_a4518361731787136d6a20efab1bac01f}{\index{sorting.\-h@{sorting.\-h}!bubble\-\_\-sort@{bubble\-\_\-sort}}
+\index{bubble\-\_\-sort@{bubble\-\_\-sort}!sorting.h@{sorting.\-h}}
+\subsubsection[{bubble\-\_\-sort}]{\setlength{\rightskip}{0pt plus 5cm}int bubble\-\_\-sort (
+\begin{DoxyParamCaption}
+\item[{{\bf L\-O\-N\-G\-V\-E\-C\-T\-O\-R} $\ast$}]{v, }
+\item[{short}]{print}
+\end{DoxyParamCaption}
+)}}\label{sorting_8h_a4518361731787136d6a20efab1bac01f}
+\begin{DoxyVerb}BGEOMETRY BUILDS THE MESH FROM A RASTER FOR THE BOUSSINESQ MODEL
+\end{DoxyVerb}
+ B\-G\-E\-O\-M\-E\-T\-R\-Y Version 0.\-9375 K\-Mackenzie
+
+file \hyperlink{sorting_8c}{sorting.\-c}
+
+Copyright, 2009 Emanuele Cordano and Riccardo Rigon
+
+This file is part of B\-G\-E\-O\-M\-E\-T\-R\-Y. B\-G\-E\-O\-M\-E\-T\-R\-Y is free software\-: you can redistribute it and/or modify it under the terms of the G\-N\-U General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
+
+B\-G\-E\-O\-M\-E\-T\-R\-Y is distributed in the hope that it will be useful, but W\-I\-T\-H\-O\-U\-T A\-N\-Y W\-A\-R\-R\-A\-N\-T\-Y; without even the implied warranty of M\-E\-R\-C\-H\-A\-N\-T\-A\-B\-I\-L\-I\-T\-Y or F\-I\-T\-N\-E\-S\-S F\-O\-R A P\-A\-R\-T\-I\-C\-U\-L\-A\-R P\-U\-R\-P\-O\-S\-E. See the G\-N\-U General Public License for more details.
+
+You should have received a copy of the G\-N\-U General Public License along with this program. If not, see \href{http://www.gnu.org/licenses/}{\tt http\-://www.\-gnu.\-org/licenses/}.
+
+int swap(long a, long b) \{
+
+
+\begin{DoxyParams}{Parameters}
+{\em long} & a,b two (long) integer numbers\\
+\hline
+\end{DoxyParams}
+\begin{DoxyDate}{Date}
+March 2009 
+\end{DoxyDate}
+\begin{DoxyAuthor}{Author}
+Emanuele Cordano;
+\end{DoxyAuthor}
+\begin{DoxyReturn}{Returns}
+0 if a$>$b and swaps a and b, 1 if a$<$=b \begin{DoxyVerb}    long mk;
+
+    if (a>b) {
+            mk=a;
+            a=b;
+            b=mk;
+            return 0;
+    } else {
+            return 1;
+    }
+
+    return 0;
+\end{DoxyVerb}
+ 
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em v} & (\hyperlink{struct_l_o_n_g_v_e_c_t_o_r}{L\-O\-N\-G\-V\-E\-C\-T\-O\-R} $\ast$) -\/ vector to be sorted\\
+\hline
+\end{DoxyParams}
+\begin{DoxyDate}{Date}
+March 2008 
+\end{DoxyDate}
+\begin{DoxyAuthor}{Author}
+Emanuele Cordano
+\end{DoxyAuthor}
+it makes a bubble sort of the vector v (see the pseudo-\/code on \href{http://en.wikipedia.org/wiki/Bubble_sort#Pseudocode_implementation}{\tt http\-://en.\-wikipedia.\-org/wiki/\-Bubble\-\_\-sort\#\-Pseudocode\-\_\-implementation} )
+
+swap v-\/$>$element\mbox{[}i\mbox{]} and v-\/$>$element\mbox{[}i+1\mbox{]} 
+
+Definition at line 52 of file sorting.\-c.
+
+
+
+References L\-O\-N\-G\-V\-E\-C\-T\-O\-R\-::nh, L\-O\-N\-G\-V\-E\-C\-T\-O\-R\-::nl, and print\-\_\-longvector\-\_\-elements().
+
+\hypertarget{sorting_8h_a9b723c07e2e14905a20ffc0fa2e7d616}{\index{sorting.\-h@{sorting.\-h}!bubble\-\_\-sort\-\_\-matrix@{bubble\-\_\-sort\-\_\-matrix}}
+\index{bubble\-\_\-sort\-\_\-matrix@{bubble\-\_\-sort\-\_\-matrix}!sorting.h@{sorting.\-h}}
+\subsubsection[{bubble\-\_\-sort\-\_\-matrix}]{\setlength{\rightskip}{0pt plus 5cm}int bubble\-\_\-sort\-\_\-matrix (
+\begin{DoxyParamCaption}
+\item[{{\bf L\-O\-N\-G\-V\-E\-C\-T\-O\-R} $\ast$}]{v, }
+\item[{{\bf L\-O\-N\-G\-M\-A\-T\-R\-I\-X} $\ast$}]{m, }
+\item[{short}]{print}
+\end{DoxyParamCaption}
+)}}\label{sorting_8h_a9b723c07e2e14905a20ffc0fa2e7d616}
+\begin{DoxyAuthor}{Author}
+Emanuele Cordano 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+March 2009
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em v} & (\hyperlink{struct_l_o_n_g_v_e_c_t_o_r}{L\-O\-N\-G\-V\-E\-C\-T\-O\-R} $\ast$) -\/ vector to be sorted \\
+\hline
+{\em M} & (\hyperlink{struct_l_o_n_g_m_a_t_r_i_x}{L\-O\-N\-G\-M\-A\-T\-R\-I\-X} $\ast$) -\/ matrix \\
+\hline
+{\em print} & (short)\\
+\hline
+\end{DoxyParams}
+It sorts v and then replace
+
+Definition at line 145 of file sorting.\-c.
+
+
+
+References addresses\-\_\-bubble\-\_\-sort(), L\-O\-N\-G\-M\-A\-T\-R\-I\-X\-::ncl, L\-O\-N\-G\-V\-E\-C\-T\-O\-R\-::nh, L\-O\-N\-G\-M\-A\-T\-R\-I\-X\-::nrh, and L\-O\-N\-G\-M\-A\-T\-R\-I\-X\-::nrl.
+

@@ -1,0 +1,155 @@
+\hypertarget{doublevector__utilities_8c}{\section{M\-A\-T\-H2/doublevector\-\_\-utilities.c File Reference}
+\label{doublevector__utilities_8c}\index{M\-A\-T\-H2/doublevector\-\_\-utilities.\-c@{M\-A\-T\-H2/doublevector\-\_\-utilities.\-c}}
+}
+{\ttfamily \#include \char`\"{}turtle.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}t\-\_\-datamanipulation.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}t\-\_\-utilities.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}linear\-\_\-span.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}doublevector\-\_\-utilities.\-h\char`\"{}}\\*
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{doublevector__utilities_8c_a38962cc736b378893cfc21e53b593aa9}{M\-A\-X\-\_\-\-R\-E\-I\-T\-E\-R\-A\-T\-O\-N}~1
+\item 
+\#define \hyperlink{doublevector__utilities_8c_af59717c0d547c8fcef4e63c9bbb80973}{D\-E\-L\-T\-A\-\_\-\-M\-I\-N}~epsilon
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{doublevector__utilities_8c_acba06b51c2cc41e063dd2e9bfdf3eadf}{linear\-\_\-comb\-\_\-doublevector} (\hyperlink{struct_d_o_u_b_l_e_v_e_c_t_o_r}{D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} $\ast$result, \hyperlink{struct_d_o_u_b_l_e_v_e_c_t_o_r}{D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} $\ast$a, \hyperlink{struct_d_o_u_b_l_e_v_e_c_t_o_r}{D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} $\ast$b, double ca, double cb)
+\item 
+double \hyperlink{doublevector__utilities_8c_a3a020ccefd259981c34b9791cbf4e6dd}{max\-\_\-doublevector} (\hyperlink{struct_d_o_u_b_l_e_v_e_c_t_o_r}{D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} $\ast$v)
+\item 
+double \hyperlink{doublevector__utilities_8c_ad0899a08ca309aff4954bbc7bef7b694}{min\-\_\-doublevector} (\hyperlink{struct_d_o_u_b_l_e_v_e_c_t_o_r}{D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} $\ast$v)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{DoxyVerb}MATH2 CONTAINS ALGEBRAIC ROUTINES FOR GEOtop AND OTHER MODELS
+\end{DoxyVerb}
+ M\-A\-T\-H2 Version 0.\-9375 K\-Mackenzie
+
+file \hyperlink{doublevector__utilities_8c}{doublevector\-\_\-utilities.\-c}
+
+Copyright, 2009 Stefano Endrizzi, Emanuele Cordano, Matteo Dall'Amico and Riccardo Rigon
+
+This file is part of M\-A\-T\-H2. M\-A\-T\-H2 is free software\-: you can redistribute it and/or modify it under the terms of the G\-N\-U General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
+
+M\-A\-T\-H2 is distributed in the hope that it will be useful, but W\-I\-T\-H\-O\-U\-T A\-N\-Y W\-A\-R\-R\-A\-N\-T\-Y; without even the implied warranty of M\-E\-R\-C\-H\-A\-N\-T\-A\-B\-I\-L\-I\-T\-Y or F\-I\-T\-N\-E\-S\-S F\-O\-R A P\-A\-R\-T\-I\-C\-U\-L\-A\-R P\-U\-R\-P\-O\-S\-E. See the G\-N\-U General Public License for more details.
+
+You should have received a copy of the G\-N\-U General Public License along with this program. If not, see \href{http://www.gnu.org/licenses/}{\tt http\-://www.\-gnu.\-org/licenses/}.
+
+\begin{DoxyAuthor}{Author}
+Emanuele cordano 
+\end{DoxyAuthor}
+
+
+Definition in file \hyperlink{doublevector__utilities_8c_source}{doublevector\-\_\-utilities.\-c}.
+
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{doublevector__utilities_8c_af59717c0d547c8fcef4e63c9bbb80973}{\index{doublevector\-\_\-utilities.\-c@{doublevector\-\_\-utilities.\-c}!D\-E\-L\-T\-A\-\_\-\-M\-I\-N@{D\-E\-L\-T\-A\-\_\-\-M\-I\-N}}
+\index{D\-E\-L\-T\-A\-\_\-\-M\-I\-N@{D\-E\-L\-T\-A\-\_\-\-M\-I\-N}!doublevector_utilities.c@{doublevector\-\_\-utilities.\-c}}
+\subsubsection[{D\-E\-L\-T\-A\-\_\-\-M\-I\-N}]{\setlength{\rightskip}{0pt plus 5cm}\#define D\-E\-L\-T\-A\-\_\-\-M\-I\-N~epsilon}}\label{doublevector__utilities_8c_af59717c0d547c8fcef4e63c9bbb80973}
+
+
+Definition at line 41 of file doublevector\-\_\-utilities.\-c.
+
+\hypertarget{doublevector__utilities_8c_a38962cc736b378893cfc21e53b593aa9}{\index{doublevector\-\_\-utilities.\-c@{doublevector\-\_\-utilities.\-c}!M\-A\-X\-\_\-\-R\-E\-I\-T\-E\-R\-A\-T\-O\-N@{M\-A\-X\-\_\-\-R\-E\-I\-T\-E\-R\-A\-T\-O\-N}}
+\index{M\-A\-X\-\_\-\-R\-E\-I\-T\-E\-R\-A\-T\-O\-N@{M\-A\-X\-\_\-\-R\-E\-I\-T\-E\-R\-A\-T\-O\-N}!doublevector_utilities.c@{doublevector\-\_\-utilities.\-c}}
+\subsubsection[{M\-A\-X\-\_\-\-R\-E\-I\-T\-E\-R\-A\-T\-O\-N}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\-A\-X\-\_\-\-R\-E\-I\-T\-E\-R\-A\-T\-O\-N~1}}\label{doublevector__utilities_8c_a38962cc736b378893cfc21e53b593aa9}
+
+
+Definition at line 39 of file doublevector\-\_\-utilities.\-c.
+
+
+
+\subsection{Function Documentation}
+\hypertarget{doublevector__utilities_8c_acba06b51c2cc41e063dd2e9bfdf3eadf}{\index{doublevector\-\_\-utilities.\-c@{doublevector\-\_\-utilities.\-c}!linear\-\_\-comb\-\_\-doublevector@{linear\-\_\-comb\-\_\-doublevector}}
+\index{linear\-\_\-comb\-\_\-doublevector@{linear\-\_\-comb\-\_\-doublevector}!doublevector_utilities.c@{doublevector\-\_\-utilities.\-c}}
+\subsubsection[{linear\-\_\-comb\-\_\-doublevector}]{\setlength{\rightskip}{0pt plus 5cm}int linear\-\_\-comb\-\_\-doublevector (
+\begin{DoxyParamCaption}
+\item[{{\bf D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} $\ast$}]{result, }
+\item[{{\bf D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} $\ast$}]{a, }
+\item[{{\bf D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} $\ast$}]{b, }
+\item[{double}]{ca, }
+\item[{double}]{cb}
+\end{DoxyParamCaption}
+)}}\label{doublevector__utilities_8c_acba06b51c2cc41e063dd2e9bfdf3eadf}
+
+\begin{DoxyParams}{Parameters}
+{\em result} & -\/ (\hyperlink{struct_d_o_u_b_l_e_v_e_c_t_o_r}{D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} $\ast$) result vector (r=a$\ast$ca+b$\ast$cb) \\
+\hline
+{\em a} & -\/ (D\-O\-U\-B\-L\-E\-C\-T\-O\-R $\ast$) vector \\
+\hline
+{\em b} & -\/ (D\-O\-U\-B\-L\-E\-C\-T\-O\-R $\ast$) vector \\
+\hline
+{\em ca} & -\/ coefficient for \char`\"{}a\char`\"{} vector \\
+\hline
+{\em cb} & -\/ coefficient for \char`\"{}b\char`\"{} vector\\
+\hline
+\end{DoxyParams}
+\begin{DoxyAuthor}{Author}
+Emanuele Cordano 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+November 2008
+\end{DoxyDate}
+\begin{DoxyReturn}{Returns}
+if r is solved correctly or -\/1 otherwise
+\end{DoxyReturn}
+
+
+Definition at line 43 of file doublevector\-\_\-utilities.\-c.
+
+
+
+References D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R\-::nh, and D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R\-::nl.
+
+\hypertarget{doublevector__utilities_8c_a3a020ccefd259981c34b9791cbf4e6dd}{\index{doublevector\-\_\-utilities.\-c@{doublevector\-\_\-utilities.\-c}!max\-\_\-doublevector@{max\-\_\-doublevector}}
+\index{max\-\_\-doublevector@{max\-\_\-doublevector}!doublevector_utilities.c@{doublevector\-\_\-utilities.\-c}}
+\subsubsection[{max\-\_\-doublevector}]{\setlength{\rightskip}{0pt plus 5cm}double max\-\_\-doublevector (
+\begin{DoxyParamCaption}
+\item[{{\bf D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} $\ast$}]{v}
+\end{DoxyParamCaption}
+)}}\label{doublevector__utilities_8c_a3a020ccefd259981c34b9791cbf4e6dd}
+\begin{DoxyDate}{Date}
+March 2009 
+\end{DoxyDate}
+\begin{DoxyAuthor}{Author}
+Emanuele Cordano
+\end{DoxyAuthor}
+maximum value in a doublevector
+
+Definition at line 76 of file doublevector\-\_\-utilities.\-c.
+
+
+
+References D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R\-::nl.
+
+
+
+Referenced by jacobi\-\_\-preconditioned\-\_\-conjugate\-\_\-gradient\-\_\-search(), and Newton\-\_\-convergence().
+
+\hypertarget{doublevector__utilities_8c_ad0899a08ca309aff4954bbc7bef7b694}{\index{doublevector\-\_\-utilities.\-c@{doublevector\-\_\-utilities.\-c}!min\-\_\-doublevector@{min\-\_\-doublevector}}
+\index{min\-\_\-doublevector@{min\-\_\-doublevector}!doublevector_utilities.c@{doublevector\-\_\-utilities.\-c}}
+\subsubsection[{min\-\_\-doublevector}]{\setlength{\rightskip}{0pt plus 5cm}double min\-\_\-doublevector (
+\begin{DoxyParamCaption}
+\item[{{\bf D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} $\ast$}]{v}
+\end{DoxyParamCaption}
+)}}\label{doublevector__utilities_8c_ad0899a08ca309aff4954bbc7bef7b694}
+\begin{DoxyDate}{Date}
+February 2008 
+\end{DoxyDate}
+\begin{DoxyAuthor}{Author}
+Emanuele Cordano
+\end{DoxyAuthor}
+minimum value in a doublevector
+
+Definition at line 94 of file doublevector\-\_\-utilities.\-c.
+
+
+
+References D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R\-::nl.
+

@@ -2,17 +2,17 @@
 /*! \mainpage Boussinesq
 
 The program Boussinesq simulates the dynamics  of water-table surface solved in a hillslope or a small catchment.
-The theory is based on the 2D Boussinesq Equation: \f[s\frac {\partial \eta}  {\partial t} = \nabla \cdot \left[ K_S \, H (\eta,x,y)  \, \nabla \eta \right]+Q\f]
-where  $ \eta $ is the piezometric  elevation (unknown),  $ t $ is time,  $ nabla $ is the space gradient operator,  $H(eta,x,y)$ is the thickness of the aquifer which is a function of $eta$ and space, $Q$ is a source term which also accounts for boundary conditions, $K_S$ is the saturated hydraulic conductivity and  $s$ is porosity .
+The theory is based on the 2D Boussinesq Equation: \f[ s\frac {\partial \eta}  {\partial t} = \nabla \cdot \left[ K_S \, H (\eta,x,y)  \, \nabla \eta \right]+Q \f]
+where  \f$ \eta \f$ is the piezometric  elevation (unknown),  \f$ t \f$ is time,  \f$ \nabla \f$ is the space gradient operator,  \f$ H(\eta,x,y) \f$ is the thickness of the aquifer which is a function of \f$ \eta \f$ and space, \f$Q \f$ is a source term which also accounts for boundary conditions, \f$K_S \f$ is the saturated hydraulic conductivity and  \f$s \f$ is porosity .
 \warning
-The Boussinesq Equation is solved with finite volume numerical methods according to Casulli, 2008 ( <http://www3.interscience.wiley.com/journal/121377724/abstract?CRETRY=1&SRETRY=0> )
+The Boussinesq Equation is solved with finite volume numerical methods according to Casulli, 2008 ( <http://www3.interscience.wiley.com/journal/121377724/abstract?CRETRY=1&SRETRY=0> and http://onlinelibrary.wiley.com/doi/10.1002/wrcr.20072/references)
 The Maps of distributed quantiaties are distributed as vectors of double float numbers (DOBLEVECTOR data struct type ,in this case)
 
-\author Emanuele Cordano (ecor@ing.unitn.it), Riccardo Rigon, Vincenzo Casulli, Stefano Endrizzi, Matteo Dall'Amico
+\author Emanuele Cordano (emanuele.cordano@gmail.com), Riccardo Rigon, Vincenzo Casulli, Stefano Endrizzi, Matteo Dall'Amico
 
 \version 3.2.1
 
-\date 2008-2009
+\date 2008-2009 (2013)
 
 \attention
 Boussinesq is free software: you can redistribute it and/or modify

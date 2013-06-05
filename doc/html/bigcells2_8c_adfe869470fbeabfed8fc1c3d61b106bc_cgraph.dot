@@ -1,0 +1,31 @@
+digraph "write_doublesquare_grid"
+{
+  bgcolor="transparent";
+  edge [fontname="FreeSans",fontsize="10",labelfontname="FreeSans",labelfontsize="10"];
+  node [fontname="FreeSans",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="write_doublesquare_grid",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node2 [label="write_grid",height=0.2,width=0.4,color="black",URL="$bigcells2_8c.html#a4fa7cdf8be5d8e37c07f2b88f5d5af9b"];
+  Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node3 [label="write_linevector",height=0.2,width=0.4,color="black",URL="$geometry__io_8c.html#a90857eaff8709a1b27ab54710120c711"];
+  Node2 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node4 [label="write_polygonvector",height=0.2,width=0.4,color="black",URL="$geometry__io_8c.html#a425b6392922ac111e0b26dd217e90675"];
+  Node2 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node5 [label="write_polygonconnectionattributearray",height=0.2,width=0.4,color="black",URL="$geometry__attribute_8c.html#acd91cb7c91abf686fbab1a963de08fbe"];
+  Node1 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node6 [label="write_longmatrix_vector",height=0.2,width=0.4,color="black",URL="$bigcells2_8c.html#a355a9a3e61f4ddac3a3b744b79f4116a"];
+  Node6 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node7 [label="t_fopen",height=0.2,width=0.4,color="black",URL="$t__io_8c.html#af34ea3bc62c51f24c92b1fd2e9efe91a"];
+  Node7 -> Node8 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node8 [label="t_error",height=0.2,width=0.4,color="black",URL="$error_8c.html#af79ef7c6656ef0f3d2786e2b09c1755f"];
+  Node6 -> Node9 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node9 [label="write_longmatrix_elements",height=0.2,width=0.4,color="black",URL="$t__io_8c.html#a9da581d6f2cb0b66c8c93c6e2a60431b"];
+  Node9 -> Node8 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node6 -> Node10 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node10 [label="t_fclose",height=0.2,width=0.4,color="black",URL="$t__io_8c.html#afa95931383ff96048d6ec32f685a5f98"];
+  Node1 -> Node11 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node11 [label="write_small_lines_indices",height=0.2,width=0.4,color="black",URL="$bigcells2_8c.html#a0995bd743b16e37e23c4ff9337fd5474"];
+  Node11 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node11 -> Node10 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+}

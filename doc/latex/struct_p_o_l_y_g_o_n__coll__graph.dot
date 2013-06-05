@@ -1,0 +1,11 @@
+digraph "POLYGON"
+{
+  bgcolor="transparent";
+  edge [fontname="FreeSans",fontsize="10",labelfontname="FreeSans",labelfontsize="10"];
+  node [fontname="FreeSans",fontsize="10",shape=record];
+  Node1 [label="POLYGON",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node2 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" centroid" ];
+  Node2 [label="POINT",height=0.2,width=0.4,color="black",URL="$struct_p_o_i_n_t.html"];
+  Node3 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" edge_indices" ];
+  Node3 [label="LONGVECTOR",height=0.2,width=0.4,color="black",URL="$struct_l_o_n_g_v_e_c_t_o_r.html"];
+}

@@ -1,0 +1,165 @@
+\hypertarget{b__sources_8h}{\section{Boussinesq/b\-\_\-sources.h File Reference}
+\label{b__sources_8h}\index{Boussinesq/b\-\_\-sources.\-h@{Boussinesq/b\-\_\-sources.\-h}}
+}
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{struct_s___t_i_m_e_s}{S\-\_\-\-T\-I\-M\-E\-S}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{struct_s___t_i_m_e_s}{S\-\_\-\-T\-I\-M\-E\-S} $\ast$ \hyperlink{b__sources_8h_a85eab37f66725bd25bdddce92cf5a773}{get\-\_\-s\-\_\-times} (char $\ast$filename, short print)
+\item 
+void \hyperlink{b__sources_8h_a2ffdd69401a92b40ff9cc9b6274d4395}{free\-\_\-s\-\_\-times} (\hyperlink{struct_s___t_i_m_e_s}{S\-\_\-\-T\-I\-M\-E\-S} $\ast$s\-\_\-t)
+\item 
+int \hyperlink{b__sources_8h_a5eb104111701f0bb34a5d8bffd2f0ddb}{get\-\_\-sources} (double t, \hyperlink{struct_d_o_u_b_l_e_v_e_c_t_o_r}{D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} $\ast$\hyperlink{b__solver_8c_a04a25d32cf47c13341c9c9e6cab145ae}{sources})
+\item 
+int \hyperlink{b__sources_8h_ab175eac7f8664ba91d5a9f3773457344}{get\-\_\-dirichletsnode} (double t, \hyperlink{struct_d_o_u_b_l_e_v_e_c_t_o_r}{D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} $\ast$\hyperlink{b__v__advection_8c_aa9b4bc229995ad30e44cf2eaeb5d4756}{dirichlet})
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{DoxyAuthor}{Author}
+Emanuele Cordano
+\end{DoxyAuthor}
+\begin{DoxyAttention}{Attention}
+
+\end{DoxyAttention}
+This file is part of Boussinesq.
+
+Boussinesq is free software\-: you can redistribute it and/or modify it under the terms of the G\-N\-U General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
+
+Boussinesq is distributed in the hope that it will be useful, but W\-I\-T\-H\-O\-U\-T A\-N\-Y W\-A\-R\-R\-A\-N\-T\-Y; without even the implied warranty of M\-E\-R\-C\-H\-A\-N\-T\-A\-B\-I\-L\-I\-T\-Y or F\-I\-T\-N\-E\-S\-S F\-O\-R A P\-A\-R\-T\-I\-C\-U\-L\-A\-R P\-U\-R\-P\-O\-S\-E. See the G\-N\-U General Public License for more details.
+
+You should have received a copy of the G\-N\-U General Public License along with Boussinesq. If not, see \href{http://www.gnu.org/licenses/}{\tt http\-://www.\-gnu.\-org/licenses/}. 
+
+Definition in file \hyperlink{b__sources_8h_source}{b\-\_\-sources.\-h}.
+
+
+
+\subsection{Function Documentation}
+\hypertarget{b__sources_8h_a2ffdd69401a92b40ff9cc9b6274d4395}{\index{b\-\_\-sources.\-h@{b\-\_\-sources.\-h}!free\-\_\-s\-\_\-times@{free\-\_\-s\-\_\-times}}
+\index{free\-\_\-s\-\_\-times@{free\-\_\-s\-\_\-times}!b_sources.h@{b\-\_\-sources.\-h}}
+\subsubsection[{free\-\_\-s\-\_\-times}]{\setlength{\rightskip}{0pt plus 5cm}void free\-\_\-s\-\_\-times (
+\begin{DoxyParamCaption}
+\item[{{\bf S\-\_\-\-T\-I\-M\-E\-S} $\ast$}]{s\-\_\-t}
+\end{DoxyParamCaption}
+)}}\label{b__sources_8h_a2ffdd69401a92b40ff9cc9b6274d4395}
+\begin{DoxyAuthor}{Author}
+Emanuele Cordano 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+29 May 2008
+\end{DoxyDate}
+
+
+Definition at line 166 of file b\-\_\-sources.\-c.
+
+
+
+References free\-\_\-doublevector(), free\-\_\-stringbin(), S\-\_\-\-T\-I\-M\-E\-S\-::s\-\_\-suffixes, and S\-\_\-\-T\-I\-M\-E\-S\-::times.
+
+
+
+Referenced by time\-\_\-loop().
+
+\hypertarget{b__sources_8h_ab175eac7f8664ba91d5a9f3773457344}{\index{b\-\_\-sources.\-h@{b\-\_\-sources.\-h}!get\-\_\-dirichletsnode@{get\-\_\-dirichletsnode}}
+\index{get\-\_\-dirichletsnode@{get\-\_\-dirichletsnode}!b_sources.h@{b\-\_\-sources.\-h}}
+\subsubsection[{get\-\_\-dirichletsnode}]{\setlength{\rightskip}{0pt plus 5cm}int get\-\_\-dirichletsnode (
+\begin{DoxyParamCaption}
+\item[{double}]{t, }
+\item[{{\bf D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} $\ast$}]{dirichlet}
+\end{DoxyParamCaption}
+)}}\label{b__sources_8h_ab175eac7f8664ba91d5a9f3773457344}
+\begin{DoxyAuthor}{Author}
+Emanuele Cordano 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+May 2009
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em t} & (double) time; \\
+\hline
+{\em dirichlet\-\_\-node} & map -\/ (\hyperlink{struct_d_o_u_b_l_e_v_e_c_t_o_r}{D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} $\ast$) dirichlet\\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 182 of file b\-\_\-sources.\-c.
+
+
+
+References A\-\_\-\-F\-L\-A\-G, D\-O\-U\-B\-L\-E\-S\-Q\-U\-A\-R\-E\-\_\-\-G\-R\-I\-D\-::big, D\-O\-U\-B\-L\-E\-R\-A\-S\-T\-E\-R\-\_\-\-M\-A\-P\-::coarse, copy\-\_\-doublevector(), D\-T\-M\-\_\-\-M\-A\-S\-K, P\-A\-R\-A\-M\-::exp\-\_\-dirichlet, free\-\_\-doublevector(), I\-\_\-\-D\-I\-R\-I\-C\-H\-L\-E\-T\-M\-A\-P\-S\-E\-R\-I\-E\-S\-\_\-\-C\-O\-A\-R\-S\-E, S\-Q\-U\-A\-R\-E\-\_\-\-G\-R\-I\-D\-::indices\-\_\-pixel, join\-\_\-strings(), R\-A\-S\-T\-E\-R\-\_\-\-M\-A\-P\-::layer, D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R\-::nh, D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R\-::nl, P\-A\-R\-A\-M\-::null\-\_\-dirichlet, read\-\_\-doublevector\-\_\-from\-\_\-raster(), S\-\_\-\-T\-I\-M\-E\-S\-::s\-\_\-suffixes, S\-\_\-\-T\-I\-M\-E\-S\-::times, and R\-A\-S\-T\-E\-R\-\_\-\-M\-A\-P\-::\-U\-V.
+
+
+
+Referenced by time\-\_\-loop().
+
+\hypertarget{b__sources_8h_a85eab37f66725bd25bdddce92cf5a773}{\index{b\-\_\-sources.\-h@{b\-\_\-sources.\-h}!get\-\_\-s\-\_\-times@{get\-\_\-s\-\_\-times}}
+\index{get\-\_\-s\-\_\-times@{get\-\_\-s\-\_\-times}!b_sources.h@{b\-\_\-sources.\-h}}
+\subsubsection[{get\-\_\-s\-\_\-times}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\-\_\-\-T\-I\-M\-E\-S}$\ast$ get\-\_\-s\-\_\-times (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{filename, }
+\item[{short}]{print}
+\end{DoxyParamCaption}
+)}}\label{b__sources_8h_a85eab37f66725bd25bdddce92cf5a773}
+\begin{DoxyAuthor}{Author}
+Emanuele Cordano 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+29 May 2009
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & (char $\ast$) \\
+\hline
+{\em print} & (short)\\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 127 of file b\-\_\-sources.\-c.
+
+
+
+References st\-::index, L\-O\-N\-G\-V\-E\-C\-T\-O\-R\-::nh, D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R\-::nh, D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R\-::nl, read\-\_\-doublearray(), read\-\_\-index(), read\-\_\-stringarray(), S\-\_\-\-T\-I\-M\-E\-S\-::s\-\_\-suffixes, t\-\_\-error(), t\-\_\-fclose(), t\-\_\-fopen(), and S\-\_\-\-T\-I\-M\-E\-S\-::times.
+
+
+
+Referenced by time\-\_\-loop().
+
+\hypertarget{b__sources_8h_a5eb104111701f0bb34a5d8bffd2f0ddb}{\index{b\-\_\-sources.\-h@{b\-\_\-sources.\-h}!get\-\_\-sources@{get\-\_\-sources}}
+\index{get\-\_\-sources@{get\-\_\-sources}!b_sources.h@{b\-\_\-sources.\-h}}
+\subsubsection[{get\-\_\-sources}]{\setlength{\rightskip}{0pt plus 5cm}int get\-\_\-sources (
+\begin{DoxyParamCaption}
+\item[{double}]{t, }
+\item[{{\bf D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} $\ast$}]{sources}
+\end{DoxyParamCaption}
+)}}\label{b__sources_8h_a5eb104111701f0bb34a5d8bffd2f0ddb}
+\begin{DoxyAuthor}{Author}
+Emanuele Cordano 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+May 2009
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em t} & (double) time; \\
+\hline
+{\em sources} & -\/ (\hyperlink{struct_d_o_u_b_l_e_v_e_c_t_o_r}{D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} $\ast$) sources\\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 67 of file b\-\_\-sources.\-c.
+
+
+
+References A\-\_\-\-F\-L\-A\-G, D\-O\-U\-B\-L\-E\-S\-Q\-U\-A\-R\-E\-\_\-\-G\-R\-I\-D\-::big, D\-O\-U\-B\-L\-E\-R\-A\-S\-T\-E\-R\-\_\-\-M\-A\-P\-::coarse, copy\-\_\-doublevector(), D\-T\-M\-\_\-\-M\-A\-S\-K, free\-\_\-doublevector(), I\-\_\-\-S\-O\-U\-R\-C\-E\-M\-A\-P\-S\-E\-R\-I\-E\-S\-\_\-\-C\-O\-A\-R\-S\-E, S\-Q\-U\-A\-R\-E\-\_\-\-G\-R\-I\-D\-::indices\-\_\-pixel, join\-\_\-strings(), R\-A\-S\-T\-E\-R\-\_\-\-M\-A\-P\-::layer, D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R\-::nh, D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R\-::nl, read\-\_\-doublevector\-\_\-from\-\_\-raster(), S\-\_\-\-T\-I\-M\-E\-S\-::s\-\_\-suffixes, S\-\_\-\-T\-I\-M\-E\-S\-::times, and R\-A\-S\-T\-E\-R\-\_\-\-M\-A\-P\-::\-U\-V.
+
+
+
+Referenced by time\-\_\-loop().
+

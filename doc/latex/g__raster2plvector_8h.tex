@@ -1,0 +1,823 @@
+\hypertarget{g__raster2plvector_8h}{\section{B\-G\-E\-O\-M\-E\-T\-R\-Y/g\-\_\-raster2plvector.h File Reference}
+\label{g__raster2plvector_8h}\index{B\-G\-E\-O\-M\-E\-T\-R\-Y/g\-\_\-raster2plvector.\-h@{B\-G\-E\-O\-M\-E\-T\-R\-Y/g\-\_\-raster2plvector.\-h}}
+}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{struct_l_o_n_g_b_i_n}{L\-O\-N\-G\-B\-I\-N} $\ast$ \hyperlink{g__raster2plvector_8h_a3b5885f7756980e7854fa01a272139d4}{addresses} (\hyperlink{struct_l_o_n_g_m_a_t_r_i_x}{L\-O\-N\-G\-M\-A\-T\-R\-I\-X} $\ast$lmask, long row\-\_\-shift, long col\-\_\-shift)
+\item 
+long \hyperlink{g__raster2plvector_8h_a3abb055f6b19a51bd5dc90f5f35f9017}{index\-\_\-pixel\-\_\-from\-\_\-a\-\_\-bin} (long r, long c, \hyperlink{struct_l_o_n_g_v_e_c_t_o_r}{L\-O\-N\-G\-V\-E\-C\-T\-O\-R} $\ast$s\-\_\-index)
+\item 
+\hyperlink{struct_l_o_n_g_m_a_t_r_i_x}{L\-O\-N\-G\-M\-A\-T\-R\-I\-X} $\ast$ \hyperlink{g__raster2plvector_8h_a9dcdce3e45c3242c0f92458a26b96900}{m\-\_\-indices\-\_\-with\-\_\-novalues} (\hyperlink{struct_l_o_n_g_b_i_n}{L\-O\-N\-G\-B\-I\-N} $\ast$laddresses, long nch, long novalue, long I\-B\-A\-S\-E, long($\ast$\hyperlink{g__raster2plvector_8h_a3abb055f6b19a51bd5dc90f5f35f9017}{index\-\_\-pixel\-\_\-from\-\_\-a\-\_\-bin})(long r, long c, \hyperlink{struct_l_o_n_g_v_e_c_t_o_r}{L\-O\-N\-G\-V\-E\-C\-T\-O\-R} $\ast$s\-\_\-index))
+\item 
+\hyperlink{struct_l_o_n_g_m_a_t_r_i_x}{L\-O\-N\-G\-M\-A\-T\-R\-I\-X} $\ast$ \hyperlink{g__raster2plvector_8h_ae62849b1134137a54321fdb9c700225a}{m\-\_\-indices\-\_\-from\-\_\-mask} (\hyperlink{struct_d_o_u_b_l_e_m_a_t_r_i_x}{D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X} $\ast$mask, long row\-\_\-shift, long col\-\_\-shift, long novalue, long I\-B\-A\-S\-E, long($\ast$\hyperlink{g__raster2plvector_8h_a3abb055f6b19a51bd5dc90f5f35f9017}{index\-\_\-pixel\-\_\-from\-\_\-a\-\_\-bin})(long r, long c, \hyperlink{struct_l_o_n_g_v_e_c_t_o_r}{L\-O\-N\-G\-V\-E\-C\-T\-O\-R} $\ast$s\-\_\-index), \hyperlink{struct_d_o_u_b_l_e_v_e_c_t_o_r}{D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} $\ast$V, int($\ast$check\-\_\-novalues)(double x, \hyperlink{struct_d_o_u_b_l_e_v_e_c_t_o_r}{D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} $\ast$V))
+\item 
+\hyperlink{struct_p_o_i_n_t}{P\-O\-I\-N\-T} $\ast$ \hyperlink{g__raster2plvector_8h_a2ba706ca2c53cfaebfd3a9db051d1460}{new\-\_\-point\-\_\-from\-\_\-raster} (long r, long c, long nrh, long nch, double lx, double ly, double nsres, double ewres, double blc\-\_\-x, double blc\-\_\-y, long index)
+\item 
+\hyperlink{struct_l_i_n_e}{L\-I\-N\-E} $\ast$ \hyperlink{g__raster2plvector_8h_a6ac4cbd5562d6a8e636d775d2f3da1ff}{new\-\_\-horizontal\-\_\-line\-\_\-from\-\_\-raster} (long r, long c, long nrh, long nch, double nsres, double ewres, double blc\-\_\-x, double blc\-\_\-y, long iline, long ivertex1, long ivertex2)
+\item 
+\hyperlink{struct_l_i_n_e}{L\-I\-N\-E} $\ast$ \hyperlink{g__raster2plvector_8h_ab6d805b9109791cb9604f2297eab5b23}{new\-\_\-vertical\-\_\-line\-\_\-from\-\_\-raster} (long r, long c, long nrh, long nch, double nsres, double ewres, double blc\-\_\-x, double blc\-\_\-y, long iline, long ivertex1, long ivertex2)
+\item 
+\hyperlink{struct_l_i_n_e_v_e_c_t_o_r}{L\-I\-N\-E\-V\-E\-C\-T\-O\-R} $\ast$ \hyperlink{g__raster2plvector_8h_a02fd6f18b2506a6c8cf679122880461a}{get\-\_\-linevector\-\_\-from\-\_\-raster\-\_\-grid} (\hyperlink{struct_l_o_n_g_m_a_t_r_i_x}{L\-O\-N\-G\-M\-A\-T\-R\-I\-X} $\ast$i\-\_\-horizontal, \hyperlink{struct_l_o_n_g_m_a_t_r_i_x}{L\-O\-N\-G\-M\-A\-T\-R\-I\-X} $\ast$i\-\_\-vertical, \hyperlink{struct_l_o_n_g_m_a_t_r_i_x}{L\-O\-N\-G\-M\-A\-T\-R\-I\-X} $\ast$i\-\_\-vertex, double nsres, double ewres, double blc\-\_\-x, double blc\-\_\-y, long novalue)
+\item 
+\hyperlink{struct_p_o_l_y_g_o_n}{P\-O\-L\-Y\-G\-O\-N} $\ast$ \hyperlink{g__raster2plvector_8h_af897eda04f2279371d5093b2eac582d4}{new\-\_\-pixel\-\_\-from\-\_\-raster} (long index, long r, long c, \hyperlink{struct_l_i_n_e_v_e_c_t_o_r}{L\-I\-N\-E\-V\-E\-C\-T\-O\-R} $\ast$lines, \hyperlink{struct_l_o_n_g_m_a_t_r_i_x}{L\-O\-N\-G\-M\-A\-T\-R\-I\-X} $\ast$i\-\_\-horizontal, \hyperlink{struct_l_o_n_g_m_a_t_r_i_x}{L\-O\-N\-G\-M\-A\-T\-R\-I\-X} $\ast$i\-\_\-vertical, double nsres, double ewres, double blc\-\_\-x, double blc\-\_\-y, short print)
+\item 
+\hyperlink{struct_p_o_l_y_g_o_n_v_e_c_t_o_r}{P\-O\-L\-Y\-G\-O\-N\-V\-E\-C\-T\-O\-R} $\ast$ \hyperlink{g__raster2plvector_8h_a7e6c1b852351ca4404c07a2f98494166}{get\-\_\-polygonvector\-\_\-from\-\_\-raster} (\hyperlink{struct_l_i_n_e_v_e_c_t_o_r}{L\-I\-N\-E\-V\-E\-C\-T\-O\-R} $\ast$lines, \hyperlink{struct_l_o_n_g_m_a_t_r_i_x}{L\-O\-N\-G\-M\-A\-T\-R\-I\-X} $\ast$i\-\_\-pixels, \hyperlink{struct_l_o_n_g_m_a_t_r_i_x}{L\-O\-N\-G\-M\-A\-T\-R\-I\-X} $\ast$i\-\_\-horizontal, \hyperlink{struct_l_o_n_g_m_a_t_r_i_x}{L\-O\-N\-G\-M\-A\-T\-R\-I\-X} $\ast$i\-\_\-vertical, double nsres, double ewres, double blc\-\_\-x, double blc\-\_\-y, long novalue, short print)
+\item 
+\hyperlink{struct_d_o_u_b_l_e_v_e_c_t_o_r}{D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} $\ast$ \hyperlink{g__raster2plvector_8h_a5ecd73eb8ff6d2414e687e73aad53a7d}{read\-\_\-doublevector\-\_\-from\-\_\-raster} (short a, char $\ast$filename, \hyperlink{struct_d_o_u_b_l_e_m_a_t_r_i_x}{D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X} $\ast$Mref, \hyperlink{struct_t___i_n_i_t}{T\-\_\-\-I\-N\-I\-T} $\ast$U\-Vref, \hyperlink{struct_l_o_n_g_m_a_t_r_i_x}{L\-O\-N\-G\-M\-A\-T\-R\-I\-X} $\ast$indices)
+\item 
+\hyperlink{struct_d_o_u_b_l_e_v_e_c_t_o_r}{D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} $\ast$ \hyperlink{g__raster2plvector_8h_a14c14593958d111716a2cd5a33ee27b7}{get\-\_\-doublevector\-\_\-from\-\_\-doublematrix} (\hyperlink{struct_l_o_n_g_m_a_t_r_i_x}{L\-O\-N\-G\-M\-A\-T\-R\-I\-X} $\ast$indices, \hyperlink{struct_d_o_u_b_l_e_m_a_t_r_i_x}{D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X} $\ast$M, double novalue)
+\item 
+int \hyperlink{g__raster2plvector_8h_a20264378b12951d36223b8961dc534cc}{write\-\_\-raster\-\_\-from\-\_\-doublevector} (char $\ast$filename, \hyperlink{struct_d_o_u_b_l_e_v_e_c_t_o_r}{D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} $\ast$v, \hyperlink{struct_t___i_n_i_t}{T\-\_\-\-I\-N\-I\-T} $\ast$U\-Vref, \hyperlink{struct_l_o_n_g_m_a_t_r_i_x}{L\-O\-N\-G\-M\-A\-T\-R\-I\-X} $\ast$indices, \hyperlink{struct_d_o_u_b_l_e_m_a_t_r_i_x}{D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X} $\ast$Mref)
+\item 
+\hyperlink{struct_d_o_u_b_l_e_m_a_t_r_i_x}{D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X} $\ast$ \hyperlink{g__raster2plvector_8h_aaf04264a2f4153111ccc9185ec6b6320}{get\-\_\-doublematrix\-\_\-from\-\_\-mapseries} (\hyperlink{struct_l_o_n_g_m_a_t_r_i_x}{L\-O\-N\-G\-M\-A\-T\-R\-I\-X} $\ast$indices, \hyperlink{struct_d_o_u_b_l_e_t_e_n_s_o_r}{D\-O\-U\-B\-L\-E\-T\-E\-N\-S\-O\-R} $\ast$mapseries, \hyperlink{struct_t___i_n_i_t}{T\-\_\-\-I\-N\-I\-T} $\ast$U\-Vref)
+\item 
+\hyperlink{struct_d_o_u_b_l_e_m_a_t_r_i_x}{D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X} $\ast$ \hyperlink{g__raster2plvector_8h_aa6a8dd653285792d223fdb4ec33c8878}{get\-\_\-doublematrix\-\_\-from\-\_\-doublevector} (\hyperlink{struct_d_o_u_b_l_e_v_e_c_t_o_r}{D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} $\ast$v, \hyperlink{struct_l_o_n_g_m_a_t_r_i_x}{L\-O\-N\-G\-M\-A\-T\-R\-I\-X} $\ast$indices, \hyperlink{struct_d_o_u_b_l_e_m_a_t_r_i_x}{D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X} $\ast$Mref, double novalue)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{g__raster2plvector_8h_a3b5885f7756980e7854fa01a272139d4}{\index{g\-\_\-raster2plvector.\-h@{g\-\_\-raster2plvector.\-h}!addresses@{addresses}}
+\index{addresses@{addresses}!g_raster2plvector.h@{g\-\_\-raster2plvector.\-h}}
+\subsubsection[{addresses}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\-O\-N\-G\-B\-I\-N}$\ast$ addresses (
+\begin{DoxyParamCaption}
+\item[{{\bf L\-O\-N\-G\-M\-A\-T\-R\-I\-X} $\ast$}]{lmask, }
+\item[{long}]{row\-\_\-shift, }
+\item[{long}]{col\-\_\-shift}
+\end{DoxyParamCaption}
+)}}\label{g__raster2plvector_8h_a3b5885f7756980e7854fa01a272139d4}
+
+\begin{DoxyItemize}
+\item 
+\begin{DoxyParams}{Parameters}
+{\em V} & (\hyperlink{struct_d_o_u_b_l_e_v_e_c_t_o_r}{D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} $\ast$) -\/ vector regarding the query appied (searching novalue) \\
+\hline
+{\em ($\ast$} & check\-\_\-novalue)(double x,\hyperlink{struct_d_o_u_b_l_e_v_e_c_t_o_r}{D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} $\ast$\-V) (int) -\/ query expressed as a function returning a long integer \\
+\hline
+{\em reply} & -\/ expected reply from the query to save the element addresses\\
+\hline
+\end{DoxyParams}
+\begin{DoxyAuthor}{Author}
+Emanuele Cordano 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+January 2008 
+\end{DoxyDate}
+
+\end{DoxyItemize}
+\begin{DoxyParams}{Parameters}
+{\em lmask} & (\hyperlink{struct_d_o_u_b_l_e_m_a_t_r_i_x}{D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X} $\ast$) -\/ matrix wth 0 or 1 values (if element is 1 the element is within the basin, 0 otherwise) \\
+\hline
+{\em row\-\_\-shitf} & (long) -\/ integer parameters to be set for vertical line searching (-\/1\-: left vertical line searching, 0\-: pixel searching, 1\-: right vertical line searching) \\
+\hline
+{\em col\-\_\-shift} & (long) -\/ integer parameters to be set for horizonttal line searching (-\/1\-: top horizontal line searching, 0\-: pixel searching, 1\-: bottom vertical line searching)\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a \hyperlink{struct_l_o_n_g_b_i_n}{L\-O\-N\-G\-B\-I\-N} containing for each rows the number of columns at wihch the element retrun the query equal to the variable reply 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Emanuele Cordano 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+January 2009
+\end{DoxyDate}
+
+
+Definition at line 78 of file g\-\_\-raster2plvector.\-c.
+
+
+
+References free\-\_\-longvector(), L\-O\-N\-G\-M\-A\-T\-R\-I\-X\-::nch, L\-O\-N\-G\-M\-A\-T\-R\-I\-X\-::ncl, new\-\_\-longbin(), new\-\_\-longvector(), L\-O\-N\-G\-V\-E\-C\-T\-O\-R\-::nl, L\-O\-N\-G\-M\-A\-T\-R\-I\-X\-::nrh, and L\-O\-N\-G\-M\-A\-T\-R\-I\-X\-::nrl.
+
+
+
+Referenced by m\-\_\-indices\-\_\-from\-\_\-mask().
+
+\hypertarget{g__raster2plvector_8h_aa6a8dd653285792d223fdb4ec33c8878}{\index{g\-\_\-raster2plvector.\-h@{g\-\_\-raster2plvector.\-h}!get\-\_\-doublematrix\-\_\-from\-\_\-doublevector@{get\-\_\-doublematrix\-\_\-from\-\_\-doublevector}}
+\index{get\-\_\-doublematrix\-\_\-from\-\_\-doublevector@{get\-\_\-doublematrix\-\_\-from\-\_\-doublevector}!g_raster2plvector.h@{g\-\_\-raster2plvector.\-h}}
+\subsubsection[{get\-\_\-doublematrix\-\_\-from\-\_\-doublevector}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X}$\ast$ get\-\_\-doublematrix\-\_\-from\-\_\-doublevector (
+\begin{DoxyParamCaption}
+\item[{{\bf D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} $\ast$}]{v, }
+\item[{{\bf L\-O\-N\-G\-M\-A\-T\-R\-I\-X} $\ast$}]{indices, }
+\item[{{\bf D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X} $\ast$}]{Mref, }
+\item[{double}]{novalue}
+\end{DoxyParamCaption}
+)}}\label{g__raster2plvector_8h_aa6a8dd653285792d223fdb4ec33c8878}
+\begin{DoxyAuthor}{Author}
+Emanuele Cordano 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+November 2008
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em v} & -\/ (\hyperlink{struct_d_o_u_b_l_e_v_e_c_t_o_r}{D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} $\ast$) -\/ vector which will be trasformed into a raster \\
+\hline
+{\em indices} & (\hyperlink{struct_l_o_n_g_v_e_c_t_o_r}{L\-O\-N\-G\-V\-E\-C\-T\-O\-R} $\ast$) -\/ matrix of indices \\
+\hline
+{\em Mref} & -\/ (\hyperlink{struct_d_o_u_b_l_e_m_a_t_r_i_x}{D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X} $\ast$) -\/ reference raster \\
+\hline
+{\em novalue} & -\/ (double) -\/ no value\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Definition at line 692 of file g\-\_\-raster2plvector.\-c.
+
+
+
+References I\-N\-I\-T\-\_\-\-V\-A\-L\-U\-E, D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X\-::nch, L\-O\-N\-G\-M\-A\-T\-R\-I\-X\-::nch, D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X\-::ncl, new\-\_\-doublematrix(), D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R\-::nh, D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R\-::nl, D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X\-::nrh, L\-O\-N\-G\-M\-A\-T\-R\-I\-X\-::nrh, and D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X\-::nrl.
+
+
+
+Referenced by write\-\_\-raster\-\_\-from\-\_\-doublevector(), and write\-\_\-raster\-\_\-from\-\_\-doublevector\-\_\-v2().
+
+\hypertarget{g__raster2plvector_8h_aaf04264a2f4153111ccc9185ec6b6320}{\index{g\-\_\-raster2plvector.\-h@{g\-\_\-raster2plvector.\-h}!get\-\_\-doublematrix\-\_\-from\-\_\-mapseries@{get\-\_\-doublematrix\-\_\-from\-\_\-mapseries}}
+\index{get\-\_\-doublematrix\-\_\-from\-\_\-mapseries@{get\-\_\-doublematrix\-\_\-from\-\_\-mapseries}!g_raster2plvector.h@{g\-\_\-raster2plvector.\-h}}
+\subsubsection[{get\-\_\-doublematrix\-\_\-from\-\_\-mapseries}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X}$\ast$ get\-\_\-doublematrix\-\_\-from\-\_\-mapseries (
+\begin{DoxyParamCaption}
+\item[{{\bf L\-O\-N\-G\-M\-A\-T\-R\-I\-X} $\ast$}]{indices, }
+\item[{{\bf D\-O\-U\-B\-L\-E\-T\-E\-N\-S\-O\-R} $\ast$}]{mapseries, }
+\item[{{\bf T\-\_\-\-I\-N\-I\-T} $\ast$}]{U\-Vref}
+\end{DoxyParamCaption}
+)}}\label{g__raster2plvector_8h_aaf04264a2f4153111ccc9185ec6b6320}
+\begin{DoxyAuthor}{Author}
+Emanuele Cordano 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+December 2008
+\end{DoxyDate}
+printf (\char`\"{}loop \%ld of \%ld \textbackslash{}n\char`\"{},l,mapseries-\/$>$ndh); printf (\char`\"{}\-Values\-: \%lf \%lf \textbackslash{}n\char`\"{},map-\/$>$element\mbox{[}1\mbox{]}\mbox{[}1\mbox{]},v-\/$>$element\mbox{[}1\mbox{]}); \hyperlink{t__utilities_8h_aad115bd95a94025215aa780dfcf894aa}{stop\-\_\-execution()}; 
+
+Definition at line 804 of file g\-\_\-raster2plvector.\-c.
+
+
+
+References extract\-\_\-a\-\_\-new\-\_\-map(), free\-\_\-doublematrix(), free\-\_\-doublevector(), get\-\_\-doublevector\-\_\-from\-\_\-doublematrix(), D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X\-::ncl, D\-O\-U\-B\-L\-E\-T\-E\-N\-S\-O\-R\-::ndh, D\-O\-U\-B\-L\-E\-T\-E\-N\-S\-O\-R\-::ndl, new\-\_\-doublematrix(), D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R\-::nh, and T\-\_\-\-I\-N\-I\-T\-::\-V.
+
+\hypertarget{g__raster2plvector_8h_a14c14593958d111716a2cd5a33ee27b7}{\index{g\-\_\-raster2plvector.\-h@{g\-\_\-raster2plvector.\-h}!get\-\_\-doublevector\-\_\-from\-\_\-doublematrix@{get\-\_\-doublevector\-\_\-from\-\_\-doublematrix}}
+\index{get\-\_\-doublevector\-\_\-from\-\_\-doublematrix@{get\-\_\-doublevector\-\_\-from\-\_\-doublematrix}!g_raster2plvector.h@{g\-\_\-raster2plvector.\-h}}
+\subsubsection[{get\-\_\-doublevector\-\_\-from\-\_\-doublematrix}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R}$\ast$ get\-\_\-doublevector\-\_\-from\-\_\-doublematrix (
+\begin{DoxyParamCaption}
+\item[{{\bf L\-O\-N\-G\-M\-A\-T\-R\-I\-X} $\ast$}]{indices, }
+\item[{{\bf D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X} $\ast$}]{M, }
+\item[{double}]{novalue}
+\end{DoxyParamCaption}
+)}}\label{g__raster2plvector_8h_a14c14593958d111716a2cd5a33ee27b7}
+Functions which converts \hyperlink{struct_d_o_u_b_l_e_v_e_c_t_o_r}{D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} and \hyperlink{struct_d_o_u_b_l_e_m_a_t_r_i_x}{D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X} according to a given function \begin{DoxyAuthor}{Author}
+Emanuele Cordano 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+November 2008
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em indices} & (\hyperlink{struct_l_o_n_g_m_a_t_r_i_x}{L\-O\-N\-G\-M\-A\-T\-R\-I\-X} $\ast$) -\/ matrix of the indices; \\
+\hline
+{\em M} & (\hyperlink{struct_d_o_u_b_l_e_m_a_t_r_i_x}{D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X} $\ast$) -\/ matrix to be transformed into a vector; \\
+\hline
+{\em novalue} & (double) -\/ null value \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a vector
+\end{DoxyReturn}
+
+
+Definition at line 643 of file g\-\_\-raster2plvector.\-c.
+
+
+
+References I\-N\-I\-T\-\_\-\-V\-A\-L\-U\-E, D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X\-::nch, L\-O\-N\-G\-M\-A\-T\-R\-I\-X\-::nch, D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X\-::ncl, new\-\_\-doublevector(), D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R\-::nh, D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R\-::nl, D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X\-::nrh, L\-O\-N\-G\-M\-A\-T\-R\-I\-X\-::nrh, and D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X\-::nrl.
+
+
+
+Referenced by get\-\_\-doublematrix\-\_\-from\-\_\-mapseries(), get\-\_\-doublevector\-\_\-for\-\_\-lines(), and read\-\_\-doublevector\-\_\-from\-\_\-raster().
+
+\hypertarget{g__raster2plvector_8h_a02fd6f18b2506a6c8cf679122880461a}{\index{g\-\_\-raster2plvector.\-h@{g\-\_\-raster2plvector.\-h}!get\-\_\-linevector\-\_\-from\-\_\-raster\-\_\-grid@{get\-\_\-linevector\-\_\-from\-\_\-raster\-\_\-grid}}
+\index{get\-\_\-linevector\-\_\-from\-\_\-raster\-\_\-grid@{get\-\_\-linevector\-\_\-from\-\_\-raster\-\_\-grid}!g_raster2plvector.h@{g\-\_\-raster2plvector.\-h}}
+\subsubsection[{get\-\_\-linevector\-\_\-from\-\_\-raster\-\_\-grid}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\-I\-N\-E\-V\-E\-C\-T\-O\-R}$\ast$ get\-\_\-linevector\-\_\-from\-\_\-raster\-\_\-grid (
+\begin{DoxyParamCaption}
+\item[{{\bf L\-O\-N\-G\-M\-A\-T\-R\-I\-X} $\ast$}]{i\-\_\-horizontal, }
+\item[{{\bf L\-O\-N\-G\-M\-A\-T\-R\-I\-X} $\ast$}]{i\-\_\-vertical, }
+\item[{{\bf L\-O\-N\-G\-M\-A\-T\-R\-I\-X} $\ast$}]{i\-\_\-vertex, }
+\item[{double}]{nsres, }
+\item[{double}]{ewres, }
+\item[{double}]{blc\-\_\-x, }
+\item[{double}]{blc\-\_\-y, }
+\item[{long}]{novalue}
+\end{DoxyParamCaption}
+)}}\label{g__raster2plvector_8h_a02fd6f18b2506a6c8cf679122880461a}
+\begin{DoxyAuthor}{Author}
+Emanuele Cordano 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+November 2008
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em i\-\_\-horizontal} & -\/ (\hyperlink{struct_l_o_n_g_m_a_t_r_i_x}{L\-O\-N\-G\-M\-A\-T\-R\-I\-X} $\ast$) matrix for horizontal lines \\
+\hline
+{\em i\-\_\-horizontal} & -\/ (\hyperlink{struct_l_o_n_g_m_a_t_r_i_x}{L\-O\-N\-G\-M\-A\-T\-R\-I\-X} $\ast$) matrix for vertical lines \\
+\hline
+{\em i\-\_\-vertex} & -\/ \\
+\hline
+{\em lx} & -\/ (double) lx dimensionless x displacement for point location \\
+\hline
+{\em ly} & -\/ (double) ly dimensionless y displacement for point location \\
+\hline
+{\em nsres} & -\/ (double) north-\/south resolution \\
+\hline
+{\em ewres} & -\/ (double) east-\/west resolution \\
+\hline
+{\em blc\-\_\-x} & -\/ (double) x coordinate for the bottom left corner \\
+\hline
+{\em blc\-\_\-y} & -\/ (double) y coordinate for the bottom left corner \\
+\hline
+{\em novalue} & -\/ (long) null value \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a linevector with vertical and horizontal line ordering assigned
+\end{DoxyReturn}
+\textbackslash{}O\-C\-C\-O\-R\-R\-E T\-E\-N\-E\-R\-E C\-O\-N\-T\-O D\-E\-L N\-O\-V\-A\-L\-U\-E!!!
+
+Counting lines
+
+V\-E\-R\-T\-I\-C\-A L\-I\-N\-E\-S
+
+vertical lines at the left edge of the grid element
+
+H\-O\-R\-I\-Z\-O\-N\-T\-A\-L L\-I\-N\-E\-S
+
+V\-E\-R\-T\-I\-C\-A L\-I\-N\-E\-S
+
+horizontal lines at the upper limit of the grid element
+
+verify of lines element
+
+V\-E\-R\-T\-I\-C\-A L\-I\-N\-E\-S
+
+vertical lines at the left edge of the grid element
+
+H\-O\-R\-I\-Z\-O\-N\-T\-A\-L L\-I\-N\-E\-S
+
+V\-E\-R\-T\-I\-C\-A L\-I\-N\-E\-S
+
+horizontal lines at the upper limit of the grid element
+
+verify of lines element 
+
+Definition at line 421 of file g\-\_\-raster2plvector.\-c.
+
+
+
+References L\-I\-N\-E\-V\-E\-C\-T\-O\-R\-::element, L\-O\-N\-G\-M\-A\-T\-R\-I\-X\-::nch, L\-O\-N\-G\-M\-A\-T\-R\-I\-X\-::ncl, new\-\_\-horizontal\-\_\-line\-\_\-from\-\_\-raster(), new\-\_\-linevector(), new\-\_\-vertical\-\_\-line\-\_\-from\-\_\-raster(), L\-I\-N\-E\-V\-E\-C\-T\-O\-R\-::nl, L\-O\-N\-G\-M\-A\-T\-R\-I\-X\-::nrh, and L\-O\-N\-G\-M\-A\-T\-R\-I\-X\-::nrl.
+
+
+
+Referenced by get\-\_\-square\-\_\-grid().
+
+\hypertarget{g__raster2plvector_8h_a7e6c1b852351ca4404c07a2f98494166}{\index{g\-\_\-raster2plvector.\-h@{g\-\_\-raster2plvector.\-h}!get\-\_\-polygonvector\-\_\-from\-\_\-raster@{get\-\_\-polygonvector\-\_\-from\-\_\-raster}}
+\index{get\-\_\-polygonvector\-\_\-from\-\_\-raster@{get\-\_\-polygonvector\-\_\-from\-\_\-raster}!g_raster2plvector.h@{g\-\_\-raster2plvector.\-h}}
+\subsubsection[{get\-\_\-polygonvector\-\_\-from\-\_\-raster}]{\setlength{\rightskip}{0pt plus 5cm}{\bf P\-O\-L\-Y\-G\-O\-N\-V\-E\-C\-T\-O\-R}$\ast$ get\-\_\-polygonvector\-\_\-from\-\_\-raster (
+\begin{DoxyParamCaption}
+\item[{{\bf L\-I\-N\-E\-V\-E\-C\-T\-O\-R} $\ast$}]{lines, }
+\item[{{\bf L\-O\-N\-G\-M\-A\-T\-R\-I\-X} $\ast$}]{i\-\_\-pixels, }
+\item[{{\bf L\-O\-N\-G\-M\-A\-T\-R\-I\-X} $\ast$}]{i\-\_\-horizontal, }
+\item[{{\bf L\-O\-N\-G\-M\-A\-T\-R\-I\-X} $\ast$}]{i\-\_\-vertical, }
+\item[{double}]{nsres, }
+\item[{double}]{ewres, }
+\item[{double}]{blc\-\_\-x, }
+\item[{double}]{blc\-\_\-y, }
+\item[{long}]{novalue, }
+\item[{short}]{print}
+\end{DoxyParamCaption}
+)}}\label{g__raster2plvector_8h_a7e6c1b852351ca4404c07a2f98494166}
+\begin{DoxyAuthor}{Author}
+Emanuele Cordano 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+November 2008
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em lines} & (\hyperlink{struct_l_i_n_e_v_e_c_t_o_r}{L\-I\-N\-E\-V\-E\-C\-T\-O\-R} $\ast$) -\/ array of lines \\
+\hline
+{\em i\-\_\-pixels} & (\hyperlink{struct_l_o_n_g_m_a_t_r_i_x}{L\-O\-N\-G\-M\-A\-T\-R\-I\-X} $\ast$) -\/ matrix for pixel indices \\
+\hline
+{\em i\-\_\-orizontal} & (\hyperlink{struct_l_o_n_g_m_a_t_r_i_x}{L\-O\-N\-G\-M\-A\-T\-R\-I\-X} $\ast$) -\/ matrix of indices for horizontal lines \\
+\hline
+{\em i\-\_\-vertical} & (\hyperlink{struct_l_o_n_g_m_a_t_r_i_x}{L\-O\-N\-G\-M\-A\-T\-R\-I\-X} $\ast$) -\/ matrix of indices for vertical lines \\
+\hline
+{\em nsres} & -\/ (double) north-\/south resolution \\
+\hline
+{\em ewres} & -\/ (double) east-\/west resolution \\
+\hline
+{\em blc\-\_\-x} & -\/ (double) x coordinate for the bottom left corner \\
+\hline
+{\em blc\-\_\-y} & -\/ (double) y coordinate for the bottom left corner \\
+\hline
+{\em novalue} & (long) N\-U\-L\-L value \\
+\hline
+{\em print} & -\/ (short) it is a verbose modality if print==1\\
+\hline
+\end{DoxyParams}
+counter for the pixels within te basin
+
+verify of polygonvector element 
+
+Definition at line 585 of file g\-\_\-raster2plvector.\-c.
+
+
+
+References P\-O\-L\-Y\-G\-O\-N\-V\-E\-C\-T\-O\-R\-::element, L\-O\-N\-G\-M\-A\-T\-R\-I\-X\-::ncl, new\-\_\-pixel\-\_\-from\-\_\-raster(), new\-\_\-polygonvector(), P\-O\-L\-Y\-G\-O\-N\-V\-E\-C\-T\-O\-R\-::nl, and L\-O\-N\-G\-M\-A\-T\-R\-I\-X\-::nrl.
+
+
+
+Referenced by get\-\_\-square\-\_\-grid().
+
+\hypertarget{g__raster2plvector_8h_a3abb055f6b19a51bd5dc90f5f35f9017}{\index{g\-\_\-raster2plvector.\-h@{g\-\_\-raster2plvector.\-h}!index\-\_\-pixel\-\_\-from\-\_\-a\-\_\-bin@{index\-\_\-pixel\-\_\-from\-\_\-a\-\_\-bin}}
+\index{index\-\_\-pixel\-\_\-from\-\_\-a\-\_\-bin@{index\-\_\-pixel\-\_\-from\-\_\-a\-\_\-bin}!g_raster2plvector.h@{g\-\_\-raster2plvector.\-h}}
+\subsubsection[{index\-\_\-pixel\-\_\-from\-\_\-a\-\_\-bin}]{\setlength{\rightskip}{0pt plus 5cm}long index\-\_\-pixel\-\_\-from\-\_\-a\-\_\-bin (
+\begin{DoxyParamCaption}
+\item[{long}]{r, }
+\item[{long}]{c, }
+\item[{{\bf L\-O\-N\-G\-V\-E\-C\-T\-O\-R} $\ast$}]{s\-\_\-index}
+\end{DoxyParamCaption}
+)}}\label{g__raster2plvector_8h_a3abb055f6b19a51bd5dc90f5f35f9017}
+
+\begin{DoxyParams}{Parameters}
+{\em lmask} & (\hyperlink{struct_d_o_u_b_l_e_m_a_t_r_i_x}{D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X} $\ast$) -\/ matrix with 0 or 1 values (if element is 1 the element is within the basin, 0 otherwise) \\
+\hline
+{\em row\-\_\-shitf} & (long) -\/ integer parameters to be set for vertical line searching (-\/1\-: left vertical line searching, 0\-: pixel searching, 1\-: right vertical line searching) \\
+\hline
+{\em col\-\_\-shift} & (long) -\/ integer parameters to be set for horizonttal line searching (-\/1\-: top horizontal line searching, 0\-: pixel searching, 1\-: bottom vertical line searching)\\
+\hline
+{\em -\/} & (long) r row \\
+\hline
+{\em -\/} & (long) c column \\
+\hline
+{\em -\/} & (\hyperlink{struct_l_o_n_g_v_e_c_t_o_r}{L\-O\-N\-G\-V\-E\-C\-T\-O\-R} $\ast$) sum of the index of the bin\\
+\hline
+\end{DoxyParams}
+\begin{DoxyAuthor}{Author}
+Emanuele Cordano 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+January 2009
+\end{DoxyDate}
+\begin{DoxyReturn}{Returns}
+index\-\_\-pixel an index related
+\end{DoxyReturn}
+
+
+Definition at line 146 of file g\-\_\-raster2plvector.\-c.
+
+
+
+Referenced by get\-\_\-square\-\_\-grid(), m\-\_\-indices\-\_\-from\-\_\-mask(), main(), and read\-\_\-square\-\_\-grid().
+
+\hypertarget{g__raster2plvector_8h_ae62849b1134137a54321fdb9c700225a}{\index{g\-\_\-raster2plvector.\-h@{g\-\_\-raster2plvector.\-h}!m\-\_\-indices\-\_\-from\-\_\-mask@{m\-\_\-indices\-\_\-from\-\_\-mask}}
+\index{m\-\_\-indices\-\_\-from\-\_\-mask@{m\-\_\-indices\-\_\-from\-\_\-mask}!g_raster2plvector.h@{g\-\_\-raster2plvector.\-h}}
+\subsubsection[{m\-\_\-indices\-\_\-from\-\_\-mask}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\-O\-N\-G\-M\-A\-T\-R\-I\-X}$\ast$ m\-\_\-indices\-\_\-from\-\_\-mask (
+\begin{DoxyParamCaption}
+\item[{{\bf D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X} $\ast$}]{mask, }
+\item[{long}]{row\-\_\-shift, }
+\item[{long}]{col\-\_\-shift, }
+\item[{long}]{novalue, }
+\item[{long}]{I\-B\-A\-S\-E, }
+\item[{long($\ast$)(long r, long c, {\bf L\-O\-N\-G\-V\-E\-C\-T\-O\-R} $\ast$s\-\_\-index)}]{index\-\_\-pixel\-\_\-from\-\_\-a\-\_\-bin, }
+\item[{{\bf D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} $\ast$}]{V, }
+\item[{int($\ast$)(double x, {\bf D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} $\ast$V)}]{check\-\_\-novalues}
+\end{DoxyParamCaption}
+)}}\label{g__raster2plvector_8h_ae62849b1134137a54321fdb9c700225a}
+\hyperlink{struct_l_o_n_g_m_a_t_r_i_x}{L\-O\-N\-G\-M\-A\-T\-R\-I\-X} $\ast$m\-\_\-indices\-\_\-with\-\_\-novalues(\hyperlink{struct_l_o_n_g_b_i_n}{L\-O\-N\-G\-B\-I\-N} $\ast$addresses, long nch, long novalue, long I\-B\-A\-S\-E, long ($\ast$index\-\_\-pixel\-\_\-from\-\_\-a\-\_\-bin)(long r, long c, \hyperlink{struct_l_o_n_g_v_e_c_t_o_r}{L\-O\-N\-G\-V\-E\-C\-T\-O\-R} $\ast$s\-\_\-index)) \hyperlink{struct_l_o_n_g_b_i_n}{L\-O\-N\-G\-B\-I\-N} $\ast$addresses(\hyperlink{struct_l_o_n_g_m_a_t_r_i_x}{L\-O\-N\-G\-M\-A\-T\-R\-I\-X} $\ast$lmask,long row\-\_\-shift,long col\-\_\-shift) 
+\begin{DoxyParams}{Parameters}
+{\em mask} & (\hyperlink{struct_d_o_u_b_l_e_m_a_t_r_i_x}{D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X} $\ast$) -\/ mask of the basin \\
+\hline
+{\em row\-\_\-shitf} & (long) -\/ integer parameters to be set for vertical line searching (-\/1\-: left vertical line searching, 0\-: pixel searching, 1\-: right vertical line searching) \\
+\hline
+{\em col\-\_\-shift} & (long) -\/ integer parameters to be set for horizonttal line searching (-\/1\-: top horizontal line searching, 0\-: pixel searching, 1\-: bottom vertical line searching) \\
+\hline
+{\em (long)} & -\/ integer values for N\-U\-L\-L \\
+\hline
+{\em (long)} & -\/ I\-B\-A\-S\-E base number \\
+\hline
+{\em (long)} & -\/ ($\ast$index\-\_\-pixel\-\_\-from\-\_\-a\-\_\-bin)(long r, long c, \hyperlink{struct_l_o_n_g_v_e_c_t_o_r}{L\-O\-N\-G\-V\-E\-C\-T\-O\-R} $\ast$s\-\_\-index) -\/ function which numbers the pixel inside the domain \\
+\hline
+{\em V} & (\hyperlink{struct_d_o_u_b_l_e_v_e_c_t_o_r}{D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} $\ast$)-\/ vector containing novalue information \\
+\hline
+{\em int} & ($\ast$check\-\_\-novalues)(double x, \hyperlink{struct_d_o_u_b_l_e_v_e_c_t_o_r}{D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} $\ast$\-V)) -\/\\
+\hline
+\end{DoxyParams}
+\begin{DoxyAuthor}{Author}
+Emanuele Cordano 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+January 2008
+\end{DoxyDate}
+
+
+Definition at line 235 of file g\-\_\-raster2plvector.\-c.
+
+
+
+References addresses(), free\-\_\-longbin(), free\-\_\-longmatrix(), index\-\_\-pixel\-\_\-from\-\_\-a\-\_\-bin(), m\-\_\-indices\-\_\-with\-\_\-novalues(), D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X\-::nch, L\-O\-N\-G\-M\-A\-T\-R\-I\-X\-::nch, D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X\-::ncl, new\-\_\-longmatrix(), D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X\-::nrh, L\-O\-N\-G\-M\-A\-T\-R\-I\-X\-::nrh, and D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X\-::nrl.
+
+
+
+Referenced by get\-\_\-square\-\_\-grid(), and read\-\_\-square\-\_\-grid().
+
+\hypertarget{g__raster2plvector_8h_a9dcdce3e45c3242c0f92458a26b96900}{\index{g\-\_\-raster2plvector.\-h@{g\-\_\-raster2plvector.\-h}!m\-\_\-indices\-\_\-with\-\_\-novalues@{m\-\_\-indices\-\_\-with\-\_\-novalues}}
+\index{m\-\_\-indices\-\_\-with\-\_\-novalues@{m\-\_\-indices\-\_\-with\-\_\-novalues}!g_raster2plvector.h@{g\-\_\-raster2plvector.\-h}}
+\subsubsection[{m\-\_\-indices\-\_\-with\-\_\-novalues}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\-O\-N\-G\-M\-A\-T\-R\-I\-X}$\ast$ m\-\_\-indices\-\_\-with\-\_\-novalues (
+\begin{DoxyParamCaption}
+\item[{{\bf L\-O\-N\-G\-B\-I\-N} $\ast$}]{laddresses, }
+\item[{long}]{nch, }
+\item[{long}]{novalue, }
+\item[{long}]{I\-B\-A\-S\-E, }
+\item[{long($\ast$)(long r, long c, {\bf L\-O\-N\-G\-V\-E\-C\-T\-O\-R} $\ast$s\-\_\-index)}]{index\-\_\-pixel\-\_\-from\-\_\-a\-\_\-bin}
+\end{DoxyParamCaption}
+)}}\label{g__raster2plvector_8h_a9dcdce3e45c3242c0f92458a26b96900}
+\begin{DoxyAuthor}{Author}
+Emanuele Cordano 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+January 2009
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em (\-L\-O\-N\-G\-B\-I\-N} & $\ast$) -\/ the bin of the addresses of pixels inside the domain \\
+\hline
+{\em (long)} & -\/ number of columnus for the requested longmatrix \\
+\hline
+{\em (long)} & -\/ integer values for N\-U\-L\-L \\
+\hline
+{\em (long)} & -\/ I\-B\-A\-S\-E base number \\
+\hline
+{\em (long)} & -\/ ($\ast$index\-\_\-pixel\-\_\-from\-\_\-a\-\_\-bin)(long r, long c, \hyperlink{struct_l_o_n_g_v_e_c_t_o_r}{L\-O\-N\-G\-V\-E\-C\-T\-O\-R} $\ast$s\-\_\-index) -\/ function which numbers the pixel inside the domain\\
+\hline
+\end{DoxyParams}
+It creates a longmatrix with cell index (for pixels inside the domain) and novalue (for pixels outside the domain)
+
+Definition at line 179 of file g\-\_\-raster2plvector.\-c.
+
+
+
+References free\-\_\-longvector(), L\-O\-N\-G\-B\-I\-N\-::index, L\-O\-N\-G\-M\-A\-T\-R\-I\-X\-::ncl, new\-\_\-longmatrix(), new\-\_\-longvector(), L\-O\-N\-G\-V\-E\-C\-T\-O\-R\-::nh, L\-O\-N\-G\-V\-E\-C\-T\-O\-R\-::nl, and L\-O\-N\-G\-M\-A\-T\-R\-I\-X\-::nrl.
+
+
+
+Referenced by m\-\_\-indices\-\_\-from\-\_\-mask().
+
+\hypertarget{g__raster2plvector_8h_a6ac4cbd5562d6a8e636d775d2f3da1ff}{\index{g\-\_\-raster2plvector.\-h@{g\-\_\-raster2plvector.\-h}!new\-\_\-horizontal\-\_\-line\-\_\-from\-\_\-raster@{new\-\_\-horizontal\-\_\-line\-\_\-from\-\_\-raster}}
+\index{new\-\_\-horizontal\-\_\-line\-\_\-from\-\_\-raster@{new\-\_\-horizontal\-\_\-line\-\_\-from\-\_\-raster}!g_raster2plvector.h@{g\-\_\-raster2plvector.\-h}}
+\subsubsection[{new\-\_\-horizontal\-\_\-line\-\_\-from\-\_\-raster}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\-I\-N\-E}$\ast$ new\-\_\-horizontal\-\_\-line\-\_\-from\-\_\-raster (
+\begin{DoxyParamCaption}
+\item[{long}]{r, }
+\item[{long}]{c, }
+\item[{long}]{nrh, }
+\item[{long}]{nch, }
+\item[{double}]{nsres, }
+\item[{double}]{ewres, }
+\item[{double}]{blc\-\_\-x, }
+\item[{double}]{blc\-\_\-y, }
+\item[{long}]{iline, }
+\item[{long}]{ivertex1, }
+\item[{long}]{ivertex2}
+\end{DoxyParamCaption}
+)}}\label{g__raster2plvector_8h_a6ac4cbd5562d6a8e636d775d2f3da1ff}
+
+\begin{DoxyParams}{Parameters}
+{\em r} & -\/ (long) r row \\
+\hline
+{\em c} & -\/ (long) c column \\
+\hline
+{\em nrh} & -\/ number of rows \\
+\hline
+{\em nch} & -\/ number of columns \\
+\hline
+{\em lx} & -\/ (double) lx dimensionless x displacement for point location \\
+\hline
+{\em ly} & -\/ (double) ly dimensionless y displacement for point location \\
+\hline
+{\em nsres} & -\/ (double) north-\/south resolution \\
+\hline
+{\em ewres} & -\/ (double) east-\/west resolution \\
+\hline
+{\em blc\-\_\-x} & -\/ (double) x coordinate for the bottom left corner \\
+\hline
+{\em blc\-\_\-y} & -\/ (double) y coordinate for the bottom left corner \\
+\hline
+{\em iline} & -\/ (long) index number for line; \\
+\hline
+{\em ivertex1} & -\/ (long) index number for the vertex 1 \\
+\hline
+{\em ivertex2} & -\/ (long) index number for the vertex 2\\
+\hline
+\end{DoxyParams}
+\begin{DoxyAuthor}{Author}
+Emanuele Cordano 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+November 2008
+\end{DoxyDate}
+\begin{DoxyReturn}{Returns}
+a line struct for an horizontal line located in a specic point of the pixel r,c
+\end{DoxyReturn}
+
+
+Definition at line 329 of file g\-\_\-raster2plvector.\-c.
+
+
+
+References free\-\_\-point(), L\-E\-F\-T, new\-\_\-line\-\_\-from\-\_\-points(), new\-\_\-point\-\_\-from\-\_\-raster(), R\-I\-G\-H\-T, and T\-O\-P.
+
+
+
+Referenced by get\-\_\-linevector\-\_\-from\-\_\-raster\-\_\-grid().
+
+\hypertarget{g__raster2plvector_8h_af897eda04f2279371d5093b2eac582d4}{\index{g\-\_\-raster2plvector.\-h@{g\-\_\-raster2plvector.\-h}!new\-\_\-pixel\-\_\-from\-\_\-raster@{new\-\_\-pixel\-\_\-from\-\_\-raster}}
+\index{new\-\_\-pixel\-\_\-from\-\_\-raster@{new\-\_\-pixel\-\_\-from\-\_\-raster}!g_raster2plvector.h@{g\-\_\-raster2plvector.\-h}}
+\subsubsection[{new\-\_\-pixel\-\_\-from\-\_\-raster}]{\setlength{\rightskip}{0pt plus 5cm}{\bf P\-O\-L\-Y\-G\-O\-N}$\ast$ new\-\_\-pixel\-\_\-from\-\_\-raster (
+\begin{DoxyParamCaption}
+\item[{long}]{index, }
+\item[{long}]{r, }
+\item[{long}]{c, }
+\item[{{\bf L\-I\-N\-E\-V\-E\-C\-T\-O\-R} $\ast$}]{lines, }
+\item[{{\bf L\-O\-N\-G\-M\-A\-T\-R\-I\-X} $\ast$}]{i\-\_\-horizontal, }
+\item[{{\bf L\-O\-N\-G\-M\-A\-T\-R\-I\-X} $\ast$}]{i\-\_\-vertical, }
+\item[{double}]{nsres, }
+\item[{double}]{ewres, }
+\item[{double}]{blc\-\_\-x, }
+\item[{double}]{blc\-\_\-y, }
+\item[{short}]{print}
+\end{DoxyParamCaption}
+)}}\label{g__raster2plvector_8h_af897eda04f2279371d5093b2eac582d4}
+\begin{DoxyAuthor}{Author}
+Emanuele Cordano 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+November 2008
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em index} & (long) -\/ index of the element \\
+\hline
+{\em r} & (long) -\/ row \\
+\hline
+{\em c} & (long) -\/ colums \\
+\hline
+{\em lines} & (\hyperlink{struct_l_i_n_e_v_e_c_t_o_r}{L\-I\-N\-E\-V\-E\-C\-T\-O\-R} $\ast$) -\/ array of lines \\
+\hline
+{\em i\-\_\-orizontal} & (\hyperlink{struct_l_o_n_g_m_a_t_r_i_x}{L\-O\-N\-G\-M\-A\-T\-R\-I\-X} $\ast$) -\/ matrix of indices for horizontal lines \\
+\hline
+{\em i\-\_\-vertical} & (\hyperlink{struct_l_o_n_g_m_a_t_r_i_x}{L\-O\-N\-G\-M\-A\-T\-R\-I\-X} $\ast$) -\/ matrix of indices for vertical lines \\
+\hline
+{\em nsres} & -\/ (double) north-\/south resolution \\
+\hline
+{\em ewres} & -\/ (double) east-\/west resolution \\
+\hline
+{\em blc\-\_\-x} & -\/ (double) x coordinate for the bottom left corner \\
+\hline
+{\em blc\-\_\-y} & -\/ (double) y coordinate for the bottom left corner \\
+\hline
+{\em print} & -\/ (short) it is a verbose modality if print==1\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a polygon (Attributes are not allocated!!)
+\end{DoxyReturn}
+indices of the edge of the pixel 
+
+Definition at line 495 of file g\-\_\-raster2plvector.\-c.
+
+
+
+References extract\-\_\-linvector\-\_\-from\-\_\-linevector(), free\-\_\-linevector(), free\-\_\-longvector(), free\-\_\-point(), L\-X\-\_\-\-C\-E\-N\-T\-E\-R, L\-Y\-\_\-\-C\-E\-N\-T\-E\-R, L\-O\-N\-G\-M\-A\-T\-R\-I\-X\-::nch, new\-\_\-longvector(), new\-\_\-point\-\_\-from\-\_\-raster(), new\-\_\-polygon\-\_\-from\-\_\-a\-\_\-linevector(), and L\-O\-N\-G\-M\-A\-T\-R\-I\-X\-::nrh.
+
+
+
+Referenced by get\-\_\-polygonvector\-\_\-from\-\_\-raster().
+
+\hypertarget{g__raster2plvector_8h_a2ba706ca2c53cfaebfd3a9db051d1460}{\index{g\-\_\-raster2plvector.\-h@{g\-\_\-raster2plvector.\-h}!new\-\_\-point\-\_\-from\-\_\-raster@{new\-\_\-point\-\_\-from\-\_\-raster}}
+\index{new\-\_\-point\-\_\-from\-\_\-raster@{new\-\_\-point\-\_\-from\-\_\-raster}!g_raster2plvector.h@{g\-\_\-raster2plvector.\-h}}
+\subsubsection[{new\-\_\-point\-\_\-from\-\_\-raster}]{\setlength{\rightskip}{0pt plus 5cm}{\bf P\-O\-I\-N\-T}$\ast$ new\-\_\-point\-\_\-from\-\_\-raster (
+\begin{DoxyParamCaption}
+\item[{long}]{r, }
+\item[{long}]{c, }
+\item[{long}]{nrh, }
+\item[{long}]{nch, }
+\item[{double}]{lx, }
+\item[{double}]{ly, }
+\item[{double}]{nsres, }
+\item[{double}]{ewres, }
+\item[{double}]{blc\-\_\-x, }
+\item[{double}]{blc\-\_\-y, }
+\item[{long}]{index}
+\end{DoxyParamCaption}
+)}}\label{g__raster2plvector_8h_a2ba706ca2c53cfaebfd3a9db051d1460}
+
+\begin{DoxyParams}{Parameters}
+{\em r} & -\/ (long) r row \\
+\hline
+{\em c} & -\/ (long) c column \\
+\hline
+{\em nrh} & -\/ (long) number of rows \\
+\hline
+{\em nch} & -\/ (long) number of columns \\
+\hline
+{\em lx} & -\/ (double) lx dimensionless x displacement for point location \\
+\hline
+{\em ly} & -\/ (double) ly dimensionless y displacement for point location \\
+\hline
+{\em nsres} & -\/ (double) north-\/south resolution \\
+\hline
+{\em ewres} & -\/ (double) east-\/west resolution \\
+\hline
+{\em blc\-\_\-x} & -\/ (double) x coordinate for the bottom left corner \\
+\hline
+{\em blc\-\_\-y} & -\/ (double) y coordinate for the bottom left corner \\
+\hline
+{\em index} & -\/ (long) index of the point.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyAuthor}{Author}
+Emanuele Cordano 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+November 2008
+\end{DoxyDate}
+\begin{DoxyReturn}{Returns}
+a point struct located in a specific point of the pixel r,c
+\end{DoxyReturn}
+
+
+Definition at line 294 of file g\-\_\-raster2plvector.\-c.
+
+
+
+References new\-\_\-point(), and N\-O\-\_\-\-E\-L\-E\-V\-A\-T\-I\-O\-N.
+
+
+
+Referenced by new\-\_\-horizontal\-\_\-line\-\_\-from\-\_\-raster(), new\-\_\-pixel\-\_\-from\-\_\-raster(), and new\-\_\-vertical\-\_\-line\-\_\-from\-\_\-raster().
+
+\hypertarget{g__raster2plvector_8h_ab6d805b9109791cb9604f2297eab5b23}{\index{g\-\_\-raster2plvector.\-h@{g\-\_\-raster2plvector.\-h}!new\-\_\-vertical\-\_\-line\-\_\-from\-\_\-raster@{new\-\_\-vertical\-\_\-line\-\_\-from\-\_\-raster}}
+\index{new\-\_\-vertical\-\_\-line\-\_\-from\-\_\-raster@{new\-\_\-vertical\-\_\-line\-\_\-from\-\_\-raster}!g_raster2plvector.h@{g\-\_\-raster2plvector.\-h}}
+\subsubsection[{new\-\_\-vertical\-\_\-line\-\_\-from\-\_\-raster}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\-I\-N\-E}$\ast$ new\-\_\-vertical\-\_\-line\-\_\-from\-\_\-raster (
+\begin{DoxyParamCaption}
+\item[{long}]{r, }
+\item[{long}]{c, }
+\item[{long}]{nrh, }
+\item[{long}]{nch, }
+\item[{double}]{nsres, }
+\item[{double}]{ewres, }
+\item[{double}]{blc\-\_\-x, }
+\item[{double}]{blc\-\_\-y, }
+\item[{long}]{iline, }
+\item[{long}]{ivertex1, }
+\item[{long}]{ivertex2}
+\end{DoxyParamCaption}
+)}}\label{g__raster2plvector_8h_ab6d805b9109791cb9604f2297eab5b23}
+
+\begin{DoxyParams}{Parameters}
+{\em r} & -\/ (long) r row \\
+\hline
+{\em c} & -\/ (long) c column \\
+\hline
+{\em nrh} & -\/ number of rows \\
+\hline
+{\em nch} & -\/ number of columns \\
+\hline
+{\em lx} & -\/ (double) lx dimensionless x displacement for point location \\
+\hline
+{\em ly} & -\/ (double) ly dimensionless y displacement for point location \\
+\hline
+{\em nsres} & -\/ (double) north-\/south resolution \\
+\hline
+{\em ewres} & -\/ (double) east-\/west resolution \\
+\hline
+{\em blc\-\_\-x} & -\/ (double) x coordinate for the bottom left corner \\
+\hline
+{\em blc\-\_\-y} & -\/ (double) y coordinate for the bottom left corner \\
+\hline
+{\em iline} & -\/ (long) index number for line; \\
+\hline
+{\em ivertex1} & -\/ (long) index number for the vertex 1 \\
+\hline
+{\em ivertex2} & -\/ (long) index number for the vertex 2\\
+\hline
+\end{DoxyParams}
+\begin{DoxyAuthor}{Author}
+Emanuele Cordano 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+November 2008
+\end{DoxyDate}
+\begin{DoxyReturn}{Returns}
+a line struct for an horizontal line located in a specic point of the pixel r,c
+\end{DoxyReturn}
+
+
+Definition at line 375 of file g\-\_\-raster2plvector.\-c.
+
+
+
+References B\-O\-T\-T\-O\-M, free\-\_\-point(), L\-E\-F\-T, new\-\_\-line\-\_\-from\-\_\-points(), new\-\_\-point\-\_\-from\-\_\-raster(), and T\-O\-P.
+
+
+
+Referenced by get\-\_\-linevector\-\_\-from\-\_\-raster\-\_\-grid().
+
+\hypertarget{g__raster2plvector_8h_a5ecd73eb8ff6d2414e687e73aad53a7d}{\index{g\-\_\-raster2plvector.\-h@{g\-\_\-raster2plvector.\-h}!read\-\_\-doublevector\-\_\-from\-\_\-raster@{read\-\_\-doublevector\-\_\-from\-\_\-raster}}
+\index{read\-\_\-doublevector\-\_\-from\-\_\-raster@{read\-\_\-doublevector\-\_\-from\-\_\-raster}!g_raster2plvector.h@{g\-\_\-raster2plvector.\-h}}
+\subsubsection[{read\-\_\-doublevector\-\_\-from\-\_\-raster}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R}$\ast$ read\-\_\-doublevector\-\_\-from\-\_\-raster (
+\begin{DoxyParamCaption}
+\item[{short}]{a, }
+\item[{char $\ast$}]{filename, }
+\item[{{\bf D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X} $\ast$}]{Mref, }
+\item[{{\bf T\-\_\-\-I\-N\-I\-T} $\ast$}]{U\-Vref, }
+\item[{{\bf L\-O\-N\-G\-M\-A\-T\-R\-I\-X} $\ast$}]{indices}
+\end{DoxyParamCaption}
+)}}\label{g__raster2plvector_8h_a5ecd73eb8ff6d2414e687e73aad53a7d}
+\begin{DoxyAuthor}{Author}
+Emanuele Cordano 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+November 2008
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em a} & (short) -\/ flag about the use of the check with the reference map see read\-\_\-map comment \\
+\hline
+{\em filename} & (char $\ast$) name of the file \\
+\hline
+{\em Mref} & -\/ (\hyperlink{struct_d_o_u_b_l_e_m_a_t_r_i_x}{D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X} $\ast$) -\/ reference map \\
+\hline
+{\em U\-Vref} & -\/ (\hyperlink{struct_t___i_n_i_t}{T\-\_\-\-I\-N\-I\-T} $\ast$) T\-\_\-\-I\-I\-T struct containg ewres and nwres information \\
+\hline
+{\em \hyperlink{struct_l_o_n_g_m_a_t_r_i_x}{L\-O\-N\-G\-M\-A\-T\-R\-I\-X}} & $\ast$indices;\\
+\hline
+\end{DoxyParams}
+it reads a doublematrix with \char`\"{}read\-\_\-map\char`\"{} functions and it gets an re-\/ordered doublevector
+
+see paramentes for \char`\"{}read\-\_\-map\char`\"{}
+
+Definition at line 745 of file g\-\_\-raster2plvector.\-c.
+
+
+
+References free\-\_\-doublematrix(), get\-\_\-doublevector\-\_\-from\-\_\-doublematrix(), read\-\_\-map(), and T\-\_\-\-I\-N\-I\-T\-::\-V.
+
+
+
+Referenced by get\-\_\-dirichletsnode(), get\-\_\-sources(), and main().
+
+\hypertarget{g__raster2plvector_8h_a20264378b12951d36223b8961dc534cc}{\index{g\-\_\-raster2plvector.\-h@{g\-\_\-raster2plvector.\-h}!write\-\_\-raster\-\_\-from\-\_\-doublevector@{write\-\_\-raster\-\_\-from\-\_\-doublevector}}
+\index{write\-\_\-raster\-\_\-from\-\_\-doublevector@{write\-\_\-raster\-\_\-from\-\_\-doublevector}!g_raster2plvector.h@{g\-\_\-raster2plvector.\-h}}
+\subsubsection[{write\-\_\-raster\-\_\-from\-\_\-doublevector}]{\setlength{\rightskip}{0pt plus 5cm}int write\-\_\-raster\-\_\-from\-\_\-doublevector (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{filename, }
+\item[{{\bf D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} $\ast$}]{v, }
+\item[{{\bf T\-\_\-\-I\-N\-I\-T} $\ast$}]{U\-Vref, }
+\item[{{\bf L\-O\-N\-G\-M\-A\-T\-R\-I\-X} $\ast$}]{indices, }
+\item[{{\bf D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X} $\ast$}]{Mref}
+\end{DoxyParamCaption}
+)}}\label{g__raster2plvector_8h_a20264378b12951d36223b8961dc534cc}
+\begin{DoxyAuthor}{Author}
+Emanuele Cordano
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+November 2008
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & (char $\ast$) name of the file \\
+\hline
+{\em v} & -\/ (D\-O\-U\-B\-L\-E\-C\-T\-O\-R $\ast$) -\/ vecto to be mapped \\
+\hline
+{\em U\-Vref} & -\/ (\hyperlink{struct_t___i_n_i_t}{T\-\_\-\-I\-N\-I\-T} $\ast$) T\-\_\-\-I\-I\-T struct containg ewres and nwres information \\
+\hline
+{\em indices} & (\hyperlink{struct_l_o_n_g_v_e_c_t_o_r}{L\-O\-N\-G\-V\-E\-C\-T\-O\-R} $\ast$) -\/ matrix of indices \\
+\hline
+{\em Mref} & -\/ (\hyperlink{struct_d_o_u_b_l_e_m_a_t_r_i_x}{D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X} $\ast$) -\/ reference raster\\
+\hline
+\end{DoxyParams}
+it writes a map from a vector using get\-\_\-doublematrix\-\_\-from\-\_\-doublevecto and write\-\_\-map (This function does not take into account the N\-O\-V\-A\-L\-U\-E!!!)
+
+Definition at line 775 of file g\-\_\-raster2plvector.\-c.
+
+
+
+References F\-L\-O\-A\-T\-I\-N\-G\-\_\-\-P\-O\-I\-N\-T\-\_\-\-T\-Y\-P\-E, free\-\_\-doublematrix(), get\-\_\-doublematrix\-\_\-from\-\_\-doublevector(), M\-A\-P\-\_\-\-F\-O\-R\-M\-A\-T, T\-\_\-\-I\-N\-I\-T\-::\-V, and write\-\_\-map().
+
+
+
+Referenced by write\-\_\-map\-\_\-results().
+

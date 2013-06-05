@@ -1,0 +1,27 @@
+digraph "read_vectorheader"
+{
+  bgcolor="transparent";
+  edge [fontname="FreeSans",fontsize="10",labelfontname="FreeSans",labelfontsize="10"];
+  node [fontname="FreeSans",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="read_vectorheader",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node2 [label="header_scan",height=0.2,width=0.4,color="black",URL="$t__io_8c.html#af433a9538cd3814bd8f400569204cc1f"];
+  Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node3 [label="iscomment",height=0.2,width=0.4,color="black",URL="$t__io_8c.html#a7c23c08c6ea72264dc91ddab0d36e918"];
+  Node3 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node4 [label="skip_whitespaces",height=0.2,width=0.4,color="black",URL="$t__io_8c.html#a52f4f85b1ef75f4ccd947da5d1a28af6"];
+  Node2 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node5 [label="query_for_label",height=0.2,width=0.4,color="black",URL="$t__io_8c.html#acb404df2728e7f58f17a304f56e261d5"];
+  Node5 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node5 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node6 [label="t_error",height=0.2,width=0.4,color="black",URL="$error_8c.html#af79ef7c6656ef0f3d2786e2b09c1755f"];
+  Node2 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node7 [label="read_comment",height=0.2,width=0.4,color="black",URL="$t__io_8c.html#a8b4a8b2cd01f0fb435ec5e7340f80d87"];
+  Node7 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node7 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node2 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node2 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node1 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node1 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+}

@@ -1,0 +1,587 @@
+\hypertarget{rw__maps_8c}{\section{A\-S\-C\-I\-I/rw\-\_\-maps.c File Reference}
+\label{rw__maps_8c}\index{A\-S\-C\-I\-I/rw\-\_\-maps.\-c@{A\-S\-C\-I\-I/rw\-\_\-maps.\-c}}
+}
+{\ttfamily \#include \char`\"{}turtle.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}tensor3\-D.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}t\-\_\-utilities.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}rw\-\_\-maps.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}import\-\_\-ascii.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}write\-\_\-ascii.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}extensions.\-h\char`\"{}}\\*
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{struct_s_h_o_r_t_m_a_t_r_i_x}{S\-H\-O\-R\-T\-M\-A\-T\-R\-I\-X} $\ast$ \hyperlink{rw__maps_8c_a1811ce057b7f930b36917ad2605eed5b}{copyshort\-\_\-doublematrix} (\hyperlink{struct_d_o_u_b_l_e_m_a_t_r_i_x}{D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X} $\ast$M)
+\item 
+\hyperlink{struct_l_o_n_g_m_a_t_r_i_x}{L\-O\-N\-G\-M\-A\-T\-R\-I\-X} $\ast$ \hyperlink{rw__maps_8c_a6f579af9138b0a5058914587b5ad40c7}{copylong\-\_\-doublematrix} (\hyperlink{struct_d_o_u_b_l_e_m_a_t_r_i_x}{D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X} $\ast$M)
+\item 
+\hyperlink{struct_d_o_u_b_l_e_m_a_t_r_i_x}{D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X} $\ast$ \hyperlink{rw__maps_8c_ada79214359313a8d5a769f19949953a1}{copydouble\-\_\-shortmatrix} (\hyperlink{struct_s_h_o_r_t_m_a_t_r_i_x}{S\-H\-O\-R\-T\-M\-A\-T\-R\-I\-X} $\ast$S)
+\item 
+\hyperlink{struct_d_o_u_b_l_e_m_a_t_r_i_x}{D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X} $\ast$ \hyperlink{rw__maps_8c_a44804862cf2710774f7e708424f4d0cb}{copydouble\-\_\-longmatrix} (\hyperlink{struct_l_o_n_g_m_a_t_r_i_x}{L\-O\-N\-G\-M\-A\-T\-R\-I\-X} $\ast$L)
+\item 
+\hyperlink{struct_d_o_u_b_l_e_m_a_t_r_i_x}{D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X} $\ast$ \hyperlink{rw__maps_8c_af7d0364a0dbe49a4c08c58910f6c6f4c}{copydoublematrix\-\_\-const} (double c0, \hyperlink{struct_d_o_u_b_l_e_m_a_t_r_i_x}{D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X} $\ast$Mref, double N\-O\-V\-A\-L\-U\-E)
+\item 
+\hyperlink{struct_d_o_u_b_l_e_m_a_t_r_i_x}{D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X} $\ast$ \hyperlink{rw__maps_8c_a68547f8b173ac92c03978331cb459f55}{multiplydoublematrix} (double f, \hyperlink{struct_d_o_u_b_l_e_m_a_t_r_i_x}{D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X} $\ast$Mref, double N\-O\-V\-A\-L\-U\-E)
+\item 
+void \hyperlink{rw__maps_8c_abce26ef54cfae448a801d3951c49f20e}{build\-\_\-doubletensor} (\hyperlink{struct_d_o_u_b_l_e_t_e_n_s_o_r}{D\-O\-U\-B\-L\-E\-T\-E\-N\-S\-O\-R} $\ast$T, \hyperlink{struct_d_o_u_b_l_e_m_a_t_r_i_x}{D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X} $\ast$M, long l)
+\item 
+\hyperlink{struct_d_o_u_b_l_e_m_a_t_r_i_x}{D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X} $\ast$ \hyperlink{rw__maps_8c_a96e8d076715464219205e97ab1fdc1a2}{extract\-\_\-doublematrix} (\hyperlink{struct_d_o_u_b_l_e_t_e_n_s_o_r}{D\-O\-U\-B\-L\-E\-T\-E\-N\-S\-O\-R} $\ast$T, long l)
+\item 
+\hyperlink{struct_d_o_u_b_l_e_m_a_t_r_i_x}{D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X} $\ast$ \hyperlink{rw__maps_8c_aa3e933fb2446a6ea3b75b389782c4075}{extract\-\_\-fromtensor} (\hyperlink{struct_d_o_u_b_l_e_t_e_n_s_o_r}{D\-O\-U\-B\-L\-E\-T\-E\-N\-S\-O\-R} $\ast$T, long l)
+\item 
+\hyperlink{struct_d_o_u_b_l_e_t_e_n_s_o_r}{D\-O\-U\-B\-L\-E\-T\-E\-N\-S\-O\-R} $\ast$ \hyperlink{rw__maps_8c_ab28047f126c0e8f54dfa7fb674bcaf48}{build\-\_\-frommatrix} (\hyperlink{struct_d_o_u_b_l_e_m_a_t_r_i_x}{D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X} $\ast$M, long l, long lmax)
+\item 
+void \hyperlink{rw__maps_8c_a6c2d799a0e3976715a8ddd478abb720e}{write\-\_\-frommatrix} (long l, \hyperlink{struct_d_o_u_b_l_e_m_a_t_r_i_x}{D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X} $\ast$M, \hyperlink{struct_d_o_u_b_l_e_t_e_n_s_o_r}{D\-O\-U\-B\-L\-E\-T\-E\-N\-S\-O\-R} $\ast$T)
+\item 
+void \hyperlink{rw__maps_8c_a28f623204e2458bae5d403cfd4331d9a}{fmultiplydoublematrix} (\hyperlink{struct_d_o_u_b_l_e_m_a_t_r_i_x}{D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X} $\ast$destination, \hyperlink{struct_d_o_u_b_l_e_m_a_t_r_i_x}{D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X} $\ast$origin, double f, double novalue)
+\item 
+void \hyperlink{rw__maps_8c_af49492a787972f91b2024f2741132690}{assignnovalue} (\hyperlink{struct_d_o_u_b_l_e_m_a_t_r_i_x}{D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X} $\ast$destination, \hyperlink{struct_d_o_u_b_l_e_m_a_t_r_i_x}{D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X} $\ast$origin, double novalue)
+\item 
+void \hyperlink{rw__maps_8c_a489086e13f03df8adbba716e0a6877ae}{write\-\_\-suffix} (char $\ast$suffix, long i, short start)
+\item 
+char $\ast$ \hyperlink{rw__maps_8c_af74f6893e9ab9f36d161bec7fc33f30c}{namefile\-\_\-i} (char $\ast$name, long i)
+\item 
+char $\ast$ \hyperlink{rw__maps_8c_a0a9b5cd48c0390f1b40289aee7623292}{namefile\-\_\-i\-\_\-we} (char $\ast$name, long i)
+\item 
+char $\ast$ \hyperlink{rw__maps_8c_a348bb191431474b4d5f2ee2b9a17119d}{namefile\-\_\-i\-\_\-we2} (char $\ast$name, long i)
+\item 
+short \hyperlink{rw__maps_8c_a92c9aaedb8f335fba05563dd5aeeb355}{existing\-\_\-file} (char $\ast$name)
+\item 
+short \hyperlink{rw__maps_8c_a3b9de894c0ce1b0671f37a256bc103b0}{existing\-\_\-file\-\_\-text} (char $\ast$name)
+\item 
+\hyperlink{struct_d_o_u_b_l_e_m_a_t_r_i_x}{D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X} $\ast$ \hyperlink{rw__maps_8c_ad951e17a36a359704582cb584c1a199c}{read\-\_\-map} (short a, char $\ast$filename, \hyperlink{struct_d_o_u_b_l_e_m_a_t_r_i_x}{D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X} $\ast$Mref, \hyperlink{struct_t___i_n_i_t}{T\-\_\-\-I\-N\-I\-T} $\ast$U\-Vref)
+\item 
+\hyperlink{struct_d_o_u_b_l_e_m_a_t_r_i_x}{D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X} $\ast$ \hyperlink{rw__maps_8c_afc3ea9910a1bb59feea6dc140138b141}{read\-\_\-mapseries} (long i, char $\ast$filename, \hyperlink{struct_d_o_u_b_l_e_m_a_t_r_i_x}{D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X} $\ast$Mref, \hyperlink{struct_t___i_n_i_t}{T\-\_\-\-I\-N\-I\-T} $\ast$U\-Vref)
+\item 
+\hyperlink{struct_d_o_u_b_l_e_t_e_n_s_o_r}{D\-O\-U\-B\-L\-E\-T\-E\-N\-S\-O\-R} $\ast$ \hyperlink{rw__maps_8c_abafcb8cb16717ccef7d53af6cc2523ad}{read\-\_\-tensor} (long nl, char $\ast$filename, \hyperlink{struct_d_o_u_b_l_e_m_a_t_r_i_x}{D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X} $\ast$Mref, \hyperlink{struct_t___i_n_i_t}{T\-\_\-\-I\-N\-I\-T} $\ast$U\-Vref)
+\item 
+\hyperlink{struct_d_o_u_b_l_e_t_e_n_s_o_r}{D\-O\-U\-B\-L\-E\-T\-E\-N\-S\-O\-R} $\ast$ \hyperlink{rw__maps_8c_a25493296dff43c8d0d1f0ab390a8b88e}{read\-\_\-maptensor} (long i, long lmax, char $\ast$filename, \hyperlink{struct_d_o_u_b_l_e_m_a_t_r_i_x}{D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X} $\ast$Mref, \hyperlink{struct_t___i_n_i_t}{T\-\_\-\-I\-N\-I\-T} $\ast$U\-Vref)
+\item 
+void \hyperlink{rw__maps_8c_a90fd5c50a968eb05a3cb6c96367b400c}{write\-\_\-map} (char $\ast$filename, short type, short format, \hyperlink{struct_d_o_u_b_l_e_m_a_t_r_i_x}{D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X} $\ast$M, \hyperlink{struct_t___i_n_i_t}{T\-\_\-\-I\-N\-I\-T} $\ast$U\-V)
+\item 
+void \hyperlink{rw__maps_8c_a67e1cc105d5e11508e282dc7855bac55}{write\-\_\-mapseries} (long i, char $\ast$filename, short type, short format, \hyperlink{struct_d_o_u_b_l_e_m_a_t_r_i_x}{D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X} $\ast$M, \hyperlink{struct_t___i_n_i_t}{T\-\_\-\-I\-N\-I\-T} $\ast$U\-V)
+\item 
+void \hyperlink{rw__maps_8c_a5730f5ced13a7ffd2e60f0f33e594cda}{write\-\_\-tensorseries} (short a, long l, long i, char $\ast$filename, short type, short format, \hyperlink{struct_d_o_u_b_l_e_t_e_n_s_o_r}{D\-O\-U\-B\-L\-E\-T\-E\-N\-S\-O\-R} $\ast$T, \hyperlink{struct_t___i_n_i_t}{T\-\_\-\-I\-N\-I\-T} $\ast$U\-V)
+\item 
+void \hyperlink{rw__maps_8c_a0bc1df49fc4069ea0f1e1c06993df05a}{write\-\_\-tensorseries\-\_\-bis} (short a, long l, long i, char $\ast$filename, short type, short format, \hyperlink{struct_d_o_u_b_l_e_t_e_n_s_o_r}{D\-O\-U\-B\-L\-E\-T\-E\-N\-S\-O\-R} $\ast$T, \hyperlink{struct_t___i_n_i_t}{T\-\_\-\-I\-N\-I\-T} $\ast$U\-V)
+\item 
+void \hyperlink{rw__maps_8c_a8c8bedcf33cdb9729f22ef2175d8a134}{write\-\_\-tensorseries2} (long i, char $\ast$filename, short type, short format, \hyperlink{struct_d_o_u_b_l_e_t_e_n_s_o_r}{D\-O\-U\-B\-L\-E\-T\-E\-N\-S\-O\-R} $\ast$T, \hyperlink{struct_t___i_n_i_t}{T\-\_\-\-I\-N\-I\-T} $\ast$U\-V)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{rw__maps_8c_af49492a787972f91b2024f2741132690}{\index{rw\-\_\-maps.\-c@{rw\-\_\-maps.\-c}!assignnovalue@{assignnovalue}}
+\index{assignnovalue@{assignnovalue}!rw_maps.c@{rw\-\_\-maps.\-c}}
+\subsubsection[{assignnovalue}]{\setlength{\rightskip}{0pt plus 5cm}void assignnovalue (
+\begin{DoxyParamCaption}
+\item[{{\bf D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X} $\ast$}]{destination, }
+\item[{{\bf D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X} $\ast$}]{origin, }
+\item[{double}]{novalue}
+\end{DoxyParamCaption}
+)}}\label{rw__maps_8c_af49492a787972f91b2024f2741132690}
+
+
+Definition at line 287 of file rw\-\_\-maps.\-c.
+
+
+
+References D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X\-::co, D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X\-::nch, D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X\-::nrh, and t\-\_\-error().
+
+\hypertarget{rw__maps_8c_abce26ef54cfae448a801d3951c49f20e}{\index{rw\-\_\-maps.\-c@{rw\-\_\-maps.\-c}!build\-\_\-doubletensor@{build\-\_\-doubletensor}}
+\index{build\-\_\-doubletensor@{build\-\_\-doubletensor}!rw_maps.c@{rw\-\_\-maps.\-c}}
+\subsubsection[{build\-\_\-doubletensor}]{\setlength{\rightskip}{0pt plus 5cm}void build\-\_\-doubletensor (
+\begin{DoxyParamCaption}
+\item[{{\bf D\-O\-U\-B\-L\-E\-T\-E\-N\-S\-O\-R} $\ast$}]{T, }
+\item[{{\bf D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X} $\ast$}]{M, }
+\item[{long}]{l}
+\end{DoxyParamCaption}
+)}}\label{rw__maps_8c_abce26ef54cfae448a801d3951c49f20e}
+
+
+Definition at line 159 of file rw\-\_\-maps.\-c.
+
+
+
+References D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X\-::co, D\-O\-U\-B\-L\-E\-T\-E\-N\-S\-O\-R\-::co, D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X\-::nch, D\-O\-U\-B\-L\-E\-T\-E\-N\-S\-O\-R\-::nch, D\-O\-U\-B\-L\-E\-T\-E\-N\-S\-O\-R\-::ndh, D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X\-::nrh, D\-O\-U\-B\-L\-E\-T\-E\-N\-S\-O\-R\-::nrh, and t\-\_\-error().
+
+\hypertarget{rw__maps_8c_ab28047f126c0e8f54dfa7fb674bcaf48}{\index{rw\-\_\-maps.\-c@{rw\-\_\-maps.\-c}!build\-\_\-frommatrix@{build\-\_\-frommatrix}}
+\index{build\-\_\-frommatrix@{build\-\_\-frommatrix}!rw_maps.c@{rw\-\_\-maps.\-c}}
+\subsubsection[{build\-\_\-frommatrix}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\-O\-U\-B\-L\-E\-T\-E\-N\-S\-O\-R}$\ast$ build\-\_\-frommatrix (
+\begin{DoxyParamCaption}
+\item[{{\bf D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X} $\ast$}]{M, }
+\item[{long}]{l, }
+\item[{long}]{lmax}
+\end{DoxyParamCaption}
+)}}\label{rw__maps_8c_ab28047f126c0e8f54dfa7fb674bcaf48}
+
+
+Definition at line 223 of file rw\-\_\-maps.\-c.
+
+
+
+References D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X\-::co, D\-O\-U\-B\-L\-E\-T\-E\-N\-S\-O\-R\-::co, initialize\-\_\-doubletensor(), D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X\-::nch, new\-\_\-doubletensor(), D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X\-::nrh, and t\-\_\-error().
+
+
+
+Referenced by read\-\_\-maptensor(), and read\-\_\-tensor().
+
+\hypertarget{rw__maps_8c_a44804862cf2710774f7e708424f4d0cb}{\index{rw\-\_\-maps.\-c@{rw\-\_\-maps.\-c}!copydouble\-\_\-longmatrix@{copydouble\-\_\-longmatrix}}
+\index{copydouble\-\_\-longmatrix@{copydouble\-\_\-longmatrix}!rw_maps.c@{rw\-\_\-maps.\-c}}
+\subsubsection[{copydouble\-\_\-longmatrix}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X}$\ast$ copydouble\-\_\-longmatrix (
+\begin{DoxyParamCaption}
+\item[{{\bf L\-O\-N\-G\-M\-A\-T\-R\-I\-X} $\ast$}]{L}
+\end{DoxyParamCaption}
+)}}\label{rw__maps_8c_a44804862cf2710774f7e708424f4d0cb}
+
+
+Definition at line 94 of file rw\-\_\-maps.\-c.
+
+
+
+References D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X\-::co, L\-O\-N\-G\-M\-A\-T\-R\-I\-X\-::co, L\-O\-N\-G\-M\-A\-T\-R\-I\-X\-::nch, new\-\_\-doublematrix(), and L\-O\-N\-G\-M\-A\-T\-R\-I\-X\-::nrh.
+
+\hypertarget{rw__maps_8c_ada79214359313a8d5a769f19949953a1}{\index{rw\-\_\-maps.\-c@{rw\-\_\-maps.\-c}!copydouble\-\_\-shortmatrix@{copydouble\-\_\-shortmatrix}}
+\index{copydouble\-\_\-shortmatrix@{copydouble\-\_\-shortmatrix}!rw_maps.c@{rw\-\_\-maps.\-c}}
+\subsubsection[{copydouble\-\_\-shortmatrix}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X}$\ast$ copydouble\-\_\-shortmatrix (
+\begin{DoxyParamCaption}
+\item[{{\bf S\-H\-O\-R\-T\-M\-A\-T\-R\-I\-X} $\ast$}]{S}
+\end{DoxyParamCaption}
+)}}\label{rw__maps_8c_ada79214359313a8d5a769f19949953a1}
+
+
+Definition at line 74 of file rw\-\_\-maps.\-c.
+
+
+
+References S\-H\-O\-R\-T\-M\-A\-T\-R\-I\-X\-::co, D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X\-::co, S\-H\-O\-R\-T\-M\-A\-T\-R\-I\-X\-::nch, new\-\_\-doublematrix(), and S\-H\-O\-R\-T\-M\-A\-T\-R\-I\-X\-::nrh.
+
+\hypertarget{rw__maps_8c_af7d0364a0dbe49a4c08c58910f6c6f4c}{\index{rw\-\_\-maps.\-c@{rw\-\_\-maps.\-c}!copydoublematrix\-\_\-const@{copydoublematrix\-\_\-const}}
+\index{copydoublematrix\-\_\-const@{copydoublematrix\-\_\-const}!rw_maps.c@{rw\-\_\-maps.\-c}}
+\subsubsection[{copydoublematrix\-\_\-const}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X}$\ast$ copydoublematrix\-\_\-const (
+\begin{DoxyParamCaption}
+\item[{double}]{c0, }
+\item[{{\bf D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X} $\ast$}]{Mref, }
+\item[{double}]{N\-O\-V\-A\-L\-U\-E}
+\end{DoxyParamCaption}
+)}}\label{rw__maps_8c_af7d0364a0dbe49a4c08c58910f6c6f4c}
+
+
+Definition at line 113 of file rw\-\_\-maps.\-c.
+
+
+
+References D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X\-::co, D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X\-::nch, new\-\_\-doublematrix(), and D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X\-::nrh.
+
+\hypertarget{rw__maps_8c_a6f579af9138b0a5058914587b5ad40c7}{\index{rw\-\_\-maps.\-c@{rw\-\_\-maps.\-c}!copylong\-\_\-doublematrix@{copylong\-\_\-doublematrix}}
+\index{copylong\-\_\-doublematrix@{copylong\-\_\-doublematrix}!rw_maps.c@{rw\-\_\-maps.\-c}}
+\subsubsection[{copylong\-\_\-doublematrix}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\-O\-N\-G\-M\-A\-T\-R\-I\-X}$\ast$ copylong\-\_\-doublematrix (
+\begin{DoxyParamCaption}
+\item[{{\bf D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X} $\ast$}]{M}
+\end{DoxyParamCaption}
+)}}\label{rw__maps_8c_a6f579af9138b0a5058914587b5ad40c7}
+
+
+Definition at line 55 of file rw\-\_\-maps.\-c.
+
+
+
+References D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X\-::co, L\-O\-N\-G\-M\-A\-T\-R\-I\-X\-::co, D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X\-::nch, new\-\_\-longmatrix(), and D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X\-::nrh.
+
+\hypertarget{rw__maps_8c_a1811ce057b7f930b36917ad2605eed5b}{\index{rw\-\_\-maps.\-c@{rw\-\_\-maps.\-c}!copyshort\-\_\-doublematrix@{copyshort\-\_\-doublematrix}}
+\index{copyshort\-\_\-doublematrix@{copyshort\-\_\-doublematrix}!rw_maps.c@{rw\-\_\-maps.\-c}}
+\subsubsection[{copyshort\-\_\-doublematrix}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\-H\-O\-R\-T\-M\-A\-T\-R\-I\-X}$\ast$ copyshort\-\_\-doublematrix (
+\begin{DoxyParamCaption}
+\item[{{\bf D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X} $\ast$}]{M}
+\end{DoxyParamCaption}
+)}}\label{rw__maps_8c_a1811ce057b7f930b36917ad2605eed5b}
+
+
+Definition at line 36 of file rw\-\_\-maps.\-c.
+
+
+
+References S\-H\-O\-R\-T\-M\-A\-T\-R\-I\-X\-::co, D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X\-::co, D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X\-::nch, new\-\_\-shortmatrix(), and D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X\-::nrh.
+
+\hypertarget{rw__maps_8c_a92c9aaedb8f335fba05563dd5aeeb355}{\index{rw\-\_\-maps.\-c@{rw\-\_\-maps.\-c}!existing\-\_\-file@{existing\-\_\-file}}
+\index{existing\-\_\-file@{existing\-\_\-file}!rw_maps.c@{rw\-\_\-maps.\-c}}
+\subsubsection[{existing\-\_\-file}]{\setlength{\rightskip}{0pt plus 5cm}short existing\-\_\-file (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{name}
+\end{DoxyParamCaption}
+)}}\label{rw__maps_8c_a92c9aaedb8f335fba05563dd5aeeb355}
+
+
+Definition at line 390 of file rw\-\_\-maps.\-c.
+
+
+
+References ascii\-\_\-esri, ascii\-\_\-ft, ascii\-\_\-grass, and join\-\_\-strings().
+
+
+
+Referenced by read\-\_\-map().
+
+\hypertarget{rw__maps_8c_a3b9de894c0ce1b0671f37a256bc103b0}{\index{rw\-\_\-maps.\-c@{rw\-\_\-maps.\-c}!existing\-\_\-file\-\_\-text@{existing\-\_\-file\-\_\-text}}
+\index{existing\-\_\-file\-\_\-text@{existing\-\_\-file\-\_\-text}!rw_maps.c@{rw\-\_\-maps.\-c}}
+\subsubsection[{existing\-\_\-file\-\_\-text}]{\setlength{\rightskip}{0pt plus 5cm}short existing\-\_\-file\-\_\-text (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{name}
+\end{DoxyParamCaption}
+)}}\label{rw__maps_8c_a3b9de894c0ce1b0671f37a256bc103b0}
+
+
+Definition at line 418 of file rw\-\_\-maps.\-c.
+
+
+
+References join\-\_\-strings(), and textfile.
+
+\hypertarget{rw__maps_8c_a96e8d076715464219205e97ab1fdc1a2}{\index{rw\-\_\-maps.\-c@{rw\-\_\-maps.\-c}!extract\-\_\-doublematrix@{extract\-\_\-doublematrix}}
+\index{extract\-\_\-doublematrix@{extract\-\_\-doublematrix}!rw_maps.c@{rw\-\_\-maps.\-c}}
+\subsubsection[{extract\-\_\-doublematrix}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X}$\ast$ extract\-\_\-doublematrix (
+\begin{DoxyParamCaption}
+\item[{{\bf D\-O\-U\-B\-L\-E\-T\-E\-N\-S\-O\-R} $\ast$}]{T, }
+\item[{long}]{l}
+\end{DoxyParamCaption}
+)}}\label{rw__maps_8c_a96e8d076715464219205e97ab1fdc1a2}
+
+
+Definition at line 178 of file rw\-\_\-maps.\-c.
+
+
+
+References D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X\-::co, D\-O\-U\-B\-L\-E\-T\-E\-N\-S\-O\-R\-::co, D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X\-::nch, D\-O\-U\-B\-L\-E\-T\-E\-N\-S\-O\-R\-::nch, D\-O\-U\-B\-L\-E\-T\-E\-N\-S\-O\-R\-::ndh, new\-\_\-doublematrix(), D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X\-::nrh, D\-O\-U\-B\-L\-E\-T\-E\-N\-S\-O\-R\-::nrh, and t\-\_\-error().
+
+\hypertarget{rw__maps_8c_aa3e933fb2446a6ea3b75b389782c4075}{\index{rw\-\_\-maps.\-c@{rw\-\_\-maps.\-c}!extract\-\_\-fromtensor@{extract\-\_\-fromtensor}}
+\index{extract\-\_\-fromtensor@{extract\-\_\-fromtensor}!rw_maps.c@{rw\-\_\-maps.\-c}}
+\subsubsection[{extract\-\_\-fromtensor}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X}$\ast$ extract\-\_\-fromtensor (
+\begin{DoxyParamCaption}
+\item[{{\bf D\-O\-U\-B\-L\-E\-T\-E\-N\-S\-O\-R} $\ast$}]{T, }
+\item[{long}]{l}
+\end{DoxyParamCaption}
+)}}\label{rw__maps_8c_aa3e933fb2446a6ea3b75b389782c4075}
+
+
+Definition at line 202 of file rw\-\_\-maps.\-c.
+
+
+
+References D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X\-::co, D\-O\-U\-B\-L\-E\-T\-E\-N\-S\-O\-R\-::co, D\-O\-U\-B\-L\-E\-T\-E\-N\-S\-O\-R\-::nch, D\-O\-U\-B\-L\-E\-T\-E\-N\-S\-O\-R\-::ndh, new\-\_\-doublematrix(), D\-O\-U\-B\-L\-E\-T\-E\-N\-S\-O\-R\-::nrh, and t\-\_\-error().
+
+\hypertarget{rw__maps_8c_a28f623204e2458bae5d403cfd4331d9a}{\index{rw\-\_\-maps.\-c@{rw\-\_\-maps.\-c}!fmultiplydoublematrix@{fmultiplydoublematrix}}
+\index{fmultiplydoublematrix@{fmultiplydoublematrix}!rw_maps.c@{rw\-\_\-maps.\-c}}
+\subsubsection[{fmultiplydoublematrix}]{\setlength{\rightskip}{0pt plus 5cm}void fmultiplydoublematrix (
+\begin{DoxyParamCaption}
+\item[{{\bf D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X} $\ast$}]{destination, }
+\item[{{\bf D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X} $\ast$}]{origin, }
+\item[{double}]{f, }
+\item[{double}]{novalue}
+\end{DoxyParamCaption}
+)}}\label{rw__maps_8c_a28f623204e2458bae5d403cfd4331d9a}
+
+
+Definition at line 267 of file rw\-\_\-maps.\-c.
+
+
+
+References D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X\-::co, D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X\-::nch, D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X\-::nrh, and t\-\_\-error().
+
+\hypertarget{rw__maps_8c_a68547f8b173ac92c03978331cb459f55}{\index{rw\-\_\-maps.\-c@{rw\-\_\-maps.\-c}!multiplydoublematrix@{multiplydoublematrix}}
+\index{multiplydoublematrix@{multiplydoublematrix}!rw_maps.c@{rw\-\_\-maps.\-c}}
+\subsubsection[{multiplydoublematrix}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X}$\ast$ multiplydoublematrix (
+\begin{DoxyParamCaption}
+\item[{double}]{f, }
+\item[{{\bf D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X} $\ast$}]{Mref, }
+\item[{double}]{N\-O\-V\-A\-L\-U\-E}
+\end{DoxyParamCaption}
+)}}\label{rw__maps_8c_a68547f8b173ac92c03978331cb459f55}
+
+
+Definition at line 136 of file rw\-\_\-maps.\-c.
+
+
+
+References D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X\-::co, D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X\-::nch, new\-\_\-doublematrix(), and D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X\-::nrh.
+
+\hypertarget{rw__maps_8c_af74f6893e9ab9f36d161bec7fc33f30c}{\index{rw\-\_\-maps.\-c@{rw\-\_\-maps.\-c}!namefile\-\_\-i@{namefile\-\_\-i}}
+\index{namefile\-\_\-i@{namefile\-\_\-i}!rw_maps.c@{rw\-\_\-maps.\-c}}
+\subsubsection[{namefile\-\_\-i}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ namefile\-\_\-i (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{name, }
+\item[{long}]{i}
+\end{DoxyParamCaption}
+)}}\label{rw__maps_8c_af74f6893e9ab9f36d161bec7fc33f30c}
+
+
+Definition at line 347 of file rw\-\_\-maps.\-c.
+
+
+
+References join\-\_\-strings(), textfile, and write\-\_\-suffix().
+
+\hypertarget{rw__maps_8c_a0a9b5cd48c0390f1b40289aee7623292}{\index{rw\-\_\-maps.\-c@{rw\-\_\-maps.\-c}!namefile\-\_\-i\-\_\-we@{namefile\-\_\-i\-\_\-we}}
+\index{namefile\-\_\-i\-\_\-we@{namefile\-\_\-i\-\_\-we}!rw_maps.c@{rw\-\_\-maps.\-c}}
+\subsubsection[{namefile\-\_\-i\-\_\-we}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ namefile\-\_\-i\-\_\-we (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{name, }
+\item[{long}]{i}
+\end{DoxyParamCaption}
+)}}\label{rw__maps_8c_a0a9b5cd48c0390f1b40289aee7623292}
+
+
+Definition at line 361 of file rw\-\_\-maps.\-c.
+
+
+
+References join\-\_\-strings(), and write\-\_\-suffix().
+
+\hypertarget{rw__maps_8c_a348bb191431474b4d5f2ee2b9a17119d}{\index{rw\-\_\-maps.\-c@{rw\-\_\-maps.\-c}!namefile\-\_\-i\-\_\-we2@{namefile\-\_\-i\-\_\-we2}}
+\index{namefile\-\_\-i\-\_\-we2@{namefile\-\_\-i\-\_\-we2}!rw_maps.c@{rw\-\_\-maps.\-c}}
+\subsubsection[{namefile\-\_\-i\-\_\-we2}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ namefile\-\_\-i\-\_\-we2 (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{name, }
+\item[{long}]{i}
+\end{DoxyParamCaption}
+)}}\label{rw__maps_8c_a348bb191431474b4d5f2ee2b9a17119d}
+
+
+Definition at line 374 of file rw\-\_\-maps.\-c.
+
+
+
+References join\-\_\-strings(), and write\-\_\-suffix().
+
+\hypertarget{rw__maps_8c_ad951e17a36a359704582cb584c1a199c}{\index{rw\-\_\-maps.\-c@{rw\-\_\-maps.\-c}!read\-\_\-map@{read\-\_\-map}}
+\index{read\-\_\-map@{read\-\_\-map}!rw_maps.c@{rw\-\_\-maps.\-c}}
+\subsubsection[{read\-\_\-map}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X}$\ast$ read\-\_\-map (
+\begin{DoxyParamCaption}
+\item[{short}]{a, }
+\item[{char $\ast$}]{filename, }
+\item[{{\bf D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X} $\ast$}]{Mref, }
+\item[{{\bf T\-\_\-\-I\-N\-I\-T} $\ast$}]{U\-Vref}
+\end{DoxyParamCaption}
+)}}\label{rw__maps_8c_ad951e17a36a359704582cb584c1a199c}
+
+
+Definition at line 435 of file rw\-\_\-maps.\-c.
+
+
+
+References ascii\-\_\-esri, ascii\-\_\-ft, ascii\-\_\-grass, D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R\-::co, D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X\-::co, existing\-\_\-file(), free\-\_\-doublevector(), join\-\_\-strings(), D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X\-::nch, new\-\_\-doublematrix(), new\-\_\-doublevector(), D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X\-::nrh, P\-R\-I\-N\-T, read\-\_\-doublearray(), read\-\_\-doublematrix(), read\-\_\-esriascii(), read\-\_\-grassascii(), read\-\_\-index(), stop\-\_\-execution(), t\-\_\-error(), t\-\_\-fclose(), t\-\_\-fopen(), T\-\_\-\-I\-N\-I\-T\-::\-U, and T\-\_\-\-I\-N\-I\-T\-::\-V.
+
+
+
+Referenced by add\-\_\-map\-\_\-to\-\_\-raster(), read\-\_\-doublevector\-\_\-from\-\_\-raster(), read\-\_\-mapseries(), and read\-\_\-maptensor().
+
+\hypertarget{rw__maps_8c_afc3ea9910a1bb59feea6dc140138b141}{\index{rw\-\_\-maps.\-c@{rw\-\_\-maps.\-c}!read\-\_\-mapseries@{read\-\_\-mapseries}}
+\index{read\-\_\-mapseries@{read\-\_\-mapseries}!rw_maps.c@{rw\-\_\-maps.\-c}}
+\subsubsection[{read\-\_\-mapseries}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X}$\ast$ read\-\_\-mapseries (
+\begin{DoxyParamCaption}
+\item[{long}]{i, }
+\item[{char $\ast$}]{filename, }
+\item[{{\bf D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X} $\ast$}]{Mref, }
+\item[{{\bf T\-\_\-\-I\-N\-I\-T} $\ast$}]{U\-Vref}
+\end{DoxyParamCaption}
+)}}\label{rw__maps_8c_afc3ea9910a1bb59feea6dc140138b141}
+
+
+Definition at line 625 of file rw\-\_\-maps.\-c.
+
+
+
+References join\-\_\-strings(), read\-\_\-map(), and write\-\_\-suffix().
+
+
+
+Referenced by read\-\_\-tensor().
+
+\hypertarget{rw__maps_8c_a25493296dff43c8d0d1f0ab390a8b88e}{\index{rw\-\_\-maps.\-c@{rw\-\_\-maps.\-c}!read\-\_\-maptensor@{read\-\_\-maptensor}}
+\index{read\-\_\-maptensor@{read\-\_\-maptensor}!rw_maps.c@{rw\-\_\-maps.\-c}}
+\subsubsection[{read\-\_\-maptensor}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\-O\-U\-B\-L\-E\-T\-E\-N\-S\-O\-R}$\ast$ read\-\_\-maptensor (
+\begin{DoxyParamCaption}
+\item[{long}]{i, }
+\item[{long}]{lmax, }
+\item[{char $\ast$}]{filename, }
+\item[{{\bf D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X} $\ast$}]{Mref, }
+\item[{{\bf T\-\_\-\-I\-N\-I\-T} $\ast$}]{U\-Vref}
+\end{DoxyParamCaption}
+)}}\label{rw__maps_8c_a25493296dff43c8d0d1f0ab390a8b88e}
+
+
+Definition at line 667 of file rw\-\_\-maps.\-c.
+
+
+
+References build\-\_\-frommatrix(), join\-\_\-strings(), read\-\_\-map(), t\-\_\-error(), write\-\_\-frommatrix(), and write\-\_\-suffix().
+
+\hypertarget{rw__maps_8c_abafcb8cb16717ccef7d53af6cc2523ad}{\index{rw\-\_\-maps.\-c@{rw\-\_\-maps.\-c}!read\-\_\-tensor@{read\-\_\-tensor}}
+\index{read\-\_\-tensor@{read\-\_\-tensor}!rw_maps.c@{rw\-\_\-maps.\-c}}
+\subsubsection[{read\-\_\-tensor}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\-O\-U\-B\-L\-E\-T\-E\-N\-S\-O\-R}$\ast$ read\-\_\-tensor (
+\begin{DoxyParamCaption}
+\item[{long}]{nl, }
+\item[{char $\ast$}]{filename, }
+\item[{{\bf D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X} $\ast$}]{Mref, }
+\item[{{\bf T\-\_\-\-I\-N\-I\-T} $\ast$}]{U\-Vref}
+\end{DoxyParamCaption}
+)}}\label{rw__maps_8c_abafcb8cb16717ccef7d53af6cc2523ad}
+
+
+Definition at line 642 of file rw\-\_\-maps.\-c.
+
+
+
+References build\-\_\-frommatrix(), free\-\_\-doublematrix(), read\-\_\-mapseries(), t\-\_\-error(), and write\-\_\-frommatrix().
+
+\hypertarget{rw__maps_8c_a6c2d799a0e3976715a8ddd478abb720e}{\index{rw\-\_\-maps.\-c@{rw\-\_\-maps.\-c}!write\-\_\-frommatrix@{write\-\_\-frommatrix}}
+\index{write\-\_\-frommatrix@{write\-\_\-frommatrix}!rw_maps.c@{rw\-\_\-maps.\-c}}
+\subsubsection[{write\-\_\-frommatrix}]{\setlength{\rightskip}{0pt plus 5cm}void write\-\_\-frommatrix (
+\begin{DoxyParamCaption}
+\item[{long}]{l, }
+\item[{{\bf D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X} $\ast$}]{M, }
+\item[{{\bf D\-O\-U\-B\-L\-E\-T\-E\-N\-S\-O\-R} $\ast$}]{T}
+\end{DoxyParamCaption}
+)}}\label{rw__maps_8c_a6c2d799a0e3976715a8ddd478abb720e}
+
+
+Definition at line 247 of file rw\-\_\-maps.\-c.
+
+
+
+References D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X\-::co, D\-O\-U\-B\-L\-E\-T\-E\-N\-S\-O\-R\-::co, D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X\-::nch, D\-O\-U\-B\-L\-E\-T\-E\-N\-S\-O\-R\-::nch, D\-O\-U\-B\-L\-E\-T\-E\-N\-S\-O\-R\-::ndh, D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X\-::nrh, D\-O\-U\-B\-L\-E\-T\-E\-N\-S\-O\-R\-::nrh, and t\-\_\-error().
+
+
+
+Referenced by read\-\_\-maptensor(), and read\-\_\-tensor().
+
+\hypertarget{rw__maps_8c_a90fd5c50a968eb05a3cb6c96367b400c}{\index{rw\-\_\-maps.\-c@{rw\-\_\-maps.\-c}!write\-\_\-map@{write\-\_\-map}}
+\index{write\-\_\-map@{write\-\_\-map}!rw_maps.c@{rw\-\_\-maps.\-c}}
+\subsubsection[{write\-\_\-map}]{\setlength{\rightskip}{0pt plus 5cm}void write\-\_\-map (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{filename, }
+\item[{short}]{type, }
+\item[{short}]{format, }
+\item[{{\bf D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X} $\ast$}]{M, }
+\item[{{\bf T\-\_\-\-I\-N\-I\-T} $\ast$}]{U\-V}
+\end{DoxyParamCaption}
+)}}\label{rw__maps_8c_a90fd5c50a968eb05a3cb6c96367b400c}
+
+
+Definition at line 697 of file rw\-\_\-maps.\-c.
+
+
+
+References write\-\_\-esriascii(), write\-\_\-fluidturtle(), and write\-\_\-grassascii().
+
+
+
+Referenced by write\-\_\-mapseries(), write\-\_\-raster\-\_\-from\-\_\-doublevector(), write\-\_\-raster\-\_\-from\-\_\-doublevector\-\_\-v2(), write\-\_\-tensorseries(), and write\-\_\-tensorseries\-\_\-bis().
+
+\hypertarget{rw__maps_8c_a67e1cc105d5e11508e282dc7855bac55}{\index{rw\-\_\-maps.\-c@{rw\-\_\-maps.\-c}!write\-\_\-mapseries@{write\-\_\-mapseries}}
+\index{write\-\_\-mapseries@{write\-\_\-mapseries}!rw_maps.c@{rw\-\_\-maps.\-c}}
+\subsubsection[{write\-\_\-mapseries}]{\setlength{\rightskip}{0pt plus 5cm}void write\-\_\-mapseries (
+\begin{DoxyParamCaption}
+\item[{long}]{i, }
+\item[{char $\ast$}]{filename, }
+\item[{short}]{type, }
+\item[{short}]{format, }
+\item[{{\bf D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X} $\ast$}]{M, }
+\item[{{\bf T\-\_\-\-I\-N\-I\-T} $\ast$}]{U\-V}
+\end{DoxyParamCaption}
+)}}\label{rw__maps_8c_a67e1cc105d5e11508e282dc7855bac55}
+
+
+Definition at line 719 of file rw\-\_\-maps.\-c.
+
+
+
+References join\-\_\-strings(), write\-\_\-map(), and write\-\_\-suffix().
+
+\hypertarget{rw__maps_8c_a489086e13f03df8adbba716e0a6877ae}{\index{rw\-\_\-maps.\-c@{rw\-\_\-maps.\-c}!write\-\_\-suffix@{write\-\_\-suffix}}
+\index{write\-\_\-suffix@{write\-\_\-suffix}!rw_maps.c@{rw\-\_\-maps.\-c}}
+\subsubsection[{write\-\_\-suffix}]{\setlength{\rightskip}{0pt plus 5cm}void write\-\_\-suffix (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{suffix, }
+\item[{long}]{i, }
+\item[{short}]{start}
+\end{DoxyParamCaption}
+)}}\label{rw__maps_8c_a489086e13f03df8adbba716e0a6877ae}
+
+
+Definition at line 304 of file rw\-\_\-maps.\-c.
+
+
+
+References t\-\_\-error().
+
+
+
+Referenced by namefile\-\_\-i(), namefile\-\_\-i\-\_\-we(), namefile\-\_\-i\-\_\-we2(), read\-\_\-mapseries(), read\-\_\-maptensor(), time\-\_\-loop(), write\-\_\-mapseries(), write\-\_\-tensorseries(), and write\-\_\-tensorseries\-\_\-bis().
+
+\hypertarget{rw__maps_8c_a5730f5ced13a7ffd2e60f0f33e594cda}{\index{rw\-\_\-maps.\-c@{rw\-\_\-maps.\-c}!write\-\_\-tensorseries@{write\-\_\-tensorseries}}
+\index{write\-\_\-tensorseries@{write\-\_\-tensorseries}!rw_maps.c@{rw\-\_\-maps.\-c}}
+\subsubsection[{write\-\_\-tensorseries}]{\setlength{\rightskip}{0pt plus 5cm}void write\-\_\-tensorseries (
+\begin{DoxyParamCaption}
+\item[{short}]{a, }
+\item[{long}]{l, }
+\item[{long}]{i, }
+\item[{char $\ast$}]{filename, }
+\item[{short}]{type, }
+\item[{short}]{format, }
+\item[{{\bf D\-O\-U\-B\-L\-E\-T\-E\-N\-S\-O\-R} $\ast$}]{T, }
+\item[{{\bf T\-\_\-\-I\-N\-I\-T} $\ast$}]{U\-V}
+\end{DoxyParamCaption}
+)}}\label{rw__maps_8c_a5730f5ced13a7ffd2e60f0f33e594cda}
+
+
+Definition at line 731 of file rw\-\_\-maps.\-c.
+
+
+
+References D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X\-::co, D\-O\-U\-B\-L\-E\-T\-E\-N\-S\-O\-R\-::co, free\-\_\-doublematrix(), join\-\_\-strings(), D\-O\-U\-B\-L\-E\-T\-E\-N\-S\-O\-R\-::nch, new\-\_\-doublematrix(), D\-O\-U\-B\-L\-E\-T\-E\-N\-S\-O\-R\-::nrh, write\-\_\-map(), and write\-\_\-suffix().
+
+\hypertarget{rw__maps_8c_a8c8bedcf33cdb9729f22ef2175d8a134}{\index{rw\-\_\-maps.\-c@{rw\-\_\-maps.\-c}!write\-\_\-tensorseries2@{write\-\_\-tensorseries2}}
+\index{write\-\_\-tensorseries2@{write\-\_\-tensorseries2}!rw_maps.c@{rw\-\_\-maps.\-c}}
+\subsubsection[{write\-\_\-tensorseries2}]{\setlength{\rightskip}{0pt plus 5cm}void write\-\_\-tensorseries2 (
+\begin{DoxyParamCaption}
+\item[{long}]{i, }
+\item[{char $\ast$}]{filename, }
+\item[{short}]{type, }
+\item[{short}]{format, }
+\item[{{\bf D\-O\-U\-B\-L\-E\-T\-E\-N\-S\-O\-R} $\ast$}]{T, }
+\item[{{\bf T\-\_\-\-I\-N\-I\-T} $\ast$}]{U\-V}
+\end{DoxyParamCaption}
+)}}\label{rw__maps_8c_a8c8bedcf33cdb9729f22ef2175d8a134}
+
+
+Definition at line 804 of file rw\-\_\-maps.\-c.
+
+
+
+References D\-O\-U\-B\-L\-E\-T\-E\-N\-S\-O\-R\-::ndh, and write\-\_\-tensorseries\-\_\-bis().
+
+\hypertarget{rw__maps_8c_a0bc1df49fc4069ea0f1e1c06993df05a}{\index{rw\-\_\-maps.\-c@{rw\-\_\-maps.\-c}!write\-\_\-tensorseries\-\_\-bis@{write\-\_\-tensorseries\-\_\-bis}}
+\index{write\-\_\-tensorseries\-\_\-bis@{write\-\_\-tensorseries\-\_\-bis}!rw_maps.c@{rw\-\_\-maps.\-c}}
+\subsubsection[{write\-\_\-tensorseries\-\_\-bis}]{\setlength{\rightskip}{0pt plus 5cm}void write\-\_\-tensorseries\-\_\-bis (
+\begin{DoxyParamCaption}
+\item[{short}]{a, }
+\item[{long}]{l, }
+\item[{long}]{i, }
+\item[{char $\ast$}]{filename, }
+\item[{short}]{type, }
+\item[{short}]{format, }
+\item[{{\bf D\-O\-U\-B\-L\-E\-T\-E\-N\-S\-O\-R} $\ast$}]{T, }
+\item[{{\bf T\-\_\-\-I\-N\-I\-T} $\ast$}]{U\-V}
+\end{DoxyParamCaption}
+)}}\label{rw__maps_8c_a0bc1df49fc4069ea0f1e1c06993df05a}
+
+
+Definition at line 766 of file rw\-\_\-maps.\-c.
+
+
+
+References D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X\-::co, D\-O\-U\-B\-L\-E\-T\-E\-N\-S\-O\-R\-::co, free\-\_\-doublematrix(), join\-\_\-strings(), D\-O\-U\-B\-L\-E\-T\-E\-N\-S\-O\-R\-::nch, new\-\_\-doublematrix(), D\-O\-U\-B\-L\-E\-T\-E\-N\-S\-O\-R\-::nrh, write\-\_\-map(), and write\-\_\-suffix().
+
+
+
+Referenced by write\-\_\-tensorseries2().
+

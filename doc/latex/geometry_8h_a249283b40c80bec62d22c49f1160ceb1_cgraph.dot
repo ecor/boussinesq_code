@@ -1,0 +1,30 @@
+digraph "new_polygon_from_a_linevector"
+{
+  bgcolor="transparent";
+  edge [fontname="FreeSans",fontsize="10",labelfontname="FreeSans",labelfontsize="10"];
+  node [fontname="FreeSans",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="new_polygon_from_a\l_linevector",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="area2d",height=0.2,width=0.4,color="black",URL="$geometry__utilities_8c.html#a12c64e39bdb724a66dab8a3c95e501b1"];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="free_longvector",height=0.2,width=0.4,color="black",URL="$alloc_8c.html#a04fde7eac99d9b9020b658a49670f86c"];
+  Node3 -> Node4 [color="midnightblue",fontsize="10",style="solid"];
+  Node4 [label="t_error",height=0.2,width=0.4,color="black",URL="$error_8c.html#af79ef7c6656ef0f3d2786e2b09c1755f"];
+  Node3 -> Node5 [color="midnightblue",fontsize="10",style="solid"];
+  Node5 [label="free_lvector",height=0.2,width=0.4,color="black",URL="$alloc_8c.html#a06786bf777613d3724c0f5e8425a03af"];
+  Node1 -> Node6 [color="midnightblue",fontsize="10",style="solid"];
+  Node6 [label="new_longvector",height=0.2,width=0.4,color="black",URL="$alloc_8c.html#a85853f82d1b0df7d49c675476f31c68f"];
+  Node6 -> Node4 [color="midnightblue",fontsize="10",style="solid"];
+  Node6 -> Node7 [color="midnightblue",fontsize="10",style="solid"];
+  Node7 [label="lvector",height=0.2,width=0.4,color="black",URL="$alloc_8c.html#af4f505f2dcb9ffd8fb12a7750b38b7e5"];
+  Node7 -> Node4 [color="midnightblue",fontsize="10",style="solid"];
+  Node1 -> Node8 [color="midnightblue",fontsize="10",style="solid"];
+  Node8 [label="new_point",height=0.2,width=0.4,color="black",URL="$geometry_8c.html#a49193cd7a27109da689dd26a0ce1fc75"];
+  Node8 -> Node4 [color="midnightblue",fontsize="10",style="solid"];
+  Node1 -> Node9 [color="midnightblue",fontsize="10",style="solid"];
+  Node9 [label="query_freq_longvector",height=0.2,width=0.4,color="black",URL="$geometry__utilities_8c.html#a1ff1ee95b124d56c7a5e5c7c1f3ff425"];
+  Node1 -> Node10 [color="midnightblue",fontsize="10",style="solid"];
+  Node10 [label="segment_intersection\l_occurence",height=0.2,width=0.4,color="black",URL="$geometry__utilities_8c.html#acc2804c94dc8291d2b41d30316158605"];
+  Node1 -> Node4 [color="midnightblue",fontsize="10",style="solid"];
+}

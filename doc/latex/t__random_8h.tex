@@ -1,0 +1,141 @@
+\hypertarget{t__random_8h}{\section{F\-L\-U\-I\-D\-T\-U\-R\-T\-L\-E\-S/t\-\_\-random.h File Reference}
+\label{t__random_8h}\index{F\-L\-U\-I\-D\-T\-U\-R\-T\-L\-E\-S/t\-\_\-random.\-h@{F\-L\-U\-I\-D\-T\-U\-R\-T\-L\-E\-S/t\-\_\-random.\-h}}
+}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+long \hyperlink{t__random_8h_a118d73a7516655f157b6edfc58f89388}{urand} (long $\ast$, long)
+\item 
+double \hyperlink{t__random_8h_a67d93b157089b9a93bdf77a69d20a63d}{ran1} (long $\ast$)
+\item 
+double \hyperlink{t__random_8h_a32ae1c053c87942724cbe66b28718b00}{ran2} (long $\ast$)
+\item 
+double \hyperlink{t__random_8h_a886dec726b33040dbb565b611c1b8792}{ran3} (long $\ast$)
+\item 
+double \hyperlink{t__random_8h_a812e3f2194a184e15cfea303519d8579}{uuvel} (float vmed, float vvar)
+\item 
+double \hyperlink{t__random_8h_a437c75aa3f473fe4da9dce897bc40f00}{gasdev} (long $\ast$idum)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{t__random_8h_a437c75aa3f473fe4da9dce897bc40f00}{\index{t\-\_\-random.\-h@{t\-\_\-random.\-h}!gasdev@{gasdev}}
+\index{gasdev@{gasdev}!t_random.h@{t\-\_\-random.\-h}}
+\subsubsection[{gasdev}]{\setlength{\rightskip}{0pt plus 5cm}double gasdev (
+\begin{DoxyParamCaption}
+\item[{long $\ast$}]{idum}
+\end{DoxyParamCaption}
+)}}\label{t__random_8h_a437c75aa3f473fe4da9dce897bc40f00}
+
+
+Definition at line 267 of file random.\-c.
+
+
+
+References ran1().
+
+
+
+Referenced by uuvel().
+
+\hypertarget{t__random_8h_a67d93b157089b9a93bdf77a69d20a63d}{\index{t\-\_\-random.\-h@{t\-\_\-random.\-h}!ran1@{ran1}}
+\index{ran1@{ran1}!t_random.h@{t\-\_\-random.\-h}}
+\subsubsection[{ran1}]{\setlength{\rightskip}{0pt plus 5cm}double ran1 (
+\begin{DoxyParamCaption}
+\item[{long $\ast$}]{}
+\end{DoxyParamCaption}
+)}}\label{t__random_8h_a67d93b157089b9a93bdf77a69d20a63d}
+
+
+Definition at line 75 of file random.\-c.
+
+
+
+References I\-A1, I\-A2, I\-A3, I\-C1, I\-C2, I\-C3, M1, M2, M3, R\-M1, R\-M2, and t\-\_\-error().
+
+
+
+Referenced by gasdev().
+
+\hypertarget{t__random_8h_a32ae1c053c87942724cbe66b28718b00}{\index{t\-\_\-random.\-h@{t\-\_\-random.\-h}!ran2@{ran2}}
+\index{ran2@{ran2}!t_random.h@{t\-\_\-random.\-h}}
+\subsubsection[{ran2}]{\setlength{\rightskip}{0pt plus 5cm}double ran2 (
+\begin{DoxyParamCaption}
+\item[{long $\ast$}]{}
+\end{DoxyParamCaption}
+)}}\label{t__random_8h_a32ae1c053c87942724cbe66b28718b00}
+
+
+Definition at line 112 of file random.\-c.
+
+
+
+References A\-M1, I\-A\-A1, I\-A\-A2, I\-M1, I\-M2, I\-M\-M1, I\-Q1, I\-Q2, I\-R1, I\-R2, N\-D\-I\-V, N\-T\-A\-B, and R\-N\-M\-X.
+
+\hypertarget{t__random_8h_a886dec726b33040dbb565b611c1b8792}{\index{t\-\_\-random.\-h@{t\-\_\-random.\-h}!ran3@{ran3}}
+\index{ran3@{ran3}!t_random.h@{t\-\_\-random.\-h}}
+\subsubsection[{ran3}]{\setlength{\rightskip}{0pt plus 5cm}double ran3 (
+\begin{DoxyParamCaption}
+\item[{long $\ast$}]{}
+\end{DoxyParamCaption}
+)}}\label{t__random_8h_a886dec726b33040dbb565b611c1b8792}
+
+
+Definition at line 156 of file random.\-c.
+
+
+
+References A\-M, I\-A, I\-M, I\-Q, I\-R, N\-D\-I\-V, N\-T\-A\-B, and R\-N\-M\-X.
+
+
+
+Referenced by bnldev(), expdev(), and poisdev().
+
+\hypertarget{t__random_8h_a118d73a7516655f157b6edfc58f89388}{\index{t\-\_\-random.\-h@{t\-\_\-random.\-h}!urand@{urand}}
+\index{urand@{urand}!t_random.h@{t\-\_\-random.\-h}}
+\subsubsection[{urand}]{\setlength{\rightskip}{0pt plus 5cm}long urand (
+\begin{DoxyParamCaption}
+\item[{long $\ast$}]{, }
+\item[{long}]{}
+\end{DoxyParamCaption}
+)}}\label{t__random_8h_a118d73a7516655f157b6edfc58f89388}
+Name\-:
+
+Synopsis\-:
+
+Version\-: 1.\-0
+
+Description\-:
+
+Authors \& Date\-: Riccardo Rigon, 1998
+
+F\-I\-L\-E\-: L\-I\-B\-R\-A\-R\-I\-E\-S/\-B\-A\-S\-I\-C\-S/t\-\_\-random.\-h, L\-I\-B\-R\-A\-R\-I\-E\-S/\-B\-A\-S\-I\-C\-S/random.\-c
+
+Inputs\-:
+
+Return\-:
+
+See Also\-:
+
+Keywords\-:
+
+Examples\-: 1.\-example.\-c, 2.\-example.\-c 
+
+Definition at line 45 of file random.\-c.
+
+\hypertarget{t__random_8h_a812e3f2194a184e15cfea303519d8579}{\index{t\-\_\-random.\-h@{t\-\_\-random.\-h}!uuvel@{uuvel}}
+\index{uuvel@{uuvel}!t_random.h@{t\-\_\-random.\-h}}
+\subsubsection[{uuvel}]{\setlength{\rightskip}{0pt plus 5cm}double uuvel (
+\begin{DoxyParamCaption}
+\item[{float}]{vmed, }
+\item[{float}]{vvar}
+\end{DoxyParamCaption}
+)}}\label{t__random_8h_a812e3f2194a184e15cfea303519d8579}
+
+
+Definition at line 251 of file random.\-c.
+
+
+
+References gasdev().
+

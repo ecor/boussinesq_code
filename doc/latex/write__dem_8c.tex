@@ -1,0 +1,396 @@
+\hypertarget{write__dem_8c}{\section{F\-L\-U\-I\-D\-T\-U\-R\-T\-L\-E\-S/write\-\_\-dem.c File Reference}
+\label{write__dem_8c}\index{F\-L\-U\-I\-D\-T\-U\-R\-T\-L\-E\-S/write\-\_\-dem.\-c@{F\-L\-U\-I\-D\-T\-U\-R\-T\-L\-E\-S/write\-\_\-dem.\-c}}
+}
+{\ttfamily \#include \char`\"{}turtle.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}write\-\_\-dem.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}t\-\_\-utilities.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}t\-\_\-datamanipulation.\-h\char`\"{}}\\*
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{write__dem_8c_a9bd279d4b6ea90c4e54e227e615d8e97}{shortmatrix\-\_\-dem} (\hyperlink{struct_s_h_o_r_t_m_a_t_r_i_x}{S\-H\-O\-R\-T\-M\-A\-T\-R\-I\-X} $\ast$\hyperlink{t__alloc_8h_af33352ef951ad67c72c9e0780890b3d2}{matrix}, \hyperlink{struct_f_l_o_a_t_v_e_c_t_o_r}{F\-L\-O\-A\-T\-V\-E\-C\-T\-O\-R} $\ast$U, \hyperlink{struct_f_l_o_a_t_v_e_c_t_o_r}{F\-L\-O\-A\-T\-V\-E\-C\-T\-O\-R} $\ast$V, char $\ast$outputname, char $\ast$comment, short print)
+\item 
+void \hyperlink{write__dem_8c_aa5bf51dc34abbdf3deea747d2f6ab410}{shortmatrix\-\_\-dem3} (\hyperlink{struct_s_h_o_r_t_m_a_t_r_i_x}{S\-H\-O\-R\-T\-M\-A\-T\-R\-I\-X} $\ast$\hyperlink{t__alloc_8h_af33352ef951ad67c72c9e0780890b3d2}{matrix}, \hyperlink{struct_d_o_u_b_l_e_v_e_c_t_o_r}{D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} $\ast$U, \hyperlink{struct_d_o_u_b_l_e_v_e_c_t_o_r}{D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} $\ast$V, char $\ast$outputname, char $\ast$comment, short print)
+\item 
+void \hyperlink{write__dem_8c_ad4f94e8f9c95afcb00f8cd9c4fb2066f}{longmatrix\-\_\-dem} (\hyperlink{struct_l_o_n_g_m_a_t_r_i_x}{L\-O\-N\-G\-M\-A\-T\-R\-I\-X} $\ast$\hyperlink{t__alloc_8h_af33352ef951ad67c72c9e0780890b3d2}{matrix}, \hyperlink{struct_f_l_o_a_t_v_e_c_t_o_r}{F\-L\-O\-A\-T\-V\-E\-C\-T\-O\-R} $\ast$U, \hyperlink{struct_f_l_o_a_t_v_e_c_t_o_r}{F\-L\-O\-A\-T\-V\-E\-C\-T\-O\-R} $\ast$V, char $\ast$outputname, char $\ast$comment, short print)
+\item 
+void \hyperlink{write__dem_8c_a68d6b5ea6de0794780fec09004b3be1a}{intmatrix\-\_\-dem} (\hyperlink{struct_i_n_t_m_a_t_r_i_x}{I\-N\-T\-M\-A\-T\-R\-I\-X} $\ast$\hyperlink{t__alloc_8h_af33352ef951ad67c72c9e0780890b3d2}{matrix}, \hyperlink{struct_f_l_o_a_t_v_e_c_t_o_r}{F\-L\-O\-A\-T\-V\-E\-C\-T\-O\-R} $\ast$U, \hyperlink{struct_f_l_o_a_t_v_e_c_t_o_r}{F\-L\-O\-A\-T\-V\-E\-C\-T\-O\-R} $\ast$V, char $\ast$outputname, char $\ast$comment, short print)
+\item 
+void \hyperlink{write__dem_8c_a6ade4f939f3877cb800e74ebe1602766}{floatmatrix\-\_\-dem} (\hyperlink{struct_f_l_o_a_t_m_a_t_r_i_x}{F\-L\-O\-A\-T\-M\-A\-T\-R\-I\-X} $\ast$\hyperlink{t__alloc_8h_af33352ef951ad67c72c9e0780890b3d2}{matrix}, \hyperlink{struct_f_l_o_a_t_v_e_c_t_o_r}{F\-L\-O\-A\-T\-V\-E\-C\-T\-O\-R} $\ast$U, \hyperlink{struct_f_l_o_a_t_v_e_c_t_o_r}{F\-L\-O\-A\-T\-V\-E\-C\-T\-O\-R} $\ast$V, char $\ast$outputname, char $\ast$comment, short print)
+\item 
+void \hyperlink{write__dem_8c_ae84f31c3b881052296957806e76fbbc9}{doublematrix\-\_\-dem} (\hyperlink{struct_d_o_u_b_l_e_m_a_t_r_i_x}{D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X} $\ast$\hyperlink{t__alloc_8h_af33352ef951ad67c72c9e0780890b3d2}{matrix}, \hyperlink{struct_f_l_o_a_t_v_e_c_t_o_r}{F\-L\-O\-A\-T\-V\-E\-C\-T\-O\-R} $\ast$U, \hyperlink{struct_f_l_o_a_t_v_e_c_t_o_r}{F\-L\-O\-A\-T\-V\-E\-C\-T\-O\-R} $\ast$V, char $\ast$outputname, char $\ast$comment, short print)
+\item 
+void \hyperlink{write__dem_8c_a720cf1585a3285475039971a57d097b9}{doublematrix\-\_\-dem3} (\hyperlink{struct_d_o_u_b_l_e_m_a_t_r_i_x}{D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X} $\ast$\hyperlink{t__alloc_8h_af33352ef951ad67c72c9e0780890b3d2}{matrix}, \hyperlink{struct_d_o_u_b_l_e_v_e_c_t_o_r}{D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} $\ast$U, \hyperlink{struct_d_o_u_b_l_e_v_e_c_t_o_r}{D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} $\ast$V, char $\ast$outputname, char $\ast$comment, short print)
+\item 
+void \hyperlink{write__dem_8c_a5b3ac6b4720a27d2df14a1bc84c53f61}{doublematrix\-\_\-control} (\hyperlink{struct_d_o_u_b_l_e_m_a_t_r_i_x}{D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X} $\ast$\hyperlink{t__alloc_8h_af33352ef951ad67c72c9e0780890b3d2}{matrix}, char $\ast$outputname, char $\ast$comment, short print)
+\item 
+void \hyperlink{write__dem_8c_a426ce9a91fa4980d6253c335fc4f3584}{floatvector\-\_\-dem} (\hyperlink{struct_f_l_o_a_t_v_e_c_t_o_r}{F\-L\-O\-A\-T\-V\-E\-C\-T\-O\-R} $\ast$vector\-\_\-dem, char $\ast$outputname, char $\ast$comment, short print)
+\item 
+void \hyperlink{write__dem_8c_a672cdfe044c52e8de9c927f12ae98552}{doublevector\-\_\-dem} (\hyperlink{struct_d_o_u_b_l_e_v_e_c_t_o_r}{D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} $\ast$vector\-\_\-dem, char $\ast$outputname, char $\ast$comment, short print)
+\item 
+void \hyperlink{write__dem_8c_a2a8c2cf8b620aaeca09d20edc80e7b54}{doubletensor\-\_\-dem} (\hyperlink{struct_d_o_u_b_l_e_t_e_n_s_o_r}{D\-O\-U\-B\-L\-E\-T\-E\-N\-S\-O\-R} $\ast$tensor, long layer, \hyperlink{struct_d_o_u_b_l_e_v_e_c_t_o_r}{D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} $\ast$U, \hyperlink{struct_d_o_u_b_l_e_v_e_c_t_o_r}{D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} $\ast$V, char $\ast$outputname, char $\ast$comment, short print)
+\item 
+void \hyperlink{write__dem_8c_a8db7355d2eb3221e7c372e05a663c5c8}{shortmatrix\-\_\-dem2} (\hyperlink{struct_s_h_o_r_t_m_a_t_r_i_x}{S\-H\-O\-R\-T\-M\-A\-T\-R\-I\-X} $\ast$\hyperlink{t__alloc_8h_af33352ef951ad67c72c9e0780890b3d2}{matrix}, \hyperlink{struct_d_o_u_b_l_e_v_e_c_t_o_r}{D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} $\ast$U, \hyperlink{struct_d_o_u_b_l_e_v_e_c_t_o_r}{D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} $\ast$V, char $\ast$outputname, char $\ast$comment, short print)
+\item 
+void \hyperlink{write__dem_8c_a4a7be1afbb1f030f5ae89661f1e809df}{longmatrix\-\_\-dem2} (\hyperlink{struct_l_o_n_g_m_a_t_r_i_x}{L\-O\-N\-G\-M\-A\-T\-R\-I\-X} $\ast$\hyperlink{t__alloc_8h_af33352ef951ad67c72c9e0780890b3d2}{matrix}, \hyperlink{struct_d_o_u_b_l_e_v_e_c_t_o_r}{D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} $\ast$U, \hyperlink{struct_d_o_u_b_l_e_v_e_c_t_o_r}{D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} $\ast$V, char $\ast$outputname, char $\ast$comment, short print)
+\item 
+void \hyperlink{write__dem_8c_a5813df534028ec15f76976eac679ebfe}{intmatrix\-\_\-dem2} (\hyperlink{struct_i_n_t_m_a_t_r_i_x}{I\-N\-T\-M\-A\-T\-R\-I\-X} $\ast$\hyperlink{t__alloc_8h_af33352ef951ad67c72c9e0780890b3d2}{matrix}, \hyperlink{struct_f_l_o_a_t_v_e_c_t_o_r}{F\-L\-O\-A\-T\-V\-E\-C\-T\-O\-R} $\ast$U, \hyperlink{struct_f_l_o_a_t_v_e_c_t_o_r}{F\-L\-O\-A\-T\-V\-E\-C\-T\-O\-R} $\ast$V, char $\ast$outputname, char $\ast$comment, short print)
+\item 
+void \hyperlink{write__dem_8c_a021397ac74a82a8a3312be6432142a74}{floatmatrix\-\_\-dem2} (\hyperlink{struct_f_l_o_a_t_m_a_t_r_i_x}{F\-L\-O\-A\-T\-M\-A\-T\-R\-I\-X} $\ast$\hyperlink{t__alloc_8h_af33352ef951ad67c72c9e0780890b3d2}{matrix}, \hyperlink{struct_f_l_o_a_t_v_e_c_t_o_r}{F\-L\-O\-A\-T\-V\-E\-C\-T\-O\-R} $\ast$U, \hyperlink{struct_f_l_o_a_t_v_e_c_t_o_r}{F\-L\-O\-A\-T\-V\-E\-C\-T\-O\-R} $\ast$V, char $\ast$outputname, char $\ast$comment, short print)
+\item 
+void \hyperlink{write__dem_8c_aeaa175a5db68ca224f563ff4b315bcfe}{doublematrix\-\_\-dem2} (\hyperlink{struct_d_o_u_b_l_e_m_a_t_r_i_x}{D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X} $\ast$\hyperlink{t__alloc_8h_af33352ef951ad67c72c9e0780890b3d2}{matrix}, \hyperlink{struct_d_o_u_b_l_e_v_e_c_t_o_r}{D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} $\ast$U, \hyperlink{struct_d_o_u_b_l_e_v_e_c_t_o_r}{D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} $\ast$V, char $\ast$outputname, char $\ast$comment, short print)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{write__dem_8c_a5b3ac6b4720a27d2df14a1bc84c53f61}{\index{write\-\_\-dem.\-c@{write\-\_\-dem.\-c}!doublematrix\-\_\-control@{doublematrix\-\_\-control}}
+\index{doublematrix\-\_\-control@{doublematrix\-\_\-control}!write_dem.c@{write\-\_\-dem.\-c}}
+\subsubsection[{doublematrix\-\_\-control}]{\setlength{\rightskip}{0pt plus 5cm}void doublematrix\-\_\-control (
+\begin{DoxyParamCaption}
+\item[{{\bf D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X} $\ast$}]{matrix, }
+\item[{char $\ast$}]{outputname, }
+\item[{char $\ast$}]{comment, }
+\item[{short}]{print}
+\end{DoxyParamCaption}
+)}}\label{write__dem_8c_a5b3ac6b4720a27d2df14a1bc84c53f61}
+
+
+ Writes a matrix of double to a turtle file 
+
+Definition at line 555 of file write\-\_\-dem.\-c.
+
+
+
+References join\-\_\-strings(), D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X\-::nch, D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X\-::nrh, t\-\_\-fclose(), t\-\_\-fopen(), W\-O\-R\-K\-I\-N\-G\-\_\-\-D\-I\-R\-E\-C\-T\-O\-R\-Y, and write\-\_\-doublematrix\-\_\-elements().
+
+\hypertarget{write__dem_8c_ae84f31c3b881052296957806e76fbbc9}{\index{write\-\_\-dem.\-c@{write\-\_\-dem.\-c}!doublematrix\-\_\-dem@{doublematrix\-\_\-dem}}
+\index{doublematrix\-\_\-dem@{doublematrix\-\_\-dem}!write_dem.c@{write\-\_\-dem.\-c}}
+\subsubsection[{doublematrix\-\_\-dem}]{\setlength{\rightskip}{0pt plus 5cm}void doublematrix\-\_\-dem (
+\begin{DoxyParamCaption}
+\item[{{\bf D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X} $\ast$}]{matrix, }
+\item[{{\bf F\-L\-O\-A\-T\-V\-E\-C\-T\-O\-R} $\ast$}]{U, }
+\item[{{\bf F\-L\-O\-A\-T\-V\-E\-C\-T\-O\-R} $\ast$}]{V, }
+\item[{char $\ast$}]{outputname, }
+\item[{char $\ast$}]{comment, }
+\item[{short}]{print}
+\end{DoxyParamCaption}
+)}}\label{write__dem_8c_ae84f31c3b881052296957806e76fbbc9}
+
+
+ Writes a matrix of double to a D\-E\-M turtle file 
+
+Definition at line 409 of file write\-\_\-dem.\-c.
+
+
+
+References join\-\_\-strings(), D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X\-::nch, D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X\-::nrh, t\-\_\-fclose(), t\-\_\-fopen(), W\-O\-R\-K\-I\-N\-G\-\_\-\-D\-I\-R\-E\-C\-T\-O\-R\-Y, write\-\_\-doublematrix\-\_\-elements(), and write\-\_\-floatarray\-\_\-elements().
+
+
+
+Referenced by aggregate().
+
+\hypertarget{write__dem_8c_aeaa175a5db68ca224f563ff4b315bcfe}{\index{write\-\_\-dem.\-c@{write\-\_\-dem.\-c}!doublematrix\-\_\-dem2@{doublematrix\-\_\-dem2}}
+\index{doublematrix\-\_\-dem2@{doublematrix\-\_\-dem2}!write_dem.c@{write\-\_\-dem.\-c}}
+\subsubsection[{doublematrix\-\_\-dem2}]{\setlength{\rightskip}{0pt plus 5cm}void doublematrix\-\_\-dem2 (
+\begin{DoxyParamCaption}
+\item[{{\bf D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X} $\ast$}]{matrix, }
+\item[{{\bf D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} $\ast$}]{U, }
+\item[{{\bf D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} $\ast$}]{V, }
+\item[{char $\ast$}]{outputname, }
+\item[{char $\ast$}]{comment, }
+\item[{short}]{print}
+\end{DoxyParamCaption}
+)}}\label{write__dem_8c_aeaa175a5db68ca224f563ff4b315bcfe}
+
+
+ Writes a matrix of double to a D\-E\-M turtle file 
+
+Definition at line 1177 of file write\-\_\-dem.\-c.
+
+
+
+References D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X\-::nch, D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X\-::nrh, t\-\_\-fclose(), t\-\_\-fopen(), write\-\_\-doublearray\-\_\-elements(), and write\-\_\-doublematrix\-\_\-elements().
+
+\hypertarget{write__dem_8c_a720cf1585a3285475039971a57d097b9}{\index{write\-\_\-dem.\-c@{write\-\_\-dem.\-c}!doublematrix\-\_\-dem3@{doublematrix\-\_\-dem3}}
+\index{doublematrix\-\_\-dem3@{doublematrix\-\_\-dem3}!write_dem.c@{write\-\_\-dem.\-c}}
+\subsubsection[{doublematrix\-\_\-dem3}]{\setlength{\rightskip}{0pt plus 5cm}void doublematrix\-\_\-dem3 (
+\begin{DoxyParamCaption}
+\item[{{\bf D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X} $\ast$}]{matrix, }
+\item[{{\bf D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} $\ast$}]{U, }
+\item[{{\bf D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} $\ast$}]{V, }
+\item[{char $\ast$}]{outputname, }
+\item[{char $\ast$}]{comment, }
+\item[{short}]{print}
+\end{DoxyParamCaption}
+)}}\label{write__dem_8c_a720cf1585a3285475039971a57d097b9}
+
+
+ Writes a matrix of double to a D\-E\-M turtle file 
+
+Definition at line 481 of file write\-\_\-dem.\-c.
+
+
+
+References join\-\_\-strings(), D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X\-::nch, D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X\-::nrh, t\-\_\-fclose(), t\-\_\-fopen(), W\-O\-R\-K\-I\-N\-G\-\_\-\-D\-I\-R\-E\-C\-T\-O\-R\-Y, write\-\_\-doublearray\-\_\-elements(), and write\-\_\-doublematrix\-\_\-elements().
+
+\hypertarget{write__dem_8c_a2a8c2cf8b620aaeca09d20edc80e7b54}{\index{write\-\_\-dem.\-c@{write\-\_\-dem.\-c}!doubletensor\-\_\-dem@{doubletensor\-\_\-dem}}
+\index{doubletensor\-\_\-dem@{doubletensor\-\_\-dem}!write_dem.c@{write\-\_\-dem.\-c}}
+\subsubsection[{doubletensor\-\_\-dem}]{\setlength{\rightskip}{0pt plus 5cm}void doubletensor\-\_\-dem (
+\begin{DoxyParamCaption}
+\item[{{\bf D\-O\-U\-B\-L\-E\-T\-E\-N\-S\-O\-R} $\ast$}]{tensor, }
+\item[{long}]{layer, }
+\item[{{\bf D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} $\ast$}]{U, }
+\item[{{\bf D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} $\ast$}]{V, }
+\item[{char $\ast$}]{outputname, }
+\item[{char $\ast$}]{comment, }
+\item[{short}]{print}
+\end{DoxyParamCaption}
+)}}\label{write__dem_8c_a2a8c2cf8b620aaeca09d20edc80e7b54}
+
+
+ Writes a layer of a 3\-D double tensor (i.\-e. a matrix) to a turtle file 
+
+Definition at line 761 of file write\-\_\-dem.\-c.
+
+
+
+References D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X\-::co, D\-O\-U\-B\-L\-E\-T\-E\-N\-S\-O\-R\-::co, free\-\_\-doublematrix(), join\-\_\-strings(), matrix(), D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X\-::nch, D\-O\-U\-B\-L\-E\-T\-E\-N\-S\-O\-R\-::nch, new\-\_\-doublematrix(), D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X\-::nrh, D\-O\-U\-B\-L\-E\-T\-E\-N\-S\-O\-R\-::nrh, t\-\_\-fclose(), t\-\_\-fopen(), W\-O\-R\-K\-I\-N\-G\-\_\-\-D\-I\-R\-E\-C\-T\-O\-R\-Y, write\-\_\-doublearray\-\_\-elements(), and write\-\_\-doublematrix\-\_\-elements().
+
+\hypertarget{write__dem_8c_a672cdfe044c52e8de9c927f12ae98552}{\index{write\-\_\-dem.\-c@{write\-\_\-dem.\-c}!doublevector\-\_\-dem@{doublevector\-\_\-dem}}
+\index{doublevector\-\_\-dem@{doublevector\-\_\-dem}!write_dem.c@{write\-\_\-dem.\-c}}
+\subsubsection[{doublevector\-\_\-dem}]{\setlength{\rightskip}{0pt plus 5cm}void doublevector\-\_\-dem (
+\begin{DoxyParamCaption}
+\item[{{\bf D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} $\ast$}]{vector\-\_\-dem, }
+\item[{char $\ast$}]{outputname, }
+\item[{char $\ast$}]{comment, }
+\item[{short}]{print}
+\end{DoxyParamCaption}
+)}}\label{write__dem_8c_a672cdfe044c52e8de9c927f12ae98552}
+
+
+ Writes a vector of double to a turtle file 
+
+Definition at line 689 of file write\-\_\-dem.\-c.
+
+
+
+References join\-\_\-strings(), D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R\-::nh, t\-\_\-fclose(), t\-\_\-fopen(), W\-O\-R\-K\-I\-N\-G\-\_\-\-D\-I\-R\-E\-C\-T\-O\-R\-Y, and write\-\_\-doublearray\-\_\-elements().
+
+\hypertarget{write__dem_8c_a6ade4f939f3877cb800e74ebe1602766}{\index{write\-\_\-dem.\-c@{write\-\_\-dem.\-c}!floatmatrix\-\_\-dem@{floatmatrix\-\_\-dem}}
+\index{floatmatrix\-\_\-dem@{floatmatrix\-\_\-dem}!write_dem.c@{write\-\_\-dem.\-c}}
+\subsubsection[{floatmatrix\-\_\-dem}]{\setlength{\rightskip}{0pt plus 5cm}void floatmatrix\-\_\-dem (
+\begin{DoxyParamCaption}
+\item[{{\bf F\-L\-O\-A\-T\-M\-A\-T\-R\-I\-X} $\ast$}]{matrix, }
+\item[{{\bf F\-L\-O\-A\-T\-V\-E\-C\-T\-O\-R} $\ast$}]{U, }
+\item[{{\bf F\-L\-O\-A\-T\-V\-E\-C\-T\-O\-R} $\ast$}]{V, }
+\item[{char $\ast$}]{outputname, }
+\item[{char $\ast$}]{comment, }
+\item[{short}]{print}
+\end{DoxyParamCaption}
+)}}\label{write__dem_8c_a6ade4f939f3877cb800e74ebe1602766}
+
+
+ Writes a matrix of float to a D\-E\-M turtle file 
+
+Definition at line 329 of file write\-\_\-dem.\-c.
+
+
+
+References join\-\_\-strings(), F\-L\-O\-A\-T\-M\-A\-T\-R\-I\-X\-::nch, F\-L\-O\-A\-T\-M\-A\-T\-R\-I\-X\-::nrh, t\-\_\-fclose(), t\-\_\-fopen(), W\-O\-R\-K\-I\-N\-G\-\_\-\-D\-I\-R\-E\-C\-T\-O\-R\-Y, write\-\_\-floatarray\-\_\-elements(), and write\-\_\-floatmatrix\-\_\-elements().
+
+\hypertarget{write__dem_8c_a021397ac74a82a8a3312be6432142a74}{\index{write\-\_\-dem.\-c@{write\-\_\-dem.\-c}!floatmatrix\-\_\-dem2@{floatmatrix\-\_\-dem2}}
+\index{floatmatrix\-\_\-dem2@{floatmatrix\-\_\-dem2}!write_dem.c@{write\-\_\-dem.\-c}}
+\subsubsection[{floatmatrix\-\_\-dem2}]{\setlength{\rightskip}{0pt plus 5cm}void floatmatrix\-\_\-dem2 (
+\begin{DoxyParamCaption}
+\item[{{\bf F\-L\-O\-A\-T\-M\-A\-T\-R\-I\-X} $\ast$}]{matrix, }
+\item[{{\bf F\-L\-O\-A\-T\-V\-E\-C\-T\-O\-R} $\ast$}]{U, }
+\item[{{\bf F\-L\-O\-A\-T\-V\-E\-C\-T\-O\-R} $\ast$}]{V, }
+\item[{char $\ast$}]{outputname, }
+\item[{char $\ast$}]{comment, }
+\item[{short}]{print}
+\end{DoxyParamCaption}
+)}}\label{write__dem_8c_a021397ac74a82a8a3312be6432142a74}
+
+
+ Writes a matrix of float to a D\-E\-M turtle file 
+
+Definition at line 1099 of file write\-\_\-dem.\-c.
+
+
+
+References F\-L\-O\-A\-T\-M\-A\-T\-R\-I\-X\-::nch, F\-L\-O\-A\-T\-M\-A\-T\-R\-I\-X\-::nrh, t\-\_\-fclose(), t\-\_\-fopen(), write\-\_\-floatarray\-\_\-elements(), and write\-\_\-floatmatrix\-\_\-elements().
+
+\hypertarget{write__dem_8c_a426ce9a91fa4980d6253c335fc4f3584}{\index{write\-\_\-dem.\-c@{write\-\_\-dem.\-c}!floatvector\-\_\-dem@{floatvector\-\_\-dem}}
+\index{floatvector\-\_\-dem@{floatvector\-\_\-dem}!write_dem.c@{write\-\_\-dem.\-c}}
+\subsubsection[{floatvector\-\_\-dem}]{\setlength{\rightskip}{0pt plus 5cm}void floatvector\-\_\-dem (
+\begin{DoxyParamCaption}
+\item[{{\bf F\-L\-O\-A\-T\-V\-E\-C\-T\-O\-R} $\ast$}]{vector\-\_\-dem, }
+\item[{char $\ast$}]{outputname, }
+\item[{char $\ast$}]{comment, }
+\item[{short}]{print}
+\end{DoxyParamCaption}
+)}}\label{write__dem_8c_a426ce9a91fa4980d6253c335fc4f3584}
+
+
+ Writes a vector of float to a turtle file 
+
+Definition at line 621 of file write\-\_\-dem.\-c.
+
+
+
+References join\-\_\-strings(), F\-L\-O\-A\-T\-V\-E\-C\-T\-O\-R\-::nh, t\-\_\-fclose(), t\-\_\-fopen(), W\-O\-R\-K\-I\-N\-G\-\_\-\-D\-I\-R\-E\-C\-T\-O\-R\-Y, and write\-\_\-floatarray\-\_\-elements().
+
+\hypertarget{write__dem_8c_a68d6b5ea6de0794780fec09004b3be1a}{\index{write\-\_\-dem.\-c@{write\-\_\-dem.\-c}!intmatrix\-\_\-dem@{intmatrix\-\_\-dem}}
+\index{intmatrix\-\_\-dem@{intmatrix\-\_\-dem}!write_dem.c@{write\-\_\-dem.\-c}}
+\subsubsection[{intmatrix\-\_\-dem}]{\setlength{\rightskip}{0pt plus 5cm}void intmatrix\-\_\-dem (
+\begin{DoxyParamCaption}
+\item[{{\bf I\-N\-T\-M\-A\-T\-R\-I\-X} $\ast$}]{matrix, }
+\item[{{\bf F\-L\-O\-A\-T\-V\-E\-C\-T\-O\-R} $\ast$}]{U, }
+\item[{{\bf F\-L\-O\-A\-T\-V\-E\-C\-T\-O\-R} $\ast$}]{V, }
+\item[{char $\ast$}]{outputname, }
+\item[{char $\ast$}]{comment, }
+\item[{short}]{print}
+\end{DoxyParamCaption}
+)}}\label{write__dem_8c_a68d6b5ea6de0794780fec09004b3be1a}
+
+
+ Writes a matrix of int to a D\-E\-M turtle file 
+
+Definition at line 253 of file write\-\_\-dem.\-c.
+
+
+
+References join\-\_\-strings(), I\-N\-T\-M\-A\-T\-R\-I\-X\-::nch, I\-N\-T\-M\-A\-T\-R\-I\-X\-::nrh, t\-\_\-fclose(), t\-\_\-fopen(), W\-O\-R\-K\-I\-N\-G\-\_\-\-D\-I\-R\-E\-C\-T\-O\-R\-Y, write\-\_\-floatarray\-\_\-elements(), and write\-\_\-intmatrix\-\_\-elements().
+
+\hypertarget{write__dem_8c_a5813df534028ec15f76976eac679ebfe}{\index{write\-\_\-dem.\-c@{write\-\_\-dem.\-c}!intmatrix\-\_\-dem2@{intmatrix\-\_\-dem2}}
+\index{intmatrix\-\_\-dem2@{intmatrix\-\_\-dem2}!write_dem.c@{write\-\_\-dem.\-c}}
+\subsubsection[{intmatrix\-\_\-dem2}]{\setlength{\rightskip}{0pt plus 5cm}void intmatrix\-\_\-dem2 (
+\begin{DoxyParamCaption}
+\item[{{\bf I\-N\-T\-M\-A\-T\-R\-I\-X} $\ast$}]{matrix, }
+\item[{{\bf F\-L\-O\-A\-T\-V\-E\-C\-T\-O\-R} $\ast$}]{U, }
+\item[{{\bf F\-L\-O\-A\-T\-V\-E\-C\-T\-O\-R} $\ast$}]{V, }
+\item[{char $\ast$}]{outputname, }
+\item[{char $\ast$}]{comment, }
+\item[{short}]{print}
+\end{DoxyParamCaption}
+)}}\label{write__dem_8c_a5813df534028ec15f76976eac679ebfe}
+
+
+ Writes a matrix of int to a D\-E\-M turtle file 
+
+Definition at line 1029 of file write\-\_\-dem.\-c.
+
+
+
+References I\-N\-T\-M\-A\-T\-R\-I\-X\-::nch, I\-N\-T\-M\-A\-T\-R\-I\-X\-::nrh, t\-\_\-fclose(), t\-\_\-fopen(), write\-\_\-floatarray\-\_\-elements(), and write\-\_\-intmatrix\-\_\-elements().
+
+\hypertarget{write__dem_8c_ad4f94e8f9c95afcb00f8cd9c4fb2066f}{\index{write\-\_\-dem.\-c@{write\-\_\-dem.\-c}!longmatrix\-\_\-dem@{longmatrix\-\_\-dem}}
+\index{longmatrix\-\_\-dem@{longmatrix\-\_\-dem}!write_dem.c@{write\-\_\-dem.\-c}}
+\subsubsection[{longmatrix\-\_\-dem}]{\setlength{\rightskip}{0pt plus 5cm}void longmatrix\-\_\-dem (
+\begin{DoxyParamCaption}
+\item[{{\bf L\-O\-N\-G\-M\-A\-T\-R\-I\-X} $\ast$}]{matrix, }
+\item[{{\bf F\-L\-O\-A\-T\-V\-E\-C\-T\-O\-R} $\ast$}]{U, }
+\item[{{\bf F\-L\-O\-A\-T\-V\-E\-C\-T\-O\-R} $\ast$}]{V, }
+\item[{char $\ast$}]{outputname, }
+\item[{char $\ast$}]{comment, }
+\item[{short}]{print}
+\end{DoxyParamCaption}
+)}}\label{write__dem_8c_ad4f94e8f9c95afcb00f8cd9c4fb2066f}
+
+
+ Writes a matrix of long int to a D\-E\-M turtle file 
+
+Definition at line 177 of file write\-\_\-dem.\-c.
+
+
+
+References join\-\_\-strings(), L\-O\-N\-G\-M\-A\-T\-R\-I\-X\-::nch, L\-O\-N\-G\-M\-A\-T\-R\-I\-X\-::nrh, t\-\_\-fclose(), t\-\_\-fopen(), W\-O\-R\-K\-I\-N\-G\-\_\-\-D\-I\-R\-E\-C\-T\-O\-R\-Y, write\-\_\-floatarray\-\_\-elements(), and write\-\_\-longmatrix\-\_\-elements().
+
+\hypertarget{write__dem_8c_a4a7be1afbb1f030f5ae89661f1e809df}{\index{write\-\_\-dem.\-c@{write\-\_\-dem.\-c}!longmatrix\-\_\-dem2@{longmatrix\-\_\-dem2}}
+\index{longmatrix\-\_\-dem2@{longmatrix\-\_\-dem2}!write_dem.c@{write\-\_\-dem.\-c}}
+\subsubsection[{longmatrix\-\_\-dem2}]{\setlength{\rightskip}{0pt plus 5cm}void longmatrix\-\_\-dem2 (
+\begin{DoxyParamCaption}
+\item[{{\bf L\-O\-N\-G\-M\-A\-T\-R\-I\-X} $\ast$}]{matrix, }
+\item[{{\bf D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} $\ast$}]{U, }
+\item[{{\bf D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} $\ast$}]{V, }
+\item[{char $\ast$}]{outputname, }
+\item[{char $\ast$}]{comment, }
+\item[{short}]{print}
+\end{DoxyParamCaption}
+)}}\label{write__dem_8c_a4a7be1afbb1f030f5ae89661f1e809df}
+
+
+ Writes a matrix of long int to a D\-E\-M turtle file 
+
+Definition at line 959 of file write\-\_\-dem.\-c.
+
+
+
+References L\-O\-N\-G\-M\-A\-T\-R\-I\-X\-::nch, L\-O\-N\-G\-M\-A\-T\-R\-I\-X\-::nrh, t\-\_\-fclose(), t\-\_\-fopen(), write\-\_\-doublearray\-\_\-elements(), and write\-\_\-longmatrix\-\_\-elements().
+
+\hypertarget{write__dem_8c_a9bd279d4b6ea90c4e54e227e615d8e97}{\index{write\-\_\-dem.\-c@{write\-\_\-dem.\-c}!shortmatrix\-\_\-dem@{shortmatrix\-\_\-dem}}
+\index{shortmatrix\-\_\-dem@{shortmatrix\-\_\-dem}!write_dem.c@{write\-\_\-dem.\-c}}
+\subsubsection[{shortmatrix\-\_\-dem}]{\setlength{\rightskip}{0pt plus 5cm}void shortmatrix\-\_\-dem (
+\begin{DoxyParamCaption}
+\item[{{\bf S\-H\-O\-R\-T\-M\-A\-T\-R\-I\-X} $\ast$}]{matrix, }
+\item[{{\bf F\-L\-O\-A\-T\-V\-E\-C\-T\-O\-R} $\ast$}]{U, }
+\item[{{\bf F\-L\-O\-A\-T\-V\-E\-C\-T\-O\-R} $\ast$}]{V, }
+\item[{char $\ast$}]{outputname, }
+\item[{char $\ast$}]{comment, }
+\item[{short}]{print}
+\end{DoxyParamCaption}
+)}}\label{write__dem_8c_a9bd279d4b6ea90c4e54e227e615d8e97}
+
+
+ Writes a matrix of short int to a D\-E\-M turtle file 
+
+Definition at line 33 of file write\-\_\-dem.\-c.
+
+
+
+References join\-\_\-strings(), S\-H\-O\-R\-T\-M\-A\-T\-R\-I\-X\-::nch, S\-H\-O\-R\-T\-M\-A\-T\-R\-I\-X\-::nrh, t\-\_\-fclose(), t\-\_\-fopen(), W\-O\-R\-K\-I\-N\-G\-\_\-\-D\-I\-R\-E\-C\-T\-O\-R\-Y, write\-\_\-floatarray\-\_\-elements(), and write\-\_\-shortmatrix\-\_\-elements().
+
+\hypertarget{write__dem_8c_a8db7355d2eb3221e7c372e05a663c5c8}{\index{write\-\_\-dem.\-c@{write\-\_\-dem.\-c}!shortmatrix\-\_\-dem2@{shortmatrix\-\_\-dem2}}
+\index{shortmatrix\-\_\-dem2@{shortmatrix\-\_\-dem2}!write_dem.c@{write\-\_\-dem.\-c}}
+\subsubsection[{shortmatrix\-\_\-dem2}]{\setlength{\rightskip}{0pt plus 5cm}void shortmatrix\-\_\-dem2 (
+\begin{DoxyParamCaption}
+\item[{{\bf S\-H\-O\-R\-T\-M\-A\-T\-R\-I\-X} $\ast$}]{matrix, }
+\item[{{\bf D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} $\ast$}]{U, }
+\item[{{\bf D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} $\ast$}]{V, }
+\item[{char $\ast$}]{outputname, }
+\item[{char $\ast$}]{comment, }
+\item[{short}]{print}
+\end{DoxyParamCaption}
+)}}\label{write__dem_8c_a8db7355d2eb3221e7c372e05a663c5c8}
+
+
+ Writes a matrix of short int to a D\-E\-M turtle file 
+
+Definition at line 891 of file write\-\_\-dem.\-c.
+
+
+
+References S\-H\-O\-R\-T\-M\-A\-T\-R\-I\-X\-::nch, S\-H\-O\-R\-T\-M\-A\-T\-R\-I\-X\-::nrh, t\-\_\-fclose(), t\-\_\-fopen(), write\-\_\-doublearray\-\_\-elements(), and write\-\_\-shortmatrix\-\_\-elements().
+
+\hypertarget{write__dem_8c_aa5bf51dc34abbdf3deea747d2f6ab410}{\index{write\-\_\-dem.\-c@{write\-\_\-dem.\-c}!shortmatrix\-\_\-dem3@{shortmatrix\-\_\-dem3}}
+\index{shortmatrix\-\_\-dem3@{shortmatrix\-\_\-dem3}!write_dem.c@{write\-\_\-dem.\-c}}
+\subsubsection[{shortmatrix\-\_\-dem3}]{\setlength{\rightskip}{0pt plus 5cm}void shortmatrix\-\_\-dem3 (
+\begin{DoxyParamCaption}
+\item[{{\bf S\-H\-O\-R\-T\-M\-A\-T\-R\-I\-X} $\ast$}]{matrix, }
+\item[{{\bf D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} $\ast$}]{U, }
+\item[{{\bf D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} $\ast$}]{V, }
+\item[{char $\ast$}]{outputname, }
+\item[{char $\ast$}]{comment, }
+\item[{short}]{print}
+\end{DoxyParamCaption}
+)}}\label{write__dem_8c_aa5bf51dc34abbdf3deea747d2f6ab410}
+
+
+ Writes a matrix of short int to a D\-E\-M turtle file 
+
+Definition at line 104 of file write\-\_\-dem.\-c.
+
+
+
+References join\-\_\-strings(), S\-H\-O\-R\-T\-M\-A\-T\-R\-I\-X\-::nch, S\-H\-O\-R\-T\-M\-A\-T\-R\-I\-X\-::nrh, t\-\_\-fclose(), t\-\_\-fopen(), W\-O\-R\-K\-I\-N\-G\-\_\-\-D\-I\-R\-E\-C\-T\-O\-R\-Y, write\-\_\-doublearray\-\_\-elements(), and write\-\_\-shortmatrix\-\_\-elements().
+

@@ -1,0 +1,70 @@
+\hypertarget{boussinesq__matrix_8c}{\section{M\-A\-T\-H2/boussinesq\-\_\-matrix.c File Reference}
+\label{boussinesq__matrix_8c}\index{M\-A\-T\-H2/boussinesq\-\_\-matrix.\-c@{M\-A\-T\-H2/boussinesq\-\_\-matrix.\-c}}
+}
+{\ttfamily \#include \char`\"{}turtle.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}t\-\_\-utilities.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}doublevector\-\_\-utilities.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}geometry.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}geometry\-\_\-attribute.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}preconditioned\-\_\-conjugate\-\_\-gradient.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}boussinesq\-\_\-matrix.\-h\char`\"{}}\\*
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{boussinesq__matrix_8c_a558b6a76fcdaaf8c8f815363f2cad855}{N\-U\-L\-L\-\_\-\-V\-A\-L\-U\-E\-\_\-bm}~-\/9999.\-0
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{turtle_8h_af2577c240f36308c4c25cda8e769c61e}{D\-O\-U\-B\-L\-E\-B\-I\-N} $\ast$ \hyperlink{boussinesq__matrix_8c_a73597760d4ee34968403761d6b18d523}{get\-\_\-t\-\_\-\-Matrix\-\_\-elements} (\hyperlink{preconditioned__conjugate__gradient_8h_a856ecceb36502250c03b650d4480af1f}{t\-\_\-\-Matrix\-\_\-element} operator, \hyperlink{structpolygon__connection__attribute__array}{polygon\-\_\-connection\-\_\-attribute\-\_\-array} $\ast$pca, long boundary)
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{boussinesq__matrix_8c_a558b6a76fcdaaf8c8f815363f2cad855}{\index{boussinesq\-\_\-matrix.\-c@{boussinesq\-\_\-matrix.\-c}!N\-U\-L\-L\-\_\-\-V\-A\-L\-U\-E\-\_\-bm@{N\-U\-L\-L\-\_\-\-V\-A\-L\-U\-E\-\_\-bm}}
+\index{N\-U\-L\-L\-\_\-\-V\-A\-L\-U\-E\-\_\-bm@{N\-U\-L\-L\-\_\-\-V\-A\-L\-U\-E\-\_\-bm}!boussinesq_matrix.c@{boussinesq\-\_\-matrix.\-c}}
+\subsubsection[{N\-U\-L\-L\-\_\-\-V\-A\-L\-U\-E\-\_\-bm}]{\setlength{\rightskip}{0pt plus 5cm}\#define N\-U\-L\-L\-\_\-\-V\-A\-L\-U\-E\-\_\-bm~-\/9999.\-0}}\label{boussinesq__matrix_8c_a558b6a76fcdaaf8c8f815363f2cad855}
+
+
+Definition at line 17 of file boussinesq\-\_\-matrix.\-c.
+
+
+
+Referenced by get\-\_\-t\-\_\-\-Matrix\-\_\-elements().
+
+
+
+\subsection{Function Documentation}
+\hypertarget{boussinesq__matrix_8c_a73597760d4ee34968403761d6b18d523}{\index{boussinesq\-\_\-matrix.\-c@{boussinesq\-\_\-matrix.\-c}!get\-\_\-t\-\_\-\-Matrix\-\_\-elements@{get\-\_\-t\-\_\-\-Matrix\-\_\-elements}}
+\index{get\-\_\-t\-\_\-\-Matrix\-\_\-elements@{get\-\_\-t\-\_\-\-Matrix\-\_\-elements}!boussinesq_matrix.c@{boussinesq\-\_\-matrix.\-c}}
+\subsubsection[{get\-\_\-t\-\_\-\-Matrix\-\_\-elements}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\-O\-U\-B\-L\-E\-B\-I\-N}$\ast$ get\-\_\-t\-\_\-\-Matrix\-\_\-elements (
+\begin{DoxyParamCaption}
+\item[{{\bf t\-\_\-\-Matrix\-\_\-element}}]{operator, }
+\item[{{\bf polygon\-\_\-connection\-\_\-attribute\-\_\-array} $\ast$}]{pca, }
+\item[{long}]{boundary}
+\end{DoxyParamCaption}
+)}}\label{boussinesq__matrix_8c_a73597760d4ee34968403761d6b18d523}
+\begin{DoxyDate}{Date}
+January 2010 
+\end{DoxyDate}
+\begin{DoxyAuthor}{Author}
+Emanuele Cordano
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em operator} & (t\-\_\-\-Matrix\-\_\-element) -\/ The operator representing the sparse matrix \\
+\hline
+{\em pca} & ( $\ast$polygon\-\_\-connection\-\_\-attribute\-\_\-array) -\/ the polygon connetion ttributes pca\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the sparse matrix as a D\-O\-U\-B\-L\-E\-B\-I\-N
+\end{DoxyReturn}
+
+
+Definition at line 19 of file boussinesq\-\_\-matrix.\-c.
+
+
+
+References polygon\-\_\-connection\-\_\-attributes\-::connections, polygon\-\_\-connection\-\_\-attribute\-\_\-array\-::element, free\-\_\-doublevector(), free\-\_\-longvector(), db\-::index, new\-\_\-doublebin(), new\-\_\-doublevector(), new\-\_\-longvector(), polygon\-\_\-connection\-\_\-attribute\-\_\-array\-::nh, L\-O\-N\-G\-V\-E\-C\-T\-O\-R\-::nh, L\-O\-N\-G\-V\-E\-C\-T\-O\-R\-::nl, D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R\-::nl, and N\-U\-L\-L\-\_\-\-V\-A\-L\-U\-E\-\_\-bm.
+

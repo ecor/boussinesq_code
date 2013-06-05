@@ -1,0 +1,474 @@
+\hypertarget{b__readgrid_8c}{\section{Boussinesq/b\-\_\-readgrid.c File Reference}
+\label{b__readgrid_8c}\index{Boussinesq/b\-\_\-readgrid.\-c@{Boussinesq/b\-\_\-readgrid.\-c}}
+}
+{\ttfamily \#include $<$sys/stat.\-h$>$}\\*
+{\ttfamily \#include \char`\"{}turtle.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}t\-\_\-utilities.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}get\-\_\-filenames.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}rw\-\_\-maps.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}linear\-\_\-span.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}geometry.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}geometry\-\_\-utilities.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}read\-\_\-command\-\_\-line.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}additional\-\_\-read\-\_\-functions.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}geometry\-\_\-io.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}geometry\-\_\-attribute.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}geometry\-\_\-freememory.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}g\-\_\-raster2plvector.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}bigcells2.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}geometry2.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}keywords\-\_\-file\-\_\-b.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}b\-\_\-solver.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}b\-\_\-volumes.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}b\-\_\-utilities.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}b\-\_\-readgrid.\-h\char`\"{}}\\*
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{b__readgrid_8c_a4cd987fdb59fe2b23e7227e7c45ff12e}{N\-U\-L\-L\-\_\-\-E\-L\-E\-V\-A\-T\-I\-O\-N}~-\/9999
+\item 
+\#define \hyperlink{b__readgrid_8c_a33cdbb7cb41e940ef8defb56fd2bad8b}{I\-N\-T\-E\-G\-E\-R\-\_\-\-N\-U\-L\-L}~-\/99
+\item 
+\#define \hyperlink{b__readgrid_8c_a338c797f5bd5cbdaf1bf98038e61e382}{P\-O\-L\-Y\-G\-O\-N\-\_\-\-S\-U\-F\-F\-I\-X}~\char`\"{}\-\_\-polygons.\-txt\char`\"{}
+\item 
+\#define \hyperlink{b__readgrid_8c_affc37faa9a4ef67846b78b77a9487784}{L\-I\-N\-E\-\_\-\-S\-U\-F\-F\-I\-X}~\char`\"{}\-\_\-lines.\-txt\char`\"{}
+\item 
+\#define \hyperlink{b__readgrid_8c_a608054e27e015d3e6c6f65093a5b8e1a}{C\-O\-N\-N\-E\-C\-T\-I\-O\-N\-\_\-\-S\-U\-F\-F\-I\-X}~\char`\"{}\-\_\-connections.\-txt\char`\"{}
+\item 
+\#define \hyperlink{b__readgrid_8c_a420fa755b3618a8594c8fdd66af55686}{no\-\_\-\-P\-R\-I\-N\-T}~0
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{struct_l_i_n_e_v_e_c_t_o_r}{L\-I\-N\-E\-V\-E\-C\-T\-O\-R} $\ast$ \hyperlink{b__readgrid_8c_a65dfbb838cec3818a4f95f76c43e298e}{read\-\_\-linevector} (char $\ast$filename, short print)
+\item 
+\hyperlink{struct_p_o_l_y_g_o_n}{P\-O\-L\-Y\-G\-O\-N} $\ast$ \hyperlink{b__readgrid_8c_a19dc94733b8e20e894546534a5c4cb8e}{read\-\_\-polygon} (F\-I\-L\-E $\ast$fd, short print)
+\item 
+\hyperlink{struct_p_o_l_y_g_o_n_v_e_c_t_o_r}{P\-O\-L\-Y\-G\-O\-N\-V\-E\-C\-T\-O\-R} $\ast$ \hyperlink{b__readgrid_8c_ad95a8e87ec2671019d73f6e05b29b080}{read\-\_\-polygonvector} (char $\ast$filename, short print)
+\item 
+\hyperlink{structpolygon__connection__attributes}{polygon\-\_\-connection\-\_\-attributes} $\ast$ \hyperlink{b__readgrid_8c_ae5201c7c145fa5449222aeba48c7282b}{read\-\_\-connections} (F\-I\-L\-E $\ast$fd, short print)
+\item 
+\hyperlink{structpolygon__connection__attribute__array}{polygon\-\_\-connection\-\_\-attribute\-\_\-array} $\ast$ \hyperlink{b__readgrid_8c_ac50a02b374c8231a6a75ec6778c9d3dd}{read\-\_\-connection\-\_\-attribute\-\_\-array} (char $\ast$filename, short print)
+\item 
+\hyperlink{struct_g_r_i_d}{G\-R\-I\-D} $\ast$ \hyperlink{b__readgrid_8c_a6d0c98f02e77a5b7d9828b196ef8a639}{read\-\_\-grid} (char $\ast$keyname, short print)
+\item 
+\hyperlink{struct_s_q_u_a_r_e___g_r_i_d}{S\-Q\-U\-A\-R\-E\-\_\-\-G\-R\-I\-D} $\ast$ \hyperlink{b__readgrid_8c_af4e3decaf6b0265b692ce512d1d6b2c2}{read\-\_\-square\-\_\-grid} (char $\ast$keyname, \hyperlink{struct_d_o_u_b_l_e_m_a_t_r_i_x}{D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X} $\ast$D\-T\-M, long($\ast$\hyperlink{g__raster2plvector_8h_a3abb055f6b19a51bd5dc90f5f35f9017}{index\-\_\-pixel\-\_\-from\-\_\-a\-\_\-bin})(long r, long c, \hyperlink{struct_l_o_n_g_v_e_c_t_o_r}{L\-O\-N\-G\-V\-E\-C\-T\-O\-R} $\ast$s\-\_\-index), \hyperlink{struct_d_o_u_b_l_e_v_e_c_t_o_r}{D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} $\ast$V, int($\ast$check\-\_\-novalues)(double x, \hyperlink{struct_d_o_u_b_l_e_v_e_c_t_o_r}{D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} $\ast$V), short print)
+\item 
+\hyperlink{struct_l_o_n_g_m_a_t_r_i_x___v_e_c_t_o_r}{L\-O\-N\-G\-M\-A\-T\-R\-I\-X\-\_\-\-V\-E\-C\-T\-O\-R} $\ast$ \hyperlink{b__readgrid_8c_a78807f909a30054a389e2e220fa84c01}{read\-\_\-fine\-\_\-indices} (char $\ast$filename, short print)
+\item 
+\hyperlink{struct_l_o_n_g_b_i_n}{L\-O\-N\-G\-B\-I\-N} $\ast$ \hyperlink{b__readgrid_8c_a1080b1048df0f3000ca0cf9754a4dbe5}{read\-\_\-line\-\_\-indices} (char $\ast$filename, short print)
+\item 
+\hyperlink{struct_d_o_u_b_l_e_s_q_u_a_r_e___g_r_i_d}{D\-O\-U\-B\-L\-E\-S\-Q\-U\-A\-R\-E\-\_\-\-G\-R\-I\-D} $\ast$ \hyperlink{b__readgrid_8c_a3c405370a3d6c7c9e413617a26b3e904}{read\-\_\-doublesquare\-\_\-grid} (\hyperlink{struct_d_o_u_b_l_e_r_a_s_t_e_r___m_a_p}{D\-O\-U\-B\-L\-E\-R\-A\-S\-T\-E\-R\-\_\-\-M\-A\-P} $\ast$\hyperlink{main_8c_a44d81a9ca5648f4ec1c298c7f37fefff}{draster}, char $\ast$keyname, long($\ast$index\-\_\-pixel\-\_\-from\-\_\-a\-\_\-bin\-\_\-coarse)(long r, long c, \hyperlink{struct_l_o_n_g_v_e_c_t_o_r}{L\-O\-N\-G\-V\-E\-C\-T\-O\-R} $\ast$s\-\_\-index), long($\ast$index\-\_\-pixel\-\_\-from\-\_\-a\-\_\-bin\-\_\-fine)(long r, long c, \hyperlink{struct_l_o_n_g_v_e_c_t_o_r}{L\-O\-N\-G\-V\-E\-C\-T\-O\-R} $\ast$s\-\_\-index), short print)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{DoxyAuthor}{Author}
+Emanuele Cordano
+\end{DoxyAuthor}
+\begin{DoxyAttention}{Attention}
+
+\end{DoxyAttention}
+This file is part of Boussinesq.
+
+Boussinesq is free software\-: you can redistribute it and/or modify it under the terms of the G\-N\-U General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
+
+Boussinesq is distributed in the hope that it will be useful, but W\-I\-T\-H\-O\-U\-T A\-N\-Y W\-A\-R\-R\-A\-N\-T\-Y; without even the implied warranty of M\-E\-R\-C\-H\-A\-N\-T\-A\-B\-I\-L\-I\-T\-Y or F\-I\-T\-N\-E\-S\-S F\-O\-R A P\-A\-R\-T\-I\-C\-U\-L\-A\-R P\-U\-R\-P\-O\-S\-E. See the G\-N\-U General Public License for more details.
+
+You should have received a copy of the G\-N\-U General Public License along with Boussinesq. If not, see \href{http://www.gnu.org/licenses/}{\tt http\-://www.\-gnu.\-org/licenses/}. 
+
+Definition in file \hyperlink{b__readgrid_8c_source}{b\-\_\-readgrid.\-c}.
+
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{b__readgrid_8c_a608054e27e015d3e6c6f65093a5b8e1a}{\index{b\-\_\-readgrid.\-c@{b\-\_\-readgrid.\-c}!C\-O\-N\-N\-E\-C\-T\-I\-O\-N\-\_\-\-S\-U\-F\-F\-I\-X@{C\-O\-N\-N\-E\-C\-T\-I\-O\-N\-\_\-\-S\-U\-F\-F\-I\-X}}
+\index{C\-O\-N\-N\-E\-C\-T\-I\-O\-N\-\_\-\-S\-U\-F\-F\-I\-X@{C\-O\-N\-N\-E\-C\-T\-I\-O\-N\-\_\-\-S\-U\-F\-F\-I\-X}!b_readgrid.c@{b\-\_\-readgrid.\-c}}
+\subsubsection[{C\-O\-N\-N\-E\-C\-T\-I\-O\-N\-\_\-\-S\-U\-F\-F\-I\-X}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\-O\-N\-N\-E\-C\-T\-I\-O\-N\-\_\-\-S\-U\-F\-F\-I\-X~\char`\"{}\-\_\-connections.\-txt\char`\"{}}}\label{b__readgrid_8c_a608054e27e015d3e6c6f65093a5b8e1a}
+
+
+Definition at line 53 of file b\-\_\-readgrid.\-c.
+
+
+
+Referenced by read\-\_\-grid().
+
+\hypertarget{b__readgrid_8c_a33cdbb7cb41e940ef8defb56fd2bad8b}{\index{b\-\_\-readgrid.\-c@{b\-\_\-readgrid.\-c}!I\-N\-T\-E\-G\-E\-R\-\_\-\-N\-U\-L\-L@{I\-N\-T\-E\-G\-E\-R\-\_\-\-N\-U\-L\-L}}
+\index{I\-N\-T\-E\-G\-E\-R\-\_\-\-N\-U\-L\-L@{I\-N\-T\-E\-G\-E\-R\-\_\-\-N\-U\-L\-L}!b_readgrid.c@{b\-\_\-readgrid.\-c}}
+\subsubsection[{I\-N\-T\-E\-G\-E\-R\-\_\-\-N\-U\-L\-L}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\-N\-T\-E\-G\-E\-R\-\_\-\-N\-U\-L\-L~-\/99}}\label{b__readgrid_8c_a33cdbb7cb41e940ef8defb56fd2bad8b}
+
+
+Definition at line 50 of file b\-\_\-readgrid.\-c.
+
+
+
+Referenced by read\-\_\-square\-\_\-grid().
+
+\hypertarget{b__readgrid_8c_affc37faa9a4ef67846b78b77a9487784}{\index{b\-\_\-readgrid.\-c@{b\-\_\-readgrid.\-c}!L\-I\-N\-E\-\_\-\-S\-U\-F\-F\-I\-X@{L\-I\-N\-E\-\_\-\-S\-U\-F\-F\-I\-X}}
+\index{L\-I\-N\-E\-\_\-\-S\-U\-F\-F\-I\-X@{L\-I\-N\-E\-\_\-\-S\-U\-F\-F\-I\-X}!b_readgrid.c@{b\-\_\-readgrid.\-c}}
+\subsubsection[{L\-I\-N\-E\-\_\-\-S\-U\-F\-F\-I\-X}]{\setlength{\rightskip}{0pt plus 5cm}\#define L\-I\-N\-E\-\_\-\-S\-U\-F\-F\-I\-X~\char`\"{}\-\_\-lines.\-txt\char`\"{}}}\label{b__readgrid_8c_affc37faa9a4ef67846b78b77a9487784}
+
+
+Definition at line 52 of file b\-\_\-readgrid.\-c.
+
+
+
+Referenced by read\-\_\-grid().
+
+\hypertarget{b__readgrid_8c_a420fa755b3618a8594c8fdd66af55686}{\index{b\-\_\-readgrid.\-c@{b\-\_\-readgrid.\-c}!no\-\_\-\-P\-R\-I\-N\-T@{no\-\_\-\-P\-R\-I\-N\-T}}
+\index{no\-\_\-\-P\-R\-I\-N\-T@{no\-\_\-\-P\-R\-I\-N\-T}!b_readgrid.c@{b\-\_\-readgrid.\-c}}
+\subsubsection[{no\-\_\-\-P\-R\-I\-N\-T}]{\setlength{\rightskip}{0pt plus 5cm}\#define no\-\_\-\-P\-R\-I\-N\-T~0}}\label{b__readgrid_8c_a420fa755b3618a8594c8fdd66af55686}
+
+
+Definition at line 54 of file b\-\_\-readgrid.\-c.
+
+
+
+Referenced by read\-\_\-connection\-\_\-attribute\-\_\-array(), read\-\_\-connections(), read\-\_\-fine\-\_\-indices(), read\-\_\-linevector(), and read\-\_\-polygonvector().
+
+\hypertarget{b__readgrid_8c_a4cd987fdb59fe2b23e7227e7c45ff12e}{\index{b\-\_\-readgrid.\-c@{b\-\_\-readgrid.\-c}!N\-U\-L\-L\-\_\-\-E\-L\-E\-V\-A\-T\-I\-O\-N@{N\-U\-L\-L\-\_\-\-E\-L\-E\-V\-A\-T\-I\-O\-N}}
+\index{N\-U\-L\-L\-\_\-\-E\-L\-E\-V\-A\-T\-I\-O\-N@{N\-U\-L\-L\-\_\-\-E\-L\-E\-V\-A\-T\-I\-O\-N}!b_readgrid.c@{b\-\_\-readgrid.\-c}}
+\subsubsection[{N\-U\-L\-L\-\_\-\-E\-L\-E\-V\-A\-T\-I\-O\-N}]{\setlength{\rightskip}{0pt plus 5cm}\#define N\-U\-L\-L\-\_\-\-E\-L\-E\-V\-A\-T\-I\-O\-N~-\/9999}}\label{b__readgrid_8c_a4cd987fdb59fe2b23e7227e7c45ff12e}
+
+
+Definition at line 49 of file b\-\_\-readgrid.\-c.
+
+
+
+Referenced by read\-\_\-linevector(), and read\-\_\-polygon().
+
+\hypertarget{b__readgrid_8c_a338c797f5bd5cbdaf1bf98038e61e382}{\index{b\-\_\-readgrid.\-c@{b\-\_\-readgrid.\-c}!P\-O\-L\-Y\-G\-O\-N\-\_\-\-S\-U\-F\-F\-I\-X@{P\-O\-L\-Y\-G\-O\-N\-\_\-\-S\-U\-F\-F\-I\-X}}
+\index{P\-O\-L\-Y\-G\-O\-N\-\_\-\-S\-U\-F\-F\-I\-X@{P\-O\-L\-Y\-G\-O\-N\-\_\-\-S\-U\-F\-F\-I\-X}!b_readgrid.c@{b\-\_\-readgrid.\-c}}
+\subsubsection[{P\-O\-L\-Y\-G\-O\-N\-\_\-\-S\-U\-F\-F\-I\-X}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\-O\-L\-Y\-G\-O\-N\-\_\-\-S\-U\-F\-F\-I\-X~\char`\"{}\-\_\-polygons.\-txt\char`\"{}}}\label{b__readgrid_8c_a338c797f5bd5cbdaf1bf98038e61e382}
+
+
+Definition at line 51 of file b\-\_\-readgrid.\-c.
+
+
+
+Referenced by read\-\_\-grid().
+
+
+
+\subsection{Function Documentation}
+\hypertarget{b__readgrid_8c_ac50a02b374c8231a6a75ec6778c9d3dd}{\index{b\-\_\-readgrid.\-c@{b\-\_\-readgrid.\-c}!read\-\_\-connection\-\_\-attribute\-\_\-array@{read\-\_\-connection\-\_\-attribute\-\_\-array}}
+\index{read\-\_\-connection\-\_\-attribute\-\_\-array@{read\-\_\-connection\-\_\-attribute\-\_\-array}!b_readgrid.c@{b\-\_\-readgrid.\-c}}
+\subsubsection[{read\-\_\-connection\-\_\-attribute\-\_\-array}]{\setlength{\rightskip}{0pt plus 5cm}{\bf polygon\-\_\-connection\-\_\-attribute\-\_\-array}$\ast$ read\-\_\-connection\-\_\-attribute\-\_\-array (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{filename, }
+\item[{short}]{print}
+\end{DoxyParamCaption}
+)}}\label{b__readgrid_8c_ac50a02b374c8231a6a75ec6778c9d3dd}
+\begin{DoxyAuthor}{Author}
+Emanuele Cordano 
+
+May 2008
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em (char$\ast$)} & -\/ name of filename \\
+\hline
+{\em (short)} & -\/\\
+\hline
+\end{DoxyParams}
+It creates and reads a polygonvector from the following options\-:
+
+Definition at line 227 of file b\-\_\-readgrid.\-c.
+
+
+
+References polygon\-\_\-connection\-\_\-attribute\-\_\-array\-::element, new\-\_\-connection\-\_\-attributes(), polygon\-\_\-connection\-\_\-attribute\-\_\-array\-::nh, polygon\-\_\-connection\-\_\-attribute\-\_\-array\-::nl, no\-\_\-\-P\-R\-I\-N\-T, read\-\_\-connections(), read\-\_\-index(), t\-\_\-fclose(), and t\-\_\-fopen().
+
+
+
+Referenced by read\-\_\-grid().
+
+\hypertarget{b__readgrid_8c_ae5201c7c145fa5449222aeba48c7282b}{\index{b\-\_\-readgrid.\-c@{b\-\_\-readgrid.\-c}!read\-\_\-connections@{read\-\_\-connections}}
+\index{read\-\_\-connections@{read\-\_\-connections}!b_readgrid.c@{b\-\_\-readgrid.\-c}}
+\subsubsection[{read\-\_\-connections}]{\setlength{\rightskip}{0pt plus 5cm}{\bf polygon\-\_\-connection\-\_\-attributes}$\ast$ read\-\_\-connections (
+\begin{DoxyParamCaption}
+\item[{F\-I\-L\-E $\ast$}]{fd, }
+\item[{short}]{print}
+\end{DoxyParamCaption}
+)}}\label{b__readgrid_8c_ae5201c7c145fa5449222aeba48c7282b}
+\begin{DoxyAuthor}{Author}
+Emanuele Cordano 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+May 2009
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em fd} & -\/ (F\-I\-L\-E $\ast$) file pointer \\
+\hline
+{\em print} & -\/ (short)\\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 185 of file b\-\_\-readgrid.\-c.
+
+
+
+References polygon\-\_\-connection\-\_\-attributes\-::connections, polygon\-\_\-connection\-\_\-attributes\-::d\-\_\-connections, free\-\_\-doublevector(), new\-\_\-doublevector(), new\-\_\-longvector(), D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R\-::nh, L\-O\-N\-G\-V\-E\-C\-T\-O\-R\-::nl, no\-\_\-\-P\-R\-I\-N\-T, and read\-\_\-doublearray().
+
+
+
+Referenced by read\-\_\-connection\-\_\-attribute\-\_\-array().
+
+\hypertarget{b__readgrid_8c_a3c405370a3d6c7c9e413617a26b3e904}{\index{b\-\_\-readgrid.\-c@{b\-\_\-readgrid.\-c}!read\-\_\-doublesquare\-\_\-grid@{read\-\_\-doublesquare\-\_\-grid}}
+\index{read\-\_\-doublesquare\-\_\-grid@{read\-\_\-doublesquare\-\_\-grid}!b_readgrid.c@{b\-\_\-readgrid.\-c}}
+\subsubsection[{read\-\_\-doublesquare\-\_\-grid}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\-O\-U\-B\-L\-E\-S\-Q\-U\-A\-R\-E\-\_\-\-G\-R\-I\-D}$\ast$ read\-\_\-doublesquare\-\_\-grid (
+\begin{DoxyParamCaption}
+\item[{{\bf D\-O\-U\-B\-L\-E\-R\-A\-S\-T\-E\-R\-\_\-\-M\-A\-P} $\ast$}]{draster, }
+\item[{char $\ast$}]{keyname, }
+\item[{long($\ast$)(long r, long c, {\bf L\-O\-N\-G\-V\-E\-C\-T\-O\-R} $\ast$s\-\_\-index)}]{index\-\_\-pixel\-\_\-from\-\_\-a\-\_\-bin\-\_\-coarse, }
+\item[{long($\ast$)(long r, long c, {\bf L\-O\-N\-G\-V\-E\-C\-T\-O\-R} $\ast$s\-\_\-index)}]{index\-\_\-pixel\-\_\-from\-\_\-a\-\_\-bin\-\_\-fine, }
+\item[{short}]{print}
+\end{DoxyParamCaption}
+)}}\label{b__readgrid_8c_a3c405370a3d6c7c9e413617a26b3e904}
+
+
+Definition at line 452 of file b\-\_\-readgrid.\-c.
+
+
+
+References D\-O\-U\-B\-L\-E\-S\-Q\-U\-A\-R\-E\-\_\-\-G\-R\-I\-D\-::big, R\-A\-S\-T\-E\-R\-\_\-\-M\-A\-P\-::check\-\_\-novalues, D\-O\-U\-B\-L\-E\-R\-A\-S\-T\-E\-R\-\_\-\-M\-A\-P\-::coarse, copy\-\_\-string(), dsq, D\-O\-U\-B\-L\-E\-S\-Q\-U\-A\-R\-E\-\_\-\-G\-R\-I\-D\-::file\-\_\-resume\-\_\-c\-\_\-line, D\-O\-U\-B\-L\-E\-S\-Q\-U\-A\-R\-E\-\_\-\-G\-R\-I\-D\-::file\-\_\-resume\-\_\-c\-\_\-polygon, D\-O\-U\-B\-L\-E\-S\-Q\-U\-A\-R\-E\-\_\-\-G\-R\-I\-D\-::fine, D\-O\-U\-B\-L\-E\-R\-A\-S\-T\-E\-R\-\_\-\-M\-A\-P\-::fine, S\-Q\-U\-A\-R\-E\-\_\-\-G\-R\-I\-D\-::grid, L\-O\-N\-G\-B\-I\-N\-::index, join\-\_\-strings(), R\-A\-S\-T\-E\-R\-\_\-\-M\-A\-P\-::layer, G\-R\-I\-D\-::lines, L\-O\-N\-G\-M\-A\-T\-R\-I\-X\-\_\-\-V\-E\-C\-T\-O\-R\-::nh, L\-I\-N\-E\-V\-E\-C\-T\-O\-R\-::nh, P\-O\-L\-Y\-G\-O\-N\-V\-E\-C\-T\-O\-R\-::nh, L\-O\-N\-G\-V\-E\-C\-T\-O\-R\-::nh, G\-R\-I\-D\-::polygons, read\-\_\-fine\-\_\-indices(), read\-\_\-line\-\_\-indices(), read\-\_\-square\-\_\-grid(), R\-A\-S\-T\-E\-R\-\_\-\-M\-A\-P\-::reference\-\_\-index\-\_\-map, D\-O\-U\-B\-L\-E\-S\-Q\-U\-A\-R\-E\-\_\-\-G\-R\-I\-D\-::small\-\_\-content\-\_\-line, D\-O\-U\-B\-L\-E\-S\-Q\-U\-A\-R\-E\-\_\-\-G\-R\-I\-D\-::small\-\_\-content\-\_\-polygon, stop\-\_\-execution(), t\-\_\-error(), R\-A\-S\-T\-E\-R\-\_\-\-M\-A\-P\-::\-U\-V, and T\-\_\-\-I\-N\-I\-T\-::\-V.
+
+\hypertarget{b__readgrid_8c_a78807f909a30054a389e2e220fa84c01}{\index{b\-\_\-readgrid.\-c@{b\-\_\-readgrid.\-c}!read\-\_\-fine\-\_\-indices@{read\-\_\-fine\-\_\-indices}}
+\index{read\-\_\-fine\-\_\-indices@{read\-\_\-fine\-\_\-indices}!b_readgrid.c@{b\-\_\-readgrid.\-c}}
+\subsubsection[{read\-\_\-fine\-\_\-indices}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\-O\-N\-G\-M\-A\-T\-R\-I\-X\-\_\-\-V\-E\-C\-T\-O\-R}$\ast$ read\-\_\-fine\-\_\-indices (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{filename, }
+\item[{short}]{print}
+\end{DoxyParamCaption}
+)}}\label{b__readgrid_8c_a78807f909a30054a389e2e220fa84c01}
+\begin{DoxyAuthor}{Author}
+Emanuele Cordano date May 2009
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em (char$\ast$)} & -\/ name of filename \\
+\hline
+{\em (short)} & -\/\\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 364 of file b\-\_\-readgrid.\-c.
+
+
+
+References L\-O\-N\-G\-M\-A\-T\-R\-I\-X\-\_\-\-V\-E\-C\-T\-O\-R\-::element, new\-\_\-longmatrix\-\_\-vector(), L\-O\-N\-G\-M\-A\-T\-R\-I\-X\-\_\-\-V\-E\-C\-T\-O\-R\-::nh, L\-O\-N\-G\-M\-A\-T\-R\-I\-X\-\_\-\-V\-E\-C\-T\-O\-R\-::nl, no\-\_\-\-P\-R\-I\-N\-T, L\-O\-N\-G\-M\-A\-T\-R\-I\-X\-::nrh, read\-\_\-index(), read\-\_\-longmatrix(), t\-\_\-error(), t\-\_\-fclose(), and t\-\_\-fopen().
+
+
+
+Referenced by read\-\_\-doublesquare\-\_\-grid().
+
+\hypertarget{b__readgrid_8c_a6d0c98f02e77a5b7d9828b196ef8a639}{\index{b\-\_\-readgrid.\-c@{b\-\_\-readgrid.\-c}!read\-\_\-grid@{read\-\_\-grid}}
+\index{read\-\_\-grid@{read\-\_\-grid}!b_readgrid.c@{b\-\_\-readgrid.\-c}}
+\subsubsection[{read\-\_\-grid}]{\setlength{\rightskip}{0pt plus 5cm}{\bf G\-R\-I\-D}$\ast$ read\-\_\-grid (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{keyname, }
+\item[{short}]{print}
+\end{DoxyParamCaption}
+)}}\label{b__readgrid_8c_a6d0c98f02e77a5b7d9828b196ef8a639}
+\begin{DoxyAuthor}{Author}
+Emanuele Cordano 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+May 2008
+\end{DoxyDate}
+
+
+Definition at line 260 of file b\-\_\-readgrid.\-c.
+
+
+
+References G\-R\-I\-D\-::boundary\-\_\-indicator, C\-O\-N\-N\-E\-C\-T\-I\-O\-N\-\_\-\-S\-U\-F\-F\-I\-X, polygon\-\_\-connection\-\_\-attributes\-::connections, copy\-\_\-string(), P\-O\-L\-Y\-G\-O\-N\-::edge\-\_\-indices, P\-O\-L\-Y\-G\-O\-N\-V\-E\-C\-T\-O\-R\-::element, polygon\-\_\-connection\-\_\-attribute\-\_\-array\-::element, G\-R\-I\-D\-::file\-\_\-resume\-\_\-connections, G\-R\-I\-D\-::file\-\_\-resume\-\_\-lines, G\-R\-I\-D\-::file\-\_\-resume\-\_\-polygons, join\-\_\-strings(), L\-I\-N\-E\-\_\-\-S\-U\-F\-F\-I\-X, G\-R\-I\-D\-::lines, G\-R\-I\-D\-::links, L\-I\-N\-E\-V\-E\-C\-T\-O\-R\-::nh, P\-O\-L\-Y\-G\-O\-N\-V\-E\-C\-T\-O\-R\-::nh, polygon\-\_\-connection\-\_\-attribute\-\_\-array\-::nh, L\-O\-N\-G\-V\-E\-C\-T\-O\-R\-::nh, polygon\-\_\-connection\-\_\-attribute\-\_\-array\-::nl, L\-O\-N\-G\-V\-E\-C\-T\-O\-R\-::nl, P\-O\-L\-Y\-G\-O\-N\-\_\-\-S\-U\-F\-F\-I\-X, G\-R\-I\-D\-::polygons, read\-\_\-connection\-\_\-attribute\-\_\-array(), read\-\_\-linevector(), read\-\_\-polygonvector(), and t\-\_\-error().
+
+
+
+Referenced by read\-\_\-square\-\_\-grid().
+
+\hypertarget{b__readgrid_8c_a1080b1048df0f3000ca0cf9754a4dbe5}{\index{b\-\_\-readgrid.\-c@{b\-\_\-readgrid.\-c}!read\-\_\-line\-\_\-indices@{read\-\_\-line\-\_\-indices}}
+\index{read\-\_\-line\-\_\-indices@{read\-\_\-line\-\_\-indices}!b_readgrid.c@{b\-\_\-readgrid.\-c}}
+\subsubsection[{read\-\_\-line\-\_\-indices}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\-O\-N\-G\-B\-I\-N}$\ast$ read\-\_\-line\-\_\-indices (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{filename, }
+\item[{short}]{print}
+\end{DoxyParamCaption}
+)}}\label{b__readgrid_8c_a1080b1048df0f3000ca0cf9754a4dbe5}
+
+
+Definition at line 397 of file b\-\_\-readgrid.\-c.
+
+
+
+References free\-\_\-longvector(), L\-O\-N\-G\-B\-I\-N\-::index, new\-\_\-longbin(), new\-\_\-longvector(), L\-O\-N\-G\-V\-E\-C\-T\-O\-R\-::nh, L\-O\-N\-G\-V\-E\-C\-T\-O\-R\-::nl, read\-\_\-index(), read\-\_\-longarray(), t\-\_\-fclose(), and t\-\_\-fopen().
+
+
+
+Referenced by read\-\_\-doublesquare\-\_\-grid().
+
+\hypertarget{b__readgrid_8c_a65dfbb838cec3818a4f95f76c43e298e}{\index{b\-\_\-readgrid.\-c@{b\-\_\-readgrid.\-c}!read\-\_\-linevector@{read\-\_\-linevector}}
+\index{read\-\_\-linevector@{read\-\_\-linevector}!b_readgrid.c@{b\-\_\-readgrid.\-c}}
+\subsubsection[{read\-\_\-linevector}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\-I\-N\-E\-V\-E\-C\-T\-O\-R}$\ast$ read\-\_\-linevector (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{filename, }
+\item[{short}]{print}
+\end{DoxyParamCaption}
+)}}\label{b__readgrid_8c_a65dfbb838cec3818a4f95f76c43e298e}
+\begin{DoxyAuthor}{Author}
+Emanuele Cordano 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+May 2009
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & (char $\ast$) -\/ name of the file where to read line\-\_\-information \\
+\hline
+{\em print} & (short)\\
+\hline
+\end{DoxyParams}
+It creates and reads a linevector from the following options\-: index\{1\} F\-I\-L\-E C\-O\-N\-T\-A\-I\-N\-I\-G N\-E\-C\-E\-S\-S\-A\-R\-Y I\-N\-F\-O\-R\-M\-A\-T\-I\-O\-N F\-O\-R L\-I\-N\-E\-S x y line\-\_\-index lenght2d x\-\_\-\-P1 y\-\_\-\-P1 x\-\_\-\-P2 y\-\_\-\-P2
+
+1\-: double matrix lines information \{55550,8\}
+
+x coordinate of the middle point
+
+y coordinate of the midddele point
+
+iline\-\_\-index of the line
+
+lenght of the line
+
+P1 x coordinate
+
+P1 y coordinate
+
+P2 x coordinate
+
+P2 y coordinate 
+
+Definition at line 56 of file b\-\_\-readgrid.\-c.
+
+
+
+References L\-I\-N\-E\-V\-E\-C\-T\-O\-R\-::element, free\-\_\-doublematrix(), free\-\_\-point(), D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X\-::nch, new\-\_\-line\-\_\-from\-\_\-points(), new\-\_\-linevector(), new\-\_\-point(), L\-I\-N\-E\-V\-E\-C\-T\-O\-R\-::nh, L\-I\-N\-E\-V\-E\-C\-T\-O\-R\-::nl, no\-\_\-\-P\-R\-I\-N\-T, D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X\-::nrh, N\-U\-L\-L\-\_\-\-E\-L\-E\-V\-A\-T\-I\-O\-N, read\-\_\-doublematrix(), read\-\_\-index(), and t\-\_\-fopen().
+
+
+
+Referenced by read\-\_\-grid().
+
+\hypertarget{b__readgrid_8c_a19dc94733b8e20e894546534a5c4cb8e}{\index{b\-\_\-readgrid.\-c@{b\-\_\-readgrid.\-c}!read\-\_\-polygon@{read\-\_\-polygon}}
+\index{read\-\_\-polygon@{read\-\_\-polygon}!b_readgrid.c@{b\-\_\-readgrid.\-c}}
+\subsubsection[{read\-\_\-polygon}]{\setlength{\rightskip}{0pt plus 5cm}{\bf P\-O\-L\-Y\-G\-O\-N}$\ast$ read\-\_\-polygon (
+\begin{DoxyParamCaption}
+\item[{F\-I\-L\-E $\ast$}]{fd, }
+\item[{short}]{print}
+\end{DoxyParamCaption}
+)}}\label{b__readgrid_8c_a19dc94733b8e20e894546534a5c4cb8e}
+Emanuele Cordano \begin{DoxyDate}{Date}
+May 2009
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em (\-F\-I\-L\-E} & $\ast$) -\/ file pointer \\
+\hline
+{\em (short)} & -\/ print\\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 113 of file b\-\_\-readgrid.\-c.
+
+
+
+References P\-O\-L\-Y\-G\-O\-N\-::area2\-D, P\-O\-L\-Y\-G\-O\-N\-::centroid, P\-O\-L\-Y\-G\-O\-N\-::edge\-\_\-indices, free\-\_\-doublevector(), P\-O\-L\-Y\-G\-O\-N\-::index, new\-\_\-longvector(), new\-\_\-point(), D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R\-::nh, L\-O\-N\-G\-V\-E\-C\-T\-O\-R\-::nl, N\-U\-L\-L\-\_\-\-E\-L\-E\-V\-A\-T\-I\-O\-N, read\-\_\-doublearray(), and t\-\_\-error().
+
+
+
+Referenced by read\-\_\-polygonvector().
+
+\hypertarget{b__readgrid_8c_ad95a8e87ec2671019d73f6e05b29b080}{\index{b\-\_\-readgrid.\-c@{b\-\_\-readgrid.\-c}!read\-\_\-polygonvector@{read\-\_\-polygonvector}}
+\index{read\-\_\-polygonvector@{read\-\_\-polygonvector}!b_readgrid.c@{b\-\_\-readgrid.\-c}}
+\subsubsection[{read\-\_\-polygonvector}]{\setlength{\rightskip}{0pt plus 5cm}{\bf P\-O\-L\-Y\-G\-O\-N\-V\-E\-C\-T\-O\-R}$\ast$ read\-\_\-polygonvector (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{filename, }
+\item[{short}]{print}
+\end{DoxyParamCaption}
+)}}\label{b__readgrid_8c_ad95a8e87ec2671019d73f6e05b29b080}
+\begin{DoxyAuthor}{Author}
+Emanuele Cordano 
+
+May 2008
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em (char$\ast$)} & -\/ name of filename \\
+\hline
+{\em (short)} & -\/\\
+\hline
+\end{DoxyParams}
+It creates and reads a polygonvector from the following options\-:
+
+Definition at line 154 of file b\-\_\-readgrid.\-c.
+
+
+
+References P\-O\-L\-Y\-G\-O\-N\-V\-E\-C\-T\-O\-R\-::element, P\-O\-L\-Y\-G\-O\-N\-::index, new\-\_\-polygonvector(), P\-O\-L\-Y\-G\-O\-N\-V\-E\-C\-T\-O\-R\-::nh, P\-O\-L\-Y\-G\-O\-N\-V\-E\-C\-T\-O\-R\-::nl, no\-\_\-\-P\-R\-I\-N\-T, read\-\_\-index(), read\-\_\-polygon(), t\-\_\-fclose(), and t\-\_\-fopen().
+
+
+
+Referenced by read\-\_\-grid().
+
+\hypertarget{b__readgrid_8c_af4e3decaf6b0265b692ce512d1d6b2c2}{\index{b\-\_\-readgrid.\-c@{b\-\_\-readgrid.\-c}!read\-\_\-square\-\_\-grid@{read\-\_\-square\-\_\-grid}}
+\index{read\-\_\-square\-\_\-grid@{read\-\_\-square\-\_\-grid}!b_readgrid.c@{b\-\_\-readgrid.\-c}}
+\subsubsection[{read\-\_\-square\-\_\-grid}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\-Q\-U\-A\-R\-E\-\_\-\-G\-R\-I\-D}$\ast$ read\-\_\-square\-\_\-grid (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{keyname, }
+\item[{{\bf D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X} $\ast$}]{D\-T\-M, }
+\item[{long($\ast$)(long r, long c, {\bf L\-O\-N\-G\-V\-E\-C\-T\-O\-R} $\ast$s\-\_\-index)}]{index\-\_\-pixel\-\_\-from\-\_\-a\-\_\-bin, }
+\item[{{\bf D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} $\ast$}]{V, }
+\item[{int($\ast$)(double x, {\bf D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} $\ast$V)}]{check\-\_\-novalues, }
+\item[{short}]{print}
+\end{DoxyParamCaption}
+)}}\label{b__readgrid_8c_af4e3decaf6b0265b692ce512d1d6b2c2}
+\begin{DoxyAuthor}{Author}
+Emanuele Cordano 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+May 2009
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em keyname} & (char $\ast$) -\/ keyname of the \hyperlink{struct_s_q_u_a_r_e___g_r_i_d}{S\-Q\-U\-A\-R\-E\-\_\-\-G\-R\-I\-D} \\
+\hline
+{\em D\-T\-M} & (\hyperlink{struct_d_o_u_b_l_e_m_a_t_r_i_x}{D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X} $\ast$) -\/ Digital Terrain Model \\
+\hline
+{\em long} & ($\ast$index\-\_\-pixel\-\_\-from\-\_\-a\-\_\-bin)(long r, long c,\hyperlink{struct_l_o_n_g_v_e_c_t_o_r}{L\-O\-N\-G\-V\-E\-C\-T\-O\-R} $\ast$s\-\_\-index) -\/ function for the space filling curve \\
+\hline
+{\em V} & -\/ (\hyperlink{struct_d_o_u_b_l_e_v_e_c_t_o_r}{D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} $\ast$) -\/ vector containig novalue information \\
+\hline
+{\em int} & ($\ast$check\-\_\-novalues)(double x, \hyperlink{struct_d_o_u_b_l_e_v_e_c_t_o_r}{D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} $\ast$\-V) -\/ function identintifyng novalue information \\
+\hline
+{\em print} & (short)\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a S\-Q\-U\-A\-R\-E \hyperlink{struct_g_r_i_d}{G\-R\-I\-D} whose data are written in files with F\-L\-U\-Id\-Turtle formalism
+\end{DoxyReturn}
+first element of sqp-\/$>$inices\-\_\-pixel is assumed as a no-\/value 
+
+Definition at line 311 of file b\-\_\-readgrid.\-c.
+
+
+
+References S\-Q\-U\-A\-R\-E\-\_\-\-G\-R\-I\-D\-::grid, index\-\_\-pixel\-\_\-from\-\_\-a\-\_\-bin(), S\-Q\-U\-A\-R\-E\-\_\-\-G\-R\-I\-D\-::indices\-\_\-horizontal\-\_\-lines, S\-Q\-U\-A\-R\-E\-\_\-\-G\-R\-I\-D\-::indices\-\_\-pixel, S\-Q\-U\-A\-R\-E\-\_\-\-G\-R\-I\-D\-::indices\-\_\-vertex, S\-Q\-U\-A\-R\-E\-\_\-\-G\-R\-I\-D\-::indices\-\_\-vertical\-\_\-lines, I\-N\-T\-E\-G\-E\-R\-\_\-\-N\-U\-L\-L, m\-\_\-indices\-\_\-from\-\_\-mask(), L\-O\-N\-G\-M\-A\-T\-R\-I\-X\-::ncl, S\-Q\-U\-A\-R\-E\-\_\-\-G\-R\-I\-D\-::nhorizontal\-\_\-lines, S\-Q\-U\-A\-R\-E\-\_\-\-G\-R\-I\-D\-::novalue, L\-O\-N\-G\-M\-A\-T\-R\-I\-X\-::nrl, read\-\_\-grid(), and t\-\_\-error().
+
+
+
+Referenced by read\-\_\-doublesquare\-\_\-grid().
+

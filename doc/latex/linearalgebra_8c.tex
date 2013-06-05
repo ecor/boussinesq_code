@@ -1,0 +1,504 @@
+\hypertarget{linearalgebra_8c}{\section{F\-L\-U\-I\-D\-T\-U\-R\-T\-L\-E\-S/linearalgebra.c File Reference}
+\label{linearalgebra_8c}\index{F\-L\-U\-I\-D\-T\-U\-R\-T\-L\-E\-S/linearalgebra.\-c@{F\-L\-U\-I\-D\-T\-U\-R\-T\-L\-E\-S/linearalgebra.\-c}}
+}
+{\ttfamily \#include \char`\"{}turtle.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}linearalgebra.\-h\char`\"{}}\\*
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{linearalgebra_8c_a5b518ae0bd58b014c69df8e24ced52b7}{convlv} (\hyperlink{struct_f_l_o_a_t_v_e_c_t_o_r}{F\-L\-O\-A\-T\-V\-E\-C\-T\-O\-R} $\ast$data, unsigned long n, \hyperlink{struct_f_l_o_a_t_v_e_c_t_o_r}{F\-L\-O\-A\-T\-V\-E\-C\-T\-O\-R} $\ast$respns, unsigned long m, int isign, double delta\-\_\-time, \hyperlink{struct_f_l_o_a_t_v_e_c_t_o_r}{F\-L\-O\-A\-T\-V\-E\-C\-T\-O\-R} $\ast$ans)
+\item 
+void \hyperlink{linearalgebra_8c_a98634b316c73df4f05cfb3b654a19ec9}{four1} (\hyperlink{struct_f_l_o_a_t_v_e_c_t_o_r}{F\-L\-O\-A\-T\-V\-E\-C\-T\-O\-R} $\ast$data, unsigned long nn, int isign)
+\item 
+void \hyperlink{linearalgebra_8c_a43e14cdfe2492e11eb0d06fa2acb85d7}{ludcmp} (\hyperlink{struct_s_h_o_r_t_v_e_c_t_o_r}{S\-H\-O\-R\-T\-V\-E\-C\-T\-O\-R} $\ast$indx, \hyperlink{struct_d_o_u_b_l_e_m_a_t_r_i_x}{D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X} $\ast$var)
+\item 
+void \hyperlink{linearalgebra_8c_a5d1b9e3c0672fb2a4f5a16f7c0790713}{lubksb} (\hyperlink{struct_d_o_u_b_l_e_m_a_t_r_i_x}{D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X} $\ast$var, \hyperlink{struct_s_h_o_r_t_v_e_c_t_o_r}{S\-H\-O\-R\-T\-V\-E\-C\-T\-O\-R} $\ast$indx, \hyperlink{struct_d_o_u_b_l_e_v_e_c_t_o_r}{D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} $\ast$gam)
+\item 
+void \hyperlink{linearalgebra_8c_a3b50d2b30fe5d3d151c8a8d6fd1f0795}{realft} (\hyperlink{struct_f_l_o_a_t_v_e_c_t_o_r}{F\-L\-O\-A\-T\-V\-E\-C\-T\-O\-R} $\ast$data, unsigned long n, int isign)
+\item 
+void \hyperlink{linearalgebra_8c_a2e7ed0dbbc97f7e49f2eeca775bc8c6a}{twofft} (\hyperlink{struct_f_l_o_a_t_v_e_c_t_o_r}{F\-L\-O\-A\-T\-V\-E\-C\-T\-O\-R} $\ast$data1, \hyperlink{struct_f_l_o_a_t_v_e_c_t_o_r}{F\-L\-O\-A\-T\-V\-E\-C\-T\-O\-R} $\ast$data2, \hyperlink{struct_f_l_o_a_t_v_e_c_t_o_r}{F\-L\-O\-A\-T\-V\-E\-C\-T\-O\-R} $\ast$fft1, \hyperlink{struct_f_l_o_a_t_v_e_c_t_o_r}{F\-L\-O\-A\-T\-V\-E\-C\-T\-O\-R} $\ast$fft2, unsigned long n)
+\item 
+\hyperlink{struct_d_o_u_b_l_e_m_a_t_r_i_x}{D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X} $\ast$ \hyperlink{linearalgebra_8c_a70eca5b330ad46e707cff64481aa890c}{vett\-\_\-mat} (double $\ast$d, double $\ast$ds, double $\ast$di, int n)
+\item 
+void \hyperlink{linearalgebra_8c_a78e8ea6fce79749440772838e881de76}{sprsin} (double $\ast$$\ast$a, int n, float thresh, long nmax, double sa\mbox{[}$\,$\mbox{]}, long ija\mbox{[}$\,$\mbox{]})
+\item 
+double \hyperlink{linearalgebra_8c_a8eaa4c7c5c1fa8b816f01586de338b30}{snrm} (long n, double sx\mbox{[}$\,$\mbox{]}, int itol)
+\item 
+void \hyperlink{linearalgebra_8c_ae2548e81fa6b171a350820a9da8a2633}{atimes} (long n, double x\mbox{[}$\,$\mbox{]}, double r\mbox{[}$\,$\mbox{]}, int itrnsp, double sa\mbox{[}$\,$\mbox{]}, long ija\mbox{[}$\,$\mbox{]})
+\item 
+void \hyperlink{linearalgebra_8c_a6c32ea4c908c032022fab03c02fb3fb4}{asolve} (long n, double b\mbox{[}$\,$\mbox{]}, double x\mbox{[}$\,$\mbox{]}, double sa\mbox{[}$\,$\mbox{]})
+\item 
+void \hyperlink{linearalgebra_8c_a66de2421c858e9c48498fa0c43b124d6}{dsprsax} (double sa\mbox{[}$\,$\mbox{]}, long ija\mbox{[}$\,$\mbox{]}, double x\mbox{[}$\,$\mbox{]}, double b\mbox{[}$\,$\mbox{]}, long n)
+\item 
+void \hyperlink{linearalgebra_8c_adb582aecdca6320acbdd828e7e61597f}{dsprstx} (double sa\mbox{[}$\,$\mbox{]}, long ija\mbox{[}$\,$\mbox{]}, double x\mbox{[}$\,$\mbox{]}, double b\mbox{[}$\,$\mbox{]}, long n)
+\item 
+float \hyperlink{linearalgebra_8c_ae970de28522df76686417c4ad01c5067}{integration} (float($\ast$func)(float), float a, float b, int n)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{linearalgebra_8c_a6c32ea4c908c032022fab03c02fb3fb4}{\index{linearalgebra.\-c@{linearalgebra.\-c}!asolve@{asolve}}
+\index{asolve@{asolve}!linearalgebra.c@{linearalgebra.\-c}}
+\subsubsection[{asolve}]{\setlength{\rightskip}{0pt plus 5cm}void asolve (
+\begin{DoxyParamCaption}
+\item[{long}]{n, }
+\item[{double}]{b\mbox{[}$\,$\mbox{]}, }
+\item[{double}]{x\mbox{[}$\,$\mbox{]}, }
+\item[{double}]{sa\mbox{[}$\,$\mbox{]}}
+\end{DoxyParamCaption}
+)}}\label{linearalgebra_8c_a6c32ea4c908c032022fab03c02fb3fb4}
+Name\-: asolve
+
+Version\-:
+
+Synopsis\-: void asolve(long n, double b\mbox{[}$\,$\mbox{]}, double x\mbox{[}$\,$\mbox{]}, int itrnsp,double sa\mbox{[}$\,$\mbox{]}, long ija\mbox{[}$\,$\mbox{]})
+
+Description\-:
+
+References\-: D\-A N\-U\-M\-E\-R\-I\-C\-A\-L R\-E\-C\-I\-P\-E\-S I\-N C. (Second Edition -\/ Cambridge Univ. Press). pag 89 
+
+Definition at line 635 of file linearalgebra.\-c.
+
+\hypertarget{linearalgebra_8c_ae2548e81fa6b171a350820a9da8a2633}{\index{linearalgebra.\-c@{linearalgebra.\-c}!atimes@{atimes}}
+\index{atimes@{atimes}!linearalgebra.c@{linearalgebra.\-c}}
+\subsubsection[{atimes}]{\setlength{\rightskip}{0pt plus 5cm}void atimes (
+\begin{DoxyParamCaption}
+\item[{long}]{n, }
+\item[{double}]{x\mbox{[}$\,$\mbox{]}, }
+\item[{double}]{r\mbox{[}$\,$\mbox{]}, }
+\item[{int}]{itrnsp, }
+\item[{double}]{sa\mbox{[}$\,$\mbox{]}, }
+\item[{long}]{ija\mbox{[}$\,$\mbox{]}}
+\end{DoxyParamCaption}
+)}}\label{linearalgebra_8c_ae2548e81fa6b171a350820a9da8a2633}
+Name\-: atimes
+
+Version\-:
+
+Synopsis\-: void \hyperlink{linearalgebra_8h_ae2548e81fa6b171a350820a9da8a2633}{atimes(long n, double x\mbox{[}$\,$\mbox{]}, double r\mbox{[}$\,$\mbox{]}, int itrnsp,double sa\mbox{[}$\,$\mbox{]}, long ija\mbox{[}$\,$\mbox{]})};
+
+Description\-:
+
+References\-: D\-A N\-U\-M\-E\-R\-I\-C\-A\-L R\-E\-C\-I\-P\-E\-S I\-N C. (Second Edition -\/ Cambridge Univ. Press). pag 88
+
+Notes\-: 
+
+Definition at line 615 of file linearalgebra.\-c.
+
+
+
+References dsprsax(), and dsprstx().
+
+\hypertarget{linearalgebra_8c_a5b518ae0bd58b014c69df8e24ced52b7}{\index{linearalgebra.\-c@{linearalgebra.\-c}!convlv@{convlv}}
+\index{convlv@{convlv}!linearalgebra.c@{linearalgebra.\-c}}
+\subsubsection[{convlv}]{\setlength{\rightskip}{0pt plus 5cm}void convlv (
+\begin{DoxyParamCaption}
+\item[{{\bf F\-L\-O\-A\-T\-V\-E\-C\-T\-O\-R} $\ast$}]{data, }
+\item[{unsigned long}]{n, }
+\item[{{\bf F\-L\-O\-A\-T\-V\-E\-C\-T\-O\-R} $\ast$}]{respns, }
+\item[{unsigned long}]{m, }
+\item[{int}]{isign, }
+\item[{double}]{delta\-\_\-time, }
+\item[{{\bf F\-L\-O\-A\-T\-V\-E\-C\-T\-O\-R} $\ast$}]{ans}
+\end{DoxyParamCaption}
+)}}\label{linearalgebra_8c_a5b518ae0bd58b014c69df8e24ced52b7}
+Name\-: convlv
+
+Synopsis\-: void convlv(\hyperlink{struct_f_l_o_a_t_v_e_c_t_o_r}{F\-L\-O\-A\-T\-V\-E\-C\-T\-O\-R} $\ast$data,unsigned long n,\hyperlink{struct_f_l_o_a_t_v_e_c_t_o_r}{F\-L\-O\-A\-T\-V\-E\-C\-T\-O\-R} $\ast$respns,unsigned long m,int isign, double delta\-\_\-time,\hyperlink{struct_f_l_o_a_t_v_e_c_t_o_r}{F\-L\-O\-A\-T\-V\-E\-C\-T\-O\-R} $\ast$ans);
+
+Description\-: Convolves or deconvolves a real data set data \mbox{[}1..n\mbox{]} with a responce function respns\mbox{[}1..n\mbox{]} The responce function must be stored in wrap-\/around order in the first element of respns, where m is an odd integer $<$=n. Wrap-\/around order means that the first half of the array respns contains the impulse responce function at positive times, while the second half of the array contains the impulceresponce function at negative times, counting down from the highest element respns\mbox{[}m\mbox{]}. On input isign is +1 for convolution, -\/1 for deconvolution. The answer is returned in the first n componenets of ans. However, ans must be supplied in the calling program with dimension \mbox{[}1..2$\ast$n\mbox{]}, for consistency with twofft. n M\-U\-S\-T be an integer power of two.
+
+Authors \& Date\-: Angelo Zacchia, Marco Pegoretti, 1998
+
+Inputs\-: data is a complex array of lenght n
+
+F\-I\-L\-E\-: L\-I\-B\-R\-A\-R\-I\-E\-S/\-L\-I\-N\-E\-A\-R\-A\-L\-G\-E\-B\-R\-A/linearalgebra.\-c, L\-I\-B\-R\-A\-R\-I\-E\-S/\-L\-I\-N\-E\-A\-R\-A\-L\-G\-E\-B\-R\-A/linearalgebra.\-h
+
+Notes\-: It is a modified version of the routine in Numerical Recipes, second edition 
+
+Definition at line 6 of file linearalgebra.\-c.
+
+
+
+References F\-L\-O\-A\-T\-V\-E\-C\-T\-O\-R\-::co, free\-\_\-floatvector(), new\-\_\-floatvector(), realft(), S\-Q\-R, t\-\_\-error(), and twofft().
+
+\hypertarget{linearalgebra_8c_a66de2421c858e9c48498fa0c43b124d6}{\index{linearalgebra.\-c@{linearalgebra.\-c}!dsprsax@{dsprsax}}
+\index{dsprsax@{dsprsax}!linearalgebra.c@{linearalgebra.\-c}}
+\subsubsection[{dsprsax}]{\setlength{\rightskip}{0pt plus 5cm}void dsprsax (
+\begin{DoxyParamCaption}
+\item[{double}]{sa\mbox{[}$\,$\mbox{]}, }
+\item[{long}]{ija\mbox{[}$\,$\mbox{]}, }
+\item[{double}]{x\mbox{[}$\,$\mbox{]}, }
+\item[{double}]{b\mbox{[}$\,$\mbox{]}, }
+\item[{long}]{n}
+\end{DoxyParamCaption}
+)}}\label{linearalgebra_8c_a66de2421c858e9c48498fa0c43b124d6}
+Name\-: dsprsax
+
+Version\-:
+
+Synopsis\-: void \hyperlink{linearalgebra_8h_a66de2421c858e9c48498fa0c43b124d6}{dsprsax(double sa\mbox{[}$\,$\mbox{]}, long ija\mbox{[}$\,$\mbox{]}, double x\mbox{[}$\,$\mbox{]}, double b\mbox{[}$\,$\mbox{]}, long n)}
+
+Description\-: Questa funzione moltiplica una matrice, memoririzzata alla maniera di N.\-R., per un vettore x\mbox{[}\mbox{]}. Il risultato e' un vettore b\mbox{[}\mbox{]}.
+
+Inputs\-:
+
+Return\-:
+
+References\-: D\-A N\-U\-M\-E\-R\-I\-C\-A\-L R\-E\-C\-I\-P\-E\-S I\-N C. (Second Edition -\/ Cambridge Univ. Press). pag 89 
+
+Definition at line 654 of file linearalgebra.\-c.
+
+
+
+References t\-\_\-error().
+
+
+
+Referenced by atimes().
+
+\hypertarget{linearalgebra_8c_adb582aecdca6320acbdd828e7e61597f}{\index{linearalgebra.\-c@{linearalgebra.\-c}!dsprstx@{dsprstx}}
+\index{dsprstx@{dsprstx}!linearalgebra.c@{linearalgebra.\-c}}
+\subsubsection[{dsprstx}]{\setlength{\rightskip}{0pt plus 5cm}void dsprstx (
+\begin{DoxyParamCaption}
+\item[{double}]{sa\mbox{[}$\,$\mbox{]}, }
+\item[{long}]{ija\mbox{[}$\,$\mbox{]}, }
+\item[{double}]{x\mbox{[}$\,$\mbox{]}, }
+\item[{double}]{b\mbox{[}$\,$\mbox{]}, }
+\item[{long}]{n}
+\end{DoxyParamCaption}
+)}}\label{linearalgebra_8c_adb582aecdca6320acbdd828e7e61597f}
+Name\-: dsprstx
+
+Synopsis\-: void \hyperlink{linearalgebra_8h_a66de2421c858e9c48498fa0c43b124d6}{dsprsax(double sa\mbox{[}$\,$\mbox{]}, long ija\mbox{[}$\,$\mbox{]}, double x\mbox{[}$\,$\mbox{]}, double b\mbox{[}$\,$\mbox{]}, long n)}
+
+Description\-: Questa funzione moltiplica la trasposta di una matrice, memoririzzata alla maniera di N.\-R., per un vettore x\mbox{[}\mbox{]}. Il risultato e' un vettore b\mbox{[}\mbox{]}.
+
+Inputs\-:
+
+Return\-:
+
+Needs\-:
+
+Related Routines\-:
+
+See Also\-:
+
+References\-: D\-A N\-U\-M\-E\-R\-I\-C\-A\-L R\-E\-C\-I\-P\-E\-S I\-N C. (Second Edition -\/ Cambridge Univ. Press). pag 80 
+
+Definition at line 677 of file linearalgebra.\-c.
+
+
+
+References t\-\_\-error().
+
+
+
+Referenced by atimes().
+
+\hypertarget{linearalgebra_8c_a98634b316c73df4f05cfb3b654a19ec9}{\index{linearalgebra.\-c@{linearalgebra.\-c}!four1@{four1}}
+\index{four1@{four1}!linearalgebra.c@{linearalgebra.\-c}}
+\subsubsection[{four1}]{\setlength{\rightskip}{0pt plus 5cm}void four1 (
+\begin{DoxyParamCaption}
+\item[{{\bf F\-L\-O\-A\-T\-V\-E\-C\-T\-O\-R} $\ast$}]{data, }
+\item[{unsigned long}]{nn, }
+\item[{int}]{isign}
+\end{DoxyParamCaption}
+)}}\label{linearalgebra_8c_a98634b316c73df4f05cfb3b654a19ec9}
+Name\-: four1
+
+Synopsis\-: void \hyperlink{linearalgebra_8h_a98634b316c73df4f05cfb3b654a19ec9}{four1(\-F\-L\-O\-A\-T\-V\-E\-C\-T\-O\-R $\ast$data,unsigned long nn,int isign)}
+
+Description\-: Replaces data\mbox{[}1..2$\ast$nn\mbox{]} by its discrete Fourier transform,if isign is input as 1; or replaces data\mbox{[}1..2$\ast$nn\mbox{]} by nn times its inverse discrete Fourier transform, if isign is input as -\/1, data is a complex array of lenght nn or, equivalently, a real array of lenght 2$\ast$nn\-: nn M\-U\-S\-T be an integer power of 2(this is not checked for).
+
+Authors \& Date\-: Angelo Zacchia, Marco Pegoretti, 1998
+
+Inputs\-: data is a complex array of lenght n
+
+F\-I\-L\-E\-: L\-I\-B\-R\-A\-R\-I\-E\-S/\-L\-I\-N\-E\-A\-R\-A\-L\-G\-E\-B\-R\-A/linearalgebra.\-c, L\-I\-B\-R\-A\-R\-I\-E\-S/\-L\-I\-N\-E\-A\-R\-A\-L\-G\-E\-B\-R\-A/linearalgebra.\-h
+
+Notes\-: It is a modified version of the routine in Numerical Recipes, second edition 
+
+Definition at line 48 of file linearalgebra.\-c.
+
+
+
+References F\-L\-O\-A\-T\-V\-E\-C\-T\-O\-R\-::co, and S\-W\-A\-P.
+
+
+
+Referenced by realft(), and twofft().
+
+\hypertarget{linearalgebra_8c_ae970de28522df76686417c4ad01c5067}{\index{linearalgebra.\-c@{linearalgebra.\-c}!integration@{integration}}
+\index{integration@{integration}!linearalgebra.c@{linearalgebra.\-c}}
+\subsubsection[{integration}]{\setlength{\rightskip}{0pt plus 5cm}float integration (
+\begin{DoxyParamCaption}
+\item[{float($\ast$)(float)}]{fun, }
+\item[{float}]{, }
+\item[{float}]{, }
+\item[{int}]{}
+\end{DoxyParamCaption}
+)}}\label{linearalgebra_8c_ae970de28522df76686417c4ad01c5067}
+Name\-: integration
+
+Synopsis\-: float integration(float ($\ast$func)(float), float a, float b, int n);
+
+Description\-: Questa funzione calcola l'integrale con il metodo dei trapezi
+
+Inputs\-:
+
+Return\-:
+
+Needs\-:
+
+Related Routines\-:
+
+See Also\-:
+
+References\-: D\-A N\-U\-M\-E\-R\-I\-C\-A\-L R\-E\-C\-I\-P\-E\-S I\-N C. (Second Edition -\/ Cambridge Univ. Press). pag 137 
+
+Definition at line 697 of file linearalgebra.\-c.
+
+\hypertarget{linearalgebra_8c_a5d1b9e3c0672fb2a4f5a16f7c0790713}{\index{linearalgebra.\-c@{linearalgebra.\-c}!lubksb@{lubksb}}
+\index{lubksb@{lubksb}!linearalgebra.c@{linearalgebra.\-c}}
+\subsubsection[{lubksb}]{\setlength{\rightskip}{0pt plus 5cm}void lubksb (
+\begin{DoxyParamCaption}
+\item[{{\bf D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X} $\ast$}]{var, }
+\item[{{\bf S\-H\-O\-R\-T\-V\-E\-C\-T\-O\-R} $\ast$}]{indx, }
+\item[{{\bf D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} $\ast$}]{gam}
+\end{DoxyParamCaption}
+)}}\label{linearalgebra_8c_a5d1b9e3c0672fb2a4f5a16f7c0790713}
+Name\-: lubksb
+
+Synopsis\-: int \hyperlink{linearalgebra_8h_a5d1b9e3c0672fb2a4f5a16f7c0790713}{lubksb(\-D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X $\ast$var, S\-H\-O\-R\-T\-V\-E\-C\-T\-O\-R $\ast$indx,\-D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R $\ast$gam)}
+
+Description\-: Convolves or deconvolves a real data set data \mbox{[}1..n\mbox{]} with a responce function respns\mbox{[}1..n\mbox{]} The responce function must be stored in wrap-\/around order in the first element of respns, where m is an odd integer $<$=n. Wrap-\/around order means that the first half of the array respns contains the impulse responce function at positive times, while the second half of the array contains the impulceresponce function at negative times, counting down from the highest element respns\mbox{[}m\mbox{]}. On input isign is +1 for convolution, -\/1 for deconvolution. The answer is returned in the first n componenets of ans. However, ans must be supplied in the calling program with dimension \mbox{[}1..2$\ast$n\mbox{]}, for consistency with twofft. n M\-U\-S\-T be an integer power of two.
+
+Authors \& Date\-: Angelo Zacchia, Marco Pegoretti, 1998
+
+Inputs\-: data is a complex array of lenght n
+
+F\-I\-L\-E\-: L\-I\-B\-R\-A\-R\-I\-E\-S/\-L\-I\-N\-E\-A\-R\-A\-L\-G\-E\-B\-R\-A/linearalgebra.\-c, L\-I\-B\-R\-A\-R\-I\-E\-S/\-L\-I\-N\-E\-A\-R\-A\-L\-G\-E\-B\-R\-A/linearalgebra.\-h
+
+Notes\-: It is a modified version of the routine in Numerical Recipes, second edition
+
+Examples\-:
+
+References\-: Pegoretti, Marco, Geomodel, implementazione di un modello scalabile di deflusso e bilancio idrologico di bacino, 1997 
+
+Definition at line 169 of file linearalgebra.\-c.
+
+
+
+References S\-H\-O\-R\-T\-V\-E\-C\-T\-O\-R\-::co, D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R\-::co, D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X\-::co, and D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X\-::nrh.
+
+
+
+Referenced by ordi\-\_\-kriging2().
+
+\hypertarget{linearalgebra_8c_a43e14cdfe2492e11eb0d06fa2acb85d7}{\index{linearalgebra.\-c@{linearalgebra.\-c}!ludcmp@{ludcmp}}
+\index{ludcmp@{ludcmp}!linearalgebra.c@{linearalgebra.\-c}}
+\subsubsection[{ludcmp}]{\setlength{\rightskip}{0pt plus 5cm}void ludcmp (
+\begin{DoxyParamCaption}
+\item[{{\bf S\-H\-O\-R\-T\-V\-E\-C\-T\-O\-R} $\ast$}]{indx, }
+\item[{{\bf D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X} $\ast$}]{var}
+\end{DoxyParamCaption}
+)}}\label{linearalgebra_8c_a43e14cdfe2492e11eb0d06fa2acb85d7}
+Name\-: ludcmp
+
+Synopsis\-: int \hyperlink{linearalgebra_8h_a43e14cdfe2492e11eb0d06fa2acb85d7}{ludcmp(\-S\-H\-O\-R\-T\-V\-E\-C\-T\-O\-R $\ast$indx, D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X $\ast$var)}
+
+Description\-: Convolves or deconvolves a real data set data \mbox{[}1..n\mbox{]} with a responce function respns\mbox{[}1..n\mbox{]} The responce function must be stored in wrap-\/around order in the first element of respns, where m is an odd integer $<$=n. Wrap-\/around order means that the first half of the array respns contains the impulse responce function at positive times, while the second half of the array contains the impulceresponce function at negative times, counting down from the highest element respns\mbox{[}m\mbox{]}. On input isign is +1 for convolution, -\/1 for deconvolution. The answer is returned in the first n componenets of ans. However, ans must be supplied in the calling program with dimension \mbox{[}1..2$\ast$n\mbox{]}, for consistency with twofft. n M\-U\-S\-T be an integer power of two.
+
+Authors \& Date\-: Angelo Zacchia, Marco Pegoretti, 1998
+
+Inputs\-:
+
+F\-I\-L\-E\-: L\-I\-B\-R\-A\-R\-I\-E\-S/\-L\-I\-N\-E\-A\-R\-A\-L\-G\-E\-B\-R\-A/linearalgebra.\-c, L\-I\-B\-R\-A\-R\-I\-E\-S/\-L\-I\-N\-E\-A\-R\-A\-L\-G\-E\-B\-R\-A/linearalgebra.\-h
+
+Notes\-: It is a modified version of the routine in Numerical Recipes, second edition
+
+Examples\-:
+
+References\-: Pegoretti, Marco, Geomodel, implementazione di un modello scalabile di deflusso e bilancio idrologico di bacino, 1997 
+
+Definition at line 97 of file linearalgebra.\-c.
+
+
+
+References S\-H\-O\-R\-T\-V\-E\-C\-T\-O\-R\-::co, D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R\-::co, D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X\-::co, free\-\_\-doublevector(), new\-\_\-doublevector(), D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X\-::nrh, and T\-I\-N\-Y.
+
+
+
+Referenced by ordi\-\_\-kriging2().
+
+\hypertarget{linearalgebra_8c_a3b50d2b30fe5d3d151c8a8d6fd1f0795}{\index{linearalgebra.\-c@{linearalgebra.\-c}!realft@{realft}}
+\index{realft@{realft}!linearalgebra.c@{linearalgebra.\-c}}
+\subsubsection[{realft}]{\setlength{\rightskip}{0pt plus 5cm}void realft (
+\begin{DoxyParamCaption}
+\item[{{\bf F\-L\-O\-A\-T\-V\-E\-C\-T\-O\-R} $\ast$}]{data, }
+\item[{unsigned long}]{n, }
+\item[{int}]{isign}
+\end{DoxyParamCaption}
+)}}\label{linearalgebra_8c_a3b50d2b30fe5d3d151c8a8d6fd1f0795}
+Name\-: realft
+
+Synopsis\-: void \hyperlink{linearalgebra_8h_a3b50d2b30fe5d3d151c8a8d6fd1f0795}{realft(\-F\-L\-O\-A\-T\-V\-E\-C\-T\-O\-R $\ast$data,unsigned long n,int isign)};
+
+Description\-: Calculates the Fourier transform of a set of n real-\/value data points. Replaces this data (which is stored in array data\mbox{[}1..n\mbox{]}) by the positive frequency half of its complex Fourier transform. The real-\/valued first and last components of the complex transform are returned as elements data\mbox{[}1\mbox{]} data\mbox{[}2\mbox{]}, respectively, n must be a power of 2. This routine also calculates the inverse transform of a complex data array if it is the transform of real data (result in this case must be multiplied by 2/n).
+
+Authors \& Date\-: modified from N\-R by Marco Pegoretti and Angelo Zacchia, 1998
+
+F\-I\-L\-E\-: L\-I\-B\-R\-A\-R\-I\-E\-S/\-L\-I\-N\-E\-A\-R\-A\-L\-G\-E\-B\-R\-A/linearalgebra.\-c, L\-I\-B\-R\-A\-R\-I\-E\-S/\-L\-I\-N\-E\-A\-R\-A\-L\-G\-E\-B\-R\-A/linearalgebra.\-h 
+
+Definition at line 202 of file linearalgebra.\-c.
+
+
+
+References F\-L\-O\-A\-T\-V\-E\-C\-T\-O\-R\-::co, and four1().
+
+
+
+Referenced by convlv().
+
+\hypertarget{linearalgebra_8c_a8eaa4c7c5c1fa8b816f01586de338b30}{\index{linearalgebra.\-c@{linearalgebra.\-c}!snrm@{snrm}}
+\index{snrm@{snrm}!linearalgebra.c@{linearalgebra.\-c}}
+\subsubsection[{snrm}]{\setlength{\rightskip}{0pt plus 5cm}double snrm (
+\begin{DoxyParamCaption}
+\item[{long}]{n, }
+\item[{double}]{sx\mbox{[}$\,$\mbox{]}, }
+\item[{int}]{itol}
+\end{DoxyParamCaption}
+)}}\label{linearalgebra_8c_a8eaa4c7c5c1fa8b816f01586de338b30}
+Name\-: snrm
+
+Version\-:
+
+Synopsis\-: double \hyperlink{linearalgebra_8h_a8eaa4c7c5c1fa8b816f01586de338b30}{snrm(long n, double sx\mbox{[}$\,$\mbox{]}, int itol)};
+
+Description\-:
+
+Questa funzione calcola la norma di un vettore con la modalita' specificata dal parametro itol
+
+Authors \& Date\-: Angelo Zacchia, June 1998
+
+F\-I\-L\-E\-: L\-I\-B\-R\-A\-R\-I\-E\-S/\-L\-I\-N\-E\-A\-R\-A\-L\-G\-E\-B\-R\-A/linearalgebra.\-c, L\-I\-B\-R\-A\-R\-I\-E\-S/\-L\-I\-N\-E\-A\-R\-A\-L\-G\-E\-B\-R\-A/linearalgebra.\-h
+
+References\-: D\-A N\-U\-M\-E\-R\-I\-C\-A\-L R\-E\-C\-I\-P\-E\-S I\-N C. (Second Edition -\/ Cambridge Univ. Press). pag 88
+
+Bugs \& limitations\-: 
+
+Definition at line 579 of file linearalgebra.\-c.
+
+\hypertarget{linearalgebra_8c_a78e8ea6fce79749440772838e881de76}{\index{linearalgebra.\-c@{linearalgebra.\-c}!sprsin@{sprsin}}
+\index{sprsin@{sprsin}!linearalgebra.c@{linearalgebra.\-c}}
+\subsubsection[{sprsin}]{\setlength{\rightskip}{0pt plus 5cm}void sprsin (
+\begin{DoxyParamCaption}
+\item[{double $\ast$$\ast$}]{a, }
+\item[{int}]{n, }
+\item[{float}]{thresh, }
+\item[{long}]{nmax, }
+\item[{double}]{sa\mbox{[}$\,$\mbox{]}, }
+\item[{long}]{ija\mbox{[}$\,$\mbox{]}}
+\end{DoxyParamCaption}
+)}}\label{linearalgebra_8c_a78e8ea6fce79749440772838e881de76}
+
+
+Definition at line 414 of file linearalgebra.\-c.
+
+
+
+References t\-\_\-error().
+
+\hypertarget{linearalgebra_8c_a2e7ed0dbbc97f7e49f2eeca775bc8c6a}{\index{linearalgebra.\-c@{linearalgebra.\-c}!twofft@{twofft}}
+\index{twofft@{twofft}!linearalgebra.c@{linearalgebra.\-c}}
+\subsubsection[{twofft}]{\setlength{\rightskip}{0pt plus 5cm}void twofft (
+\begin{DoxyParamCaption}
+\item[{{\bf F\-L\-O\-A\-T\-V\-E\-C\-T\-O\-R} $\ast$}]{data1, }
+\item[{{\bf F\-L\-O\-A\-T\-V\-E\-C\-T\-O\-R} $\ast$}]{data2, }
+\item[{{\bf F\-L\-O\-A\-T\-V\-E\-C\-T\-O\-R} $\ast$}]{fft1, }
+\item[{{\bf F\-L\-O\-A\-T\-V\-E\-C\-T\-O\-R} $\ast$}]{fft2, }
+\item[{unsigned long}]{n}
+\end{DoxyParamCaption}
+)}}\label{linearalgebra_8c_a2e7ed0dbbc97f7e49f2eeca775bc8c6a}
+Name\-: twofft
+
+Synopsis\-: voidtwofft(\-F\-L\-O\-A\-T\-V\-E\-C\-T\-O\-R $\ast$data1,\-F\-L\-O\-A\-T\-V\-E\-C\-T\-O\-R $\ast$data2,\-F\-L\-O\-A\-T\-V\-E\-C\-T\-O\-R $\ast$fft1,\-F\-L\-O\-A\-T\-V\-E\-C\-T\-O\-R $\ast$fft2,unsigned long n);
+
+Description\-: Given two real input array data1\mbox{[}1..2n\mbox{]} and data2\mbox{[}1..2n\mbox{]} this routine calls four1 and return two complex output arrays, fft1\mbox{[}1..2n\mbox{]} and fft2\mbox{[}1..2n\mbox{]}, each of complex lenght n, which contain the discrete Fourier transforms of the respective data arrays. n M\-U\-S\-T be an integer power of 2
+
+Authors \& Date\-: For the Numerical Recipes,1998.
+
+F\-I\-L\-E\-: L\-I\-B\-R\-A\-R\-I\-E\-S/\-L\-I\-N\-E\-A\-R\-A\-L\-G\-E\-B\-R\-A/linearalgebra.\-c, L\-I\-B\-R\-A\-R\-I\-E\-S/\-L\-I\-N\-E\-A\-R\-A\-L\-G\-E\-B\-R\-A/linearalgebra.\-h 
+
+Definition at line 247 of file linearalgebra.\-c.
+
+
+
+References F\-L\-O\-A\-T\-V\-E\-C\-T\-O\-R\-::co, and four1().
+
+
+
+Referenced by convlv().
+
+\hypertarget{linearalgebra_8c_a70eca5b330ad46e707cff64481aa890c}{\index{linearalgebra.\-c@{linearalgebra.\-c}!vett\-\_\-mat@{vett\-\_\-mat}}
+\index{vett\-\_\-mat@{vett\-\_\-mat}!linearalgebra.c@{linearalgebra.\-c}}
+\subsubsection[{vett\-\_\-mat}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X}$\ast$ vett\-\_\-mat (
+\begin{DoxyParamCaption}
+\item[{double $\ast$}]{d, }
+\item[{double $\ast$}]{ds, }
+\item[{double $\ast$}]{di, }
+\item[{int}]{n}
+\end{DoxyParamCaption}
+)}}\label{linearalgebra_8c_a70eca5b330ad46e707cff64481aa890c}
+Name\-: linbcg
+
+Description\-: Questa funzione consente di risolvere di risolvere un sistema lineare del tipo A x = b con il metodo iterativo del gradiente coniugato.
+
+Inputs\-:
+\begin{DoxyItemize}
+\item n\-: dimensione del sistema;
+\item sa\mbox{[}\mbox{]} e ija\mbox{[}\mbox{]}\-: vettori generati dalla funzione sprssin() che memorizzano la matrice;
+\item b\mbox{[}\mbox{]}\-: elementi del vettore dei termini noti;
+\item x\mbox{[}\mbox{]}\-: elementi del vettore soluzione (in ingresso questo vettore deve contenere una soluzione di primo tentativo);
+\item itol, tol, itmax\-: parametri gli definiti sopra.
+\end{DoxyItemize}
+
+Oltre alla soluzione la funzione calcola anche il numero di iterazione effetuate ( iter ) e l'errore commesso ( err ).
+
+Authors \& Date\-: Angelo Zacchia, June 1998
+
+F\-I\-L\-E\-: L\-I\-B\-R\-A\-R\-I\-E\-S/\-L\-I\-N\-E\-A\-R\-A\-L\-G\-E\-B\-R\-A/linearalgebra.\-c, L\-I\-B\-R\-A\-R\-I\-E\-S/\-L\-I\-N\-E\-A\-R\-A\-L\-G\-E\-B\-R\-A/linearalgebra.\-h \begin{DoxyVerb}References:  NUMERICAL RECIPES IN C. (Second Edition - Cambridge Univ. Press). pag 86-88
+
+ Bugs & limitations:\end{DoxyVerb}
+
+
+Name\-: vett\-\_\-mat
+
+Version\-:
+
+Synopsis\-:
+
+Description\-:
+
+Questa funzione converte tre vettori in una matrice quadrata tridiagonale.
+
+Inputs\-: Bisogna passare alla funzione i puntatori agli elementi dei vettori
+\begin{DoxyItemize}
+\item d elementi delle diagonale principale;
+\item ds elementi della diagonale superiore;
+\item di elementi della diagonale inferiore; inoltre bisogna passare n, che e' la dimensione della matrice che si vuole generare.
+\end{DoxyItemize}
+
+Return\-: La funzione restituisce il puntatore alla matrice.
+
+Authors \& Date\-: Angelo Zacchia, June 1998
+
+F\-I\-L\-E\-: L\-I\-B\-R\-A\-R\-I\-E\-S/\-L\-I\-N\-E\-A\-R\-A\-L\-G\-E\-B\-R\-A/linearalgebra.\-c, L\-I\-B\-R\-A\-R\-I\-E\-S/\-L\-I\-N\-E\-A\-R\-A\-L\-G\-E\-B\-R\-A/linearalgebra.\-h 
+
+Definition at line 369 of file linearalgebra.\-c.
+
+
+
+References D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X\-::co, and new\-\_\-doublematrix().
+

@@ -1,0 +1,475 @@
+\hypertarget{geometry2_8c}{\section{B\-G\-E\-O\-M\-E\-T\-R\-Y/geometry2.c File Reference}
+\label{geometry2_8c}\index{B\-G\-E\-O\-M\-E\-T\-R\-Y/geometry2.\-c@{B\-G\-E\-O\-M\-E\-T\-R\-Y/geometry2.\-c}}
+}
+{\ttfamily \#include \char`\"{}turtle.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}rw\-\_\-maps.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}geometry.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}geometry\-\_\-utilities.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}geometry\-\_\-attribute.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}geometry\-\_\-freememory.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}geometry\-\_\-io.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}g\-\_\-raster2plvector.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}sorting.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}linear\-\_\-span.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}bigcells2.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}geometry2.\-h\char`\"{}}\\*
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{struct_p_o_i_n_t}{P\-O\-I\-N\-T} $\ast$ \hyperlink{geometry2_8c_af4db4c3d7085c35174ac3a173a732981}{new\-\_\-point\-\_\-from\-\_\-point} (\hyperlink{struct_p_o_i_n_t}{P\-O\-I\-N\-T} $\ast$point)
+\item 
+\hyperlink{struct_l_i_n_e}{L\-I\-N\-E} $\ast$ \hyperlink{geometry2_8c_a4f25d1d205b99f7b9e2eb8f76b4bc857}{new\-\_\-line\-\_\-from\-\_\-line} (\hyperlink{struct_l_i_n_e}{L\-I\-N\-E} $\ast$line)
+\item 
+\hyperlink{struct_l_i_n_e_v_e_c_t_o_r}{L\-I\-N\-E\-V\-E\-C\-T\-O\-R} $\ast$ \hyperlink{geometry2_8c_ad067fc414ed46993c17ed11d24999473}{new\-\_\-linevector\-\_\-from\-\_\-linevector} (\hyperlink{struct_l_i_n_e_v_e_c_t_o_r}{L\-I\-N\-E\-V\-E\-C\-T\-O\-R} $\ast$lines)
+\item 
+\hyperlink{struct_p_o_l_y_g_o_n}{P\-O\-L\-Y\-G\-O\-N} $\ast$ \hyperlink{geometry2_8c_aa1f32fa0d187f9db65c60089ef3b20c7}{new\-\_\-polygon\-\_\-from\-\_\-polygon} (\hyperlink{struct_p_o_l_y_g_o_n}{P\-O\-L\-Y\-G\-O\-N} $\ast$polygon)
+\item 
+\hyperlink{struct_p_o_l_y_g_o_n_v_e_c_t_o_r}{P\-O\-L\-Y\-G\-O\-N\-V\-E\-C\-T\-O\-R} $\ast$ \hyperlink{geometry2_8c_a164672c76610691cddb7a74271b0f8e9}{new\-\_\-polygonvector\-\_\-from\-\_\-polygonvector} (\hyperlink{struct_p_o_l_y_g_o_n_v_e_c_t_o_r}{P\-O\-L\-Y\-G\-O\-N\-V\-E\-C\-T\-O\-R} $\ast$polygons)
+\item 
+\hyperlink{structpolygon__connection__attributes}{polygon\-\_\-connection\-\_\-attributes} $\ast$ \hyperlink{geometry2_8c_a981b34f1ec4d0a64401471aca1893b76}{new\-\_\-connection\-\_\-from\-\_\-connection} (\hyperlink{structpolygon__connection__attributes}{polygon\-\_\-connection\-\_\-attributes} $\ast$pc)
+\item 
+\hyperlink{structpolygon__connection__attribute__array}{polygon\-\_\-connection\-\_\-attribute\-\_\-array} $\ast$ \hyperlink{geometry2_8c_a8ed76efaeb72db9227c44d3c0e046da1}{new\-\_\-connection\-\_\-array\-\_\-from\-\_\-connection\-\_\-array} (\hyperlink{structpolygon__connection__attribute__array}{polygon\-\_\-connection\-\_\-attribute\-\_\-array} $\ast$pca)
+\item 
+\hyperlink{struct_g_r_i_d}{G\-R\-I\-D} $\ast$ \hyperlink{geometry2_8c_a97cfcb1f135ba44e5a9908710c0987ce}{new\-\_\-grid\-\_\-from\-\_\-grid} (\hyperlink{struct_g_r_i_d}{G\-R\-I\-D} $\ast$grid)
+\item 
+\hyperlink{struct_l_o_n_g_b_i_n}{L\-O\-N\-G\-B\-I\-N} $\ast$ \hyperlink{geometry2_8c_a9108b2864a1e7417f176faa2f2a7f0dc}{new\-\_\-longbin\-\_\-from\-\_\-doublematrix\-\_\-array} (\hyperlink{struct_l_o_n_g_m_a_t_r_i_x___v_e_c_t_o_r}{L\-O\-N\-G\-M\-A\-T\-R\-I\-X\-\_\-\-V\-E\-C\-T\-O\-R} $\ast$lmv)
+\item 
+\hyperlink{struct_l_o_n_g_b_i_n}{L\-O\-N\-G\-B\-I\-N} $\ast$ \hyperlink{geometry2_8c_ac169dd8a1d751bce2b929793be8fa75e}{new\-\_\-longbin\-\_\-from\-\_\-longbin} (\hyperlink{struct_l_o_n_g_b_i_n}{L\-O\-N\-G\-B\-I\-N} $\ast$lb)
+\item 
+\hyperlink{struct_d_o_u_b_l_e___g_r_i_d}{D\-O\-U\-B\-L\-E\-\_\-\-G\-R\-I\-D} $\ast$ \hyperlink{geometry2_8c_a42ac13a76f3e26b3e81cea47ae1ce04a}{new\-\_\-double\-\_\-grid\-\_\-from\-\_\-doublesquare\-\_\-grid} (\hyperlink{struct_d_o_u_b_l_e_s_q_u_a_r_e___g_r_i_d}{D\-O\-U\-B\-L\-E\-S\-Q\-U\-A\-R\-E\-\_\-\-G\-R\-I\-D} $\ast$\hyperlink{main_8c_a9b5f80541820877b6d4a8841650da32a}{dsq})
+\item 
+void \hyperlink{geometry2_8c_ab6004ae93ff29d847f635329afdadbc2}{free\-\_\-\-D\-O\-U\-B\-L\-E\-\_\-\-G\-R\-I\-D} (\hyperlink{struct_d_o_u_b_l_e___g_r_i_d}{D\-O\-U\-B\-L\-E\-\_\-\-G\-R\-I\-D} $\ast$\hyperlink{main_8c_ab58c424a59f28ac6b17e7b7f5aae6152}{dgrid})
+\item 
+\hyperlink{struct_l_o_n_g_b_i_n}{L\-O\-N\-G\-B\-I\-N} $\ast$ \hyperlink{geometry2_8c_a25fc662155274cc8c4b98bfb49441e98}{new\-\_\-longbin\-\_\-from\-\_\-longbin\-\_\-cleaning\-\_\-novalues} (\hyperlink{struct_l_o_n_g_b_i_n}{L\-O\-N\-G\-B\-I\-N} $\ast$lb)
+\item 
+long \hyperlink{geometry2_8c_a6034aaebb679626a51942c1b1c1222f1}{bubble\-\_\-sort\-\_\-eleveation} (long $\ast$cell\-\_\-index, long nh, \hyperlink{struct_d_o_u_b_l_e_v_e_c_t_o_r}{D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} $\ast$elevation)
+\item 
+int \hyperlink{geometry2_8c_af9d63ca619462bf8a6893012d89865ee}{bubble\-\_\-sort\-\_\-elevation\-\_\-in\-\_\-longbin} (\hyperlink{struct_l_o_n_g_b_i_n}{L\-O\-N\-G\-B\-I\-N} $\ast$lb, \hyperlink{struct_d_o_u_b_l_e_v_e_c_t_o_r}{D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} $\ast$elevation)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{geometry2_8c_af9d63ca619462bf8a6893012d89865ee}{\index{geometry2.\-c@{geometry2.\-c}!bubble\-\_\-sort\-\_\-elevation\-\_\-in\-\_\-longbin@{bubble\-\_\-sort\-\_\-elevation\-\_\-in\-\_\-longbin}}
+\index{bubble\-\_\-sort\-\_\-elevation\-\_\-in\-\_\-longbin@{bubble\-\_\-sort\-\_\-elevation\-\_\-in\-\_\-longbin}!geometry2.c@{geometry2.\-c}}
+\subsubsection[{bubble\-\_\-sort\-\_\-elevation\-\_\-in\-\_\-longbin}]{\setlength{\rightskip}{0pt plus 5cm}int bubble\-\_\-sort\-\_\-elevation\-\_\-in\-\_\-longbin (
+\begin{DoxyParamCaption}
+\item[{{\bf L\-O\-N\-G\-B\-I\-N} $\ast$}]{lb, }
+\item[{{\bf D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} $\ast$}]{elevation}
+\end{DoxyParamCaption}
+)}}\label{geometry2_8c_af9d63ca619462bf8a6893012d89865ee}
+\begin{DoxyAuthor}{Author}
+Emanuele Cordano 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+April 2010
+\end{DoxyDate}
+
+
+Definition at line 520 of file geometry2.\-c.
+
+
+
+References bubble\-\_\-sort\-\_\-eleveation(), L\-O\-N\-G\-B\-I\-N\-::index, N\-L, and L\-O\-N\-G\-V\-E\-C\-T\-O\-R\-::nl.
+
+
+
+Referenced by main().
+
+\hypertarget{geometry2_8c_a6034aaebb679626a51942c1b1c1222f1}{\index{geometry2.\-c@{geometry2.\-c}!bubble\-\_\-sort\-\_\-eleveation@{bubble\-\_\-sort\-\_\-eleveation}}
+\index{bubble\-\_\-sort\-\_\-eleveation@{bubble\-\_\-sort\-\_\-eleveation}!geometry2.c@{geometry2.\-c}}
+\subsubsection[{bubble\-\_\-sort\-\_\-eleveation}]{\setlength{\rightskip}{0pt plus 5cm}long bubble\-\_\-sort\-\_\-eleveation (
+\begin{DoxyParamCaption}
+\item[{long $\ast$}]{cell\-\_\-index, }
+\item[{long}]{nh, }
+\item[{{\bf D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} $\ast$}]{elevation}
+\end{DoxyParamCaption}
+)}}\label{geometry2_8c_a6034aaebb679626a51942c1b1c1222f1}
+\begin{DoxyAuthor}{Author}
+Emanuele Cordano
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+April 2001
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em -\/(long} & $\ast$) cell\-\_\-index \-: index of the cells \\
+\hline
+{\em -\/(long} & ) number of the cells in the rows \\
+\hline
+{\em (\-D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} & $\ast$) -\/ map of elevation\\
+\hline
+\end{DoxyParams}
+sort the cell\-\_\-indexes according with the increase of elevation.
+
+swap cell\-\_\-index\mbox{[}i\mbox{]} and cell\-\_\-index\mbox{[}i+1\mbox{]}
+
+swap cell\-\_\-index\mbox{[}i\mbox{]} and cell\-\_\-index\mbox{[}i+1\mbox{]} 
+
+Definition at line 451 of file geometry2.\-c.
+
+
+
+References D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R\-::nh, and D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R\-::nl.
+
+
+
+Referenced by bubble\-\_\-sort\-\_\-elevation\-\_\-in\-\_\-longbin().
+
+\hypertarget{geometry2_8c_ab6004ae93ff29d847f635329afdadbc2}{\index{geometry2.\-c@{geometry2.\-c}!free\-\_\-\-D\-O\-U\-B\-L\-E\-\_\-\-G\-R\-I\-D@{free\-\_\-\-D\-O\-U\-B\-L\-E\-\_\-\-G\-R\-I\-D}}
+\index{free\-\_\-\-D\-O\-U\-B\-L\-E\-\_\-\-G\-R\-I\-D@{free\-\_\-\-D\-O\-U\-B\-L\-E\-\_\-\-G\-R\-I\-D}!geometry2.c@{geometry2.\-c}}
+\subsubsection[{free\-\_\-\-D\-O\-U\-B\-L\-E\-\_\-\-G\-R\-I\-D}]{\setlength{\rightskip}{0pt plus 5cm}void free\-\_\-\-D\-O\-U\-B\-L\-E\-\_\-\-G\-R\-I\-D (
+\begin{DoxyParamCaption}
+\item[{{\bf D\-O\-U\-B\-L\-E\-\_\-\-G\-R\-I\-D} $\ast$}]{dgrid}
+\end{DoxyParamCaption}
+)}}\label{geometry2_8c_ab6004ae93ff29d847f635329afdadbc2}
+
+\begin{DoxyParams}{Parameters}
+{\em \textbackslash{}author} & Emanuele Cordano \\
+\hline
+\end{DoxyParams}
+\begin{DoxyDate}{Date}
+April 2010
+\end{DoxyDate}
+
+
+Definition at line 350 of file geometry2.\-c.
+
+
+
+References D\-O\-U\-B\-L\-E\-\_\-\-G\-R\-I\-D\-::coarse, D\-O\-U\-B\-L\-E\-\_\-\-G\-R\-I\-D\-::fine, free\-\_\-grid(), free\-\_\-longbin(), D\-O\-U\-B\-L\-E\-\_\-\-G\-R\-I\-D\-::small\-\_\-line\-\_\-content, and D\-O\-U\-B\-L\-E\-\_\-\-G\-R\-I\-D\-::small\-\_\-polygon\-\_\-content.
+
+
+
+Referenced by main().
+
+\hypertarget{geometry2_8c_a8ed76efaeb72db9227c44d3c0e046da1}{\index{geometry2.\-c@{geometry2.\-c}!new\-\_\-connection\-\_\-array\-\_\-from\-\_\-connection\-\_\-array@{new\-\_\-connection\-\_\-array\-\_\-from\-\_\-connection\-\_\-array}}
+\index{new\-\_\-connection\-\_\-array\-\_\-from\-\_\-connection\-\_\-array@{new\-\_\-connection\-\_\-array\-\_\-from\-\_\-connection\-\_\-array}!geometry2.c@{geometry2.\-c}}
+\subsubsection[{new\-\_\-connection\-\_\-array\-\_\-from\-\_\-connection\-\_\-array}]{\setlength{\rightskip}{0pt plus 5cm}{\bf polygon\-\_\-connection\-\_\-attribute\-\_\-array}$\ast$ new\-\_\-connection\-\_\-array\-\_\-from\-\_\-connection\-\_\-array (
+\begin{DoxyParamCaption}
+\item[{{\bf polygon\-\_\-connection\-\_\-attribute\-\_\-array} $\ast$}]{pca}
+\end{DoxyParamCaption}
+)}}\label{geometry2_8c_a8ed76efaeb72db9227c44d3c0e046da1}
+
+\begin{DoxyParams}{Parameters}
+{\em (polygon\-\_\-connection\-\_\-attribute\-\_\-array} & $\ast$) -\/ \hyperlink{structpolygon__connection__attribute__array}{polygon\-\_\-connection\-\_\-attribute\-\_\-array}\\
+\hline
+\end{DoxyParams}
+\begin{DoxyAuthor}{Author}
+Emanuele Cordano 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+April 2010
+\end{DoxyDate}
+
+
+Definition at line 163 of file geometry2.\-c.
+
+
+
+References polygon\-\_\-connection\-\_\-attribute\-\_\-array\-::element, new\-\_\-connection\-\_\-attributes(), new\-\_\-connection\-\_\-from\-\_\-connection(), polygon\-\_\-connection\-\_\-attribute\-\_\-array\-::nh, and polygon\-\_\-connection\-\_\-attribute\-\_\-array\-::nl.
+
+
+
+Referenced by new\-\_\-grid\-\_\-from\-\_\-grid().
+
+\hypertarget{geometry2_8c_a981b34f1ec4d0a64401471aca1893b76}{\index{geometry2.\-c@{geometry2.\-c}!new\-\_\-connection\-\_\-from\-\_\-connection@{new\-\_\-connection\-\_\-from\-\_\-connection}}
+\index{new\-\_\-connection\-\_\-from\-\_\-connection@{new\-\_\-connection\-\_\-from\-\_\-connection}!geometry2.c@{geometry2.\-c}}
+\subsubsection[{new\-\_\-connection\-\_\-from\-\_\-connection}]{\setlength{\rightskip}{0pt plus 5cm}{\bf polygon\-\_\-connection\-\_\-attributes}$\ast$ new\-\_\-connection\-\_\-from\-\_\-connection (
+\begin{DoxyParamCaption}
+\item[{{\bf polygon\-\_\-connection\-\_\-attributes} $\ast$}]{pc}
+\end{DoxyParamCaption}
+)}}\label{geometry2_8c_a981b34f1ec4d0a64401471aca1893b76}
+
+
+Definition at line 130 of file geometry2.\-c.
+
+
+
+References polygon\-\_\-connection\-\_\-attributes\-::connections, polygon\-\_\-connection\-\_\-attributes\-::d\-\_\-connections, new\-\_\-doublevector(), new\-\_\-longvector(), L\-O\-N\-G\-V\-E\-C\-T\-O\-R\-::nh, D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R\-::nh, L\-O\-N\-G\-V\-E\-C\-T\-O\-R\-::nl, and D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R\-::nl.
+
+
+
+Referenced by new\-\_\-connection\-\_\-array\-\_\-from\-\_\-connection\-\_\-array().
+
+\hypertarget{geometry2_8c_a42ac13a76f3e26b3e81cea47ae1ce04a}{\index{geometry2.\-c@{geometry2.\-c}!new\-\_\-double\-\_\-grid\-\_\-from\-\_\-doublesquare\-\_\-grid@{new\-\_\-double\-\_\-grid\-\_\-from\-\_\-doublesquare\-\_\-grid}}
+\index{new\-\_\-double\-\_\-grid\-\_\-from\-\_\-doublesquare\-\_\-grid@{new\-\_\-double\-\_\-grid\-\_\-from\-\_\-doublesquare\-\_\-grid}!geometry2.c@{geometry2.\-c}}
+\subsubsection[{new\-\_\-double\-\_\-grid\-\_\-from\-\_\-doublesquare\-\_\-grid}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\-O\-U\-B\-L\-E\-\_\-\-G\-R\-I\-D}$\ast$ new\-\_\-double\-\_\-grid\-\_\-from\-\_\-doublesquare\-\_\-grid (
+\begin{DoxyParamCaption}
+\item[{{\bf D\-O\-U\-B\-L\-E\-S\-Q\-U\-A\-R\-E\-\_\-\-G\-R\-I\-D} $\ast$}]{dsq}
+\end{DoxyParamCaption}
+)}}\label{geometry2_8c_a42ac13a76f3e26b3e81cea47ae1ce04a}
+\begin{DoxyAuthor}{Author}
+Emanuele Cordano
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+April 2010
+\end{DoxyDate}
+
+
+Definition at line 321 of file geometry2.\-c.
+
+
+
+References D\-O\-U\-B\-L\-E\-S\-Q\-U\-A\-R\-E\-\_\-\-G\-R\-I\-D\-::big, D\-O\-U\-B\-L\-E\-\_\-\-G\-R\-I\-D\-::coarse, dgrid, D\-O\-U\-B\-L\-E\-\_\-\-G\-R\-I\-D\-::fine, D\-O\-U\-B\-L\-E\-S\-Q\-U\-A\-R\-E\-\_\-\-G\-R\-I\-D\-::fine, S\-Q\-U\-A\-R\-E\-\_\-\-G\-R\-I\-D\-::grid, new\-\_\-grid\-\_\-from\-\_\-grid(), new\-\_\-longbin\-\_\-from\-\_\-doublematrix\-\_\-array(), new\-\_\-longbin\-\_\-from\-\_\-longbin\-\_\-cleaning\-\_\-novalues(), D\-O\-U\-B\-L\-E\-\_\-\-G\-R\-I\-D\-::novalue, S\-Q\-U\-A\-R\-E\-\_\-\-G\-R\-I\-D\-::novalue, D\-O\-U\-B\-L\-E\-S\-Q\-U\-A\-R\-E\-\_\-\-G\-R\-I\-D\-::small\-\_\-content\-\_\-line, D\-O\-U\-B\-L\-E\-S\-Q\-U\-A\-R\-E\-\_\-\-G\-R\-I\-D\-::small\-\_\-content\-\_\-polygon, D\-O\-U\-B\-L\-E\-\_\-\-G\-R\-I\-D\-::small\-\_\-line\-\_\-content, and D\-O\-U\-B\-L\-E\-\_\-\-G\-R\-I\-D\-::small\-\_\-polygon\-\_\-content.
+
+
+
+Referenced by main().
+
+\hypertarget{geometry2_8c_a97cfcb1f135ba44e5a9908710c0987ce}{\index{geometry2.\-c@{geometry2.\-c}!new\-\_\-grid\-\_\-from\-\_\-grid@{new\-\_\-grid\-\_\-from\-\_\-grid}}
+\index{new\-\_\-grid\-\_\-from\-\_\-grid@{new\-\_\-grid\-\_\-from\-\_\-grid}!geometry2.c@{geometry2.\-c}}
+\subsubsection[{new\-\_\-grid\-\_\-from\-\_\-grid}]{\setlength{\rightskip}{0pt plus 5cm}{\bf G\-R\-I\-D}$\ast$ new\-\_\-grid\-\_\-from\-\_\-grid (
+\begin{DoxyParamCaption}
+\item[{{\bf G\-R\-I\-D} $\ast$}]{grid}
+\end{DoxyParamCaption}
+)}}\label{geometry2_8c_a97cfcb1f135ba44e5a9908710c0987ce}
+\begin{DoxyAuthor}{Author}
+Emanuele Cordano
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+April 2010
+\end{DoxyDate}
+
+
+Definition at line 187 of file geometry2.\-c.
+
+
+
+References G\-R\-I\-D\-::boundary\-\_\-indicator, copy\-\_\-string(), G\-R\-I\-D\-::file\-\_\-resume\-\_\-connections, G\-R\-I\-D\-::file\-\_\-resume\-\_\-lines, G\-R\-I\-D\-::file\-\_\-resume\-\_\-polygons, G\-R\-I\-D\-::lines, G\-R\-I\-D\-::links, new\-\_\-connection\-\_\-array\-\_\-from\-\_\-connection\-\_\-array(), new\-\_\-linevector\-\_\-from\-\_\-linevector(), new\-\_\-polygonvector\-\_\-from\-\_\-polygonvector(), and G\-R\-I\-D\-::polygons.
+
+
+
+Referenced by new\-\_\-double\-\_\-grid\-\_\-from\-\_\-doublesquare\-\_\-grid().
+
+\hypertarget{geometry2_8c_a4f25d1d205b99f7b9e2eb8f76b4bc857}{\index{geometry2.\-c@{geometry2.\-c}!new\-\_\-line\-\_\-from\-\_\-line@{new\-\_\-line\-\_\-from\-\_\-line}}
+\index{new\-\_\-line\-\_\-from\-\_\-line@{new\-\_\-line\-\_\-from\-\_\-line}!geometry2.c@{geometry2.\-c}}
+\subsubsection[{new\-\_\-line\-\_\-from\-\_\-line}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\-I\-N\-E}$\ast$ new\-\_\-line\-\_\-from\-\_\-line (
+\begin{DoxyParamCaption}
+\item[{{\bf L\-I\-N\-E} $\ast$}]{line}
+\end{DoxyParamCaption}
+)}}\label{geometry2_8c_a4f25d1d205b99f7b9e2eb8f76b4bc857}
+
+\begin{DoxyParams}{Parameters}
+{\em (\-L\-I\-N\-E} & $\ast$) line \\
+\hline
+\end{DoxyParams}
+\begin{DoxyAuthor}{Author}
+Emanuele Cordano
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+April 2010
+\end{DoxyDate}
+
+
+Definition at line 31 of file geometry2.\-c.
+
+
+
+References L\-I\-N\-E\-::begin, L\-I\-N\-E\-::end, L\-I\-N\-E\-::index, and new\-\_\-line\-\_\-from\-\_\-points().
+
+
+
+Referenced by new\-\_\-linevector\-\_\-from\-\_\-linevector().
+
+\hypertarget{geometry2_8c_ad067fc414ed46993c17ed11d24999473}{\index{geometry2.\-c@{geometry2.\-c}!new\-\_\-linevector\-\_\-from\-\_\-linevector@{new\-\_\-linevector\-\_\-from\-\_\-linevector}}
+\index{new\-\_\-linevector\-\_\-from\-\_\-linevector@{new\-\_\-linevector\-\_\-from\-\_\-linevector}!geometry2.c@{geometry2.\-c}}
+\subsubsection[{new\-\_\-linevector\-\_\-from\-\_\-linevector}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\-I\-N\-E\-V\-E\-C\-T\-O\-R}$\ast$ new\-\_\-linevector\-\_\-from\-\_\-linevector (
+\begin{DoxyParamCaption}
+\item[{{\bf L\-I\-N\-E\-V\-E\-C\-T\-O\-R} $\ast$}]{lines}
+\end{DoxyParamCaption}
+)}}\label{geometry2_8c_ad067fc414ed46993c17ed11d24999473}
+
+\begin{DoxyParams}{Parameters}
+{\em (\-L\-I\-N\-E\-V\-E\-C\-T\-O\-R} & $\ast$) line\\
+\hline
+\end{DoxyParams}
+\begin{DoxyAuthor}{Author}
+Emanuele Cordano
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+April 2010
+\end{DoxyDate}
+
+
+Definition at line 55 of file geometry2.\-c.
+
+
+
+References L\-I\-N\-E\-V\-E\-C\-T\-O\-R\-::element, new\-\_\-line\-\_\-from\-\_\-line(), new\-\_\-linevector(), L\-I\-N\-E\-V\-E\-C\-T\-O\-R\-::nh, and L\-I\-N\-E\-V\-E\-C\-T\-O\-R\-::nl.
+
+
+
+Referenced by new\-\_\-grid\-\_\-from\-\_\-grid().
+
+\hypertarget{geometry2_8c_a9108b2864a1e7417f176faa2f2a7f0dc}{\index{geometry2.\-c@{geometry2.\-c}!new\-\_\-longbin\-\_\-from\-\_\-doublematrix\-\_\-array@{new\-\_\-longbin\-\_\-from\-\_\-doublematrix\-\_\-array}}
+\index{new\-\_\-longbin\-\_\-from\-\_\-doublematrix\-\_\-array@{new\-\_\-longbin\-\_\-from\-\_\-doublematrix\-\_\-array}!geometry2.c@{geometry2.\-c}}
+\subsubsection[{new\-\_\-longbin\-\_\-from\-\_\-doublematrix\-\_\-array}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\-O\-N\-G\-B\-I\-N} $\ast$ new\-\_\-longbin\-\_\-from\-\_\-doublematrix\-\_\-array (
+\begin{DoxyParamCaption}
+\item[{{\bf L\-O\-N\-G\-M\-A\-T\-R\-I\-X\-\_\-\-V\-E\-C\-T\-O\-R} $\ast$}]{lmv}
+\end{DoxyParamCaption}
+)}}\label{geometry2_8c_a9108b2864a1e7417f176faa2f2a7f0dc}
+The following functions transforms a \hyperlink{struct_d_o_u_b_l_e_s_q_u_a_r_e___g_r_i_d}{D\-O\-U\-B\-L\-E\-S\-Q\-U\-A\-R\-E\-\_\-\-G\-R\-I\-D} into a D\-O\-U\-B\-L\-E\-G\-R\-I\-D 
+\begin{DoxyParams}{Parameters}
+{\em (\-L\-O\-N\-G\-M\-A\-T\-R\-I\-X\-\_\-\-V\-E\-C\-T\-O\-R} & $\ast$ ) -\/ lmv \\
+\hline
+{\em (long)} & -\/ novalue \\
+\hline
+\end{DoxyParams}
+\begin{DoxyAuthor}{Author}
+Emanuele Cordano
+\end{DoxyAuthor}
+
+
+Definition at line 232 of file geometry2.\-c.
+
+
+
+References L\-O\-N\-G\-M\-A\-T\-R\-I\-X\-\_\-\-V\-E\-C\-T\-O\-R\-::element, free\-\_\-longvector(), L\-O\-N\-G\-B\-I\-N\-::index, L\-O\-N\-G\-M\-A\-T\-R\-I\-X\-::ncl, new\-\_\-longbin(), new\-\_\-longvector(), L\-O\-N\-G\-M\-A\-T\-R\-I\-X\-\_\-\-V\-E\-C\-T\-O\-R\-::nh, L\-O\-N\-G\-V\-E\-C\-T\-O\-R\-::nh, L\-O\-N\-G\-M\-A\-T\-R\-I\-X\-\_\-\-V\-E\-C\-T\-O\-R\-::nl, N\-L, L\-O\-N\-G\-V\-E\-C\-T\-O\-R\-::nl, and L\-O\-N\-G\-M\-A\-T\-R\-I\-X\-::nrl.
+
+
+
+Referenced by new\-\_\-double\-\_\-grid\-\_\-from\-\_\-doublesquare\-\_\-grid().
+
+\hypertarget{geometry2_8c_ac169dd8a1d751bce2b929793be8fa75e}{\index{geometry2.\-c@{geometry2.\-c}!new\-\_\-longbin\-\_\-from\-\_\-longbin@{new\-\_\-longbin\-\_\-from\-\_\-longbin}}
+\index{new\-\_\-longbin\-\_\-from\-\_\-longbin@{new\-\_\-longbin\-\_\-from\-\_\-longbin}!geometry2.c@{geometry2.\-c}}
+\subsubsection[{new\-\_\-longbin\-\_\-from\-\_\-longbin}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\-O\-N\-G\-B\-I\-N}$\ast$ new\-\_\-longbin\-\_\-from\-\_\-longbin (
+\begin{DoxyParamCaption}
+\item[{{\bf L\-O\-N\-G\-B\-I\-N} $\ast$}]{lb}
+\end{DoxyParamCaption}
+)}}\label{geometry2_8c_ac169dd8a1d751bce2b929793be8fa75e}
+
+\begin{DoxyParams}{Parameters}
+{\em (\-L\-O\-N\-G\-B\-I\-N} & $\ast$) -\/ lb\\
+\hline
+\end{DoxyParams}
+\begin{DoxyAuthor}{Author}
+Emanuele Cordano
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+April 2010
+\end{DoxyDate}
+
+
+Definition at line 296 of file geometry2.\-c.
+
+
+
+References L\-O\-N\-G\-B\-I\-N\-::index, new\-\_\-longbin(), N\-L, and L\-O\-N\-G\-V\-E\-C\-T\-O\-R\-::nl.
+
+\hypertarget{geometry2_8c_a25fc662155274cc8c4b98bfb49441e98}{\index{geometry2.\-c@{geometry2.\-c}!new\-\_\-longbin\-\_\-from\-\_\-longbin\-\_\-cleaning\-\_\-novalues@{new\-\_\-longbin\-\_\-from\-\_\-longbin\-\_\-cleaning\-\_\-novalues}}
+\index{new\-\_\-longbin\-\_\-from\-\_\-longbin\-\_\-cleaning\-\_\-novalues@{new\-\_\-longbin\-\_\-from\-\_\-longbin\-\_\-cleaning\-\_\-novalues}!geometry2.c@{geometry2.\-c}}
+\subsubsection[{new\-\_\-longbin\-\_\-from\-\_\-longbin\-\_\-cleaning\-\_\-novalues}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\-O\-N\-G\-B\-I\-N}$\ast$ new\-\_\-longbin\-\_\-from\-\_\-longbin\-\_\-cleaning\-\_\-novalues (
+\begin{DoxyParamCaption}
+\item[{{\bf L\-O\-N\-G\-B\-I\-N} $\ast$}]{lb}
+\end{DoxyParamCaption}
+)}}\label{geometry2_8c_a25fc662155274cc8c4b98bfb49441e98}
+
+\begin{DoxyParams}{Parameters}
+{\em (\-L\-O\-N\-G\-B\-I\-N} & $\ast$) -\/ lb\\
+\hline
+\end{DoxyParams}
+\begin{DoxyAuthor}{Author}
+Emanuele Cordano
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+April 2010
+\end{DoxyDate}
+
+
+Definition at line 369 of file geometry2.\-c.
+
+
+
+References free\-\_\-longvector(), L\-O\-N\-G\-B\-I\-N\-::index, new\-\_\-longbin(), new\-\_\-longvector(), L\-O\-N\-G\-V\-E\-C\-T\-O\-R\-::nh, N\-L, L\-O\-N\-G\-V\-E\-C\-T\-O\-R\-::nl, and stop\-\_\-execution().
+
+
+
+Referenced by new\-\_\-double\-\_\-grid\-\_\-from\-\_\-doublesquare\-\_\-grid().
+
+\hypertarget{geometry2_8c_af4db4c3d7085c35174ac3a173a732981}{\index{geometry2.\-c@{geometry2.\-c}!new\-\_\-point\-\_\-from\-\_\-point@{new\-\_\-point\-\_\-from\-\_\-point}}
+\index{new\-\_\-point\-\_\-from\-\_\-point@{new\-\_\-point\-\_\-from\-\_\-point}!geometry2.c@{geometry2.\-c}}
+\subsubsection[{new\-\_\-point\-\_\-from\-\_\-point}]{\setlength{\rightskip}{0pt plus 5cm}{\bf P\-O\-I\-N\-T}$\ast$ new\-\_\-point\-\_\-from\-\_\-point (
+\begin{DoxyParamCaption}
+\item[{{\bf P\-O\-I\-N\-T} $\ast$}]{point}
+\end{DoxyParamCaption}
+)}}\label{geometry2_8c_af4db4c3d7085c35174ac3a173a732981}
+
+\begin{DoxyParams}{Parameters}
+{\em (\-P\-O\-I\-N\-T} & $\ast$) point\\
+\hline
+\end{DoxyParams}
+\begin{DoxyAuthor}{Author}
+Emanuele Cordano 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+April 2010
+\end{DoxyDate}
+
+
+Definition at line 15 of file geometry2.\-c.
+
+
+
+References P\-O\-I\-N\-T\-::index, new\-\_\-point(), P\-O\-I\-N\-T\-::x, P\-O\-I\-N\-T\-::y, and P\-O\-I\-N\-T\-::z.
+
+
+
+Referenced by new\-\_\-polygon\-\_\-from\-\_\-polygon().
+
+\hypertarget{geometry2_8c_aa1f32fa0d187f9db65c60089ef3b20c7}{\index{geometry2.\-c@{geometry2.\-c}!new\-\_\-polygon\-\_\-from\-\_\-polygon@{new\-\_\-polygon\-\_\-from\-\_\-polygon}}
+\index{new\-\_\-polygon\-\_\-from\-\_\-polygon@{new\-\_\-polygon\-\_\-from\-\_\-polygon}!geometry2.c@{geometry2.\-c}}
+\subsubsection[{new\-\_\-polygon\-\_\-from\-\_\-polygon}]{\setlength{\rightskip}{0pt plus 5cm}{\bf P\-O\-L\-Y\-G\-O\-N}$\ast$ new\-\_\-polygon\-\_\-from\-\_\-polygon (
+\begin{DoxyParamCaption}
+\item[{{\bf P\-O\-L\-Y\-G\-O\-N} $\ast$}]{polygon}
+\end{DoxyParamCaption}
+)}}\label{geometry2_8c_aa1f32fa0d187f9db65c60089ef3b20c7}
+
+\begin{DoxyParams}{Parameters}
+{\em (\-P\-O\-L\-Y\-G\-O\-N} & $\ast$) polygon;\\
+\hline
+\end{DoxyParams}
+\begin{DoxyAuthor}{Author}
+Emanuele Cordano
+\end{DoxyAuthor}
+
+
+Definition at line 78 of file geometry2.\-c.
+
+
+
+References P\-O\-L\-Y\-G\-O\-N\-::area2\-D, P\-O\-L\-Y\-G\-O\-N\-::centroid, P\-O\-L\-Y\-G\-O\-N\-::edge\-\_\-indices, P\-O\-L\-Y\-G\-O\-N\-::index, new\-\_\-longvector(), new\-\_\-point\-\_\-from\-\_\-point(), L\-O\-N\-G\-V\-E\-C\-T\-O\-R\-::nh, and L\-O\-N\-G\-V\-E\-C\-T\-O\-R\-::nl.
+
+
+
+Referenced by new\-\_\-polygonvector\-\_\-from\-\_\-polygonvector().
+
+\hypertarget{geometry2_8c_a164672c76610691cddb7a74271b0f8e9}{\index{geometry2.\-c@{geometry2.\-c}!new\-\_\-polygonvector\-\_\-from\-\_\-polygonvector@{new\-\_\-polygonvector\-\_\-from\-\_\-polygonvector}}
+\index{new\-\_\-polygonvector\-\_\-from\-\_\-polygonvector@{new\-\_\-polygonvector\-\_\-from\-\_\-polygonvector}!geometry2.c@{geometry2.\-c}}
+\subsubsection[{new\-\_\-polygonvector\-\_\-from\-\_\-polygonvector}]{\setlength{\rightskip}{0pt plus 5cm}{\bf P\-O\-L\-Y\-G\-O\-N\-V\-E\-C\-T\-O\-R}$\ast$ new\-\_\-polygonvector\-\_\-from\-\_\-polygonvector (
+\begin{DoxyParamCaption}
+\item[{{\bf P\-O\-L\-Y\-G\-O\-N\-V\-E\-C\-T\-O\-R} $\ast$}]{polygons}
+\end{DoxyParamCaption}
+)}}\label{geometry2_8c_a164672c76610691cddb7a74271b0f8e9}
+
+\begin{DoxyParams}{Parameters}
+{\em (\-P\-O\-L\-Y\-G\-O\-N\-V\-E\-C\-T\-O\-R} & $\ast$) -\/ polygons\\
+\hline
+\end{DoxyParams}
+\begin{DoxyAuthor}{Author}
+Emanuele Cordano 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+April 2010
+\end{DoxyDate}
+
+
+Definition at line 107 of file geometry2.\-c.
+
+
+
+References P\-O\-L\-Y\-G\-O\-N\-V\-E\-C\-T\-O\-R\-::element, new\-\_\-polygon\-\_\-from\-\_\-polygon(), new\-\_\-polygonvector(), P\-O\-L\-Y\-G\-O\-N\-V\-E\-C\-T\-O\-R\-::nh, and P\-O\-L\-Y\-G\-O\-N\-V\-E\-C\-T\-O\-R\-::nl.
+
+
+
+Referenced by new\-\_\-grid\-\_\-from\-\_\-grid().
+

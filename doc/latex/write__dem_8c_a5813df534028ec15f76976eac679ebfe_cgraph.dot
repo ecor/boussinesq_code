@@ -1,0 +1,20 @@
+digraph "intmatrix_dem2"
+{
+  bgcolor="transparent";
+  edge [fontname="FreeSans",fontsize="10",labelfontname="FreeSans",labelfontsize="10"];
+  node [fontname="FreeSans",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="intmatrix_dem2",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="t_fclose",height=0.2,width=0.4,color="black",URL="$t__io_8c.html#afa95931383ff96048d6ec32f685a5f98"];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="t_fopen",height=0.2,width=0.4,color="black",URL="$t__io_8c.html#af34ea3bc62c51f24c92b1fd2e9efe91a"];
+  Node3 -> Node4 [color="midnightblue",fontsize="10",style="solid"];
+  Node4 [label="t_error",height=0.2,width=0.4,color="black",URL="$error_8c.html#af79ef7c6656ef0f3d2786e2b09c1755f"];
+  Node1 -> Node5 [color="midnightblue",fontsize="10",style="solid"];
+  Node5 [label="write_floatarray_elements",height=0.2,width=0.4,color="black",URL="$t__io_8c.html#ae43baf83ed663f9dbd9243bb59f2a12d"];
+  Node5 -> Node4 [color="midnightblue",fontsize="10",style="solid"];
+  Node1 -> Node6 [color="midnightblue",fontsize="10",style="solid"];
+  Node6 [label="write_intmatrix_elements",height=0.2,width=0.4,color="black",URL="$t__io_8c.html#af1541587db5d5043799fd47990b93916"];
+  Node6 -> Node4 [color="midnightblue",fontsize="10",style="solid"];
+}

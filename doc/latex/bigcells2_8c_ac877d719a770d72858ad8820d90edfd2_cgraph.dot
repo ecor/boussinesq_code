@@ -1,0 +1,46 @@
+digraph "get_fine_line_indices"
+{
+  bgcolor="transparent";
+  edge [fontname="FreeSans",fontsize="10",labelfontname="FreeSans",labelfontsize="10"];
+  node [fontname="FreeSans",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="get_fine_line_indices",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="free_longmatrix_vector",height=0.2,width=0.4,color="black",URL="$bigcells2_8c.html#a4c41a596dfaed1f8a4ff7e682ed2e961"];
+  Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="free_longmatrix",height=0.2,width=0.4,color="black",URL="$alloc_8c.html#abd760649779b325c9d6dde0f4f10764a"];
+  Node3 -> Node4 [color="midnightblue",fontsize="10",style="solid"];
+  Node4 [label="t_error",height=0.2,width=0.4,color="black",URL="$error_8c.html#af79ef7c6656ef0f3d2786e2b09c1755f"];
+  Node3 -> Node5 [color="midnightblue",fontsize="10",style="solid"];
+  Node5 [label="free_lmatrix",height=0.2,width=0.4,color="black",URL="$alloc_8c.html#a21c30ac183ff64c775d0fa216d5c6e52"];
+  Node1 -> Node6 [color="midnightblue",fontsize="10",style="solid"];
+  Node6 [label="free_longvector",height=0.2,width=0.4,color="black",URL="$alloc_8c.html#a04fde7eac99d9b9020b658a49670f86c"];
+  Node6 -> Node4 [color="midnightblue",fontsize="10",style="solid"];
+  Node6 -> Node7 [color="midnightblue",fontsize="10",style="solid"];
+  Node7 [label="free_lvector",height=0.2,width=0.4,color="black",URL="$alloc_8c.html#a06786bf777613d3724c0f5e8425a03af"];
+  Node1 -> Node8 [color="midnightblue",fontsize="10",style="solid"];
+  Node8 [label="get_fine_indices",height=0.2,width=0.4,color="black",URL="$bigcells2_8c.html#acf5e84bd0e0ff3b1577c69bd00a24aee"];
+  Node8 -> Node9 [color="midnightblue",fontsize="10",style="solid"];
+  Node9 [label="new_longmatrix",height=0.2,width=0.4,color="black",URL="$alloc_8c.html#aa6c45910d3a9d8c3fc11170310c2a820"];
+  Node9 -> Node4 [color="midnightblue",fontsize="10",style="solid"];
+  Node9 -> Node10 [color="midnightblue",fontsize="10",style="solid"];
+  Node10 [label="lmatrix",height=0.2,width=0.4,color="black",URL="$alloc_8c.html#a5ced7476e0d5f25e9156e09ffc9ce64d"];
+  Node10 -> Node4 [color="midnightblue",fontsize="10",style="solid"];
+  Node8 -> Node11 [color="midnightblue",fontsize="10",style="solid"];
+  Node11 [label="new_longmatrix_vector",height=0.2,width=0.4,color="black",URL="$bigcells2_8c.html#a28d23a3c17a001b437d91ee44fa24c50"];
+  Node11 -> Node12 [color="midnightblue",fontsize="10",style="solid"];
+  Node12 [label="vector",height=0.2,width=0.4,color="black",URL="$alloc_8c.html#a3e3ccfdcdd496df99eaa29f65fe68b31"];
+  Node12 -> Node4 [color="midnightblue",fontsize="10",style="solid"];
+  Node11 -> Node4 [color="midnightblue",fontsize="10",style="solid"];
+  Node8 -> Node4 [color="midnightblue",fontsize="10",style="solid"];
+  Node1 -> Node13 [color="midnightblue",fontsize="10",style="solid"];
+  Node13 [label="new_longbin",height=0.2,width=0.4,color="black",URL="$alloc_8c.html#afb274db51d2c240d31e4620e7bd4f029"];
+  Node13 -> Node4 [color="midnightblue",fontsize="10",style="solid"];
+  Node13 -> Node14 [color="midnightblue",fontsize="10",style="solid"];
+  Node14 [label="new_longvector",height=0.2,width=0.4,color="black",URL="$alloc_8c.html#a85853f82d1b0df7d49c675476f31c68f"];
+  Node14 -> Node4 [color="midnightblue",fontsize="10",style="solid"];
+  Node14 -> Node15 [color="midnightblue",fontsize="10",style="solid"];
+  Node15 [label="lvector",height=0.2,width=0.4,color="black",URL="$alloc_8c.html#af4f505f2dcb9ffd8fb12a7750b38b7e5"];
+  Node15 -> Node4 [color="midnightblue",fontsize="10",style="solid"];
+  Node1 -> Node14 [color="midnightblue",fontsize="10",style="solid"];
+}

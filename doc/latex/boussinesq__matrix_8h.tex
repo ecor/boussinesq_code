@@ -1,0 +1,44 @@
+\hypertarget{boussinesq__matrix_8h}{\section{M\-A\-T\-H2/boussinesq\-\_\-matrix.h File Reference}
+\label{boussinesq__matrix_8h}\index{M\-A\-T\-H2/boussinesq\-\_\-matrix.\-h@{M\-A\-T\-H2/boussinesq\-\_\-matrix.\-h}}
+}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{turtle_8h_af2577c240f36308c4c25cda8e769c61e}{D\-O\-U\-B\-L\-E\-B\-I\-N} $\ast$ \hyperlink{boussinesq__matrix_8h_a73597760d4ee34968403761d6b18d523}{get\-\_\-t\-\_\-\-Matrix\-\_\-elements} (\hyperlink{preconditioned__conjugate__gradient_8h_a856ecceb36502250c03b650d4480af1f}{t\-\_\-\-Matrix\-\_\-element} operator, \hyperlink{structpolygon__connection__attribute__array}{polygon\-\_\-connection\-\_\-attribute\-\_\-array} $\ast$pca, long boundary)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{boussinesq__matrix_8h_a73597760d4ee34968403761d6b18d523}{\index{boussinesq\-\_\-matrix.\-h@{boussinesq\-\_\-matrix.\-h}!get\-\_\-t\-\_\-\-Matrix\-\_\-elements@{get\-\_\-t\-\_\-\-Matrix\-\_\-elements}}
+\index{get\-\_\-t\-\_\-\-Matrix\-\_\-elements@{get\-\_\-t\-\_\-\-Matrix\-\_\-elements}!boussinesq_matrix.h@{boussinesq\-\_\-matrix.\-h}}
+\subsubsection[{get\-\_\-t\-\_\-\-Matrix\-\_\-elements}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\-O\-U\-B\-L\-E\-B\-I\-N}$\ast$ get\-\_\-t\-\_\-\-Matrix\-\_\-elements (
+\begin{DoxyParamCaption}
+\item[{{\bf t\-\_\-\-Matrix\-\_\-element}}]{operator, }
+\item[{{\bf polygon\-\_\-connection\-\_\-attribute\-\_\-array} $\ast$}]{pca, }
+\item[{long}]{boundary}
+\end{DoxyParamCaption}
+)}}\label{boussinesq__matrix_8h_a73597760d4ee34968403761d6b18d523}
+\begin{DoxyDate}{Date}
+January 2010 
+\end{DoxyDate}
+\begin{DoxyAuthor}{Author}
+Emanuele Cordano
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em operator} & (t\-\_\-\-Matrix\-\_\-element) -\/ The operator representing the sparse matrix \\
+\hline
+{\em pca} & ( $\ast$polygon\-\_\-connection\-\_\-attribute\-\_\-array) -\/ the polygon connetion ttributes pca\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the sparse matrix as a D\-O\-U\-B\-L\-E\-B\-I\-N
+\end{DoxyReturn}
+
+
+Definition at line 19 of file boussinesq\-\_\-matrix.\-c.
+
+
+
+References polygon\-\_\-connection\-\_\-attributes\-::connections, polygon\-\_\-connection\-\_\-attribute\-\_\-array\-::element, free\-\_\-doublevector(), free\-\_\-longvector(), db\-::index, new\-\_\-doublebin(), new\-\_\-doublevector(), new\-\_\-longvector(), polygon\-\_\-connection\-\_\-attribute\-\_\-array\-::nh, L\-O\-N\-G\-V\-E\-C\-T\-O\-R\-::nh, L\-O\-N\-G\-V\-E\-C\-T\-O\-R\-::nl, D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R\-::nl, and N\-U\-L\-L\-\_\-\-V\-A\-L\-U\-E\-\_\-bm.
+

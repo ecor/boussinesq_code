@@ -1,0 +1,83 @@
+\hypertarget{import__ascii_8h}{\section{A\-S\-C\-I\-I/import\-\_\-ascii.h File Reference}
+\label{import__ascii_8h}\index{A\-S\-C\-I\-I/import\-\_\-ascii.\-h@{A\-S\-C\-I\-I/import\-\_\-ascii.\-h}}
+}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+double $\ast$ \hyperlink{import__ascii_8h_a5e555ed8c6d2cb56e8c69d618a251717}{read\-\_\-grassascii} (double $\ast$header, double novalue, char $\ast$name, long max\-\_\-figures)
+\item 
+double $\ast$ \hyperlink{import__ascii_8h_a37eec52ab45e51440bb34c698222ce99}{read\-\_\-esriascii} (double $\ast$header, double novalue, char $\ast$name, long max\-\_\-figures)
+\item 
+void \hyperlink{import__ascii_8h_acfa2d646095e8d3cbfa4b84ae06cf128}{error\-\_\-message} (short format, long n, long n1, long n2, long n3, char $\ast$name)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{import__ascii_8h_acfa2d646095e8d3cbfa4b84ae06cf128}{\index{import\-\_\-ascii.\-h@{import\-\_\-ascii.\-h}!error\-\_\-message@{error\-\_\-message}}
+\index{error\-\_\-message@{error\-\_\-message}!import_ascii.h@{import\-\_\-ascii.\-h}}
+\subsubsection[{error\-\_\-message}]{\setlength{\rightskip}{0pt plus 5cm}void error\-\_\-message (
+\begin{DoxyParamCaption}
+\item[{short}]{format, }
+\item[{long}]{n, }
+\item[{long}]{n1, }
+\item[{long}]{n2, }
+\item[{long}]{n3, }
+\item[{char $\ast$}]{name}
+\end{DoxyParamCaption}
+)}}\label{import__ascii_8h_acfa2d646095e8d3cbfa4b84ae06cf128}
+
+
+Definition at line 551 of file import\-\_\-ascii.\-c.
+
+
+
+References ascii\-\_\-esri, ascii\-\_\-grass, join\-\_\-strings(), and t\-\_\-error().
+
+
+
+Referenced by read\-\_\-esriascii(), and read\-\_\-grassascii().
+
+\hypertarget{import__ascii_8h_a37eec52ab45e51440bb34c698222ce99}{\index{import\-\_\-ascii.\-h@{import\-\_\-ascii.\-h}!read\-\_\-esriascii@{read\-\_\-esriascii}}
+\index{read\-\_\-esriascii@{read\-\_\-esriascii}!import_ascii.h@{import\-\_\-ascii.\-h}}
+\subsubsection[{read\-\_\-esriascii}]{\setlength{\rightskip}{0pt plus 5cm}double$\ast$ read\-\_\-esriascii (
+\begin{DoxyParamCaption}
+\item[{double $\ast$}]{header, }
+\item[{double}]{novalue, }
+\item[{char $\ast$}]{name, }
+\item[{long}]{max\-\_\-figures}
+\end{DoxyParamCaption}
+)}}\label{import__ascii_8h_a37eec52ab45e51440bb34c698222ce99}
+
+
+Definition at line 223 of file import\-\_\-ascii.\-c.
+
+
+
+References ascii\-\_\-esri, error\-\_\-message(), join\-\_\-strings(), stop\-\_\-execution(), and t\-\_\-error().
+
+
+
+Referenced by read\-\_\-map().
+
+\hypertarget{import__ascii_8h_a5e555ed8c6d2cb56e8c69d618a251717}{\index{import\-\_\-ascii.\-h@{import\-\_\-ascii.\-h}!read\-\_\-grassascii@{read\-\_\-grassascii}}
+\index{read\-\_\-grassascii@{read\-\_\-grassascii}!import_ascii.h@{import\-\_\-ascii.\-h}}
+\subsubsection[{read\-\_\-grassascii}]{\setlength{\rightskip}{0pt plus 5cm}double$\ast$ read\-\_\-grassascii (
+\begin{DoxyParamCaption}
+\item[{double $\ast$}]{header, }
+\item[{double}]{novalue, }
+\item[{char $\ast$}]{name, }
+\item[{long}]{max\-\_\-figures}
+\end{DoxyParamCaption}
+)}}\label{import__ascii_8h_a5e555ed8c6d2cb56e8c69d618a251717}
+
+
+Definition at line 33 of file import\-\_\-ascii.\-c.
+
+
+
+References ascii\-\_\-grass, error\-\_\-message(), join\-\_\-strings(), stop\-\_\-execution(), and t\-\_\-error().
+
+
+
+Referenced by read\-\_\-map().
+

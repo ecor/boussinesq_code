@@ -1,0 +1,439 @@
+\hypertarget{key_8palette_8h}{\section{Key\-Palette/key.palette.\-h File Reference}
+\label{key_8palette_8h}\index{Key\-Palette/key.\-palette.\-h@{Key\-Palette/key.\-palette.\-h}}
+}
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{struct_k_e_y_w_o_r_d_s}{K\-E\-Y\-W\-O\-R\-D\-S}
+\item 
+struct \hyperlink{struct_k_e_y_w_o_r_d_s___l_i_s_t}{K\-E\-Y\-W\-O\-R\-D\-S\-\_\-\-L\-I\-S\-T}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{key_8palette_8h_a9271914a463357a7bc82fd5e9b368ea7}{E\-M\-P\-T\-Y\-\_\-\-V\-A\-L\-U\-E}~-\/99
+\item 
+\#define \hyperlink{key_8palette_8h_aba5f77952b3945c6401fbb3d4b54f334}{N\-O\-M\-O\-D\-E\-L\-\_\-\-N\-A\-M\-E}~\char`\"{}O\-F\-F\char`\"{}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{struct_k_e_y_w_o_r_d_s}{K\-E\-Y\-W\-O\-R\-D\-S} $\ast$ \hyperlink{key_8palette_8h_a063db1416b2abf389b6e5afd75e686f9}{read\-\_\-keywords} (F\-I\-L\-E $\ast$init, short print)
+\item 
+void \hyperlink{key_8palette_8h_a0baa14991a251ae7376d5d6653bdad81}{free\-\_\-keywords} (\hyperlink{struct_k_e_y_w_o_r_d_s}{K\-E\-Y\-W\-O\-R\-D\-S} $\ast$keywords)
+\item 
+\hyperlink{turtle_8h_ade34e6dff3489a3ddd297f003f01bbd2}{S\-T\-R\-I\-N\-G\-B\-I\-N} $\ast$ \hyperlink{key_8palette_8h_aefb5e21532a0c6fe1a08485972d9149d}{read\-\_\-names} (F\-I\-L\-E $\ast$fd, \hyperlink{turtle_8h_ade34e6dff3489a3ddd297f003f01bbd2}{S\-T\-R\-I\-N\-G\-B\-I\-N} $\ast$keywords, char $\ast$empty\-\_\-name, short print)
+\item 
+void \hyperlink{key_8palette_8h_acbc1ac8768b210f3b5239f6e3e2f87c5}{write\-\_\-keywords} (\hyperlink{struct_k_e_y_w_o_r_d_s}{K\-E\-Y\-W\-O\-R\-D\-S} $\ast$keywords)
+\item 
+void \hyperlink{key_8palette_8h_af2da071a7827133ce52d2212d3e50ce3}{write\-\_\-read\-\_\-filenames} (\hyperlink{turtle_8h_ade34e6dff3489a3ddd297f003f01bbd2}{S\-T\-R\-I\-N\-G\-B\-I\-N} $\ast$\hyperlink{main_8c_a528421ce34267070764970b021f6034a}{filenames}, \hyperlink{turtle_8h_ade34e6dff3489a3ddd297f003f01bbd2}{S\-T\-R\-I\-N\-G\-B\-I\-N} $\ast$comments)
+\item 
+\hyperlink{struct_k_e_y_w_o_r_d_s___l_i_s_t}{K\-E\-Y\-W\-O\-R\-D\-S\-\_\-\-L\-I\-S\-T} $\ast$ \hyperlink{key_8palette_8h_a26c92fd9046041021a83d018629b38ee}{read\-\_\-keywords\-\_\-list} (char $\ast$filename, short print)
+\item 
+\hyperlink{struct_k_e_y_w_o_r_d_s___l_i_s_t}{K\-E\-Y\-W\-O\-R\-D\-S\-\_\-\-L\-I\-S\-T} $\ast$ \hyperlink{key_8palette_8h_aa5af77ec13570fe20c39eae8103f8329}{reorder\-\_\-keywords\-\_\-list} (\hyperlink{struct_k_e_y_w_o_r_d_s___l_i_s_t}{K\-E\-Y\-W\-O\-R\-D\-S\-\_\-\-L\-I\-S\-T} $\ast$written\-\_\-palette, \hyperlink{turtle_8h_ade34e6dff3489a3ddd297f003f01bbd2}{S\-T\-R\-I\-N\-G\-B\-I\-N} $\ast$keywords\-\_\-model, long jread, char $\ast$empty\-\_\-name)
+\item 
+void \hyperlink{key_8palette_8h_a9e48794372d3e26a60e1225896601049}{free\-\_\-keywords\-\_\-list} (\hyperlink{struct_k_e_y_w_o_r_d_s___l_i_s_t}{K\-E\-Y\-W\-O\-R\-D\-S\-\_\-\-L\-I\-S\-T} $\ast$keywords\-\_\-list)
+\item 
+\hyperlink{struct_k_e_y_w_o_r_d_s___l_i_s_t}{K\-E\-Y\-W\-O\-R\-D\-S\-\_\-\-L\-I\-S\-T} $\ast$ \hyperlink{key_8palette_8h_a3fb6434ed083549639333d6201fdb834}{read\-\_\-and\-\_\-reorder\-\_\-keywords\-\_\-list} (char $\ast$filename, \hyperlink{turtle_8h_ade34e6dff3489a3ddd297f003f01bbd2}{S\-T\-R\-I\-N\-G\-B\-I\-N} $\ast$keywords\-\_\-model, long jread, char $\ast$empty\-\_\-name, short print)
+\item 
+\hyperlink{turtle_8h_ade34e6dff3489a3ddd297f003f01bbd2}{S\-T\-R\-I\-N\-G\-B\-I\-N} $\ast$ \hyperlink{key_8palette_8h_a6e5e4779b448aaced3d5f6259a0b6c4b}{join\-\_\-path\-\_\-to\-\_\-stringbin} (char $\ast$path, \hyperlink{turtle_8h_ade34e6dff3489a3ddd297f003f01bbd2}{S\-T\-R\-I\-N\-G\-B\-I\-N} $\ast$stringvector, char $\ast$no\-\_\-joinstring)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+$<$ 
+
+Definition in file \hyperlink{key_8palette_8h_source}{key.\-palette.\-h}.
+
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{key_8palette_8h_a9271914a463357a7bc82fd5e9b368ea7}{\index{key.\-palette.\-h@{key.\-palette.\-h}!E\-M\-P\-T\-Y\-\_\-\-V\-A\-L\-U\-E@{E\-M\-P\-T\-Y\-\_\-\-V\-A\-L\-U\-E}}
+\index{E\-M\-P\-T\-Y\-\_\-\-V\-A\-L\-U\-E@{E\-M\-P\-T\-Y\-\_\-\-V\-A\-L\-U\-E}!key.palette.h@{key.\-palette.\-h}}
+\subsubsection[{E\-M\-P\-T\-Y\-\_\-\-V\-A\-L\-U\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define E\-M\-P\-T\-Y\-\_\-\-V\-A\-L\-U\-E~-\/99}}\label{key_8palette_8h_a9271914a463357a7bc82fd5e9b368ea7}
+
+
+Definition at line 28 of file key.\-palette.\-h.
+
+
+
+Referenced by read\-\_\-names(), and reorder\-\_\-keywords\-\_\-list().
+
+\hypertarget{key_8palette_8h_aba5f77952b3945c6401fbb3d4b54f334}{\index{key.\-palette.\-h@{key.\-palette.\-h}!N\-O\-M\-O\-D\-E\-L\-\_\-\-N\-A\-M\-E@{N\-O\-M\-O\-D\-E\-L\-\_\-\-N\-A\-M\-E}}
+\index{N\-O\-M\-O\-D\-E\-L\-\_\-\-N\-A\-M\-E@{N\-O\-M\-O\-D\-E\-L\-\_\-\-N\-A\-M\-E}!key.palette.h@{key.\-palette.\-h}}
+\subsubsection[{N\-O\-M\-O\-D\-E\-L\-\_\-\-N\-A\-M\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define N\-O\-M\-O\-D\-E\-L\-\_\-\-N\-A\-M\-E~\char`\"{}O\-F\-F\char`\"{}}}\label{key_8palette_8h_aba5f77952b3945c6401fbb3d4b54f334}
+
+
+Definition at line 32 of file key.\-palette.\-h.
+
+
+
+\subsection{Function Documentation}
+\hypertarget{key_8palette_8h_a0baa14991a251ae7376d5d6653bdad81}{\index{key.\-palette.\-h@{key.\-palette.\-h}!free\-\_\-keywords@{free\-\_\-keywords}}
+\index{free\-\_\-keywords@{free\-\_\-keywords}!key.palette.h@{key.\-palette.\-h}}
+\subsubsection[{free\-\_\-keywords}]{\setlength{\rightskip}{0pt plus 5cm}void free\-\_\-keywords (
+\begin{DoxyParamCaption}
+\item[{{\bf K\-E\-Y\-W\-O\-R\-D\-S} $\ast$}]{keywords}
+\end{DoxyParamCaption}
+)}}\label{key_8palette_8h_a0baa14991a251ae7376d5d6653bdad81}
+void \hyperlink{key_8palette_8h_a0baa14991a251ae7376d5d6653bdad81}{free\-\_\-keywords(\-K\-E\-Y\-W\-O\-R\-D\-S $\ast$keywords)}
+
+
+\begin{DoxyParams}{Parameters}
+{\em keywords} & -\/ (\hyperlink{struct_k_e_y_w_o_r_d_s}{K\-E\-Y\-W\-O\-R\-D\-S} $\ast$) a generic variable\\
+\hline
+\end{DoxyParams}
+It frees the mamory allovcated by keywords \begin{DoxyAuthor}{Author}
+Emanuele Cordano
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+1 Fabruary 2008
+\end{DoxyDate}
+
+
+Definition at line 447 of file key.\-palette.\-c.
+
+
+
+References K\-E\-Y\-W\-O\-R\-D\-S\-::comments, free\-\_\-stringbin(), and K\-E\-Y\-W\-O\-R\-D\-S\-::names.
+
+
+
+Referenced by free\-\_\-keywords\-\_\-list(), get\-\_\-filenames\-\_\-from\-\_\-keys(), and read\-\_\-names().
+
+\hypertarget{key_8palette_8h_a9e48794372d3e26a60e1225896601049}{\index{key.\-palette.\-h@{key.\-palette.\-h}!free\-\_\-keywords\-\_\-list@{free\-\_\-keywords\-\_\-list}}
+\index{free\-\_\-keywords\-\_\-list@{free\-\_\-keywords\-\_\-list}!key.palette.h@{key.\-palette.\-h}}
+\subsubsection[{free\-\_\-keywords\-\_\-list}]{\setlength{\rightskip}{0pt plus 5cm}void free\-\_\-keywords\-\_\-list (
+\begin{DoxyParamCaption}
+\item[{{\bf K\-E\-Y\-W\-O\-R\-D\-S\-\_\-\-L\-I\-S\-T} $\ast$}]{keywords\-\_\-list}
+\end{DoxyParamCaption}
+)}}\label{key_8palette_8h_a9e48794372d3e26a60e1225896601049}
+void free\-\_\-keywords\-\_\-array(K\-E\-Y\-W\-O\-R\-D\-S\-\_\-\-L\-I\-S\-T$\ast$ keywords\-\_\-list
+
+
+\begin{DoxyParams}{Parameters}
+{\em keywords\-\_\-list} & -\/ (K\-E\-Y\-W\-O\-R\-D\-\_\-\-L\-I\-S\-T $\ast$) a generic variable It frees the mamory allovcated by keywords\-\_\-list\\
+\hline
+\end{DoxyParams}
+\begin{DoxyAuthor}{Author}
+Emanuele Cordano
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+13 Fabruary 2008
+\end{DoxyDate}
+
+
+Definition at line 414 of file key.\-palette.\-c.
+
+
+
+References K\-E\-Y\-W\-O\-R\-D\-S\-\_\-\-L\-I\-S\-T\-::element, free\-\_\-keywords(), and K\-E\-Y\-W\-O\-R\-D\-S\-\_\-\-L\-I\-S\-T\-::nl.
+
+
+
+Referenced by read\-\_\-and\-\_\-reorder\-\_\-keywords\-\_\-list().
+
+\hypertarget{key_8palette_8h_a6e5e4779b448aaced3d5f6259a0b6c4b}{\index{key.\-palette.\-h@{key.\-palette.\-h}!join\-\_\-path\-\_\-to\-\_\-stringbin@{join\-\_\-path\-\_\-to\-\_\-stringbin}}
+\index{join\-\_\-path\-\_\-to\-\_\-stringbin@{join\-\_\-path\-\_\-to\-\_\-stringbin}!key.palette.h@{key.\-palette.\-h}}
+\subsubsection[{join\-\_\-path\-\_\-to\-\_\-stringbin}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\-T\-R\-I\-N\-G\-B\-I\-N}$\ast$ join\-\_\-path\-\_\-to\-\_\-stringbin (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{path, }
+\item[{{\bf S\-T\-R\-I\-N\-G\-B\-I\-N} $\ast$}]{stringvector, }
+\item[{char $\ast$}]{no\-\_\-joinstring}
+\end{DoxyParamCaption}
+)}}\label{key_8palette_8h_a6e5e4779b448aaced3d5f6259a0b6c4b}
+
+
+Definition at line 587 of file key.\-palette.\-c.
+
+
+
+References free\-\_\-longvector(), st\-::index, join\-\_\-strings(), new\-\_\-longvector(), new\-\_\-stringbin(), L\-O\-N\-G\-V\-E\-C\-T\-O\-R\-::nh, and L\-O\-N\-G\-V\-E\-C\-T\-O\-R\-::nl.
+
+
+
+Referenced by get\-\_\-filenames\-\_\-from\-\_\-keys().
+
+\hypertarget{key_8palette_8h_a3fb6434ed083549639333d6201fdb834}{\index{key.\-palette.\-h@{key.\-palette.\-h}!read\-\_\-and\-\_\-reorder\-\_\-keywords\-\_\-list@{read\-\_\-and\-\_\-reorder\-\_\-keywords\-\_\-list}}
+\index{read\-\_\-and\-\_\-reorder\-\_\-keywords\-\_\-list@{read\-\_\-and\-\_\-reorder\-\_\-keywords\-\_\-list}!key.palette.h@{key.\-palette.\-h}}
+\subsubsection[{read\-\_\-and\-\_\-reorder\-\_\-keywords\-\_\-list}]{\setlength{\rightskip}{0pt plus 5cm}{\bf K\-E\-Y\-W\-O\-R\-D\-S\-\_\-\-L\-I\-S\-T}$\ast$ read\-\_\-and\-\_\-reorder\-\_\-keywords\-\_\-list (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{filename, }
+\item[{{\bf S\-T\-R\-I\-N\-G\-B\-I\-N} $\ast$}]{keywords\-\_\-model, }
+\item[{long}]{jread, }
+\item[{char $\ast$}]{empty\-\_\-name, }
+\item[{short}]{print}
+\end{DoxyParamCaption}
+)}}\label{key_8palette_8h_a3fb6434ed083549639333d6201fdb834}
+\hyperlink{struct_k_e_y_w_o_r_d_s___l_i_s_t}{K\-E\-Y\-W\-O\-R\-D\-S\-\_\-\-L\-I\-S\-T} $\ast$read\-\_\-\&\-\_\-reorder\-\_\-keywords\-\_\-list(char $\ast$filename, S\-T\-R\-I\-N\-G\-B\-I\-N $\ast$keywords\-\_\-model, long jread, char $\ast$empty\-\_\-name,short print)
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & -\/ ($\ast$ char) a filemane used by read\-\_\-keywords\-\_\-list fuction \\
+\hline
+{\em keywords\-\_\-model} & -\/ ($\ast$ S\-T\-R\-I\-N\-G\-B\-I\-N) a string array containg the keyword of the model component \\
+\hline
+{\em jread} & -\/ ($\ast$ long) parameteres jread utized in reorder\-\_\-keyword\-\_\-list function \\
+\hline
+{\em empty\-\_\-name} & -\/ ($\ast$ char) name correspondis to a mising or inactive model component as utilized in reorder\-\_\-keyword\-\_\-list function \\
+\hline
+{\em print} & -\/(short) a short int used by Fluid\-Turle library\\
+\hline
+\end{DoxyParams}
+It reads a \hyperlink{struct_k_e_y_w_o_r_d_s___l_i_s_t}{K\-E\-Y\-W\-O\-R\-D\-S\-\_\-\-L\-I\-S\-T} containing the model component values using read\-\_\-keywords\-\_\-list function and reorders it according to the S\-T\-R\-I\-N\-G\-B\-I\-N keywords\-\_\-model using the reorder\-\_\-keywords\-\_\-list. \begin{DoxyVerb}    \relate read_keywords_list, reorder_keywords_list, FluidTurtle Library
+\end{DoxyVerb}
+
+
+\begin{DoxyAuthor}{Author}
+Emanuele Cordano
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+15 February 2008
+\end{DoxyDate}
+
+
+Definition at line 376 of file key.\-palette.\-c.
+
+
+
+References free\-\_\-keywords\-\_\-list(), read\-\_\-keywords\-\_\-list(), and reorder\-\_\-keywords\-\_\-list().
+
+\hypertarget{key_8palette_8h_a063db1416b2abf389b6e5afd75e686f9}{\index{key.\-palette.\-h@{key.\-palette.\-h}!read\-\_\-keywords@{read\-\_\-keywords}}
+\index{read\-\_\-keywords@{read\-\_\-keywords}!key.palette.h@{key.\-palette.\-h}}
+\subsubsection[{read\-\_\-keywords}]{\setlength{\rightskip}{0pt plus 5cm}{\bf K\-E\-Y\-W\-O\-R\-D\-S}$\ast$ read\-\_\-keywords (
+\begin{DoxyParamCaption}
+\item[{F\-I\-L\-E $\ast$}]{init, }
+\item[{short}]{print}
+\end{DoxyParamCaption}
+)}}\label{key_8palette_8h_a063db1416b2abf389b6e5afd75e686f9}
+\hyperlink{struct_k_e_y_w_o_r_d_s}{K\-E\-Y\-W\-O\-R\-D\-S} {\itshape read\-\_\-keywords (char} namefile\-\_\-init, short print)
+
+
+\begin{DoxyParams}{Parameters}
+{\em init} & -\/($\ast$ F\-I\-L\-E) File pointer \\
+\hline
+{\em print} & -\/(short) print as\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a \hyperlink{struct_k_e_y_w_o_r_d_s}{K\-E\-Y\-W\-O\-R\-D\-S} struct which contains two stringbins, one for the keyword names, the other for the referenced comments.
+\end{DoxyReturn}
+it reads a \hyperlink{struct_k_e_y_w_o_r_d_s}{K\-E\-Y\-W\-O\-R\-D\-S} struct from a string array
+
+\begin{DoxyAuthor}{Author}
+Emanuele Cordano
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+30 January 2008
+\end{DoxyDate}
+F\-L\-U\-I\-D\-T\-U\-R\-L\-E\-\_\-\-S\-T\-A\-T\-I\-C\-L\-I\-B\-R\-A\-R\-Y.\-read\-\_\-stringarray
+
+Definition at line 36 of file key.\-palette.\-c.
+
+
+
+References K\-E\-Y\-W\-O\-R\-D\-S\-::comments, free\-\_\-longvector(), free\-\_\-stringbin(), st\-::index, K\-E\-Y\-W\-O\-R\-D\-S\-::names, new\-\_\-longvector(), new\-\_\-stringbin(), L\-O\-N\-G\-V\-E\-C\-T\-O\-R\-::nh, L\-O\-N\-G\-V\-E\-C\-T\-O\-R\-::nl, read\-\_\-stringarray(), and t\-\_\-error().
+
+
+
+Referenced by get\-\_\-filenames\-\_\-from\-\_\-keys(), read\-\_\-keywords\-\_\-list(), and read\-\_\-names().
+
+\hypertarget{key_8palette_8h_a26c92fd9046041021a83d018629b38ee}{\index{key.\-palette.\-h@{key.\-palette.\-h}!read\-\_\-keywords\-\_\-list@{read\-\_\-keywords\-\_\-list}}
+\index{read\-\_\-keywords\-\_\-list@{read\-\_\-keywords\-\_\-list}!key.palette.h@{key.\-palette.\-h}}
+\subsubsection[{read\-\_\-keywords\-\_\-list}]{\setlength{\rightskip}{0pt plus 5cm}{\bf K\-E\-Y\-W\-O\-R\-D\-S\-\_\-\-L\-I\-S\-T}$\ast$ read\-\_\-keywords\-\_\-list (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{filename, }
+\item[{short}]{print}
+\end{DoxyParamCaption}
+)}}\label{key_8palette_8h_a26c92fd9046041021a83d018629b38ee}
+\begin{DoxyVerb}KEYWORDS_LIST *read_keywords_array (char *filename, short print)
+\end{DoxyVerb}
+
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & -\/($\ast$ char) a filename \\
+\hline
+{\em print} & -\/(short) a short int used by Fluid\-Turle functions\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a \hyperlink{struct_k_e_y_w_o_r_d_s___l_i_s_t}{K\-E\-Y\-W\-O\-R\-D\-S\-\_\-\-L\-I\-S\-T} struct which contains two or more K\-E\-Y\-W\-O\-R\-D structs.
+\end{DoxyReturn}
+it reads a \hyperlink{struct_k_e_y_w_o_r_d_s___l_i_s_t}{K\-E\-Y\-W\-O\-R\-D\-S\-\_\-\-L\-I\-S\-T} struct from a
+
+\begin{DoxyAuthor}{Author}
+Emanuele Cordano
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+13 Fabruary 2008
+\end{DoxyDate}
+The function reads a ascii file written in Fluid\-Turtle Format
+
+F\-L\-U\-I\-D\-T\-U\-R\-L\-E\-\_\-\-S\-T\-A\-T\-I\-C\-L\-I\-B\-R\-A\-R\-Y.\-read\-\_\-stringarray
+
+$<$ read file keywords string 
+
+Definition at line 124 of file key.\-palette.\-c.
+
+
+
+References K\-E\-Y\-W\-O\-R\-D\-S\-\_\-\-L\-I\-S\-T\-::element, is\-Dynamic, K\-E\-Y\-W\-O\-R\-D\-S\-\_\-\-L\-I\-S\-T\-::isdynamic, K\-E\-Y\-W\-O\-R\-D\-S\-\_\-\-L\-I\-S\-T\-::nh, K\-E\-Y\-W\-O\-R\-D\-S\-\_\-\-L\-I\-S\-T\-::nl, N\-L, N\-R\-\_\-\-E\-N\-D, read\-\_\-index(), read\-\_\-keywords(), t\-\_\-error(), t\-\_\-fclose(), and t\-\_\-fopen().
+
+
+
+Referenced by read\-\_\-and\-\_\-reorder\-\_\-keywords\-\_\-list().
+
+\hypertarget{key_8palette_8h_aefb5e21532a0c6fe1a08485972d9149d}{\index{key.\-palette.\-h@{key.\-palette.\-h}!read\-\_\-names@{read\-\_\-names}}
+\index{read\-\_\-names@{read\-\_\-names}!key.palette.h@{key.\-palette.\-h}}
+\subsubsection[{read\-\_\-names}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\-T\-R\-I\-N\-G\-B\-I\-N}$\ast$ read\-\_\-names (
+\begin{DoxyParamCaption}
+\item[{F\-I\-L\-E $\ast$}]{fd, }
+\item[{{\bf S\-T\-R\-I\-N\-G\-B\-I\-N} $\ast$}]{keywords, }
+\item[{char $\ast$}]{empty\-\_\-name, }
+\item[{short}]{print}
+\end{DoxyParamCaption}
+)}}\label{key_8palette_8h_aefb5e21532a0c6fe1a08485972d9149d}
+$<$ S\-T\-R\-I\-N\-G\-B\-I\-N $\ast$read\-\_\-names(F\-I\-L\-E $\ast$fd, S\-T\-R\-I\-N\-G\-B\-I\-N $\ast$keywords, char $\ast$empty\-\_\-name,short print) $\ast$
+
+
+\begin{DoxyParams}{Parameters}
+{\em fd} & -\/ ($\ast$ F\-I\-L\-E) file pointer \\
+\hline
+{\em keywords} & -\/ ($\ast$ S\-T\-R\-I\-N\-G\-B\-I\-N) the string array containig the file keywords \\
+\hline
+{\em empty\-\_\-name} & ($\ast$ char) -\/ a string indicating a missing file\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a S\-T\-R\-I\-N\-G\-N\-I\-N containing the filenames order according to S\-T\-R\-I\-N\-G\-B\-I\-N $\ast$keywords.
+\end{DoxyReturn}
+It reads a string array containg a series of filenames and reorders it according to S\-T\-R\-I\-N\-G\-B\-I\-N $\ast$keywords.
+
+The reed string array is like a K\-E\-Y\-W\-O\-R\-D struct\-: filename1, K\-E\-Y\-W\-W\-O\-R\-D1, filename22, K\-E\-Y\-W\-O\-R\-D22. The filenames can be written in a scatterdc order and must be followed by the keyword of the filetype ther are referred to . \begin{DoxyVerb}     \relate FluidTurtle Library,
+\end{DoxyVerb}
+
+
+\begin{DoxyAuthor}{Author}
+Emanuele Cordano
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+6 Fabruary 2008
+\end{DoxyDate}
+
+
+Definition at line 475 of file key.\-palette.\-c.
+
+
+
+References K\-E\-Y\-W\-O\-R\-D\-S\-::comments, E\-M\-P\-T\-Y\-\_\-\-V\-A\-L\-U\-E, free\-\_\-keywords(), free\-\_\-longvector(), st\-::index, join\-\_\-strings(), K\-E\-Y\-W\-O\-R\-D\-S\-::names, new\-\_\-longvector(), new\-\_\-stringbin(), L\-O\-N\-G\-V\-E\-C\-T\-O\-R\-::nh, L\-O\-N\-G\-V\-E\-C\-T\-O\-R\-::nl, read\-\_\-keywords(), and R\-E\-F\-K.
+
+
+
+Referenced by get\-\_\-filenames\-\_\-from\-\_\-keys().
+
+\hypertarget{key_8palette_8h_aa5af77ec13570fe20c39eae8103f8329}{\index{key.\-palette.\-h@{key.\-palette.\-h}!reorder\-\_\-keywords\-\_\-list@{reorder\-\_\-keywords\-\_\-list}}
+\index{reorder\-\_\-keywords\-\_\-list@{reorder\-\_\-keywords\-\_\-list}!key.palette.h@{key.\-palette.\-h}}
+\subsubsection[{reorder\-\_\-keywords\-\_\-list}]{\setlength{\rightskip}{0pt plus 5cm}{\bf K\-E\-Y\-W\-O\-R\-D\-S\-\_\-\-L\-I\-S\-T}$\ast$ reorder\-\_\-keywords\-\_\-list (
+\begin{DoxyParamCaption}
+\item[{{\bf K\-E\-Y\-W\-O\-R\-D\-S\-\_\-\-L\-I\-S\-T} $\ast$}]{written\-\_\-palette, }
+\item[{{\bf S\-T\-R\-I\-N\-G\-B\-I\-N} $\ast$}]{keywords\-\_\-model, }
+\item[{long}]{jread, }
+\item[{char $\ast$}]{empty\-\_\-name}
+\end{DoxyParamCaption}
+)}}\label{key_8palette_8h_aa5af77ec13570fe20c39eae8103f8329}
+\begin{DoxyVerb}  KEYWORD_LIST *reorder_keyword_list(KEYWOWORD_LIST *written_palette, STRINGBIN *keywords_model,long jread)
+\end{DoxyVerb}
+ tempo troppo alto 
+\begin{DoxyParams}{Parameters}
+{\em written\-\_\-palette} & -\/ ($\ast$ \hyperlink{struct_k_e_y_w_o_r_d_s___l_i_s_t}{K\-E\-Y\-W\-O\-R\-D\-S\-\_\-\-L\-I\-S\-T}) a \hyperlink{struct_k_e_y_w_o_r_d_s___l_i_s_t}{K\-E\-Y\-W\-O\-R\-D\-S\-\_\-\-L\-I\-S\-T} struct written in a scattered way \\
+\hline
+{\em keywords\-\_\-model} & -\/ ($\ast$ S\-T\-R\-I\-N\-G\-B\-I\-N ) a stringbin which contains the model keywords in the correct order \\
+\hline
+{\em jread} & -\/ (long) -\/ the number releted to the element for each \hyperlink{struct_k_e_y_w_o_r_d_s}{K\-E\-Y\-W\-O\-R\-D\-S} struct contained in keywords\-\_\-model which contains the model keyword \\
+\hline
+{\em empty\-\_\-name} & -\/ ($\ast$ char) the value which correspons to a missing or inactive model component\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a \hyperlink{struct_k_e_y_w_o_r_d_s___l_i_s_t}{K\-E\-Y\-W\-O\-R\-D\-S\-\_\-\-L\-I\-S\-T} for the model keyword and value in the correct order as reported in written\-\_\-palette
+\end{DoxyReturn}
+It reorder the keywords\-\_\-model according to the keyword oreder in written\-\_\-palette.
+
+The variable keyword\-\_\-model contains two or more \hyperlink{struct_k_e_y_w_o_r_d_s}{K\-E\-Y\-W\-O\-R\-D\-S} struct. In each of these the jread-\/th element is the keyword of the model component (normally jread is assumed equal to 1), the other elements all possible values of the model component. Here the order of the model component is here modifed according to the order of the keywords in written\-\_\-palette. \begin{DoxyVerb}       \relate FluidTurtle librariy
+\end{DoxyVerb}
+
+
+\begin{DoxyDate}{Date}
+13 February 2008
+\end{DoxyDate}
+\begin{DoxyAuthor}{Author}
+Emanuele Cordano
+\end{DoxyAuthor}
+
+
+Definition at line 259 of file key.\-palette.\-c.
+
+
+
+References K\-E\-Y\-W\-O\-R\-D\-S\-::comments, K\-E\-Y\-W\-O\-R\-D\-S\-\_\-\-L\-I\-S\-T\-::element, E\-M\-P\-T\-Y\-\_\-\-V\-A\-L\-U\-E, free\-\_\-longvector(), st\-::index, is\-Dynamic, K\-E\-Y\-W\-O\-R\-D\-S\-\_\-\-L\-I\-S\-T\-::isdynamic, K\-E\-Y\-W\-O\-R\-D\-S\-::names, new\-\_\-longvector(), new\-\_\-stringbin(), K\-E\-Y\-W\-O\-R\-D\-S\-\_\-\-L\-I\-S\-T\-::nh, L\-O\-N\-G\-V\-E\-C\-T\-O\-R\-::nh, K\-E\-Y\-W\-O\-R\-D\-S\-\_\-\-L\-I\-S\-T\-::nl, L\-O\-N\-G\-V\-E\-C\-T\-O\-R\-::nl, N\-R\-\_\-\-E\-N\-D, and t\-\_\-error().
+
+
+
+Referenced by read\-\_\-and\-\_\-reorder\-\_\-keywords\-\_\-list().
+
+\hypertarget{key_8palette_8h_acbc1ac8768b210f3b5239f6e3e2f87c5}{\index{key.\-palette.\-h@{key.\-palette.\-h}!write\-\_\-keywords@{write\-\_\-keywords}}
+\index{write\-\_\-keywords@{write\-\_\-keywords}!key.palette.h@{key.\-palette.\-h}}
+\subsubsection[{write\-\_\-keywords}]{\setlength{\rightskip}{0pt plus 5cm}void write\-\_\-keywords (
+\begin{DoxyParamCaption}
+\item[{{\bf K\-E\-Y\-W\-O\-R\-D\-S} $\ast$}]{keywords}
+\end{DoxyParamCaption}
+)}}\label{key_8palette_8h_acbc1ac8768b210f3b5239f6e3e2f87c5}
+void \hyperlink{key_8palette_8h_acbc1ac8768b210f3b5239f6e3e2f87c5}{write\-\_\-keywords(\-K\-E\-Y\-W\-O\-R\-D\-S $\ast$keywords)}
+
+\begin{DoxyDate}{Date}
+13 February 2006
+\end{DoxyDate}
+\begin{DoxyAuthor}{Author}
+Emanuele Cordano
+\end{DoxyAuthor}
+This function writes all the elements of a K\-E\-Y\-W\-O\-R\-D struct. This function was made to test all the functions contains in this .c file.
+
+Definition at line 184 of file key.\-palette.\-c.
+
+
+
+References K\-E\-Y\-W\-O\-R\-D\-S\-::comments, st\-::index, K\-E\-Y\-W\-O\-R\-D\-S\-::names, and L\-O\-N\-G\-V\-E\-C\-T\-O\-R\-::nl.
+
+
+
+Referenced by get\-\_\-filenames\-\_\-from\-\_\-keys().
+
+\hypertarget{key_8palette_8h_af2da071a7827133ce52d2212d3e50ce3}{\index{key.\-palette.\-h@{key.\-palette.\-h}!write\-\_\-read\-\_\-filenames@{write\-\_\-read\-\_\-filenames}}
+\index{write\-\_\-read\-\_\-filenames@{write\-\_\-read\-\_\-filenames}!key.palette.h@{key.\-palette.\-h}}
+\subsubsection[{write\-\_\-read\-\_\-filenames}]{\setlength{\rightskip}{0pt plus 5cm}void write\-\_\-read\-\_\-filenames (
+\begin{DoxyParamCaption}
+\item[{{\bf S\-T\-R\-I\-N\-G\-B\-I\-N} $\ast$}]{filenames, }
+\item[{{\bf S\-T\-R\-I\-N\-G\-B\-I\-N} $\ast$}]{comments}
+\end{DoxyParamCaption}
+)}}\label{key_8palette_8h_af2da071a7827133ce52d2212d3e50ce3}
+void \hyperlink{key_8palette_8h_af2da071a7827133ce52d2212d3e50ce3}{write\-\_\-read\-\_\-filenames(\-S\-T\-R\-I\-N\-G\-B\-I\-N $\ast$filenames, S\-T\-R\-I\-N\-G\-B\-I\-N $\ast$comments)}
+
+\begin{DoxyAuthor}{Author}
+Emanuele Cordano
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+8 Fabruary 2008
+\end{DoxyDate}
+
+
+Definition at line 216 of file key.\-palette.\-c.
+
+
+
+References st\-::index, L\-O\-N\-G\-V\-E\-C\-T\-O\-R\-::nh, L\-O\-N\-G\-V\-E\-C\-T\-O\-R\-::nl, and t\-\_\-error().
+
+
+
+Referenced by get\-\_\-filenames\-\_\-from\-\_\-keys().
+

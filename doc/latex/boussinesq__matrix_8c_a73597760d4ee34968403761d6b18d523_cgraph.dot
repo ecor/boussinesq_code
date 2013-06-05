@@ -1,0 +1,35 @@
+digraph "get_t_Matrix_elements"
+{
+  bgcolor="transparent";
+  edge [fontname="FreeSans",fontsize="10",labelfontname="FreeSans",labelfontsize="10"];
+  node [fontname="FreeSans",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="get_t_Matrix_elements",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="free_doublevector",height=0.2,width=0.4,color="black",URL="$alloc_8c.html#a9f8d1eb0558ac1ddc1ab2cdbd25eba49"];
+  Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="free_dvector",height=0.2,width=0.4,color="black",URL="$alloc_8c.html#a3f159bec2c468d142a1ce6f3158332b5"];
+  Node2 -> Node4 [color="midnightblue",fontsize="10",style="solid"];
+  Node4 [label="t_error",height=0.2,width=0.4,color="black",URL="$error_8c.html#af79ef7c6656ef0f3d2786e2b09c1755f"];
+  Node1 -> Node5 [color="midnightblue",fontsize="10",style="solid"];
+  Node5 [label="free_longvector",height=0.2,width=0.4,color="black",URL="$alloc_8c.html#a04fde7eac99d9b9020b658a49670f86c"];
+  Node5 -> Node6 [color="midnightblue",fontsize="10",style="solid"];
+  Node6 [label="free_lvector",height=0.2,width=0.4,color="black",URL="$alloc_8c.html#a06786bf777613d3724c0f5e8425a03af"];
+  Node5 -> Node4 [color="midnightblue",fontsize="10",style="solid"];
+  Node1 -> Node7 [color="midnightblue",fontsize="10",style="solid"];
+  Node7 [label="new_doublebin",height=0.2,width=0.4,color="black",URL="$alloc_8c.html#a445934248c417d34690f83ff105f54b8"];
+  Node7 -> Node8 [color="midnightblue",fontsize="10",style="solid"];
+  Node8 [label="new_longvector",height=0.2,width=0.4,color="black",URL="$alloc_8c.html#a85853f82d1b0df7d49c675476f31c68f"];
+  Node8 -> Node9 [color="midnightblue",fontsize="10",style="solid"];
+  Node9 [label="lvector",height=0.2,width=0.4,color="black",URL="$alloc_8c.html#af4f505f2dcb9ffd8fb12a7750b38b7e5"];
+  Node9 -> Node4 [color="midnightblue",fontsize="10",style="solid"];
+  Node8 -> Node4 [color="midnightblue",fontsize="10",style="solid"];
+  Node7 -> Node4 [color="midnightblue",fontsize="10",style="solid"];
+  Node1 -> Node10 [color="midnightblue",fontsize="10",style="solid"];
+  Node10 [label="new_doublevector",height=0.2,width=0.4,color="black",URL="$alloc_8c.html#a724e4d54ff17ee3caa26463378109887"];
+  Node10 -> Node11 [color="midnightblue",fontsize="10",style="solid"];
+  Node11 [label="dvector",height=0.2,width=0.4,color="black",URL="$alloc_8c.html#ae21c4c252ad5d5710ebd03d6f07e40de"];
+  Node11 -> Node4 [color="midnightblue",fontsize="10",style="solid"];
+  Node10 -> Node4 [color="midnightblue",fontsize="10",style="solid"];
+  Node1 -> Node8 [color="midnightblue",fontsize="10",style="solid"];
+}

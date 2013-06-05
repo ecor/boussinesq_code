@@ -1,0 +1,469 @@
+\hypertarget{b__v__advection_8c}{\section{Boussinesq/b\-\_\-v\-\_\-advection.c File Reference}
+\label{b__v__advection_8c}\index{Boussinesq/b\-\_\-v\-\_\-advection.\-c@{Boussinesq/b\-\_\-v\-\_\-advection.\-c}}
+}
+{\ttfamily \#include \char`\"{}turtle.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}t\-\_\-alloc.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}t\-\_\-utilities.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}rw\-\_\-maps.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}geometry.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}g\-\_\-raster2plvector.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}bigcells2.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}geometry2.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}b\-\_\-utilities.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}b\-\_\-solver.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}keywords\-\_\-file\-\_\-b.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}b\-\_\-volumes.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}b\-\_\-v\-\_\-advection.\-h\char`\"{}}\\*
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{b__v__advection_8c_a786f702f75fa52eb77ac8bd10f568dd7}{V\-E\-L\-O\-C\-I\-T\-Y\-\_\-\-I\-N\-I\-T\-I\-A\-L\-I\-Z\-A\-T\-I\-O\-N\-\_\-\-V\-A\-L\-U\-E}~-\/9999
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+double \hyperlink{b__v__advection_8c_adc7e14e2fe8653964086aee3bb8e9f70}{F1\-\_\-coefficient} (long j, double velocity, double wet\-\_\-vert\-\_\-area)
+\item 
+double \hyperlink{b__v__advection_8c_a9e2acc2503e0ec1d0bf308fd56e00cc3}{b\-\_\-advection} (long i)
+\item 
+double \hyperlink{b__v__advection_8c_a5aeb3dfcddcdffbfeccd32979db2cb49}{t\-\_\-st\-\_\-advection\-\_\-operator\-\_\-element} (long i, \hyperlink{struct_d_o_u_b_l_e_v_e_c_t_o_r}{D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} $\ast$eta, double cond\-\_\-dirichlet)
+\item 
+double \hyperlink{b__v__advection_8c_a90b462038ce0e2e224027de0a94b58d0}{symmetric\-\_\-surface\-\_\-velocity} (long j, double forcing)
+\item 
+double \hyperlink{b__v__advection_8c_aaa9d41114a112f7ecee5de89a79bb2e3}{asymmetric\-\_\-surface\-\_\-velocity} (long j, double eta\-\_\-previous)
+\item 
+int \hyperlink{b__v__advection_8c_ac10b61fc14a6ed150f7d5ab8f857a8cc}{update\-\_\-velocity} (\hyperlink{struct_d_o_u_b_l_e_v_e_c_t_o_r}{D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} $\ast$eta)
+\item 
+int \hyperlink{b__v__advection_8c_a8df92a756c3235732dbf2aa3aacb7802}{update\-\_\-\-F1\-\_\-wet\-\_\-vert\-\_\-area} ()
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{turtle_8h_ade34e6dff3489a3ddd297f003f01bbd2}{S\-T\-R\-I\-N\-G\-B\-I\-N} $\ast$ \hyperlink{b__v__advection_8c_a528421ce34267070764970b021f6034a}{filenames}
+\item 
+\hyperlink{struct_d_o_u_b_l_e_r_a_s_t_e_r___m_a_p}{D\-O\-U\-B\-L\-E\-R\-A\-S\-T\-E\-R\-\_\-\-M\-A\-P} $\ast$ \hyperlink{b__v__advection_8c_a44d81a9ca5648f4ec1c298c7f37fefff}{draster}
+\item 
+\hyperlink{struct_d_o_u_b_l_e___g_r_i_d}{D\-O\-U\-B\-L\-E\-\_\-\-G\-R\-I\-D} $\ast$ \hyperlink{b__v__advection_8c_ab58c424a59f28ac6b17e7b7f5aae6152}{dgrid}
+\item 
+\hyperlink{struct_p_a_r_a_m}{P\-A\-R\-A\-M} $\ast$ \hyperlink{b__v__advection_8c_ad8ac9ce29f12815d417a57b2c0dc31fb}{param}
+\item 
+\hyperlink{struct_f_l_a_g}{F\-L\-A\-G} $\ast$ \hyperlink{b__v__advection_8c_af669d66807986c96b4927566ae5e8b45}{flag}
+\item 
+\hyperlink{struct_d_o_u_b_l_e_v_e_c_t_o_r}{D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} $\ast$ \hyperlink{b__v__advection_8c_a48a2ac079f3ec064d28848bcdc54ed7c}{elevation\-\_\-bottom\-\_\-fine}
+\item 
+\hyperlink{struct_d_o_u_b_l_e_v_e_c_t_o_r}{D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} $\ast$ \hyperlink{b__v__advection_8c_a93f8bd854f98f2abe47c108484cf1c6b}{elevation\-\_\-bottom\-\_\-coarse}
+\item 
+\hyperlink{struct_d_o_u_b_l_e_v_e_c_t_o_r}{D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} $\ast$ \hyperlink{b__v__advection_8c_a495ebb69c21b8816ee4f7dfe0e1e6d98}{elevation\-\_\-bottom\-\_\-flines}
+\item 
+\hyperlink{struct_d_o_u_b_l_e_v_e_c_t_o_r}{D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} $\ast$ \hyperlink{b__v__advection_8c_a4cd3286ed17aff6164594f8a2d59f898}{elevation\-\_\-bottom\-\_\-bottom}
+\item 
+\hyperlink{struct_d_o_u_b_l_e_v_e_c_t_o_r}{D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} $\ast$ \hyperlink{b__v__advection_8c_a2f1a3b2841c6ed8ff4461dabf9a4b03c}{elevation\-\_\-terrain\-\_\-fine}
+\item 
+\hyperlink{struct_d_o_u_b_l_e_v_e_c_t_o_r}{D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} $\ast$ \hyperlink{b__v__advection_8c_a3328ead9d7ff307ac4b6847cd4a1205b}{elevation\-\_\-terrain\-\_\-flines}
+\item 
+\hyperlink{struct_d_o_u_b_l_e_v_e_c_t_o_r}{D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} $\ast$ \hyperlink{b__v__advection_8c_a8d58cb68a19f9ec3d36dcf606ce6ab8e}{outlet\-\_\-coefficient}
+\item 
+\hyperlink{struct_d_o_u_b_l_e_v_e_c_t_o_r}{D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} $\ast$ \hyperlink{b__v__advection_8c_acd5b5637e9d24f6f2641e08ed439b8b8}{porosity\-\_\-fine}
+\item 
+\hyperlink{struct_d_o_u_b_l_e_v_e_c_t_o_r}{D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} $\ast$ \hyperlink{b__v__advection_8c_afe877173190ce3813da775395bdf08bd}{runoff\-\_\-coefficient}
+\item 
+\hyperlink{struct_d_o_u_b_l_e_v_e_c_t_o_r}{D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} $\ast$ \hyperlink{b__v__advection_8c_a3ace2c97e74d7e8aad3670b479cb606d}{water\-\_\-surface\-\_\-elevation}
+\begin{DoxyCompactList}\small\item\em extern \hyperlink{struct_d_o_u_b_l_e_v_e_c_t_o_r}{D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} {\itshape runoff\-\_\-coefficient; /}!$<$map of the coefficient of the rating curve in the outlet q\-\_\-discharge=C$\ast$h\-\_\-sup$^\wedge$m $\ast$/ \end{DoxyCompactList}\item 
+\hyperlink{struct_d_o_u_b_l_e_v_e_c_t_o_r}{D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} $\ast$ \hyperlink{b__v__advection_8c_a97eff843a1a4985b0746ef826cc27822}{water\-\_\-mass\-\_\-error}
+\item 
+\hyperlink{struct_d_o_u_b_l_e_v_e_c_t_o_r}{D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} $\ast$ \hyperlink{b__v__advection_8c_ac2670c558f0154ba997b23d6d8184b6b}{surface\-\_\-water\-\_\-velocity}
+\item 
+\hyperlink{struct_d_o_u_b_l_e_v_e_c_t_o_r}{D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} $\ast$ \hyperlink{b__v__advection_8c_ad2a1214f97f2ea07f385b7c6ce403096}{F1\-\_\-wet\-\_\-vert\-\_\-area}
+\item 
+\hyperlink{struct_d_o_u_b_l_e_v_e_c_t_o_r}{D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} $\ast$ \hyperlink{b__v__advection_8c_aa9b4bc229995ad30e44cf2eaeb5d4756}{dirichlet}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{DoxyAuthor}{Author}
+Emanuele Cordano
+\end{DoxyAuthor}
+\begin{DoxyAttention}{Attention}
+
+\end{DoxyAttention}
+This file is part of Boussinesq.
+
+Boussinesq is free software\-: you can redistribute it and/or modify it under the terms of the G\-N\-U General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
+
+Boussinesq is distributed in the hope that it will be useful, but W\-I\-T\-H\-O\-U\-T A\-N\-Y W\-A\-R\-R\-A\-N\-T\-Y; without even the implied warranty of M\-E\-R\-C\-H\-A\-N\-T\-A\-B\-I\-L\-I\-T\-Y or F\-I\-T\-N\-E\-S\-S F\-O\-R A P\-A\-R\-T\-I\-C\-U\-L\-A\-R P\-U\-R\-P\-O\-S\-E. See the G\-N\-U General Public License for more details.
+
+You should have received a copy of the G\-N\-U General Public License along with Boussinesq. If not, see \href{http://www.gnu.org/licenses/}{\tt http\-://www.\-gnu.\-org/licenses/}. 
+
+Definition in file \hyperlink{b__v__advection_8c_source}{b\-\_\-v\-\_\-advection.\-c}.
+
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{b__v__advection_8c_a786f702f75fa52eb77ac8bd10f568dd7}{\index{b\-\_\-v\-\_\-advection.\-c@{b\-\_\-v\-\_\-advection.\-c}!V\-E\-L\-O\-C\-I\-T\-Y\-\_\-\-I\-N\-I\-T\-I\-A\-L\-I\-Z\-A\-T\-I\-O\-N\-\_\-\-V\-A\-L\-U\-E@{V\-E\-L\-O\-C\-I\-T\-Y\-\_\-\-I\-N\-I\-T\-I\-A\-L\-I\-Z\-A\-T\-I\-O\-N\-\_\-\-V\-A\-L\-U\-E}}
+\index{V\-E\-L\-O\-C\-I\-T\-Y\-\_\-\-I\-N\-I\-T\-I\-A\-L\-I\-Z\-A\-T\-I\-O\-N\-\_\-\-V\-A\-L\-U\-E@{V\-E\-L\-O\-C\-I\-T\-Y\-\_\-\-I\-N\-I\-T\-I\-A\-L\-I\-Z\-A\-T\-I\-O\-N\-\_\-\-V\-A\-L\-U\-E}!b_v_advection.c@{b\-\_\-v\-\_\-advection.\-c}}
+\subsubsection[{V\-E\-L\-O\-C\-I\-T\-Y\-\_\-\-I\-N\-I\-T\-I\-A\-L\-I\-Z\-A\-T\-I\-O\-N\-\_\-\-V\-A\-L\-U\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define V\-E\-L\-O\-C\-I\-T\-Y\-\_\-\-I\-N\-I\-T\-I\-A\-L\-I\-Z\-A\-T\-I\-O\-N\-\_\-\-V\-A\-L\-U\-E~-\/9999}}\label{b__v__advection_8c_a786f702f75fa52eb77ac8bd10f568dd7}
+
+
+Definition at line 73 of file b\-\_\-v\-\_\-advection.\-c.
+
+
+
+Referenced by update\-\_\-\-F1\-\_\-wet\-\_\-vert\-\_\-area(), and update\-\_\-velocity().
+
+
+
+\subsection{Function Documentation}
+\hypertarget{b__v__advection_8c_aaa9d41114a112f7ecee5de89a79bb2e3}{\index{b\-\_\-v\-\_\-advection.\-c@{b\-\_\-v\-\_\-advection.\-c}!asymmetric\-\_\-surface\-\_\-velocity@{asymmetric\-\_\-surface\-\_\-velocity}}
+\index{asymmetric\-\_\-surface\-\_\-velocity@{asymmetric\-\_\-surface\-\_\-velocity}!b_v_advection.c@{b\-\_\-v\-\_\-advection.\-c}}
+\subsubsection[{asymmetric\-\_\-surface\-\_\-velocity}]{\setlength{\rightskip}{0pt plus 5cm}double asymmetric\-\_\-surface\-\_\-velocity (
+\begin{DoxyParamCaption}
+\item[{long}]{j, }
+\item[{double}]{eta\-\_\-previous}
+\end{DoxyParamCaption}
+)}}\label{b__v__advection_8c_aaa9d41114a112f7ecee5de89a79bb2e3}
+\begin{DoxyAuthor}{Author}
+Emanuele Cordano 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+October 2009
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em j} & (long) line index\\
+\hline
+\end{DoxyParams}
+area\-\_\-vert; 
+
+Definition at line 234 of file b\-\_\-v\-\_\-advection.\-c.
+
+
+
+Referenced by b\-\_\-advection(), and update\-\_\-velocity().
+
+\hypertarget{b__v__advection_8c_a9e2acc2503e0ec1d0bf308fd56e00cc3}{\index{b\-\_\-v\-\_\-advection.\-c@{b\-\_\-v\-\_\-advection.\-c}!b\-\_\-advection@{b\-\_\-advection}}
+\index{b\-\_\-advection@{b\-\_\-advection}!b_v_advection.c@{b\-\_\-v\-\_\-advection.\-c}}
+\subsubsection[{b\-\_\-advection}]{\setlength{\rightskip}{0pt plus 5cm}double b\-\_\-advection (
+\begin{DoxyParamCaption}
+\item[{long}]{i}
+\end{DoxyParamCaption}
+)}}\label{b__v__advection_8c_a9e2acc2503e0ec1d0bf308fd56e00cc3}
+
+\begin{DoxyParams}{Parameters}
+{\em j} & -\/ (long) index of the polygon \\
+\hline
+{\em (global)velocity} & -\/ (\hyperlink{struct_d_o_u_b_l_e_v_e_c_t_o_r}{D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} $\ast$) eulerian velocity thourg the line \\
+\hline
+{\em (global)wat\-\_\-vert\-\_\-area} & -\/ (\hyperlink{struct_d_o_u_b_l_e_v_e_c_t_o_r}{D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} $\ast$) -\/ water vertical area over the j-\/th line multiplied by F1\\
+\hline
+\end{DoxyParams}
+\begin{DoxyAuthor}{Author}
+Emanuele Cordano 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+October 2009
+\end{DoxyDate}
+
+
+Definition at line 103 of file b\-\_\-v\-\_\-advection.\-c.
+
+
+
+References asymmetric\-\_\-surface\-\_\-velocity(), G\-R\-I\-D\-::boundary\-\_\-indicator, D\-O\-U\-B\-L\-E\-\_\-\-G\-R\-I\-D\-::coarse, polygon\-\_\-connection\-\_\-attributes\-::connections, P\-A\-R\-A\-M\-::dt, P\-O\-L\-Y\-G\-O\-N\-::edge\-\_\-indices, P\-O\-L\-Y\-G\-O\-N\-V\-E\-C\-T\-O\-R\-::element, polygon\-\_\-connection\-\_\-attribute\-\_\-array\-::element, G\-R\-I\-D\-::lines, G\-R\-I\-D\-::links, L\-I\-N\-E\-V\-E\-C\-T\-O\-R\-::nh, P\-O\-L\-Y\-G\-O\-N\-V\-E\-C\-T\-O\-R\-::nh, D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R\-::nh, L\-I\-N\-E\-V\-E\-C\-T\-O\-R\-::nl, P\-O\-L\-Y\-G\-O\-N\-V\-E\-C\-T\-O\-R\-::nl, L\-O\-N\-G\-V\-E\-C\-T\-O\-R\-::nl, G\-R\-I\-D\-::polygons, vertical\-\_\-area\-\_\-surf(), and water\-\_\-surface\-\_\-elevation\-\_\-mean().
+
+
+
+Referenced by time\-\_\-loop().
+
+\hypertarget{b__v__advection_8c_adc7e14e2fe8653964086aee3bb8e9f70}{\index{b\-\_\-v\-\_\-advection.\-c@{b\-\_\-v\-\_\-advection.\-c}!F1\-\_\-coefficient@{F1\-\_\-coefficient}}
+\index{F1\-\_\-coefficient@{F1\-\_\-coefficient}!b_v_advection.c@{b\-\_\-v\-\_\-advection.\-c}}
+\subsubsection[{F1\-\_\-coefficient}]{\setlength{\rightskip}{0pt plus 5cm}double F1\-\_\-coefficient (
+\begin{DoxyParamCaption}
+\item[{long}]{j, }
+\item[{double}]{velocity, }
+\item[{double}]{wet\-\_\-vert\-\_\-area}
+\end{DoxyParamCaption}
+)}}\label{b__v__advection_8c_adc7e14e2fe8653964086aee3bb8e9f70}
+
+\begin{DoxyParams}{Parameters}
+{\em j} & -\/ (long) index of the line \\
+\hline
+{\em velocity} & -\/ (double) eulerian velocity thourg the line \\
+\hline
+{\em wat\-\_\-vert\-\_\-area} & -\/ (double) -\/ water vertical area over the j-\/th line \\
+\hline
+\end{DoxyParams}
+\begin{DoxyAuthor}{Author}
+Emanuele Cordano 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+October 2009
+\end{DoxyDate}
+
+
+Definition at line 75 of file b\-\_\-v\-\_\-advection.\-c.
+
+
+
+References D\-O\-U\-B\-L\-E\-\_\-\-G\-R\-I\-D\-::coarse, P\-A\-R\-A\-M\-::dt, L\-I\-N\-E\-V\-E\-C\-T\-O\-R\-::element, L\-I\-N\-E\-::length2d, G\-R\-I\-D\-::lines, and P\-A\-R\-A\-M\-::p\-\_\-runoff.
+
+
+
+Referenced by update\-\_\-\-F1\-\_\-wet\-\_\-vert\-\_\-area().
+
+\hypertarget{b__v__advection_8c_a90b462038ce0e2e224027de0a94b58d0}{\index{b\-\_\-v\-\_\-advection.\-c@{b\-\_\-v\-\_\-advection.\-c}!symmetric\-\_\-surface\-\_\-velocity@{symmetric\-\_\-surface\-\_\-velocity}}
+\index{symmetric\-\_\-surface\-\_\-velocity@{symmetric\-\_\-surface\-\_\-velocity}!b_v_advection.c@{b\-\_\-v\-\_\-advection.\-c}}
+\subsubsection[{symmetric\-\_\-surface\-\_\-velocity}]{\setlength{\rightskip}{0pt plus 5cm}double symmetric\-\_\-surface\-\_\-velocity (
+\begin{DoxyParamCaption}
+\item[{long}]{j, }
+\item[{double}]{forcing}
+\end{DoxyParamCaption}
+)}}\label{b__v__advection_8c_a90b462038ce0e2e224027de0a94b58d0}
+\begin{DoxyAuthor}{Author}
+Emanuele Cordano 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+October 2009
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em j} & -\/ (long) index of the line \textbackslash{} \\
+\hline
+{\em eta} & -\/ (\hyperlink{struct_d_o_u_b_l_e_v_e_c_t_o_r}{D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} $\ast$) water surface elevation\\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 216 of file b\-\_\-v\-\_\-advection.\-c.
+
+
+
+References P\-A\-R\-A\-M\-::dt, and P\-A\-R\-A\-M\-::gravity.
+
+
+
+Referenced by t\-\_\-st\-\_\-advection\-\_\-operator\-\_\-element(), and update\-\_\-velocity().
+
+\hypertarget{b__v__advection_8c_a5aeb3dfcddcdffbfeccd32979db2cb49}{\index{b\-\_\-v\-\_\-advection.\-c@{b\-\_\-v\-\_\-advection.\-c}!t\-\_\-st\-\_\-advection\-\_\-operator\-\_\-element@{t\-\_\-st\-\_\-advection\-\_\-operator\-\_\-element}}
+\index{t\-\_\-st\-\_\-advection\-\_\-operator\-\_\-element@{t\-\_\-st\-\_\-advection\-\_\-operator\-\_\-element}!b_v_advection.c@{b\-\_\-v\-\_\-advection.\-c}}
+\subsubsection[{t\-\_\-st\-\_\-advection\-\_\-operator\-\_\-element}]{\setlength{\rightskip}{0pt plus 5cm}double t\-\_\-st\-\_\-advection\-\_\-operator\-\_\-element (
+\begin{DoxyParamCaption}
+\item[{long}]{i, }
+\item[{{\bf D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} $\ast$}]{eta, }
+\item[{double}]{cond\-\_\-dirichlet}
+\end{DoxyParamCaption}
+)}}\label{b__v__advection_8c_a5aeb3dfcddcdffbfeccd32979db2cb49}
+
+
+Definition at line 161 of file b\-\_\-v\-\_\-advection.\-c.
+
+
+
+References G\-R\-I\-D\-::boundary\-\_\-indicator, D\-O\-U\-B\-L\-E\-\_\-\-G\-R\-I\-D\-::coarse, polygon\-\_\-connection\-\_\-attributes\-::connections, polygon\-\_\-connection\-\_\-attributes\-::d\-\_\-connections, P\-A\-R\-A\-M\-::dt, P\-O\-L\-Y\-G\-O\-N\-::edge\-\_\-indices, P\-O\-L\-Y\-G\-O\-N\-V\-E\-C\-T\-O\-R\-::element, polygon\-\_\-connection\-\_\-attribute\-\_\-array\-::element, G\-R\-I\-D\-::lines, G\-R\-I\-D\-::links, L\-I\-N\-E\-V\-E\-C\-T\-O\-R\-::nh, P\-O\-L\-Y\-G\-O\-N\-V\-E\-C\-T\-O\-R\-::nh, D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R\-::nh, L\-I\-N\-E\-V\-E\-C\-T\-O\-R\-::nl, P\-O\-L\-Y\-G\-O\-N\-V\-E\-C\-T\-O\-R\-::nl, L\-O\-N\-G\-V\-E\-C\-T\-O\-R\-::nl, G\-R\-I\-D\-::polygons, symmetric\-\_\-surface\-\_\-velocity(), vertical\-\_\-area\-\_\-surf(), and water\-\_\-surface\-\_\-elevation\-\_\-mean().
+
+
+
+Referenced by t\-\_\-st\-\_\-operator\-\_\-element(), and t\-\_\-st\-\_\-operator\-\_\-element\-\_\-no\-\_\-dirichlet().
+
+\hypertarget{b__v__advection_8c_a8df92a756c3235732dbf2aa3aacb7802}{\index{b\-\_\-v\-\_\-advection.\-c@{b\-\_\-v\-\_\-advection.\-c}!update\-\_\-\-F1\-\_\-wet\-\_\-vert\-\_\-area@{update\-\_\-\-F1\-\_\-wet\-\_\-vert\-\_\-area}}
+\index{update\-\_\-\-F1\-\_\-wet\-\_\-vert\-\_\-area@{update\-\_\-\-F1\-\_\-wet\-\_\-vert\-\_\-area}!b_v_advection.c@{b\-\_\-v\-\_\-advection.\-c}}
+\subsubsection[{update\-\_\-\-F1\-\_\-wet\-\_\-vert\-\_\-area}]{\setlength{\rightskip}{0pt plus 5cm}int update\-\_\-\-F1\-\_\-wet\-\_\-vert\-\_\-area (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{b__v__advection_8c_a8df92a756c3235732dbf2aa3aacb7802}
+\begin{DoxyAuthor}{Author}
+Emanuele Cordano  October 2009
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em eta} & -\/ (\hyperlink{struct_d_o_u_b_l_e_v_e_c_t_o_r}{D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} $\ast$) water srface pressure\\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 333 of file b\-\_\-v\-\_\-advection.\-c.
+
+
+
+References G\-R\-I\-D\-::boundary\-\_\-indicator, D\-O\-U\-B\-L\-E\-\_\-\-G\-R\-I\-D\-::coarse, polygon\-\_\-connection\-\_\-attributes\-::connections, P\-O\-L\-Y\-G\-O\-N\-::edge\-\_\-indices, P\-O\-L\-Y\-G\-O\-N\-V\-E\-C\-T\-O\-R\-::element, polygon\-\_\-connection\-\_\-attribute\-\_\-array\-::element, F1\-\_\-coefficient(), G\-R\-I\-D\-::lines, G\-R\-I\-D\-::links, L\-I\-N\-E\-V\-E\-C\-T\-O\-R\-::nh, P\-O\-L\-Y\-G\-O\-N\-V\-E\-C\-T\-O\-R\-::nh, L\-O\-N\-G\-V\-E\-C\-T\-O\-R\-::nh, D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R\-::nh, L\-I\-N\-E\-V\-E\-C\-T\-O\-R\-::nl, P\-O\-L\-Y\-G\-O\-N\-V\-E\-C\-T\-O\-R\-::nl, D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R\-::nl, G\-R\-I\-D\-::polygons, V\-E\-L\-O\-C\-I\-T\-Y\-\_\-\-I\-N\-I\-T\-I\-A\-L\-I\-Z\-A\-T\-I\-O\-N\-\_\-\-V\-A\-L\-U\-E, vertical\-\_\-area\-\_\-surf(), and water\-\_\-surface\-\_\-elevation\-\_\-mean().
+
+
+
+Referenced by time\-\_\-loop().
+
+\hypertarget{b__v__advection_8c_ac10b61fc14a6ed150f7d5ab8f857a8cc}{\index{b\-\_\-v\-\_\-advection.\-c@{b\-\_\-v\-\_\-advection.\-c}!update\-\_\-velocity@{update\-\_\-velocity}}
+\index{update\-\_\-velocity@{update\-\_\-velocity}!b_v_advection.c@{b\-\_\-v\-\_\-advection.\-c}}
+\subsubsection[{update\-\_\-velocity}]{\setlength{\rightskip}{0pt plus 5cm}int update\-\_\-velocity (
+\begin{DoxyParamCaption}
+\item[{{\bf D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} $\ast$}]{eta}
+\end{DoxyParamCaption}
+)}}\label{b__v__advection_8c_ac10b61fc14a6ed150f7d5ab8f857a8cc}
+\begin{DoxyAuthor}{Author}
+Emanuele Cordano 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+October 2009
+\end{DoxyDate}
+N\-O\-O
+\begin{DoxyParams}{Parameters}
+{\em (\-D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} & $\ast$) -\/ eta water surface\\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 254 of file b\-\_\-v\-\_\-advection.\-c.
+
+
+
+References asymmetric\-\_\-surface\-\_\-velocity(), G\-R\-I\-D\-::boundary\-\_\-indicator, D\-O\-U\-B\-L\-E\-\_\-\-G\-R\-I\-D\-::coarse, polygon\-\_\-connection\-\_\-attributes\-::connections, polygon\-\_\-connection\-\_\-attributes\-::d\-\_\-connections, P\-O\-L\-Y\-G\-O\-N\-::edge\-\_\-indices, P\-O\-L\-Y\-G\-O\-N\-V\-E\-C\-T\-O\-R\-::element, polygon\-\_\-connection\-\_\-attribute\-\_\-array\-::element, free\-\_\-doublevector(), G\-R\-I\-D\-::lines, G\-R\-I\-D\-::links, new\-\_\-doublevector(), L\-I\-N\-E\-V\-E\-C\-T\-O\-R\-::nh, P\-O\-L\-Y\-G\-O\-N\-V\-E\-C\-T\-O\-R\-::nh, L\-O\-N\-G\-V\-E\-C\-T\-O\-R\-::nh, D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R\-::nh, L\-I\-N\-E\-V\-E\-C\-T\-O\-R\-::nl, P\-O\-L\-Y\-G\-O\-N\-V\-E\-C\-T\-O\-R\-::nl, D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R\-::nl, G\-R\-I\-D\-::polygons, symmetric\-\_\-surface\-\_\-velocity(), V\-E\-L\-O\-C\-I\-T\-Y\-\_\-\-I\-N\-I\-T\-I\-A\-L\-I\-Z\-A\-T\-I\-O\-N\-\_\-\-V\-A\-L\-U\-E, and water\-\_\-surface\-\_\-elevation\-\_\-mean().
+
+
+
+Referenced by time\-\_\-loop().
+
+
+
+\subsection{Variable Documentation}
+\hypertarget{b__v__advection_8c_ab58c424a59f28ac6b17e7b7f5aae6152}{\index{b\-\_\-v\-\_\-advection.\-c@{b\-\_\-v\-\_\-advection.\-c}!dgrid@{dgrid}}
+\index{dgrid@{dgrid}!b_v_advection.c@{b\-\_\-v\-\_\-advection.\-c}}
+\subsubsection[{dgrid}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\-O\-U\-B\-L\-E\-\_\-\-G\-R\-I\-D}$\ast$ dgrid}}\label{b__v__advection_8c_ab58c424a59f28ac6b17e7b7f5aae6152}
+
+
+Definition at line 126 of file main.\-c.
+
+\hypertarget{b__v__advection_8c_aa9b4bc229995ad30e44cf2eaeb5d4756}{\index{b\-\_\-v\-\_\-advection.\-c@{b\-\_\-v\-\_\-advection.\-c}!dirichlet@{dirichlet}}
+\index{dirichlet@{dirichlet}!b_v_advection.c@{b\-\_\-v\-\_\-advection.\-c}}
+\subsubsection[{dirichlet}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R}$\ast$ dirichlet}}\label{b__v__advection_8c_aa9b4bc229995ad30e44cf2eaeb5d4756}
+coefficient F1 for surface flow as reported in Casulli,2008 
+
+Definition at line 71 of file b\-\_\-solver.\-c.
+
+\hypertarget{b__v__advection_8c_a44d81a9ca5648f4ec1c298c7f37fefff}{\index{b\-\_\-v\-\_\-advection.\-c@{b\-\_\-v\-\_\-advection.\-c}!draster@{draster}}
+\index{draster@{draster}!b_v_advection.c@{b\-\_\-v\-\_\-advection.\-c}}
+\subsubsection[{draster}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\-O\-U\-B\-L\-E\-R\-A\-S\-T\-E\-R\-\_\-\-M\-A\-P}$\ast$ draster}}\label{b__v__advection_8c_a44d81a9ca5648f4ec1c298c7f37fefff}
+
+
+Definition at line 128 of file main.\-c.
+
+\hypertarget{b__v__advection_8c_a4cd3286ed17aff6164594f8a2d59f898}{\index{b\-\_\-v\-\_\-advection.\-c@{b\-\_\-v\-\_\-advection.\-c}!elevation\-\_\-bottom\-\_\-bottom@{elevation\-\_\-bottom\-\_\-bottom}}
+\index{elevation\-\_\-bottom\-\_\-bottom@{elevation\-\_\-bottom\-\_\-bottom}!b_v_advection.c@{b\-\_\-v\-\_\-advection.\-c}}
+\subsubsection[{elevation\-\_\-bottom\-\_\-bottom}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R}$\ast$ elevation\-\_\-bottom\-\_\-bottom}}\label{b__v__advection_8c_a4cd3286ed17aff6164594f8a2d59f898}
+map of the bottom elevation defined in the lines of the fine grid 
+
+Definition at line 134 of file main.\-c.
+
+\hypertarget{b__v__advection_8c_a93f8bd854f98f2abe47c108484cf1c6b}{\index{b\-\_\-v\-\_\-advection.\-c@{b\-\_\-v\-\_\-advection.\-c}!elevation\-\_\-bottom\-\_\-coarse@{elevation\-\_\-bottom\-\_\-coarse}}
+\index{elevation\-\_\-bottom\-\_\-coarse@{elevation\-\_\-bottom\-\_\-coarse}!b_v_advection.c@{b\-\_\-v\-\_\-advection.\-c}}
+\subsubsection[{elevation\-\_\-bottom\-\_\-coarse}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R}$\ast$ elevation\-\_\-bottom\-\_\-coarse}}\label{b__v__advection_8c_a93f8bd854f98f2abe47c108484cf1c6b}
+map of the bottom elevation (fine grid) 
+
+Definition at line 132 of file main.\-c.
+
+\hypertarget{b__v__advection_8c_a48a2ac079f3ec064d28848bcdc54ed7c}{\index{b\-\_\-v\-\_\-advection.\-c@{b\-\_\-v\-\_\-advection.\-c}!elevation\-\_\-bottom\-\_\-fine@{elevation\-\_\-bottom\-\_\-fine}}
+\index{elevation\-\_\-bottom\-\_\-fine@{elevation\-\_\-bottom\-\_\-fine}!b_v_advection.c@{b\-\_\-v\-\_\-advection.\-c}}
+\subsubsection[{elevation\-\_\-bottom\-\_\-fine}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R}$\ast$ elevation\-\_\-bottom\-\_\-fine}}\label{b__v__advection_8c_a48a2ac079f3ec064d28848bcdc54ed7c}
+
+
+Definition at line 131 of file main.\-c.
+
+\hypertarget{b__v__advection_8c_a495ebb69c21b8816ee4f7dfe0e1e6d98}{\index{b\-\_\-v\-\_\-advection.\-c@{b\-\_\-v\-\_\-advection.\-c}!elevation\-\_\-bottom\-\_\-flines@{elevation\-\_\-bottom\-\_\-flines}}
+\index{elevation\-\_\-bottom\-\_\-flines@{elevation\-\_\-bottom\-\_\-flines}!b_v_advection.c@{b\-\_\-v\-\_\-advection.\-c}}
+\subsubsection[{elevation\-\_\-bottom\-\_\-flines}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R}$\ast$ elevation\-\_\-bottom\-\_\-flines}}\label{b__v__advection_8c_a495ebb69c21b8816ee4f7dfe0e1e6d98}
+map of the bottom elevation (coarse grid) 
+
+Definition at line 133 of file main.\-c.
+
+\hypertarget{b__v__advection_8c_a2f1a3b2841c6ed8ff4461dabf9a4b03c}{\index{b\-\_\-v\-\_\-advection.\-c@{b\-\_\-v\-\_\-advection.\-c}!elevation\-\_\-terrain\-\_\-fine@{elevation\-\_\-terrain\-\_\-fine}}
+\index{elevation\-\_\-terrain\-\_\-fine@{elevation\-\_\-terrain\-\_\-fine}!b_v_advection.c@{b\-\_\-v\-\_\-advection.\-c}}
+\subsubsection[{elevation\-\_\-terrain\-\_\-fine}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R}$\ast$ elevation\-\_\-terrain\-\_\-fine}}\label{b__v__advection_8c_a2f1a3b2841c6ed8ff4461dabf9a4b03c}
+map of the elevation of the bottom of he coarse cells
+
+map of the elvetion of the bottom of he coarse cells 
+
+Definition at line 135 of file main.\-c.
+
+\hypertarget{b__v__advection_8c_a3328ead9d7ff307ac4b6847cd4a1205b}{\index{b\-\_\-v\-\_\-advection.\-c@{b\-\_\-v\-\_\-advection.\-c}!elevation\-\_\-terrain\-\_\-flines@{elevation\-\_\-terrain\-\_\-flines}}
+\index{elevation\-\_\-terrain\-\_\-flines@{elevation\-\_\-terrain\-\_\-flines}!b_v_advection.c@{b\-\_\-v\-\_\-advection.\-c}}
+\subsubsection[{elevation\-\_\-terrain\-\_\-flines}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R}$\ast$ elevation\-\_\-terrain\-\_\-flines}}\label{b__v__advection_8c_a3328ead9d7ff307ac4b6847cd4a1205b}
+map of the surface terrain elevation (fine grid) 
+
+Definition at line 136 of file main.\-c.
+
+\hypertarget{b__v__advection_8c_ad2a1214f97f2ea07f385b7c6ce403096}{\index{b\-\_\-v\-\_\-advection.\-c@{b\-\_\-v\-\_\-advection.\-c}!F1\-\_\-wet\-\_\-vert\-\_\-area@{F1\-\_\-wet\-\_\-vert\-\_\-area}}
+\index{F1\-\_\-wet\-\_\-vert\-\_\-area@{F1\-\_\-wet\-\_\-vert\-\_\-area}!b_v_advection.c@{b\-\_\-v\-\_\-advection.\-c}}
+\subsubsection[{F1\-\_\-wet\-\_\-vert\-\_\-area}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R}$\ast$ F1\-\_\-wet\-\_\-vert\-\_\-area}}\label{b__v__advection_8c_ad2a1214f97f2ea07f385b7c6ce403096}
+map of the surface velocity defined in the lines (velocity is positive when going kp1 to kp2 polygons with kp1$>$kp2 )
+
+map of the (wet area) surface velocity defined in the lines (velocity is positive when going kp1 to kp2 polygons with kp1$>$kp2 ) 
+
+Definition at line 147 of file main.\-c.
+
+\hypertarget{b__v__advection_8c_a528421ce34267070764970b021f6034a}{\index{b\-\_\-v\-\_\-advection.\-c@{b\-\_\-v\-\_\-advection.\-c}!filenames@{filenames}}
+\index{filenames@{filenames}!b_v_advection.c@{b\-\_\-v\-\_\-advection.\-c}}
+\subsubsection[{filenames}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\-T\-R\-I\-N\-G\-B\-I\-N}$\ast$ filenames}}\label{b__v__advection_8c_a528421ce34267070764970b021f6034a}
+
+
+Definition at line 124 of file main.\-c.
+
+\hypertarget{b__v__advection_8c_af669d66807986c96b4927566ae5e8b45}{\index{b\-\_\-v\-\_\-advection.\-c@{b\-\_\-v\-\_\-advection.\-c}!flag@{flag}}
+\index{flag@{flag}!b_v_advection.c@{b\-\_\-v\-\_\-advection.\-c}}
+\subsubsection[{flag}]{\setlength{\rightskip}{0pt plus 5cm}{\bf F\-L\-A\-G}$\ast$ flag}}\label{b__v__advection_8c_af669d66807986c96b4927566ae5e8b45}
+
+
+Definition at line 149 of file main.\-c.
+
+\hypertarget{b__v__advection_8c_a8d58cb68a19f9ec3d36dcf606ce6ab8e}{\index{b\-\_\-v\-\_\-advection.\-c@{b\-\_\-v\-\_\-advection.\-c}!outlet\-\_\-coefficient@{outlet\-\_\-coefficient}}
+\index{outlet\-\_\-coefficient@{outlet\-\_\-coefficient}!b_v_advection.c@{b\-\_\-v\-\_\-advection.\-c}}
+\subsubsection[{outlet\-\_\-coefficient}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R}$\ast$ outlet\-\_\-coefficient}}\label{b__v__advection_8c_a8d58cb68a19f9ec3d36dcf606ce6ab8e}
+map of the surface terrain elevation (fine grid lines) map of the coefficient of the rating curve in the outlet q\-\_\-discharge=C$\ast$h\-\_\-sup$^\wedge$m
+
+map of porosity defined on the pixels of the fine grid 
+
+Definition at line 138 of file main.\-c.
+
+\hypertarget{b__v__advection_8c_ad8ac9ce29f12815d417a57b2c0dc31fb}{\index{b\-\_\-v\-\_\-advection.\-c@{b\-\_\-v\-\_\-advection.\-c}!param@{param}}
+\index{param@{param}!b_v_advection.c@{b\-\_\-v\-\_\-advection.\-c}}
+\subsubsection[{param}]{\setlength{\rightskip}{0pt plus 5cm}{\bf P\-A\-R\-A\-M}$\ast$ param}}\label{b__v__advection_8c_ad8ac9ce29f12815d417a57b2c0dc31fb}
+coefficient F1 for surface flow as reported in Casulli,2008 
+
+Definition at line 148 of file main.\-c.
+
+\hypertarget{b__v__advection_8c_acd5b5637e9d24f6f2641e08ed439b8b8}{\index{b\-\_\-v\-\_\-advection.\-c@{b\-\_\-v\-\_\-advection.\-c}!porosity\-\_\-fine@{porosity\-\_\-fine}}
+\index{porosity\-\_\-fine@{porosity\-\_\-fine}!b_v_advection.c@{b\-\_\-v\-\_\-advection.\-c}}
+\subsubsection[{porosity\-\_\-fine}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R}$\ast$ porosity\-\_\-fine}}\label{b__v__advection_8c_acd5b5637e9d24f6f2641e08ed439b8b8}
+map of the surface terrain elevation (fine grid lines) 
+
+Definition at line 137 of file main.\-c.
+
+\hypertarget{b__v__advection_8c_afe877173190ce3813da775395bdf08bd}{\index{b\-\_\-v\-\_\-advection.\-c@{b\-\_\-v\-\_\-advection.\-c}!runoff\-\_\-coefficient@{runoff\-\_\-coefficient}}
+\index{runoff\-\_\-coefficient@{runoff\-\_\-coefficient}!b_v_advection.c@{b\-\_\-v\-\_\-advection.\-c}}
+\subsubsection[{runoff\-\_\-coefficient}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R}$\ast$ runoff\-\_\-coefficient}}\label{b__v__advection_8c_afe877173190ce3813da775395bdf08bd}
+map of porosity defined on the pixels of the fine grid map of the coefficient of the dissipation runoff coefficient C$\ast$(velocity)$^\wedge$p , 
+
+Definition at line 140 of file main.\-c.
+
+\hypertarget{b__v__advection_8c_ac2670c558f0154ba997b23d6d8184b6b}{\index{b\-\_\-v\-\_\-advection.\-c@{b\-\_\-v\-\_\-advection.\-c}!surface\-\_\-water\-\_\-velocity@{surface\-\_\-water\-\_\-velocity}}
+\index{surface\-\_\-water\-\_\-velocity@{surface\-\_\-water\-\_\-velocity}!b_v_advection.c@{b\-\_\-v\-\_\-advection.\-c}}
+\subsubsection[{surface\-\_\-water\-\_\-velocity}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R}$\ast$ surface\-\_\-water\-\_\-velocity}}\label{b__v__advection_8c_ac2670c558f0154ba997b23d6d8184b6b}
+map of instantaneous water mass error 
+
+Definition at line 146 of file main.\-c.
+
+\hypertarget{b__v__advection_8c_a97eff843a1a4985b0746ef826cc27822}{\index{b\-\_\-v\-\_\-advection.\-c@{b\-\_\-v\-\_\-advection.\-c}!water\-\_\-mass\-\_\-error@{water\-\_\-mass\-\_\-error}}
+\index{water\-\_\-mass\-\_\-error@{water\-\_\-mass\-\_\-error}!b_v_advection.c@{b\-\_\-v\-\_\-advection.\-c}}
+\subsubsection[{water\-\_\-mass\-\_\-error}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R}$\ast$ water\-\_\-mass\-\_\-error}}\label{b__v__advection_8c_a97eff843a1a4985b0746ef826cc27822}
+map of instantaneous water surface on the pixels of the coarse grid 
+
+Definition at line 143 of file main.\-c.
+
+\hypertarget{b__v__advection_8c_a3ace2c97e74d7e8aad3670b479cb606d}{\index{b\-\_\-v\-\_\-advection.\-c@{b\-\_\-v\-\_\-advection.\-c}!water\-\_\-surface\-\_\-elevation@{water\-\_\-surface\-\_\-elevation}}
+\index{water\-\_\-surface\-\_\-elevation@{water\-\_\-surface\-\_\-elevation}!b_v_advection.c@{b\-\_\-v\-\_\-advection.\-c}}
+\subsubsection[{water\-\_\-surface\-\_\-elevation}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R}$\ast$ water\-\_\-surface\-\_\-elevation}}\label{b__v__advection_8c_a3ace2c97e74d7e8aad3670b479cb606d}
+
+
+extern \hyperlink{struct_d_o_u_b_l_e_v_e_c_t_o_r}{D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} {\itshape runoff\-\_\-coefficient; /}!$<$map of the coefficient of the rating curve in the outlet q\-\_\-discharge=C$\ast$h\-\_\-sup$^\wedge$m $\ast$/ 
+
+map of porosity defined on the pixels of the fine grid 
+
+Definition at line 142 of file main.\-c.
+

@@ -1,0 +1,123 @@
+\hypertarget{tensors3_d_8c}{\section{F\-L\-U\-I\-D\-T\-U\-R\-T\-L\-E\-S/tensors3\-D.c File Reference}
+\label{tensors3_d_8c}\index{F\-L\-U\-I\-D\-T\-U\-R\-T\-L\-E\-S/tensors3\-D.\-c@{F\-L\-U\-I\-D\-T\-U\-R\-T\-L\-E\-S/tensors3\-D.\-c}}
+}
+{\ttfamily \#include \char`\"{}turtle.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}tensor3\-D.\-h\char`\"{}}\\*
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+double $\ast$$\ast$$\ast$ \hyperlink{tensors3_d_8c_ad88b8251cbbc0f65cdfc0aaba4a500b2}{d3tensor} (long nrl, long nrh, long ncl, long nch, long ndl, long ndh)
+\item 
+\hyperlink{struct_d_o_u_b_l_e_t_e_n_s_o_r}{D\-O\-U\-B\-L\-E\-T\-E\-N\-S\-O\-R} $\ast$ \hyperlink{tensors3_d_8c_aa4fd1df8abe9990ec10430fcbd42292a}{new\-\_\-doubletensor} (long ndh, long nrh, long nch)
+\item 
+void \hyperlink{tensors3_d_8c_afbe1a99a02500cb0289fae4aa6c831d0}{free\-\_\-d3tensor} (double $\ast$$\ast$$\ast$t, long ndl, long nrl, long ncl)
+\item 
+void \hyperlink{tensors3_d_8c_a3d4371338937e474cc6cd292788d943f}{free\-\_\-doubletensor} (\hyperlink{struct_d_o_u_b_l_e_t_e_n_s_o_r}{D\-O\-U\-B\-L\-E\-T\-E\-N\-S\-O\-R} $\ast$m)
+\item 
+void \hyperlink{tensors3_d_8c_a3f22b1fe21336d0e6aebc0df13c6d19f}{initialize\-\_\-doubletensor} (\hyperlink{struct_d_o_u_b_l_e_t_e_n_s_o_r}{D\-O\-U\-B\-L\-E\-T\-E\-N\-S\-O\-R} $\ast$L, double sign)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{tensors3_d_8c_ad88b8251cbbc0f65cdfc0aaba4a500b2}{\index{tensors3\-D.\-c@{tensors3\-D.\-c}!d3tensor@{d3tensor}}
+\index{d3tensor@{d3tensor}!tensors3D.c@{tensors3\-D.\-c}}
+\subsubsection[{d3tensor}]{\setlength{\rightskip}{0pt plus 5cm}double$\ast$$\ast$$\ast$ d3tensor (
+\begin{DoxyParamCaption}
+\item[{long}]{nrl, }
+\item[{long}]{nrh, }
+\item[{long}]{ncl, }
+\item[{long}]{nch, }
+\item[{long}]{ndl, }
+\item[{long}]{ndh}
+\end{DoxyParamCaption}
+)}}\label{tensors3_d_8c_ad88b8251cbbc0f65cdfc0aaba4a500b2}
+
+
+Definition at line 9 of file tensors3\-D.\-c.
+
+
+
+References N\-R\-\_\-\-E\-N\-D, and t\-\_\-error().
+
+
+
+Referenced by new\-\_\-doubletensor().
+
+\hypertarget{tensors3_d_8c_afbe1a99a02500cb0289fae4aa6c831d0}{\index{tensors3\-D.\-c@{tensors3\-D.\-c}!free\-\_\-d3tensor@{free\-\_\-d3tensor}}
+\index{free\-\_\-d3tensor@{free\-\_\-d3tensor}!tensors3D.c@{tensors3\-D.\-c}}
+\subsubsection[{free\-\_\-d3tensor}]{\setlength{\rightskip}{0pt plus 5cm}void free\-\_\-d3tensor (
+\begin{DoxyParamCaption}
+\item[{double $\ast$$\ast$$\ast$}]{t, }
+\item[{long}]{ndl, }
+\item[{long}]{nrl, }
+\item[{long}]{ncl}
+\end{DoxyParamCaption}
+)}}\label{tensors3_d_8c_afbe1a99a02500cb0289fae4aa6c831d0}
+
+
+Definition at line 83 of file tensors3\-D.\-c.
+
+
+
+References F\-R\-E\-E\-\_\-\-A\-R\-G, and N\-R\-\_\-\-E\-N\-D.
+
+
+
+Referenced by free\-\_\-doubletensor().
+
+\hypertarget{tensors3_d_8c_a3d4371338937e474cc6cd292788d943f}{\index{tensors3\-D.\-c@{tensors3\-D.\-c}!free\-\_\-doubletensor@{free\-\_\-doubletensor}}
+\index{free\-\_\-doubletensor@{free\-\_\-doubletensor}!tensors3D.c@{tensors3\-D.\-c}}
+\subsubsection[{free\-\_\-doubletensor}]{\setlength{\rightskip}{0pt plus 5cm}void free\-\_\-doubletensor (
+\begin{DoxyParamCaption}
+\item[{{\bf D\-O\-U\-B\-L\-E\-T\-E\-N\-S\-O\-R} $\ast$}]{m}
+\end{DoxyParamCaption}
+)}}\label{tensors3_d_8c_a3d4371338937e474cc6cd292788d943f}
+
+
+Definition at line 97 of file tensors3\-D.\-c.
+
+
+
+References D\-O\-U\-B\-L\-E\-T\-E\-N\-S\-O\-R\-::co, free\-\_\-d3tensor(), D\-O\-U\-B\-L\-E\-T\-E\-N\-S\-O\-R\-::isdynamic, D\-O\-U\-B\-L\-E\-T\-E\-N\-S\-O\-R\-::nch, D\-O\-U\-B\-L\-E\-T\-E\-N\-S\-O\-R\-::ncl, D\-O\-U\-B\-L\-E\-T\-E\-N\-S\-O\-R\-::ndh, D\-O\-U\-B\-L\-E\-T\-E\-N\-S\-O\-R\-::ndl, N\-L, D\-O\-U\-B\-L\-E\-T\-E\-N\-S\-O\-R\-::nrh, D\-O\-U\-B\-L\-E\-T\-E\-N\-S\-O\-R\-::nrl, and t\-\_\-error().
+
+\hypertarget{tensors3_d_8c_a3f22b1fe21336d0e6aebc0df13c6d19f}{\index{tensors3\-D.\-c@{tensors3\-D.\-c}!initialize\-\_\-doubletensor@{initialize\-\_\-doubletensor}}
+\index{initialize\-\_\-doubletensor@{initialize\-\_\-doubletensor}!tensors3D.c@{tensors3\-D.\-c}}
+\subsubsection[{initialize\-\_\-doubletensor}]{\setlength{\rightskip}{0pt plus 5cm}void initialize\-\_\-doubletensor (
+\begin{DoxyParamCaption}
+\item[{{\bf D\-O\-U\-B\-L\-E\-T\-E\-N\-S\-O\-R} $\ast$}]{L, }
+\item[{double}]{sign}
+\end{DoxyParamCaption}
+)}}\label{tensors3_d_8c_a3f22b1fe21336d0e6aebc0df13c6d19f}
+
+
+Definition at line 123 of file tensors3\-D.\-c.
+
+
+
+References D\-O\-U\-B\-L\-E\-T\-E\-N\-S\-O\-R\-::co, D\-O\-U\-B\-L\-E\-T\-E\-N\-S\-O\-R\-::isdynamic, D\-O\-U\-B\-L\-E\-T\-E\-N\-S\-O\-R\-::nch, D\-O\-U\-B\-L\-E\-T\-E\-N\-S\-O\-R\-::ndh, D\-O\-U\-B\-L\-E\-T\-E\-N\-S\-O\-R\-::nrh, and t\-\_\-error().
+
+
+
+Referenced by build\-\_\-frommatrix().
+
+\hypertarget{tensors3_d_8c_aa4fd1df8abe9990ec10430fcbd42292a}{\index{tensors3\-D.\-c@{tensors3\-D.\-c}!new\-\_\-doubletensor@{new\-\_\-doubletensor}}
+\index{new\-\_\-doubletensor@{new\-\_\-doubletensor}!tensors3D.c@{tensors3\-D.\-c}}
+\subsubsection[{new\-\_\-doubletensor}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\-O\-U\-B\-L\-E\-T\-E\-N\-S\-O\-R}$\ast$ new\-\_\-doubletensor (
+\begin{DoxyParamCaption}
+\item[{long}]{ndh, }
+\item[{long}]{nrh, }
+\item[{long}]{nch}
+\end{DoxyParamCaption}
+)}}\label{tensors3_d_8c_aa4fd1df8abe9990ec10430fcbd42292a}
+
+
+Definition at line 53 of file tensors3\-D.\-c.
+
+
+
+References D\-O\-U\-B\-L\-E\-T\-E\-N\-S\-O\-R\-::co, d3tensor(), is\-Dynamic, D\-O\-U\-B\-L\-E\-T\-E\-N\-S\-O\-R\-::isdynamic, D\-O\-U\-B\-L\-E\-T\-E\-N\-S\-O\-R\-::nch, D\-O\-U\-B\-L\-E\-T\-E\-N\-S\-O\-R\-::ncl, D\-O\-U\-B\-L\-E\-T\-E\-N\-S\-O\-R\-::ndh, D\-O\-U\-B\-L\-E\-T\-E\-N\-S\-O\-R\-::ndl, N\-L, D\-O\-U\-B\-L\-E\-T\-E\-N\-S\-O\-R\-::nrh, D\-O\-U\-B\-L\-E\-T\-E\-N\-S\-O\-R\-::nrl, and t\-\_\-error().
+
+
+
+Referenced by build\-\_\-frommatrix(), linear\-\_\-span\-\_\-doubletensor(), and read\-\_\-doubletensor().
+

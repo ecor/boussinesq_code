@@ -1,0 +1,19 @@
+digraph "free_raster_map"
+{
+  bgcolor="transparent";
+  edge [fontname="FreeSans",fontsize="10",labelfontname="FreeSans",labelfontsize="10"];
+  node [fontname="FreeSans",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="free_raster_map",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node2 [label="free_doublematrix",height=0.2,width=0.4,color="black",URL="$alloc_8c.html#aac0db87acf8b9868c36dad0e0a783b4b"];
+  Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node3 [label="t_error",height=0.2,width=0.4,color="black",URL="$error_8c.html#af79ef7c6656ef0f3d2786e2b09c1755f"];
+  Node2 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node4 [label="free_dmatrix",height=0.2,width=0.4,color="black",URL="$alloc_8c.html#ab7162e8c43fd1850725d983ad43631fe"];
+  Node1 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node5 [label="free_doublevector",height=0.2,width=0.4,color="black",URL="$alloc_8c.html#a9f8d1eb0558ac1ddc1ab2cdbd25eba49"];
+  Node5 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node5 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node6 [label="free_dvector",height=0.2,width=0.4,color="black",URL="$alloc_8c.html#a3f159bec2c468d142a1ce6f3158332b5"];
+}

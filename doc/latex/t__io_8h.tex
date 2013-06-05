@@ -1,0 +1,3614 @@
+\hypertarget{t__io_8h}{\section{F\-L\-U\-I\-D\-T\-U\-R\-T\-L\-E\-S/t\-\_\-io.h File Reference}
+\label{t__io_8h}\index{F\-L\-U\-I\-D\-T\-U\-R\-T\-L\-E\-S/t\-\_\-io.\-h@{F\-L\-U\-I\-D\-T\-U\-R\-T\-L\-E\-S/t\-\_\-io.\-h}}
+}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+F\-I\-L\-E $\ast$ \hyperlink{t__io_8h_a21fd4454b196a063fbdd0e0c8c203de6}{t\-\_\-fopen} (const char $\ast$, const char $\ast$)
+\item 
+F\-I\-L\-E $\ast$ \hyperlink{t__io_8h_afa95931383ff96048d6ec32f685a5f98}{t\-\_\-fclose} (F\-I\-L\-E $\ast$stream)
+\item 
+long \hyperlink{t__io_8h_aff0725389a5de36e92951c173fe7f1a8}{read\-\_\-shortvector\-\_\-elements} (F\-I\-L\-E $\ast$, \hyperlink{struct_s_h_o_r_t_v_e_c_t_o_r}{S\-H\-O\-R\-T\-V\-E\-C\-T\-O\-R} $\ast$, char $\ast$)
+\item 
+long \hyperlink{t__io_8h_a2e868fdf466df97998c019215b1fd723}{write\-\_\-shortvector\-\_\-elements} (F\-I\-L\-E $\ast$, \hyperlink{struct_s_h_o_r_t_v_e_c_t_o_r}{S\-H\-O\-R\-T\-V\-E\-C\-T\-O\-R} $\ast$, long)
+\item 
+long \hyperlink{t__io_8h_ad66c799a25a1d6e094690bbbc3580c00}{binarywrite\-\_\-shortvector\-\_\-elements} (F\-I\-L\-E $\ast$, \hyperlink{struct_s_h_o_r_t_v_e_c_t_o_r}{S\-H\-O\-R\-T\-V\-E\-C\-T\-O\-R} $\ast$)
+\item 
+void \hyperlink{t__io_8h_ad1e21d370ada69d4c0d3ca4007c3db55}{print\-\_\-shortvector\-\_\-elements} (\hyperlink{struct_s_h_o_r_t_v_e_c_t_o_r}{S\-H\-O\-R\-T\-V\-E\-C\-T\-O\-R} $\ast$, long)
+\item 
+long \hyperlink{t__io_8h_ab95d20b910c6afe34939e61562facc7b}{read\-\_\-intvector\-\_\-elements} (F\-I\-L\-E $\ast$, \hyperlink{struct_i_n_t_v_e_c_t_o_r}{I\-N\-T\-V\-E\-C\-T\-O\-R} $\ast$, char $\ast$)
+\item 
+long \hyperlink{t__io_8h_a320afb2c68ab0a9c5a2a0ec91e6c711f}{write\-\_\-intvector\-\_\-elements} (F\-I\-L\-E $\ast$, \hyperlink{struct_i_n_t_v_e_c_t_o_r}{I\-N\-T\-V\-E\-C\-T\-O\-R} $\ast$, long)
+\item 
+long \hyperlink{t__io_8h_a6b4a4b43dce260ee8d8e9785c9b502d7}{binarywrite\-\_\-intvector\-\_\-elements} (F\-I\-L\-E $\ast$, \hyperlink{struct_i_n_t_v_e_c_t_o_r}{I\-N\-T\-V\-E\-C\-T\-O\-R} $\ast$)
+\item 
+void \hyperlink{t__io_8h_ac2430d78a416bedc47a9943e25be3b31}{print\-\_\-intvector\-\_\-elements} (\hyperlink{struct_i_n_t_v_e_c_t_o_r}{I\-N\-T\-V\-E\-C\-T\-O\-R} $\ast$, long)
+\item 
+long \hyperlink{t__io_8h_ac953d890a7035bf587c32d86e04c2c2c}{read\-\_\-longvector\-\_\-elements} (F\-I\-L\-E $\ast$, \hyperlink{struct_l_o_n_g_v_e_c_t_o_r}{L\-O\-N\-G\-V\-E\-C\-T\-O\-R} $\ast$, char $\ast$)
+\item 
+long \hyperlink{t__io_8h_ab0c546a412709d6d92cf521840219a6b}{write\-\_\-longvector\-\_\-elements} (F\-I\-L\-E $\ast$, \hyperlink{struct_l_o_n_g_v_e_c_t_o_r}{L\-O\-N\-G\-V\-E\-C\-T\-O\-R} $\ast$, long)
+\item 
+long \hyperlink{t__io_8h_a4e1b45a861bf7936a6e3517d3f4fbe36}{binarywrite\-\_\-longvector\-\_\-elements} (F\-I\-L\-E $\ast$, \hyperlink{struct_l_o_n_g_v_e_c_t_o_r}{L\-O\-N\-G\-V\-E\-C\-T\-O\-R} $\ast$)
+\item 
+void \hyperlink{t__io_8h_a705accab641c753640166dc1fa2ce943}{print\-\_\-longvector\-\_\-elements} (\hyperlink{struct_l_o_n_g_v_e_c_t_o_r}{L\-O\-N\-G\-V\-E\-C\-T\-O\-R} $\ast$, long)
+\item 
+long \hyperlink{t__io_8h_a73f0897e30c1c3a5f6825253cb8144e1}{read\-\_\-floatvector\-\_\-elements} (F\-I\-L\-E $\ast$, \hyperlink{struct_f_l_o_a_t_v_e_c_t_o_r}{F\-L\-O\-A\-T\-V\-E\-C\-T\-O\-R} $\ast$, char $\ast$)
+\item 
+long \hyperlink{t__io_8h_ae7d07f9045889805d8d25e6a1d1525ca}{write\-\_\-floatvector\-\_\-elements} (F\-I\-L\-E $\ast$, \hyperlink{struct_f_l_o_a_t_v_e_c_t_o_r}{F\-L\-O\-A\-T\-V\-E\-C\-T\-O\-R} $\ast$, long)
+\item 
+long \hyperlink{t__io_8h_ab9bad968281c9c833fe2c93ac8044947}{binarywrite\-\_\-floatvector\-\_\-elements} (F\-I\-L\-E $\ast$, \hyperlink{struct_f_l_o_a_t_v_e_c_t_o_r}{F\-L\-O\-A\-T\-V\-E\-C\-T\-O\-R} $\ast$)
+\item 
+void \hyperlink{t__io_8h_a770ddea20b2125bf8150861653e7ea48}{print\-\_\-floatvector\-\_\-elements} (\hyperlink{struct_f_l_o_a_t_v_e_c_t_o_r}{F\-L\-O\-A\-T\-V\-E\-C\-T\-O\-R} $\ast$, long)
+\item 
+long \hyperlink{t__io_8h_a36ea9ca889dc25351615bc2ec67fd027}{read\-\_\-doublevector\-\_\-elements} (F\-I\-L\-E $\ast$, \hyperlink{struct_d_o_u_b_l_e_v_e_c_t_o_r}{D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} $\ast$, char $\ast$)
+\item 
+long \hyperlink{t__io_8h_a8f8b6855ca4a290e5b8dee7d380ef241}{write\-\_\-doublevector\-\_\-elements} (F\-I\-L\-E $\ast$, \hyperlink{struct_d_o_u_b_l_e_v_e_c_t_o_r}{D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} $\ast$, long)
+\item 
+long \hyperlink{t__io_8h_a43994285f4c91f37a5571b2f7bd35b8d}{binarywrite\-\_\-doublevector\-\_\-elements} (F\-I\-L\-E $\ast$, \hyperlink{struct_d_o_u_b_l_e_v_e_c_t_o_r}{D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} $\ast$)
+\item 
+void \hyperlink{t__io_8h_a7e60a14da73ebfb80363ab7bd8bb6475}{print\-\_\-doublevector\-\_\-elements} (\hyperlink{struct_d_o_u_b_l_e_v_e_c_t_o_r}{D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} $\ast$, long)
+\item 
+long \hyperlink{t__io_8h_affc974dec36791c65f4509423858ed48}{read\-\_\-charvector\-\_\-elements} (F\-I\-L\-E $\ast$, \hyperlink{struct_c_h_a_r_v_e_c_t_o_r}{C\-H\-A\-R\-V\-E\-C\-T\-O\-R} $\ast$, char $\ast$)
+\item 
+long \hyperlink{t__io_8h_a25aace41f9dcb30a3271c98d2dbe0c5a}{write\-\_\-charvector\-\_\-elements} (F\-I\-L\-E $\ast$, \hyperlink{struct_c_h_a_r_v_e_c_t_o_r}{C\-H\-A\-R\-V\-E\-C\-T\-O\-R} $\ast$, long)
+\item 
+long \hyperlink{t__io_8h_a909c544c94ebdaa024f5f345538153ad}{binarywrite\-\_\-charvector\-\_\-elements} (F\-I\-L\-E $\ast$, \hyperlink{struct_c_h_a_r_v_e_c_t_o_r}{C\-H\-A\-R\-V\-E\-C\-T\-O\-R} $\ast$)
+\item 
+void \hyperlink{t__io_8h_a7bcedbf8d5a2a41b59ca90e56c9e286f}{print\-\_\-charvector\-\_\-elements} (\hyperlink{struct_c_h_a_r_v_e_c_t_o_r}{C\-H\-A\-R\-V\-E\-C\-T\-O\-R} $\ast$, long)
+\item 
+long \hyperlink{t__io_8h_adb04571936b771adb2554c2289cd63e3}{read\-\_\-shortmatrix\-\_\-elements} (F\-I\-L\-E $\ast$, \hyperlink{struct_s_h_o_r_t_m_a_t_r_i_x}{S\-H\-O\-R\-T\-M\-A\-T\-R\-I\-X} $\ast$, char $\ast$)
+\item 
+long \hyperlink{t__io_8h_abfac6705bbdd042be9f775a4f9231194}{write\-\_\-shortmatrix\-\_\-elements} (F\-I\-L\-E $\ast$, \hyperlink{struct_s_h_o_r_t_m_a_t_r_i_x}{S\-H\-O\-R\-T\-M\-A\-T\-R\-I\-X} $\ast$, long)
+\item 
+long \hyperlink{t__io_8h_a849d350ca81aedf2e4d27cf142ccfdc3}{binarywrite\-\_\-shortmatrix\-\_\-elements} (F\-I\-L\-E $\ast$, \hyperlink{struct_s_h_o_r_t_m_a_t_r_i_x}{S\-H\-O\-R\-T\-M\-A\-T\-R\-I\-X} $\ast$)
+\item 
+void \hyperlink{t__io_8h_a9b4dfc6cb814a0db9177db690b7a9838}{print\-\_\-shortmatrix\-\_\-elements} (\hyperlink{struct_s_h_o_r_t_m_a_t_r_i_x}{S\-H\-O\-R\-T\-M\-A\-T\-R\-I\-X} $\ast$, long)
+\item 
+long \hyperlink{t__io_8h_a528fbd886c2c6df49536f38b5c2b9bd2}{read\-\_\-intmatrix\-\_\-elements} (F\-I\-L\-E $\ast$, \hyperlink{struct_i_n_t_m_a_t_r_i_x}{I\-N\-T\-M\-A\-T\-R\-I\-X} $\ast$, char $\ast$)
+\item 
+long \hyperlink{t__io_8h_ac4f80f497d426d54e518084a0c9b5e37}{write\-\_\-intmatrix\-\_\-elements} (F\-I\-L\-E $\ast$, \hyperlink{struct_i_n_t_m_a_t_r_i_x}{I\-N\-T\-M\-A\-T\-R\-I\-X} $\ast$, long)
+\item 
+long \hyperlink{t__io_8h_affe275c40f9e7c6634015e605b541b2a}{binarywrite\-\_\-intmatrix\-\_\-elements} (F\-I\-L\-E $\ast$, \hyperlink{struct_i_n_t_m_a_t_r_i_x}{I\-N\-T\-M\-A\-T\-R\-I\-X} $\ast$)
+\item 
+void \hyperlink{t__io_8h_ad04c9cb529b78abb5a24d73dd7dcbd1c}{print\-\_\-intmatrix\-\_\-elements} (\hyperlink{struct_i_n_t_m_a_t_r_i_x}{I\-N\-T\-M\-A\-T\-R\-I\-X} $\ast$, long)
+\item 
+long \hyperlink{t__io_8h_acf6e35d53e099b5b828c16cadb234048}{read\-\_\-longmatrix\-\_\-elements} (F\-I\-L\-E $\ast$, \hyperlink{struct_l_o_n_g_m_a_t_r_i_x}{L\-O\-N\-G\-M\-A\-T\-R\-I\-X} $\ast$, char $\ast$)
+\item 
+long \hyperlink{t__io_8h_a0ceab64b7831070e09a724e672dcb8c0}{write\-\_\-longmatrix\-\_\-elements} (F\-I\-L\-E $\ast$, \hyperlink{struct_l_o_n_g_m_a_t_r_i_x}{L\-O\-N\-G\-M\-A\-T\-R\-I\-X} $\ast$, long)
+\item 
+long \hyperlink{t__io_8h_a2557b630ece4744b5a68e9276236516d}{binarywrite\-\_\-longmatrix\-\_\-elements} (F\-I\-L\-E $\ast$, \hyperlink{struct_l_o_n_g_m_a_t_r_i_x}{L\-O\-N\-G\-M\-A\-T\-R\-I\-X} $\ast$)
+\item 
+void \hyperlink{t__io_8h_a0704509298c42657fa19ca16acc9ba9d}{print\-\_\-longmatrix\-\_\-elements} (\hyperlink{struct_l_o_n_g_m_a_t_r_i_x}{L\-O\-N\-G\-M\-A\-T\-R\-I\-X} $\ast$, long)
+\item 
+long \hyperlink{t__io_8h_ae1f1a3545cce4deb66b094fd0c1c56ac}{read\-\_\-floatmatrix\-\_\-elements} (F\-I\-L\-E $\ast$, \hyperlink{struct_f_l_o_a_t_m_a_t_r_i_x}{F\-L\-O\-A\-T\-M\-A\-T\-R\-I\-X} $\ast$, char $\ast$)
+\item 
+long \hyperlink{t__io_8h_a5c24af8a933a6bb135acce1f1ab3aabd}{write\-\_\-floatmatrix\-\_\-elements} (F\-I\-L\-E $\ast$, \hyperlink{struct_f_l_o_a_t_m_a_t_r_i_x}{F\-L\-O\-A\-T\-M\-A\-T\-R\-I\-X} $\ast$, long)
+\item 
+long \hyperlink{t__io_8h_a00ecaa3ee29b4f36b68a30029445a536}{binarywrite\-\_\-floatmatrix\-\_\-elements} (F\-I\-L\-E $\ast$, \hyperlink{struct_f_l_o_a_t_m_a_t_r_i_x}{F\-L\-O\-A\-T\-M\-A\-T\-R\-I\-X} $\ast$)
+\item 
+void \hyperlink{t__io_8h_aad05f980421a9d8bf748e1f3887cc203}{print\-\_\-floatmatrix\-\_\-elements} (\hyperlink{struct_f_l_o_a_t_m_a_t_r_i_x}{F\-L\-O\-A\-T\-M\-A\-T\-R\-I\-X} $\ast$, long)
+\item 
+long \hyperlink{t__io_8h_a638ae0fb0f78141cf8947403a6384886}{read\-\_\-doublematrix\-\_\-elements} (F\-I\-L\-E $\ast$, \hyperlink{struct_d_o_u_b_l_e_m_a_t_r_i_x}{D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X} $\ast$, char $\ast$)
+\item 
+long \hyperlink{t__io_8h_a95a7ae3012d3470ed7c5c347ffec9e7a}{write\-\_\-doublematrix\-\_\-elements} (F\-I\-L\-E $\ast$, \hyperlink{struct_d_o_u_b_l_e_m_a_t_r_i_x}{D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X} $\ast$, long)
+\item 
+long \hyperlink{t__io_8h_a7dc0e11f7b5688ae090883d97b2acf37}{binarywrite\-\_\-doublematrix\-\_\-elements} (F\-I\-L\-E $\ast$, \hyperlink{struct_d_o_u_b_l_e_m_a_t_r_i_x}{D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X} $\ast$)
+\item 
+void \hyperlink{t__io_8h_a9c974807ebf4e974ab2528f6446cc28a}{print\-\_\-doublematrix\-\_\-elements} (\hyperlink{struct_d_o_u_b_l_e_m_a_t_r_i_x}{D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X} $\ast$, long)
+\item 
+long \hyperlink{t__io_8h_a86f5329c2b1c2bce87d1f3be0b92ae9d}{read\-\_\-intbin\-\_\-elements} (F\-I\-L\-E $\ast$, \hyperlink{struct_i_n_t_b_i_n}{I\-N\-T\-B\-I\-N} $\ast$, char $\ast$)
+\item 
+long \hyperlink{t__io_8h_a764f4a55a102bf0b3ccdf13744bea13d}{write\-\_\-intbin\-\_\-elements} (F\-I\-L\-E $\ast$, \hyperlink{struct_i_n_t_b_i_n}{I\-N\-T\-B\-I\-N} $\ast$, long)
+\item 
+long \hyperlink{t__io_8h_ac282e7b94378df32a33a3b76a089c2d7}{binarywrite\-\_\-intbin\-\_\-elements} (F\-I\-L\-E $\ast$output, \hyperlink{struct_i_n_t_b_i_n}{I\-N\-T\-B\-I\-N} $\ast$l)
+\item 
+void \hyperlink{t__io_8h_add20e99ddc6c9e38ff44d31874d29d3e}{print\-\_\-intbin\-\_\-elements} (\hyperlink{struct_i_n_t_b_i_n}{I\-N\-T\-B\-I\-N} $\ast$, long)
+\item 
+\hyperlink{turtle_8h_ade34e6dff3489a3ddd297f003f01bbd2}{S\-T\-R\-I\-N\-G\-B\-I\-N} $\ast$ \hyperlink{t__io_8h_ab0fc64c8db0e0d689c5edbed7239dfe7}{read\-\_\-plane\-\_\-strings} (F\-I\-L\-E $\ast$, long, long)
+\item 
+long \hyperlink{t__io_8h_ab07fcded5a25836bd4f95399f6894b8d}{write\-\_\-stringbin\-\_\-elements} (F\-I\-L\-E $\ast$, \hyperlink{turtle_8h_ade34e6dff3489a3ddd297f003f01bbd2}{S\-T\-R\-I\-N\-G\-B\-I\-N} $\ast$, long)
+\item 
+void \hyperlink{t__io_8h_af3b2ff59a46832cbed14515329a1994f}{print\-\_\-stringbin\-\_\-elements} (\hyperlink{turtle_8h_ade34e6dff3489a3ddd297f003f01bbd2}{S\-T\-R\-I\-N\-G\-B\-I\-N} $\ast$, long)
+\item 
+long \hyperlink{t__io_8h_a9de6dd4dc78b22f70b08a57d76e123dc}{read\-\_\-shortbin\-\_\-elements} (F\-I\-L\-E $\ast$, \hyperlink{struct_s_h_o_r_t_b_i_n}{S\-H\-O\-R\-T\-B\-I\-N} $\ast$, char $\ast$)
+\item 
+long \hyperlink{t__io_8h_aeefe9b396a7fcfbcbd11afbd8da9a346}{write\-\_\-shortbin\-\_\-elements} (F\-I\-L\-E $\ast$, \hyperlink{struct_s_h_o_r_t_b_i_n}{S\-H\-O\-R\-T\-B\-I\-N} $\ast$, long)
+\item 
+long \hyperlink{t__io_8h_ad1c089cb15a975837bd6ac8045db6db3}{binarywrite\-\_\-shortbin\-\_\-elements} (F\-I\-L\-E $\ast$, \hyperlink{struct_s_h_o_r_t_b_i_n}{S\-H\-O\-R\-T\-B\-I\-N} $\ast$)
+\item 
+void \hyperlink{t__io_8h_ab364e2235b11493f466f543e447a63c0}{print\-\_\-shortbin\-\_\-elements} (\hyperlink{struct_s_h_o_r_t_b_i_n}{S\-H\-O\-R\-T\-B\-I\-N} $\ast$, long)
+\item 
+long \hyperlink{t__io_8h_ac39cd493a85387946ac39d069e1ecb0b}{read\-\_\-longbin\-\_\-elements} (F\-I\-L\-E $\ast$, \hyperlink{struct_l_o_n_g_b_i_n}{L\-O\-N\-G\-B\-I\-N} $\ast$, char $\ast$)
+\item 
+long \hyperlink{t__io_8h_ae2a15657ea5c433a2b1caffb00483cb8}{write\-\_\-longbin\-\_\-elements} (F\-I\-L\-E $\ast$, \hyperlink{struct_l_o_n_g_b_i_n}{L\-O\-N\-G\-B\-I\-N} $\ast$, long)
+\item 
+long \hyperlink{t__io_8h_a374b91675265b78c1c92d32148431c21}{binarywrite\-\_\-longbin\-\_\-elements} (F\-I\-L\-E $\ast$, \hyperlink{struct_l_o_n_g_b_i_n}{L\-O\-N\-G\-B\-I\-N} $\ast$)
+\item 
+void \hyperlink{t__io_8h_adc1d87ddde1435d08257853d9fa808a8}{print\-\_\-longbin\-\_\-elements} (\hyperlink{struct_l_o_n_g_b_i_n}{L\-O\-N\-G\-B\-I\-N} $\ast$, long)
+\item 
+long \hyperlink{t__io_8h_a77ff40c4dd408dc42feb9ecfe3d2d19a}{read\-\_\-doublebin\-\_\-elements} (F\-I\-L\-E $\ast$, \hyperlink{turtle_8h_af2577c240f36308c4c25cda8e769c61e}{D\-O\-U\-B\-L\-E\-B\-I\-N} $\ast$, char $\ast$)
+\item 
+long \hyperlink{t__io_8h_a195a0de35bb104c87e3da30c94d8c3b5}{write\-\_\-doublebin\-\_\-elements} (F\-I\-L\-E $\ast$, \hyperlink{turtle_8h_af2577c240f36308c4c25cda8e769c61e}{D\-O\-U\-B\-L\-E\-B\-I\-N} $\ast$, long)
+\item 
+long \hyperlink{t__io_8h_a73e690d56d06651957ba9b7f1524d327}{binarywrite\-\_\-doublebin\-\_\-elements} (F\-I\-L\-E $\ast$, \hyperlink{turtle_8h_af2577c240f36308c4c25cda8e769c61e}{D\-O\-U\-B\-L\-E\-B\-I\-N} $\ast$)
+\item 
+void \hyperlink{t__io_8h_ad0c4fb8705a6bca80b27d736c2da3fd0}{print\-\_\-doublebin\-\_\-elements} (\hyperlink{turtle_8h_af2577c240f36308c4c25cda8e769c61e}{D\-O\-U\-B\-L\-E\-B\-I\-N} $\ast$, long)
+\item 
+int \hyperlink{t__io_8h_a2eaf0dcff8cd7681c1030edfcb653b7f}{copy\-\_\-buffer\-\_\-into\-\_\-stringbin} (char $\ast$, \hyperlink{turtle_8h_ade34e6dff3489a3ddd297f003f01bbd2}{S\-T\-R\-I\-N\-G\-B\-I\-N} $\ast$)
+\item 
+int \hyperlink{t__io_8h_ab6c5b97109bc38cc5511e408ed97dd40}{read\-\_\-comment} (F\-I\-L\-E $\ast$, int, long, short)
+\item 
+char $\ast$ \hyperlink{t__io_8h_a4c30105b9e730f23f768976c4d01bb24}{readandstore\-\_\-comment} (F\-I\-L\-E $\ast$, int, long)
+\item 
+char $\ast$ \hyperlink{t__io_8h_a8a6c9b4569eb04e48de6ffbfadad9bc0}{read\-\_\-buffer\-\_\-from\-\_\-stdio} (long)
+\item 
+int \hyperlink{t__io_8h_afef96ebe1a4afee0854fba27f83dc680}{iscomment} (char $\ast$, F\-I\-L\-E $\ast$)
+\item 
+char $\ast$ \hyperlink{t__io_8h_a1e1da491f460bfa6dd7f736bf26534e9}{join\-\_\-strings} (char $\ast$, char $\ast$)
+\item 
+char $\ast$ \hyperlink{t__io_8h_ab2a58d86d831816cd4e5f5126800b322}{get\-\_\-filename} (char $\ast$, char $\ast$)
+\item 
+\hyperlink{turtle_8h_ade34e6dff3489a3ddd297f003f01bbd2}{S\-T\-R\-I\-N\-G\-B\-I\-N} $\ast$ \hyperlink{t__io_8h_af281f1943c2e883fa46ed647f301410e}{read\-\_\-filenames} (char $\ast$working\-\_\-directory, char $\ast$program, char $\ast$extension, char $\ast$position)
+\item 
+\hyperlink{struct_d_o_u_b_l_e_v_e_c_t_o_r}{D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} $\ast$ \hyperlink{t__io_8h_ad25d6bcf3c91c0444ccac32a8b1e096e}{read\-\_\-parameters} (char $\ast$working\-\_\-directory, char $\ast$program, char $\ast$extension, char $\ast$position)
+\item 
+double \hyperlink{t__io_8h_adf45bf5a9f6fd676e9cb6b5127789f8c}{get\-\_\-parameter} (char $\ast$, char $\ast$)
+\item 
+char $\ast$ \hyperlink{t__io_8h_a5d0eac48b15fd464d3f90a861820bd2a}{get\-\_\-strings} (char $\ast$, char $\ast$)
+\item 
+char $\ast$ \hyperlink{t__io_8h_ab99ccf086e8dc277bb2795021db0373f}{get\-\_\-workingdirectory} (void)
+\item 
+void \hyperlink{t__io_8h_aa45fc8812027f06334e8fe196d7ba63b}{skip\-\_\-whitespaces} (F\-I\-L\-E $\ast$)
+\item 
+void \hyperlink{t__io_8h_a813737fb9190c2a775f84fe8b94998f8}{goto\-\_\-\-E\-O\-F} (F\-I\-L\-E $\ast$)
+\item 
+\hyperlink{struct_h_e_a_d_e_r}{H\-E\-A\-D\-E\-R} \hyperlink{t__io_8h_a03856943eedcd6c30e540bd8bd497d00}{read\-\_\-header} (F\-I\-L\-E $\ast$, const char $\ast$)
+\item 
+void \hyperlink{t__io_8h_ae3ec3504fb92a62e04649aafe4d4f808}{print\-\_\-header} (\hyperlink{struct_h_e_a_d_e_r}{H\-E\-A\-D\-E\-R} $\ast$)
+\item 
+int \hyperlink{t__io_8h_ae377fca8893416e511e22d1b50123d50}{query\-\_\-for\-\_\-token} (F\-I\-L\-E $\ast$, const char $\ast$)
+\item 
+char $\ast$ \hyperlink{t__io_8h_af18315581946a4b5fef5576eca6a1768}{query\-\_\-for\-\_\-label} (F\-I\-L\-E $\ast$)
+\item 
+char $\ast$ \hyperlink{t__io_8h_a702182a261753cbceefb3bf84dfe7de1}{get\-\_\-phrase} (F\-I\-L\-E $\ast$, const char)
+\item 
+\hyperlink{struct_i_n_t_m_a_t_r_i_x}{I\-N\-T\-M\-A\-T\-R\-I\-X} $\ast$ \hyperlink{t__io_8h_a67caff289c73d5ac786cf2045b8d7479}{read\-\_\-intmatrix} (F\-I\-L\-E $\ast$, char $\ast$, short)
+\item 
+\hyperlink{struct_s_h_o_r_t_m_a_t_r_i_x}{S\-H\-O\-R\-T\-M\-A\-T\-R\-I\-X} $\ast$ \hyperlink{t__io_8h_a2741f9d76718f3f321fffb568046f05c}{read\-\_\-shortmatrix} (F\-I\-L\-E $\ast$, char $\ast$, short)
+\item 
+\hyperlink{struct_l_o_n_g_m_a_t_r_i_x}{L\-O\-N\-G\-M\-A\-T\-R\-I\-X} $\ast$ \hyperlink{t__io_8h_a9de21613fa123db4c93747d8d21c067f}{read\-\_\-longmatrix} (F\-I\-L\-E $\ast$, char $\ast$, short)
+\item 
+\hyperlink{struct_f_l_o_a_t_m_a_t_r_i_x}{F\-L\-O\-A\-T\-M\-A\-T\-R\-I\-X} $\ast$ \hyperlink{t__io_8h_a4ab62008c6e44ec4bede928ac35a018f}{read\-\_\-floatmatrix} (F\-I\-L\-E $\ast$, char $\ast$, short)
+\item 
+\hyperlink{struct_d_o_u_b_l_e_m_a_t_r_i_x}{D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X} $\ast$ \hyperlink{t__io_8h_a4bc831c6ee2d18d8b5f6c067e6638911}{read\-\_\-doublematrix} (F\-I\-L\-E $\ast$, char $\ast$, short)
+\item 
+\hyperlink{struct_c_h_a_r_v_e_c_t_o_r}{C\-H\-A\-R\-V\-E\-C\-T\-O\-R} $\ast$ \hyperlink{t__io_8h_a7568d94f944c892eeba8f09939986aa2}{read\-\_\-charvector} (F\-I\-L\-E $\ast$, char $\ast$, short)
+\item 
+\hyperlink{struct_i_n_t_v_e_c_t_o_r}{I\-N\-T\-V\-E\-C\-T\-O\-R} $\ast$ \hyperlink{t__io_8h_a2b9449c9488b71f09ccf8954b6f67454}{read\-\_\-intvector} (F\-I\-L\-E $\ast$, char $\ast$, short)
+\item 
+\hyperlink{struct_s_h_o_r_t_v_e_c_t_o_r}{S\-H\-O\-R\-T\-V\-E\-C\-T\-O\-R} $\ast$ \hyperlink{t__io_8h_a41d6c7c53132068dacb3cdb753b67e47}{read\-\_\-shortvector} (F\-I\-L\-E $\ast$, char $\ast$, short)
+\item 
+\hyperlink{struct_l_o_n_g_v_e_c_t_o_r}{L\-O\-N\-G\-V\-E\-C\-T\-O\-R} $\ast$ \hyperlink{t__io_8h_a824624872e25543a6cdac128352f25bd}{read\-\_\-longvector} (F\-I\-L\-E $\ast$, char $\ast$, short)
+\item 
+\hyperlink{struct_f_l_o_a_t_v_e_c_t_o_r}{F\-L\-O\-A\-T\-V\-E\-C\-T\-O\-R} $\ast$ \hyperlink{t__io_8h_ab1dcedeb1dd0a5537570c2a0247a57b5}{read\-\_\-floatvector} (F\-I\-L\-E $\ast$, char $\ast$, short)
+\item 
+\hyperlink{struct_d_o_u_b_l_e_v_e_c_t_o_r}{D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} $\ast$ \hyperlink{t__io_8h_a08c79a737a7fa771542f921856fa5446}{read\-\_\-doublevector} (F\-I\-L\-E $\ast$, char $\ast$, short)
+\item 
+\hyperlink{struct_s_h_o_r_t_b_i_n}{S\-H\-O\-R\-T\-B\-I\-N} $\ast$ \hyperlink{t__io_8h_a857892a4f5abc06c53c68614c7fd597c}{read\-\_\-shortbin} (F\-I\-L\-E $\ast$, char $\ast$, short)
+\item 
+\hyperlink{struct_i_n_t_b_i_n}{I\-N\-T\-B\-I\-N} $\ast$ \hyperlink{t__io_8h_a6e26b3e58660fe77e7b19a49fb5037e1}{read\-\_\-intbin} (F\-I\-L\-E $\ast$, char $\ast$, short)
+\item 
+\hyperlink{struct_l_o_n_g_b_i_n}{L\-O\-N\-G\-B\-I\-N} $\ast$ \hyperlink{t__io_8h_ac021ec836cdd82443f6a1ffc86a5117e}{read\-\_\-longbin} (F\-I\-L\-E $\ast$, char $\ast$, short)
+\item 
+\hyperlink{turtle_8h_af2577c240f36308c4c25cda8e769c61e}{D\-O\-U\-B\-L\-E\-B\-I\-N} $\ast$ \hyperlink{t__io_8h_a309f0989e808e0d39e18db53c9bcfa49}{read\-\_\-doublebin} (F\-I\-L\-E $\ast$, char $\ast$, short)
+\item 
+long \hyperlink{t__io_8h_a735434b9636937f974898939bcaa8ca9}{read\-\_\-index} (F\-I\-L\-E $\ast$, short)
+\item 
+\hyperlink{struct_i_n_t_v_e_c_t_o_r}{I\-N\-T\-V\-E\-C\-T\-O\-R} $\ast$ \hyperlink{t__io_8h_a8ef4cbf9089e86751d16617fd8a6c5e1}{read\-\_\-intarray} (F\-I\-L\-E $\ast$, short)
+\item 
+\hyperlink{struct_s_h_o_r_t_v_e_c_t_o_r}{S\-H\-O\-R\-T\-V\-E\-C\-T\-O\-R} $\ast$ \hyperlink{t__io_8h_a33dcb185e0fd9fd9dcbfa7cf6cbaea66}{read\-\_\-shortarray} (F\-I\-L\-E $\ast$, short)
+\item 
+\hyperlink{struct_f_l_o_a_t_v_e_c_t_o_r}{F\-L\-O\-A\-T\-V\-E\-C\-T\-O\-R} $\ast$ \hyperlink{t__io_8h_a595c16ed8e36a322783c5d3239655a99}{read\-\_\-floatarray} (F\-I\-L\-E $\ast$, short)
+\item 
+\hyperlink{struct_l_o_n_g_v_e_c_t_o_r}{L\-O\-N\-G\-V\-E\-C\-T\-O\-R} $\ast$ \hyperlink{t__io_8h_ac1c1145055c1dc10663bb51be51990f8}{read\-\_\-longarray} (F\-I\-L\-E $\ast$, short)
+\item 
+\hyperlink{struct_c_h_a_r_v_e_c_t_o_r}{C\-H\-A\-R\-V\-E\-C\-T\-O\-R} $\ast$ \hyperlink{t__io_8h_aedeb2a96b7899b808cc3794f9e41cb33}{read\-\_\-chararray} (F\-I\-L\-E $\ast$, short)
+\item 
+\hyperlink{struct_d_o_u_b_l_e_v_e_c_t_o_r}{D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} $\ast$ \hyperlink{t__io_8h_abf1573394d2bda5dcae0acf105142617}{read\-\_\-doublearray} (F\-I\-L\-E $\ast$, short)
+\item 
+\hyperlink{turtle_8h_ade34e6dff3489a3ddd297f003f01bbd2}{S\-T\-R\-I\-N\-G\-B\-I\-N} $\ast$ \hyperlink{t__io_8h_af7341003e3ce1677ef92f6dc646f9f03}{read\-\_\-stringarray} (F\-I\-L\-E $\ast$, short)
+\item 
+void \hyperlink{t__io_8h_a71dc941ec0f1c1b4d5346823db04cf98}{justread\-\_\-floatarray} (F\-I\-L\-E $\ast$, \hyperlink{struct_f_l_o_a_t_v_e_c_t_o_r}{F\-L\-O\-A\-T\-V\-E\-C\-T\-O\-R} $\ast$, short)
+\item 
+void \hyperlink{t__io_8h_a659af6a793aeb018e1f626e178281fab}{justread\-\_\-floatmatrix} (F\-I\-L\-E $\ast$, \hyperlink{struct_f_l_o_a_t_m_a_t_r_i_x}{F\-L\-O\-A\-T\-M\-A\-T\-R\-I\-X} $\ast$, char $\ast$mode, short print)
+\item 
+void \hyperlink{t__io_8h_a7bcc51ca1319a4e7fc3c304628529d19}{justread\-\_\-longarray} (F\-I\-L\-E $\ast$, \hyperlink{struct_l_o_n_g_v_e_c_t_o_r}{L\-O\-N\-G\-V\-E\-C\-T\-O\-R} $\ast$, short)
+\item 
+void \hyperlink{t__io_8h_a4572f354e744759593f74228513a964d}{justread\-\_\-chararray} (F\-I\-L\-E $\ast$, \hyperlink{struct_c_h_a_r_v_e_c_t_o_r}{C\-H\-A\-R\-V\-E\-C\-T\-O\-R} $\ast$, short)
+\item 
+void \hyperlink{t__io_8h_a944835019040315aec8fb833bd7db8b5}{write\-\_\-floatarray\-\_\-elements} (F\-I\-L\-E $\ast$, \hyperlink{struct_f_l_o_a_t_v_e_c_t_o_r}{F\-L\-O\-A\-T\-V\-E\-C\-T\-O\-R} $\ast$, long)
+\item 
+void \hyperlink{t__io_8h_a50453295f35d3d2cbdad7653aa7611f4}{write\-\_\-doublearray\-\_\-elements} (F\-I\-L\-E $\ast$, \hyperlink{struct_d_o_u_b_l_e_v_e_c_t_o_r}{D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} $\ast$, long)
+\item 
+void \hyperlink{t__io_8h_a3e5358e2f292d0e0e88b11bbb1e5185f}{write\-\_\-shortarray\-\_\-elements} (F\-I\-L\-E $\ast$, \hyperlink{struct_s_h_o_r_t_v_e_c_t_o_r}{S\-H\-O\-R\-T\-V\-E\-C\-T\-O\-R} $\ast$, long)
+\item 
+void \hyperlink{t__io_8h_a9f69a68e15c99abb5ed2bc1271c9eaf1}{write\-\_\-intarray\-\_\-elements} (F\-I\-L\-E $\ast$, \hyperlink{struct_i_n_t_v_e_c_t_o_r}{I\-N\-T\-V\-E\-C\-T\-O\-R} $\ast$, long)
+\item 
+void \hyperlink{t__io_8h_abf6d5d538ef9cab598800b8eed46cc88}{write\-\_\-longarray\-\_\-elements} (F\-I\-L\-E $\ast$, \hyperlink{struct_l_o_n_g_v_e_c_t_o_r}{L\-O\-N\-G\-V\-E\-C\-T\-O\-R} $\ast$, long)
+\item 
+void \hyperlink{t__io_8h_a6bcad90281a8b627e6c6b69375dccc70}{write\-\_\-chararray\-\_\-elements} (F\-I\-L\-E $\ast$, \hyperlink{struct_c_h_a_r_v_e_c_t_o_r}{C\-H\-A\-R\-V\-E\-C\-T\-O\-R} $\ast$, long)
+\item 
+void \hyperlink{t__io_8h_a4ae7107b19e5b59f373ff58fb1c9b639}{write\-\_\-stringsarray\-\_\-elements} (F\-I\-L\-E $\ast$, \hyperlink{turtle_8h_ade34e6dff3489a3ddd297f003f01bbd2}{S\-T\-R\-I\-N\-G\-B\-I\-N} $\ast$)
+\item 
+long \hyperlink{t__io_8h_a33382ed8de8c6a1cac9bdaf74a771b58}{headercmp} (\hyperlink{struct_h_e_a_d_e_r}{H\-E\-A\-D\-E\-R} $\ast$, \hyperlink{struct_h_e_a_d_e_r}{H\-E\-A\-D\-E\-R} $\ast$)
+\item 
+long \hyperlink{t__io_8h_a65e5710255d4da79f36aa28a9303191d}{longvectorcmp} (\hyperlink{struct_l_o_n_g_v_e_c_t_o_r}{L\-O\-N\-G\-V\-E\-C\-T\-O\-R} $\ast$, \hyperlink{struct_l_o_n_g_v_e_c_t_o_r}{L\-O\-N\-G\-V\-E\-C\-T\-O\-R} $\ast$)
+\item 
+void \hyperlink{t__io_8h_a1ca5b418226c0a9c730189767092f708}{read\-\_\-matrixheader} (F\-I\-L\-E $\ast$, \hyperlink{struct_h_e_a_d_e_r}{H\-E\-A\-D\-E\-R} $\ast$)
+\item 
+void \hyperlink{t__io_8h_a5c75bc989aeb5b0eddcd6ce74a5482c7}{read\-\_\-vectorheader} (F\-I\-L\-E $\ast$, \hyperlink{struct_h_e_a_d_e_r}{H\-E\-A\-D\-E\-R} $\ast$)
+\item 
+int \hyperlink{t__io_8h_adc74bb1b6ef93dbddb8236f53a1555fd}{header\-\_\-scan} (F\-I\-L\-E $\ast$, \hyperlink{struct_h_e_a_d_e_r}{H\-E\-A\-D\-E\-R} $\ast$)
+\item 
+short \hyperlink{t__io_8h_a76161f1ed4fa083f60023e867d4a16cd}{header\-\_\-name\-\_\-scan} (F\-I\-L\-E $\ast$, \hyperlink{struct_h_e_a_d_e_r}{H\-E\-A\-D\-E\-R})
+\item 
+void \hyperlink{t__io_8h_a7ea071c3ddf7d130c7ccec4c85322ca9}{write\-\_\-turtle} (F\-I\-L\-E $\ast$, char $\ast$, char $\ast$)
+\item 
+void \hyperlink{t__io_8h_ac7727534ea0916122556847f47e0e2b6}{write\-\_\-comment} (F\-I\-L\-E $\ast$, const char $\ast$, long)
+\item 
+void \hyperlink{t__io_8h_a8a244b9353838da43db0a624a743d091}{write\-\_\-header\-\_\-header} (F\-I\-L\-E $\ast$, \hyperlink{struct_h_e_a_d_e_r}{H\-E\-A\-D\-E\-R} $\ast$H)
+\item 
+long \hyperlink{t__io_8h_a1cce41330929b6a73b2dac50aebe32d0}{write\-\_\-doubletensor\-\_\-elements} (F\-I\-L\-E $\ast$output, \hyperlink{struct_d_o_u_b_l_e_t_e_n_s_o_r}{D\-O\-U\-B\-L\-E\-T\-E\-N\-S\-O\-R} $\ast$m, long maxcols)
+\item 
+void \hyperlink{t__io_8h_aa96009d046a3ebfd65c9b1affd5674f2}{print\-\_\-doubletensor\-\_\-elements} (\hyperlink{struct_d_o_u_b_l_e_t_e_n_s_o_r}{D\-O\-U\-B\-L\-E\-T\-E\-N\-S\-O\-R} $\ast$m, long maxcols)
+\item 
+\hyperlink{struct_d_o_u_b_l_e_t_e_n_s_o_r}{D\-O\-U\-B\-L\-E\-T\-E\-N\-S\-O\-R} $\ast$ \hyperlink{t__io_8h_a879873fbdf7f1a71df139a25c4581d37}{read\-\_\-doubletensor} (F\-I\-L\-E $\ast$inputfile, char $\ast$mode, short print)
+\item 
+long \hyperlink{t__io_8h_a44701b396e8854301b03dcdc3c3b15d7}{read\-\_\-doubletensor\-\_\-elements} (F\-I\-L\-E $\ast$input, \hyperlink{struct_d_o_u_b_l_e_t_e_n_s_o_r}{D\-O\-U\-B\-L\-E\-T\-E\-N\-S\-O\-R} $\ast$m, char $\ast$mode)
+\item 
+void \hyperlink{t__io_8h_ae8f8b4cf39a481636bf878091908e4a9}{read\-\_\-tensorheader} (F\-I\-L\-E $\ast$inputfile, \hyperlink{struct_h_e_a_d_e_r}{H\-E\-A\-D\-E\-R} $\ast$h)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{t__io_8h_a909c544c94ebdaa024f5f345538153ad}{\index{t\-\_\-io.\-h@{t\-\_\-io.\-h}!binarywrite\-\_\-charvector\-\_\-elements@{binarywrite\-\_\-charvector\-\_\-elements}}
+\index{binarywrite\-\_\-charvector\-\_\-elements@{binarywrite\-\_\-charvector\-\_\-elements}!t_io.h@{t\-\_\-io.\-h}}
+\subsubsection[{binarywrite\-\_\-charvector\-\_\-elements}]{\setlength{\rightskip}{0pt plus 5cm}long binarywrite\-\_\-charvector\-\_\-elements (
+\begin{DoxyParamCaption}
+\item[{F\-I\-L\-E $\ast$}]{output, }
+\item[{{\bf C\-H\-A\-R\-V\-E\-C\-T\-O\-R} $\ast$}]{v}
+\end{DoxyParamCaption}
+)}}\label{t__io_8h_a909c544c94ebdaa024f5f345538153ad}
+
+
+ Write a vector of char to a file in binary mode 
+
+Definition at line 937 of file t\-\_\-io.\-c.
+
+
+
+References C\-H\-A\-R\-V\-E\-C\-T\-O\-R\-::co, C\-H\-A\-R\-V\-E\-C\-T\-O\-R\-::isdynamic, C\-H\-A\-R\-V\-E\-C\-T\-O\-R\-::nh, C\-H\-A\-R\-V\-E\-C\-T\-O\-R\-::nl, and t\-\_\-error().
+
+\hypertarget{t__io_8h_a73e690d56d06651957ba9b7f1524d327}{\index{t\-\_\-io.\-h@{t\-\_\-io.\-h}!binarywrite\-\_\-doublebin\-\_\-elements@{binarywrite\-\_\-doublebin\-\_\-elements}}
+\index{binarywrite\-\_\-doublebin\-\_\-elements@{binarywrite\-\_\-doublebin\-\_\-elements}!t_io.h@{t\-\_\-io.\-h}}
+\subsubsection[{binarywrite\-\_\-doublebin\-\_\-elements}]{\setlength{\rightskip}{0pt plus 5cm}long binarywrite\-\_\-doublebin\-\_\-elements (
+\begin{DoxyParamCaption}
+\item[{F\-I\-L\-E $\ast$}]{output, }
+\item[{{\bf D\-O\-U\-B\-L\-E\-B\-I\-N} $\ast$}]{l}
+\end{DoxyParamCaption}
+)}}\label{t__io_8h_a73e690d56d06651957ba9b7f1524d327}
+
+
+ Write a list of double to a file Here is still missing a check that output was open as \char`\"{}wb\char`\"{} 
+
+Definition at line 2523 of file t\-\_\-io.\-c.
+
+
+
+References L\-O\-N\-G\-V\-E\-C\-T\-O\-R\-::co, db\-::co, db\-::index, db\-::isdynamic, and t\-\_\-error().
+
+\hypertarget{t__io_8h_a7dc0e11f7b5688ae090883d97b2acf37}{\index{t\-\_\-io.\-h@{t\-\_\-io.\-h}!binarywrite\-\_\-doublematrix\-\_\-elements@{binarywrite\-\_\-doublematrix\-\_\-elements}}
+\index{binarywrite\-\_\-doublematrix\-\_\-elements@{binarywrite\-\_\-doublematrix\-\_\-elements}!t_io.h@{t\-\_\-io.\-h}}
+\subsubsection[{binarywrite\-\_\-doublematrix\-\_\-elements}]{\setlength{\rightskip}{0pt plus 5cm}long binarywrite\-\_\-doublematrix\-\_\-elements (
+\begin{DoxyParamCaption}
+\item[{F\-I\-L\-E $\ast$}]{output, }
+\item[{{\bf D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X} $\ast$}]{m}
+\end{DoxyParamCaption}
+)}}\label{t__io_8h_a7dc0e11f7b5688ae090883d97b2acf37}
+
+
+ Write a matrix of double to a file 
+
+Definition at line 1803 of file t\-\_\-io.\-c.
+
+
+
+References D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X\-::co, D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X\-::isdynamic, D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X\-::nch, D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X\-::ncl, D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X\-::nrh, D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X\-::nrl, and t\-\_\-error().
+
+\hypertarget{t__io_8h_a43994285f4c91f37a5571b2f7bd35b8d}{\index{t\-\_\-io.\-h@{t\-\_\-io.\-h}!binarywrite\-\_\-doublevector\-\_\-elements@{binarywrite\-\_\-doublevector\-\_\-elements}}
+\index{binarywrite\-\_\-doublevector\-\_\-elements@{binarywrite\-\_\-doublevector\-\_\-elements}!t_io.h@{t\-\_\-io.\-h}}
+\subsubsection[{binarywrite\-\_\-doublevector\-\_\-elements}]{\setlength{\rightskip}{0pt plus 5cm}long binarywrite\-\_\-doublevector\-\_\-elements (
+\begin{DoxyParamCaption}
+\item[{F\-I\-L\-E $\ast$}]{output, }
+\item[{{\bf D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} $\ast$}]{v}
+\end{DoxyParamCaption}
+)}}\label{t__io_8h_a43994285f4c91f37a5571b2f7bd35b8d}
+
+
+ Write a vector of double to a file in binary mode 
+
+Definition at line 786 of file t\-\_\-io.\-c.
+
+
+
+References D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R\-::co, D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R\-::isdynamic, D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R\-::nh, D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R\-::nl, and t\-\_\-error().
+
+\hypertarget{t__io_8h_a00ecaa3ee29b4f36b68a30029445a536}{\index{t\-\_\-io.\-h@{t\-\_\-io.\-h}!binarywrite\-\_\-floatmatrix\-\_\-elements@{binarywrite\-\_\-floatmatrix\-\_\-elements}}
+\index{binarywrite\-\_\-floatmatrix\-\_\-elements@{binarywrite\-\_\-floatmatrix\-\_\-elements}!t_io.h@{t\-\_\-io.\-h}}
+\subsubsection[{binarywrite\-\_\-floatmatrix\-\_\-elements}]{\setlength{\rightskip}{0pt plus 5cm}long binarywrite\-\_\-floatmatrix\-\_\-elements (
+\begin{DoxyParamCaption}
+\item[{F\-I\-L\-E $\ast$}]{output, }
+\item[{{\bf F\-L\-O\-A\-T\-M\-A\-T\-R\-I\-X} $\ast$}]{m}
+\end{DoxyParamCaption}
+)}}\label{t__io_8h_a00ecaa3ee29b4f36b68a30029445a536}
+
+
+ Write a matrix of float to a file 
+
+Definition at line 1632 of file t\-\_\-io.\-c.
+
+
+
+References F\-L\-O\-A\-T\-M\-A\-T\-R\-I\-X\-::co, F\-L\-O\-A\-T\-M\-A\-T\-R\-I\-X\-::isdynamic, F\-L\-O\-A\-T\-M\-A\-T\-R\-I\-X\-::nch, F\-L\-O\-A\-T\-M\-A\-T\-R\-I\-X\-::ncl, F\-L\-O\-A\-T\-M\-A\-T\-R\-I\-X\-::nrh, F\-L\-O\-A\-T\-M\-A\-T\-R\-I\-X\-::nrl, and t\-\_\-error().
+
+\hypertarget{t__io_8h_ab9bad968281c9c833fe2c93ac8044947}{\index{t\-\_\-io.\-h@{t\-\_\-io.\-h}!binarywrite\-\_\-floatvector\-\_\-elements@{binarywrite\-\_\-floatvector\-\_\-elements}}
+\index{binarywrite\-\_\-floatvector\-\_\-elements@{binarywrite\-\_\-floatvector\-\_\-elements}!t_io.h@{t\-\_\-io.\-h}}
+\subsubsection[{binarywrite\-\_\-floatvector\-\_\-elements}]{\setlength{\rightskip}{0pt plus 5cm}long binarywrite\-\_\-floatvector\-\_\-elements (
+\begin{DoxyParamCaption}
+\item[{F\-I\-L\-E $\ast$}]{output, }
+\item[{{\bf F\-L\-O\-A\-T\-V\-E\-C\-T\-O\-R} $\ast$}]{v}
+\end{DoxyParamCaption}
+)}}\label{t__io_8h_ab9bad968281c9c833fe2c93ac8044947}
+
+
+ Write a vector of float to a file in binary mode 
+
+Definition at line 635 of file t\-\_\-io.\-c.
+
+
+
+References F\-L\-O\-A\-T\-V\-E\-C\-T\-O\-R\-::co, F\-L\-O\-A\-T\-V\-E\-C\-T\-O\-R\-::isdynamic, F\-L\-O\-A\-T\-V\-E\-C\-T\-O\-R\-::nh, F\-L\-O\-A\-T\-V\-E\-C\-T\-O\-R\-::nl, and t\-\_\-error().
+
+\hypertarget{t__io_8h_ac282e7b94378df32a33a3b76a089c2d7}{\index{t\-\_\-io.\-h@{t\-\_\-io.\-h}!binarywrite\-\_\-intbin\-\_\-elements@{binarywrite\-\_\-intbin\-\_\-elements}}
+\index{binarywrite\-\_\-intbin\-\_\-elements@{binarywrite\-\_\-intbin\-\_\-elements}!t_io.h@{t\-\_\-io.\-h}}
+\subsubsection[{binarywrite\-\_\-intbin\-\_\-elements}]{\setlength{\rightskip}{0pt plus 5cm}long binarywrite\-\_\-intbin\-\_\-elements (
+\begin{DoxyParamCaption}
+\item[{F\-I\-L\-E $\ast$}]{output, }
+\item[{{\bf I\-N\-T\-B\-I\-N} $\ast$}]{l}
+\end{DoxyParamCaption}
+)}}\label{t__io_8h_ac282e7b94378df32a33a3b76a089c2d7}
+
+
+ Write a list of int to a file Here is still missing a check that output was open as \char`\"{}wb\char`\"{} 
+
+Definition at line 1980 of file t\-\_\-io.\-c.
+
+
+
+References L\-O\-N\-G\-V\-E\-C\-T\-O\-R\-::co, I\-N\-T\-B\-I\-N\-::co, I\-N\-T\-B\-I\-N\-::index, I\-N\-T\-B\-I\-N\-::isdynamic, and t\-\_\-error().
+
+\hypertarget{t__io_8h_affe275c40f9e7c6634015e605b541b2a}{\index{t\-\_\-io.\-h@{t\-\_\-io.\-h}!binarywrite\-\_\-intmatrix\-\_\-elements@{binarywrite\-\_\-intmatrix\-\_\-elements}}
+\index{binarywrite\-\_\-intmatrix\-\_\-elements@{binarywrite\-\_\-intmatrix\-\_\-elements}!t_io.h@{t\-\_\-io.\-h}}
+\subsubsection[{binarywrite\-\_\-intmatrix\-\_\-elements}]{\setlength{\rightskip}{0pt plus 5cm}long binarywrite\-\_\-intmatrix\-\_\-elements (
+\begin{DoxyParamCaption}
+\item[{F\-I\-L\-E $\ast$}]{output, }
+\item[{{\bf I\-N\-T\-M\-A\-T\-R\-I\-X} $\ast$}]{m}
+\end{DoxyParamCaption}
+)}}\label{t__io_8h_affe275c40f9e7c6634015e605b541b2a}
+
+
+ Write a matrix of int to a file 
+
+Definition at line 1281 of file t\-\_\-io.\-c.
+
+
+
+References I\-N\-T\-M\-A\-T\-R\-I\-X\-::co, I\-N\-T\-M\-A\-T\-R\-I\-X\-::isdynamic, I\-N\-T\-M\-A\-T\-R\-I\-X\-::nch, I\-N\-T\-M\-A\-T\-R\-I\-X\-::ncl, I\-N\-T\-M\-A\-T\-R\-I\-X\-::nrh, I\-N\-T\-M\-A\-T\-R\-I\-X\-::nrl, and t\-\_\-error().
+
+\hypertarget{t__io_8h_a6b4a4b43dce260ee8d8e9785c9b502d7}{\index{t\-\_\-io.\-h@{t\-\_\-io.\-h}!binarywrite\-\_\-intvector\-\_\-elements@{binarywrite\-\_\-intvector\-\_\-elements}}
+\index{binarywrite\-\_\-intvector\-\_\-elements@{binarywrite\-\_\-intvector\-\_\-elements}!t_io.h@{t\-\_\-io.\-h}}
+\subsubsection[{binarywrite\-\_\-intvector\-\_\-elements}]{\setlength{\rightskip}{0pt plus 5cm}long binarywrite\-\_\-intvector\-\_\-elements (
+\begin{DoxyParamCaption}
+\item[{F\-I\-L\-E $\ast$}]{output, }
+\item[{{\bf I\-N\-T\-V\-E\-C\-T\-O\-R} $\ast$}]{v}
+\end{DoxyParamCaption}
+)}}\label{t__io_8h_a6b4a4b43dce260ee8d8e9785c9b502d7}
+
+
+ Write a vector of int to a file in binary mode 
+
+Definition at line 334 of file t\-\_\-io.\-c.
+
+
+
+References I\-N\-T\-V\-E\-C\-T\-O\-R\-::co, I\-N\-T\-V\-E\-C\-T\-O\-R\-::isdynamic, I\-N\-T\-V\-E\-C\-T\-O\-R\-::nh, I\-N\-T\-V\-E\-C\-T\-O\-R\-::nl, and t\-\_\-error().
+
+\hypertarget{t__io_8h_a374b91675265b78c1c92d32148431c21}{\index{t\-\_\-io.\-h@{t\-\_\-io.\-h}!binarywrite\-\_\-longbin\-\_\-elements@{binarywrite\-\_\-longbin\-\_\-elements}}
+\index{binarywrite\-\_\-longbin\-\_\-elements@{binarywrite\-\_\-longbin\-\_\-elements}!t_io.h@{t\-\_\-io.\-h}}
+\subsubsection[{binarywrite\-\_\-longbin\-\_\-elements}]{\setlength{\rightskip}{0pt plus 5cm}long binarywrite\-\_\-longbin\-\_\-elements (
+\begin{DoxyParamCaption}
+\item[{F\-I\-L\-E $\ast$}]{output, }
+\item[{{\bf L\-O\-N\-G\-B\-I\-N} $\ast$}]{l}
+\end{DoxyParamCaption}
+)}}\label{t__io_8h_a374b91675265b78c1c92d32148431c21}
+
+
+ Write a list of long to a file Here is still missing a check that output was open as \char`\"{}wb\char`\"{} 
+
+Definition at line 2342 of file t\-\_\-io.\-c.
+
+
+
+References L\-O\-N\-G\-V\-E\-C\-T\-O\-R\-::co, L\-O\-N\-G\-B\-I\-N\-::co, L\-O\-N\-G\-B\-I\-N\-::index, L\-O\-N\-G\-B\-I\-N\-::isdynamic, and t\-\_\-error().
+
+\hypertarget{t__io_8h_a2557b630ece4744b5a68e9276236516d}{\index{t\-\_\-io.\-h@{t\-\_\-io.\-h}!binarywrite\-\_\-longmatrix\-\_\-elements@{binarywrite\-\_\-longmatrix\-\_\-elements}}
+\index{binarywrite\-\_\-longmatrix\-\_\-elements@{binarywrite\-\_\-longmatrix\-\_\-elements}!t_io.h@{t\-\_\-io.\-h}}
+\subsubsection[{binarywrite\-\_\-longmatrix\-\_\-elements}]{\setlength{\rightskip}{0pt plus 5cm}long binarywrite\-\_\-longmatrix\-\_\-elements (
+\begin{DoxyParamCaption}
+\item[{F\-I\-L\-E $\ast$}]{output, }
+\item[{{\bf L\-O\-N\-G\-M\-A\-T\-R\-I\-X} $\ast$}]{m}
+\end{DoxyParamCaption}
+)}}\label{t__io_8h_a2557b630ece4744b5a68e9276236516d}
+
+
+ Write a matrix of long to a file 
+
+Definition at line 1455 of file t\-\_\-io.\-c.
+
+
+
+References L\-O\-N\-G\-M\-A\-T\-R\-I\-X\-::co, L\-O\-N\-G\-M\-A\-T\-R\-I\-X\-::isdynamic, L\-O\-N\-G\-M\-A\-T\-R\-I\-X\-::nch, L\-O\-N\-G\-M\-A\-T\-R\-I\-X\-::ncl, L\-O\-N\-G\-M\-A\-T\-R\-I\-X\-::nrh, L\-O\-N\-G\-M\-A\-T\-R\-I\-X\-::nrl, and t\-\_\-error().
+
+\hypertarget{t__io_8h_a4e1b45a861bf7936a6e3517d3f4fbe36}{\index{t\-\_\-io.\-h@{t\-\_\-io.\-h}!binarywrite\-\_\-longvector\-\_\-elements@{binarywrite\-\_\-longvector\-\_\-elements}}
+\index{binarywrite\-\_\-longvector\-\_\-elements@{binarywrite\-\_\-longvector\-\_\-elements}!t_io.h@{t\-\_\-io.\-h}}
+\subsubsection[{binarywrite\-\_\-longvector\-\_\-elements}]{\setlength{\rightskip}{0pt plus 5cm}long binarywrite\-\_\-longvector\-\_\-elements (
+\begin{DoxyParamCaption}
+\item[{F\-I\-L\-E $\ast$}]{output, }
+\item[{{\bf L\-O\-N\-G\-V\-E\-C\-T\-O\-R} $\ast$}]{v}
+\end{DoxyParamCaption}
+)}}\label{t__io_8h_a4e1b45a861bf7936a6e3517d3f4fbe36}
+
+
+ Write a vector of long to a file in binary mode 
+
+Definition at line 485 of file t\-\_\-io.\-c.
+
+
+
+References L\-O\-N\-G\-V\-E\-C\-T\-O\-R\-::co, L\-O\-N\-G\-V\-E\-C\-T\-O\-R\-::isdynamic, L\-O\-N\-G\-V\-E\-C\-T\-O\-R\-::nh, L\-O\-N\-G\-V\-E\-C\-T\-O\-R\-::nl, and t\-\_\-error().
+
+\hypertarget{t__io_8h_ad1c089cb15a975837bd6ac8045db6db3}{\index{t\-\_\-io.\-h@{t\-\_\-io.\-h}!binarywrite\-\_\-shortbin\-\_\-elements@{binarywrite\-\_\-shortbin\-\_\-elements}}
+\index{binarywrite\-\_\-shortbin\-\_\-elements@{binarywrite\-\_\-shortbin\-\_\-elements}!t_io.h@{t\-\_\-io.\-h}}
+\subsubsection[{binarywrite\-\_\-shortbin\-\_\-elements}]{\setlength{\rightskip}{0pt plus 5cm}long binarywrite\-\_\-shortbin\-\_\-elements (
+\begin{DoxyParamCaption}
+\item[{F\-I\-L\-E $\ast$}]{output, }
+\item[{{\bf S\-H\-O\-R\-T\-B\-I\-N} $\ast$}]{l}
+\end{DoxyParamCaption}
+)}}\label{t__io_8h_ad1c089cb15a975837bd6ac8045db6db3}
+
+
+ Write a list of short to a file Here is still missing a check that output was open as \char`\"{}wb\char`\"{} 
+
+Definition at line 2161 of file t\-\_\-io.\-c.
+
+
+
+References L\-O\-N\-G\-V\-E\-C\-T\-O\-R\-::co, S\-H\-O\-R\-T\-B\-I\-N\-::co, S\-H\-O\-R\-T\-B\-I\-N\-::index, S\-H\-O\-R\-T\-B\-I\-N\-::isdynamic, and t\-\_\-error().
+
+\hypertarget{t__io_8h_a849d350ca81aedf2e4d27cf142ccfdc3}{\index{t\-\_\-io.\-h@{t\-\_\-io.\-h}!binarywrite\-\_\-shortmatrix\-\_\-elements@{binarywrite\-\_\-shortmatrix\-\_\-elements}}
+\index{binarywrite\-\_\-shortmatrix\-\_\-elements@{binarywrite\-\_\-shortmatrix\-\_\-elements}!t_io.h@{t\-\_\-io.\-h}}
+\subsubsection[{binarywrite\-\_\-shortmatrix\-\_\-elements}]{\setlength{\rightskip}{0pt plus 5cm}long binarywrite\-\_\-shortmatrix\-\_\-elements (
+\begin{DoxyParamCaption}
+\item[{F\-I\-L\-E $\ast$}]{output, }
+\item[{{\bf S\-H\-O\-R\-T\-M\-A\-T\-R\-I\-X} $\ast$}]{m}
+\end{DoxyParamCaption}
+)}}\label{t__io_8h_a849d350ca81aedf2e4d27cf142ccfdc3}
+
+
+ Write a matrix of shorts to a file 
+
+Definition at line 1110 of file t\-\_\-io.\-c.
+
+
+
+References S\-H\-O\-R\-T\-M\-A\-T\-R\-I\-X\-::co, S\-H\-O\-R\-T\-M\-A\-T\-R\-I\-X\-::isdynamic, S\-H\-O\-R\-T\-M\-A\-T\-R\-I\-X\-::nch, S\-H\-O\-R\-T\-M\-A\-T\-R\-I\-X\-::ncl, S\-H\-O\-R\-T\-M\-A\-T\-R\-I\-X\-::nrh, S\-H\-O\-R\-T\-M\-A\-T\-R\-I\-X\-::nrl, and t\-\_\-error().
+
+\hypertarget{t__io_8h_ad66c799a25a1d6e094690bbbc3580c00}{\index{t\-\_\-io.\-h@{t\-\_\-io.\-h}!binarywrite\-\_\-shortvector\-\_\-elements@{binarywrite\-\_\-shortvector\-\_\-elements}}
+\index{binarywrite\-\_\-shortvector\-\_\-elements@{binarywrite\-\_\-shortvector\-\_\-elements}!t_io.h@{t\-\_\-io.\-h}}
+\subsubsection[{binarywrite\-\_\-shortvector\-\_\-elements}]{\setlength{\rightskip}{0pt plus 5cm}long binarywrite\-\_\-shortvector\-\_\-elements (
+\begin{DoxyParamCaption}
+\item[{F\-I\-L\-E $\ast$}]{output, }
+\item[{{\bf S\-H\-O\-R\-T\-V\-E\-C\-T\-O\-R} $\ast$}]{v}
+\end{DoxyParamCaption}
+)}}\label{t__io_8h_ad66c799a25a1d6e094690bbbc3580c00}
+
+
+ Write a vector of short int to a file in binary mode 
+
+Definition at line 181 of file t\-\_\-io.\-c.
+
+
+
+References S\-H\-O\-R\-T\-V\-E\-C\-T\-O\-R\-::co, S\-H\-O\-R\-T\-V\-E\-C\-T\-O\-R\-::isdynamic, S\-H\-O\-R\-T\-V\-E\-C\-T\-O\-R\-::nh, S\-H\-O\-R\-T\-V\-E\-C\-T\-O\-R\-::nl, and t\-\_\-error().
+
+\hypertarget{t__io_8h_a2eaf0dcff8cd7681c1030edfcb653b7f}{\index{t\-\_\-io.\-h@{t\-\_\-io.\-h}!copy\-\_\-buffer\-\_\-into\-\_\-stringbin@{copy\-\_\-buffer\-\_\-into\-\_\-stringbin}}
+\index{copy\-\_\-buffer\-\_\-into\-\_\-stringbin@{copy\-\_\-buffer\-\_\-into\-\_\-stringbin}!t_io.h@{t\-\_\-io.\-h}}
+\subsubsection[{copy\-\_\-buffer\-\_\-into\-\_\-stringbin}]{\setlength{\rightskip}{0pt plus 5cm}int copy\-\_\-buffer\-\_\-into\-\_\-stringbin (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{buffer, }
+\item[{{\bf S\-T\-R\-I\-N\-G\-B\-I\-N} $\ast$}]{l}
+\end{DoxyParamCaption}
+)}}\label{t__io_8h_a2eaf0dcff8cd7681c1030edfcb653b7f}
+Name\-: copy\-\_\-buffer\-\_\-into\-\_\-stringbin
+
+Synopsis\-: int \hyperlink{t__io_8h_a2eaf0dcff8cd7681c1030edfcb653b7f}{copy\-\_\-buffer\-\_\-into\-\_\-stringbin(char $\ast$,\-S\-T\-R\-I\-N\-G\-B\-I\-N $\ast$)};
+
+Version\-: 1.\-0
+
+Description\-: In order to read a fixed number of strings whose
+
+length is unknown, a buffer is inizialized and filled with the strings
+
+reallocating each time is necessary a certain amount of memory
+
+specified in the global variable B\-U\-F\-F\-E\-R\-\_\-\-I\-N\-C\-R\-E\-M\-E\-N\-T. A buffer is termined
+
+by a null character. Each string is separated by another by a whitespace
+
+(in the sense of iswhitespace() -\/ e.\-g. Harbison and Steele, 1995). While
+
+reading them is kept track of the length of each string and the suitable
+
+vector index for the string bin is inizialized (note\-: the number of string
+
+must be known in advance). Finally one has to copy the content of the buffer
+
+into its stringbin.
+
+F\-I\-L\-E\-: L\-I\-B\-R\-A\-R\-I\-E\-S/\-B\-A\-S\-I\-C\-S/t\-\_\-io.\-h, L\-I\-B\-R\-A\-R\-I\-E\-S/\-B\-A\-S\-I\-C\-S/t\-\_\-io.\-c
+
+Authors \& Date\-: Riccardo Rigon, August 1997
+
+Inputs\-: read\-\_\-\-: A pointer to the buffer and a pointer to the stringbin.
+
+Return\-: 1 if successful (otherwise it aborts).
+
+See Also\-: iswhitespace, read\-\_\-stringbin, print\-\_\-stringbin\-\_\-elements
+
+Keywords\-: buffer, strings
+
+Examples\-: 3.\-examples.\-c
+
+
+
+ 
+
+Definition at line 2830 of file t\-\_\-io.\-c.
+
+
+
+References co, st\-::co, st\-::index, st\-::isdynamic, O\-K, and t\-\_\-error().
+
+
+
+Referenced by read\-\_\-plane\-\_\-strings(), and read\-\_\-plane\-\_\-strings\-\_\-restricted().
+
+\hypertarget{t__io_8h_ab2a58d86d831816cd4e5f5126800b322}{\index{t\-\_\-io.\-h@{t\-\_\-io.\-h}!get\-\_\-filename@{get\-\_\-filename}}
+\index{get\-\_\-filename@{get\-\_\-filename}!t_io.h@{t\-\_\-io.\-h}}
+\subsubsection[{get\-\_\-filename}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ get\-\_\-filename (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{working\-\_\-directory, }
+\item[{char $\ast$}]{program}
+\end{DoxyParamCaption}
+)}}\label{t__io_8h_ab2a58d86d831816cd4e5f5126800b322}
+Name\-: get\-\_\-filename
+
+Synopsis\-: char $\ast$get\-\_\-filename(char $\ast$\-W\-O\-R\-K\-I\-N\-G\-\_\-\-D\-I\-R\-E\-C\-T\-O\-R\-Y,char $\ast$program);
+
+Version\-: 0.\-8
+
+Description\-: get\-\_\-filename returns the full name of a file to work with. It is intended to be a platform
+
+independent way to store input/output file names in a file. Thus avoiding to specify them on the standard input every
+
+time the program is executed (this is particularly useful when the same program with the same inputs is executed several times).
+
+The working directory (the variable\-: W\-O\-R\-K\-I\-N\-G\-\_\-\-D\-I\-R\-E\-C\-T\-O\-R\-Y )is specified in the file
+
+\$\-Path\-File that has to be placed in the directory where the programs are (Windows95/\-N\-T or Mac O\-S) or in the
+
+current directory (Unixes). The file names are instead stored in a file whose name is \$program where \char`\"{}program\char`\"{} is the
+
+name of the program being executed.
+
+Authors \& Date \-: Riccardo Rigon, April 1998
+
+F\-I\-L\-E\-: L\-I\-B\-R\-A\-R\-I\-E\-S/\-B\-A\-S\-I\-C\-S/t\-\_\-io.\-h, L\-I\-B\-R\-A\-R\-I\-E\-S/\-B\-A\-S\-I\-C\-S/t\-\_\-io.\-c
+
+Inputs\-:
+
+1) The pointer to working directory name
+
+2) The pointer to the name of the program being executed
+
+Return\-: the requested name
+
+See Also\-: simplefind, get\-\_\-parameter, get\-\_\-string
+
+
+
+ 
+
+Definition at line 3058 of file t\-\_\-io.\-c.
+
+
+
+References st\-::co, I\-O\-\_\-\-F\-I\-L\-E\-S\-\_\-\-C\-O\-U\-N\-T\-E\-R, join\-\_\-strings(), N\-O\-P\-R\-I\-N\-T, read\-\_\-stringarray(), simplefind(), t\-\_\-error(), t\-\_\-fclose(), and W\-O\-R\-K\-I\-N\-G\-\_\-\-P\-O\-S\-I\-T\-I\-O\-N.
+
+\hypertarget{t__io_8h_adf45bf5a9f6fd676e9cb6b5127789f8c}{\index{t\-\_\-io.\-h@{t\-\_\-io.\-h}!get\-\_\-parameter@{get\-\_\-parameter}}
+\index{get\-\_\-parameter@{get\-\_\-parameter}!t_io.h@{t\-\_\-io.\-h}}
+\subsubsection[{get\-\_\-parameter}]{\setlength{\rightskip}{0pt plus 5cm}double get\-\_\-parameter (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{working\-\_\-directory, }
+\item[{char $\ast$}]{program}
+\end{DoxyParamCaption}
+)}}\label{t__io_8h_adf45bf5a9f6fd676e9cb6b5127789f8c}
+Name\-: get\-\_\-parameter
+
+Synopsis\-: double $\ast$get\-\_\-parameter(char $\ast$\-W\-O\-R\-K\-I\-N\-G\-\_\-\-D\-I\-R\-E\-C\-T\-O\-R\-Y,char $\ast$program);
+
+Version\-: 0.\-8
+
+Description\-: get\-\_\-parameter returns a requested parameter. It is intended to be a platform
+
+independent way to store program parameter values in a file without having to specify them on the standard input every
+
+time the program is executed. The working directory (the variable\-: W\-O\-R\-K\-I\-N\-G\-\_\-\-D\-I\-R\-E\-C\-T\-O\-R\-Y )is specified in the file
+
+\$\-Path\-File that has to be placed in the directory where the programs are (Windows95/\-N\-T or Mac O\-S) or in the
+
+current directory (Unixes). The file names are instead stored in a file whose name is \$program where \char`\"{}program\char`\"{} is the
+
+name of the program being executed. Every parameter is first read as a double but assignement to a different type
+
+of variable is possible
+
+Authors \& Date\-: Riccardo Rigon, April 1998
+
+F\-I\-L\-E\-: L\-I\-B\-R\-A\-R\-I\-E\-S/\-B\-A\-S\-I\-C\-S/t\-\_\-io.\-h, L\-I\-B\-R\-A\-R\-I\-E\-S/\-B\-A\-S\-I\-C\-S/t\-\_\-io.\-c
+
+Inputs\-:
+
+1) The pointer to working directory name
+
+2) The pointer to the name of the program being executed
+
+Return\-: the requested variable
+
+See Also\-: simplefind, get\-\_\-filename, get\-\_\-string
+
+
+
+ 
+
+Definition at line 3126 of file t\-\_\-io.\-c.
+
+
+
+References D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R\-::co, I\-O\-\_\-\-P\-A\-R\-M\-S\-\_\-\-C\-O\-U\-N\-T\-E\-R, join\-\_\-strings(), N\-O\-P\-R\-I\-N\-T, read\-\_\-doublearray(), simplefind(), t\-\_\-error(), t\-\_\-fclose(), and W\-O\-R\-K\-I\-N\-G\-\_\-\-P\-O\-S\-I\-T\-I\-O\-N.
+
+\hypertarget{t__io_8h_a702182a261753cbceefb3bf84dfe7de1}{\index{t\-\_\-io.\-h@{t\-\_\-io.\-h}!get\-\_\-phrase@{get\-\_\-phrase}}
+\index{get\-\_\-phrase@{get\-\_\-phrase}!t_io.h@{t\-\_\-io.\-h}}
+\subsubsection[{get\-\_\-phrase}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ get\-\_\-phrase (
+\begin{DoxyParamCaption}
+\item[{F\-I\-L\-E $\ast$}]{inputfile, }
+\item[{const char}]{separator}
+\end{DoxyParamCaption}
+)}}\label{t__io_8h_a702182a261753cbceefb3bf84dfe7de1}
+
+
+ isspace(label\mbox{[}i-\/1\mbox{]}) \&\& 
+
+Definition at line 3400 of file t\-\_\-io.\-c.
+
+
+
+References join\-\_\-strings(), L\-A\-B\-E\-L\-I\-N\-C\-R\-E\-M\-E\-N\-T, M\-A\-X\-L\-A\-B\-E\-L\-S\-I\-Z\-E, skip\-\_\-whitespaces(), t\-\_\-error(), and W\-O\-R\-K\-I\-N\-G\-\_\-\-D\-I\-R\-E\-C\-T\-O\-R\-Y.
+
+
+
+Referenced by justread\-\_\-floatmatrix(), read\-\_\-charvector(), read\-\_\-doublematrix(), read\-\_\-doubletensor(), read\-\_\-doublevector(), read\-\_\-floatmatrix(), read\-\_\-floatvector(), read\-\_\-intmatrix(), read\-\_\-intvector(), read\-\_\-longmatrix(), read\-\_\-longvector(), read\-\_\-shortmatrix(), and read\-\_\-shortvector().
+
+\hypertarget{t__io_8h_a5d0eac48b15fd464d3f90a861820bd2a}{\index{t\-\_\-io.\-h@{t\-\_\-io.\-h}!get\-\_\-strings@{get\-\_\-strings}}
+\index{get\-\_\-strings@{get\-\_\-strings}!t_io.h@{t\-\_\-io.\-h}}
+\subsubsection[{get\-\_\-strings}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ get\-\_\-strings (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{working\-\_\-directory, }
+\item[{char $\ast$}]{program}
+\end{DoxyParamCaption}
+)}}\label{t__io_8h_a5d0eac48b15fd464d3f90a861820bd2a}
+Name\-: char $\ast$get\-\_\-string
+
+Synopsis\-: char $\ast$get\-\_\-string(char $\ast$\-W\-O\-R\-K\-I\-N\-G\-\_\-\-D\-I\-R\-E\-C\-T\-O\-R\-Y,char $\ast$program);
+
+Version\-: 0.\-8
+
+Description\-: get\-\_\-string returns a string needed by a program. It is intended to be a platform
+
+independent way to store strings in a file without having to specify them on the standard input every
+
+time the program is executed. The strings are stored in a file whose name is \$program where \char`\"{}program\char`\"{} is the
+
+name of the program being executed.
+
+Authors \& Date\-: Riccardo Rigon, April 1998
+
+F\-I\-L\-E\-: L\-I\-B\-R\-A\-R\-I\-E\-S/\-B\-A\-S\-I\-C\-S/t\-\_\-io.\-h, L\-I\-B\-R\-A\-R\-I\-E\-S/\-B\-A\-S\-I\-C\-S/t\-\_\-io.\-c
+
+Inputs\-:
+
+1) The pointer to working directory name
+
+2) The pointer to the name of the program being executed
+
+Return\-: the requested string
+
+See Also\-: simplefind, get\-\_\-filename, get\-\_\-parameter
+
+
+
+ 
+
+Definition at line 3170 of file t\-\_\-io.\-c.
+
+
+
+References st\-::co, I\-O\-\_\-\-F\-I\-L\-E\-S\-\_\-\-C\-O\-U\-N\-T\-E\-R, join\-\_\-strings(), N\-O\-P\-R\-I\-N\-T, read\-\_\-stringarray(), simplefind(), t\-\_\-error(), t\-\_\-fclose(), and W\-O\-R\-K\-I\-N\-G\-\_\-\-P\-O\-S\-I\-T\-I\-O\-N.
+
+\hypertarget{t__io_8h_ab99ccf086e8dc277bb2795021db0373f}{\index{t\-\_\-io.\-h@{t\-\_\-io.\-h}!get\-\_\-workingdirectory@{get\-\_\-workingdirectory}}
+\index{get\-\_\-workingdirectory@{get\-\_\-workingdirectory}!t_io.h@{t\-\_\-io.\-h}}
+\subsubsection[{get\-\_\-workingdirectory}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ get\-\_\-workingdirectory (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{t__io_8h_ab99ccf086e8dc277bb2795021db0373f}
+Names\-: get\-\_\-workingdirectory
+
+Synopsis\-: char $\ast$get\-\_\-workingdirectory(void );
+
+Version\-: 1.\-0
+
+Description\-: It asks for the working directory, i.\-e. the directory where inputs data are stored.
+
+This directory can be alternatively specified in a file \$\-Working\-Paths to be found in the executable directory
+
+(for Windows or Mac systems where it is useful. In Unix systems it can be also the directory from where
+
+the program containing this routine is called)
+
+F\-I\-L\-E\-: L\-I\-B\-R\-A\-R\-I\-E\-S/\-B\-A\-S\-I\-C\-S/t\-\_\-io.\-h, L\-I\-B\-R\-A\-R\-I\-E\-S/\-B\-A\-S\-I\-C\-S/t\-\_\-io.\-c
+
+Inputs\-: void
+
+Return\-: a pointer to the resulting string (the working directory )
+
+Examples\-: 1.\-examples.\-c
+
+Authors \& Date\-: Riccardo Rigon, October 1997
+
+
+
+ 
+
+Definition at line 2992 of file t\-\_\-io.\-c.
+
+
+
+References t\-\_\-error().
+
+\hypertarget{t__io_8h_a813737fb9190c2a775f84fe8b94998f8}{\index{t\-\_\-io.\-h@{t\-\_\-io.\-h}!goto\-\_\-\-E\-O\-F@{goto\-\_\-\-E\-O\-F}}
+\index{goto\-\_\-\-E\-O\-F@{goto\-\_\-\-E\-O\-F}!t_io.h@{t\-\_\-io.\-h}}
+\subsubsection[{goto\-\_\-\-E\-O\-F}]{\setlength{\rightskip}{0pt plus 5cm}void goto\-\_\-\-E\-O\-F (
+\begin{DoxyParamCaption}
+\item[{F\-I\-L\-E $\ast$}]{inputfile}
+\end{DoxyParamCaption}
+)}}\label{t__io_8h_a813737fb9190c2a775f84fe8b94998f8}
+Name\-: goto\-\_\-\-E\-O\-F
+
+Synopsis\-: void \hyperlink{t__io_8h_a813737fb9190c2a775f84fe8b94998f8}{goto\-\_\-\-E\-O\-F(\-F\-I\-L\-E $\ast$)};
+
+Version\-: 1.\-0
+
+Description\-: skips the whitespaces in a file and exits when a
+
+normal character or E\-O\-F is found. It is very similar to skip\-\_\-whitespaces.
+
+F\-I\-L\-E\-: L\-I\-B\-R\-A\-R\-I\-E\-S/\-B\-A\-S\-I\-C\-S/t\-\_\-io.\-h, L\-I\-B\-R\-A\-R\-I\-E\-S/\-B\-A\-S\-I\-C\-S/t\-\_\-io.\-c
+
+Authors \& Date\-: Riccardo Rigon, February 1997
+
+Inputs\-: the pointer to the opened file
+
+Return\-: void
+
+See Also\-: read\-\_\-comment, iscomment, goto\-\_\-\-E\-O\-F
+
+
+
+ 
+
+Definition at line 2927 of file t\-\_\-io.\-c.
+
+
+
+Referenced by read\-\_\-charvector(), and read\-\_\-intbin().
+
+\hypertarget{t__io_8h_a76161f1ed4fa083f60023e867d4a16cd}{\index{t\-\_\-io.\-h@{t\-\_\-io.\-h}!header\-\_\-name\-\_\-scan@{header\-\_\-name\-\_\-scan}}
+\index{header\-\_\-name\-\_\-scan@{header\-\_\-name\-\_\-scan}!t_io.h@{t\-\_\-io.\-h}}
+\subsubsection[{header\-\_\-name\-\_\-scan}]{\setlength{\rightskip}{0pt plus 5cm}short header\-\_\-name\-\_\-scan (
+\begin{DoxyParamCaption}
+\item[{F\-I\-L\-E $\ast$}]{, }
+\item[{{\bf H\-E\-A\-D\-E\-R}}]{}
+\end{DoxyParamCaption}
+)}}\label{t__io_8h_a76161f1ed4fa083f60023e867d4a16cd}
+\hypertarget{t__io_8h_adc74bb1b6ef93dbddb8236f53a1555fd}{\index{t\-\_\-io.\-h@{t\-\_\-io.\-h}!header\-\_\-scan@{header\-\_\-scan}}
+\index{header\-\_\-scan@{header\-\_\-scan}!t_io.h@{t\-\_\-io.\-h}}
+\subsubsection[{header\-\_\-scan}]{\setlength{\rightskip}{0pt plus 5cm}int header\-\_\-scan (
+\begin{DoxyParamCaption}
+\item[{F\-I\-L\-E $\ast$}]{inputfile, }
+\item[{{\bf H\-E\-A\-D\-E\-R} $\ast$}]{h}
+\end{DoxyParamCaption}
+)}}\label{t__io_8h_adc74bb1b6ef93dbddb8236f53a1555fd}
+Name\-: header\-\_\-scan
+
+Version\-: 1.\-0
+
+Description\-: reads the first part of a header
+
+Authors \& Date\-: Riccardo Rigon, September 1997
+
+F\-I\-L\-E\-: L\-I\-B\-R\-A\-R\-I\-E\-S/\-B\-A\-S\-I\-C\-S/t\-\_\-io.\-h, L\-I\-B\-R\-A\-R\-I\-E\-S/\-B\-A\-S\-I\-C\-S/t\-\_\-io.\-c
+
+Inputs\-: the pointer to the file where the header is stored
+
+and the pointer to the \hyperlink{struct_h_e_a_d_e_r}{H\-E\-A\-D\-E\-R} variable where to write read information
+
+Return\-: 1 if successfull
+
+See Also\-: read\-\_\-header.
+
+Keywords\-: turtle file
+
+Examples\-: 1.\-example.\-c
+
+
+
+ 
+
+Definition at line 4504 of file t\-\_\-io.\-c.
+
+
+
+References H\-E\-A\-D\-E\-R\-::category, t\-\_\-keywords\-::category, H\-E\-A\-D\-E\-R\-::gender, t\-\_\-keywords\-::gender, iscomment(), M\-A\-X\-\_\-\-K\-E\-Y\-W\-O\-R\-D\-\_\-\-L\-E\-N\-G\-T\-H, M\-A\-X\-B\-U\-F\-F\-E\-R\-S\-I\-Z\-E, H\-E\-A\-D\-E\-R\-::name, N\-O\-P\-R\-I\-N\-T, H\-E\-A\-D\-E\-R\-::number, O\-K, query\-\_\-for\-\_\-label(), read\-\_\-comment(), skip\-\_\-whitespaces(), t\-\_\-error(), T\-\_\-\-K\-E\-Y\-W\-O\-R\-D\-S, H\-E\-A\-D\-E\-R\-::type, and t\-\_\-keywords\-::type.
+
+
+
+Referenced by justread\-\_\-chararray(), justread\-\_\-floatarray(), justread\-\_\-longarray(), read\-\_\-doublearray(), read\-\_\-floatarray(), read\-\_\-longarray(), read\-\_\-matrixheader(), read\-\_\-shortarray(), read\-\_\-stringarray(), read\-\_\-tensorheader(), read\-\_\-vectorheader(), search\-\_\-array(), and search\-\_\-named\-\_\-array().
+
+\hypertarget{t__io_8h_a33382ed8de8c6a1cac9bdaf74a771b58}{\index{t\-\_\-io.\-h@{t\-\_\-io.\-h}!headercmp@{headercmp}}
+\index{headercmp@{headercmp}!t_io.h@{t\-\_\-io.\-h}}
+\subsubsection[{headercmp}]{\setlength{\rightskip}{0pt plus 5cm}long headercmp (
+\begin{DoxyParamCaption}
+\item[{{\bf H\-E\-A\-D\-E\-R} $\ast$}]{a, }
+\item[{{\bf H\-E\-A\-D\-E\-R} $\ast$}]{b}
+\end{DoxyParamCaption}
+)}}\label{t__io_8h_a33382ed8de8c6a1cac9bdaf74a771b58}
+Name\-: headercmp
+
+Synopsis\-: long \hyperlink{t__io_8h_a33382ed8de8c6a1cac9bdaf74a771b58}{headercmp(\-H\-E\-A\-D\-E\-R $\ast$,\-H\-E\-A\-D\-E\-R $\ast$)};
+
+Version\-: 1.\-0
+
+Descriptiontion\-: compares two H\-E\-A\-D\-E\-R\-S. They
+
+are said to be equal if they have the same type,
+
+gender, category and name (they possibly differ
+
+for the number that indicate their position in
+
+the file.
+
+Authors \& Date\-: Riccardo Rigon, September 1997
+
+Inputs\-: the pointers to the two header to compare
+
+F\-I\-L\-E\-: L\-I\-B\-R\-A\-R\-I\-E\-S/\-B\-A\-S\-I\-C\-S/t\-\_\-io.\-h, L\-I\-B\-R\-A\-R\-I\-E\-S/\-B\-A\-S\-I\-C\-S/t\-\_\-io.\-c
+
+Return\-: 0 if the \hyperlink{struct_h_e_a_d_e_r}{H\-E\-A\-D\-E\-R} are equal, a suitable number
+
+if some difference is found. This number is the
+
+result of four comparison operation. Each one returns
+
+zero if successful. Otherwise it is returned\-: 1
+
+if the two headers differ for type, 10 if they differ
+
+for gender, 1000 if they differ for category,
+
+10000 if they differ for name. If more that one comparison
+
+is unsuccessful the returned value is the sum of
+
+the unseccesful comparison value, i.\-e. 11 means that
+
+the two headers differs for type and gender.
+
+See Also\-: read\-\_\-comment, read\-\_\-header.
+
+Keywords\-: turtle file
+
+Examples\-: 1.\-example.\-c
+
+
+
+ 
+
+Definition at line 4943 of file t\-\_\-io.\-c.
+
+
+
+References H\-E\-A\-D\-E\-R\-::category, H\-E\-A\-D\-E\-R\-::dimensions, H\-E\-A\-D\-E\-R\-::gender, H\-E\-A\-D\-E\-R\-::name, t\-\_\-error(), and H\-E\-A\-D\-E\-R\-::type.
+
+
+
+Referenced by justread\-\_\-floatmatrix(), read\-\_\-charvector(), read\-\_\-doublematrix(), read\-\_\-doubletensor(), read\-\_\-doublevector(), read\-\_\-floatmatrix(), read\-\_\-floatvector(), read\-\_\-intmatrix(), read\-\_\-intvector(), read\-\_\-longmatrix(), read\-\_\-longvector(), read\-\_\-shortmatrix(), and read\-\_\-shortvector().
+
+\hypertarget{t__io_8h_afef96ebe1a4afee0854fba27f83dc680}{\index{t\-\_\-io.\-h@{t\-\_\-io.\-h}!iscomment@{iscomment}}
+\index{iscomment@{iscomment}!t_io.h@{t\-\_\-io.\-h}}
+\subsubsection[{iscomment}]{\setlength{\rightskip}{0pt plus 5cm}int iscomment (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{buffer, }
+\item[{F\-I\-L\-E $\ast$}]{inputfile}
+\end{DoxyParamCaption}
+)}}\label{t__io_8h_afef96ebe1a4afee0854fba27f83dc680}
+Name\-: iscomment
+
+Synopsis\-: int \hyperlink{t__io_8h_afef96ebe1a4afee0854fba27f83dc680}{iscomment(char $\ast$,\-F\-I\-L\-E $\ast$)};
+
+Version\-: 1.\-0
+
+Description\-: inspect a file a look for the string that starts
+
+a comment ( / $\ast$$\ast$ without space)
+
+Authors \& Date\-: Riccardo Rigon, February 1997
+
+F\-I\-L\-E\-: L\-I\-B\-R\-A\-R\-I\-E\-S/\-B\-A\-S\-I\-C\-S/t\-\_\-io.\-h, L\-I\-B\-R\-A\-R\-I\-E\-S/\-B\-A\-S\-I\-C\-S/t\-\_\-io.\-c
+
+Inputs\-: a buffer where to store the comment and the pointer to the opened
+
+file
+
+Return\-: 1 if successful 0 otherwise
+
+See Also\-: read\-\_\-comment, skip\-\_\-whitespaces
+
+
+
+ 
+
+Definition at line 2959 of file t\-\_\-io.\-c.
+
+
+
+References skip\-\_\-whitespaces().
+
+
+
+Referenced by header\-\_\-scan(), read\-\_\-comment(), read\-\_\-index(), and readandstore\-\_\-comment().
+
+\hypertarget{t__io_8h_a1e1da491f460bfa6dd7f736bf26534e9}{\index{t\-\_\-io.\-h@{t\-\_\-io.\-h}!join\-\_\-strings@{join\-\_\-strings}}
+\index{join\-\_\-strings@{join\-\_\-strings}!t_io.h@{t\-\_\-io.\-h}}
+\subsubsection[{join\-\_\-strings}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ join\-\_\-strings (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{first, }
+\item[{char $\ast$}]{second}
+\end{DoxyParamCaption}
+)}}\label{t__io_8h_a1e1da491f460bfa6dd7f736bf26534e9}
+Names\-: join\-\_\-strings
+
+Synopsis\-: char $\ast$ \hyperlink{t__io_8h_a1e1da491f460bfa6dd7f736bf26534e9}{join\-\_\-strings(char $\ast$,char $\ast$)};
+
+Version\-: 1.\-0
+
+Description\-: joins two strings and store the results in a third string.
+
+F\-I\-L\-E\-: L\-I\-B\-R\-A\-R\-I\-E\-S/\-B\-A\-S\-I\-C\-S/t\-\_\-io.\-h, L\-I\-B\-R\-A\-R\-I\-E\-S/\-B\-A\-S\-I\-C\-S/t\-\_\-io.\-c
+
+Inputs\-: the two strings to be joined.
+
+Return\-: a pointer to the resulting string
+
+Examples\-: 1.\-examples.\-c
+
+Authors \& Date\-: Riccardo Rigon, October 1997
+
+
+
+ 
+
+Definition at line 3039 of file t\-\_\-io.\-c.
+
+
+
+Referenced by doublematrix\-\_\-control(), doublematrix\-\_\-dem(), doublematrix\-\_\-dem3(), doubletensor\-\_\-dem(), doublevector\-\_\-dem(), error\-\_\-message(), existing\-\_\-file(), existing\-\_\-file\-\_\-text(), floatmatrix\-\_\-dem(), floatvector\-\_\-dem(), get\-\_\-dirichletsnode(), get\-\_\-doublesquare\-\_\-grid(), get\-\_\-filename(), get\-\_\-filenames\-\_\-from\-\_\-keys(), get\-\_\-parameter(), get\-\_\-phrase(), get\-\_\-sources(), get\-\_\-strings(), intmatrix\-\_\-dem(), join\-\_\-path\-\_\-to\-\_\-stringbin(), longmatrix\-\_\-dem(), namefile\-\_\-i(), namefile\-\_\-i\-\_\-we(), namefile\-\_\-i\-\_\-we2(), Newton\-\_\-convergence(), read\-\_\-doublesquare\-\_\-grid(), read\-\_\-esriascii(), read\-\_\-filenames(), read\-\_\-grassascii(), read\-\_\-grid(), read\-\_\-map(), read\-\_\-mapseries(), read\-\_\-maptensor(), read\-\_\-names(), read\-\_\-parameters(), shortmatrix\-\_\-dem(), shortmatrix\-\_\-dem3(), write\-\_\-esriascii(), write\-\_\-fluidturtle(), write\-\_\-grassascii(), write\-\_\-line\-\_\-map(), write\-\_\-map\-\_\-results(), write\-\_\-mapseries(), write\-\_\-tensorseries(), and write\-\_\-tensorseries\-\_\-bis().
+
+\hypertarget{t__io_8h_a4572f354e744759593f74228513a964d}{\index{t\-\_\-io.\-h@{t\-\_\-io.\-h}!justread\-\_\-chararray@{justread\-\_\-chararray}}
+\index{justread\-\_\-chararray@{justread\-\_\-chararray}!t_io.h@{t\-\_\-io.\-h}}
+\subsubsection[{justread\-\_\-chararray}]{\setlength{\rightskip}{0pt plus 5cm}void justread\-\_\-chararray (
+\begin{DoxyParamCaption}
+\item[{F\-I\-L\-E $\ast$}]{inputfile, }
+\item[{{\bf C\-H\-A\-R\-V\-E\-C\-T\-O\-R} $\ast$}]{vec, }
+\item[{short}]{print}
+\end{DoxyParamCaption}
+)}}\label{t__io_8h_a4572f354e744759593f74228513a964d}
+
+
+ 
+
+Definition at line 6712 of file t\-\_\-io.\-c.
+
+
+
+References H\-E\-A\-D\-E\-R\-::category, C\-H\-A\-R\-V\-E\-C\-T\-O\-R\-::co, header\-\_\-scan(), C\-H\-A\-R\-V\-E\-C\-T\-O\-R\-::isdynamic, C\-H\-A\-R\-V\-E\-C\-T\-O\-R\-::nh, print\-\_\-header(), skip\-\_\-whitespaces(), t\-\_\-error(), and H\-E\-A\-D\-E\-R\-::type.
+
+\hypertarget{t__io_8h_a71dc941ec0f1c1b4d5346823db04cf98}{\index{t\-\_\-io.\-h@{t\-\_\-io.\-h}!justread\-\_\-floatarray@{justread\-\_\-floatarray}}
+\index{justread\-\_\-floatarray@{justread\-\_\-floatarray}!t_io.h@{t\-\_\-io.\-h}}
+\subsubsection[{justread\-\_\-floatarray}]{\setlength{\rightskip}{0pt plus 5cm}void justread\-\_\-floatarray (
+\begin{DoxyParamCaption}
+\item[{F\-I\-L\-E $\ast$}]{inputfile, }
+\item[{{\bf F\-L\-O\-A\-T\-V\-E\-C\-T\-O\-R} $\ast$}]{vec, }
+\item[{short}]{print}
+\end{DoxyParamCaption}
+)}}\label{t__io_8h_a71dc941ec0f1c1b4d5346823db04cf98}
+Name\-: justread\-\_\-floatarray, justread\-\_\-chararray, justread\-\_\-longarray
+
+Synopsis\-: void \hyperlink{t__io_8h_a71dc941ec0f1c1b4d5346823db04cf98}{justread\-\_\-floatarray(\-F\-I\-L\-E $\ast$,\-F\-L\-O\-A\-T\-V\-E\-C\-T\-O\-R $\ast$,short )};
+
+Version\-: 1.\-0
+
+Description\-: works as read\-\_\-$\ast$$\ast$ but assumes that the vector containing
+
+the data has been already allocated
+
+Authors \& Date\-: Riccardo Rigon, November 1997
+
+F\-I\-L\-E\-: L\-I\-B\-R\-A\-R\-I\-E\-S/\-B\-A\-S\-I\-C\-S/t\-\_\-io.\-h, L\-I\-B\-R\-A\-R\-I\-E\-S/\-B\-A\-S\-I\-C\-S/t\-\_\-io.\-c
+
+Inputs\-: a pointer to a file, a pointer to the allocated strucure, P\-R\-I\-N\-T or N\-O\-P\-R\-I\-N\-T
+
+to indicate if the header specification are printed on the standard output
+
+Return\-: void
+
+See Also\-: read\-\_\-comment, read\-\_\-header, read\-\_\-\-\_\-.
+
+Keywords\-: turtle file
+
+Examples\-: 5.\-example.\-c 6.\-example.\-c
+
+Notes\-: only long, char and float array reading is implemented
+
+
+
+ 
+
+Definition at line 6600 of file t\-\_\-io.\-c.
+
+
+
+References H\-E\-A\-D\-E\-R\-::category, F\-L\-O\-A\-T\-V\-E\-C\-T\-O\-R\-::co, header\-\_\-scan(), F\-L\-O\-A\-T\-V\-E\-C\-T\-O\-R\-::isdynamic, F\-L\-O\-A\-T\-V\-E\-C\-T\-O\-R\-::nh, print\-\_\-header(), skip\-\_\-whitespaces(), t\-\_\-error(), and H\-E\-A\-D\-E\-R\-::type.
+
+\hypertarget{t__io_8h_a659af6a793aeb018e1f626e178281fab}{\index{t\-\_\-io.\-h@{t\-\_\-io.\-h}!justread\-\_\-floatmatrix@{justread\-\_\-floatmatrix}}
+\index{justread\-\_\-floatmatrix@{justread\-\_\-floatmatrix}!t_io.h@{t\-\_\-io.\-h}}
+\subsubsection[{justread\-\_\-floatmatrix}]{\setlength{\rightskip}{0pt plus 5cm}void justread\-\_\-floatmatrix (
+\begin{DoxyParamCaption}
+\item[{F\-I\-L\-E $\ast$}]{inputfile, }
+\item[{{\bf F\-L\-O\-A\-T\-M\-A\-T\-R\-I\-X} $\ast$}]{C, }
+\item[{char $\ast$}]{mode, }
+\item[{short}]{print}
+\end{DoxyParamCaption}
+)}}\label{t__io_8h_a659af6a793aeb018e1f626e178281fab}
+
+
+ 
+
+Definition at line 6642 of file t\-\_\-io.\-c.
+
+
+
+References H\-E\-A\-D\-E\-R\-::category, H\-E\-A\-D\-E\-R\-::dimensions, E\-X\-T\-E\-R\-N\-A\-L\-\_\-\-F\-I\-L\-E, E\-X\-T\-E\-R\-N\-A\-L\-\_\-\-F\-I\-L\-E\-\_\-\-N\-A\-M\-E, E\-X\-T\-E\-R\-N\-A\-L\-\_\-\-F\-I\-L\-E\-\_\-\-P\-O\-S\-I\-T\-I\-O\-N, free\-\_\-header(), get\-\_\-phrase(), headercmp(), N\-O\-P\-R\-I\-N\-T, O\-L\-D\-\_\-\-N\-A\-M\-E, O\-P\-E\-N\-Y\-E\-S, print\-\_\-header(), query\-\_\-for\-\_\-token(), read\-\_\-floatmatrix\-\_\-elements(), read\-\_\-index(), read\-\_\-matrixheader(), skip\-\_\-whitespaces(), t\-\_\-error(), t\-\_\-fclose(), t\-\_\-fopen(), and H\-E\-A\-D\-E\-R\-::type.
+
+\hypertarget{t__io_8h_a7bcc51ca1319a4e7fc3c304628529d19}{\index{t\-\_\-io.\-h@{t\-\_\-io.\-h}!justread\-\_\-longarray@{justread\-\_\-longarray}}
+\index{justread\-\_\-longarray@{justread\-\_\-longarray}!t_io.h@{t\-\_\-io.\-h}}
+\subsubsection[{justread\-\_\-longarray}]{\setlength{\rightskip}{0pt plus 5cm}void justread\-\_\-longarray (
+\begin{DoxyParamCaption}
+\item[{F\-I\-L\-E $\ast$}]{inputfile, }
+\item[{{\bf L\-O\-N\-G\-V\-E\-C\-T\-O\-R} $\ast$}]{vec, }
+\item[{short}]{print}
+\end{DoxyParamCaption}
+)}}\label{t__io_8h_a7bcc51ca1319a4e7fc3c304628529d19}
+
+
+ 
+
+Definition at line 6546 of file t\-\_\-io.\-c.
+
+
+
+References H\-E\-A\-D\-E\-R\-::category, L\-O\-N\-G\-V\-E\-C\-T\-O\-R\-::co, header\-\_\-scan(), L\-O\-N\-G\-V\-E\-C\-T\-O\-R\-::isdynamic, L\-O\-N\-G\-V\-E\-C\-T\-O\-R\-::nh, print\-\_\-header(), skip\-\_\-whitespaces(), t\-\_\-error(), and H\-E\-A\-D\-E\-R\-::type.
+
+\hypertarget{t__io_8h_a65e5710255d4da79f36aa28a9303191d}{\index{t\-\_\-io.\-h@{t\-\_\-io.\-h}!longvectorcmp@{longvectorcmp}}
+\index{longvectorcmp@{longvectorcmp}!t_io.h@{t\-\_\-io.\-h}}
+\subsubsection[{longvectorcmp}]{\setlength{\rightskip}{0pt plus 5cm}long longvectorcmp (
+\begin{DoxyParamCaption}
+\item[{{\bf L\-O\-N\-G\-V\-E\-C\-T\-O\-R} $\ast$}]{A, }
+\item[{{\bf L\-O\-N\-G\-V\-E\-C\-T\-O\-R} $\ast$}]{B}
+\end{DoxyParamCaption}
+)}}\label{t__io_8h_a65e5710255d4da79f36aa28a9303191d}
+Name\-: longvectorcmp
+
+Synopsis\-: long \hyperlink{t__io_8h_a65e5710255d4da79f36aa28a9303191d}{longvectorcmp(\-L\-O\-N\-G\-V\-E\-C\-T\-O\-R $\ast$, L\-O\-N\-G\-V\-E\-C\-T\-O\-R $\ast$)};
+
+Version\-: 1.\-0
+
+Description\-: compares two lonvector. This routine is used
+
+in read\-\_\-$\ast$bin
+
+Authors \& Date\-: Riccardo Rigon, September 1997
+
+Inputs\-: the pointers to the two header to compare
+
+F\-I\-L\-E\-: L\-I\-B\-R\-A\-R\-I\-E\-S/\-B\-A\-S\-I\-C\-S/t\-\_\-io.\-h, L\-I\-B\-R\-A\-R\-I\-E\-S/\-B\-A\-S\-I\-C\-S/t\-\_\-io.\-c
+
+Return\-: 0 if the longvector are equal, a suitable number
+
+if some difference is found.
+
+See Also\-: read\-\_\-comment, read\-\_\-header, header\-\_\-cmp.
+
+Keywords\-: turtle file
+
+Examples\-: 1.\-example.\-c
+
+
+
+ 
+
+Definition at line 2873 of file t\-\_\-io.\-c.
+
+
+
+References L\-O\-N\-G\-V\-E\-C\-T\-O\-R\-::co, L\-O\-N\-G\-V\-E\-C\-T\-O\-R\-::isdynamic, and L\-O\-N\-G\-V\-E\-C\-T\-O\-R\-::nh.
+
+
+
+Referenced by read\-\_\-doublebin(), read\-\_\-intbin(), read\-\_\-longbin(), and read\-\_\-shortbin().
+
+\hypertarget{t__io_8h_a7bcedbf8d5a2a41b59ca90e56c9e286f}{\index{t\-\_\-io.\-h@{t\-\_\-io.\-h}!print\-\_\-charvector\-\_\-elements@{print\-\_\-charvector\-\_\-elements}}
+\index{print\-\_\-charvector\-\_\-elements@{print\-\_\-charvector\-\_\-elements}!t_io.h@{t\-\_\-io.\-h}}
+\subsubsection[{print\-\_\-charvector\-\_\-elements}]{\setlength{\rightskip}{0pt plus 5cm}void print\-\_\-charvector\-\_\-elements (
+\begin{DoxyParamCaption}
+\item[{{\bf C\-H\-A\-R\-V\-E\-C\-T\-O\-R} $\ast$}]{v, }
+\item[{long}]{maxcols}
+\end{DoxyParamCaption}
+)}}\label{t__io_8h_a7bcedbf8d5a2a41b59ca90e56c9e286f}
+
+
+ 
+
+Definition at line 977 of file t\-\_\-io.\-c.
+
+
+
+References C\-H\-A\-R\-V\-E\-C\-T\-O\-R\-::co, C\-H\-A\-R\-V\-E\-C\-T\-O\-R\-::isdynamic, C\-H\-A\-R\-V\-E\-C\-T\-O\-R\-::nh, C\-H\-A\-R\-V\-E\-C\-T\-O\-R\-::nl, and t\-\_\-error().
+
+\hypertarget{t__io_8h_ad0c4fb8705a6bca80b27d736c2da3fd0}{\index{t\-\_\-io.\-h@{t\-\_\-io.\-h}!print\-\_\-doublebin\-\_\-elements@{print\-\_\-doublebin\-\_\-elements}}
+\index{print\-\_\-doublebin\-\_\-elements@{print\-\_\-doublebin\-\_\-elements}!t_io.h@{t\-\_\-io.\-h}}
+\subsubsection[{print\-\_\-doublebin\-\_\-elements}]{\setlength{\rightskip}{0pt plus 5cm}void print\-\_\-doublebin\-\_\-elements (
+\begin{DoxyParamCaption}
+\item[{{\bf D\-O\-U\-B\-L\-E\-B\-I\-N} $\ast$}]{l, }
+\item[{long}]{maxcols}
+\end{DoxyParamCaption}
+)}}\label{t__io_8h_ad0c4fb8705a6bca80b27d736c2da3fd0}
+
+
+ 
+
+Definition at line 2569 of file t\-\_\-io.\-c.
+
+
+
+References co, db\-::co, db\-::index, db\-::isdynamic, and t\-\_\-error().
+
+\hypertarget{t__io_8h_a9c974807ebf4e974ab2528f6446cc28a}{\index{t\-\_\-io.\-h@{t\-\_\-io.\-h}!print\-\_\-doublematrix\-\_\-elements@{print\-\_\-doublematrix\-\_\-elements}}
+\index{print\-\_\-doublematrix\-\_\-elements@{print\-\_\-doublematrix\-\_\-elements}!t_io.h@{t\-\_\-io.\-h}}
+\subsubsection[{print\-\_\-doublematrix\-\_\-elements}]{\setlength{\rightskip}{0pt plus 5cm}void print\-\_\-doublematrix\-\_\-elements (
+\begin{DoxyParamCaption}
+\item[{{\bf D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X} $\ast$}]{m, }
+\item[{long}]{maxcols}
+\end{DoxyParamCaption}
+)}}\label{t__io_8h_a9c974807ebf4e974ab2528f6446cc28a}
+
+
+ 
+
+Definition at line 1844 of file t\-\_\-io.\-c.
+
+
+
+References D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X\-::co, D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X\-::isdynamic, D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X\-::nch, D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X\-::ncl, D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X\-::nrh, D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X\-::nrl, and t\-\_\-error().
+
+\hypertarget{t__io_8h_aa96009d046a3ebfd65c9b1affd5674f2}{\index{t\-\_\-io.\-h@{t\-\_\-io.\-h}!print\-\_\-doubletensor\-\_\-elements@{print\-\_\-doubletensor\-\_\-elements}}
+\index{print\-\_\-doubletensor\-\_\-elements@{print\-\_\-doubletensor\-\_\-elements}!t_io.h@{t\-\_\-io.\-h}}
+\subsubsection[{print\-\_\-doubletensor\-\_\-elements}]{\setlength{\rightskip}{0pt plus 5cm}void print\-\_\-doubletensor\-\_\-elements (
+\begin{DoxyParamCaption}
+\item[{{\bf D\-O\-U\-B\-L\-E\-T\-E\-N\-S\-O\-R} $\ast$}]{m, }
+\item[{long}]{maxcols}
+\end{DoxyParamCaption}
+)}}\label{t__io_8h_aa96009d046a3ebfd65c9b1affd5674f2}
+
+
+ 
+
+Definition at line 11013 of file t\-\_\-io.\-c.
+
+
+
+References D\-O\-U\-B\-L\-E\-T\-E\-N\-S\-O\-R\-::co, D\-O\-U\-B\-L\-E\-T\-E\-N\-S\-O\-R\-::isdynamic, D\-O\-U\-B\-L\-E\-T\-E\-N\-S\-O\-R\-::nch, D\-O\-U\-B\-L\-E\-T\-E\-N\-S\-O\-R\-::ncl, D\-O\-U\-B\-L\-E\-T\-E\-N\-S\-O\-R\-::ndl, D\-O\-U\-B\-L\-E\-T\-E\-N\-S\-O\-R\-::nrh, D\-O\-U\-B\-L\-E\-T\-E\-N\-S\-O\-R\-::nrl, and t\-\_\-error().
+
+\hypertarget{t__io_8h_a7e60a14da73ebfb80363ab7bd8bb6475}{\index{t\-\_\-io.\-h@{t\-\_\-io.\-h}!print\-\_\-doublevector\-\_\-elements@{print\-\_\-doublevector\-\_\-elements}}
+\index{print\-\_\-doublevector\-\_\-elements@{print\-\_\-doublevector\-\_\-elements}!t_io.h@{t\-\_\-io.\-h}}
+\subsubsection[{print\-\_\-doublevector\-\_\-elements}]{\setlength{\rightskip}{0pt plus 5cm}void print\-\_\-doublevector\-\_\-elements (
+\begin{DoxyParamCaption}
+\item[{{\bf D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} $\ast$}]{v, }
+\item[{long}]{maxcols}
+\end{DoxyParamCaption}
+)}}\label{t__io_8h_a7e60a14da73ebfb80363ab7bd8bb6475}
+
+
+ 
+
+Definition at line 826 of file t\-\_\-io.\-c.
+
+
+
+References D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R\-::co, D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R\-::isdynamic, D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R\-::nh, D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R\-::nl, and t\-\_\-error().
+
+\hypertarget{t__io_8h_aad05f980421a9d8bf748e1f3887cc203}{\index{t\-\_\-io.\-h@{t\-\_\-io.\-h}!print\-\_\-floatmatrix\-\_\-elements@{print\-\_\-floatmatrix\-\_\-elements}}
+\index{print\-\_\-floatmatrix\-\_\-elements@{print\-\_\-floatmatrix\-\_\-elements}!t_io.h@{t\-\_\-io.\-h}}
+\subsubsection[{print\-\_\-floatmatrix\-\_\-elements}]{\setlength{\rightskip}{0pt plus 5cm}void print\-\_\-floatmatrix\-\_\-elements (
+\begin{DoxyParamCaption}
+\item[{{\bf F\-L\-O\-A\-T\-M\-A\-T\-R\-I\-X} $\ast$}]{m, }
+\item[{long}]{maxcols}
+\end{DoxyParamCaption}
+)}}\label{t__io_8h_aad05f980421a9d8bf748e1f3887cc203}
+
+
+ 
+
+Definition at line 1673 of file t\-\_\-io.\-c.
+
+
+
+References F\-L\-O\-A\-T\-M\-A\-T\-R\-I\-X\-::co, F\-L\-O\-A\-T\-M\-A\-T\-R\-I\-X\-::isdynamic, F\-L\-O\-A\-T\-M\-A\-T\-R\-I\-X\-::nch, F\-L\-O\-A\-T\-M\-A\-T\-R\-I\-X\-::ncl, F\-L\-O\-A\-T\-M\-A\-T\-R\-I\-X\-::nrh, F\-L\-O\-A\-T\-M\-A\-T\-R\-I\-X\-::nrl, and t\-\_\-error().
+
+\hypertarget{t__io_8h_a770ddea20b2125bf8150861653e7ea48}{\index{t\-\_\-io.\-h@{t\-\_\-io.\-h}!print\-\_\-floatvector\-\_\-elements@{print\-\_\-floatvector\-\_\-elements}}
+\index{print\-\_\-floatvector\-\_\-elements@{print\-\_\-floatvector\-\_\-elements}!t_io.h@{t\-\_\-io.\-h}}
+\subsubsection[{print\-\_\-floatvector\-\_\-elements}]{\setlength{\rightskip}{0pt plus 5cm}void print\-\_\-floatvector\-\_\-elements (
+\begin{DoxyParamCaption}
+\item[{{\bf F\-L\-O\-A\-T\-V\-E\-C\-T\-O\-R} $\ast$}]{v, }
+\item[{long}]{maxcols}
+\end{DoxyParamCaption}
+)}}\label{t__io_8h_a770ddea20b2125bf8150861653e7ea48}
+
+
+ 
+
+Definition at line 675 of file t\-\_\-io.\-c.
+
+
+
+References F\-L\-O\-A\-T\-V\-E\-C\-T\-O\-R\-::co, F\-L\-O\-A\-T\-V\-E\-C\-T\-O\-R\-::isdynamic, F\-L\-O\-A\-T\-V\-E\-C\-T\-O\-R\-::nh, F\-L\-O\-A\-T\-V\-E\-C\-T\-O\-R\-::nl, and t\-\_\-error().
+
+\hypertarget{t__io_8h_ae3ec3504fb92a62e04649aafe4d4f808}{\index{t\-\_\-io.\-h@{t\-\_\-io.\-h}!print\-\_\-header@{print\-\_\-header}}
+\index{print\-\_\-header@{print\-\_\-header}!t_io.h@{t\-\_\-io.\-h}}
+\subsubsection[{print\-\_\-header}]{\setlength{\rightskip}{0pt plus 5cm}void print\-\_\-header (
+\begin{DoxyParamCaption}
+\item[{{\bf H\-E\-A\-D\-E\-R} $\ast$}]{H}
+\end{DoxyParamCaption}
+)}}\label{t__io_8h_ae3ec3504fb92a62e04649aafe4d4f808}
+
+
+ 
+
+Definition at line 10616 of file t\-\_\-io.\-c.
+
+
+
+References H\-E\-A\-D\-E\-R\-::category, t\-\_\-keywords\-::category, H\-E\-A\-D\-E\-R\-::gender, t\-\_\-keywords\-::gender, H\-E\-A\-D\-E\-R\-::name, H\-E\-A\-D\-E\-R\-::number, T\-\_\-\-K\-E\-Y\-W\-O\-R\-D\-S, H\-E\-A\-D\-E\-R\-::type, and t\-\_\-keywords\-::type.
+
+
+
+Referenced by justread\-\_\-chararray(), justread\-\_\-floatarray(), justread\-\_\-floatmatrix(), justread\-\_\-longarray(), read\-\_\-charvector(), read\-\_\-doublearray(), read\-\_\-doublematrix(), read\-\_\-doubletensor(), read\-\_\-doublevector(), read\-\_\-floatarray(), read\-\_\-floatmatrix(), read\-\_\-floatvector(), read\-\_\-intmatrix(), read\-\_\-intvector(), read\-\_\-longarray(), read\-\_\-longmatrix(), read\-\_\-longvector(), read\-\_\-shortarray(), read\-\_\-shortmatrix(), read\-\_\-shortvector(), and read\-\_\-stringarray().
+
+\hypertarget{t__io_8h_add20e99ddc6c9e38ff44d31874d29d3e}{\index{t\-\_\-io.\-h@{t\-\_\-io.\-h}!print\-\_\-intbin\-\_\-elements@{print\-\_\-intbin\-\_\-elements}}
+\index{print\-\_\-intbin\-\_\-elements@{print\-\_\-intbin\-\_\-elements}!t_io.h@{t\-\_\-io.\-h}}
+\subsubsection[{print\-\_\-intbin\-\_\-elements}]{\setlength{\rightskip}{0pt plus 5cm}void print\-\_\-intbin\-\_\-elements (
+\begin{DoxyParamCaption}
+\item[{{\bf I\-N\-T\-B\-I\-N} $\ast$}]{l, }
+\item[{long}]{maxcols}
+\end{DoxyParamCaption}
+)}}\label{t__io_8h_add20e99ddc6c9e38ff44d31874d29d3e}
+
+
+ 
+
+Definition at line 2026 of file t\-\_\-io.\-c.
+
+
+
+References co, I\-N\-T\-B\-I\-N\-::co, I\-N\-T\-B\-I\-N\-::index, I\-N\-T\-B\-I\-N\-::isdynamic, and t\-\_\-error().
+
+\hypertarget{t__io_8h_ad04c9cb529b78abb5a24d73dd7dcbd1c}{\index{t\-\_\-io.\-h@{t\-\_\-io.\-h}!print\-\_\-intmatrix\-\_\-elements@{print\-\_\-intmatrix\-\_\-elements}}
+\index{print\-\_\-intmatrix\-\_\-elements@{print\-\_\-intmatrix\-\_\-elements}!t_io.h@{t\-\_\-io.\-h}}
+\subsubsection[{print\-\_\-intmatrix\-\_\-elements}]{\setlength{\rightskip}{0pt plus 5cm}void print\-\_\-intmatrix\-\_\-elements (
+\begin{DoxyParamCaption}
+\item[{{\bf I\-N\-T\-M\-A\-T\-R\-I\-X} $\ast$}]{m, }
+\item[{long}]{maxcols}
+\end{DoxyParamCaption}
+)}}\label{t__io_8h_ad04c9cb529b78abb5a24d73dd7dcbd1c}
+
+
+ 
+
+Definition at line 1322 of file t\-\_\-io.\-c.
+
+
+
+References I\-N\-T\-M\-A\-T\-R\-I\-X\-::co, I\-N\-T\-M\-A\-T\-R\-I\-X\-::isdynamic, I\-N\-T\-M\-A\-T\-R\-I\-X\-::nch, I\-N\-T\-M\-A\-T\-R\-I\-X\-::ncl, I\-N\-T\-M\-A\-T\-R\-I\-X\-::nrh, I\-N\-T\-M\-A\-T\-R\-I\-X\-::nrl, and t\-\_\-error().
+
+\hypertarget{t__io_8h_ac2430d78a416bedc47a9943e25be3b31}{\index{t\-\_\-io.\-h@{t\-\_\-io.\-h}!print\-\_\-intvector\-\_\-elements@{print\-\_\-intvector\-\_\-elements}}
+\index{print\-\_\-intvector\-\_\-elements@{print\-\_\-intvector\-\_\-elements}!t_io.h@{t\-\_\-io.\-h}}
+\subsubsection[{print\-\_\-intvector\-\_\-elements}]{\setlength{\rightskip}{0pt plus 5cm}void print\-\_\-intvector\-\_\-elements (
+\begin{DoxyParamCaption}
+\item[{{\bf I\-N\-T\-V\-E\-C\-T\-O\-R} $\ast$}]{v, }
+\item[{long}]{maxcols}
+\end{DoxyParamCaption}
+)}}\label{t__io_8h_ac2430d78a416bedc47a9943e25be3b31}
+
+
+ 
+
+Definition at line 374 of file t\-\_\-io.\-c.
+
+
+
+References I\-N\-T\-V\-E\-C\-T\-O\-R\-::co, I\-N\-T\-V\-E\-C\-T\-O\-R\-::isdynamic, I\-N\-T\-V\-E\-C\-T\-O\-R\-::nh, I\-N\-T\-V\-E\-C\-T\-O\-R\-::nl, and t\-\_\-error().
+
+\hypertarget{t__io_8h_adc1d87ddde1435d08257853d9fa808a8}{\index{t\-\_\-io.\-h@{t\-\_\-io.\-h}!print\-\_\-longbin\-\_\-elements@{print\-\_\-longbin\-\_\-elements}}
+\index{print\-\_\-longbin\-\_\-elements@{print\-\_\-longbin\-\_\-elements}!t_io.h@{t\-\_\-io.\-h}}
+\subsubsection[{print\-\_\-longbin\-\_\-elements}]{\setlength{\rightskip}{0pt plus 5cm}void print\-\_\-longbin\-\_\-elements (
+\begin{DoxyParamCaption}
+\item[{{\bf L\-O\-N\-G\-B\-I\-N} $\ast$}]{l, }
+\item[{long}]{maxcols}
+\end{DoxyParamCaption}
+)}}\label{t__io_8h_adc1d87ddde1435d08257853d9fa808a8}
+
+
+ 
+
+Definition at line 2388 of file t\-\_\-io.\-c.
+
+
+
+References co, L\-O\-N\-G\-B\-I\-N\-::co, L\-O\-N\-G\-B\-I\-N\-::index, L\-O\-N\-G\-B\-I\-N\-::isdynamic, and t\-\_\-error().
+
+\hypertarget{t__io_8h_a0704509298c42657fa19ca16acc9ba9d}{\index{t\-\_\-io.\-h@{t\-\_\-io.\-h}!print\-\_\-longmatrix\-\_\-elements@{print\-\_\-longmatrix\-\_\-elements}}
+\index{print\-\_\-longmatrix\-\_\-elements@{print\-\_\-longmatrix\-\_\-elements}!t_io.h@{t\-\_\-io.\-h}}
+\subsubsection[{print\-\_\-longmatrix\-\_\-elements}]{\setlength{\rightskip}{0pt plus 5cm}void print\-\_\-longmatrix\-\_\-elements (
+\begin{DoxyParamCaption}
+\item[{{\bf L\-O\-N\-G\-M\-A\-T\-R\-I\-X} $\ast$}]{m, }
+\item[{long}]{maxcols}
+\end{DoxyParamCaption}
+)}}\label{t__io_8h_a0704509298c42657fa19ca16acc9ba9d}
+
+
+ 
+
+Definition at line 1496 of file t\-\_\-io.\-c.
+
+
+
+References L\-O\-N\-G\-M\-A\-T\-R\-I\-X\-::co, L\-O\-N\-G\-M\-A\-T\-R\-I\-X\-::isdynamic, L\-O\-N\-G\-M\-A\-T\-R\-I\-X\-::nch, L\-O\-N\-G\-M\-A\-T\-R\-I\-X\-::ncl, L\-O\-N\-G\-M\-A\-T\-R\-I\-X\-::nrh, L\-O\-N\-G\-M\-A\-T\-R\-I\-X\-::nrl, and t\-\_\-error().
+
+\hypertarget{t__io_8h_a705accab641c753640166dc1fa2ce943}{\index{t\-\_\-io.\-h@{t\-\_\-io.\-h}!print\-\_\-longvector\-\_\-elements@{print\-\_\-longvector\-\_\-elements}}
+\index{print\-\_\-longvector\-\_\-elements@{print\-\_\-longvector\-\_\-elements}!t_io.h@{t\-\_\-io.\-h}}
+\subsubsection[{print\-\_\-longvector\-\_\-elements}]{\setlength{\rightskip}{0pt plus 5cm}void print\-\_\-longvector\-\_\-elements (
+\begin{DoxyParamCaption}
+\item[{{\bf L\-O\-N\-G\-V\-E\-C\-T\-O\-R} $\ast$}]{v, }
+\item[{long}]{maxcols}
+\end{DoxyParamCaption}
+)}}\label{t__io_8h_a705accab641c753640166dc1fa2ce943}
+
+
+ 
+
+Definition at line 525 of file t\-\_\-io.\-c.
+
+
+
+References L\-O\-N\-G\-V\-E\-C\-T\-O\-R\-::co, L\-O\-N\-G\-V\-E\-C\-T\-O\-R\-::isdynamic, L\-O\-N\-G\-V\-E\-C\-T\-O\-R\-::nh, L\-O\-N\-G\-V\-E\-C\-T\-O\-R\-::nl, and t\-\_\-error().
+
+
+
+Referenced by addresses\-\_\-bubble\-\_\-sort(), bubble\-\_\-sort(), print\-\_\-stringbin\-\_\-elements(), read\-\_\-doublebin(), read\-\_\-intbin(), read\-\_\-longbin(), and read\-\_\-shortbin().
+
+\hypertarget{t__io_8h_ab364e2235b11493f466f543e447a63c0}{\index{t\-\_\-io.\-h@{t\-\_\-io.\-h}!print\-\_\-shortbin\-\_\-elements@{print\-\_\-shortbin\-\_\-elements}}
+\index{print\-\_\-shortbin\-\_\-elements@{print\-\_\-shortbin\-\_\-elements}!t_io.h@{t\-\_\-io.\-h}}
+\subsubsection[{print\-\_\-shortbin\-\_\-elements}]{\setlength{\rightskip}{0pt plus 5cm}void print\-\_\-shortbin\-\_\-elements (
+\begin{DoxyParamCaption}
+\item[{{\bf S\-H\-O\-R\-T\-B\-I\-N} $\ast$}]{l, }
+\item[{long}]{maxcols}
+\end{DoxyParamCaption}
+)}}\label{t__io_8h_ab364e2235b11493f466f543e447a63c0}
+
+
+ 
+
+Definition at line 2207 of file t\-\_\-io.\-c.
+
+
+
+References co, S\-H\-O\-R\-T\-B\-I\-N\-::co, S\-H\-O\-R\-T\-B\-I\-N\-::index, S\-H\-O\-R\-T\-B\-I\-N\-::isdynamic, and t\-\_\-error().
+
+\hypertarget{t__io_8h_a9b4dfc6cb814a0db9177db690b7a9838}{\index{t\-\_\-io.\-h@{t\-\_\-io.\-h}!print\-\_\-shortmatrix\-\_\-elements@{print\-\_\-shortmatrix\-\_\-elements}}
+\index{print\-\_\-shortmatrix\-\_\-elements@{print\-\_\-shortmatrix\-\_\-elements}!t_io.h@{t\-\_\-io.\-h}}
+\subsubsection[{print\-\_\-shortmatrix\-\_\-elements}]{\setlength{\rightskip}{0pt plus 5cm}void print\-\_\-shortmatrix\-\_\-elements (
+\begin{DoxyParamCaption}
+\item[{{\bf S\-H\-O\-R\-T\-M\-A\-T\-R\-I\-X} $\ast$}]{m, }
+\item[{long}]{maxcols}
+\end{DoxyParamCaption}
+)}}\label{t__io_8h_a9b4dfc6cb814a0db9177db690b7a9838}
+
+
+ 
+
+Definition at line 1151 of file t\-\_\-io.\-c.
+
+
+
+References S\-H\-O\-R\-T\-M\-A\-T\-R\-I\-X\-::co, S\-H\-O\-R\-T\-M\-A\-T\-R\-I\-X\-::isdynamic, S\-H\-O\-R\-T\-M\-A\-T\-R\-I\-X\-::nch, S\-H\-O\-R\-T\-M\-A\-T\-R\-I\-X\-::ncl, S\-H\-O\-R\-T\-M\-A\-T\-R\-I\-X\-::nrh, S\-H\-O\-R\-T\-M\-A\-T\-R\-I\-X\-::nrl, and t\-\_\-error().
+
+\hypertarget{t__io_8h_ad1e21d370ada69d4c0d3ca4007c3db55}{\index{t\-\_\-io.\-h@{t\-\_\-io.\-h}!print\-\_\-shortvector\-\_\-elements@{print\-\_\-shortvector\-\_\-elements}}
+\index{print\-\_\-shortvector\-\_\-elements@{print\-\_\-shortvector\-\_\-elements}!t_io.h@{t\-\_\-io.\-h}}
+\subsubsection[{print\-\_\-shortvector\-\_\-elements}]{\setlength{\rightskip}{0pt plus 5cm}void print\-\_\-shortvector\-\_\-elements (
+\begin{DoxyParamCaption}
+\item[{{\bf S\-H\-O\-R\-T\-V\-E\-C\-T\-O\-R} $\ast$}]{v, }
+\item[{long}]{maxcols}
+\end{DoxyParamCaption}
+)}}\label{t__io_8h_ad1e21d370ada69d4c0d3ca4007c3db55}
+
+
+ 
+
+Definition at line 221 of file t\-\_\-io.\-c.
+
+
+
+References S\-H\-O\-R\-T\-V\-E\-C\-T\-O\-R\-::co, S\-H\-O\-R\-T\-V\-E\-C\-T\-O\-R\-::isdynamic, S\-H\-O\-R\-T\-V\-E\-C\-T\-O\-R\-::nh, S\-H\-O\-R\-T\-V\-E\-C\-T\-O\-R\-::nl, and t\-\_\-error().
+
+\hypertarget{t__io_8h_af3b2ff59a46832cbed14515329a1994f}{\index{t\-\_\-io.\-h@{t\-\_\-io.\-h}!print\-\_\-stringbin\-\_\-elements@{print\-\_\-stringbin\-\_\-elements}}
+\index{print\-\_\-stringbin\-\_\-elements@{print\-\_\-stringbin\-\_\-elements}!t_io.h@{t\-\_\-io.\-h}}
+\subsubsection[{print\-\_\-stringbin\-\_\-elements}]{\setlength{\rightskip}{0pt plus 5cm}void print\-\_\-stringbin\-\_\-elements (
+\begin{DoxyParamCaption}
+\item[{{\bf S\-T\-R\-I\-N\-G\-B\-I\-N} $\ast$}]{l, }
+\item[{long}]{maxcols}
+\end{DoxyParamCaption}
+)}}\label{t__io_8h_af3b2ff59a46832cbed14515329a1994f}
+
+
+ 
+
+Definition at line 2797 of file t\-\_\-io.\-c.
+
+
+
+References co, st\-::co, st\-::index, st\-::isdynamic, print\-\_\-longvector\-\_\-elements(), and t\-\_\-error().
+
+\hypertarget{t__io_8h_af18315581946a4b5fef5576eca6a1768}{\index{t\-\_\-io.\-h@{t\-\_\-io.\-h}!query\-\_\-for\-\_\-label@{query\-\_\-for\-\_\-label}}
+\index{query\-\_\-for\-\_\-label@{query\-\_\-for\-\_\-label}!t_io.h@{t\-\_\-io.\-h}}
+\subsubsection[{query\-\_\-for\-\_\-label}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ query\-\_\-for\-\_\-label (
+\begin{DoxyParamCaption}
+\item[{F\-I\-L\-E $\ast$}]{inputfile}
+\end{DoxyParamCaption}
+)}}\label{t__io_8h_af18315581946a4b5fef5576eca6a1768}
+
+
+ 
+
+Definition at line 3278 of file t\-\_\-io.\-c.
+
+
+
+References L\-A\-B\-E\-L\-I\-N\-C\-R\-E\-M\-E\-N\-T, M\-A\-X\-L\-A\-B\-E\-L\-S\-I\-Z\-E, skip\-\_\-whitespaces(), and t\-\_\-error().
+
+
+
+Referenced by header\-\_\-scan(), read\-\_\-doublebin(), read\-\_\-intbin(), read\-\_\-longbin(), and read\-\_\-shortbin().
+
+\hypertarget{t__io_8h_ae377fca8893416e511e22d1b50123d50}{\index{t\-\_\-io.\-h@{t\-\_\-io.\-h}!query\-\_\-for\-\_\-token@{query\-\_\-for\-\_\-token}}
+\index{query\-\_\-for\-\_\-token@{query\-\_\-for\-\_\-token}!t_io.h@{t\-\_\-io.\-h}}
+\subsubsection[{query\-\_\-for\-\_\-token}]{\setlength{\rightskip}{0pt plus 5cm}int query\-\_\-for\-\_\-token (
+\begin{DoxyParamCaption}
+\item[{F\-I\-L\-E $\ast$}]{inputfile, }
+\item[{const char $\ast$}]{token}
+\end{DoxyParamCaption}
+)}}\label{t__io_8h_ae377fca8893416e511e22d1b50123d50}
+Name\-: query\-\_\-for\-\_\-token, query\-\_\-for\-\_\-label, get\-\_\-phrase
+
+Description\-: ask the file to receive either a known word (query\-\_\-for\-\_\-token)
+
+or an unknown sequence of words terminated by a '\{' (query for label) or
+
+a sequence of words terminated by a given separator (get\-\_\-phrase).
+
+Authors \& Date\-: Riccardo Rigon, February, September 1997
+
+F\-I\-L\-E\-: L\-I\-B\-R\-A\-R\-I\-E\-S/\-B\-A\-S\-I\-C\-S/t\-\_\-io.\-h, L\-I\-B\-R\-A\-R\-I\-E\-S/\-B\-A\-S\-I\-C\-S/t\-\_\-io.\-c
+
+Inputs\-: a pointer to a file, the word to be searched; a pointer to a file.
+
+get\-\_\-phrase second input is the separator, for instance\-: ';'.
+
+Return\-: 1 if succesfull 0 otherwise ; the read word or N\-O\-L\-A\-B\-E\-L in case
+
+of failure.
+
+See Also\-: read\-\_\-comment, read\-\_\-header
+
+Keywords\-: turtle file
+
+
+
+ 
+
+Definition at line 3522 of file t\-\_\-io.\-c.
+
+
+
+References skip\-\_\-whitespaces().
+
+
+
+Referenced by justread\-\_\-floatmatrix(), read\-\_\-charvector(), read\-\_\-doublebin(), read\-\_\-doublematrix(), read\-\_\-doubletensor(), read\-\_\-doublevector(), read\-\_\-floatmatrix(), read\-\_\-floatvector(), read\-\_\-index(), read\-\_\-intbin(), read\-\_\-intmatrix(), read\-\_\-intvector(), read\-\_\-longbin(), read\-\_\-longmatrix(), read\-\_\-longvector(), read\-\_\-shortbin(), read\-\_\-shortmatrix(), and read\-\_\-shortvector().
+
+\hypertarget{t__io_8h_a8a6c9b4569eb04e48de6ffbfadad9bc0}{\index{t\-\_\-io.\-h@{t\-\_\-io.\-h}!read\-\_\-buffer\-\_\-from\-\_\-stdio@{read\-\_\-buffer\-\_\-from\-\_\-stdio}}
+\index{read\-\_\-buffer\-\_\-from\-\_\-stdio@{read\-\_\-buffer\-\_\-from\-\_\-stdio}!t_io.h@{t\-\_\-io.\-h}}
+\subsubsection[{read\-\_\-buffer\-\_\-from\-\_\-stdio}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ read\-\_\-buffer\-\_\-from\-\_\-stdio (
+\begin{DoxyParamCaption}
+\item[{long}]{maxbuffersize}
+\end{DoxyParamCaption}
+)}}\label{t__io_8h_a8a6c9b4569eb04e48de6ffbfadad9bc0}
+Names\-: read\-\_\-buffer\-\_\-from stdio
+
+Synopsis\-: char $\ast$read\-\_\-buffer\-\_\-from stdio(long maxbufferzsize)
+
+Version\-: 1.\-0
+
+Description\-: reads from the standard input a comment. It is opened by and closed the same way
+
+this comment is.
+
+F\-I\-L\-E\-: L\-I\-B\-R\-A\-R\-I\-E\-S/\-B\-A\-S\-I\-C\-S/t\-\_\-io.\-h, L\-I\-B\-R\-A\-R\-I\-E\-S/\-B\-A\-S\-I\-C\-S/t\-\_\-io.\-c
+
+Inputs\-: maxbuffersize is the length of the maximum number of characters
+
+Return\-: a pointer to the buffer stored
+
+Examples\-: matrixconverter.\-c
+
+Authors \& Date\-: Riccardo Rigon, October 1997
+
+
+
+ 
+
+Definition at line 4256 of file t\-\_\-io.\-c.
+
+
+
+References B\-U\-F\-F\-E\-R\-I\-N\-C\-R\-E\-M\-E\-N\-T, and t\-\_\-error().
+
+\hypertarget{t__io_8h_aedeb2a96b7899b808cc3794f9e41cb33}{\index{t\-\_\-io.\-h@{t\-\_\-io.\-h}!read\-\_\-chararray@{read\-\_\-chararray}}
+\index{read\-\_\-chararray@{read\-\_\-chararray}!t_io.h@{t\-\_\-io.\-h}}
+\subsubsection[{read\-\_\-chararray}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\-H\-A\-R\-V\-E\-C\-T\-O\-R}$\ast$ read\-\_\-chararray (
+\begin{DoxyParamCaption}
+\item[{F\-I\-L\-E $\ast$}]{, }
+\item[{short}]{}
+\end{DoxyParamCaption}
+)}}\label{t__io_8h_aedeb2a96b7899b808cc3794f9e41cb33}
+\hypertarget{t__io_8h_a7568d94f944c892eeba8f09939986aa2}{\index{t\-\_\-io.\-h@{t\-\_\-io.\-h}!read\-\_\-charvector@{read\-\_\-charvector}}
+\index{read\-\_\-charvector@{read\-\_\-charvector}!t_io.h@{t\-\_\-io.\-h}}
+\subsubsection[{read\-\_\-charvector}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\-H\-A\-R\-V\-E\-C\-T\-O\-R}$\ast$ read\-\_\-charvector (
+\begin{DoxyParamCaption}
+\item[{F\-I\-L\-E $\ast$}]{inputfile, }
+\item[{char $\ast$}]{mode, }
+\item[{short}]{print}
+\end{DoxyParamCaption}
+)}}\label{t__io_8h_a7568d94f944c892eeba8f09939986aa2}
+
+
+ 
+
+Definition at line 6992 of file t\-\_\-io.\-c.
+
+
+
+References H\-E\-A\-D\-E\-R\-::category, H\-E\-A\-D\-E\-R\-::dimensions, E\-X\-T\-E\-R\-N\-A\-L\-\_\-\-F\-I\-L\-E, E\-X\-T\-E\-R\-N\-A\-L\-\_\-\-F\-I\-L\-E\-\_\-\-N\-A\-M\-E, E\-X\-T\-E\-R\-N\-A\-L\-\_\-\-F\-I\-L\-E\-\_\-\-P\-O\-S\-I\-T\-I\-O\-N, free\-\_\-header(), get\-\_\-phrase(), goto\-\_\-\-E\-O\-F(), headercmp(), new\-\_\-charvector(), N\-O\-P\-R\-I\-N\-T, O\-L\-D\-\_\-\-N\-A\-M\-E, O\-P\-E\-N\-Y\-E\-S, print\-\_\-header(), query\-\_\-for\-\_\-token(), read\-\_\-charvector\-\_\-elements(), read\-\_\-index(), read\-\_\-vectorheader(), skip\-\_\-whitespaces(), t\-\_\-error(), t\-\_\-fclose(), t\-\_\-fopen(), and H\-E\-A\-D\-E\-R\-::type.
+
+\hypertarget{t__io_8h_affc974dec36791c65f4509423858ed48}{\index{t\-\_\-io.\-h@{t\-\_\-io.\-h}!read\-\_\-charvector\-\_\-elements@{read\-\_\-charvector\-\_\-elements}}
+\index{read\-\_\-charvector\-\_\-elements@{read\-\_\-charvector\-\_\-elements}!t_io.h@{t\-\_\-io.\-h}}
+\subsubsection[{read\-\_\-charvector\-\_\-elements}]{\setlength{\rightskip}{0pt plus 5cm}long read\-\_\-charvector\-\_\-elements (
+\begin{DoxyParamCaption}
+\item[{F\-I\-L\-E $\ast$}]{input, }
+\item[{{\bf C\-H\-A\-R\-V\-E\-C\-T\-O\-R} $\ast$}]{v, }
+\item[{char $\ast$}]{mode}
+\end{DoxyParamCaption}
+)}}\label{t__io_8h_affc974dec36791c65f4509423858ed48}
+
+
+
+
+It reads a vector of char numbers and returns the number of elements read. Storage mode can be either ascii or binary. 
+
+Definition at line 854 of file t\-\_\-io.\-c.
+
+
+
+References C\-H\-A\-R\-V\-E\-C\-T\-O\-R\-::co, C\-H\-A\-R\-V\-E\-C\-T\-O\-R\-::isdynamic, C\-H\-A\-R\-V\-E\-C\-T\-O\-R\-::nh, C\-H\-A\-R\-V\-E\-C\-T\-O\-R\-::nl, and t\-\_\-error().
+
+
+
+Referenced by read\-\_\-charvector().
+
+\hypertarget{t__io_8h_ab6c5b97109bc38cc5511e408ed97dd40}{\index{t\-\_\-io.\-h@{t\-\_\-io.\-h}!read\-\_\-comment@{read\-\_\-comment}}
+\index{read\-\_\-comment@{read\-\_\-comment}!t_io.h@{t\-\_\-io.\-h}}
+\subsubsection[{read\-\_\-comment}]{\setlength{\rightskip}{0pt plus 5cm}int read\-\_\-comment (
+\begin{DoxyParamCaption}
+\item[{F\-I\-L\-E $\ast$}]{inputfile, }
+\item[{int}]{opt, }
+\item[{long}]{maxbuffersize, }
+\item[{short}]{print}
+\end{DoxyParamCaption}
+)}}\label{t__io_8h_ab6c5b97109bc38cc5511e408ed97dd40}
+Name\-: read\-\_\-comment, readandstore\-\_\-comment
+
+Synopsis\-:
+
+int \hyperlink{t__io_8h_ab6c5b97109bc38cc5511e408ed97dd40}{read\-\_\-comment(\-F\-I\-L\-E $\ast$,int, long, short )};
+
+char $\ast$ \hyperlink{t__io_8h_a4c30105b9e730f23f768976c4d01bb24}{readandstore\-\_\-comment(\-F\-I\-L\-E $\ast$,int, long)};++++
+
+Version\-: 1.\-0
+
+Description\-: reads a comment from a turtle file. read\-\_\-comment prints it on the screen, readandstore\-\_\-comment
+
+save it in a dynamically allocated buffer pointed by the return value.
+
+Authors \& Date\-: Riccardo Rigon, February, September, November 1997
+
+F\-I\-L\-E\-: L\-I\-B\-R\-A\-R\-I\-E\-S/\-B\-A\-S\-I\-C\-S/t\-\_\-io.\-h, L\-I\-B\-R\-A\-R\-I\-E\-S/\-B\-A\-S\-I\-C\-S/t\-\_\-io.\-c
+
+Inputs\-: a pointer to the file to be read, 1 or 0, the maximum length
+
+of the comment to be printed. If 1 the text read is checked to be a comment
+
+(i.\-e. the program looks for the string / $\ast$$\ast$ without space ). If 0 the check is suppressed.
+
+Return\-: read\-\_\-comment\-: 1 if successful 0 otherwise; readandstore\-\_\-comment a pointer to a buffer that
+
+contains the data read
+
+See Also\-: iscomment, skip\-\_\-whitespaces
+
+Examples\-: read\-\_\-
+
+References\-:
+
+
+
+ 
+
+Definition at line 3571 of file t\-\_\-io.\-c.
+
+
+
+References B\-U\-F\-F\-E\-R\-I\-N\-C\-R\-E\-M\-E\-N\-T, iscomment(), and t\-\_\-error().
+
+
+
+Referenced by header\-\_\-scan(), and read\-\_\-index().
+
+\hypertarget{t__io_8h_abf1573394d2bda5dcae0acf105142617}{\index{t\-\_\-io.\-h@{t\-\_\-io.\-h}!read\-\_\-doublearray@{read\-\_\-doublearray}}
+\index{read\-\_\-doublearray@{read\-\_\-doublearray}!t_io.h@{t\-\_\-io.\-h}}
+\subsubsection[{read\-\_\-doublearray}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R}$\ast$ read\-\_\-doublearray (
+\begin{DoxyParamCaption}
+\item[{F\-I\-L\-E $\ast$}]{inputfile, }
+\item[{short}]{print}
+\end{DoxyParamCaption}
+)}}\label{t__io_8h_abf1573394d2bda5dcae0acf105142617}
+
+
+ 
+
+Definition at line 5667 of file t\-\_\-io.\-c.
+
+
+
+References B\-U\-F\-F\-E\-R\-I\-N\-C\-R\-E\-M\-E\-N\-T, H\-E\-A\-D\-E\-R\-::category, D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R\-::co, free\-\_\-header(), header\-\_\-scan(), M\-A\-X\-B\-U\-F\-F\-E\-R\-S\-I\-Z\-E, new\-\_\-doublevector(), print\-\_\-header(), skip\-\_\-whitespaces(), t\-\_\-error(), and H\-E\-A\-D\-E\-R\-::type.
+
+
+
+Referenced by get\-\_\-parameter(), get\-\_\-s\-\_\-times(), read\-\_\-b\-\_\-parameters\-\_\-ft(), read\-\_\-connections(), read\-\_\-doublevector\-\_\-from\-\_\-a\-\_\-ft\-\_\-format\-\_\-single\-\_\-file(), read\-\_\-map(), read\-\_\-parameters(), and read\-\_\-polygon().
+
+\hypertarget{t__io_8h_a309f0989e808e0d39e18db53c9bcfa49}{\index{t\-\_\-io.\-h@{t\-\_\-io.\-h}!read\-\_\-doublebin@{read\-\_\-doublebin}}
+\index{read\-\_\-doublebin@{read\-\_\-doublebin}!t_io.h@{t\-\_\-io.\-h}}
+\subsubsection[{read\-\_\-doublebin}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\-O\-U\-B\-L\-E\-B\-I\-N}$\ast$ read\-\_\-doublebin (
+\begin{DoxyParamCaption}
+\item[{F\-I\-L\-E $\ast$}]{inputfile, }
+\item[{char $\ast$}]{mode, }
+\item[{short}]{print}
+\end{DoxyParamCaption}
+)}}\label{t__io_8h_a309f0989e808e0d39e18db53c9bcfa49}
+
+
+ 
+
+Definition at line 9919 of file t\-\_\-io.\-c.
+
+
+
+References E\-X\-T\-E\-R\-N\-A\-L\-\_\-\-F\-I\-L\-E, E\-X\-T\-E\-R\-N\-A\-L\-\_\-\-F\-I\-L\-E\-\_\-\-N\-A\-M\-E, E\-X\-T\-E\-R\-N\-A\-L\-\_\-\-F\-I\-L\-E\-\_\-\-P\-O\-S\-I\-T\-I\-O\-N, free\-\_\-header(), free\-\_\-longvector(), longvectorcmp(), new\-\_\-doublebin(), N\-O\-P\-R\-I\-N\-T, O\-L\-D\-\_\-\-N\-A\-M\-E, O\-P\-E\-N\-Y\-E\-S, print\-\_\-longvector\-\_\-elements(), query\-\_\-for\-\_\-label(), query\-\_\-for\-\_\-token(), read\-\_\-doublebin\-\_\-elements(), read\-\_\-index(), read\-\_\-longarray(), skip\-\_\-whitespaces(), t\-\_\-error(), t\-\_\-fclose(), and t\-\_\-fopen().
+
+\hypertarget{t__io_8h_a77ff40c4dd408dc42feb9ecfe3d2d19a}{\index{t\-\_\-io.\-h@{t\-\_\-io.\-h}!read\-\_\-doublebin\-\_\-elements@{read\-\_\-doublebin\-\_\-elements}}
+\index{read\-\_\-doublebin\-\_\-elements@{read\-\_\-doublebin\-\_\-elements}!t_io.h@{t\-\_\-io.\-h}}
+\subsubsection[{read\-\_\-doublebin\-\_\-elements}]{\setlength{\rightskip}{0pt plus 5cm}long read\-\_\-doublebin\-\_\-elements (
+\begin{DoxyParamCaption}
+\item[{F\-I\-L\-E $\ast$}]{input, }
+\item[{{\bf D\-O\-U\-B\-L\-E\-B\-I\-N} $\ast$}]{l, }
+\item[{char $\ast$}]{mode}
+\end{DoxyParamCaption}
+)}}\label{t__io_8h_a77ff40c4dd408dc42feb9ecfe3d2d19a}
+
+
+ 
+
+Definition at line 2417 of file t\-\_\-io.\-c.
+
+
+
+References co, L\-O\-N\-G\-V\-E\-C\-T\-O\-R\-::co, db\-::co, db\-::index, db\-::isdynamic, and t\-\_\-error().
+
+
+
+Referenced by read\-\_\-doublebin().
+
+\hypertarget{t__io_8h_a4bc831c6ee2d18d8b5f6c067e6638911}{\index{t\-\_\-io.\-h@{t\-\_\-io.\-h}!read\-\_\-doublematrix@{read\-\_\-doublematrix}}
+\index{read\-\_\-doublematrix@{read\-\_\-doublematrix}!t_io.h@{t\-\_\-io.\-h}}
+\subsubsection[{read\-\_\-doublematrix}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X}$\ast$ read\-\_\-doublematrix (
+\begin{DoxyParamCaption}
+\item[{F\-I\-L\-E $\ast$}]{inputfile, }
+\item[{char $\ast$}]{mode, }
+\item[{short}]{print}
+\end{DoxyParamCaption}
+)}}\label{t__io_8h_a4bc831c6ee2d18d8b5f6c067e6638911}
+
+
+ 
+
+Definition at line 9166 of file t\-\_\-io.\-c.
+
+
+
+References H\-E\-A\-D\-E\-R\-::category, H\-E\-A\-D\-E\-R\-::dimensions, E\-X\-T\-E\-R\-N\-A\-L\-\_\-\-F\-I\-L\-E, E\-X\-T\-E\-R\-N\-A\-L\-\_\-\-F\-I\-L\-E\-\_\-\-N\-A\-M\-E, E\-X\-T\-E\-R\-N\-A\-L\-\_\-\-F\-I\-L\-E\-\_\-\-P\-O\-S\-I\-T\-I\-O\-N, free\-\_\-header(), get\-\_\-phrase(), headercmp(), new\-\_\-doublematrix(), N\-O\-P\-R\-I\-N\-T, O\-L\-D\-\_\-\-N\-A\-M\-E, O\-P\-E\-N\-Y\-E\-S, print\-\_\-header(), query\-\_\-for\-\_\-token(), read\-\_\-doublematrix\-\_\-elements(), read\-\_\-index(), read\-\_\-matrixheader(), skip\-\_\-whitespaces(), t\-\_\-error(), t\-\_\-fclose(), t\-\_\-fopen(), and H\-E\-A\-D\-E\-R\-::type.
+
+
+
+Referenced by read\-\_\-linevector(), and read\-\_\-map().
+
+\hypertarget{t__io_8h_a638ae0fb0f78141cf8947403a6384886}{\index{t\-\_\-io.\-h@{t\-\_\-io.\-h}!read\-\_\-doublematrix\-\_\-elements@{read\-\_\-doublematrix\-\_\-elements}}
+\index{read\-\_\-doublematrix\-\_\-elements@{read\-\_\-doublematrix\-\_\-elements}!t_io.h@{t\-\_\-io.\-h}}
+\subsubsection[{read\-\_\-doublematrix\-\_\-elements}]{\setlength{\rightskip}{0pt plus 5cm}long read\-\_\-doublematrix\-\_\-elements (
+\begin{DoxyParamCaption}
+\item[{F\-I\-L\-E $\ast$}]{input, }
+\item[{{\bf D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X} $\ast$}]{m, }
+\item[{char $\ast$}]{mode}
+\end{DoxyParamCaption}
+)}}\label{t__io_8h_a638ae0fb0f78141cf8947403a6384886}
+Read a matrix of double numbers 
+
+Definition at line 1704 of file t\-\_\-io.\-c.
+
+
+
+References D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X\-::co, D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X\-::isdynamic, D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X\-::nch, D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X\-::ncl, D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X\-::nrh, D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X\-::nrl, and t\-\_\-error().
+
+
+
+Referenced by read\-\_\-doublematrix().
+
+\hypertarget{t__io_8h_a879873fbdf7f1a71df139a25c4581d37}{\index{t\-\_\-io.\-h@{t\-\_\-io.\-h}!read\-\_\-doubletensor@{read\-\_\-doubletensor}}
+\index{read\-\_\-doubletensor@{read\-\_\-doubletensor}!t_io.h@{t\-\_\-io.\-h}}
+\subsubsection[{read\-\_\-doubletensor}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\-O\-U\-B\-L\-E\-T\-E\-N\-S\-O\-R}$\ast$ read\-\_\-doubletensor (
+\begin{DoxyParamCaption}
+\item[{F\-I\-L\-E $\ast$}]{inputfile, }
+\item[{char $\ast$}]{mode, }
+\item[{short}]{print}
+\end{DoxyParamCaption}
+)}}\label{t__io_8h_a879873fbdf7f1a71df139a25c4581d37}
+
+
+ 
+
+Definition at line 11048 of file t\-\_\-io.\-c.
+
+
+
+References H\-E\-A\-D\-E\-R\-::category, H\-E\-A\-D\-E\-R\-::dimensions, E\-X\-T\-E\-R\-N\-A\-L\-\_\-\-F\-I\-L\-E, E\-X\-T\-E\-R\-N\-A\-L\-\_\-\-F\-I\-L\-E\-\_\-\-N\-A\-M\-E, E\-X\-T\-E\-R\-N\-A\-L\-\_\-\-F\-I\-L\-E\-\_\-\-P\-O\-S\-I\-T\-I\-O\-N, free\-\_\-header(), get\-\_\-phrase(), headercmp(), new\-\_\-doubletensor(), N\-O\-P\-R\-I\-N\-T, O\-L\-D\-\_\-\-N\-A\-M\-E, O\-P\-E\-N\-Y\-E\-S, print\-\_\-header(), query\-\_\-for\-\_\-token(), read\-\_\-doubletensor\-\_\-elements(), read\-\_\-index(), read\-\_\-matrixheader(), read\-\_\-tensorheader(), skip\-\_\-whitespaces(), t\-\_\-error(), t\-\_\-fclose(), t\-\_\-fopen(), and H\-E\-A\-D\-E\-R\-::type.
+
+\hypertarget{t__io_8h_a44701b396e8854301b03dcdc3c3b15d7}{\index{t\-\_\-io.\-h@{t\-\_\-io.\-h}!read\-\_\-doubletensor\-\_\-elements@{read\-\_\-doubletensor\-\_\-elements}}
+\index{read\-\_\-doubletensor\-\_\-elements@{read\-\_\-doubletensor\-\_\-elements}!t_io.h@{t\-\_\-io.\-h}}
+\subsubsection[{read\-\_\-doubletensor\-\_\-elements}]{\setlength{\rightskip}{0pt plus 5cm}long read\-\_\-doubletensor\-\_\-elements (
+\begin{DoxyParamCaption}
+\item[{F\-I\-L\-E $\ast$}]{input, }
+\item[{{\bf D\-O\-U\-B\-L\-E\-T\-E\-N\-S\-O\-R} $\ast$}]{m, }
+\item[{char $\ast$}]{mode}
+\end{DoxyParamCaption}
+)}}\label{t__io_8h_a44701b396e8854301b03dcdc3c3b15d7}
+Read a matrix of double numbers 
+
+Definition at line 10919 of file t\-\_\-io.\-c.
+
+
+
+References D\-O\-U\-B\-L\-E\-T\-E\-N\-S\-O\-R\-::co, D\-O\-U\-B\-L\-E\-T\-E\-N\-S\-O\-R\-::isdynamic, D\-O\-U\-B\-L\-E\-T\-E\-N\-S\-O\-R\-::nch, D\-O\-U\-B\-L\-E\-T\-E\-N\-S\-O\-R\-::ncl, D\-O\-U\-B\-L\-E\-T\-E\-N\-S\-O\-R\-::ndh, D\-O\-U\-B\-L\-E\-T\-E\-N\-S\-O\-R\-::ndl, D\-O\-U\-B\-L\-E\-T\-E\-N\-S\-O\-R\-::nrh, D\-O\-U\-B\-L\-E\-T\-E\-N\-S\-O\-R\-::nrl, and t\-\_\-error().
+
+
+
+Referenced by read\-\_\-doubletensor().
+
+\hypertarget{t__io_8h_a08c79a737a7fa771542f921856fa5446}{\index{t\-\_\-io.\-h@{t\-\_\-io.\-h}!read\-\_\-doublevector@{read\-\_\-doublevector}}
+\index{read\-\_\-doublevector@{read\-\_\-doublevector}!t_io.h@{t\-\_\-io.\-h}}
+\subsubsection[{read\-\_\-doublevector}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R}$\ast$ read\-\_\-doublevector (
+\begin{DoxyParamCaption}
+\item[{F\-I\-L\-E $\ast$}]{inputfile, }
+\item[{char $\ast$}]{mode, }
+\item[{short}]{print}
+\end{DoxyParamCaption}
+)}}\label{t__io_8h_a08c79a737a7fa771542f921856fa5446}
+
+
+ 
+
+Definition at line 8141 of file t\-\_\-io.\-c.
+
+
+
+References H\-E\-A\-D\-E\-R\-::category, H\-E\-A\-D\-E\-R\-::dimensions, E\-X\-T\-E\-R\-N\-A\-L\-\_\-\-F\-I\-L\-E, E\-X\-T\-E\-R\-N\-A\-L\-\_\-\-F\-I\-L\-E\-\_\-\-N\-A\-M\-E, E\-X\-T\-E\-R\-N\-A\-L\-\_\-\-F\-I\-L\-E\-\_\-\-P\-O\-S\-I\-T\-I\-O\-N, free\-\_\-header(), get\-\_\-phrase(), headercmp(), new\-\_\-doublevector(), N\-O\-P\-R\-I\-N\-T, O\-L\-D\-\_\-\-N\-A\-M\-E, O\-P\-E\-N\-Y\-E\-S, print\-\_\-header(), query\-\_\-for\-\_\-token(), read\-\_\-doublevector\-\_\-elements(), read\-\_\-index(), read\-\_\-vectorheader(), skip\-\_\-whitespaces(), t\-\_\-error(), t\-\_\-fclose(), t\-\_\-fopen(), and H\-E\-A\-D\-E\-R\-::type.
+
+\hypertarget{t__io_8h_a36ea9ca889dc25351615bc2ec67fd027}{\index{t\-\_\-io.\-h@{t\-\_\-io.\-h}!read\-\_\-doublevector\-\_\-elements@{read\-\_\-doublevector\-\_\-elements}}
+\index{read\-\_\-doublevector\-\_\-elements@{read\-\_\-doublevector\-\_\-elements}!t_io.h@{t\-\_\-io.\-h}}
+\subsubsection[{read\-\_\-doublevector\-\_\-elements}]{\setlength{\rightskip}{0pt plus 5cm}long read\-\_\-doublevector\-\_\-elements (
+\begin{DoxyParamCaption}
+\item[{F\-I\-L\-E $\ast$}]{input, }
+\item[{{\bf D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} $\ast$}]{v, }
+\item[{char $\ast$}]{mode}
+\end{DoxyParamCaption}
+)}}\label{t__io_8h_a36ea9ca889dc25351615bc2ec67fd027}
+
+
+
+
+It reads a vector of float numbers and returns the number of elements read. Storage mode can be either ascii or binary. 
+
+Definition at line 703 of file t\-\_\-io.\-c.
+
+
+
+References D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R\-::co, D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R\-::isdynamic, D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R\-::nh, D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R\-::nl, and t\-\_\-error().
+
+
+
+Referenced by read\-\_\-doublevector().
+
+\hypertarget{t__io_8h_af281f1943c2e883fa46ed647f301410e}{\index{t\-\_\-io.\-h@{t\-\_\-io.\-h}!read\-\_\-filenames@{read\-\_\-filenames}}
+\index{read\-\_\-filenames@{read\-\_\-filenames}!t_io.h@{t\-\_\-io.\-h}}
+\subsubsection[{read\-\_\-filenames}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\-T\-R\-I\-N\-G\-B\-I\-N}$\ast$ read\-\_\-filenames (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{working\-\_\-directory, }
+\item[{char $\ast$}]{program, }
+\item[{char $\ast$}]{extension, }
+\item[{char $\ast$}]{position}
+\end{DoxyParamCaption}
+)}}\label{t__io_8h_af281f1943c2e883fa46ed647f301410e}
+
+
+ 
+
+Definition at line 3230 of file t\-\_\-io.\-c.
+
+
+
+References st\-::co, st\-::index, join\-\_\-strings(), L\-O\-N\-G\-V\-E\-C\-T\-O\-R\-::nh, N\-O\-P\-R\-I\-N\-T, read\-\_\-stringarray(), simplefind(), and t\-\_\-error().
+
+\hypertarget{t__io_8h_a595c16ed8e36a322783c5d3239655a99}{\index{t\-\_\-io.\-h@{t\-\_\-io.\-h}!read\-\_\-floatarray@{read\-\_\-floatarray}}
+\index{read\-\_\-floatarray@{read\-\_\-floatarray}!t_io.h@{t\-\_\-io.\-h}}
+\subsubsection[{read\-\_\-floatarray}]{\setlength{\rightskip}{0pt plus 5cm}{\bf F\-L\-O\-A\-T\-V\-E\-C\-T\-O\-R}$\ast$ read\-\_\-floatarray (
+\begin{DoxyParamCaption}
+\item[{F\-I\-L\-E $\ast$}]{inputfile, }
+\item[{short}]{print}
+\end{DoxyParamCaption}
+)}}\label{t__io_8h_a595c16ed8e36a322783c5d3239655a99}
+
+
+ 
+
+Definition at line 5344 of file t\-\_\-io.\-c.
+
+
+
+References B\-U\-F\-F\-E\-R\-I\-N\-C\-R\-E\-M\-E\-N\-T, H\-E\-A\-D\-E\-R\-::category, F\-L\-O\-A\-T\-V\-E\-C\-T\-O\-R\-::co, header\-\_\-scan(), M\-A\-X\-B\-U\-F\-F\-E\-R\-S\-I\-Z\-E, new\-\_\-floatvector(), print\-\_\-header(), skip\-\_\-whitespaces(), t\-\_\-error(), and H\-E\-A\-D\-E\-R\-::type.
+
+\hypertarget{t__io_8h_a4ab62008c6e44ec4bede928ac35a018f}{\index{t\-\_\-io.\-h@{t\-\_\-io.\-h}!read\-\_\-floatmatrix@{read\-\_\-floatmatrix}}
+\index{read\-\_\-floatmatrix@{read\-\_\-floatmatrix}!t_io.h@{t\-\_\-io.\-h}}
+\subsubsection[{read\-\_\-floatmatrix}]{\setlength{\rightskip}{0pt plus 5cm}{\bf F\-L\-O\-A\-T\-M\-A\-T\-R\-I\-X}$\ast$ read\-\_\-floatmatrix (
+\begin{DoxyParamCaption}
+\item[{F\-I\-L\-E $\ast$}]{inputfile, }
+\item[{char $\ast$}]{mode, }
+\item[{short}]{print}
+\end{DoxyParamCaption}
+)}}\label{t__io_8h_a4ab62008c6e44ec4bede928ac35a018f}
+
+
+ 
+
+Definition at line 9092 of file t\-\_\-io.\-c.
+
+
+
+References H\-E\-A\-D\-E\-R\-::category, H\-E\-A\-D\-E\-R\-::dimensions, E\-X\-T\-E\-R\-N\-A\-L\-\_\-\-F\-I\-L\-E, E\-X\-T\-E\-R\-N\-A\-L\-\_\-\-F\-I\-L\-E\-\_\-\-N\-A\-M\-E, E\-X\-T\-E\-R\-N\-A\-L\-\_\-\-F\-I\-L\-E\-\_\-\-P\-O\-S\-I\-T\-I\-O\-N, free\-\_\-header(), get\-\_\-phrase(), headercmp(), new\-\_\-floatmatrix(), N\-O\-P\-R\-I\-N\-T, O\-L\-D\-\_\-\-N\-A\-M\-E, O\-P\-E\-N\-Y\-E\-S, print\-\_\-header(), query\-\_\-for\-\_\-token(), read\-\_\-floatmatrix\-\_\-elements(), read\-\_\-index(), read\-\_\-matrixheader(), skip\-\_\-whitespaces(), t\-\_\-error(), t\-\_\-fclose(), t\-\_\-fopen(), and H\-E\-A\-D\-E\-R\-::type.
+
+\hypertarget{t__io_8h_ae1f1a3545cce4deb66b094fd0c1c56ac}{\index{t\-\_\-io.\-h@{t\-\_\-io.\-h}!read\-\_\-floatmatrix\-\_\-elements@{read\-\_\-floatmatrix\-\_\-elements}}
+\index{read\-\_\-floatmatrix\-\_\-elements@{read\-\_\-floatmatrix\-\_\-elements}!t_io.h@{t\-\_\-io.\-h}}
+\subsubsection[{read\-\_\-floatmatrix\-\_\-elements}]{\setlength{\rightskip}{0pt plus 5cm}long read\-\_\-floatmatrix\-\_\-elements (
+\begin{DoxyParamCaption}
+\item[{F\-I\-L\-E $\ast$}]{input, }
+\item[{{\bf F\-L\-O\-A\-T\-M\-A\-T\-R\-I\-X} $\ast$}]{m, }
+\item[{char $\ast$}]{mode}
+\end{DoxyParamCaption}
+)}}\label{t__io_8h_ae1f1a3545cce4deb66b094fd0c1c56ac}
+Read a matrix of floating point numbers 
+
+Definition at line 1531 of file t\-\_\-io.\-c.
+
+
+
+References F\-L\-O\-A\-T\-M\-A\-T\-R\-I\-X\-::co, F\-L\-O\-A\-T\-M\-A\-T\-R\-I\-X\-::isdynamic, F\-L\-O\-A\-T\-M\-A\-T\-R\-I\-X\-::nch, F\-L\-O\-A\-T\-M\-A\-T\-R\-I\-X\-::ncl, F\-L\-O\-A\-T\-M\-A\-T\-R\-I\-X\-::nrh, F\-L\-O\-A\-T\-M\-A\-T\-R\-I\-X\-::nrl, and t\-\_\-error().
+
+
+
+Referenced by justread\-\_\-floatmatrix(), and read\-\_\-floatmatrix().
+
+\hypertarget{t__io_8h_ab1dcedeb1dd0a5537570c2a0247a57b5}{\index{t\-\_\-io.\-h@{t\-\_\-io.\-h}!read\-\_\-floatvector@{read\-\_\-floatvector}}
+\index{read\-\_\-floatvector@{read\-\_\-floatvector}!t_io.h@{t\-\_\-io.\-h}}
+\subsubsection[{read\-\_\-floatvector}]{\setlength{\rightskip}{0pt plus 5cm}{\bf F\-L\-O\-A\-T\-V\-E\-C\-T\-O\-R}$\ast$ read\-\_\-floatvector (
+\begin{DoxyParamCaption}
+\item[{F\-I\-L\-E $\ast$}]{inputfile, }
+\item[{char $\ast$}]{mode, }
+\item[{short}]{print}
+\end{DoxyParamCaption}
+)}}\label{t__io_8h_ab1dcedeb1dd0a5537570c2a0247a57b5}
+
+
+ 
+
+Definition at line 7909 of file t\-\_\-io.\-c.
+
+
+
+References H\-E\-A\-D\-E\-R\-::category, H\-E\-A\-D\-E\-R\-::dimensions, E\-X\-T\-E\-R\-N\-A\-L\-\_\-\-F\-I\-L\-E, E\-X\-T\-E\-R\-N\-A\-L\-\_\-\-F\-I\-L\-E\-\_\-\-N\-A\-M\-E, E\-X\-T\-E\-R\-N\-A\-L\-\_\-\-F\-I\-L\-E\-\_\-\-P\-O\-S\-I\-T\-I\-O\-N, free\-\_\-header(), get\-\_\-phrase(), headercmp(), new\-\_\-floatvector(), N\-O\-P\-R\-I\-N\-T, O\-L\-D\-\_\-\-N\-A\-M\-E, O\-P\-E\-N\-Y\-E\-S, print\-\_\-header(), query\-\_\-for\-\_\-token(), read\-\_\-floatvector\-\_\-elements(), read\-\_\-index(), read\-\_\-vectorheader(), skip\-\_\-whitespaces(), t\-\_\-error(), t\-\_\-fclose(), t\-\_\-fopen(), and H\-E\-A\-D\-E\-R\-::type.
+
+\hypertarget{t__io_8h_a73f0897e30c1c3a5f6825253cb8144e1}{\index{t\-\_\-io.\-h@{t\-\_\-io.\-h}!read\-\_\-floatvector\-\_\-elements@{read\-\_\-floatvector\-\_\-elements}}
+\index{read\-\_\-floatvector\-\_\-elements@{read\-\_\-floatvector\-\_\-elements}!t_io.h@{t\-\_\-io.\-h}}
+\subsubsection[{read\-\_\-floatvector\-\_\-elements}]{\setlength{\rightskip}{0pt plus 5cm}long read\-\_\-floatvector\-\_\-elements (
+\begin{DoxyParamCaption}
+\item[{F\-I\-L\-E $\ast$}]{input, }
+\item[{{\bf F\-L\-O\-A\-T\-V\-E\-C\-T\-O\-R} $\ast$}]{v, }
+\item[{char $\ast$}]{mode}
+\end{DoxyParamCaption}
+)}}\label{t__io_8h_a73f0897e30c1c3a5f6825253cb8144e1}
+
+
+
+
+It reads a vector of float numbers and returns the number of elements read. Storage mode can be either ascii or binary. 
+
+Definition at line 553 of file t\-\_\-io.\-c.
+
+
+
+References F\-L\-O\-A\-T\-V\-E\-C\-T\-O\-R\-::co, F\-L\-O\-A\-T\-V\-E\-C\-T\-O\-R\-::isdynamic, F\-L\-O\-A\-T\-V\-E\-C\-T\-O\-R\-::nh, F\-L\-O\-A\-T\-V\-E\-C\-T\-O\-R\-::nl, and t\-\_\-error().
+
+
+
+Referenced by read\-\_\-floatvector().
+
+\hypertarget{t__io_8h_a03856943eedcd6c30e540bd8bd497d00}{\index{t\-\_\-io.\-h@{t\-\_\-io.\-h}!read\-\_\-header@{read\-\_\-header}}
+\index{read\-\_\-header@{read\-\_\-header}!t_io.h@{t\-\_\-io.\-h}}
+\subsubsection[{read\-\_\-header}]{\setlength{\rightskip}{0pt plus 5cm}{\bf H\-E\-A\-D\-E\-R} read\-\_\-header (
+\begin{DoxyParamCaption}
+\item[{F\-I\-L\-E $\ast$}]{, }
+\item[{const char $\ast$}]{}
+\end{DoxyParamCaption}
+)}}\label{t__io_8h_a03856943eedcd6c30e540bd8bd497d00}
+Name\-: read\-\_\-header, print\-\_\-header
+
+Synopsis\-:
+
+\hyperlink{struct_h_e_a_d_e_r}{H\-E\-A\-D\-E\-R} \hyperlink{t__io_8h_a03856943eedcd6c30e540bd8bd497d00}{read\-\_\-header(\-F\-I\-L\-E $\ast$,const char $\ast$)};
+
+void \hyperlink{t__io_8h_ae3ec3504fb92a62e04649aafe4d4f808}{print\-\_\-header(\-H\-E\-A\-D\-E\-R $\ast$)};
+
+Version\-: 1.\-0
+
+Description\-: read in a turtle file the header
+
+of the stored data. See the file \char`\"{}turtle.\-dat\char`\"{} for
+
+further details. print\-\_\-header prints the header
+
+\subsection*{below stands for \-\_\-vectorheader, matrixheader or}
+
+header
+
+Authors \& Date\-: Riccardo Rigon, February, September 1997
+
+F\-I\-L\-E\-: L\-I\-B\-R\-A\-R\-I\-E\-S/\-B\-A\-S\-I\-C\-S/t\-\_\-io.\-h, L\-I\-B\-R\-A\-R\-I\-E\-S/\-B\-A\-S\-I\-C\-S/t\-\_\-io.\-c
+
+Inputs\-: read\-\_\-\#\-: the pointer to the opened file. print\-\_\-\#
+
+the \hyperlink{struct_h_e_a_d_e_r}{H\-E\-A\-D\-E\-R} to be printed
+
+Return\-: a \hyperlink{struct_h_e_a_d_e_r}{H\-E\-A\-D\-E\-R}
+
+Keywords\-: turtle file
+
+Examples\-: 1.\-example.\-c \hypertarget{t__io_8h_a735434b9636937f974898939bcaa8ca9}{\index{t\-\_\-io.\-h@{t\-\_\-io.\-h}!read\-\_\-index@{read\-\_\-index}}
+\index{read\-\_\-index@{read\-\_\-index}!t_io.h@{t\-\_\-io.\-h}}
+\subsubsection[{read\-\_\-index}]{\setlength{\rightskip}{0pt plus 5cm}long read\-\_\-index (
+\begin{DoxyParamCaption}
+\item[{F\-I\-L\-E $\ast$}]{inputfile, }
+\item[{short}]{print}
+\end{DoxyParamCaption}
+)}}\label{t__io_8h_a735434b9636937f974898939bcaa8ca9}
+Name\-: read\-\_\-index
+
+Synopsis\-: long read\-\_\-index(\-F\-I\-L\-E $\ast$);
+
+Version\-: 1.\-0
+
+Description\-: reads the number of data blocks in a file. the format is\-:
+
+index\{a,Nm\} where a is the number of blocks and Nm is the type of file. Nm is optional.
+
+Authors \& Date\-: Riccardo Rigon, September 1997
+
+F\-I\-L\-E\-: L\-I\-B\-R\-A\-R\-I\-E\-S/\-B\-A\-S\-I\-C\-S/t\-\_\-io.\-h, L\-I\-B\-R\-A\-R\-I\-E\-S/\-B\-A\-S\-I\-C\-S/t\-\_\-io.\-c
+
+Inputs\-: a pointer to a file
+
+Return\-: the number of blocks or 0 if unsuccessful in reading
+
+See Also\-: read\-\_\-comment, read\-\_\-header
+
+Keywords\-: turtle file
+
+Examples\-: 5.\-example.\-c 6.\-example.\-c
+
+
+
+ 
+
+Definition at line 4442 of file t\-\_\-io.\-c.
+
+
+
+References iscomment(), M\-A\-X\-B\-U\-F\-F\-E\-R\-S\-I\-Z\-E, query\-\_\-for\-\_\-token(), read\-\_\-comment(), skip\-\_\-whitespaces(), and t\-\_\-error().
+
+
+
+Referenced by get\-\_\-filenames\-\_\-from\-\_\-keys(), get\-\_\-s\-\_\-times(), justread\-\_\-floatmatrix(), read\-\_\-b\-\_\-parameters\-\_\-ft(), read\-\_\-charvector(), read\-\_\-connection\-\_\-attribute\-\_\-array(), read\-\_\-doublebin(), read\-\_\-doublematrix(), read\-\_\-doubletensor(), read\-\_\-doublevector(), read\-\_\-doublevector\-\_\-from\-\_\-a\-\_\-ft\-\_\-format\-\_\-single\-\_\-file(), read\-\_\-fine\-\_\-indices(), read\-\_\-floatmatrix(), read\-\_\-floatvector(), read\-\_\-intbin(), read\-\_\-intmatrix(), read\-\_\-intvector(), read\-\_\-keywords\-\_\-list(), read\-\_\-line\-\_\-indices(), read\-\_\-linevector(), read\-\_\-longbin(), read\-\_\-longmatrix(), read\-\_\-longvector(), read\-\_\-map(), read\-\_\-polygonvector(), read\-\_\-shortbin(), read\-\_\-shortmatrix(), and read\-\_\-shortvector().
+
+\hypertarget{t__io_8h_a8ef4cbf9089e86751d16617fd8a6c5e1}{\index{t\-\_\-io.\-h@{t\-\_\-io.\-h}!read\-\_\-intarray@{read\-\_\-intarray}}
+\index{read\-\_\-intarray@{read\-\_\-intarray}!t_io.h@{t\-\_\-io.\-h}}
+\subsubsection[{read\-\_\-intarray}]{\setlength{\rightskip}{0pt plus 5cm}{\bf I\-N\-T\-V\-E\-C\-T\-O\-R}$\ast$ read\-\_\-intarray (
+\begin{DoxyParamCaption}
+\item[{F\-I\-L\-E $\ast$}]{, }
+\item[{short}]{}
+\end{DoxyParamCaption}
+)}}\label{t__io_8h_a8ef4cbf9089e86751d16617fd8a6c5e1}
+Name\-: read\-\_\-\-\_\-
+
+Synopsis\-: \hyperlink{struct_i_n_t_v_e_c_t_o_r}{I\-N\-T\-V\-E\-C\-T\-O\-R} $\ast$ \hyperlink{t__io_8h_a8ef4cbf9089e86751d16617fd8a6c5e1}{read\-\_\-intarray(\-F\-I\-L\-E $\ast$,short )};
+
+Version\-: 1.\-0
+
+Description\-: read\-\_\-$\ast$$\ast$ reads a data set of the specified type;
+
+Authors \& Date\-: Riccardo Rigon, September 1997
+
+F\-I\-L\-E\-: L\-I\-B\-R\-A\-R\-I\-E\-S/\-B\-A\-S\-I\-C\-S/t\-\_\-io.\-h, L\-I\-B\-R\-A\-R\-I\-E\-S/\-B\-A\-S\-I\-C\-S/t\-\_\-io.\-c
+
+Inputs\-: a pointer to a file
+
+Return\-: the structure read
+
+See Also\-: read\-\_\-comment, read\-\_\-header.
+
+Keywords\-: turtle file
+
+Examples\-: 1.\-example.\-c \hypertarget{t__io_8h_a6e26b3e58660fe77e7b19a49fb5037e1}{\index{t\-\_\-io.\-h@{t\-\_\-io.\-h}!read\-\_\-intbin@{read\-\_\-intbin}}
+\index{read\-\_\-intbin@{read\-\_\-intbin}!t_io.h@{t\-\_\-io.\-h}}
+\subsubsection[{read\-\_\-intbin}]{\setlength{\rightskip}{0pt plus 5cm}{\bf I\-N\-T\-B\-I\-N}$\ast$ read\-\_\-intbin (
+\begin{DoxyParamCaption}
+\item[{F\-I\-L\-E $\ast$}]{inputfile, }
+\item[{char $\ast$}]{mode, }
+\item[{short}]{print}
+\end{DoxyParamCaption}
+)}}\label{t__io_8h_a6e26b3e58660fe77e7b19a49fb5037e1}
+
+
+ 
+
+Definition at line 9254 of file t\-\_\-io.\-c.
+
+
+
+References E\-X\-T\-E\-R\-N\-A\-L\-\_\-\-F\-I\-L\-E, E\-X\-T\-E\-R\-N\-A\-L\-\_\-\-F\-I\-L\-E\-\_\-\-N\-A\-M\-E, E\-X\-T\-E\-R\-N\-A\-L\-\_\-\-F\-I\-L\-E\-\_\-\-P\-O\-S\-I\-T\-I\-O\-N, free\-\_\-header(), free\-\_\-longvector(), goto\-\_\-\-E\-O\-F(), longvectorcmp(), new\-\_\-intbin(), N\-O\-P\-R\-I\-N\-T, O\-L\-D\-\_\-\-N\-A\-M\-E, O\-P\-E\-N\-Y\-E\-S, print\-\_\-longvector\-\_\-elements(), query\-\_\-for\-\_\-label(), query\-\_\-for\-\_\-token(), read\-\_\-index(), read\-\_\-intbin\-\_\-elements(), read\-\_\-longarray(), skip\-\_\-whitespaces(), t\-\_\-error(), t\-\_\-fclose(), and t\-\_\-fopen().
+
+\hypertarget{t__io_8h_a86f5329c2b1c2bce87d1f3be0b92ae9d}{\index{t\-\_\-io.\-h@{t\-\_\-io.\-h}!read\-\_\-intbin\-\_\-elements@{read\-\_\-intbin\-\_\-elements}}
+\index{read\-\_\-intbin\-\_\-elements@{read\-\_\-intbin\-\_\-elements}!t_io.h@{t\-\_\-io.\-h}}
+\subsubsection[{read\-\_\-intbin\-\_\-elements}]{\setlength{\rightskip}{0pt plus 5cm}long read\-\_\-intbin\-\_\-elements (
+\begin{DoxyParamCaption}
+\item[{F\-I\-L\-E $\ast$}]{input, }
+\item[{{\bf I\-N\-T\-B\-I\-N} $\ast$}]{l, }
+\item[{char $\ast$}]{mode}
+\end{DoxyParamCaption}
+)}}\label{t__io_8h_a86f5329c2b1c2bce87d1f3be0b92ae9d}
+
+
+ 
+
+Definition at line 1874 of file t\-\_\-io.\-c.
+
+
+
+References co, L\-O\-N\-G\-V\-E\-C\-T\-O\-R\-::co, I\-N\-T\-B\-I\-N\-::co, I\-N\-T\-B\-I\-N\-::index, I\-N\-T\-B\-I\-N\-::isdynamic, and t\-\_\-error().
+
+
+
+Referenced by read\-\_\-intbin().
+
+\hypertarget{t__io_8h_a67caff289c73d5ac786cf2045b8d7479}{\index{t\-\_\-io.\-h@{t\-\_\-io.\-h}!read\-\_\-intmatrix@{read\-\_\-intmatrix}}
+\index{read\-\_\-intmatrix@{read\-\_\-intmatrix}!t_io.h@{t\-\_\-io.\-h}}
+\subsubsection[{read\-\_\-intmatrix}]{\setlength{\rightskip}{0pt plus 5cm}{\bf I\-N\-T\-M\-A\-T\-R\-I\-X}$\ast$ read\-\_\-intmatrix (
+\begin{DoxyParamCaption}
+\item[{F\-I\-L\-E $\ast$}]{inputfile, }
+\item[{char $\ast$}]{mode, }
+\item[{short}]{print}
+\end{DoxyParamCaption}
+)}}\label{t__io_8h_a67caff289c73d5ac786cf2045b8d7479}
+Name\-: read\-\_\-
+
+Synopsis\-:
+
+\hyperlink{struct_i_n_t_m_a_t_r_i_x}{I\-N\-T\-M\-A\-T\-R\-I\-X} $\ast$ \hyperlink{t__io_8h_a67caff289c73d5ac786cf2045b8d7479}{read\-\_\-intmatrix(\-F\-I\-L\-E $\ast$, char $\ast$,short )};
+
+Version\-: 1.\-0
+
+Description\-: read\-\_\-$\ast$ reads a data set of the specified type after having allocated an appropriate structure
+
+Authors \& Date\-: Riccardo Rigon, February, September 1997
+
+F\-I\-L\-E\-: L\-I\-B\-R\-A\-R\-I\-E\-S/\-B\-A\-S\-I\-C\-S/t\-\_\-io.\-h, L\-I\-B\-R\-A\-R\-I\-E\-S/\-B\-A\-S\-I\-C\-S/t\-\_\-io.\-c
+
+Inputs\-: a pointer to a file (F\-I\-L\-E) where the data are, the mode of reading and 1 if
+
+the header is going to be printed , 0 otherwise
+
+Return\-: the pointer to the appropriate structure where data are stored;
+
+See Also\-: read\-\_\-comment, read\-\_\-header.
+
+Keywords\-: turtle file
+
+Examples\-: 1.\-example.\-c
+
+
+
+ 
+
+Definition at line 8618 of file t\-\_\-io.\-c.
+
+
+
+References H\-E\-A\-D\-E\-R\-::category, H\-E\-A\-D\-E\-R\-::dimensions, E\-X\-T\-E\-R\-N\-A\-L\-\_\-\-F\-I\-L\-E, E\-X\-T\-E\-R\-N\-A\-L\-\_\-\-F\-I\-L\-E\-\_\-\-N\-A\-M\-E, E\-X\-T\-E\-R\-N\-A\-L\-\_\-\-F\-I\-L\-E\-\_\-\-P\-O\-S\-I\-T\-I\-O\-N, free\-\_\-header(), get\-\_\-phrase(), headercmp(), new\-\_\-intmatrix(), N\-O\-P\-R\-I\-N\-T, O\-L\-D\-\_\-\-N\-A\-M\-E, O\-P\-E\-N\-Y\-E\-S, print\-\_\-header(), query\-\_\-for\-\_\-token(), read\-\_\-index(), read\-\_\-intmatrix\-\_\-elements(), read\-\_\-matrixheader(), skip\-\_\-whitespaces(), t\-\_\-error(), t\-\_\-fclose(), t\-\_\-fopen(), and H\-E\-A\-D\-E\-R\-::type.
+
+\hypertarget{t__io_8h_a528fbd886c2c6df49536f38b5c2b9bd2}{\index{t\-\_\-io.\-h@{t\-\_\-io.\-h}!read\-\_\-intmatrix\-\_\-elements@{read\-\_\-intmatrix\-\_\-elements}}
+\index{read\-\_\-intmatrix\-\_\-elements@{read\-\_\-intmatrix\-\_\-elements}!t_io.h@{t\-\_\-io.\-h}}
+\subsubsection[{read\-\_\-intmatrix\-\_\-elements}]{\setlength{\rightskip}{0pt plus 5cm}long read\-\_\-intmatrix\-\_\-elements (
+\begin{DoxyParamCaption}
+\item[{F\-I\-L\-E $\ast$}]{input, }
+\item[{{\bf I\-N\-T\-M\-A\-T\-R\-I\-X} $\ast$}]{m, }
+\item[{char $\ast$}]{mode}
+\end{DoxyParamCaption}
+)}}\label{t__io_8h_a528fbd886c2c6df49536f38b5c2b9bd2}
+Read a matrix of int numbers 
+
+Definition at line 1180 of file t\-\_\-io.\-c.
+
+
+
+References I\-N\-T\-M\-A\-T\-R\-I\-X\-::co, I\-N\-T\-M\-A\-T\-R\-I\-X\-::isdynamic, I\-N\-T\-M\-A\-T\-R\-I\-X\-::nch, I\-N\-T\-M\-A\-T\-R\-I\-X\-::ncl, I\-N\-T\-M\-A\-T\-R\-I\-X\-::nrh, I\-N\-T\-M\-A\-T\-R\-I\-X\-::nrl, and t\-\_\-error().
+
+
+
+Referenced by read\-\_\-intmatrix().
+
+\hypertarget{t__io_8h_a2b9449c9488b71f09ccf8954b6f67454}{\index{t\-\_\-io.\-h@{t\-\_\-io.\-h}!read\-\_\-intvector@{read\-\_\-intvector}}
+\index{read\-\_\-intvector@{read\-\_\-intvector}!t_io.h@{t\-\_\-io.\-h}}
+\subsubsection[{read\-\_\-intvector}]{\setlength{\rightskip}{0pt plus 5cm}{\bf I\-N\-T\-V\-E\-C\-T\-O\-R}$\ast$ read\-\_\-intvector (
+\begin{DoxyParamCaption}
+\item[{F\-I\-L\-E $\ast$}]{inputfile, }
+\item[{char $\ast$}]{mode, }
+\item[{short}]{print}
+\end{DoxyParamCaption}
+)}}\label{t__io_8h_a2b9449c9488b71f09ccf8954b6f67454}
+
+
+ 
+
+Definition at line 7442 of file t\-\_\-io.\-c.
+
+
+
+References H\-E\-A\-D\-E\-R\-::category, H\-E\-A\-D\-E\-R\-::dimensions, E\-X\-T\-E\-R\-N\-A\-L\-\_\-\-F\-I\-L\-E, E\-X\-T\-E\-R\-N\-A\-L\-\_\-\-F\-I\-L\-E\-\_\-\-N\-A\-M\-E, E\-X\-T\-E\-R\-N\-A\-L\-\_\-\-F\-I\-L\-E\-\_\-\-P\-O\-S\-I\-T\-I\-O\-N, free\-\_\-header(), get\-\_\-phrase(), headercmp(), new\-\_\-intvector(), N\-O\-P\-R\-I\-N\-T, O\-L\-D\-\_\-\-N\-A\-M\-E, O\-P\-E\-N\-Y\-E\-S, print\-\_\-header(), query\-\_\-for\-\_\-token(), read\-\_\-index(), read\-\_\-intvector\-\_\-elements(), read\-\_\-vectorheader(), skip\-\_\-whitespaces(), t\-\_\-error(), t\-\_\-fclose(), t\-\_\-fopen(), and H\-E\-A\-D\-E\-R\-::type.
+
+\hypertarget{t__io_8h_ab95d20b910c6afe34939e61562facc7b}{\index{t\-\_\-io.\-h@{t\-\_\-io.\-h}!read\-\_\-intvector\-\_\-elements@{read\-\_\-intvector\-\_\-elements}}
+\index{read\-\_\-intvector\-\_\-elements@{read\-\_\-intvector\-\_\-elements}!t_io.h@{t\-\_\-io.\-h}}
+\subsubsection[{read\-\_\-intvector\-\_\-elements}]{\setlength{\rightskip}{0pt plus 5cm}long read\-\_\-intvector\-\_\-elements (
+\begin{DoxyParamCaption}
+\item[{F\-I\-L\-E $\ast$}]{input, }
+\item[{{\bf I\-N\-T\-V\-E\-C\-T\-O\-R} $\ast$}]{v, }
+\item[{char $\ast$}]{mode}
+\end{DoxyParamCaption}
+)}}\label{t__io_8h_ab95d20b910c6afe34939e61562facc7b}
+
+
+
+
+It reads a vector of short numbers and returns the number of elements read. Storage mode can be either ascii or binary. 
+
+Definition at line 249 of file t\-\_\-io.\-c.
+
+
+
+References I\-N\-T\-V\-E\-C\-T\-O\-R\-::co, I\-N\-T\-V\-E\-C\-T\-O\-R\-::isdynamic, I\-N\-T\-V\-E\-C\-T\-O\-R\-::nh, I\-N\-T\-V\-E\-C\-T\-O\-R\-::nl, and t\-\_\-error().
+
+
+
+Referenced by read\-\_\-intvector().
+
+\hypertarget{t__io_8h_ac1c1145055c1dc10663bb51be51990f8}{\index{t\-\_\-io.\-h@{t\-\_\-io.\-h}!read\-\_\-longarray@{read\-\_\-longarray}}
+\index{read\-\_\-longarray@{read\-\_\-longarray}!t_io.h@{t\-\_\-io.\-h}}
+\subsubsection[{read\-\_\-longarray}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\-O\-N\-G\-V\-E\-C\-T\-O\-R}$\ast$ read\-\_\-longarray (
+\begin{DoxyParamCaption}
+\item[{F\-I\-L\-E $\ast$}]{inputfile, }
+\item[{short}]{print}
+\end{DoxyParamCaption}
+)}}\label{t__io_8h_ac1c1145055c1dc10663bb51be51990f8}
+\subsubsection*{}
+
+Definition at line 5023 of file t\-\_\-io.\-c.
+
+
+
+References B\-U\-F\-F\-E\-R\-I\-N\-C\-R\-E\-M\-E\-N\-T, H\-E\-A\-D\-E\-R\-::category, L\-O\-N\-G\-V\-E\-C\-T\-O\-R\-::co, header\-\_\-scan(), M\-A\-X\-B\-U\-F\-F\-E\-R\-S\-I\-Z\-E, new\-\_\-longvector(), print\-\_\-header(), skip\-\_\-whitespaces(), t\-\_\-error(), and H\-E\-A\-D\-E\-R\-::type.
+
+
+
+Referenced by read\-\_\-doublebin(), read\-\_\-intbin(), read\-\_\-line\-\_\-indices(), read\-\_\-longbin(), and read\-\_\-shortbin().
+
+\hypertarget{t__io_8h_ac021ec836cdd82443f6a1ffc86a5117e}{\index{t\-\_\-io.\-h@{t\-\_\-io.\-h}!read\-\_\-longbin@{read\-\_\-longbin}}
+\index{read\-\_\-longbin@{read\-\_\-longbin}!t_io.h@{t\-\_\-io.\-h}}
+\subsubsection[{read\-\_\-longbin}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\-O\-N\-G\-B\-I\-N}$\ast$ read\-\_\-longbin (
+\begin{DoxyParamCaption}
+\item[{F\-I\-L\-E $\ast$}]{inputfile, }
+\item[{char $\ast$}]{mode, }
+\item[{short}]{print}
+\end{DoxyParamCaption}
+)}}\label{t__io_8h_ac021ec836cdd82443f6a1ffc86a5117e}
+
+
+ 
+
+Definition at line 9695 of file t\-\_\-io.\-c.
+
+
+
+References E\-X\-T\-E\-R\-N\-A\-L\-\_\-\-F\-I\-L\-E, E\-X\-T\-E\-R\-N\-A\-L\-\_\-\-F\-I\-L\-E\-\_\-\-N\-A\-M\-E, E\-X\-T\-E\-R\-N\-A\-L\-\_\-\-F\-I\-L\-E\-\_\-\-P\-O\-S\-I\-T\-I\-O\-N, free\-\_\-header(), free\-\_\-longvector(), longvectorcmp(), new\-\_\-longbin(), N\-O\-P\-R\-I\-N\-T, O\-L\-D\-\_\-\-N\-A\-M\-E, O\-P\-E\-N\-Y\-E\-S, print\-\_\-longvector\-\_\-elements(), query\-\_\-for\-\_\-label(), query\-\_\-for\-\_\-token(), read\-\_\-index(), read\-\_\-longarray(), read\-\_\-longbin\-\_\-elements(), skip\-\_\-whitespaces(), t\-\_\-error(), t\-\_\-fclose(), and t\-\_\-fopen().
+
+\hypertarget{t__io_8h_ac39cd493a85387946ac39d069e1ecb0b}{\index{t\-\_\-io.\-h@{t\-\_\-io.\-h}!read\-\_\-longbin\-\_\-elements@{read\-\_\-longbin\-\_\-elements}}
+\index{read\-\_\-longbin\-\_\-elements@{read\-\_\-longbin\-\_\-elements}!t_io.h@{t\-\_\-io.\-h}}
+\subsubsection[{read\-\_\-longbin\-\_\-elements}]{\setlength{\rightskip}{0pt plus 5cm}long read\-\_\-longbin\-\_\-elements (
+\begin{DoxyParamCaption}
+\item[{F\-I\-L\-E $\ast$}]{input, }
+\item[{{\bf L\-O\-N\-G\-B\-I\-N} $\ast$}]{l, }
+\item[{char $\ast$}]{mode}
+\end{DoxyParamCaption}
+)}}\label{t__io_8h_ac39cd493a85387946ac39d069e1ecb0b}
+
+
+ 
+
+Definition at line 2236 of file t\-\_\-io.\-c.
+
+
+
+References co, L\-O\-N\-G\-V\-E\-C\-T\-O\-R\-::co, L\-O\-N\-G\-B\-I\-N\-::co, L\-O\-N\-G\-B\-I\-N\-::index, L\-O\-N\-G\-B\-I\-N\-::isdynamic, and t\-\_\-error().
+
+
+
+Referenced by read\-\_\-longbin().
+
+\hypertarget{t__io_8h_a9de21613fa123db4c93747d8d21c067f}{\index{t\-\_\-io.\-h@{t\-\_\-io.\-h}!read\-\_\-longmatrix@{read\-\_\-longmatrix}}
+\index{read\-\_\-longmatrix@{read\-\_\-longmatrix}!t_io.h@{t\-\_\-io.\-h}}
+\subsubsection[{read\-\_\-longmatrix}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\-O\-N\-G\-M\-A\-T\-R\-I\-X}$\ast$ read\-\_\-longmatrix (
+\begin{DoxyParamCaption}
+\item[{F\-I\-L\-E $\ast$}]{inputfile, }
+\item[{char $\ast$}]{mode, }
+\item[{short}]{print}
+\end{DoxyParamCaption}
+)}}\label{t__io_8h_a9de21613fa123db4c93747d8d21c067f}
+
+
+ 
+
+Definition at line 8856 of file t\-\_\-io.\-c.
+
+
+
+References H\-E\-A\-D\-E\-R\-::category, H\-E\-A\-D\-E\-R\-::dimensions, E\-X\-T\-E\-R\-N\-A\-L\-\_\-\-F\-I\-L\-E, E\-X\-T\-E\-R\-N\-A\-L\-\_\-\-F\-I\-L\-E\-\_\-\-N\-A\-M\-E, E\-X\-T\-E\-R\-N\-A\-L\-\_\-\-F\-I\-L\-E\-\_\-\-P\-O\-S\-I\-T\-I\-O\-N, free\-\_\-header(), get\-\_\-phrase(), headercmp(), new\-\_\-longmatrix(), N\-O\-P\-R\-I\-N\-T, O\-L\-D\-\_\-\-N\-A\-M\-E, O\-P\-E\-N\-Y\-E\-S, print\-\_\-header(), query\-\_\-for\-\_\-token(), read\-\_\-index(), read\-\_\-longmatrix\-\_\-elements(), read\-\_\-matrixheader(), skip\-\_\-whitespaces(), t\-\_\-error(), t\-\_\-fclose(), t\-\_\-fopen(), and H\-E\-A\-D\-E\-R\-::type.
+
+
+
+Referenced by read\-\_\-fine\-\_\-indices().
+
+\hypertarget{t__io_8h_acf6e35d53e099b5b828c16cadb234048}{\index{t\-\_\-io.\-h@{t\-\_\-io.\-h}!read\-\_\-longmatrix\-\_\-elements@{read\-\_\-longmatrix\-\_\-elements}}
+\index{read\-\_\-longmatrix\-\_\-elements@{read\-\_\-longmatrix\-\_\-elements}!t_io.h@{t\-\_\-io.\-h}}
+\subsubsection[{read\-\_\-longmatrix\-\_\-elements}]{\setlength{\rightskip}{0pt plus 5cm}long read\-\_\-longmatrix\-\_\-elements (
+\begin{DoxyParamCaption}
+\item[{F\-I\-L\-E $\ast$}]{input, }
+\item[{{\bf L\-O\-N\-G\-M\-A\-T\-R\-I\-X} $\ast$}]{m, }
+\item[{char $\ast$}]{mode}
+\end{DoxyParamCaption}
+)}}\label{t__io_8h_acf6e35d53e099b5b828c16cadb234048}
+Read a matrix of long point numbers 
+
+Definition at line 1354 of file t\-\_\-io.\-c.
+
+
+
+References L\-O\-N\-G\-M\-A\-T\-R\-I\-X\-::co, L\-O\-N\-G\-M\-A\-T\-R\-I\-X\-::isdynamic, L\-O\-N\-G\-M\-A\-T\-R\-I\-X\-::nch, L\-O\-N\-G\-M\-A\-T\-R\-I\-X\-::ncl, L\-O\-N\-G\-M\-A\-T\-R\-I\-X\-::nrh, L\-O\-N\-G\-M\-A\-T\-R\-I\-X\-::nrl, and t\-\_\-error().
+
+
+
+Referenced by read\-\_\-longmatrix().
+
+\hypertarget{t__io_8h_a824624872e25543a6cdac128352f25bd}{\index{t\-\_\-io.\-h@{t\-\_\-io.\-h}!read\-\_\-longvector@{read\-\_\-longvector}}
+\index{read\-\_\-longvector@{read\-\_\-longvector}!t_io.h@{t\-\_\-io.\-h}}
+\subsubsection[{read\-\_\-longvector}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\-O\-N\-G\-V\-E\-C\-T\-O\-R}$\ast$ read\-\_\-longvector (
+\begin{DoxyParamCaption}
+\item[{F\-I\-L\-E $\ast$}]{inputfile, }
+\item[{char $\ast$}]{mode, }
+\item[{short}]{print}
+\end{DoxyParamCaption}
+)}}\label{t__io_8h_a824624872e25543a6cdac128352f25bd}
+
+
+ 
+
+Definition at line 7668 of file t\-\_\-io.\-c.
+
+
+
+References H\-E\-A\-D\-E\-R\-::category, H\-E\-A\-D\-E\-R\-::dimensions, E\-X\-T\-E\-R\-N\-A\-L\-\_\-\-F\-I\-L\-E, E\-X\-T\-E\-R\-N\-A\-L\-\_\-\-F\-I\-L\-E\-\_\-\-N\-A\-M\-E, E\-X\-T\-E\-R\-N\-A\-L\-\_\-\-F\-I\-L\-E\-\_\-\-P\-O\-S\-I\-T\-I\-O\-N, free\-\_\-header(), get\-\_\-phrase(), headercmp(), new\-\_\-longvector(), N\-O\-P\-R\-I\-N\-T, O\-L\-D\-\_\-\-N\-A\-M\-E, O\-P\-E\-N\-Y\-E\-S, print\-\_\-header(), query\-\_\-for\-\_\-token(), read\-\_\-index(), read\-\_\-longvector\-\_\-elements(), read\-\_\-vectorheader(), skip\-\_\-whitespaces(), t\-\_\-error(), t\-\_\-fclose(), t\-\_\-fopen(), and H\-E\-A\-D\-E\-R\-::type.
+
+\hypertarget{t__io_8h_ac953d890a7035bf587c32d86e04c2c2c}{\index{t\-\_\-io.\-h@{t\-\_\-io.\-h}!read\-\_\-longvector\-\_\-elements@{read\-\_\-longvector\-\_\-elements}}
+\index{read\-\_\-longvector\-\_\-elements@{read\-\_\-longvector\-\_\-elements}!t_io.h@{t\-\_\-io.\-h}}
+\subsubsection[{read\-\_\-longvector\-\_\-elements}]{\setlength{\rightskip}{0pt plus 5cm}long read\-\_\-longvector\-\_\-elements (
+\begin{DoxyParamCaption}
+\item[{F\-I\-L\-E $\ast$}]{input, }
+\item[{{\bf L\-O\-N\-G\-V\-E\-C\-T\-O\-R} $\ast$}]{v, }
+\item[{char $\ast$}]{mode}
+\end{DoxyParamCaption}
+)}}\label{t__io_8h_ac953d890a7035bf587c32d86e04c2c2c}
+
+
+
+
+It reads a vector of long numbers and returns the number of elements read. Storage mode can be either ascii or binary. 
+
+Definition at line 402 of file t\-\_\-io.\-c.
+
+
+
+References L\-O\-N\-G\-V\-E\-C\-T\-O\-R\-::co, L\-O\-N\-G\-V\-E\-C\-T\-O\-R\-::isdynamic, L\-O\-N\-G\-V\-E\-C\-T\-O\-R\-::nh, L\-O\-N\-G\-V\-E\-C\-T\-O\-R\-::nl, and t\-\_\-error().
+
+
+
+Referenced by read\-\_\-longvector().
+
+\hypertarget{t__io_8h_a1ca5b418226c0a9c730189767092f708}{\index{t\-\_\-io.\-h@{t\-\_\-io.\-h}!read\-\_\-matrixheader@{read\-\_\-matrixheader}}
+\index{read\-\_\-matrixheader@{read\-\_\-matrixheader}!t_io.h@{t\-\_\-io.\-h}}
+\subsubsection[{read\-\_\-matrixheader}]{\setlength{\rightskip}{0pt plus 5cm}void read\-\_\-matrixheader (
+\begin{DoxyParamCaption}
+\item[{F\-I\-L\-E $\ast$}]{inputfile, }
+\item[{{\bf H\-E\-A\-D\-E\-R} $\ast$}]{h}
+\end{DoxyParamCaption}
+)}}\label{t__io_8h_a1ca5b418226c0a9c730189767092f708}
+Name\-: read\-\_\-header, read\-\_\-matrix\-\_\-header,read\-\_\-vector\-\_\-header
+
+Version\-: 1.\-0
+
+Synopsis\-:
+
+Description\-: read a vector, matrix or generic header
+
+Authors \& Date\-: Riccardo Rigon, September 1997
+
+F\-I\-L\-E\-: L\-I\-B\-R\-A\-R\-I\-E\-S/\-B\-A\-S\-I\-C\-S/t\-\_\-io.\-h, L\-I\-B\-R\-A\-R\-I\-E\-S/\-B\-A\-S\-I\-C\-S/t\-\_\-io.\-c
+
+Inputs\-: the pointer to the file where the header is stored
+
+and the pointer to the \hyperlink{struct_h_e_a_d_e_r}{H\-E\-A\-D\-E\-R} variable where to write read information
+
+Keywords\-: turtle file
+
+Examples\-: 1.\-example.\-c
+
+See also\-: ../\-H\-A\-N\-D\-M\-A\-D\-E/\-Turtle\-File
+
+
+
+ 
+
+Definition at line 6885 of file t\-\_\-io.\-c.
+
+
+
+References H\-E\-A\-D\-E\-R\-::dimensions, header\-\_\-scan(), skip\-\_\-whitespaces(), and t\-\_\-error().
+
+
+
+Referenced by justread\-\_\-floatmatrix(), read\-\_\-doublematrix(), read\-\_\-doubletensor(), read\-\_\-floatmatrix(), read\-\_\-intmatrix(), read\-\_\-longmatrix(), and read\-\_\-shortmatrix().
+
+\hypertarget{t__io_8h_ad25d6bcf3c91c0444ccac32a8b1e096e}{\index{t\-\_\-io.\-h@{t\-\_\-io.\-h}!read\-\_\-parameters@{read\-\_\-parameters}}
+\index{read\-\_\-parameters@{read\-\_\-parameters}!t_io.h@{t\-\_\-io.\-h}}
+\subsubsection[{read\-\_\-parameters}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R}$\ast$ read\-\_\-parameters (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{working\-\_\-directory, }
+\item[{char $\ast$}]{program, }
+\item[{char $\ast$}]{extension, }
+\item[{char $\ast$}]{position}
+\end{DoxyParamCaption}
+)}}\label{t__io_8h_ad25d6bcf3c91c0444ccac32a8b1e096e}
+
+
+ 
+
+Definition at line 3255 of file t\-\_\-io.\-c.
+
+
+
+References join\-\_\-strings(), N\-O\-P\-R\-I\-N\-T, read\-\_\-doublearray(), simplefind(), and t\-\_\-error().
+
+\hypertarget{t__io_8h_ab0fc64c8db0e0d689c5edbed7239dfe7}{\index{t\-\_\-io.\-h@{t\-\_\-io.\-h}!read\-\_\-plane\-\_\-strings@{read\-\_\-plane\-\_\-strings}}
+\index{read\-\_\-plane\-\_\-strings@{read\-\_\-plane\-\_\-strings}!t_io.h@{t\-\_\-io.\-h}}
+\subsubsection[{read\-\_\-plane\-\_\-strings}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\-T\-R\-I\-N\-G\-B\-I\-N}$\ast$ read\-\_\-plane\-\_\-strings (
+\begin{DoxyParamCaption}
+\item[{F\-I\-L\-E $\ast$}]{inputfile, }
+\item[{long}]{length, }
+\item[{long}]{maxbuffersize}
+\end{DoxyParamCaption}
+)}}\label{t__io_8h_ab0fc64c8db0e0d689c5edbed7239dfe7}
+
+
+ 
+
+Definition at line 2602 of file t\-\_\-io.\-c.
+
+
+
+References B\-U\-F\-F\-E\-R\-I\-N\-C\-R\-E\-M\-E\-N\-T, L\-O\-N\-G\-V\-E\-C\-T\-O\-R\-::co, copy\-\_\-buffer\-\_\-into\-\_\-stringbin(), free\-\_\-longvector(), new\-\_\-longvector(), new\-\_\-stringbin(), L\-O\-N\-G\-V\-E\-C\-T\-O\-R\-::nh, skip\-\_\-whitespaces(), and t\-\_\-error().
+
+\hypertarget{t__io_8h_a33dcb185e0fd9fd9dcbfa7cf6cbaea66}{\index{t\-\_\-io.\-h@{t\-\_\-io.\-h}!read\-\_\-shortarray@{read\-\_\-shortarray}}
+\index{read\-\_\-shortarray@{read\-\_\-shortarray}!t_io.h@{t\-\_\-io.\-h}}
+\subsubsection[{read\-\_\-shortarray}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\-H\-O\-R\-T\-V\-E\-C\-T\-O\-R}$\ast$ read\-\_\-shortarray (
+\begin{DoxyParamCaption}
+\item[{F\-I\-L\-E $\ast$}]{inputfile, }
+\item[{short}]{print}
+\end{DoxyParamCaption}
+)}}\label{t__io_8h_a33dcb185e0fd9fd9dcbfa7cf6cbaea66}
+
+
+ 
+
+Definition at line 5987 of file t\-\_\-io.\-c.
+
+
+
+References B\-U\-F\-F\-E\-R\-I\-N\-C\-R\-E\-M\-E\-N\-T, H\-E\-A\-D\-E\-R\-::category, S\-H\-O\-R\-T\-V\-E\-C\-T\-O\-R\-::co, header\-\_\-scan(), M\-A\-X\-B\-U\-F\-F\-E\-R\-S\-I\-Z\-E, new\-\_\-shortvector(), print\-\_\-header(), skip\-\_\-whitespaces(), t\-\_\-error(), and H\-E\-A\-D\-E\-R\-::type.
+
+\hypertarget{t__io_8h_a857892a4f5abc06c53c68614c7fd597c}{\index{t\-\_\-io.\-h@{t\-\_\-io.\-h}!read\-\_\-shortbin@{read\-\_\-shortbin}}
+\index{read\-\_\-shortbin@{read\-\_\-shortbin}!t_io.h@{t\-\_\-io.\-h}}
+\subsubsection[{read\-\_\-shortbin}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\-H\-O\-R\-T\-B\-I\-N}$\ast$ read\-\_\-shortbin (
+\begin{DoxyParamCaption}
+\item[{F\-I\-L\-E $\ast$}]{inputfile, }
+\item[{char $\ast$}]{mode, }
+\item[{short}]{print}
+\end{DoxyParamCaption}
+)}}\label{t__io_8h_a857892a4f5abc06c53c68614c7fd597c}
+
+
+ 
+
+Definition at line 9472 of file t\-\_\-io.\-c.
+
+
+
+References E\-X\-T\-E\-R\-N\-A\-L\-\_\-\-F\-I\-L\-E, E\-X\-T\-E\-R\-N\-A\-L\-\_\-\-F\-I\-L\-E\-\_\-\-N\-A\-M\-E, E\-X\-T\-E\-R\-N\-A\-L\-\_\-\-F\-I\-L\-E\-\_\-\-P\-O\-S\-I\-T\-I\-O\-N, free\-\_\-header(), free\-\_\-longvector(), longvectorcmp(), new\-\_\-shortbin(), N\-O\-P\-R\-I\-N\-T, O\-L\-D\-\_\-\-N\-A\-M\-E, O\-P\-E\-N\-Y\-E\-S, print\-\_\-longvector\-\_\-elements(), query\-\_\-for\-\_\-label(), query\-\_\-for\-\_\-token(), read\-\_\-index(), read\-\_\-longarray(), read\-\_\-shortbin\-\_\-elements(), skip\-\_\-whitespaces(), t\-\_\-error(), t\-\_\-fclose(), and t\-\_\-fopen().
+
+\hypertarget{t__io_8h_a9de6dd4dc78b22f70b08a57d76e123dc}{\index{t\-\_\-io.\-h@{t\-\_\-io.\-h}!read\-\_\-shortbin\-\_\-elements@{read\-\_\-shortbin\-\_\-elements}}
+\index{read\-\_\-shortbin\-\_\-elements@{read\-\_\-shortbin\-\_\-elements}!t_io.h@{t\-\_\-io.\-h}}
+\subsubsection[{read\-\_\-shortbin\-\_\-elements}]{\setlength{\rightskip}{0pt plus 5cm}long read\-\_\-shortbin\-\_\-elements (
+\begin{DoxyParamCaption}
+\item[{F\-I\-L\-E $\ast$}]{input, }
+\item[{{\bf S\-H\-O\-R\-T\-B\-I\-N} $\ast$}]{l, }
+\item[{char $\ast$}]{mode}
+\end{DoxyParamCaption}
+)}}\label{t__io_8h_a9de6dd4dc78b22f70b08a57d76e123dc}
+
+
+ 
+
+Definition at line 2055 of file t\-\_\-io.\-c.
+
+
+
+References co, L\-O\-N\-G\-V\-E\-C\-T\-O\-R\-::co, S\-H\-O\-R\-T\-B\-I\-N\-::co, S\-H\-O\-R\-T\-B\-I\-N\-::index, S\-H\-O\-R\-T\-B\-I\-N\-::isdynamic, and t\-\_\-error().
+
+
+
+Referenced by read\-\_\-shortbin().
+
+\hypertarget{t__io_8h_a2741f9d76718f3f321fffb568046f05c}{\index{t\-\_\-io.\-h@{t\-\_\-io.\-h}!read\-\_\-shortmatrix@{read\-\_\-shortmatrix}}
+\index{read\-\_\-shortmatrix@{read\-\_\-shortmatrix}!t_io.h@{t\-\_\-io.\-h}}
+\subsubsection[{read\-\_\-shortmatrix}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\-H\-O\-R\-T\-M\-A\-T\-R\-I\-X}$\ast$ read\-\_\-shortmatrix (
+\begin{DoxyParamCaption}
+\item[{F\-I\-L\-E $\ast$}]{inputfile, }
+\item[{char $\ast$}]{mode, }
+\item[{short}]{print}
+\end{DoxyParamCaption}
+)}}\label{t__io_8h_a2741f9d76718f3f321fffb568046f05c}
+
+
+ 
+
+Definition at line 8374 of file t\-\_\-io.\-c.
+
+
+
+References H\-E\-A\-D\-E\-R\-::category, H\-E\-A\-D\-E\-R\-::dimensions, E\-X\-T\-E\-R\-N\-A\-L\-\_\-\-F\-I\-L\-E, E\-X\-T\-E\-R\-N\-A\-L\-\_\-\-F\-I\-L\-E\-\_\-\-N\-A\-M\-E, E\-X\-T\-E\-R\-N\-A\-L\-\_\-\-F\-I\-L\-E\-\_\-\-P\-O\-S\-I\-T\-I\-O\-N, free\-\_\-header(), get\-\_\-phrase(), headercmp(), new\-\_\-shortmatrix(), N\-O\-P\-R\-I\-N\-T, O\-L\-D\-\_\-\-N\-A\-M\-E, O\-P\-E\-N\-Y\-E\-S, print\-\_\-header(), query\-\_\-for\-\_\-token(), read\-\_\-index(), read\-\_\-matrixheader(), read\-\_\-shortmatrix\-\_\-elements(), skip\-\_\-whitespaces(), t\-\_\-error(), t\-\_\-fclose(), t\-\_\-fopen(), and H\-E\-A\-D\-E\-R\-::type.
+
+\hypertarget{t__io_8h_adb04571936b771adb2554c2289cd63e3}{\index{t\-\_\-io.\-h@{t\-\_\-io.\-h}!read\-\_\-shortmatrix\-\_\-elements@{read\-\_\-shortmatrix\-\_\-elements}}
+\index{read\-\_\-shortmatrix\-\_\-elements@{read\-\_\-shortmatrix\-\_\-elements}!t_io.h@{t\-\_\-io.\-h}}
+\subsubsection[{read\-\_\-shortmatrix\-\_\-elements}]{\setlength{\rightskip}{0pt plus 5cm}long read\-\_\-shortmatrix\-\_\-elements (
+\begin{DoxyParamCaption}
+\item[{F\-I\-L\-E $\ast$}]{input, }
+\item[{{\bf S\-H\-O\-R\-T\-M\-A\-T\-R\-I\-X} $\ast$}]{m, }
+\item[{char $\ast$}]{mode}
+\end{DoxyParamCaption}
+)}}\label{t__io_8h_adb04571936b771adb2554c2289cd63e3}
+
+
+
+
+Matrixes 
+
+ Read a matrix of short numbers 
+
+Definition at line 1010 of file t\-\_\-io.\-c.
+
+
+
+References S\-H\-O\-R\-T\-M\-A\-T\-R\-I\-X\-::co, S\-H\-O\-R\-T\-M\-A\-T\-R\-I\-X\-::isdynamic, S\-H\-O\-R\-T\-M\-A\-T\-R\-I\-X\-::nch, S\-H\-O\-R\-T\-M\-A\-T\-R\-I\-X\-::ncl, S\-H\-O\-R\-T\-M\-A\-T\-R\-I\-X\-::nrh, S\-H\-O\-R\-T\-M\-A\-T\-R\-I\-X\-::nrl, and t\-\_\-error().
+
+
+
+Referenced by read\-\_\-shortmatrix().
+
+\hypertarget{t__io_8h_a41d6c7c53132068dacb3cdb753b67e47}{\index{t\-\_\-io.\-h@{t\-\_\-io.\-h}!read\-\_\-shortvector@{read\-\_\-shortvector}}
+\index{read\-\_\-shortvector@{read\-\_\-shortvector}!t_io.h@{t\-\_\-io.\-h}}
+\subsubsection[{read\-\_\-shortvector}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\-H\-O\-R\-T\-V\-E\-C\-T\-O\-R}$\ast$ read\-\_\-shortvector (
+\begin{DoxyParamCaption}
+\item[{F\-I\-L\-E $\ast$}]{inputfile, }
+\item[{char $\ast$}]{mode, }
+\item[{short}]{print}
+\end{DoxyParamCaption}
+)}}\label{t__io_8h_a41d6c7c53132068dacb3cdb753b67e47}
+
+
+ 
+
+Definition at line 7214 of file t\-\_\-io.\-c.
+
+
+
+References H\-E\-A\-D\-E\-R\-::category, H\-E\-A\-D\-E\-R\-::dimensions, E\-X\-T\-E\-R\-N\-A\-L\-\_\-\-F\-I\-L\-E, E\-X\-T\-E\-R\-N\-A\-L\-\_\-\-F\-I\-L\-E\-\_\-\-N\-A\-M\-E, E\-X\-T\-E\-R\-N\-A\-L\-\_\-\-F\-I\-L\-E\-\_\-\-P\-O\-S\-I\-T\-I\-O\-N, free\-\_\-header(), get\-\_\-phrase(), headercmp(), new\-\_\-shortvector(), N\-O\-P\-R\-I\-N\-T, O\-L\-D\-\_\-\-N\-A\-M\-E, O\-P\-E\-N\-Y\-E\-S, print\-\_\-header(), query\-\_\-for\-\_\-token(), read\-\_\-index(), read\-\_\-shortvector\-\_\-elements(), read\-\_\-vectorheader(), skip\-\_\-whitespaces(), t\-\_\-error(), t\-\_\-fclose(), t\-\_\-fopen(), and H\-E\-A\-D\-E\-R\-::type.
+
+\hypertarget{t__io_8h_aff0725389a5de36e92951c173fe7f1a8}{\index{t\-\_\-io.\-h@{t\-\_\-io.\-h}!read\-\_\-shortvector\-\_\-elements@{read\-\_\-shortvector\-\_\-elements}}
+\index{read\-\_\-shortvector\-\_\-elements@{read\-\_\-shortvector\-\_\-elements}!t_io.h@{t\-\_\-io.\-h}}
+\subsubsection[{read\-\_\-shortvector\-\_\-elements}]{\setlength{\rightskip}{0pt plus 5cm}long read\-\_\-shortvector\-\_\-elements (
+\begin{DoxyParamCaption}
+\item[{F\-I\-L\-E $\ast$}]{input, }
+\item[{{\bf S\-H\-O\-R\-T\-V\-E\-C\-T\-O\-R} $\ast$}]{v, }
+\item[{char $\ast$}]{mode}
+\end{DoxyParamCaption}
+)}}\label{t__io_8h_aff0725389a5de36e92951c173fe7f1a8}
+Name\-: read\-\_\-, write\-\_\-\-\_\-elements, binarywrite\-\_\-\-\_\-elements.
+
+Version\-: 1.\-0
+
+Synopsis\-:
+
+long \hyperlink{t__io_8h_aff0725389a5de36e92951c173fe7f1a8}{read\-\_\-shortvector\-\_\-elements(\-F\-I\-L\-E $\ast$  ,\-S\-H\-O\-R\-T\-V\-E\-C\-T\-O\-R $\ast$,char $\ast$)};
+
+long \hyperlink{t__io_8h_a2e868fdf466df97998c019215b1fd723}{write\-\_\-shortvector\-\_\-elements(\-F\-I\-L\-E $\ast$,\-S\-H\-O\-R\-T\-V\-E\-C\-T\-O\-R $\ast$,long )};
+
+long \hyperlink{t__io_8h_ad66c799a25a1d6e094690bbbc3580c00}{binarywrite\-\_\-shortvector\-\_\-elements(\-F\-I\-L\-E $\ast$,\-S\-H\-O\-R\-T\-V\-E\-C\-T\-O\-R $\ast$)};
+
+void \hyperlink{t__io_8h_ad1e21d370ada69d4c0d3ca4007c3db55}{print\-\_\-shortvector\-\_\-elements(\-S\-H\-O\-R\-T\-V\-E\-C\-T\-O\-R $\ast$,long )};
+
+Description\-: For each data type four functions are given\-: 1) read\-\_\-$\ast$ to
+
+read (both in ascii or binary format) the elements of a vector, matrix or bin,
+
+from the specified F\-I\-L\-E stream; 2) write\-\_\-$\ast$ to write it on the specified file;
+
+3) binarywrite\-\_\-$\ast$ to write in binary format and 4) print\-\_\-$\ast$ to print it on the screen.
+
+Using \char`\"{}long\char`\"{} as a return value obviosly limits the size of the vector and matrixes used.
+
+A better choice would have been size\-\_\-t but this prevents to have returned
+
+negative numbers that are used to handle the errors. Thus, use of size\-\_\-t would require
+
+a rewriting of the error handling part of the routines. Also, one could observe that, in the
+
+case of matrixes, the total number of elements (rows times columns) must be limited to
+
+the maximum of long, say M\-A\-X\-\_\-\-L\-O\-N\-G, in order to have correct return values even if one could theoretically
+
+allocate matrixes of size M\-A\-X\-\_\-\-L\-O\-N\-G$\ast$\-M\-A\-X\-\_\-\-L\-O\-N\-G.
+
+Authors \& Date\-: Riccardo Rigon, February 1997, April 1997
+
+F\-I\-L\-E\-: L\-I\-B\-R\-A\-R\-I\-E\-S/\-B\-A\-S\-I\-C\-S/t\-\_\-io.\-h, L\-I\-B\-R\-A\-R\-I\-E\-S/\-B\-A\-S\-I\-C\-S/t\-\_\-io.\-c
+
+Inputs\-: read\-\_\- \-: The pointer to the opened file stream F\-I\-L\-E $\ast$, the pointer to the structure
+
+were the data are going to be allocated and the mode in which the data are read (\char`\"{}a\char`\"{}
+
+for ascii and \char`\"{}b\char`\"{} for binary).
+
+write\-\_\-\-: The pointer to the file were the data are going to be write, the pointer to
+
+the structure were they are actually allocated, the number of columns of the output.
+
+binarywrite\-\_\-$\ast$\-:The pointer to the file were the data are going to be write, the pointer to
+
+the structure were they are actually allocated.
+
+print\-\_\- \-: the pointer to the file and the maximum number of data to be printed
+
+on the same row.
+
+Return\-: read\-\_\-, write\-\_\-, binarywrite\-\_\-\-: a long indicating the number of elements read/written. A negative long is
+
+returned if some error is encountered in reading/writing. print\-\_\- returns a void.
+
+In the case of reading a S\-T\-R\-I\-N\-G\-B\-I\-N or array, a pointer to S\-T\-R\-I\-N\-G\-B\-I\-N
+
+is returned.
+
+Examples\-: 1.\-examples.\-c, 2.\-examples.\-c
+
+References\-:
+
+
+
+
+
+It reads a vector of short numbers and returns the number of elements read. Storage mode can be either ascii or binary. 
+
+Definition at line 100 of file t\-\_\-io.\-c.
+
+
+
+References S\-H\-O\-R\-T\-V\-E\-C\-T\-O\-R\-::co, S\-H\-O\-R\-T\-V\-E\-C\-T\-O\-R\-::isdynamic, S\-H\-O\-R\-T\-V\-E\-C\-T\-O\-R\-::nh, S\-H\-O\-R\-T\-V\-E\-C\-T\-O\-R\-::nl, and t\-\_\-error().
+
+
+
+Referenced by read\-\_\-shortvector().
+
+\hypertarget{t__io_8h_af7341003e3ce1677ef92f6dc646f9f03}{\index{t\-\_\-io.\-h@{t\-\_\-io.\-h}!read\-\_\-stringarray@{read\-\_\-stringarray}}
+\index{read\-\_\-stringarray@{read\-\_\-stringarray}!t_io.h@{t\-\_\-io.\-h}}
+\subsubsection[{read\-\_\-stringarray}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\-T\-R\-I\-N\-G\-B\-I\-N}$\ast$ read\-\_\-stringarray (
+\begin{DoxyParamCaption}
+\item[{F\-I\-L\-E $\ast$}]{inputfile, }
+\item[{short}]{print}
+\end{DoxyParamCaption}
+)}}\label{t__io_8h_af7341003e3ce1677ef92f6dc646f9f03}
+
+
+ 
+
+Definition at line 6090 of file t\-\_\-io.\-c.
+
+
+
+References B\-U\-F\-F\-E\-R\-I\-N\-C\-R\-E\-M\-E\-N\-T, H\-E\-A\-D\-E\-R\-::category, co, L\-O\-N\-G\-V\-E\-C\-T\-O\-R\-::co, st\-::co, free\-\_\-header(), header\-\_\-scan(), st\-::index, M\-A\-X\-B\-U\-F\-F\-E\-R\-S\-I\-Z\-E, new\-\_\-longvector(), new\-\_\-stringbin(), print\-\_\-header(), skip\-\_\-whitespaces(), t\-\_\-error(), and H\-E\-A\-D\-E\-R\-::type.
+
+
+
+Referenced by get\-\_\-filename(), get\-\_\-s\-\_\-times(), get\-\_\-strings(), read\-\_\-filenames(), and read\-\_\-keywords().
+
+\hypertarget{t__io_8h_ae8f8b4cf39a481636bf878091908e4a9}{\index{t\-\_\-io.\-h@{t\-\_\-io.\-h}!read\-\_\-tensorheader@{read\-\_\-tensorheader}}
+\index{read\-\_\-tensorheader@{read\-\_\-tensorheader}!t_io.h@{t\-\_\-io.\-h}}
+\subsubsection[{read\-\_\-tensorheader}]{\setlength{\rightskip}{0pt plus 5cm}void read\-\_\-tensorheader (
+\begin{DoxyParamCaption}
+\item[{F\-I\-L\-E $\ast$}]{inputfile, }
+\item[{{\bf H\-E\-A\-D\-E\-R} $\ast$}]{h}
+\end{DoxyParamCaption}
+)}}\label{t__io_8h_ae8f8b4cf39a481636bf878091908e4a9}
+
+
+ 
+
+Definition at line 11145 of file t\-\_\-io.\-c.
+
+
+
+References H\-E\-A\-D\-E\-R\-::dimensions, header\-\_\-scan(), skip\-\_\-whitespaces(), and t\-\_\-error().
+
+
+
+Referenced by read\-\_\-doubletensor().
+
+\hypertarget{t__io_8h_a5c75bc989aeb5b0eddcd6ce74a5482c7}{\index{t\-\_\-io.\-h@{t\-\_\-io.\-h}!read\-\_\-vectorheader@{read\-\_\-vectorheader}}
+\index{read\-\_\-vectorheader@{read\-\_\-vectorheader}!t_io.h@{t\-\_\-io.\-h}}
+\subsubsection[{read\-\_\-vectorheader}]{\setlength{\rightskip}{0pt plus 5cm}void read\-\_\-vectorheader (
+\begin{DoxyParamCaption}
+\item[{F\-I\-L\-E $\ast$}]{inputfile, }
+\item[{{\bf H\-E\-A\-D\-E\-R} $\ast$}]{h}
+\end{DoxyParamCaption}
+)}}\label{t__io_8h_a5c75bc989aeb5b0eddcd6ce74a5482c7}
+
+
+ 
+
+Definition at line 6769 of file t\-\_\-io.\-c.
+
+
+
+References H\-E\-A\-D\-E\-R\-::dimensions, header\-\_\-scan(), skip\-\_\-whitespaces(), and t\-\_\-error().
+
+
+
+Referenced by read\-\_\-charvector(), read\-\_\-doublevector(), read\-\_\-floatvector(), read\-\_\-intvector(), read\-\_\-longvector(), and read\-\_\-shortvector().
+
+\hypertarget{t__io_8h_a4c30105b9e730f23f768976c4d01bb24}{\index{t\-\_\-io.\-h@{t\-\_\-io.\-h}!readandstore\-\_\-comment@{readandstore\-\_\-comment}}
+\index{readandstore\-\_\-comment@{readandstore\-\_\-comment}!t_io.h@{t\-\_\-io.\-h}}
+\subsubsection[{readandstore\-\_\-comment}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ readandstore\-\_\-comment (
+\begin{DoxyParamCaption}
+\item[{F\-I\-L\-E $\ast$}]{inputfile, }
+\item[{int}]{opt, }
+\item[{long}]{maxbuffersize}
+\end{DoxyParamCaption}
+)}}\label{t__io_8h_a4c30105b9e730f23f768976c4d01bb24}
+
+
+ 
+
+Definition at line 3921 of file t\-\_\-io.\-c.
+
+
+
+References B\-U\-F\-F\-E\-R\-I\-N\-C\-R\-E\-M\-E\-N\-T, iscomment(), and t\-\_\-error().
+
+\hypertarget{t__io_8h_aa45fc8812027f06334e8fe196d7ba63b}{\index{t\-\_\-io.\-h@{t\-\_\-io.\-h}!skip\-\_\-whitespaces@{skip\-\_\-whitespaces}}
+\index{skip\-\_\-whitespaces@{skip\-\_\-whitespaces}!t_io.h@{t\-\_\-io.\-h}}
+\subsubsection[{skip\-\_\-whitespaces}]{\setlength{\rightskip}{0pt plus 5cm}void skip\-\_\-whitespaces (
+\begin{DoxyParamCaption}
+\item[{F\-I\-L\-E $\ast$}]{inputfile}
+\end{DoxyParamCaption}
+)}}\label{t__io_8h_aa45fc8812027f06334e8fe196d7ba63b}
+Name\-: skip\-\_\-whitespaces
+
+Version\-: 1.\-0
+
+Synopsis\-: void \hyperlink{t__io_8h_aa45fc8812027f06334e8fe196d7ba63b}{skip\-\_\-whitespaces(\-F\-I\-L\-E $\ast$)};
+
+Description\-: skips the whitespaces in a file and exits when a
+
+normal character is found. White spaces are defined by the standard C routine isspace
+
+F\-I\-L\-E\-: L\-I\-B\-R\-A\-R\-I\-E\-S/\-B\-A\-S\-I\-C\-S/t\-\_\-io.\-h, L\-I\-B\-R\-A\-R\-I\-E\-S/\-B\-A\-S\-I\-C\-S/t\-\_\-io.\-c
+
+Authors \& Date\-: Riccardo Rigon, February 1997
+
+Inputs\-: the pointer to the opened file
+
+Return\-: void
+
+See Also\-: read\-\_\-comment, iscomment, goto\-\_\-\-E\-O\-F
+
+
+
+ 
+
+Definition at line 2909 of file t\-\_\-io.\-c.
+
+
+
+Referenced by file\-\_\-copy(), get\-\_\-phrase(), header\-\_\-scan(), iscomment(), justread\-\_\-chararray(), justread\-\_\-floatarray(), justread\-\_\-floatmatrix(), justread\-\_\-longarray(), query\-\_\-for\-\_\-label(), query\-\_\-for\-\_\-token(), read\-\_\-charvector(), read\-\_\-doublearray(), read\-\_\-doublebin(), read\-\_\-doublematrix(), read\-\_\-doubletensor(), read\-\_\-doublevector(), read\-\_\-floatarray(), read\-\_\-floatmatrix(), read\-\_\-floatvector(), read\-\_\-index(), read\-\_\-intbin(), read\-\_\-intmatrix(), read\-\_\-intvector(), read\-\_\-longarray(), read\-\_\-longbin(), read\-\_\-longmatrix(), read\-\_\-longvector(), read\-\_\-matrixheader(), read\-\_\-plane\-\_\-strings(), read\-\_\-plane\-\_\-strings\-\_\-restricted(), read\-\_\-shortarray(), read\-\_\-shortbin(), read\-\_\-shortmatrix(), read\-\_\-shortvector(), read\-\_\-stringarray(), read\-\_\-tensorheader(), and read\-\_\-vectorheader().
+
+\hypertarget{t__io_8h_afa95931383ff96048d6ec32f685a5f98}{\index{t\-\_\-io.\-h@{t\-\_\-io.\-h}!t\-\_\-fclose@{t\-\_\-fclose}}
+\index{t\-\_\-fclose@{t\-\_\-fclose}!t_io.h@{t\-\_\-io.\-h}}
+\subsubsection[{t\-\_\-fclose}]{\setlength{\rightskip}{0pt plus 5cm}F\-I\-L\-E$\ast$ t\-\_\-fclose (
+\begin{DoxyParamCaption}
+\item[{F\-I\-L\-E $\ast$}]{stream}
+\end{DoxyParamCaption}
+)}}\label{t__io_8h_afa95931383ff96048d6ec32f685a5f98}
+
+
+ 
+
+Definition at line 81 of file t\-\_\-io.\-c.
+
+
+
+Referenced by doublematrix\-\_\-control(), doublematrix\-\_\-dem(), doublematrix\-\_\-dem2(), doublematrix\-\_\-dem3(), doubletensor\-\_\-dem(), doublevector\-\_\-dem(), floatmatrix\-\_\-dem(), floatmatrix\-\_\-dem2(), floatvector\-\_\-dem(), get\-\_\-filename(), get\-\_\-filenames\-\_\-from\-\_\-keys(), get\-\_\-parameter(), get\-\_\-s\-\_\-times(), get\-\_\-strings(), intmatrix\-\_\-dem(), intmatrix\-\_\-dem2(), justread\-\_\-floatmatrix(), longmatrix\-\_\-dem(), longmatrix\-\_\-dem2(), read\-\_\-b\-\_\-parameters\-\_\-ft(), read\-\_\-charvector(), read\-\_\-connection\-\_\-attribute\-\_\-array(), read\-\_\-doublebin(), read\-\_\-doublematrix(), read\-\_\-doubletensor(), read\-\_\-doublevector(), read\-\_\-fine\-\_\-indices(), read\-\_\-floatmatrix(), read\-\_\-floatvector(), read\-\_\-intbin(), read\-\_\-intmatrix(), read\-\_\-intvector(), read\-\_\-keywords\-\_\-list(), read\-\_\-line\-\_\-indices(), read\-\_\-longbin(), read\-\_\-longmatrix(), read\-\_\-longvector(), read\-\_\-map(), read\-\_\-polygonvector(), read\-\_\-shortbin(), read\-\_\-shortmatrix(), read\-\_\-shortvector(), shortmatrix\-\_\-dem(), shortmatrix\-\_\-dem2(), shortmatrix\-\_\-dem3(), write\-\_\-doublevector\-\_\-in\-\_\-a\-\_\-ascii\-\_\-ft\-\_\-format\-\_\-single\-\_\-file(), write\-\_\-fluidturtle(), write\-\_\-longmatrix\-\_\-vector(), and write\-\_\-small\-\_\-lines\-\_\-indices().
+
+\hypertarget{t__io_8h_a21fd4454b196a063fbdd0e0c8c203de6}{\index{t\-\_\-io.\-h@{t\-\_\-io.\-h}!t\-\_\-fopen@{t\-\_\-fopen}}
+\index{t\-\_\-fopen@{t\-\_\-fopen}!t_io.h@{t\-\_\-io.\-h}}
+\subsubsection[{t\-\_\-fopen}]{\setlength{\rightskip}{0pt plus 5cm}F\-I\-L\-E$\ast$ t\-\_\-fopen (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{name, }
+\item[{const char $\ast$}]{mode}
+\end{DoxyParamCaption}
+)}}\label{t__io_8h_a21fd4454b196a063fbdd0e0c8c203de6}
+Name\-: t\-\_\-fopen, t\-\_\-fclose
+
+Synopsis\-: F\-I\-L\-E $\ast$t\-\_\-fopen(const char $\ast$ ,const char $\ast$); F\-I\-L\-E $\ast$t\-\_\-fclose(F\-I\-L\-E $\ast$ stream);
+
+Version\-: 1.\-0
+
+Description\-:
+
+Safe open and close file. \hyperlink{t__io_8c_af34ea3bc62c51f24c92b1fd2e9efe91a}{t\-\_\-fopen()} used in writing mode checks if an file with the existing name already exists.
+
+In this case it moves it to filename.\-old. Future inplementations will implement the check of the mode of opening.
+
+Authors \& Date\-: Riccardo Rigon, 1996
+
+F\-I\-L\-E\-: L\-I\-B\-R\-A\-R\-I\-E\-S/\-B\-A\-S\-I\-C\-S/t\-\_\-io.\-h, L\-I\-B\-R\-A\-R\-I\-E\-S/\-B\-A\-S\-I\-C\-S/t\-\_\-io.\-c
+
+Inputs\-: name of the file and mode of opening
+
+Return\-: a pointer to the opened file or a N\-U\-L\-L pointer in the case of t\-\_\-fclose
+
+See Also\-: fopen, close, t\-\_\-error
+
+Keywords\-: streams
+
+Examples\-: 1.\-example.\-c
+
+
+
+ 
+
+Definition at line 45 of file t\-\_\-io.\-c.
+
+
+
+References t\-\_\-error().
+
+
+
+Referenced by doublematrix\-\_\-control(), doublematrix\-\_\-dem(), doublematrix\-\_\-dem2(), doublematrix\-\_\-dem3(), doubletensor\-\_\-dem(), doublevector\-\_\-dem(), floatmatrix\-\_\-dem(), floatmatrix\-\_\-dem2(), floatvector\-\_\-dem(), get\-\_\-filenames\-\_\-from\-\_\-keys(), get\-\_\-s\-\_\-times(), intmatrix\-\_\-dem(), intmatrix\-\_\-dem2(), justread\-\_\-floatmatrix(), longmatrix\-\_\-dem(), longmatrix\-\_\-dem2(), read\-\_\-b\-\_\-parameters\-\_\-ft(), read\-\_\-charvector(), read\-\_\-connection\-\_\-attribute\-\_\-array(), read\-\_\-doublebin(), read\-\_\-doublematrix(), read\-\_\-doubletensor(), read\-\_\-doublevector(), read\-\_\-fine\-\_\-indices(), read\-\_\-floatmatrix(), read\-\_\-floatvector(), read\-\_\-intbin(), read\-\_\-intmatrix(), read\-\_\-intvector(), read\-\_\-keywords\-\_\-list(), read\-\_\-line\-\_\-indices(), read\-\_\-linevector(), read\-\_\-longbin(), read\-\_\-longmatrix(), read\-\_\-longvector(), read\-\_\-map(), read\-\_\-polygonvector(), read\-\_\-shortbin(), read\-\_\-shortmatrix(), read\-\_\-shortvector(), shortmatrix\-\_\-dem(), shortmatrix\-\_\-dem2(), shortmatrix\-\_\-dem3(), write\-\_\-doublevector\-\_\-in\-\_\-a\-\_\-ascii\-\_\-ft\-\_\-format\-\_\-single\-\_\-file(), write\-\_\-fluidturtle(), write\-\_\-longmatrix\-\_\-vector(), and write\-\_\-small\-\_\-lines\-\_\-indices().
+
+\hypertarget{t__io_8h_a6bcad90281a8b627e6c6b69375dccc70}{\index{t\-\_\-io.\-h@{t\-\_\-io.\-h}!write\-\_\-chararray\-\_\-elements@{write\-\_\-chararray\-\_\-elements}}
+\index{write\-\_\-chararray\-\_\-elements@{write\-\_\-chararray\-\_\-elements}!t_io.h@{t\-\_\-io.\-h}}
+\subsubsection[{write\-\_\-chararray\-\_\-elements}]{\setlength{\rightskip}{0pt plus 5cm}void write\-\_\-chararray\-\_\-elements (
+\begin{DoxyParamCaption}
+\item[{F\-I\-L\-E $\ast$}]{outputfile, }
+\item[{{\bf C\-H\-A\-R\-V\-E\-C\-T\-O\-R} $\ast$}]{V, }
+\item[{long}]{columns}
+\end{DoxyParamCaption}
+)}}\label{t__io_8h_a6bcad90281a8b627e6c6b69375dccc70}
+
+
+ 
+
+Definition at line 10485 of file t\-\_\-io.\-c.
+
+
+
+References C\-H\-A\-R\-V\-E\-C\-T\-O\-R\-::co, C\-H\-A\-R\-V\-E\-C\-T\-O\-R\-::isdynamic, C\-H\-A\-R\-V\-E\-C\-T\-O\-R\-::nh, C\-H\-A\-R\-V\-E\-C\-T\-O\-R\-::nl, and t\-\_\-error().
+
+\hypertarget{t__io_8h_a25aace41f9dcb30a3271c98d2dbe0c5a}{\index{t\-\_\-io.\-h@{t\-\_\-io.\-h}!write\-\_\-charvector\-\_\-elements@{write\-\_\-charvector\-\_\-elements}}
+\index{write\-\_\-charvector\-\_\-elements@{write\-\_\-charvector\-\_\-elements}!t_io.h@{t\-\_\-io.\-h}}
+\subsubsection[{write\-\_\-charvector\-\_\-elements}]{\setlength{\rightskip}{0pt plus 5cm}long write\-\_\-charvector\-\_\-elements (
+\begin{DoxyParamCaption}
+\item[{F\-I\-L\-E $\ast$}]{output, }
+\item[{{\bf C\-H\-A\-R\-V\-E\-C\-T\-O\-R} $\ast$}]{v, }
+\item[{long}]{maxcols}
+\end{DoxyParamCaption}
+)}}\label{t__io_8h_a25aace41f9dcb30a3271c98d2dbe0c5a}
+
+
+ Write a vector of char to a file 
+
+Definition at line 900 of file t\-\_\-io.\-c.
+
+
+
+References C\-H\-A\-R\-V\-E\-C\-T\-O\-R\-::co, C\-H\-A\-R\-V\-E\-C\-T\-O\-R\-::isdynamic, C\-H\-A\-R\-V\-E\-C\-T\-O\-R\-::nh, C\-H\-A\-R\-V\-E\-C\-T\-O\-R\-::nl, O\-K, and t\-\_\-error().
+
+\hypertarget{t__io_8h_ac7727534ea0916122556847f47e0e2b6}{\index{t\-\_\-io.\-h@{t\-\_\-io.\-h}!write\-\_\-comment@{write\-\_\-comment}}
+\index{write\-\_\-comment@{write\-\_\-comment}!t_io.h@{t\-\_\-io.\-h}}
+\subsubsection[{write\-\_\-comment}]{\setlength{\rightskip}{0pt plus 5cm}void write\-\_\-comment (
+\begin{DoxyParamCaption}
+\item[{F\-I\-L\-E $\ast$}]{outputfile, }
+\item[{const char $\ast$}]{comment, }
+\item[{long}]{columns}
+\end{DoxyParamCaption}
+)}}\label{t__io_8h_ac7727534ea0916122556847f47e0e2b6}
+Name\-: write\-\_\-comment
+
+Synopsis\-: void \hyperlink{t__io_8h_ac7727534ea0916122556847f47e0e2b6}{write\-\_\-comment(\-F\-I\-L\-E $\ast$,const char $\ast$,long)};
+
+Version\-: 1.\-0
+
+Description\-: It writes\-: \char`\"{}\-This is a turtle file\char`\"{} and the date on a file
+
+Authors \& Date\-: Riccardo Rigon, September 1997
+
+F\-I\-L\-E\-: L\-I\-B\-R\-A\-R\-I\-E\-S/\-B\-A\-S\-I\-C\-S/t\-\_\-io.\-h, L\-I\-B\-R\-A\-R\-I\-E\-S/\-B\-A\-S\-I\-C\-S/t\-\_\-io.\-c
+
+Inputs\-: the pointer to the file where to write, the string to write and the line\textbackslash{}
+
+length
+
+Return\-: void
+
+See Also\-: read\-\_\-comment
+
+Keywords\-: turtle file
+
+Examples\-:1.\-example.\-c
+
+
+
+ 
+
+Definition at line 10796 of file t\-\_\-io.\-c.
+
+
+
+References t\-\_\-error().
+
+\hypertarget{t__io_8h_a50453295f35d3d2cbdad7653aa7611f4}{\index{t\-\_\-io.\-h@{t\-\_\-io.\-h}!write\-\_\-doublearray\-\_\-elements@{write\-\_\-doublearray\-\_\-elements}}
+\index{write\-\_\-doublearray\-\_\-elements@{write\-\_\-doublearray\-\_\-elements}!t_io.h@{t\-\_\-io.\-h}}
+\subsubsection[{write\-\_\-doublearray\-\_\-elements}]{\setlength{\rightskip}{0pt plus 5cm}void write\-\_\-doublearray\-\_\-elements (
+\begin{DoxyParamCaption}
+\item[{F\-I\-L\-E $\ast$}]{outputfile, }
+\item[{{\bf D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} $\ast$}]{V, }
+\item[{long}]{columns}
+\end{DoxyParamCaption}
+)}}\label{t__io_8h_a50453295f35d3d2cbdad7653aa7611f4}
+
+
+ 
+
+Definition at line 10417 of file t\-\_\-io.\-c.
+
+
+
+References D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R\-::co, D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R\-::isdynamic, D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R\-::nh, D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R\-::nl, and t\-\_\-error().
+
+
+
+Referenced by doublematrix\-\_\-dem2(), doublematrix\-\_\-dem3(), doubletensor\-\_\-dem(), doublevector\-\_\-dem(), longmatrix\-\_\-dem2(), shortmatrix\-\_\-dem2(), and shortmatrix\-\_\-dem3().
+
+\hypertarget{t__io_8h_a195a0de35bb104c87e3da30c94d8c3b5}{\index{t\-\_\-io.\-h@{t\-\_\-io.\-h}!write\-\_\-doublebin\-\_\-elements@{write\-\_\-doublebin\-\_\-elements}}
+\index{write\-\_\-doublebin\-\_\-elements@{write\-\_\-doublebin\-\_\-elements}!t_io.h@{t\-\_\-io.\-h}}
+\subsubsection[{write\-\_\-doublebin\-\_\-elements}]{\setlength{\rightskip}{0pt plus 5cm}long write\-\_\-doublebin\-\_\-elements (
+\begin{DoxyParamCaption}
+\item[{F\-I\-L\-E $\ast$}]{output, }
+\item[{{\bf D\-O\-U\-B\-L\-E\-B\-I\-N} $\ast$}]{l, }
+\item[{long}]{maxcols}
+\end{DoxyParamCaption}
+)}}\label{t__io_8h_a195a0de35bb104c87e3da30c94d8c3b5}
+
+
+ Write a list of double to a file 
+
+Definition at line 2484 of file t\-\_\-io.\-c.
+
+
+
+References co, L\-O\-N\-G\-V\-E\-C\-T\-O\-R\-::co, db\-::co, db\-::index, db\-::isdynamic, O\-K, and t\-\_\-error().
+
+\hypertarget{t__io_8h_a95a7ae3012d3470ed7c5c347ffec9e7a}{\index{t\-\_\-io.\-h@{t\-\_\-io.\-h}!write\-\_\-doublematrix\-\_\-elements@{write\-\_\-doublematrix\-\_\-elements}}
+\index{write\-\_\-doublematrix\-\_\-elements@{write\-\_\-doublematrix\-\_\-elements}!t_io.h@{t\-\_\-io.\-h}}
+\subsubsection[{write\-\_\-doublematrix\-\_\-elements}]{\setlength{\rightskip}{0pt plus 5cm}long write\-\_\-doublematrix\-\_\-elements (
+\begin{DoxyParamCaption}
+\item[{F\-I\-L\-E $\ast$}]{output, }
+\item[{{\bf D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X} $\ast$}]{m, }
+\item[{long}]{maxcols}
+\end{DoxyParamCaption}
+)}}\label{t__io_8h_a95a7ae3012d3470ed7c5c347ffec9e7a}
+
+
+ 
+
+Definition at line 1764 of file t\-\_\-io.\-c.
+
+
+
+References D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X\-::co, D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X\-::isdynamic, D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X\-::nch, D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X\-::ncl, D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X\-::nrh, D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X\-::nrl, O\-K, and t\-\_\-error().
+
+
+
+Referenced by doublematrix\-\_\-control(), doublematrix\-\_\-dem(), doublematrix\-\_\-dem2(), doublematrix\-\_\-dem3(), and doubletensor\-\_\-dem().
+
+\hypertarget{t__io_8h_a1cce41330929b6a73b2dac50aebe32d0}{\index{t\-\_\-io.\-h@{t\-\_\-io.\-h}!write\-\_\-doubletensor\-\_\-elements@{write\-\_\-doubletensor\-\_\-elements}}
+\index{write\-\_\-doubletensor\-\_\-elements@{write\-\_\-doubletensor\-\_\-elements}!t_io.h@{t\-\_\-io.\-h}}
+\subsubsection[{write\-\_\-doubletensor\-\_\-elements}]{\setlength{\rightskip}{0pt plus 5cm}long write\-\_\-doubletensor\-\_\-elements (
+\begin{DoxyParamCaption}
+\item[{F\-I\-L\-E $\ast$}]{output, }
+\item[{{\bf D\-O\-U\-B\-L\-E\-T\-E\-N\-S\-O\-R} $\ast$}]{m, }
+\item[{long}]{maxcols}
+\end{DoxyParamCaption}
+)}}\label{t__io_8h_a1cce41330929b6a73b2dac50aebe32d0}
+
+
+ 
+
+Definition at line 10971 of file t\-\_\-io.\-c.
+
+
+
+References D\-O\-U\-B\-L\-E\-T\-E\-N\-S\-O\-R\-::co, D\-O\-U\-B\-L\-E\-T\-E\-N\-S\-O\-R\-::isdynamic, D\-O\-U\-B\-L\-E\-T\-E\-N\-S\-O\-R\-::nch, D\-O\-U\-B\-L\-E\-T\-E\-N\-S\-O\-R\-::ncl, D\-O\-U\-B\-L\-E\-T\-E\-N\-S\-O\-R\-::ndh, D\-O\-U\-B\-L\-E\-T\-E\-N\-S\-O\-R\-::ndl, D\-O\-U\-B\-L\-E\-T\-E\-N\-S\-O\-R\-::nrh, D\-O\-U\-B\-L\-E\-T\-E\-N\-S\-O\-R\-::nrl, O\-K, and t\-\_\-error().
+
+\hypertarget{t__io_8h_a8f8b6855ca4a290e5b8dee7d380ef241}{\index{t\-\_\-io.\-h@{t\-\_\-io.\-h}!write\-\_\-doublevector\-\_\-elements@{write\-\_\-doublevector\-\_\-elements}}
+\index{write\-\_\-doublevector\-\_\-elements@{write\-\_\-doublevector\-\_\-elements}!t_io.h@{t\-\_\-io.\-h}}
+\subsubsection[{write\-\_\-doublevector\-\_\-elements}]{\setlength{\rightskip}{0pt plus 5cm}long write\-\_\-doublevector\-\_\-elements (
+\begin{DoxyParamCaption}
+\item[{F\-I\-L\-E $\ast$}]{output, }
+\item[{{\bf D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} $\ast$}]{v, }
+\item[{long}]{maxcols}
+\end{DoxyParamCaption}
+)}}\label{t__io_8h_a8f8b6855ca4a290e5b8dee7d380ef241}
+
+
+ Write a vector of double to a file 
+
+Definition at line 749 of file t\-\_\-io.\-c.
+
+
+
+References D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R\-::co, D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R\-::isdynamic, D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R\-::nh, D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R\-::nl, O\-K, and t\-\_\-error().
+
+\hypertarget{t__io_8h_a944835019040315aec8fb833bd7db8b5}{\index{t\-\_\-io.\-h@{t\-\_\-io.\-h}!write\-\_\-floatarray\-\_\-elements@{write\-\_\-floatarray\-\_\-elements}}
+\index{write\-\_\-floatarray\-\_\-elements@{write\-\_\-floatarray\-\_\-elements}!t_io.h@{t\-\_\-io.\-h}}
+\subsubsection[{write\-\_\-floatarray\-\_\-elements}]{\setlength{\rightskip}{0pt plus 5cm}void write\-\_\-floatarray\-\_\-elements (
+\begin{DoxyParamCaption}
+\item[{F\-I\-L\-E $\ast$}]{outputfile, }
+\item[{{\bf F\-L\-O\-A\-T\-V\-E\-C\-T\-O\-R} $\ast$}]{V, }
+\item[{long}]{columns}
+\end{DoxyParamCaption}
+)}}\label{t__io_8h_a944835019040315aec8fb833bd7db8b5}
+Name\-: write\-\_\-\-\_\-elements
+
+Version\-: 1.\-0
+
+Synopsis\-:
+
+void \hyperlink{t__io_8h_a944835019040315aec8fb833bd7db8b5}{write\-\_\-floatarray\-\_\-elements(\-F\-I\-L\-E $\ast$,\-F\-L\-O\-A\-T\-V\-E\-C\-T\-O\-R $\ast$, long )};
+
+Descriptiontion\-: write an array of the specified type on
+
+a specified file
+
+Authors \& Date\-: Riccardo Rigon, September 1997
+
+F\-I\-L\-E\-: L\-I\-B\-R\-A\-R\-I\-E\-S/\-B\-A\-S\-I\-C\-S/t\-\_\-io.\-h, L\-I\-B\-R\-A\-R\-I\-E\-S/\-B\-A\-S\-I\-C\-S/t\-\_\-io.\-c
+
+Inputs\-: the pointer to the file and the pointer to the data stored,
+
+the length of the line
+
+Return\-: void
+
+See Also\-: read\-\_\-\-\_\-
+
+Keywords\-: turtle file
+
+Examples\-: 1.\-example.\-c
+
+
+
+ 
+
+Definition at line 10351 of file t\-\_\-io.\-c.
+
+
+
+References F\-L\-O\-A\-T\-V\-E\-C\-T\-O\-R\-::co, F\-L\-O\-A\-T\-V\-E\-C\-T\-O\-R\-::isdynamic, F\-L\-O\-A\-T\-V\-E\-C\-T\-O\-R\-::nh, F\-L\-O\-A\-T\-V\-E\-C\-T\-O\-R\-::nl, and t\-\_\-error().
+
+
+
+Referenced by doublematrix\-\_\-dem(), floatmatrix\-\_\-dem(), floatmatrix\-\_\-dem2(), floatvector\-\_\-dem(), intmatrix\-\_\-dem(), intmatrix\-\_\-dem2(), longmatrix\-\_\-dem(), and shortmatrix\-\_\-dem().
+
+\hypertarget{t__io_8h_a5c24af8a933a6bb135acce1f1ab3aabd}{\index{t\-\_\-io.\-h@{t\-\_\-io.\-h}!write\-\_\-floatmatrix\-\_\-elements@{write\-\_\-floatmatrix\-\_\-elements}}
+\index{write\-\_\-floatmatrix\-\_\-elements@{write\-\_\-floatmatrix\-\_\-elements}!t_io.h@{t\-\_\-io.\-h}}
+\subsubsection[{write\-\_\-floatmatrix\-\_\-elements}]{\setlength{\rightskip}{0pt plus 5cm}long write\-\_\-floatmatrix\-\_\-elements (
+\begin{DoxyParamCaption}
+\item[{F\-I\-L\-E $\ast$}]{output, }
+\item[{{\bf F\-L\-O\-A\-T\-M\-A\-T\-R\-I\-X} $\ast$}]{m, }
+\item[{long}]{maxcols}
+\end{DoxyParamCaption}
+)}}\label{t__io_8h_a5c24af8a933a6bb135acce1f1ab3aabd}
+
+
+ 
+
+Definition at line 1595 of file t\-\_\-io.\-c.
+
+
+
+References F\-L\-O\-A\-T\-M\-A\-T\-R\-I\-X\-::co, F\-L\-O\-A\-T\-M\-A\-T\-R\-I\-X\-::isdynamic, F\-L\-O\-A\-T\-M\-A\-T\-R\-I\-X\-::nch, F\-L\-O\-A\-T\-M\-A\-T\-R\-I\-X\-::ncl, F\-L\-O\-A\-T\-M\-A\-T\-R\-I\-X\-::nrh, F\-L\-O\-A\-T\-M\-A\-T\-R\-I\-X\-::nrl, O\-K, and t\-\_\-error().
+
+
+
+Referenced by floatmatrix\-\_\-dem(), and floatmatrix\-\_\-dem2().
+
+\hypertarget{t__io_8h_ae7d07f9045889805d8d25e6a1d1525ca}{\index{t\-\_\-io.\-h@{t\-\_\-io.\-h}!write\-\_\-floatvector\-\_\-elements@{write\-\_\-floatvector\-\_\-elements}}
+\index{write\-\_\-floatvector\-\_\-elements@{write\-\_\-floatvector\-\_\-elements}!t_io.h@{t\-\_\-io.\-h}}
+\subsubsection[{write\-\_\-floatvector\-\_\-elements}]{\setlength{\rightskip}{0pt plus 5cm}long write\-\_\-floatvector\-\_\-elements (
+\begin{DoxyParamCaption}
+\item[{F\-I\-L\-E $\ast$}]{output, }
+\item[{{\bf F\-L\-O\-A\-T\-V\-E\-C\-T\-O\-R} $\ast$}]{v, }
+\item[{long}]{maxcols}
+\end{DoxyParamCaption}
+)}}\label{t__io_8h_ae7d07f9045889805d8d25e6a1d1525ca}
+
+
+ Write a vector of float to a file 
+
+Definition at line 599 of file t\-\_\-io.\-c.
+
+
+
+References F\-L\-O\-A\-T\-V\-E\-C\-T\-O\-R\-::co, F\-L\-O\-A\-T\-V\-E\-C\-T\-O\-R\-::isdynamic, F\-L\-O\-A\-T\-V\-E\-C\-T\-O\-R\-::nh, F\-L\-O\-A\-T\-V\-E\-C\-T\-O\-R\-::nl, O\-K, and t\-\_\-error().
+
+\hypertarget{t__io_8h_a8a244b9353838da43db0a624a743d091}{\index{t\-\_\-io.\-h@{t\-\_\-io.\-h}!write\-\_\-header\-\_\-header@{write\-\_\-header\-\_\-header}}
+\index{write\-\_\-header\-\_\-header@{write\-\_\-header\-\_\-header}!t_io.h@{t\-\_\-io.\-h}}
+\subsubsection[{write\-\_\-header\-\_\-header}]{\setlength{\rightskip}{0pt plus 5cm}void write\-\_\-header\-\_\-header (
+\begin{DoxyParamCaption}
+\item[{F\-I\-L\-E $\ast$}]{outputfile, }
+\item[{{\bf H\-E\-A\-D\-E\-R} $\ast$}]{H}
+\end{DoxyParamCaption}
+)}}\label{t__io_8h_a8a244b9353838da43db0a624a743d091}
+Name\-: write\-\_\-header\-\_\-header
+
+Synopsis\-: void \hyperlink{t__io_8h_a8a244b9353838da43db0a624a743d091}{write\-\_\-header\-\_\-header(\-F\-I\-L\-E $\ast$,\-H\-E\-A\-D\-E\-R $\ast$\-H)};
+
+Version\-: 1.\-0
+
+Description\-: writes a \hyperlink{struct_h_e_a_d_e_r}{H\-E\-A\-D\-E\-R} C\-O\-N\-T\-E\-N\-T to a file
+
+Authors \& Date\-: Riccardo Rigon, September 1997
+
+F\-I\-L\-E\-: L\-I\-B\-R\-A\-R\-I\-E\-S/\-B\-A\-S\-I\-C\-S/t\-\_\-io.\-h, L\-I\-B\-R\-A\-R\-I\-E\-S/\-B\-A\-S\-I\-C\-S/t\-\_\-io.\-c
+
+Inputs\-: the pointer to the file where to write and a pointer to the header
+
+where the information are stored
+
+Return\-: void
+
+See Also\-: read\-\_\-header
+
+Keywords\-: turtle file
+
+Examples\-: 1.\-example.\-c
+
+
+
+ 
+
+Definition at line 10654 of file t\-\_\-io.\-c.
+
+
+
+References H\-E\-A\-D\-E\-R\-::category, t\-\_\-keywords\-::category, t\-\_\-keywords\-::delimiter, H\-E\-A\-D\-E\-R\-::dimensions, H\-E\-A\-D\-E\-R\-::gender, t\-\_\-keywords\-::gender, H\-E\-A\-D\-E\-R\-::name, H\-E\-A\-D\-E\-R\-::number, t\-\_\-error(), H\-E\-A\-D\-E\-R\-::type, and t\-\_\-keywords\-::type.
+
+\hypertarget{t__io_8h_a9f69a68e15c99abb5ed2bc1271c9eaf1}{\index{t\-\_\-io.\-h@{t\-\_\-io.\-h}!write\-\_\-intarray\-\_\-elements@{write\-\_\-intarray\-\_\-elements}}
+\index{write\-\_\-intarray\-\_\-elements@{write\-\_\-intarray\-\_\-elements}!t_io.h@{t\-\_\-io.\-h}}
+\subsubsection[{write\-\_\-intarray\-\_\-elements}]{\setlength{\rightskip}{0pt plus 5cm}void write\-\_\-intarray\-\_\-elements (
+\begin{DoxyParamCaption}
+\item[{F\-I\-L\-E $\ast$}]{outputfile, }
+\item[{{\bf I\-N\-T\-V\-E\-C\-T\-O\-R} $\ast$}]{V, }
+\item[{long}]{columns}
+\end{DoxyParamCaption}
+)}}\label{t__io_8h_a9f69a68e15c99abb5ed2bc1271c9eaf1}
+
+
+ 
+
+Definition at line 10213 of file t\-\_\-io.\-c.
+
+
+
+References I\-N\-T\-V\-E\-C\-T\-O\-R\-::co, I\-N\-T\-V\-E\-C\-T\-O\-R\-::isdynamic, I\-N\-T\-V\-E\-C\-T\-O\-R\-::nh, I\-N\-T\-V\-E\-C\-T\-O\-R\-::nl, and t\-\_\-error().
+
+\hypertarget{t__io_8h_a764f4a55a102bf0b3ccdf13744bea13d}{\index{t\-\_\-io.\-h@{t\-\_\-io.\-h}!write\-\_\-intbin\-\_\-elements@{write\-\_\-intbin\-\_\-elements}}
+\index{write\-\_\-intbin\-\_\-elements@{write\-\_\-intbin\-\_\-elements}!t_io.h@{t\-\_\-io.\-h}}
+\subsubsection[{write\-\_\-intbin\-\_\-elements}]{\setlength{\rightskip}{0pt plus 5cm}long write\-\_\-intbin\-\_\-elements (
+\begin{DoxyParamCaption}
+\item[{F\-I\-L\-E $\ast$}]{output, }
+\item[{{\bf I\-N\-T\-B\-I\-N} $\ast$}]{l, }
+\item[{long}]{maxcols}
+\end{DoxyParamCaption}
+)}}\label{t__io_8h_a764f4a55a102bf0b3ccdf13744bea13d}
+
+
+ Write a list of int to a file 
+
+Definition at line 1941 of file t\-\_\-io.\-c.
+
+
+
+References co, L\-O\-N\-G\-V\-E\-C\-T\-O\-R\-::co, I\-N\-T\-B\-I\-N\-::co, I\-N\-T\-B\-I\-N\-::index, I\-N\-T\-B\-I\-N\-::isdynamic, O\-K, and t\-\_\-error().
+
+\hypertarget{t__io_8h_ac4f80f497d426d54e518084a0c9b5e37}{\index{t\-\_\-io.\-h@{t\-\_\-io.\-h}!write\-\_\-intmatrix\-\_\-elements@{write\-\_\-intmatrix\-\_\-elements}}
+\index{write\-\_\-intmatrix\-\_\-elements@{write\-\_\-intmatrix\-\_\-elements}!t_io.h@{t\-\_\-io.\-h}}
+\subsubsection[{write\-\_\-intmatrix\-\_\-elements}]{\setlength{\rightskip}{0pt plus 5cm}long write\-\_\-intmatrix\-\_\-elements (
+\begin{DoxyParamCaption}
+\item[{F\-I\-L\-E $\ast$}]{output, }
+\item[{{\bf I\-N\-T\-M\-A\-T\-R\-I\-X} $\ast$}]{m, }
+\item[{long}]{maxcols}
+\end{DoxyParamCaption}
+)}}\label{t__io_8h_ac4f80f497d426d54e518084a0c9b5e37}
+
+
+ 
+
+Definition at line 1244 of file t\-\_\-io.\-c.
+
+
+
+References I\-N\-T\-M\-A\-T\-R\-I\-X\-::co, I\-N\-T\-M\-A\-T\-R\-I\-X\-::isdynamic, I\-N\-T\-M\-A\-T\-R\-I\-X\-::nch, I\-N\-T\-M\-A\-T\-R\-I\-X\-::ncl, I\-N\-T\-M\-A\-T\-R\-I\-X\-::nrh, I\-N\-T\-M\-A\-T\-R\-I\-X\-::nrl, O\-K, and t\-\_\-error().
+
+
+
+Referenced by intmatrix\-\_\-dem(), and intmatrix\-\_\-dem2().
+
+\hypertarget{t__io_8h_a320afb2c68ab0a9c5a2a0ec91e6c711f}{\index{t\-\_\-io.\-h@{t\-\_\-io.\-h}!write\-\_\-intvector\-\_\-elements@{write\-\_\-intvector\-\_\-elements}}
+\index{write\-\_\-intvector\-\_\-elements@{write\-\_\-intvector\-\_\-elements}!t_io.h@{t\-\_\-io.\-h}}
+\subsubsection[{write\-\_\-intvector\-\_\-elements}]{\setlength{\rightskip}{0pt plus 5cm}long write\-\_\-intvector\-\_\-elements (
+\begin{DoxyParamCaption}
+\item[{F\-I\-L\-E $\ast$}]{output, }
+\item[{{\bf I\-N\-T\-V\-E\-C\-T\-O\-R} $\ast$}]{v, }
+\item[{long}]{maxcols}
+\end{DoxyParamCaption}
+)}}\label{t__io_8h_a320afb2c68ab0a9c5a2a0ec91e6c711f}
+
+
+ Write a vector of int to a file 
+
+Definition at line 296 of file t\-\_\-io.\-c.
+
+
+
+References I\-N\-T\-V\-E\-C\-T\-O\-R\-::co, I\-N\-T\-V\-E\-C\-T\-O\-R\-::isdynamic, I\-N\-T\-V\-E\-C\-T\-O\-R\-::nh, I\-N\-T\-V\-E\-C\-T\-O\-R\-::nl, O\-K, and t\-\_\-error().
+
+\hypertarget{t__io_8h_abf6d5d538ef9cab598800b8eed46cc88}{\index{t\-\_\-io.\-h@{t\-\_\-io.\-h}!write\-\_\-longarray\-\_\-elements@{write\-\_\-longarray\-\_\-elements}}
+\index{write\-\_\-longarray\-\_\-elements@{write\-\_\-longarray\-\_\-elements}!t_io.h@{t\-\_\-io.\-h}}
+\subsubsection[{write\-\_\-longarray\-\_\-elements}]{\setlength{\rightskip}{0pt plus 5cm}void write\-\_\-longarray\-\_\-elements (
+\begin{DoxyParamCaption}
+\item[{F\-I\-L\-E $\ast$}]{outputfile, }
+\item[{{\bf L\-O\-N\-G\-V\-E\-C\-T\-O\-R} $\ast$}]{V, }
+\item[{long}]{columns}
+\end{DoxyParamCaption}
+)}}\label{t__io_8h_abf6d5d538ef9cab598800b8eed46cc88}
+
+
+ 
+
+Definition at line 10283 of file t\-\_\-io.\-c.
+
+
+
+References L\-O\-N\-G\-V\-E\-C\-T\-O\-R\-::co, L\-O\-N\-G\-V\-E\-C\-T\-O\-R\-::isdynamic, L\-O\-N\-G\-V\-E\-C\-T\-O\-R\-::nh, L\-O\-N\-G\-V\-E\-C\-T\-O\-R\-::nl, and t\-\_\-error().
+
+\hypertarget{t__io_8h_ae2a15657ea5c433a2b1caffb00483cb8}{\index{t\-\_\-io.\-h@{t\-\_\-io.\-h}!write\-\_\-longbin\-\_\-elements@{write\-\_\-longbin\-\_\-elements}}
+\index{write\-\_\-longbin\-\_\-elements@{write\-\_\-longbin\-\_\-elements}!t_io.h@{t\-\_\-io.\-h}}
+\subsubsection[{write\-\_\-longbin\-\_\-elements}]{\setlength{\rightskip}{0pt plus 5cm}long write\-\_\-longbin\-\_\-elements (
+\begin{DoxyParamCaption}
+\item[{F\-I\-L\-E $\ast$}]{output, }
+\item[{{\bf L\-O\-N\-G\-B\-I\-N} $\ast$}]{l, }
+\item[{long}]{maxcols}
+\end{DoxyParamCaption}
+)}}\label{t__io_8h_ae2a15657ea5c433a2b1caffb00483cb8}
+
+
+ Write a list of int to a file 
+
+Definition at line 2303 of file t\-\_\-io.\-c.
+
+
+
+References co, L\-O\-N\-G\-V\-E\-C\-T\-O\-R\-::co, L\-O\-N\-G\-B\-I\-N\-::co, L\-O\-N\-G\-B\-I\-N\-::index, L\-O\-N\-G\-B\-I\-N\-::isdynamic, O\-K, and t\-\_\-error().
+
+\hypertarget{t__io_8h_a0ceab64b7831070e09a724e672dcb8c0}{\index{t\-\_\-io.\-h@{t\-\_\-io.\-h}!write\-\_\-longmatrix\-\_\-elements@{write\-\_\-longmatrix\-\_\-elements}}
+\index{write\-\_\-longmatrix\-\_\-elements@{write\-\_\-longmatrix\-\_\-elements}!t_io.h@{t\-\_\-io.\-h}}
+\subsubsection[{write\-\_\-longmatrix\-\_\-elements}]{\setlength{\rightskip}{0pt plus 5cm}long write\-\_\-longmatrix\-\_\-elements (
+\begin{DoxyParamCaption}
+\item[{F\-I\-L\-E $\ast$}]{output, }
+\item[{{\bf L\-O\-N\-G\-M\-A\-T\-R\-I\-X} $\ast$}]{m, }
+\item[{long}]{maxcols}
+\end{DoxyParamCaption}
+)}}\label{t__io_8h_a0ceab64b7831070e09a724e672dcb8c0}
+
+
+ 
+
+Definition at line 1417 of file t\-\_\-io.\-c.
+
+
+
+References L\-O\-N\-G\-M\-A\-T\-R\-I\-X\-::co, L\-O\-N\-G\-M\-A\-T\-R\-I\-X\-::isdynamic, L\-O\-N\-G\-M\-A\-T\-R\-I\-X\-::nch, L\-O\-N\-G\-M\-A\-T\-R\-I\-X\-::ncl, L\-O\-N\-G\-M\-A\-T\-R\-I\-X\-::nrh, L\-O\-N\-G\-M\-A\-T\-R\-I\-X\-::nrl, O\-K, and t\-\_\-error().
+
+
+
+Referenced by longmatrix\-\_\-dem(), longmatrix\-\_\-dem2(), and write\-\_\-longmatrix\-\_\-vector().
+
+\hypertarget{t__io_8h_ab0c546a412709d6d92cf521840219a6b}{\index{t\-\_\-io.\-h@{t\-\_\-io.\-h}!write\-\_\-longvector\-\_\-elements@{write\-\_\-longvector\-\_\-elements}}
+\index{write\-\_\-longvector\-\_\-elements@{write\-\_\-longvector\-\_\-elements}!t_io.h@{t\-\_\-io.\-h}}
+\subsubsection[{write\-\_\-longvector\-\_\-elements}]{\setlength{\rightskip}{0pt plus 5cm}long write\-\_\-longvector\-\_\-elements (
+\begin{DoxyParamCaption}
+\item[{F\-I\-L\-E $\ast$}]{output, }
+\item[{{\bf L\-O\-N\-G\-V\-E\-C\-T\-O\-R} $\ast$}]{v, }
+\item[{long}]{maxcols}
+\end{DoxyParamCaption}
+)}}\label{t__io_8h_ab0c546a412709d6d92cf521840219a6b}
+
+
+ Write a vector of int to a file 
+
+Definition at line 448 of file t\-\_\-io.\-c.
+
+
+
+References L\-O\-N\-G\-V\-E\-C\-T\-O\-R\-::co, L\-O\-N\-G\-V\-E\-C\-T\-O\-R\-::isdynamic, L\-O\-N\-G\-V\-E\-C\-T\-O\-R\-::nh, L\-O\-N\-G\-V\-E\-C\-T\-O\-R\-::nl, O\-K, and t\-\_\-error().
+
+\hypertarget{t__io_8h_a3e5358e2f292d0e0e88b11bbb1e5185f}{\index{t\-\_\-io.\-h@{t\-\_\-io.\-h}!write\-\_\-shortarray\-\_\-elements@{write\-\_\-shortarray\-\_\-elements}}
+\index{write\-\_\-shortarray\-\_\-elements@{write\-\_\-shortarray\-\_\-elements}!t_io.h@{t\-\_\-io.\-h}}
+\subsubsection[{write\-\_\-shortarray\-\_\-elements}]{\setlength{\rightskip}{0pt plus 5cm}void write\-\_\-shortarray\-\_\-elements (
+\begin{DoxyParamCaption}
+\item[{F\-I\-L\-E $\ast$}]{outputfile, }
+\item[{{\bf S\-H\-O\-R\-T\-V\-E\-C\-T\-O\-R} $\ast$}]{V, }
+\item[{long}]{columns}
+\end{DoxyParamCaption}
+)}}\label{t__io_8h_a3e5358e2f292d0e0e88b11bbb1e5185f}
+
+
+ 
+
+Definition at line 10145 of file t\-\_\-io.\-c.
+
+
+
+References S\-H\-O\-R\-T\-V\-E\-C\-T\-O\-R\-::co, S\-H\-O\-R\-T\-V\-E\-C\-T\-O\-R\-::isdynamic, S\-H\-O\-R\-T\-V\-E\-C\-T\-O\-R\-::nh, S\-H\-O\-R\-T\-V\-E\-C\-T\-O\-R\-::nl, and t\-\_\-error().
+
+\hypertarget{t__io_8h_aeefe9b396a7fcfbcbd11afbd8da9a346}{\index{t\-\_\-io.\-h@{t\-\_\-io.\-h}!write\-\_\-shortbin\-\_\-elements@{write\-\_\-shortbin\-\_\-elements}}
+\index{write\-\_\-shortbin\-\_\-elements@{write\-\_\-shortbin\-\_\-elements}!t_io.h@{t\-\_\-io.\-h}}
+\subsubsection[{write\-\_\-shortbin\-\_\-elements}]{\setlength{\rightskip}{0pt plus 5cm}long write\-\_\-shortbin\-\_\-elements (
+\begin{DoxyParamCaption}
+\item[{F\-I\-L\-E $\ast$}]{output, }
+\item[{{\bf S\-H\-O\-R\-T\-B\-I\-N} $\ast$}]{l, }
+\item[{long}]{maxcols}
+\end{DoxyParamCaption}
+)}}\label{t__io_8h_aeefe9b396a7fcfbcbd11afbd8da9a346}
+
+
+ Write a list of int to a file 
+
+Definition at line 2122 of file t\-\_\-io.\-c.
+
+
+
+References co, L\-O\-N\-G\-V\-E\-C\-T\-O\-R\-::co, S\-H\-O\-R\-T\-B\-I\-N\-::co, S\-H\-O\-R\-T\-B\-I\-N\-::index, S\-H\-O\-R\-T\-B\-I\-N\-::isdynamic, O\-K, and t\-\_\-error().
+
+\hypertarget{t__io_8h_abfac6705bbdd042be9f775a4f9231194}{\index{t\-\_\-io.\-h@{t\-\_\-io.\-h}!write\-\_\-shortmatrix\-\_\-elements@{write\-\_\-shortmatrix\-\_\-elements}}
+\index{write\-\_\-shortmatrix\-\_\-elements@{write\-\_\-shortmatrix\-\_\-elements}!t_io.h@{t\-\_\-io.\-h}}
+\subsubsection[{write\-\_\-shortmatrix\-\_\-elements}]{\setlength{\rightskip}{0pt plus 5cm}long write\-\_\-shortmatrix\-\_\-elements (
+\begin{DoxyParamCaption}
+\item[{F\-I\-L\-E $\ast$}]{output, }
+\item[{{\bf S\-H\-O\-R\-T\-M\-A\-T\-R\-I\-X} $\ast$}]{m, }
+\item[{long}]{maxcols}
+\end{DoxyParamCaption}
+)}}\label{t__io_8h_abfac6705bbdd042be9f775a4f9231194}
+
+
+ 
+
+Definition at line 1071 of file t\-\_\-io.\-c.
+
+
+
+References S\-H\-O\-R\-T\-M\-A\-T\-R\-I\-X\-::co, S\-H\-O\-R\-T\-M\-A\-T\-R\-I\-X\-::isdynamic, S\-H\-O\-R\-T\-M\-A\-T\-R\-I\-X\-::nch, S\-H\-O\-R\-T\-M\-A\-T\-R\-I\-X\-::ncl, S\-H\-O\-R\-T\-M\-A\-T\-R\-I\-X\-::nrh, S\-H\-O\-R\-T\-M\-A\-T\-R\-I\-X\-::nrl, O\-K, and t\-\_\-error().
+
+
+
+Referenced by shortmatrix\-\_\-dem(), shortmatrix\-\_\-dem2(), and shortmatrix\-\_\-dem3().
+
+\hypertarget{t__io_8h_a2e868fdf466df97998c019215b1fd723}{\index{t\-\_\-io.\-h@{t\-\_\-io.\-h}!write\-\_\-shortvector\-\_\-elements@{write\-\_\-shortvector\-\_\-elements}}
+\index{write\-\_\-shortvector\-\_\-elements@{write\-\_\-shortvector\-\_\-elements}!t_io.h@{t\-\_\-io.\-h}}
+\subsubsection[{write\-\_\-shortvector\-\_\-elements}]{\setlength{\rightskip}{0pt plus 5cm}long write\-\_\-shortvector\-\_\-elements (
+\begin{DoxyParamCaption}
+\item[{F\-I\-L\-E $\ast$}]{output, }
+\item[{{\bf S\-H\-O\-R\-T\-V\-E\-C\-T\-O\-R} $\ast$}]{v, }
+\item[{long}]{maxcols}
+\end{DoxyParamCaption}
+)}}\label{t__io_8h_a2e868fdf466df97998c019215b1fd723}
+
+
+ Write a vector of short int to a file 
+
+Definition at line 146 of file t\-\_\-io.\-c.
+
+
+
+References S\-H\-O\-R\-T\-V\-E\-C\-T\-O\-R\-::co, S\-H\-O\-R\-T\-V\-E\-C\-T\-O\-R\-::isdynamic, S\-H\-O\-R\-T\-V\-E\-C\-T\-O\-R\-::nh, S\-H\-O\-R\-T\-V\-E\-C\-T\-O\-R\-::nl, O\-K, and t\-\_\-error().
+
+\hypertarget{t__io_8h_ab07fcded5a25836bd4f95399f6894b8d}{\index{t\-\_\-io.\-h@{t\-\_\-io.\-h}!write\-\_\-stringbin\-\_\-elements@{write\-\_\-stringbin\-\_\-elements}}
+\index{write\-\_\-stringbin\-\_\-elements@{write\-\_\-stringbin\-\_\-elements}!t_io.h@{t\-\_\-io.\-h}}
+\subsubsection[{write\-\_\-stringbin\-\_\-elements}]{\setlength{\rightskip}{0pt plus 5cm}long write\-\_\-stringbin\-\_\-elements (
+\begin{DoxyParamCaption}
+\item[{F\-I\-L\-E $\ast$}]{output, }
+\item[{{\bf S\-T\-R\-I\-N\-G\-B\-I\-N} $\ast$}]{l, }
+\item[{long}]{maxcols}
+\end{DoxyParamCaption}
+)}}\label{t__io_8h_ab07fcded5a25836bd4f95399f6894b8d}
+
+
+ Write a list of strings to a file 
+
+Definition at line 2758 of file t\-\_\-io.\-c.
+
+
+
+References co, L\-O\-N\-G\-V\-E\-C\-T\-O\-R\-::co, st\-::co, st\-::index, st\-::isdynamic, O\-K, and t\-\_\-error().
+
+\hypertarget{t__io_8h_a4ae7107b19e5b59f373ff58fb1c9b639}{\index{t\-\_\-io.\-h@{t\-\_\-io.\-h}!write\-\_\-stringsarray\-\_\-elements@{write\-\_\-stringsarray\-\_\-elements}}
+\index{write\-\_\-stringsarray\-\_\-elements@{write\-\_\-stringsarray\-\_\-elements}!t_io.h@{t\-\_\-io.\-h}}
+\subsubsection[{write\-\_\-stringsarray\-\_\-elements}]{\setlength{\rightskip}{0pt plus 5cm}void write\-\_\-stringsarray\-\_\-elements (
+\begin{DoxyParamCaption}
+\item[{F\-I\-L\-E $\ast$}]{outputfile, }
+\item[{{\bf S\-T\-R\-I\-N\-G\-B\-I\-N} $\ast$}]{V}
+\end{DoxyParamCaption}
+)}}\label{t__io_8h_a4ae7107b19e5b59f373ff58fb1c9b639}
+
+
+ 
+
+Definition at line 10551 of file t\-\_\-io.\-c.
+
+
+
+References st\-::co, st\-::index, st\-::isdynamic, and t\-\_\-error().
+
+\hypertarget{t__io_8h_a7ea071c3ddf7d130c7ccec4c85322ca9}{\index{t\-\_\-io.\-h@{t\-\_\-io.\-h}!write\-\_\-turtle@{write\-\_\-turtle}}
+\index{write\-\_\-turtle@{write\-\_\-turtle}!t_io.h@{t\-\_\-io.\-h}}
+\subsubsection[{write\-\_\-turtle}]{\setlength{\rightskip}{0pt plus 5cm}void write\-\_\-turtle (
+\begin{DoxyParamCaption}
+\item[{F\-I\-L\-E $\ast$}]{outputfile, }
+\item[{char $\ast$}]{creator, }
+\item[{char $\ast$}]{inputs}
+\end{DoxyParamCaption}
+)}}\label{t__io_8h_a7ea071c3ddf7d130c7ccec4c85322ca9}
+Name\-: write\-\_\-turtle
+
+Synopsis\-: void \hyperlink{t__io_8h_a7ea071c3ddf7d130c7ccec4c85322ca9}{write\-\_\-turtle(\-F\-I\-L\-E $\ast$ ,char $\ast$,char $\ast$)};
+
+Version\-: 1.\-0
+
+Description\-: writes\-: This is a turtle file and the date on a file. It also write\-:
+
+1) the name of the programs that created the file and 2) the files whose elaboration generated the file
+
+Authors \& Date\-: Riccardo Rigon, September 1997, November 1987
+
+F\-I\-L\-E\-: L\-I\-B\-R\-A\-R\-I\-E\-S/\-B\-A\-S\-I\-C\-S/t\-\_\-io.\-h, L\-I\-B\-R\-A\-R\-I\-E\-S/\-B\-A\-S\-I\-C\-S/t\-\_\-io.\-c
+
+Inputs\-: the pointer to the file where to write and 1) and 2) above
+
+Return\-: void
+
+See Also\-: read\-\_\-comment
+
+Keywords\-: turtle file
+
+Examples\-: 1.\-example.\-c.
+
+
+
+ 
+
+Definition at line 10738 of file t\-\_\-io.\-c.
+
+
+
+References t\-\_\-error().
+

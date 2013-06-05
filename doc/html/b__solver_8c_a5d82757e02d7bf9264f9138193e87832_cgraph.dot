@@ -1,0 +1,24 @@
+digraph "t_st_operator_element_no_dirichlet"
+{
+  bgcolor="transparent";
+  edge [fontname="FreeSans",fontsize="10",labelfontname="FreeSans",labelfontsize="10"];
+  node [fontname="FreeSans",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="t_st_operator_element\l_no_dirichlet",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node2 [label="t_st_advection_operator\l_element",height=0.2,width=0.4,color="black",URL="$b__v__advection_8c.html#a5aeb3dfcddcdffbfeccd32979db2cb49"];
+  Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node3 [label="water_surface_elevation_mean",height=0.2,width=0.4,color="black",URL="$b__solver_8c.html#a91803fd42436b7e4151bbd2e57be7d41"];
+  Node2 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node4 [label="vertical_area_surf",height=0.2,width=0.4,color="black",URL="$b__volumes_8c.html#a03db2e763463748d2af87419e099363c"];
+  Node4 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node5 [label="stop_execution",height=0.2,width=0.4,color="black",URL="$t__utilities_8h.html#aad115bd95a94025215aa780dfcf894aa"];
+  Node2 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node6 [label="symmetric_surface_velocity",height=0.2,width=0.4,color="black",URL="$b__v__advection_8c.html#a90b462038ce0e2e224027de0a94b58d0"];
+  Node1 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node7 [label="t_st_operator_element_subs",height=0.2,width=0.4,color="black",URL="$b__solver_8c.html#aa28812ccdb9aa194c69d311db3b6648e"];
+  Node7 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node7 -> Node8 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node8 [label="vertical_area_subs",height=0.2,width=0.4,color="black",URL="$b__volumes_8c.html#aba354cc90060c9d911bd47a7c98170cf"];
+  Node8 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+}

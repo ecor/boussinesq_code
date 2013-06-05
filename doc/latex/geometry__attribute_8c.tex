@@ -1,0 +1,385 @@
+\hypertarget{geometry__attribute_8c}{\section{B\-G\-E\-O\-M\-E\-T\-R\-Y/geometry\-\_\-attribute.c File Reference}
+\label{geometry__attribute_8c}\index{B\-G\-E\-O\-M\-E\-T\-R\-Y/geometry\-\_\-attribute.\-c@{B\-G\-E\-O\-M\-E\-T\-R\-Y/geometry\-\_\-attribute.\-c}}
+}
+{\ttfamily \#include \char`\"{}turtle.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}geometry.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}t\-\_\-datamanipulation.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}geometry\-\_\-utilities.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}geometry\-\_\-attribute.\-h\char`\"{}}\\*
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{geometry__attribute_8c_af372656f8bc77a8da3aff415413968de}{N\-O\-\_\-\-I\-N\-T\-E\-R\-S\-E\-C\-T\-I\-O\-N}~-\/99
+\item 
+\#define \hyperlink{geometry__attribute_8c_aff0fa3a7735ac0218d293d0ee2b8f12e}{N\-U\-L\-L\-\_\-\-V\-A\-L\-U\-E}~-\/99
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{structpolygon__connection__attributes}{polygon\-\_\-connection\-\_\-attributes} $\ast$ \hyperlink{geometry__attribute_8c_ab0a5b4bd13953a07f4a301c3fb952419}{get\-\_\-connection} (\hyperlink{struct_p_o_l_y_g_o_n}{P\-O\-L\-Y\-G\-O\-N} $\ast$polygon, \hyperlink{struct_p_o_l_y_g_o_n_v_e_c_t_o_r}{P\-O\-L\-Y\-G\-O\-N\-V\-E\-C\-T\-O\-R} $\ast$polygons, long boundary, long displacement, short print)
+\item 
+\hyperlink{structpolygon__connection__attribute__array}{polygon\-\_\-connection\-\_\-attribute\-\_\-array} $\ast$ \hyperlink{geometry__attribute_8c_a53d31b98f02eddc1cf683836d2880616}{new\-\_\-connection\-\_\-attributes} (long nh)
+\item 
+\hyperlink{structpolygon__connection__attribute__array}{polygon\-\_\-connection\-\_\-attribute\-\_\-array} $\ast$ \hyperlink{geometry__attribute_8c_a4dff167d006a777adcb5de1f9e9dae37}{get\-\_\-connection\-\_\-array} (\hyperlink{struct_p_o_l_y_g_o_n_v_e_c_t_o_r}{P\-O\-L\-Y\-G\-O\-N\-V\-E\-C\-T\-O\-R} $\ast$polygons, long boundary, long displacement, short print)
+\item 
+int \hyperlink{geometry__attribute_8c_acd91cb7c91abf686fbab1a963de08fbe}{write\-\_\-polygonconnectionattributearray} (char $\ast$filename, \hyperlink{structpolygon__connection__attribute__array}{polygon\-\_\-connection\-\_\-attribute\-\_\-array} $\ast$pca)
+\item 
+int \hyperlink{geometry__attribute_8c_a58b7530517e681072c0c1bbcf0833ab3}{fprint\-\_\-polygonconnectionattributearray} (char $\ast$filename, \hyperlink{structpolygon__connection__attribute__array}{polygon\-\_\-connection\-\_\-attribute\-\_\-array} $\ast$pca)
+\item 
+int \hyperlink{geometry__attribute_8c_af7ad269c0c6f4b6147cd298d55fc61ad}{connections\-\_\-symmetry} (\hyperlink{structpolygon__connection__attribute__array}{polygon\-\_\-connection\-\_\-attribute\-\_\-array} $\ast$pca, long boundary)
+\item 
+\hyperlink{structpolygon__connection__attributes}{polygon\-\_\-connection\-\_\-attributes} $\ast$ \hyperlink{geometry__attribute_8c_adf0b251be63b8e8e23f0802841d01517}{get\-\_\-connection\-\_\-squares} (\hyperlink{struct_p_o_l_y_g_o_n}{P\-O\-L\-Y\-G\-O\-N} $\ast$polygon, \hyperlink{struct_p_o_l_y_g_o_n_v_e_c_t_o_r}{P\-O\-L\-Y\-G\-O\-N\-V\-E\-C\-T\-O\-R} $\ast$polygons, long boundary, long novalue, long r, long c, \hyperlink{struct_l_o_n_g_m_a_t_r_i_x}{L\-O\-N\-G\-M\-A\-T\-R\-I\-X} $\ast$mask, short print)
+\item 
+\hyperlink{structpolygon__connection__attribute__array}{polygon\-\_\-connection\-\_\-attribute\-\_\-array} $\ast$ \hyperlink{geometry__attribute_8c_a763fd7ef8c5e6047e407a77a937bda9d}{get\-\_\-connection\-\_\-array\-\_\-squares} (\hyperlink{struct_p_o_l_y_g_o_n_v_e_c_t_o_r}{P\-O\-L\-Y\-G\-O\-N\-V\-E\-C\-T\-O\-R} $\ast$polygons, long boundary, long novalue, \hyperlink{struct_l_o_n_g_m_a_t_r_i_x}{L\-O\-N\-G\-M\-A\-T\-R\-I\-X} $\ast$pixels, short print)
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{geometry__attribute_8c_af372656f8bc77a8da3aff415413968de}{\index{geometry\-\_\-attribute.\-c@{geometry\-\_\-attribute.\-c}!N\-O\-\_\-\-I\-N\-T\-E\-R\-S\-E\-C\-T\-I\-O\-N@{N\-O\-\_\-\-I\-N\-T\-E\-R\-S\-E\-C\-T\-I\-O\-N}}
+\index{N\-O\-\_\-\-I\-N\-T\-E\-R\-S\-E\-C\-T\-I\-O\-N@{N\-O\-\_\-\-I\-N\-T\-E\-R\-S\-E\-C\-T\-I\-O\-N}!geometry_attribute.c@{geometry\-\_\-attribute.\-c}}
+\subsubsection[{N\-O\-\_\-\-I\-N\-T\-E\-R\-S\-E\-C\-T\-I\-O\-N}]{\setlength{\rightskip}{0pt plus 5cm}\#define N\-O\-\_\-\-I\-N\-T\-E\-R\-S\-E\-C\-T\-I\-O\-N~-\/99}}\label{geometry__attribute_8c_af372656f8bc77a8da3aff415413968de}
+
+
+Definition at line 34 of file geometry\-\_\-attribute.\-c.
+
+
+
+Referenced by get\-\_\-connection(), and get\-\_\-connection\-\_\-squares().
+
+\hypertarget{geometry__attribute_8c_aff0fa3a7735ac0218d293d0ee2b8f12e}{\index{geometry\-\_\-attribute.\-c@{geometry\-\_\-attribute.\-c}!N\-U\-L\-L\-\_\-\-V\-A\-L\-U\-E@{N\-U\-L\-L\-\_\-\-V\-A\-L\-U\-E}}
+\index{N\-U\-L\-L\-\_\-\-V\-A\-L\-U\-E@{N\-U\-L\-L\-\_\-\-V\-A\-L\-U\-E}!geometry_attribute.c@{geometry\-\_\-attribute.\-c}}
+\subsubsection[{N\-U\-L\-L\-\_\-\-V\-A\-L\-U\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define N\-U\-L\-L\-\_\-\-V\-A\-L\-U\-E~-\/99}}\label{geometry__attribute_8c_aff0fa3a7735ac0218d293d0ee2b8f12e}
+
+
+Definition at line 35 of file geometry\-\_\-attribute.\-c.
+
+
+
+Referenced by fprint\-\_\-polygonconnectionattributearray(), get\-\_\-connection(), get\-\_\-connection\-\_\-squares(), and write\-\_\-polygonconnectionattributearray().
+
+
+
+\subsection{Function Documentation}
+\hypertarget{geometry__attribute_8c_af7ad269c0c6f4b6147cd298d55fc61ad}{\index{geometry\-\_\-attribute.\-c@{geometry\-\_\-attribute.\-c}!connections\-\_\-symmetry@{connections\-\_\-symmetry}}
+\index{connections\-\_\-symmetry@{connections\-\_\-symmetry}!geometry_attribute.c@{geometry\-\_\-attribute.\-c}}
+\subsubsection[{connections\-\_\-symmetry}]{\setlength{\rightskip}{0pt plus 5cm}int connections\-\_\-symmetry (
+\begin{DoxyParamCaption}
+\item[{{\bf polygon\-\_\-connection\-\_\-attribute\-\_\-array} $\ast$}]{pca, }
+\item[{long}]{boundary}
+\end{DoxyParamCaption}
+)}}\label{geometry__attribute_8c_af7ad269c0c6f4b6147cd298d55fc61ad}
+
+\begin{DoxyParams}{Parameters}
+{\em pca} & -\/ (polygon\-\_\-connection\-\_\-attrivute\-\_\-array $\ast$) the attributte array of which the symmetry is verified; \\
+\hline
+{\em boundary} & -\/ (long) -\/ boundary indicator\\
+\hline
+\end{DoxyParams}
+\begin{DoxyAuthor}{Author}
+Emanuele Cordano 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+March 2008
+\end{DoxyDate}
+symmetry is assumed 
+
+Definition at line 278 of file geometry\-\_\-attribute.\-c.
+
+
+
+References polygon\-\_\-connection\-\_\-attributes\-::connections, polygon\-\_\-connection\-\_\-attribute\-\_\-array\-::element, polygon\-\_\-connection\-\_\-attribute\-\_\-array\-::nl, and L\-O\-N\-G\-V\-E\-C\-T\-O\-R\-::nl.
+
+
+
+Referenced by get\-\_\-square\-\_\-grid().
+
+\hypertarget{geometry__attribute_8c_a58b7530517e681072c0c1bbcf0833ab3}{\index{geometry\-\_\-attribute.\-c@{geometry\-\_\-attribute.\-c}!fprint\-\_\-polygonconnectionattributearray@{fprint\-\_\-polygonconnectionattributearray}}
+\index{fprint\-\_\-polygonconnectionattributearray@{fprint\-\_\-polygonconnectionattributearray}!geometry_attribute.c@{geometry\-\_\-attribute.\-c}}
+\subsubsection[{fprint\-\_\-polygonconnectionattributearray}]{\setlength{\rightskip}{0pt plus 5cm}int fprint\-\_\-polygonconnectionattributearray (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{filename, }
+\item[{{\bf polygon\-\_\-connection\-\_\-attribute\-\_\-array} $\ast$}]{pca}
+\end{DoxyParamCaption}
+)}}\label{geometry__attribute_8c_a58b7530517e681072c0c1bbcf0833ab3}
+\begin{DoxyAuthor}{Author}
+Emanuele Cordano  November 2008
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em name} & -\/ (char $\ast$)name of file where to write the linevector properties \\
+\hline
+{\em pca} & -\/ (\hyperlink{structpolygon__connection__attribute__array}{polygon\-\_\-connection\-\_\-attribute\-\_\-array} $\ast$) the \hyperlink{structpolygon__connection__attribute__array}{polygon\-\_\-connection\-\_\-attribute\-\_\-array} to be printed\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 if the \hyperlink{structpolygon__connection__attribute__array}{polygon\-\_\-connection\-\_\-attribute\-\_\-array} is written correctly, -\/1 otherwise
+\end{DoxyReturn}
+P\-R\-I\-N\-T \hyperlink{struct_h_e_a_d_e_r}{H\-E\-A\-D\-E\-R}
+
+end print header 
+
+Definition at line 220 of file geometry\-\_\-attribute.\-c.
+
+
+
+References polygon\-\_\-connection\-\_\-attributes\-::connections, polygon\-\_\-connection\-\_\-attributes\-::d\-\_\-connections, polygon\-\_\-connection\-\_\-attribute\-\_\-array\-::element, L\-O\-N\-G\-V\-E\-C\-T\-O\-R\-::nh, N\-L, polygon\-\_\-connection\-\_\-attribute\-\_\-array\-::nl, L\-O\-N\-G\-V\-E\-C\-T\-O\-R\-::nl, D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R\-::nl, and N\-U\-L\-L\-\_\-\-V\-A\-L\-U\-E.
+
+\hypertarget{geometry__attribute_8c_ab0a5b4bd13953a07f4a301c3fb952419}{\index{geometry\-\_\-attribute.\-c@{geometry\-\_\-attribute.\-c}!get\-\_\-connection@{get\-\_\-connection}}
+\index{get\-\_\-connection@{get\-\_\-connection}!geometry_attribute.c@{geometry\-\_\-attribute.\-c}}
+\subsubsection[{get\-\_\-connection}]{\setlength{\rightskip}{0pt plus 5cm}{\bf polygon\-\_\-connection\-\_\-attributes}$\ast$ get\-\_\-connection (
+\begin{DoxyParamCaption}
+\item[{{\bf P\-O\-L\-Y\-G\-O\-N} $\ast$}]{polygon, }
+\item[{{\bf P\-O\-L\-Y\-G\-O\-N\-V\-E\-C\-T\-O\-R} $\ast$}]{polygons, }
+\item[{long}]{boundary, }
+\item[{long}]{displacement, }
+\item[{short}]{print}
+\end{DoxyParamCaption}
+)}}\label{geometry__attribute_8c_ab0a5b4bd13953a07f4a301c3fb952419}
+\begin{DoxyVerb}BGEOMETRY BUILDS THE MESH FROM A RASTER FOR THE BOUSSINESQ MODEL
+\end{DoxyVerb}
+ B\-G\-E\-O\-M\-E\-T\-R\-Y Version 0.\-9375 K\-Mackenzie
+
+file \hyperlink{geometry__attribute_8h}{geometry\-\_\-attribute.\-h}
+
+Copyright, 2009 Emanuele Cordano and Riccardo Rigon
+
+This file is part of B\-G\-E\-O\-M\-E\-T\-R\-Y. B\-G\-E\-O\-M\-E\-T\-R\-Y is free software\-: you can redistribute it and/or modify it under the terms of the G\-N\-U General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
+
+B\-G\-E\-O\-M\-E\-T\-R\-Y is distributed in the hope that it will be useful, but W\-I\-T\-H\-O\-U\-T A\-N\-Y W\-A\-R\-R\-A\-N\-T\-Y; without even the implied warranty of M\-E\-R\-C\-H\-A\-N\-T\-A\-B\-I\-L\-I\-T\-Y or F\-I\-T\-N\-E\-S\-S F\-O\-R A P\-A\-R\-T\-I\-C\-U\-L\-A\-R P\-U\-R\-P\-O\-S\-E. See the G\-N\-U General Public License for more details.
+
+You should have received a copy of the G\-N\-U General Public License along with this program. If not, see \href{http://www.gnu.org/licenses/}{\tt http\-://www.\-gnu.\-org/licenses/}.
+
+function header 
+\begin{DoxyParams}{Parameters}
+{\em polygon} & -\/ (\hyperlink{struct_p_o_l_y_g_o_n}{P\-O\-L\-Y\-G\-O\-N} $\ast$) polygon to which link are referred \\
+\hline
+{\em polygons} & -\/ (P\-O\-L\-Y\-G\-O\-N\-S $\ast$) vector of polygons \\
+\hline
+{\em boundary} & -\/ (long) long value which indetifies the boundary \\
+\hline
+{\em displacement} & -\/ (long) displacement in the P\-O\-L\-Y\-N\-G\-O\-N\-V\-E\-C\-T\-O\-R polygons around the index value of polygon where to find the connections \\
+\hline
+{\em print} & -\/ (short)\\
+\hline
+\end{DoxyParams}
+\begin{DoxyAuthor}{Author}
+Emanuele Cordano 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+November 2008
+\end{DoxyDate}
+\begin{DoxyReturn}{Returns}
+a poygon\-\_\-connection\-\_\-atributes struct for a given polygon (polygon) within a polygon array (polygons)
+\end{DoxyReturn}
+extremes of the search interval 
+
+Definition at line 37 of file geometry\-\_\-attribute.\-c.
+
+
+
+References polygon\-\_\-connection\-\_\-attributes\-::connections, polygon\-\_\-connection\-\_\-attributes\-::d\-\_\-connections, P\-O\-L\-Y\-G\-O\-N\-::edge\-\_\-indices, P\-O\-L\-Y\-G\-O\-N\-V\-E\-C\-T\-O\-R\-::element, P\-O\-L\-Y\-G\-O\-N\-::index, initialize\-\_\-doublevector(), initialize\-\_\-longvector(), new\-\_\-doublevector(), new\-\_\-longvector(), P\-O\-L\-Y\-G\-O\-N\-V\-E\-C\-T\-O\-R\-::nh, L\-O\-N\-G\-V\-E\-C\-T\-O\-R\-::nh, P\-O\-L\-Y\-G\-O\-N\-V\-E\-C\-T\-O\-R\-::nl, N\-O\-\_\-\-I\-N\-T\-E\-R\-S\-E\-C\-T\-I\-O\-N, N\-U\-L\-L\-\_\-\-V\-A\-L\-U\-E, and shared\-\_\-edges().
+
+
+
+Referenced by get\-\_\-connection\-\_\-array().
+
+\hypertarget{geometry__attribute_8c_a4dff167d006a777adcb5de1f9e9dae37}{\index{geometry\-\_\-attribute.\-c@{geometry\-\_\-attribute.\-c}!get\-\_\-connection\-\_\-array@{get\-\_\-connection\-\_\-array}}
+\index{get\-\_\-connection\-\_\-array@{get\-\_\-connection\-\_\-array}!geometry_attribute.c@{geometry\-\_\-attribute.\-c}}
+\subsubsection[{get\-\_\-connection\-\_\-array}]{\setlength{\rightskip}{0pt plus 5cm}{\bf polygon\-\_\-connection\-\_\-attribute\-\_\-array}$\ast$ get\-\_\-connection\-\_\-array (
+\begin{DoxyParamCaption}
+\item[{{\bf P\-O\-L\-Y\-G\-O\-N\-V\-E\-C\-T\-O\-R} $\ast$}]{polygons, }
+\item[{long}]{boundary, }
+\item[{long}]{displacement, }
+\item[{short}]{print}
+\end{DoxyParamCaption}
+)}}\label{geometry__attribute_8c_a4dff167d006a777adcb5de1f9e9dae37}
+
+\begin{DoxyParams}{Parameters}
+{\em polygons} & -\/ (P\-O\-L\-Y\-G\-O\-N\-S $\ast$) vector of polygons \\
+\hline
+{\em boundary} & -\/ (long) long value which indetifies the boundary \\
+\hline
+{\em displacement} & -\/ (long) displacement in the P\-O\-L\-Y\-N\-G\-O\-N\-V\-E\-C\-T\-O\-R polygons around the index value of polygon where to find the connections \\
+\hline
+{\em print} & -\/ (short)\\
+\hline
+\end{DoxyParams}
+\begin{DoxyAuthor}{Author}
+Emanuele Cordano 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+November 2008
+\end{DoxyDate}
+\begin{DoxyReturn}{Returns}
+build a a poygon\-\_\-connection\-\_\-atribute\-\_\-array struct for a given array of polygons
+\end{DoxyReturn}
+
+
+Definition at line 122 of file geometry\-\_\-attribute.\-c.
+
+
+
+References polygon\-\_\-connection\-\_\-attributes\-::connections, P\-O\-L\-Y\-G\-O\-N\-V\-E\-C\-T\-O\-R\-::element, polygon\-\_\-connection\-\_\-attribute\-\_\-array\-::element, get\-\_\-connection(), new\-\_\-connection\-\_\-attributes(), P\-O\-L\-Y\-G\-O\-N\-V\-E\-C\-T\-O\-R\-::nh, polygon\-\_\-connection\-\_\-attribute\-\_\-array\-::nh, L\-O\-N\-G\-V\-E\-C\-T\-O\-R\-::nh, and polygon\-\_\-connection\-\_\-attribute\-\_\-array\-::nl.
+
+\hypertarget{geometry__attribute_8c_a763fd7ef8c5e6047e407a77a937bda9d}{\index{geometry\-\_\-attribute.\-c@{geometry\-\_\-attribute.\-c}!get\-\_\-connection\-\_\-array\-\_\-squares@{get\-\_\-connection\-\_\-array\-\_\-squares}}
+\index{get\-\_\-connection\-\_\-array\-\_\-squares@{get\-\_\-connection\-\_\-array\-\_\-squares}!geometry_attribute.c@{geometry\-\_\-attribute.\-c}}
+\subsubsection[{get\-\_\-connection\-\_\-array\-\_\-squares}]{\setlength{\rightskip}{0pt plus 5cm}{\bf polygon\-\_\-connection\-\_\-attribute\-\_\-array}$\ast$ get\-\_\-connection\-\_\-array\-\_\-squares (
+\begin{DoxyParamCaption}
+\item[{{\bf P\-O\-L\-Y\-G\-O\-N\-V\-E\-C\-T\-O\-R} $\ast$}]{polygons, }
+\item[{long}]{boundary, }
+\item[{long}]{novalue, }
+\item[{{\bf L\-O\-N\-G\-M\-A\-T\-R\-I\-X} $\ast$}]{pixels, }
+\item[{short}]{print}
+\end{DoxyParamCaption}
+)}}\label{geometry__attribute_8c_a763fd7ef8c5e6047e407a77a937bda9d}
+
+\begin{DoxyParams}{Parameters}
+{\em polygons} & -\/ (P\-O\-L\-Y\-G\-O\-N\-S $\ast$) vector of polygons \\
+\hline
+{\em boundary} & -\/ (long) long value which indetifies the boundary \\
+\hline
+{\em novalue} & -\/ null value \\
+\hline
+{\em pixels} & -\/ (L\-O\-N\-G\-T\-M\-A\-T\-R\-I\-X $\ast$) -\/ matrix of the indices of the pixels \\
+\hline
+{\em print} & -\/ (short)\\
+\hline
+\end{DoxyParams}
+\begin{DoxyAuthor}{Author}
+Emanuele Cordano 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+July 2009
+\end{DoxyDate}
+\begin{DoxyReturn}{Returns}
+build a a poygon\-\_\-connection\-\_\-atribute\-\_\-array struct for a given array of polygons
+\end{DoxyReturn}
+
+
+Definition at line 383 of file geometry\-\_\-attribute.\-c.
+
+
+
+References polygon\-\_\-connection\-\_\-attributes\-::connections, P\-O\-L\-Y\-G\-O\-N\-V\-E\-C\-T\-O\-R\-::element, polygon\-\_\-connection\-\_\-attribute\-\_\-array\-::element, get\-\_\-connection\-\_\-squares(), L\-O\-N\-G\-M\-A\-T\-R\-I\-X\-::ncl, new\-\_\-connection\-\_\-attributes(), P\-O\-L\-Y\-G\-O\-N\-V\-E\-C\-T\-O\-R\-::nh, polygon\-\_\-connection\-\_\-attribute\-\_\-array\-::nh, L\-O\-N\-G\-V\-E\-C\-T\-O\-R\-::nh, polygon\-\_\-connection\-\_\-attribute\-\_\-array\-::nl, and L\-O\-N\-G\-M\-A\-T\-R\-I\-X\-::nrl.
+
+
+
+Referenced by get\-\_\-square\-\_\-grid().
+
+\hypertarget{geometry__attribute_8c_adf0b251be63b8e8e23f0802841d01517}{\index{geometry\-\_\-attribute.\-c@{geometry\-\_\-attribute.\-c}!get\-\_\-connection\-\_\-squares@{get\-\_\-connection\-\_\-squares}}
+\index{get\-\_\-connection\-\_\-squares@{get\-\_\-connection\-\_\-squares}!geometry_attribute.c@{geometry\-\_\-attribute.\-c}}
+\subsubsection[{get\-\_\-connection\-\_\-squares}]{\setlength{\rightskip}{0pt plus 5cm}{\bf polygon\-\_\-connection\-\_\-attributes}$\ast$ get\-\_\-connection\-\_\-squares (
+\begin{DoxyParamCaption}
+\item[{{\bf P\-O\-L\-Y\-G\-O\-N} $\ast$}]{polygon, }
+\item[{{\bf P\-O\-L\-Y\-G\-O\-N\-V\-E\-C\-T\-O\-R} $\ast$}]{polygons, }
+\item[{long}]{boundary, }
+\item[{long}]{novalue, }
+\item[{long}]{r, }
+\item[{long}]{c, }
+\item[{{\bf L\-O\-N\-G\-M\-A\-T\-R\-I\-X} $\ast$}]{mask, }
+\item[{short}]{print}
+\end{DoxyParamCaption}
+)}}\label{geometry__attribute_8c_adf0b251be63b8e8e23f0802841d01517}
+
+\begin{DoxyParams}{Parameters}
+{\em polygon} & -\/ (\hyperlink{struct_p_o_l_y_g_o_n}{P\-O\-L\-Y\-G\-O\-N} $\ast$) polygon to which link are referred \\
+\hline
+{\em polygons} & -\/ (P\-O\-L\-Y\-G\-O\-N\-S $\ast$) vector of polygons \\
+\hline
+{\em boundary} & -\/ (long) long value which indetifies the boundary \\
+\hline
+{\em novalue} & -\/ (long) null value used in the pixel index matrix \\
+\hline
+{\em r} & -\/ (long) row \\
+\hline
+{\em c} & -\/ (long) column \\
+\hline
+{\em (\-L\-O\-N\-G\-M\-A\-T\-R\-I\-X} & $\ast$) pixel index matrix\\
+\hline
+{\em print} & -\/ (long) displacement in the P\-O\-L\-Y\-N\-G\-O\-N\-V\-E\-C\-T\-O\-R polygons around the index value of polygon where to find the connections\\
+\hline
+\end{DoxyParams}
+\begin{DoxyAuthor}{Author}
+Emanuele Cordano 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+July 2009
+\end{DoxyDate}
+\begin{DoxyReturn}{Returns}
+a poygon\-\_\-connection\-\_\-atributes struct for a given polygon (polygon) within a polygon array (polygons)
+\end{DoxyReturn}
+extremes of the search interval 
+
+Definition at line 315 of file geometry\-\_\-attribute.\-c.
+
+
+
+References polygon\-\_\-connection\-\_\-attributes\-::connections, polygon\-\_\-connection\-\_\-attributes\-::d\-\_\-connections, P\-O\-L\-Y\-G\-O\-N\-::edge\-\_\-indices, P\-O\-L\-Y\-G\-O\-N\-V\-E\-C\-T\-O\-R\-::element, P\-O\-L\-Y\-G\-O\-N\-::index, initialize\-\_\-doublevector(), initialize\-\_\-longvector(), L\-O\-N\-G\-M\-A\-T\-R\-I\-X\-::nch, L\-O\-N\-G\-M\-A\-T\-R\-I\-X\-::ncl, new\-\_\-doublevector(), new\-\_\-longvector(), L\-O\-N\-G\-V\-E\-C\-T\-O\-R\-::nh, N\-O\-\_\-\-I\-N\-T\-E\-R\-S\-E\-C\-T\-I\-O\-N, L\-O\-N\-G\-M\-A\-T\-R\-I\-X\-::nrh, L\-O\-N\-G\-M\-A\-T\-R\-I\-X\-::nrl, N\-U\-L\-L\-\_\-\-V\-A\-L\-U\-E, and shared\-\_\-edges().
+
+
+
+Referenced by get\-\_\-connection\-\_\-array\-\_\-squares().
+
+\hypertarget{geometry__attribute_8c_a53d31b98f02eddc1cf683836d2880616}{\index{geometry\-\_\-attribute.\-c@{geometry\-\_\-attribute.\-c}!new\-\_\-connection\-\_\-attributes@{new\-\_\-connection\-\_\-attributes}}
+\index{new\-\_\-connection\-\_\-attributes@{new\-\_\-connection\-\_\-attributes}!geometry_attribute.c@{geometry\-\_\-attribute.\-c}}
+\subsubsection[{new\-\_\-connection\-\_\-attributes}]{\setlength{\rightskip}{0pt plus 5cm}{\bf polygon\-\_\-connection\-\_\-attribute\-\_\-array}$\ast$ new\-\_\-connection\-\_\-attributes (
+\begin{DoxyParamCaption}
+\item[{long}]{nh}
+\end{DoxyParamCaption}
+)}}\label{geometry__attribute_8c_a53d31b98f02eddc1cf683836d2880616}
+\begin{DoxyAuthor}{Author}
+Emanuele Cordano 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+November 2008
+\end{DoxyDate}
+\begin{DoxyReturn}{Returns}
+allocates a new polygon connection attributes vector with nh elements
+\end{DoxyReturn}
+
+
+Definition at line 98 of file geometry\-\_\-attribute.\-c.
+
+
+
+References polygon\-\_\-connection\-\_\-attribute\-\_\-array\-::element, is\-Dynamic, polygon\-\_\-connection\-\_\-attribute\-\_\-array\-::isdynamic, polygon\-\_\-connection\-\_\-attribute\-\_\-array\-::nh, N\-L, polygon\-\_\-connection\-\_\-attribute\-\_\-array\-::nl, N\-R\-\_\-\-E\-N\-D, and t\-\_\-error().
+
+
+
+Referenced by get\-\_\-connection\-\_\-array(), get\-\_\-connection\-\_\-array\-\_\-squares(), new\-\_\-connection\-\_\-array\-\_\-from\-\_\-connection\-\_\-array(), and read\-\_\-connection\-\_\-attribute\-\_\-array().
+
+\hypertarget{geometry__attribute_8c_acd91cb7c91abf686fbab1a963de08fbe}{\index{geometry\-\_\-attribute.\-c@{geometry\-\_\-attribute.\-c}!write\-\_\-polygonconnectionattributearray@{write\-\_\-polygonconnectionattributearray}}
+\index{write\-\_\-polygonconnectionattributearray@{write\-\_\-polygonconnectionattributearray}!geometry_attribute.c@{geometry\-\_\-attribute.\-c}}
+\subsubsection[{write\-\_\-polygonconnectionattributearray}]{\setlength{\rightskip}{0pt plus 5cm}int write\-\_\-polygonconnectionattributearray (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{filename, }
+\item[{{\bf polygon\-\_\-connection\-\_\-attribute\-\_\-array} $\ast$}]{pca}
+\end{DoxyParamCaption}
+)}}\label{geometry__attribute_8c_acd91cb7c91abf686fbab1a963de08fbe}
+\begin{DoxyAuthor}{Author}
+Emanuele Cordano  November 2008
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em name} & -\/ (char $\ast$)name of file where to write the linevector properties \\
+\hline
+{\em pca} & -\/ (\hyperlink{structpolygon__connection__attribute__array}{polygon\-\_\-connection\-\_\-attribute\-\_\-array} $\ast$) the \hyperlink{structpolygon__connection__attribute__array}{polygon\-\_\-connection\-\_\-attribute\-\_\-array} to be printed\\
+\hline
+\end{DoxyParams}
+This functions writes a polygonconnectionattributearray in an ascii files with fluidturle formalism \begin{DoxyReturn}{Returns}
+0 if the \hyperlink{structpolygon__connection__attribute__array}{polygon\-\_\-connection\-\_\-attribute\-\_\-array} is written correctly, -\/1 otherwise
+\end{DoxyReturn}
+P\-R\-I\-N\-T \hyperlink{struct_h_e_a_d_e_r}{H\-E\-A\-D\-E\-R}
+
+end print header 
+
+Definition at line 158 of file geometry\-\_\-attribute.\-c.
+
+
+
+References polygon\-\_\-connection\-\_\-attributes\-::connections, polygon\-\_\-connection\-\_\-attributes\-::d\-\_\-connections, polygon\-\_\-connection\-\_\-attribute\-\_\-array\-::element, polygon\-\_\-connection\-\_\-attribute\-\_\-array\-::nh, L\-O\-N\-G\-V\-E\-C\-T\-O\-R\-::nh, N\-L, polygon\-\_\-connection\-\_\-attribute\-\_\-array\-::nl, L\-O\-N\-G\-V\-E\-C\-T\-O\-R\-::nl, D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R\-::nl, and N\-U\-L\-L\-\_\-\-V\-A\-L\-U\-E.
+
+
+
+Referenced by write\-\_\-grid().
+

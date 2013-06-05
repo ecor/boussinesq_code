@@ -1,0 +1,322 @@
+\hypertarget{b__sources_8c}{\section{Boussinesq/b\-\_\-sources.c File Reference}
+\label{b__sources_8c}\index{Boussinesq/b\-\_\-sources.\-c@{Boussinesq/b\-\_\-sources.\-c}}
+}
+{\ttfamily \#include \char`\"{}turtle.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}t\-\_\-alloc.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}t\-\_\-io.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}t\-\_\-datamanipulation.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}t\-\_\-utilities.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}rw\-\_\-maps.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}geometry.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}g\-\_\-raster2plvector.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}bigcells2.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}geometry2.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}b\-\_\-utilities.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}b\-\_\-solver.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}b\-\_\-volumes.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}doublevector\-\_\-utilities.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}preconditioned\-\_\-conjugate\-\_\-gradient.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}keywords\-\_\-file\-\_\-b.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}b\-\_\-sources.\-h\char`\"{}}\\*
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{b__sources_8c_a5eb104111701f0bb34a5d8bffd2f0ddb}{get\-\_\-sources} (double t, \hyperlink{struct_d_o_u_b_l_e_v_e_c_t_o_r}{D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} $\ast$\hyperlink{b__solver_8c_a04a25d32cf47c13341c9c9e6cab145ae}{sources})
+\item 
+\hyperlink{struct_s___t_i_m_e_s}{S\-\_\-\-T\-I\-M\-E\-S} $\ast$ \hyperlink{b__sources_8c_a85eab37f66725bd25bdddce92cf5a773}{get\-\_\-s\-\_\-times} (char $\ast$filename, short print)
+\item 
+void \hyperlink{b__sources_8c_a2ffdd69401a92b40ff9cc9b6274d4395}{free\-\_\-s\-\_\-times} (\hyperlink{struct_s___t_i_m_e_s}{S\-\_\-\-T\-I\-M\-E\-S} $\ast$s\-\_\-t)
+\item 
+int \hyperlink{b__sources_8c_ab175eac7f8664ba91d5a9f3773457344}{get\-\_\-dirichletsnode} (double t, \hyperlink{struct_d_o_u_b_l_e_v_e_c_t_o_r}{D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} $\ast$\hyperlink{b__v__advection_8c_aa9b4bc229995ad30e44cf2eaeb5d4756}{dirichlet})
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{turtle_8h_ade34e6dff3489a3ddd297f003f01bbd2}{S\-T\-R\-I\-N\-G\-B\-I\-N} $\ast$ \hyperlink{b__sources_8c_a528421ce34267070764970b021f6034a}{filenames}
+\item 
+\hyperlink{struct_d_o_u_b_l_e_s_q_u_a_r_e___g_r_i_d}{D\-O\-U\-B\-L\-E\-S\-Q\-U\-A\-R\-E\-\_\-\-G\-R\-I\-D} $\ast$ \hyperlink{b__sources_8c_a9b5f80541820877b6d4a8841650da32a}{dsq}
+\item 
+\hyperlink{struct_d_o_u_b_l_e___g_r_i_d}{D\-O\-U\-B\-L\-E\-\_\-\-G\-R\-I\-D} $\ast$ \hyperlink{b__sources_8c_ab58c424a59f28ac6b17e7b7f5aae6152}{dgrid}
+\item 
+\hyperlink{struct_d_o_u_b_l_e_r_a_s_t_e_r___m_a_p}{D\-O\-U\-B\-L\-E\-R\-A\-S\-T\-E\-R\-\_\-\-M\-A\-P} $\ast$ \hyperlink{b__sources_8c_a44d81a9ca5648f4ec1c298c7f37fefff}{draster}
+\item 
+\hyperlink{struct_p_a_r_a_m}{P\-A\-R\-A\-M} $\ast$ \hyperlink{b__sources_8c_ad8ac9ce29f12815d417a57b2c0dc31fb}{param}
+\item 
+\hyperlink{struct_f_l_a_g}{F\-L\-A\-G} $\ast$ \hyperlink{b__sources_8c_af669d66807986c96b4927566ae5e8b45}{flag}
+\item 
+\hyperlink{struct_d_o_u_b_l_e_v_e_c_t_o_r}{D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} $\ast$ \hyperlink{b__sources_8c_a48a2ac079f3ec064d28848bcdc54ed7c}{elevation\-\_\-bottom\-\_\-fine}
+\item 
+\hyperlink{struct_d_o_u_b_l_e_v_e_c_t_o_r}{D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} $\ast$ \hyperlink{b__sources_8c_a93f8bd854f98f2abe47c108484cf1c6b}{elevation\-\_\-bottom\-\_\-coarse}
+\item 
+\hyperlink{struct_d_o_u_b_l_e_v_e_c_t_o_r}{D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} $\ast$ \hyperlink{b__sources_8c_a495ebb69c21b8816ee4f7dfe0e1e6d98}{elevation\-\_\-bottom\-\_\-flines}
+\item 
+\hyperlink{struct_d_o_u_b_l_e_v_e_c_t_o_r}{D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} $\ast$ \hyperlink{b__sources_8c_a4cd3286ed17aff6164594f8a2d59f898}{elevation\-\_\-bottom\-\_\-bottom}
+\item 
+\hyperlink{struct_d_o_u_b_l_e_v_e_c_t_o_r}{D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} $\ast$ \hyperlink{b__sources_8c_acd5b5637e9d24f6f2641e08ed439b8b8}{porosity\-\_\-fine}
+\item 
+\hyperlink{struct_d_o_u_b_l_e_v_e_c_t_o_r}{D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} $\ast$ \hyperlink{b__sources_8c_a3ace2c97e74d7e8aad3670b479cb606d}{water\-\_\-surface\-\_\-elevation}
+\item 
+\hyperlink{struct_d_o_u_b_l_e_v_e_c_t_o_r}{D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} $\ast$ \hyperlink{b__sources_8c_a97eff843a1a4985b0746ef826cc27822}{water\-\_\-mass\-\_\-error}
+\item 
+\hyperlink{struct_s___t_i_m_e_s}{S\-\_\-\-T\-I\-M\-E\-S} $\ast$ \hyperlink{b__sources_8c_ac73bbfd9a6e0ad893d203003e268a1be}{s\-\_\-times}
+\item 
+\hyperlink{struct_s___t_i_m_e_s}{S\-\_\-\-T\-I\-M\-E\-S} $\ast$ \hyperlink{b__sources_8c_acdfd95279a09d044eec55a5734ae3025}{dirichlet\-\_\-times}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{DoxyAuthor}{Author}
+Emanuele Cordano
+\end{DoxyAuthor}
+\begin{DoxyAttention}{Attention}
+
+\end{DoxyAttention}
+This file is part of Boussinesq.
+
+Boussinesq is free software\-: you can redistribute it and/or modify it under the terms of the G\-N\-U General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
+
+Boussinesq is distributed in the hope that it will be useful, but W\-I\-T\-H\-O\-U\-T A\-N\-Y W\-A\-R\-R\-A\-N\-T\-Y; without even the implied warranty of M\-E\-R\-C\-H\-A\-N\-T\-A\-B\-I\-L\-I\-T\-Y or F\-I\-T\-N\-E\-S\-S F\-O\-R A P\-A\-R\-T\-I\-C\-U\-L\-A\-R P\-U\-R\-P\-O\-S\-E. See the G\-N\-U General Public License for more details.
+
+You should have received a copy of the G\-N\-U General Public License along with Boussinesq. If not, see \href{http://www.gnu.org/licenses/}{\tt http\-://www.\-gnu.\-org/licenses/}. 
+
+Definition in file \hyperlink{b__sources_8c_source}{b\-\_\-sources.\-c}.
+
+
+
+\subsection{Function Documentation}
+\hypertarget{b__sources_8c_a2ffdd69401a92b40ff9cc9b6274d4395}{\index{b\-\_\-sources.\-c@{b\-\_\-sources.\-c}!free\-\_\-s\-\_\-times@{free\-\_\-s\-\_\-times}}
+\index{free\-\_\-s\-\_\-times@{free\-\_\-s\-\_\-times}!b_sources.c@{b\-\_\-sources.\-c}}
+\subsubsection[{free\-\_\-s\-\_\-times}]{\setlength{\rightskip}{0pt plus 5cm}void free\-\_\-s\-\_\-times (
+\begin{DoxyParamCaption}
+\item[{{\bf S\-\_\-\-T\-I\-M\-E\-S} $\ast$}]{s\-\_\-t}
+\end{DoxyParamCaption}
+)}}\label{b__sources_8c_a2ffdd69401a92b40ff9cc9b6274d4395}
+\begin{DoxyAuthor}{Author}
+Emanuele Cordano 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+29 May 2008
+\end{DoxyDate}
+
+
+Definition at line 166 of file b\-\_\-sources.\-c.
+
+
+
+References free\-\_\-doublevector(), free\-\_\-stringbin(), S\-\_\-\-T\-I\-M\-E\-S\-::s\-\_\-suffixes, and S\-\_\-\-T\-I\-M\-E\-S\-::times.
+
+
+
+Referenced by time\-\_\-loop().
+
+\hypertarget{b__sources_8c_ab175eac7f8664ba91d5a9f3773457344}{\index{b\-\_\-sources.\-c@{b\-\_\-sources.\-c}!get\-\_\-dirichletsnode@{get\-\_\-dirichletsnode}}
+\index{get\-\_\-dirichletsnode@{get\-\_\-dirichletsnode}!b_sources.c@{b\-\_\-sources.\-c}}
+\subsubsection[{get\-\_\-dirichletsnode}]{\setlength{\rightskip}{0pt plus 5cm}int get\-\_\-dirichletsnode (
+\begin{DoxyParamCaption}
+\item[{double}]{t, }
+\item[{{\bf D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} $\ast$}]{dirichlet}
+\end{DoxyParamCaption}
+)}}\label{b__sources_8c_ab175eac7f8664ba91d5a9f3773457344}
+\begin{DoxyAuthor}{Author}
+Emanuele Cordano 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+May 2009
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em t} & (double) time; \\
+\hline
+{\em dirichlet\-\_\-node} & map -\/ (\hyperlink{struct_d_o_u_b_l_e_v_e_c_t_o_r}{D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} $\ast$) dirichlet\\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 182 of file b\-\_\-sources.\-c.
+
+
+
+References A\-\_\-\-F\-L\-A\-G, D\-O\-U\-B\-L\-E\-S\-Q\-U\-A\-R\-E\-\_\-\-G\-R\-I\-D\-::big, D\-O\-U\-B\-L\-E\-R\-A\-S\-T\-E\-R\-\_\-\-M\-A\-P\-::coarse, copy\-\_\-doublevector(), D\-T\-M\-\_\-\-M\-A\-S\-K, P\-A\-R\-A\-M\-::exp\-\_\-dirichlet, free\-\_\-doublevector(), I\-\_\-\-D\-I\-R\-I\-C\-H\-L\-E\-T\-M\-A\-P\-S\-E\-R\-I\-E\-S\-\_\-\-C\-O\-A\-R\-S\-E, S\-Q\-U\-A\-R\-E\-\_\-\-G\-R\-I\-D\-::indices\-\_\-pixel, join\-\_\-strings(), R\-A\-S\-T\-E\-R\-\_\-\-M\-A\-P\-::layer, D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R\-::nh, D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R\-::nl, P\-A\-R\-A\-M\-::null\-\_\-dirichlet, read\-\_\-doublevector\-\_\-from\-\_\-raster(), S\-\_\-\-T\-I\-M\-E\-S\-::s\-\_\-suffixes, S\-\_\-\-T\-I\-M\-E\-S\-::times, and R\-A\-S\-T\-E\-R\-\_\-\-M\-A\-P\-::\-U\-V.
+
+
+
+Referenced by time\-\_\-loop().
+
+\hypertarget{b__sources_8c_a85eab37f66725bd25bdddce92cf5a773}{\index{b\-\_\-sources.\-c@{b\-\_\-sources.\-c}!get\-\_\-s\-\_\-times@{get\-\_\-s\-\_\-times}}
+\index{get\-\_\-s\-\_\-times@{get\-\_\-s\-\_\-times}!b_sources.c@{b\-\_\-sources.\-c}}
+\subsubsection[{get\-\_\-s\-\_\-times}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\-\_\-\-T\-I\-M\-E\-S}$\ast$ get\-\_\-s\-\_\-times (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{filename, }
+\item[{short}]{print}
+\end{DoxyParamCaption}
+)}}\label{b__sources_8c_a85eab37f66725bd25bdddce92cf5a773}
+\begin{DoxyAuthor}{Author}
+Emanuele Cordano 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+29 May 2009
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & (char $\ast$) \\
+\hline
+{\em print} & (short)\\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 127 of file b\-\_\-sources.\-c.
+
+
+
+References st\-::index, L\-O\-N\-G\-V\-E\-C\-T\-O\-R\-::nh, D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R\-::nh, D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R\-::nl, read\-\_\-doublearray(), read\-\_\-index(), read\-\_\-stringarray(), S\-\_\-\-T\-I\-M\-E\-S\-::s\-\_\-suffixes, t\-\_\-error(), t\-\_\-fclose(), t\-\_\-fopen(), and S\-\_\-\-T\-I\-M\-E\-S\-::times.
+
+
+
+Referenced by time\-\_\-loop().
+
+\hypertarget{b__sources_8c_a5eb104111701f0bb34a5d8bffd2f0ddb}{\index{b\-\_\-sources.\-c@{b\-\_\-sources.\-c}!get\-\_\-sources@{get\-\_\-sources}}
+\index{get\-\_\-sources@{get\-\_\-sources}!b_sources.c@{b\-\_\-sources.\-c}}
+\subsubsection[{get\-\_\-sources}]{\setlength{\rightskip}{0pt plus 5cm}int get\-\_\-sources (
+\begin{DoxyParamCaption}
+\item[{double}]{t, }
+\item[{{\bf D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} $\ast$}]{sources}
+\end{DoxyParamCaption}
+)}}\label{b__sources_8c_a5eb104111701f0bb34a5d8bffd2f0ddb}
+\begin{DoxyAuthor}{Author}
+Emanuele Cordano 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+May 2009
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em t} & (double) time; \\
+\hline
+{\em sources} & -\/ (\hyperlink{struct_d_o_u_b_l_e_v_e_c_t_o_r}{D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} $\ast$) sources\\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 67 of file b\-\_\-sources.\-c.
+
+
+
+References A\-\_\-\-F\-L\-A\-G, D\-O\-U\-B\-L\-E\-S\-Q\-U\-A\-R\-E\-\_\-\-G\-R\-I\-D\-::big, D\-O\-U\-B\-L\-E\-R\-A\-S\-T\-E\-R\-\_\-\-M\-A\-P\-::coarse, copy\-\_\-doublevector(), D\-T\-M\-\_\-\-M\-A\-S\-K, free\-\_\-doublevector(), I\-\_\-\-S\-O\-U\-R\-C\-E\-M\-A\-P\-S\-E\-R\-I\-E\-S\-\_\-\-C\-O\-A\-R\-S\-E, S\-Q\-U\-A\-R\-E\-\_\-\-G\-R\-I\-D\-::indices\-\_\-pixel, join\-\_\-strings(), R\-A\-S\-T\-E\-R\-\_\-\-M\-A\-P\-::layer, D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R\-::nh, D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R\-::nl, read\-\_\-doublevector\-\_\-from\-\_\-raster(), S\-\_\-\-T\-I\-M\-E\-S\-::s\-\_\-suffixes, S\-\_\-\-T\-I\-M\-E\-S\-::times, and R\-A\-S\-T\-E\-R\-\_\-\-M\-A\-P\-::\-U\-V.
+
+
+
+Referenced by time\-\_\-loop().
+
+
+
+\subsection{Variable Documentation}
+\hypertarget{b__sources_8c_ab58c424a59f28ac6b17e7b7f5aae6152}{\index{b\-\_\-sources.\-c@{b\-\_\-sources.\-c}!dgrid@{dgrid}}
+\index{dgrid@{dgrid}!b_sources.c@{b\-\_\-sources.\-c}}
+\subsubsection[{dgrid}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\-O\-U\-B\-L\-E\-\_\-\-G\-R\-I\-D}$\ast$ dgrid}}\label{b__sources_8c_ab58c424a59f28ac6b17e7b7f5aae6152}
+
+
+Definition at line 126 of file main.\-c.
+
+\hypertarget{b__sources_8c_acdfd95279a09d044eec55a5734ae3025}{\index{b\-\_\-sources.\-c@{b\-\_\-sources.\-c}!dirichlet\-\_\-times@{dirichlet\-\_\-times}}
+\index{dirichlet\-\_\-times@{dirichlet\-\_\-times}!b_sources.c@{b\-\_\-sources.\-c}}
+\subsubsection[{dirichlet\-\_\-times}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\-\_\-\-T\-I\-M\-E\-S} $\ast$ dirichlet\-\_\-times}}\label{b__sources_8c_acdfd95279a09d044eec55a5734ae3025}
+
+
+Definition at line 72 of file b\-\_\-solver.\-c.
+
+\hypertarget{b__sources_8c_a44d81a9ca5648f4ec1c298c7f37fefff}{\index{b\-\_\-sources.\-c@{b\-\_\-sources.\-c}!draster@{draster}}
+\index{draster@{draster}!b_sources.c@{b\-\_\-sources.\-c}}
+\subsubsection[{draster}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\-O\-U\-B\-L\-E\-R\-A\-S\-T\-E\-R\-\_\-\-M\-A\-P}$\ast$ draster}}\label{b__sources_8c_a44d81a9ca5648f4ec1c298c7f37fefff}
+
+
+Definition at line 128 of file main.\-c.
+
+\hypertarget{b__sources_8c_a9b5f80541820877b6d4a8841650da32a}{\index{b\-\_\-sources.\-c@{b\-\_\-sources.\-c}!dsq@{dsq}}
+\index{dsq@{dsq}!b_sources.c@{b\-\_\-sources.\-c}}
+\subsubsection[{dsq}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\-O\-U\-B\-L\-E\-S\-Q\-U\-A\-R\-E\-\_\-\-G\-R\-I\-D}$\ast$ dsq}}\label{b__sources_8c_a9b5f80541820877b6d4a8841650da32a}
+
+
+Definition at line 125 of file main.\-c.
+
+\hypertarget{b__sources_8c_a4cd3286ed17aff6164594f8a2d59f898}{\index{b\-\_\-sources.\-c@{b\-\_\-sources.\-c}!elevation\-\_\-bottom\-\_\-bottom@{elevation\-\_\-bottom\-\_\-bottom}}
+\index{elevation\-\_\-bottom\-\_\-bottom@{elevation\-\_\-bottom\-\_\-bottom}!b_sources.c@{b\-\_\-sources.\-c}}
+\subsubsection[{elevation\-\_\-bottom\-\_\-bottom}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R}$\ast$ elevation\-\_\-bottom\-\_\-bottom}}\label{b__sources_8c_a4cd3286ed17aff6164594f8a2d59f898}
+map of the bottom elevation defined in the lines of the fine grid 
+
+Definition at line 134 of file main.\-c.
+
+\hypertarget{b__sources_8c_a93f8bd854f98f2abe47c108484cf1c6b}{\index{b\-\_\-sources.\-c@{b\-\_\-sources.\-c}!elevation\-\_\-bottom\-\_\-coarse@{elevation\-\_\-bottom\-\_\-coarse}}
+\index{elevation\-\_\-bottom\-\_\-coarse@{elevation\-\_\-bottom\-\_\-coarse}!b_sources.c@{b\-\_\-sources.\-c}}
+\subsubsection[{elevation\-\_\-bottom\-\_\-coarse}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R}$\ast$ elevation\-\_\-bottom\-\_\-coarse}}\label{b__sources_8c_a93f8bd854f98f2abe47c108484cf1c6b}
+map of the bottom elevation (fine grid) 
+
+Definition at line 132 of file main.\-c.
+
+\hypertarget{b__sources_8c_a48a2ac079f3ec064d28848bcdc54ed7c}{\index{b\-\_\-sources.\-c@{b\-\_\-sources.\-c}!elevation\-\_\-bottom\-\_\-fine@{elevation\-\_\-bottom\-\_\-fine}}
+\index{elevation\-\_\-bottom\-\_\-fine@{elevation\-\_\-bottom\-\_\-fine}!b_sources.c@{b\-\_\-sources.\-c}}
+\subsubsection[{elevation\-\_\-bottom\-\_\-fine}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R}$\ast$ elevation\-\_\-bottom\-\_\-fine}}\label{b__sources_8c_a48a2ac079f3ec064d28848bcdc54ed7c}
+
+
+Definition at line 131 of file main.\-c.
+
+\hypertarget{b__sources_8c_a495ebb69c21b8816ee4f7dfe0e1e6d98}{\index{b\-\_\-sources.\-c@{b\-\_\-sources.\-c}!elevation\-\_\-bottom\-\_\-flines@{elevation\-\_\-bottom\-\_\-flines}}
+\index{elevation\-\_\-bottom\-\_\-flines@{elevation\-\_\-bottom\-\_\-flines}!b_sources.c@{b\-\_\-sources.\-c}}
+\subsubsection[{elevation\-\_\-bottom\-\_\-flines}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R}$\ast$ elevation\-\_\-bottom\-\_\-flines}}\label{b__sources_8c_a495ebb69c21b8816ee4f7dfe0e1e6d98}
+map of the bottom elevation (coarse grid) 
+
+Definition at line 133 of file main.\-c.
+
+\hypertarget{b__sources_8c_a528421ce34267070764970b021f6034a}{\index{b\-\_\-sources.\-c@{b\-\_\-sources.\-c}!filenames@{filenames}}
+\index{filenames@{filenames}!b_sources.c@{b\-\_\-sources.\-c}}
+\subsubsection[{filenames}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\-T\-R\-I\-N\-G\-B\-I\-N}$\ast$ filenames}}\label{b__sources_8c_a528421ce34267070764970b021f6034a}
+
+
+Definition at line 124 of file main.\-c.
+
+\hypertarget{b__sources_8c_af669d66807986c96b4927566ae5e8b45}{\index{b\-\_\-sources.\-c@{b\-\_\-sources.\-c}!flag@{flag}}
+\index{flag@{flag}!b_sources.c@{b\-\_\-sources.\-c}}
+\subsubsection[{flag}]{\setlength{\rightskip}{0pt plus 5cm}{\bf F\-L\-A\-G}$\ast$ flag}}\label{b__sources_8c_af669d66807986c96b4927566ae5e8b45}
+
+
+Definition at line 149 of file main.\-c.
+
+\hypertarget{b__sources_8c_ad8ac9ce29f12815d417a57b2c0dc31fb}{\index{b\-\_\-sources.\-c@{b\-\_\-sources.\-c}!param@{param}}
+\index{param@{param}!b_sources.c@{b\-\_\-sources.\-c}}
+\subsubsection[{param}]{\setlength{\rightskip}{0pt plus 5cm}{\bf P\-A\-R\-A\-M}$\ast$ param}}\label{b__sources_8c_ad8ac9ce29f12815d417a57b2c0dc31fb}
+coefficient F1 for surface flow as reported in Casulli,2008 
+
+Definition at line 148 of file main.\-c.
+
+\hypertarget{b__sources_8c_acd5b5637e9d24f6f2641e08ed439b8b8}{\index{b\-\_\-sources.\-c@{b\-\_\-sources.\-c}!porosity\-\_\-fine@{porosity\-\_\-fine}}
+\index{porosity\-\_\-fine@{porosity\-\_\-fine}!b_sources.c@{b\-\_\-sources.\-c}}
+\subsubsection[{porosity\-\_\-fine}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R}$\ast$ porosity\-\_\-fine}}\label{b__sources_8c_acd5b5637e9d24f6f2641e08ed439b8b8}
+map of the elvetion of the bottom of he coarse cells
+
+map of the surface terrain elevation (fine grid lines) 
+
+Definition at line 137 of file main.\-c.
+
+\hypertarget{b__sources_8c_ac73bbfd9a6e0ad893d203003e268a1be}{\index{b\-\_\-sources.\-c@{b\-\_\-sources.\-c}!s\-\_\-times@{s\-\_\-times}}
+\index{s\-\_\-times@{s\-\_\-times}!b_sources.c@{b\-\_\-sources.\-c}}
+\subsubsection[{s\-\_\-times}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\-\_\-\-T\-I\-M\-E\-S}$\ast$ s\-\_\-times}}\label{b__sources_8c_ac73bbfd9a6e0ad893d203003e268a1be}
+map of instantaneous water mass error
+
+eta\-\_\-v and sources and dirichlet are defined as a global value, t\-\_\-diagonal is the diagonal of t\-\_\-st\-\_\-element tensor 
+
+Definition at line 72 of file b\-\_\-solver.\-c.
+
+\hypertarget{b__sources_8c_a97eff843a1a4985b0746ef826cc27822}{\index{b\-\_\-sources.\-c@{b\-\_\-sources.\-c}!water\-\_\-mass\-\_\-error@{water\-\_\-mass\-\_\-error}}
+\index{water\-\_\-mass\-\_\-error@{water\-\_\-mass\-\_\-error}!b_sources.c@{b\-\_\-sources.\-c}}
+\subsubsection[{water\-\_\-mass\-\_\-error}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R}$\ast$ water\-\_\-mass\-\_\-error}}\label{b__sources_8c_a97eff843a1a4985b0746ef826cc27822}
+map of instantaneous water surface on the pixels of the coarse grid 
+
+Definition at line 143 of file main.\-c.
+
+\hypertarget{b__sources_8c_a3ace2c97e74d7e8aad3670b479cb606d}{\index{b\-\_\-sources.\-c@{b\-\_\-sources.\-c}!water\-\_\-surface\-\_\-elevation@{water\-\_\-surface\-\_\-elevation}}
+\index{water\-\_\-surface\-\_\-elevation@{water\-\_\-surface\-\_\-elevation}!b_sources.c@{b\-\_\-sources.\-c}}
+\subsubsection[{water\-\_\-surface\-\_\-elevation}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R}$\ast$ water\-\_\-surface\-\_\-elevation}}\label{b__sources_8c_a3ace2c97e74d7e8aad3670b479cb606d}
+map of porosity defined on the pixels of the fine grid 
+
+Definition at line 142 of file main.\-c.
+

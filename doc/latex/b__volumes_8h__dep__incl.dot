@@ -1,0 +1,19 @@
+digraph "Boussinesq/b_volumes.h"
+{
+  bgcolor="transparent";
+  edge [fontname="FreeSans",fontsize="10",labelfontname="FreeSans",labelfontsize="10"];
+  node [fontname="FreeSans",fontsize="10",shape=record];
+  Node1 [label="Boussinesq/b_volumes.h",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="Boussinesq/b_readgrid.c",height=0.2,width=0.4,color="black",URL="$b__readgrid_8c.html"];
+  Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="Boussinesq/b_solver.c",height=0.2,width=0.4,color="black",URL="$b__solver_8c.html"];
+  Node1 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node4 [label="Boussinesq/b_sources.c",height=0.2,width=0.4,color="black",URL="$b__sources_8c.html"];
+  Node1 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node5 [label="Boussinesq/b_v_advection.c",height=0.2,width=0.4,color="black",URL="$b__v__advection_8c.html"];
+  Node1 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node6 [label="Boussinesq/b_volumes.c",height=0.2,width=0.4,color="black",URL="$b__volumes_8c.html"];
+  Node1 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node7 [label="Boussinesq/main.c",height=0.2,width=0.4,color="black",URL="$main_8c.html"];
+}

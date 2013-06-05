@@ -1,0 +1,409 @@
+\hypertarget{b__volumes_8h}{\section{Boussinesq/b\-\_\-volumes.h File Reference}
+\label{b__volumes_8h}\index{Boussinesq/b\-\_\-volumes.\-h@{Boussinesq/b\-\_\-volumes.\-h}}
+}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+double \hyperlink{b__volumes_8h_a01596e297cd347cfcdde77ebf0f2ba86}{volume} (double eta, long i)
+\item 
+double \hyperlink{b__volumes_8h_a1c66e2d4b15e6e8d0f008b6aee65dc66}{volume\-\_\-subs} (double eta, long i)
+\item 
+double \hyperlink{b__volumes_8h_a97fa57952a12ee7928d27550a38975c6}{volume\-\_\-surf} (double eta, long i)
+\item 
+double \hyperlink{b__volumes_8h_adf82de40dd2bf86099b9a3bb80435ab0}{vertical\-\_\-area} (double eta, long j)
+\item 
+double \hyperlink{b__volumes_8h_aba354cc90060c9d911bd47a7c98170cf}{vertical\-\_\-area\-\_\-subs} (double eta, long j)
+\item 
+double \hyperlink{b__volumes_8h_a03db2e763463748d2af87419e099363c}{vertical\-\_\-area\-\_\-surf} (double eta, long j)
+\item 
+double \hyperlink{b__volumes_8h_a7542322fca1abef463947d740d24457e}{wet\-\_\-area} (double eta, long i, double deta)
+\item 
+double \hyperlink{b__volumes_8h_a3b83d707ea58c1cdce36f981de3e7d12}{min\-\_\-elevation} (long i)
+\item 
+double \hyperlink{b__volumes_8h_a84856fbcf04e3a87863837eeda036e3d}{q\-\_\-discharge\-\_\-from\-\_\-outlet\-\_\-subs\-\_\-line} (double eta, long j)
+\item 
+double \hyperlink{b__volumes_8h_a6589da10a9a71003103fe7d4e037e1ec}{q\-\_\-discharge\-\_\-from\-\_\-outlet\-\_\-cell} (double eta, long i)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{DoxyAuthor}{Author}
+Emanuele Cordano
+\end{DoxyAuthor}
+\begin{DoxyAttention}{Attention}
+
+\end{DoxyAttention}
+This file is part of Boussinesq.
+
+Boussinesq is free software\-: you can redistribute it and/or modify it under the terms of the G\-N\-U General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
+
+Boussinesq is distributed in the hope that it will be useful, but W\-I\-T\-H\-O\-U\-T A\-N\-Y W\-A\-R\-R\-A\-N\-T\-Y; without even the implied warranty of M\-E\-R\-C\-H\-A\-N\-T\-A\-B\-I\-L\-I\-T\-Y or F\-I\-T\-N\-E\-S\-S F\-O\-R A P\-A\-R\-T\-I\-C\-U\-L\-A\-R P\-U\-R\-P\-O\-S\-E. See the G\-N\-U General Public License for more details.
+
+You should have received a copy of the G\-N\-U General Public License along with Boussinesq. If not, see \href{http://www.gnu.org/licenses/}{\tt http\-://www.\-gnu.\-org/licenses/}. 
+
+Definition in file \hyperlink{b__volumes_8h_source}{b\-\_\-volumes.\-h}.
+
+
+
+\subsection{Function Documentation}
+\hypertarget{b__volumes_8h_a3b83d707ea58c1cdce36f981de3e7d12}{\index{b\-\_\-volumes.\-h@{b\-\_\-volumes.\-h}!min\-\_\-elevation@{min\-\_\-elevation}}
+\index{min\-\_\-elevation@{min\-\_\-elevation}!b_volumes.h@{b\-\_\-volumes.\-h}}
+\subsubsection[{min\-\_\-elevation}]{\setlength{\rightskip}{0pt plus 5cm}double min\-\_\-elevation (
+\begin{DoxyParamCaption}
+\item[{long}]{i}
+\end{DoxyParamCaption}
+)}}\label{b__volumes_8h_a3b83d707ea58c1cdce36f981de3e7d12}
+\begin{DoxyAuthor}{Author}
+Emanuele Cordano 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+13 May 2009
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em i} & (long) -\/ index of the coarse cell\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the elevation of the lowest point of the cell
+\end{DoxyReturn}
+initialization of elevation with a very high double float number 
+
+Definition at line 357 of file b\-\_\-volumes.\-c.
+
+
+
+References L\-O\-N\-G\-B\-I\-N\-::index, min\-\_\-elevation(), L\-O\-N\-G\-V\-E\-C\-T\-O\-R\-::nh, D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R\-::nh, N\-L, L\-O\-N\-G\-V\-E\-C\-T\-O\-R\-::nl, D\-O\-U\-B\-L\-E\-\_\-\-G\-R\-I\-D\-::novalue, D\-O\-U\-B\-L\-E\-\_\-\-G\-R\-I\-D\-::small\-\_\-polygon\-\_\-content, and stop\-\_\-execution().
+
+
+
+Referenced by main(), and min\-\_\-elevation().
+
+\hypertarget{b__volumes_8h_a6589da10a9a71003103fe7d4e037e1ec}{\index{b\-\_\-volumes.\-h@{b\-\_\-volumes.\-h}!q\-\_\-discharge\-\_\-from\-\_\-outlet\-\_\-cell@{q\-\_\-discharge\-\_\-from\-\_\-outlet\-\_\-cell}}
+\index{q\-\_\-discharge\-\_\-from\-\_\-outlet\-\_\-cell@{q\-\_\-discharge\-\_\-from\-\_\-outlet\-\_\-cell}!b_volumes.h@{b\-\_\-volumes.\-h}}
+\subsubsection[{q\-\_\-discharge\-\_\-from\-\_\-outlet\-\_\-cell}]{\setlength{\rightskip}{0pt plus 5cm}double q\-\_\-discharge\-\_\-from\-\_\-outlet\-\_\-cell (
+\begin{DoxyParamCaption}
+\item[{double}]{eta, }
+\item[{long}]{i}
+\end{DoxyParamCaption}
+)}}\label{b__volumes_8h_a6589da10a9a71003103fe7d4e037e1ec}
+\begin{DoxyDate}{Date}
+14 October 2009 
+\end{DoxyDate}
+\begin{DoxyAuthor}{Author}
+Emanuele Cordano
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em eta} & -\/ (double) \\
+\hline
+{\em i} & -\/ (index of the cell)\\
+\hline
+\end{DoxyParams}
+It calculates the discharge through all boundary edges of the i-\/th cell in function of a value of a free surface elevation and fine-\/grid topography, according to what is specified in the documentation with detailed algebraic passages. It calls q\-\_\-discharge\-\_\-from\-\_\-outlet for each boundary edge!
+
+\begin{DoxyReturn}{Returns}
+outflow discarge area from the i-\/th cell
+\end{DoxyReturn}
+
+
+Definition at line 441 of file b\-\_\-volumes.\-c.
+
+
+
+References G\-R\-I\-D\-::boundary\-\_\-indicator, D\-O\-U\-B\-L\-E\-\_\-\-G\-R\-I\-D\-::coarse, polygon\-\_\-connection\-\_\-attributes\-::connections, P\-O\-L\-Y\-G\-O\-N\-::edge\-\_\-indices, P\-O\-L\-Y\-G\-O\-N\-V\-E\-C\-T\-O\-R\-::element, polygon\-\_\-connection\-\_\-attribute\-\_\-array\-::element, G\-R\-I\-D\-::links, L\-O\-N\-G\-V\-E\-C\-T\-O\-R\-::nh, L\-O\-N\-G\-V\-E\-C\-T\-O\-R\-::nl, G\-R\-I\-D\-::polygons, and q\-\_\-discharge\-\_\-from\-\_\-outlet\-\_\-subs\-\_\-line().
+
+
+
+Referenced by time\-\_\-loop().
+
+\hypertarget{b__volumes_8h_a84856fbcf04e3a87863837eeda036e3d}{\index{b\-\_\-volumes.\-h@{b\-\_\-volumes.\-h}!q\-\_\-discharge\-\_\-from\-\_\-outlet\-\_\-subs\-\_\-line@{q\-\_\-discharge\-\_\-from\-\_\-outlet\-\_\-subs\-\_\-line}}
+\index{q\-\_\-discharge\-\_\-from\-\_\-outlet\-\_\-subs\-\_\-line@{q\-\_\-discharge\-\_\-from\-\_\-outlet\-\_\-subs\-\_\-line}!b_volumes.h@{b\-\_\-volumes.\-h}}
+\subsubsection[{q\-\_\-discharge\-\_\-from\-\_\-outlet\-\_\-subs\-\_\-line}]{\setlength{\rightskip}{0pt plus 5cm}double q\-\_\-discharge\-\_\-from\-\_\-outlet\-\_\-subs\-\_\-line (
+\begin{DoxyParamCaption}
+\item[{double}]{eta, }
+\item[{long}]{j}
+\end{DoxyParamCaption}
+)}}\label{b__volumes_8h_a84856fbcf04e3a87863837eeda036e3d}
+
+\begin{DoxyParams}{Parameters}
+{\em Emanuele} & Cordano \\
+\hline
+\end{DoxyParams}
+\begin{DoxyDate}{Date}
+14 October 2009
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em eta} & -\/ (double) water surface elevation; \\
+\hline
+{\em j} & -\/ (long) line indicator;\\
+\hline
+\end{DoxyParams}
+It calculates the discharge of the j-\/th line in function of a value of a free surface elevation and fine-\/grid topography, according to what is specified in the documentation with detailed algebraic passages.
+
+\begin{DoxyReturn}{Returns}
+outflow discarge through a boundary line
+\end{DoxyReturn}
+
+
+Definition at line 400 of file b\-\_\-volumes.\-c.
+
+
+
+References L\-I\-N\-E\-V\-E\-C\-T\-O\-R\-::element, D\-O\-U\-B\-L\-E\-\_\-\-G\-R\-I\-D\-::fine, L\-O\-N\-G\-B\-I\-N\-::index, L\-I\-N\-E\-::length2d, G\-R\-I\-D\-::lines, L\-I\-N\-E\-V\-E\-C\-T\-O\-R\-::nh, L\-O\-N\-G\-V\-E\-C\-T\-O\-R\-::nh, N\-L, L\-I\-N\-E\-V\-E\-C\-T\-O\-R\-::nl, L\-O\-N\-G\-V\-E\-C\-T\-O\-R\-::nl, D\-O\-U\-B\-L\-E\-\_\-\-G\-R\-I\-D\-::novalue, P\-A\-R\-A\-M\-::p\-\_\-outlet, P\-A\-R\-A\-M\-::p\-\_\-outlet\-\_\-surf, D\-O\-U\-B\-L\-E\-\_\-\-G\-R\-I\-D\-::small\-\_\-line\-\_\-content, and stop\-\_\-execution().
+
+
+
+Referenced by q\-\_\-discharge\-\_\-from\-\_\-outlet\-\_\-cell().
+
+\hypertarget{b__volumes_8h_adf82de40dd2bf86099b9a3bb80435ab0}{\index{b\-\_\-volumes.\-h@{b\-\_\-volumes.\-h}!vertical\-\_\-area@{vertical\-\_\-area}}
+\index{vertical\-\_\-area@{vertical\-\_\-area}!b_volumes.h@{b\-\_\-volumes.\-h}}
+\subsubsection[{vertical\-\_\-area}]{\setlength{\rightskip}{0pt plus 5cm}double vertical\-\_\-area (
+\begin{DoxyParamCaption}
+\item[{double}]{eta, }
+\item[{long}]{j}
+\end{DoxyParamCaption}
+)}}\label{b__volumes_8h_adf82de40dd2bf86099b9a3bb80435ab0}
+\begin{DoxyAuthor}{Author}
+Emanuele Cordano 
+
+October 2009
+\end{DoxyAuthor}
+\begin{DoxyReturn}{Returns}
+total vertical area over the j-\/th line in function of water table eta.
+\end{DoxyReturn}
+
+
+Definition at line 193 of file b\-\_\-volumes.\-c.
+
+
+
+References vertical\-\_\-area\-\_\-subs().
+
+\hypertarget{b__volumes_8h_aba354cc90060c9d911bd47a7c98170cf}{\index{b\-\_\-volumes.\-h@{b\-\_\-volumes.\-h}!vertical\-\_\-area\-\_\-subs@{vertical\-\_\-area\-\_\-subs}}
+\index{vertical\-\_\-area\-\_\-subs@{vertical\-\_\-area\-\_\-subs}!b_volumes.h@{b\-\_\-volumes.\-h}}
+\subsubsection[{vertical\-\_\-area\-\_\-subs}]{\setlength{\rightskip}{0pt plus 5cm}double vertical\-\_\-area\-\_\-subs (
+\begin{DoxyParamCaption}
+\item[{double}]{eta, }
+\item[{long}]{j}
+\end{DoxyParamCaption}
+)}}\label{b__volumes_8h_aba354cc90060c9d911bd47a7c98170cf}
+
+\begin{DoxyParams}{Parameters}
+{\em Emanuele} & Cordano \\
+\hline
+\end{DoxyParams}
+\begin{DoxyDate}{Date}
+19 April 2009 (modified October 2009)
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em eta} & -\/ (double) water surface elevation; \\
+\hline
+{\em j} & -\/ (long) line indicator;\\
+\hline
+\end{DoxyParams}
+It calculates the (subsurface wet) vertical area of the j-\/th line in function of a value of a free surface elevation and fine-\/grid topography, according to what is specified in the documentation with detailed algebraic passages.
+
+\begin{DoxyReturn}{Returns}
+vertical wet area over a line between two polygons
+\end{DoxyReturn}
+
+
+Definition at line 211 of file b\-\_\-volumes.\-c.
+
+
+
+References L\-I\-N\-E\-V\-E\-C\-T\-O\-R\-::element, D\-O\-U\-B\-L\-E\-\_\-\-G\-R\-I\-D\-::fine, L\-O\-N\-G\-B\-I\-N\-::index, L\-I\-N\-E\-::length2d, G\-R\-I\-D\-::lines, L\-I\-N\-E\-V\-E\-C\-T\-O\-R\-::nh, L\-O\-N\-G\-V\-E\-C\-T\-O\-R\-::nh, N\-L, L\-I\-N\-E\-V\-E\-C\-T\-O\-R\-::nl, L\-O\-N\-G\-V\-E\-C\-T\-O\-R\-::nl, D\-O\-U\-B\-L\-E\-\_\-\-G\-R\-I\-D\-::novalue, D\-O\-U\-B\-L\-E\-\_\-\-G\-R\-I\-D\-::small\-\_\-line\-\_\-content, and stop\-\_\-execution().
+
+
+
+Referenced by t\-\_\-st\-\_\-operator\-\_\-element\-\_\-subs(), and vertical\-\_\-area().
+
+\hypertarget{b__volumes_8h_a03db2e763463748d2af87419e099363c}{\index{b\-\_\-volumes.\-h@{b\-\_\-volumes.\-h}!vertical\-\_\-area\-\_\-surf@{vertical\-\_\-area\-\_\-surf}}
+\index{vertical\-\_\-area\-\_\-surf@{vertical\-\_\-area\-\_\-surf}!b_volumes.h@{b\-\_\-volumes.\-h}}
+\subsubsection[{vertical\-\_\-area\-\_\-surf}]{\setlength{\rightskip}{0pt plus 5cm}double vertical\-\_\-area\-\_\-surf (
+\begin{DoxyParamCaption}
+\item[{double}]{eta, }
+\item[{long}]{j}
+\end{DoxyParamCaption}
+)}}\label{b__volumes_8h_a03db2e763463748d2af87419e099363c}
+
+\begin{DoxyParams}{Parameters}
+{\em Emanuele} & Cordano \\
+\hline
+\end{DoxyParams}
+\begin{DoxyDate}{Date}
+22 October 2009
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em eta} & -\/ (double) water surface elevation; \\
+\hline
+{\em j} & -\/ (long) line indicator;\\
+\hline
+\end{DoxyParams}
+It calculates the (surface wet) vertical area of the j-\/th line in function of a value of a free surface elevation and fine-\/grid topography, according to what is specified in the documentation with detailed algebraic passages.
+
+\begin{DoxyReturn}{Returns}
+(surface) vertical wet area over a line between two polygons
+\end{DoxyReturn}
+
+
+Definition at line 251 of file b\-\_\-volumes.\-c.
+
+
+
+References L\-I\-N\-E\-V\-E\-C\-T\-O\-R\-::element, D\-O\-U\-B\-L\-E\-\_\-\-G\-R\-I\-D\-::fine, L\-O\-N\-G\-B\-I\-N\-::index, L\-I\-N\-E\-::length2d, G\-R\-I\-D\-::lines, L\-I\-N\-E\-V\-E\-C\-T\-O\-R\-::nh, L\-O\-N\-G\-V\-E\-C\-T\-O\-R\-::nh, N\-L, L\-I\-N\-E\-V\-E\-C\-T\-O\-R\-::nl, D\-O\-U\-B\-L\-E\-\_\-\-G\-R\-I\-D\-::novalue, D\-O\-U\-B\-L\-E\-\_\-\-G\-R\-I\-D\-::small\-\_\-line\-\_\-content, and stop\-\_\-execution().
+
+
+
+Referenced by b\-\_\-advection(), t\-\_\-st\-\_\-advection\-\_\-operator\-\_\-element(), and update\-\_\-\-F1\-\_\-wet\-\_\-vert\-\_\-area().
+
+\hypertarget{b__volumes_8h_a01596e297cd347cfcdde77ebf0f2ba86}{\index{b\-\_\-volumes.\-h@{b\-\_\-volumes.\-h}!volume@{volume}}
+\index{volume@{volume}!b_volumes.h@{b\-\_\-volumes.\-h}}
+\subsubsection[{volume}]{\setlength{\rightskip}{0pt plus 5cm}double volume (
+\begin{DoxyParamCaption}
+\item[{double}]{eta, }
+\item[{long}]{i}
+\end{DoxyParamCaption}
+)}}\label{b__volumes_8h_a01596e297cd347cfcdde77ebf0f2ba86}
+map of instantaneous water mass error \begin{DoxyAuthor}{Author}
+Emanuele Cordano 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+October 2009
+\end{DoxyDate}
+\begin{DoxyReturn}{Returns}
+the volume of the i-\/th cell of the i-\/th cells
+\end{DoxyReturn}
+
+
+Definition at line 63 of file b\-\_\-volumes.\-c.
+
+
+
+References volume\-\_\-subs(), and volume\-\_\-surf().
+
+
+
+Referenced by Newton\-\_\-convergence(), and time\-\_\-loop().
+
+\hypertarget{b__volumes_8h_a1c66e2d4b15e6e8d0f008b6aee65dc66}{\index{b\-\_\-volumes.\-h@{b\-\_\-volumes.\-h}!volume\-\_\-subs@{volume\-\_\-subs}}
+\index{volume\-\_\-subs@{volume\-\_\-subs}!b_volumes.h@{b\-\_\-volumes.\-h}}
+\subsubsection[{volume\-\_\-subs}]{\setlength{\rightskip}{0pt plus 5cm}double volume\-\_\-subs (
+\begin{DoxyParamCaption}
+\item[{double}]{eta, }
+\item[{long}]{i}
+\end{DoxyParamCaption}
+)}}\label{b__volumes_8h_a1c66e2d4b15e6e8d0f008b6aee65dc66}
+\begin{DoxyAuthor}{Author}
+Emanuele Cordano (modified October 2009) 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+17 April 2009
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em eta} & -\/ (double) value of water-\/table level \\
+\hline
+{\em i} & -\/ (long) index of the (coarse) cell\\
+\hline
+\end{DoxyParams}
+It calculates the (subsurface water) volume of the i-\/th cell in function of a value of a free surface elevation and fine-\/grid topography, according to what is specified in the documentation with detailed algebraic passages.
+
+\begin{DoxyReturn}{Returns}
+water volume contained in a cell
+\end{DoxyReturn}
+
+
+Definition at line 136 of file b\-\_\-volumes.\-c.
+
+
+
+References P\-O\-L\-Y\-G\-O\-N\-::area2\-D, P\-O\-L\-Y\-G\-O\-N\-V\-E\-C\-T\-O\-R\-::element, D\-O\-U\-B\-L\-E\-\_\-\-G\-R\-I\-D\-::fine, L\-O\-N\-G\-B\-I\-N\-::index, L\-O\-N\-G\-V\-E\-C\-T\-O\-R\-::nh, D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R\-::nh, N\-L, L\-O\-N\-G\-V\-E\-C\-T\-O\-R\-::nl, G\-R\-I\-D\-::polygons, D\-O\-U\-B\-L\-E\-\_\-\-G\-R\-I\-D\-::small\-\_\-polygon\-\_\-content, and stop\-\_\-execution().
+
+
+
+Referenced by volume().
+
+\hypertarget{b__volumes_8h_a97fa57952a12ee7928d27550a38975c6}{\index{b\-\_\-volumes.\-h@{b\-\_\-volumes.\-h}!volume\-\_\-surf@{volume\-\_\-surf}}
+\index{volume\-\_\-surf@{volume\-\_\-surf}!b_volumes.h@{b\-\_\-volumes.\-h}}
+\subsubsection[{volume\-\_\-surf}]{\setlength{\rightskip}{0pt plus 5cm}double volume\-\_\-surf (
+\begin{DoxyParamCaption}
+\item[{double}]{eta, }
+\item[{long}]{i}
+\end{DoxyParamCaption}
+)}}\label{b__volumes_8h_a97fa57952a12ee7928d27550a38975c6}
+\begin{DoxyAuthor}{Author}
+Emanuele Cordano (modified October 2009) 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+22 October 2009
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em eta} & -\/ (double) value of water-\/table level \\
+\hline
+{\em i} & -\/ (long) index of the (coarse) cell\\
+\hline
+\end{DoxyParams}
+It calculates the (surface water) volume of the i-\/th cell in function of a value of a free surface elevation and fine-\/grid topography, according to what is specified in the documentation with detailed algebraic passages.
+
+\begin{DoxyReturn}{Returns}
+(surface water) water volume contained in a cell
+\end{DoxyReturn}
+
+
+Definition at line 80 of file b\-\_\-volumes.\-c.
+
+
+
+References P\-O\-L\-Y\-G\-O\-N\-::area2\-D, P\-O\-L\-Y\-G\-O\-N\-V\-E\-C\-T\-O\-R\-::element, D\-O\-U\-B\-L\-E\-\_\-\-G\-R\-I\-D\-::fine, L\-O\-N\-G\-B\-I\-N\-::index, L\-O\-N\-G\-V\-E\-C\-T\-O\-R\-::nh, D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R\-::nh, N\-L, L\-O\-N\-G\-V\-E\-C\-T\-O\-R\-::nl, G\-R\-I\-D\-::polygons, D\-O\-U\-B\-L\-E\-\_\-\-G\-R\-I\-D\-::small\-\_\-polygon\-\_\-content, and stop\-\_\-execution().
+
+
+
+Referenced by volume().
+
+\hypertarget{b__volumes_8h_a7542322fca1abef463947d740d24457e}{\index{b\-\_\-volumes.\-h@{b\-\_\-volumes.\-h}!wet\-\_\-area@{wet\-\_\-area}}
+\index{wet\-\_\-area@{wet\-\_\-area}!b_volumes.h@{b\-\_\-volumes.\-h}}
+\subsubsection[{wet\-\_\-area}]{\setlength{\rightskip}{0pt plus 5cm}double wet\-\_\-area (
+\begin{DoxyParamCaption}
+\item[{double}]{eta, }
+\item[{long}]{i, }
+\item[{double}]{deta}
+\end{DoxyParamCaption}
+)}}\label{b__volumes_8h_a7542322fca1abef463947d740d24457e}
+\begin{DoxyAuthor}{Author}
+Emanuele Cordano 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+8 May 2009
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em eta} & -\/ (double) value of water-\/table level \\
+\hline
+{\em i} & -\/ (long) index of the (coarse) cell \\
+\hline
+{\em deta} & -\/ (double) water surface delta utilized for derivate (area\-\_\-horiz)\\
+\hline
+\end{DoxyParams}
+It calculates the volume of the i-\/th cell in function of a value of a free surface elevation and fine-\/grid topography, according to what is specified in the documentation with detailed algebraic passages. The wet area is the derivative respect to the variable eta of the stored volume calculated by function \hyperlink{b__volumes_8c_a01596e297cd347cfcdde77ebf0f2ba86}{volume()}
+
+\begin{DoxyReturn}{Returns}
+wet area of the i-\/th cell
+\end{DoxyReturn}
+modified by Emanuele Cordano on 2 
+
+Definition at line 294 of file b\-\_\-volumes.\-c.
+
+
+
+References P\-O\-L\-Y\-G\-O\-N\-::area2\-D, P\-O\-L\-Y\-G\-O\-N\-V\-E\-C\-T\-O\-R\-::element, D\-O\-U\-B\-L\-E\-\_\-\-G\-R\-I\-D\-::fine, L\-O\-N\-G\-B\-I\-N\-::index, L\-O\-N\-G\-V\-E\-C\-T\-O\-R\-::nh, D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R\-::nh, N\-L, L\-O\-N\-G\-V\-E\-C\-T\-O\-R\-::nl, D\-O\-U\-B\-L\-E\-\_\-\-G\-R\-I\-D\-::novalue, G\-R\-I\-D\-::polygons, D\-O\-U\-B\-L\-E\-\_\-\-G\-R\-I\-D\-::small\-\_\-polygon\-\_\-content, and stop\-\_\-execution().
+
+
+
+Referenced by b\-\_\-smatrix\-\_\-element().
+

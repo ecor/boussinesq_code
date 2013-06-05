@@ -1,0 +1,348 @@
+\hypertarget{turtle_8h}{\section{F\-L\-U\-I\-D\-T\-U\-R\-T\-L\-E\-S/turtle.h File Reference}
+\label{turtle_8h}\index{F\-L\-U\-I\-D\-T\-U\-R\-T\-L\-E\-S/turtle.\-h@{F\-L\-U\-I\-D\-T\-U\-R\-T\-L\-E\-S/turtle.\-h}}
+}
+{\ttfamily \#include $<$stdio.\-h$>$}\\*
+{\ttfamily \#include $<$string.\-h$>$}\\*
+{\ttfamily \#include $<$stdlib.\-h$>$}\\*
+{\ttfamily \#include $<$math.\-h$>$}\\*
+{\ttfamily \#include $<$time.\-h$>$}\\*
+{\ttfamily \#include $<$ctype.\-h$>$}\\*
+{\ttfamily \#include \char`\"{}t\-\_\-alloc.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}t\-\_\-io.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}t\-\_\-list.\-h\char`\"{}}\\*
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{struct_f_l_o_a_t_v_e_c_t_o_r}{F\-L\-O\-A\-T\-V\-E\-C\-T\-O\-R}
+\item 
+struct \hyperlink{struct_i_n_t_v_e_c_t_o_r}{I\-N\-T\-V\-E\-C\-T\-O\-R}
+\item 
+struct \hyperlink{struct_l_o_n_g_v_e_c_t_o_r}{L\-O\-N\-G\-V\-E\-C\-T\-O\-R}
+\item 
+struct \hyperlink{struct_s_h_o_r_t_v_e_c_t_o_r}{S\-H\-O\-R\-T\-V\-E\-C\-T\-O\-R}
+\item 
+struct \hyperlink{struct_d_o_u_b_l_e_v_e_c_t_o_r}{D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R}
+\item 
+struct \hyperlink{struct_c_h_a_r_v_e_c_t_o_r}{C\-H\-A\-R\-V\-E\-C\-T\-O\-R}
+\item 
+struct \hyperlink{struct_s_h_o_r_t_m_a_t_r_i_x}{S\-H\-O\-R\-T\-M\-A\-T\-R\-I\-X}
+\item 
+struct \hyperlink{struct_i_n_t_m_a_t_r_i_x}{I\-N\-T\-M\-A\-T\-R\-I\-X}
+\item 
+struct \hyperlink{struct_f_l_o_a_t_m_a_t_r_i_x}{F\-L\-O\-A\-T\-M\-A\-T\-R\-I\-X}
+\item 
+struct \hyperlink{struct_d_o_u_b_l_e_m_a_t_r_i_x}{D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X}
+\item 
+struct \hyperlink{struct_l_o_n_g_m_a_t_r_i_x}{L\-O\-N\-G\-M\-A\-T\-R\-I\-X}
+\item 
+struct \hyperlink{struct_s_h_o_r_t_b_i_n}{S\-H\-O\-R\-T\-B\-I\-N}
+\item 
+struct \hyperlink{struct_i_n_t_b_i_n}{I\-N\-T\-B\-I\-N}
+\item 
+struct \hyperlink{struct_l_o_n_g_b_i_n}{L\-O\-N\-G\-B\-I\-N}
+\item 
+struct \hyperlink{struct_f_l_o_a_t_b_i_n}{F\-L\-O\-A\-T\-B\-I\-N}
+\item 
+struct \hyperlink{structdb}{db}
+\item 
+struct \hyperlink{structst}{st}
+\item 
+struct \hyperlink{struct_d_o_u_b_l_e_t_e_n_s_o_r}{D\-O\-U\-B\-L\-E\-T\-E\-N\-S\-O\-R}
+\item 
+struct \hyperlink{struct_h_e_a_d_e_r}{H\-E\-A\-D\-E\-R}
+\item 
+struct \hyperlink{structt__keywords}{t\-\_\-keywords}
+\item 
+struct \hyperlink{struct_t___i_n_i_t}{T\-\_\-\-I\-N\-I\-T}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{turtle_8h_a623c494152711bfd771d919802817d17}{is\-Dynamic}
+\item 
+\#define \hyperlink{turtle_8h_a84977424b647dd9248ebf1436aaa1cc8}{M\-A\-X\-B\-U\-F\-F\-E\-R\-S\-I\-Z\-E}
+\item 
+\#define \hyperlink{turtle_8h_a7f758309fec124f36aef1fee3f3efdaf}{M\-A\-X\-L\-A\-B\-E\-L\-S\-I\-Z\-E}~1024    /$\ast$ The same as above $\ast$/
+\item 
+\#define \hyperlink{turtle_8h_a4361226584c3e60fc53c443c49dcca91}{B\-U\-F\-F\-E\-R\-I\-N\-C\-R\-E\-M\-E\-N\-T}
+\item 
+\#define \hyperlink{turtle_8h_a156b77dee69bae79f2b6b20fad5e5522}{L\-A\-B\-E\-L\-I\-N\-C\-R\-E\-M\-E\-N\-T}~64   /$\ast$The same as above $\ast$/
+\item 
+\#define \hyperlink{turtle_8h_a71212bcd68ee44b80905c37c538cecff}{N\-R\-\_\-\-E\-N\-D}
+\item 
+\#define \hyperlink{turtle_8h_ae6416b4cb6bfb8e50f7c4a083d2fb745}{F\-R\-E\-E\-\_\-\-A\-R\-G}~char$\ast$     /$\ast$ The same as above $\ast$/
+\item 
+\#define \hyperlink{turtle_8h_aba51915c87d64af47fb1cc59348961c9}{O\-K}~1
+\item 
+\#define \hyperlink{turtle_8h_aa915e8300da7583ca4d3b00103a7575f}{N\-O\-K}~-\/1
+\item 
+\#define \hyperlink{turtle_8h_aa9fa3b76474aa06c0f55ebb4509ecc31}{W\-O\-K}~0
+\item 
+\#define \hyperlink{turtle_8h_ab53577bb9f395740323a9c03d19b9a8a}{M\-A\-X\-\_\-\-K\-E\-Y\-W\-O\-R\-D\-\_\-\-L\-E\-N\-G\-T\-H}~8
+\item 
+\#define \hyperlink{turtle_8h_a8b43bafee90b30676faae508c21cb8d7}{P\-R\-I\-N\-T}~1
+\item 
+\#define \hyperlink{turtle_8h_a1934f7f19def21658d04f1cf4bb948b5}{N\-O\-P\-R\-I\-N\-T}
+\item 
+\#define \hyperlink{turtle_8h_a4fc34b120ed3bd1120c1eb36abbcd6af}{N\-L}
+\item 
+\#define \hyperlink{turtle_8h_ab946e2e7f7679350627acfded8e2658b}{T\-E\-S\-T}~1
+\item 
+\#define \hyperlink{turtle_8h_acfc991505d40733123ca45f622af2c1d}{N\-O\-T\-E\-S\-T}~0
+\item 
+\#define \hyperlink{turtle_8h_a514396dd60fa0621c83072091fb2a0cd}{S\-Q\-R\-T2}~1.\-414213562373095
+\item 
+\#define \hyperlink{turtle_8h_af2cf98bb7503c02c377cbc9a43e64853}{co}
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \hyperlink{structdb}{db} \hyperlink{turtle_8h_af2577c240f36308c4c25cda8e769c61e}{D\-O\-U\-B\-L\-E\-B\-I\-N}
+\item 
+typedef struct \hyperlink{structst}{st} \hyperlink{turtle_8h_ade34e6dff3489a3ddd297f003f01bbd2}{S\-T\-R\-I\-N\-G\-B\-I\-N}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{turtle_8h_af79ef7c6656ef0f3d2786e2b09c1755f}{t\-\_\-error} (char $\ast$error\-\_\-text)
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{turtle_8h_a4361226584c3e60fc53c443c49dcca91}{\index{turtle.\-h@{turtle.\-h}!B\-U\-F\-F\-E\-R\-I\-N\-C\-R\-E\-M\-E\-N\-T@{B\-U\-F\-F\-E\-R\-I\-N\-C\-R\-E\-M\-E\-N\-T}}
+\index{B\-U\-F\-F\-E\-R\-I\-N\-C\-R\-E\-M\-E\-N\-T@{B\-U\-F\-F\-E\-R\-I\-N\-C\-R\-E\-M\-E\-N\-T}!turtle.h@{turtle.\-h}}
+\subsubsection[{B\-U\-F\-F\-E\-R\-I\-N\-C\-R\-E\-M\-E\-N\-T}]{\setlength{\rightskip}{0pt plus 5cm}\#define B\-U\-F\-F\-E\-R\-I\-N\-C\-R\-E\-M\-E\-N\-T}}\label{turtle_8h_a4361226584c3e60fc53c443c49dcca91}
+{\bfseries Value\-:}
+\begin{DoxyCode}
+256 \textcolor{comment}{/*Buffers memory is increases when necessary of this}
+\textcolor{comment}{                                                         storage capability till MAXBUFFERSIZE*/}
+\end{DoxyCode}
+
+
+Definition at line 19 of file turtle.\-h.
+
+
+
+Referenced by read\-\_\-buffer\-\_\-from\-\_\-stdio(), read\-\_\-comment(), read\-\_\-doublearray(), read\-\_\-floatarray(), read\-\_\-longarray(), read\-\_\-plane\-\_\-strings(), read\-\_\-plane\-\_\-strings\-\_\-restricted(), read\-\_\-shortarray(), read\-\_\-stringarray(), and readandstore\-\_\-comment().
+
+\hypertarget{turtle_8h_af2cf98bb7503c02c377cbc9a43e64853}{\index{turtle.\-h@{turtle.\-h}!co@{co}}
+\index{co@{co}!turtle.h@{turtle.\-h}}
+\subsubsection[{co}]{\setlength{\rightskip}{0pt plus 5cm}\#define co}}\label{turtle_8h_af2cf98bb7503c02c377cbc9a43e64853}
+{\bfseries Value\-:}
+\begin{DoxyCode}
+element \textcolor{comment}{/* The "co" pointer within MATRIX, TENSOR and VECTOR structs contains the string or numerical
+       elements of}
+\textcolor{comment}{                                        matrices, tensors and vectors, the word "co" can be replaced with
+       "element" as previously utilized */}
+\end{DoxyCode}
+
+
+Definition at line 74 of file turtle.\-h.
+
+
+
+Referenced by copy\-\_\-buffer\-\_\-into\-\_\-stringbin(), esponentialsplit(), esponentialsplit2realvectors(), interpolate(), new\-\_\-doublebin(), new\-\_\-intbin(), new\-\_\-longbin(), new\-\_\-shortbin(), new\-\_\-stringbin(), print\-\_\-doublebin\-\_\-elements(), print\-\_\-intbin\-\_\-elements(), print\-\_\-longbin\-\_\-elements(), print\-\_\-shortbin\-\_\-elements(), print\-\_\-stringbin\-\_\-elements(), read\-\_\-doublebin\-\_\-elements(), read\-\_\-intbin\-\_\-elements(), read\-\_\-longbin\-\_\-elements(), read\-\_\-shortbin\-\_\-elements(), read\-\_\-stringarray(), sort2floatvectors(), sort2realvectors(), sort2vectors(), sortreal(), split(), split2realvectors(), write\-\_\-doublebin\-\_\-elements(), write\-\_\-intbin\-\_\-elements(), write\-\_\-longbin\-\_\-elements(), write\-\_\-shortbin\-\_\-elements(), and write\-\_\-stringbin\-\_\-elements().
+
+\hypertarget{turtle_8h_ae6416b4cb6bfb8e50f7c4a083d2fb745}{\index{turtle.\-h@{turtle.\-h}!F\-R\-E\-E\-\_\-\-A\-R\-G@{F\-R\-E\-E\-\_\-\-A\-R\-G}}
+\index{F\-R\-E\-E\-\_\-\-A\-R\-G@{F\-R\-E\-E\-\_\-\-A\-R\-G}!turtle.h@{turtle.\-h}}
+\subsubsection[{F\-R\-E\-E\-\_\-\-A\-R\-G}]{\setlength{\rightskip}{0pt plus 5cm}\#define F\-R\-E\-E\-\_\-\-A\-R\-G~char$\ast$     /$\ast$ The same as above $\ast$/}}\label{turtle_8h_ae6416b4cb6bfb8e50f7c4a083d2fb745}
+
+
+Definition at line 32 of file turtle.\-h.
+
+
+
+Referenced by free\-\_\-charmatrix(), free\-\_\-cvector(), free\-\_\-d3tensor(), free\-\_\-dmatrix(), free\-\_\-doublebin(), free\-\_\-dvector(), free\-\_\-imatrix(), free\-\_\-intbin(), free\-\_\-ivector(), free\-\_\-lmatrix(), free\-\_\-longbin(), free\-\_\-lvector(), free\-\_\-matrix(), free\-\_\-shortbin(), free\-\_\-smatrix(), free\-\_\-stringbin(), free\-\_\-svector(), and free\-\_\-vector().
+
+\hypertarget{turtle_8h_a623c494152711bfd771d919802817d17}{\index{turtle.\-h@{turtle.\-h}!is\-Dynamic@{is\-Dynamic}}
+\index{is\-Dynamic@{is\-Dynamic}!turtle.h@{turtle.\-h}}
+\subsubsection[{is\-Dynamic}]{\setlength{\rightskip}{0pt plus 5cm}\#define is\-Dynamic}}\label{turtle_8h_a623c494152711bfd771d919802817d17}
+{\bfseries Value\-:}
+\begin{DoxyCode}
+1         \textcolor{comment}{/*This number will be used to mark a dynamic allocates}
+\textcolor{comment}{                              quantity */}
+\end{DoxyCode}
+
+
+Definition at line 9 of file turtle.\-h.
+
+
+
+Referenced by esponentialsplit(), new\-\_\-charvector(), new\-\_\-connection\-\_\-attributes(), new\-\_\-doublebin(), new\-\_\-doublematrix(), new\-\_\-doubletensor(), new\-\_\-doublevector(), new\-\_\-floatmatrix(), new\-\_\-floatvector(), new\-\_\-intbin(), new\-\_\-intmatrix(), new\-\_\-intvector(), new\-\_\-linevector(), new\-\_\-longbin(), new\-\_\-longmatrix(), new\-\_\-longvector(), new\-\_\-polygonvector(), new\-\_\-shortbin(), new\-\_\-shortmatrix(), new\-\_\-shortvector(), new\-\_\-stringbin(), read\-\_\-keywords\-\_\-list(), reorder\-\_\-keywords\-\_\-list(), and split().
+
+\hypertarget{turtle_8h_a156b77dee69bae79f2b6b20fad5e5522}{\index{turtle.\-h@{turtle.\-h}!L\-A\-B\-E\-L\-I\-N\-C\-R\-E\-M\-E\-N\-T@{L\-A\-B\-E\-L\-I\-N\-C\-R\-E\-M\-E\-N\-T}}
+\index{L\-A\-B\-E\-L\-I\-N\-C\-R\-E\-M\-E\-N\-T@{L\-A\-B\-E\-L\-I\-N\-C\-R\-E\-M\-E\-N\-T}!turtle.h@{turtle.\-h}}
+\subsubsection[{L\-A\-B\-E\-L\-I\-N\-C\-R\-E\-M\-E\-N\-T}]{\setlength{\rightskip}{0pt plus 5cm}\#define L\-A\-B\-E\-L\-I\-N\-C\-R\-E\-M\-E\-N\-T~64   /$\ast$The same as above $\ast$/}}\label{turtle_8h_a156b77dee69bae79f2b6b20fad5e5522}
+
+
+Definition at line 23 of file turtle.\-h.
+
+
+
+Referenced by get\-\_\-phrase(), and query\-\_\-for\-\_\-label().
+
+\hypertarget{turtle_8h_ab53577bb9f395740323a9c03d19b9a8a}{\index{turtle.\-h@{turtle.\-h}!M\-A\-X\-\_\-\-K\-E\-Y\-W\-O\-R\-D\-\_\-\-L\-E\-N\-G\-T\-H@{M\-A\-X\-\_\-\-K\-E\-Y\-W\-O\-R\-D\-\_\-\-L\-E\-N\-G\-T\-H}}
+\index{M\-A\-X\-\_\-\-K\-E\-Y\-W\-O\-R\-D\-\_\-\-L\-E\-N\-G\-T\-H@{M\-A\-X\-\_\-\-K\-E\-Y\-W\-O\-R\-D\-\_\-\-L\-E\-N\-G\-T\-H}!turtle.h@{turtle.\-h}}
+\subsubsection[{M\-A\-X\-\_\-\-K\-E\-Y\-W\-O\-R\-D\-\_\-\-L\-E\-N\-G\-T\-H}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\-A\-X\-\_\-\-K\-E\-Y\-W\-O\-R\-D\-\_\-\-L\-E\-N\-G\-T\-H~8}}\label{turtle_8h_ab53577bb9f395740323a9c03d19b9a8a}
+
+
+Definition at line 48 of file turtle.\-h.
+
+
+
+Referenced by header\-\_\-scan().
+
+\hypertarget{turtle_8h_a84977424b647dd9248ebf1436aaa1cc8}{\index{turtle.\-h@{turtle.\-h}!M\-A\-X\-B\-U\-F\-F\-E\-R\-S\-I\-Z\-E@{M\-A\-X\-B\-U\-F\-F\-E\-R\-S\-I\-Z\-E}}
+\index{M\-A\-X\-B\-U\-F\-F\-E\-R\-S\-I\-Z\-E@{M\-A\-X\-B\-U\-F\-F\-E\-R\-S\-I\-Z\-E}!turtle.h@{turtle.\-h}}
+\subsubsection[{M\-A\-X\-B\-U\-F\-F\-E\-R\-S\-I\-Z\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\-A\-X\-B\-U\-F\-F\-E\-R\-S\-I\-Z\-E}}\label{turtle_8h_a84977424b647dd9248ebf1436aaa1cc8}
+{\bfseries Value\-:}
+\begin{DoxyCode}
+50000 \textcolor{comment}{/* Many functions uses a buffer to allocate data. A}
+\textcolor{comment}{                             safe habit is to limit its size. */}
+\end{DoxyCode}
+
+
+Definition at line 12 of file turtle.\-h.
+
+
+
+Referenced by header\-\_\-scan(), read\-\_\-doublearray(), read\-\_\-floatarray(), read\-\_\-index(), read\-\_\-longarray(), read\-\_\-shortarray(), and read\-\_\-stringarray().
+
+\hypertarget{turtle_8h_a7f758309fec124f36aef1fee3f3efdaf}{\index{turtle.\-h@{turtle.\-h}!M\-A\-X\-L\-A\-B\-E\-L\-S\-I\-Z\-E@{M\-A\-X\-L\-A\-B\-E\-L\-S\-I\-Z\-E}}
+\index{M\-A\-X\-L\-A\-B\-E\-L\-S\-I\-Z\-E@{M\-A\-X\-L\-A\-B\-E\-L\-S\-I\-Z\-E}!turtle.h@{turtle.\-h}}
+\subsubsection[{M\-A\-X\-L\-A\-B\-E\-L\-S\-I\-Z\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\-A\-X\-L\-A\-B\-E\-L\-S\-I\-Z\-E~1024    /$\ast$ The same as above $\ast$/}}\label{turtle_8h_a7f758309fec124f36aef1fee3f3efdaf}
+
+
+Definition at line 16 of file turtle.\-h.
+
+
+
+Referenced by get\-\_\-phrase(), and query\-\_\-for\-\_\-label().
+
+\hypertarget{turtle_8h_a4fc34b120ed3bd1120c1eb36abbcd6af}{\index{turtle.\-h@{turtle.\-h}!N\-L@{N\-L}}
+\index{N\-L@{N\-L}!turtle.h@{turtle.\-h}}
+\subsubsection[{N\-L}]{\setlength{\rightskip}{0pt plus 5cm}\#define N\-L}}\label{turtle_8h_a4fc34b120ed3bd1120c1eb36abbcd6af}
+{\bfseries Value\-:}
+\begin{DoxyCode}
+1              \textcolor{comment}{/* Numerical Recipes allocation routines allow to have}
+\textcolor{comment}{                                                         arbitrary  subscripts for vector and matrixes. The}
+\textcolor{comment}{                                                         fluid turtle library restrict this freedom by
+       setting}
+\textcolor{comment}{                                                     their  lower value to NL  */}
+\end{DoxyCode}
+
+
+Definition at line 58 of file turtle.\-h.
+
+
+
+Referenced by bubble\-\_\-sort\-\_\-elevation\-\_\-in\-\_\-longbin(), fprint\-\_\-polygonconnectionattributearray(), fprint\-\_\-polygonvector(), free\-\_\-charvector(), free\-\_\-doublematrix(), free\-\_\-doubletensor(), free\-\_\-doublevector(), free\-\_\-floatmatrix(), free\-\_\-floatvector(), free\-\_\-intmatrix(), free\-\_\-intvector(), free\-\_\-longmatrix(), free\-\_\-longvector(), free\-\_\-shortmatrix(), free\-\_\-shortvector(), min\-\_\-elevation(), new\-\_\-charvector(), new\-\_\-connection\-\_\-attributes(), new\-\_\-doublematrix(), new\-\_\-doubletensor(), new\-\_\-doublevector(), new\-\_\-floatmatrix(), new\-\_\-floatvector(), new\-\_\-intmatrix(), new\-\_\-intvector(), new\-\_\-linevector(), new\-\_\-longbin\-\_\-from\-\_\-doublematrix\-\_\-array(), new\-\_\-longbin\-\_\-from\-\_\-longbin(), new\-\_\-longbin\-\_\-from\-\_\-longbin\-\_\-cleaning\-\_\-novalues(), new\-\_\-longmatrix(), new\-\_\-longmatrix\-\_\-vector(), new\-\_\-longvector(), new\-\_\-polygonvector(), new\-\_\-raster\-\_\-map(), new\-\_\-shortmatrix(), new\-\_\-shortvector(), q\-\_\-discharge\-\_\-from\-\_\-outlet\-\_\-subs\-\_\-line(), read\-\_\-keywords\-\_\-list(), vertical\-\_\-area\-\_\-subs(), vertical\-\_\-area\-\_\-surf(), volume\-\_\-subs(), volume\-\_\-surf(), wet\-\_\-area(), write\-\_\-polygonconnectionattributearray(), write\-\_\-polygonvector(), and write\-\_\-small\-\_\-lines\-\_\-indices().
+
+\hypertarget{turtle_8h_aa915e8300da7583ca4d3b00103a7575f}{\index{turtle.\-h@{turtle.\-h}!N\-O\-K@{N\-O\-K}}
+\index{N\-O\-K@{N\-O\-K}!turtle.h@{turtle.\-h}}
+\subsubsection[{N\-O\-K}]{\setlength{\rightskip}{0pt plus 5cm}\#define N\-O\-K~-\/1}}\label{turtle_8h_aa915e8300da7583ca4d3b00103a7575f}
+
+
+Definition at line 40 of file turtle.\-h.
+
+\hypertarget{turtle_8h_a1934f7f19def21658d04f1cf4bb948b5}{\index{turtle.\-h@{turtle.\-h}!N\-O\-P\-R\-I\-N\-T@{N\-O\-P\-R\-I\-N\-T}}
+\index{N\-O\-P\-R\-I\-N\-T@{N\-O\-P\-R\-I\-N\-T}!turtle.h@{turtle.\-h}}
+\subsubsection[{N\-O\-P\-R\-I\-N\-T}]{\setlength{\rightskip}{0pt plus 5cm}\#define N\-O\-P\-R\-I\-N\-T}}\label{turtle_8h_a1934f7f19def21658d04f1cf4bb948b5}
+{\bfseries Value\-:}
+\begin{DoxyCode}
+0         \textcolor{comment}{/*With the above PRINT is used to set a printint option}
+\textcolor{comment}{                           in some functions */}
+\end{DoxyCode}
+
+
+Definition at line 54 of file turtle.\-h.
+
+
+
+Referenced by aggregate(), get\-\_\-filename(), get\-\_\-parameter(), get\-\_\-strings(), header\-\_\-scan(), justread\-\_\-floatmatrix(), read\-\_\-charvector(), read\-\_\-doublebin(), read\-\_\-doublematrix(), read\-\_\-doubletensor(), read\-\_\-doublevector(), read\-\_\-filenames(), read\-\_\-floatmatrix(), read\-\_\-floatvector(), read\-\_\-intbin(), read\-\_\-intmatrix(), read\-\_\-intvector(), read\-\_\-longbin(), read\-\_\-longmatrix(), read\-\_\-longvector(), read\-\_\-parameters(), read\-\_\-shortbin(), read\-\_\-shortmatrix(), and read\-\_\-shortvector().
+
+\hypertarget{turtle_8h_acfc991505d40733123ca45f622af2c1d}{\index{turtle.\-h@{turtle.\-h}!N\-O\-T\-E\-S\-T@{N\-O\-T\-E\-S\-T}}
+\index{N\-O\-T\-E\-S\-T@{N\-O\-T\-E\-S\-T}!turtle.h@{turtle.\-h}}
+\subsubsection[{N\-O\-T\-E\-S\-T}]{\setlength{\rightskip}{0pt plus 5cm}\#define N\-O\-T\-E\-S\-T~0}}\label{turtle_8h_acfc991505d40733123ca45f622af2c1d}
+
+
+Definition at line 68 of file turtle.\-h.
+
+\hypertarget{turtle_8h_a71212bcd68ee44b80905c37c538cecff}{\index{turtle.\-h@{turtle.\-h}!N\-R\-\_\-\-E\-N\-D@{N\-R\-\_\-\-E\-N\-D}}
+\index{N\-R\-\_\-\-E\-N\-D@{N\-R\-\_\-\-E\-N\-D}!turtle.h@{turtle.\-h}}
+\subsubsection[{N\-R\-\_\-\-E\-N\-D}]{\setlength{\rightskip}{0pt plus 5cm}\#define N\-R\-\_\-\-E\-N\-D}}\label{turtle_8h_a71212bcd68ee44b80905c37c538cecff}
+{\bfseries Value\-:}
+\begin{DoxyCode}
+1         \textcolor{comment}{/* Required by the Numerical Recipes' allocation routines}
+\textcolor{comment}{                                                        */}
+\end{DoxyCode}
+
+
+Definition at line 27 of file turtle.\-h.
+
+\hypertarget{turtle_8h_aba51915c87d64af47fb1cc59348961c9}{\index{turtle.\-h@{turtle.\-h}!O\-K@{O\-K}}
+\index{O\-K@{O\-K}!turtle.h@{turtle.\-h}}
+\subsubsection[{O\-K}]{\setlength{\rightskip}{0pt plus 5cm}\#define O\-K~1}}\label{turtle_8h_aba51915c87d64af47fb1cc59348961c9}
+
+
+Definition at line 36 of file turtle.\-h.
+
+
+
+Referenced by copy\-\_\-buffer\-\_\-into\-\_\-stringbin(), header\-\_\-scan(), write\-\_\-charvector\-\_\-elements(), write\-\_\-doublebin\-\_\-elements(), write\-\_\-doublematrix\-\_\-elements(), write\-\_\-doubletensor\-\_\-elements(), write\-\_\-doublevector\-\_\-elements(), write\-\_\-floatmatrix\-\_\-elements(), write\-\_\-floatvector\-\_\-elements(), write\-\_\-intbin\-\_\-elements(), write\-\_\-intmatrix\-\_\-elements(), write\-\_\-intvector\-\_\-elements(), write\-\_\-longbin\-\_\-elements(), write\-\_\-longmatrix\-\_\-elements(), write\-\_\-longvector\-\_\-elements(), write\-\_\-shortbin\-\_\-elements(), write\-\_\-shortmatrix\-\_\-elements(), write\-\_\-shortvector\-\_\-elements(), and write\-\_\-stringbin\-\_\-elements().
+
+\hypertarget{turtle_8h_a8b43bafee90b30676faae508c21cb8d7}{\index{turtle.\-h@{turtle.\-h}!P\-R\-I\-N\-T@{P\-R\-I\-N\-T}}
+\index{P\-R\-I\-N\-T@{P\-R\-I\-N\-T}!turtle.h@{turtle.\-h}}
+\subsubsection[{P\-R\-I\-N\-T}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\-R\-I\-N\-T~1}}\label{turtle_8h_a8b43bafee90b30676faae508c21cb8d7}
+
+
+Definition at line 52 of file turtle.\-h.
+
+\hypertarget{turtle_8h_a514396dd60fa0621c83072091fb2a0cd}{\index{turtle.\-h@{turtle.\-h}!S\-Q\-R\-T2@{S\-Q\-R\-T2}}
+\index{S\-Q\-R\-T2@{S\-Q\-R\-T2}!turtle.h@{turtle.\-h}}
+\subsubsection[{S\-Q\-R\-T2}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\-Q\-R\-T2~1.\-414213562373095}}\label{turtle_8h_a514396dd60fa0621c83072091fb2a0cd}
+
+
+Definition at line 71 of file turtle.\-h.
+
+\hypertarget{turtle_8h_ab946e2e7f7679350627acfded8e2658b}{\index{turtle.\-h@{turtle.\-h}!T\-E\-S\-T@{T\-E\-S\-T}}
+\index{T\-E\-S\-T@{T\-E\-S\-T}!turtle.h@{turtle.\-h}}
+\subsubsection[{T\-E\-S\-T}]{\setlength{\rightskip}{0pt plus 5cm}\#define T\-E\-S\-T~1}}\label{turtle_8h_ab946e2e7f7679350627acfded8e2658b}
+
+
+Definition at line 65 of file turtle.\-h.
+
+\hypertarget{turtle_8h_aa9fa3b76474aa06c0f55ebb4509ecc31}{\index{turtle.\-h@{turtle.\-h}!W\-O\-K@{W\-O\-K}}
+\index{W\-O\-K@{W\-O\-K}!turtle.h@{turtle.\-h}}
+\subsubsection[{W\-O\-K}]{\setlength{\rightskip}{0pt plus 5cm}\#define W\-O\-K~0}}\label{turtle_8h_aa9fa3b76474aa06c0f55ebb4509ecc31}
+
+
+Definition at line 44 of file turtle.\-h.
+
+
+
+\subsection{Typedef Documentation}
+\hypertarget{turtle_8h_af2577c240f36308c4c25cda8e769c61e}{\index{turtle.\-h@{turtle.\-h}!D\-O\-U\-B\-L\-E\-B\-I\-N@{D\-O\-U\-B\-L\-E\-B\-I\-N}}
+\index{D\-O\-U\-B\-L\-E\-B\-I\-N@{D\-O\-U\-B\-L\-E\-B\-I\-N}!turtle.h@{turtle.\-h}}
+\subsubsection[{D\-O\-U\-B\-L\-E\-B\-I\-N}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf db}  {\bf D\-O\-U\-B\-L\-E\-B\-I\-N}}}\label{turtle_8h_af2577c240f36308c4c25cda8e769c61e}
+\hypertarget{turtle_8h_ade34e6dff3489a3ddd297f003f01bbd2}{\index{turtle.\-h@{turtle.\-h}!S\-T\-R\-I\-N\-G\-B\-I\-N@{S\-T\-R\-I\-N\-G\-B\-I\-N}}
+\index{S\-T\-R\-I\-N\-G\-B\-I\-N@{S\-T\-R\-I\-N\-G\-B\-I\-N}!turtle.h@{turtle.\-h}}
+\subsubsection[{S\-T\-R\-I\-N\-G\-B\-I\-N}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf st}  {\bf S\-T\-R\-I\-N\-G\-B\-I\-N}}}\label{turtle_8h_ade34e6dff3489a3ddd297f003f01bbd2}
+
+
+\subsection{Function Documentation}
+\hypertarget{turtle_8h_af79ef7c6656ef0f3d2786e2b09c1755f}{\index{turtle.\-h@{turtle.\-h}!t\-\_\-error@{t\-\_\-error}}
+\index{t\-\_\-error@{t\-\_\-error}!turtle.h@{turtle.\-h}}
+\subsubsection[{t\-\_\-error}]{\setlength{\rightskip}{0pt plus 5cm}void t\-\_\-error (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{error\-\_\-text}
+\end{DoxyParamCaption}
+)}}\label{turtle_8h_af79ef7c6656ef0f3d2786e2b09c1755f}
+
+
+Definition at line 5 of file error.\-c.
+
+
+
+Referenced by assignnovalue(), binarywrite\-\_\-charvector\-\_\-elements(), binarywrite\-\_\-doublebin\-\_\-elements(), binarywrite\-\_\-doublematrix\-\_\-elements(), binarywrite\-\_\-doublevector\-\_\-elements(), binarywrite\-\_\-floatmatrix\-\_\-elements(), binarywrite\-\_\-floatvector\-\_\-elements(), binarywrite\-\_\-intbin\-\_\-elements(), binarywrite\-\_\-intmatrix\-\_\-elements(), binarywrite\-\_\-intvector\-\_\-elements(), binarywrite\-\_\-longbin\-\_\-elements(), binarywrite\-\_\-longmatrix\-\_\-elements(), binarywrite\-\_\-longvector\-\_\-elements(), binarywrite\-\_\-shortbin\-\_\-elements(), binarywrite\-\_\-shortmatrix\-\_\-elements(), binarywrite\-\_\-shortvector\-\_\-elements(), buffer2list(), build\-\_\-doubletensor(), build\-\_\-frommatrix(), charmatrix(), clean\-\_\-floatmatrix(), convlv(), copy\-\_\-buffer\-\_\-into\-\_\-stringbin(), copy\-\_\-doublematrix(), copy\-\_\-doublevector(), copy\-\_\-floatmatrix(), copy\-\_\-floatvector(), copy\-\_\-intmatrix(), copy\-\_\-intvector(), copy\-\_\-longmatrix(), copy\-\_\-longvector(), copy\-\_\-shortmatrix(), copy\-\_\-shortvector(), cvector(), d3tensor(), decod(), delete\-\_\-ijx(), delete\-\_\-ix(), delete\-\_\-longpair(), delete\-\_\-longpoker(), delete\-\_\-realpair(), delete\-\_\-xyz(), deleteshuffle\-\_\-longpair(), dmatrix(), double\-\_\-n\-\_\-moment(), doublematrix\-\_\-element\-\_\-multiplication(), doublematrix\-\_\-n\-\_\-moment(), doublevector\-\_\-correlation(), doublevector\-\_\-element\-\_\-multiplication(), doublevector\-\_\-n\-\_\-moment(), dsprsax(), dsprstx(), dvector(), error\-\_\-message(), esponentialsplit(), esponentialsplit2realvectors(), exponentialhystogram(), extract\-\_\-doublematrix(), extract\-\_\-fromtensor(), file\-\_\-copy(), floatmatrix\-\_\-element\-\_\-multiplication(), floatmatrix\-\_\-n\-\_\-moment(), floatmatrix\-\_\-restricted\-\_\-n\-\_\-moment(), floatvector\-\_\-correlation(), floatvector\-\_\-element\-\_\-multiplication(), floatvector\-\_\-n\-\_\-moment(), fmultiplydoublematrix(), free\-\_\-charvector(), free\-\_\-doublebin(), free\-\_\-doublematrix(), free\-\_\-doubletensor(), free\-\_\-doublevector(), free\-\_\-floatmatrix(), free\-\_\-floatvector(), free\-\_\-intbin(), free\-\_\-intmatrix(), free\-\_\-intvector(), free\-\_\-longbin(), free\-\_\-longmatrix(), free\-\_\-longvector(), free\-\_\-shortbin(), free\-\_\-shortmatrix(), free\-\_\-shortvector(), free\-\_\-stringbin(), get\-\_\-doubleraster\-\_\-map(), get\-\_\-doublesquare\-\_\-grid(), get\-\_\-filename(), get\-\_\-fine\-\_\-indices(), get\-\_\-parameter(), get\-\_\-phrase(), get\-\_\-s\-\_\-times(), get\-\_\-square\-\_\-grid(), get\-\_\-strings(), get\-\_\-workingdirectory(), header\-\_\-scan(), headercmp(), imatrix(), initialize\-\_\-doublematrix(), initialize\-\_\-doubletensor(), initialize\-\_\-doublevector(), initialize\-\_\-floatmatrix(), initialize\-\_\-floatvector(), initialize\-\_\-longmatrix(), initialize\-\_\-longvector(), initialize\-\_\-shortmatrix(), initialize\-\_\-shortvector(), interpolate(), interpolate\-\_\-doublematrix(), interpolate\-\_\-floatmatrix(), ivector(), join\-\_\-3strings\-\_\-into(), join\-\_\-strings\-\_\-into(), justread\-\_\-chararray(), justread\-\_\-floatarray(), justread\-\_\-floatmatrix(), justread\-\_\-longarray(), linear\-\_\-span\-\_\-doubletensor(), lmatrix(), longmatrix\-\_\-element\-\_\-multiplication(), longmatrix\-\_\-n\-\_\-moment(), longvector\-\_\-correlation(), longvector\-\_\-element\-\_\-multiplication(), longvector\-\_\-n\-\_\-moment(), lvector(), main(), matrix(), new\-\_\-charvector(), new\-\_\-connection\-\_\-attributes(), new\-\_\-doublebin(), new\-\_\-doublematrix(), new\-\_\-doubletensor(), new\-\_\-doublevector(), new\-\_\-floatmatrix(), new\-\_\-floatvector(), new\-\_\-ijx(), new\-\_\-intbin(), new\-\_\-intmatrix(), new\-\_\-intvector(), new\-\_\-ix(), new\-\_\-line\-\_\-from\-\_\-points(), new\-\_\-linevector(), new\-\_\-longbin(), new\-\_\-longmatrix(), new\-\_\-longmatrix\-\_\-vector(), new\-\_\-longpair(), new\-\_\-longpoker(), new\-\_\-longvector(), new\-\_\-output\-\_\-filenames(), new\-\_\-point(), new\-\_\-polygon\-\_\-from\-\_\-a\-\_\-linevector(), new\-\_\-polygonvector(), new\-\_\-raster\-\_\-map(), new\-\_\-realpair(), new\-\_\-shortbin(), new\-\_\-shortmatrix(), new\-\_\-shortvector(), new\-\_\-stringbin(), new\-\_\-word(), new\-\_\-xyz(), point2ijx(), point2ix(), point2longpair(), point2longpoker(), point2measure(), point2realpair(), print\-\_\-charvector\-\_\-elements(), print\-\_\-doublebin\-\_\-elements(), print\-\_\-doublematrix\-\_\-elements(), print\-\_\-doubletensor\-\_\-elements(), print\-\_\-doublevector\-\_\-elements(), print\-\_\-floatmatrix\-\_\-elements(), print\-\_\-floatvector\-\_\-elements(), print\-\_\-intbin\-\_\-elements(), print\-\_\-intmatrix\-\_\-elements(), print\-\_\-intvector\-\_\-elements(), print\-\_\-longbin\-\_\-elements(), print\-\_\-longmatrix\-\_\-elements(), print\-\_\-longvector\-\_\-elements(), print\-\_\-shortbin\-\_\-elements(), print\-\_\-shortmatrix\-\_\-elements(), print\-\_\-shortvector\-\_\-elements(), print\-\_\-stringbin\-\_\-elements(), prod\-\_\-doublematvet(), prodscal(), query\-\_\-for\-\_\-label(), ran1(), read\-\_\-b\-\_\-parameters\-\_\-ft(), read\-\_\-buffer\-\_\-from\-\_\-stdio(), read\-\_\-charvector(), read\-\_\-charvector\-\_\-elements(), read\-\_\-comment(), read\-\_\-doublearray(), read\-\_\-doublebin(), read\-\_\-doublebin\-\_\-elements(), read\-\_\-doublematrix(), read\-\_\-doublematrix\-\_\-elements(), read\-\_\-doublesquare\-\_\-grid(), read\-\_\-doubletensor(), read\-\_\-doubletensor\-\_\-elements(), read\-\_\-doublevector(), read\-\_\-doublevector\-\_\-elements(), read\-\_\-esriascii(), read\-\_\-filenames(), read\-\_\-fine\-\_\-indices(), read\-\_\-floatarray(), read\-\_\-floatmatrix(), read\-\_\-floatmatrix\-\_\-elements(), read\-\_\-floatvector(), read\-\_\-floatvector\-\_\-elements(), read\-\_\-grassascii(), read\-\_\-grid(), read\-\_\-index(), read\-\_\-intbin(), read\-\_\-intbin\-\_\-elements(), read\-\_\-intmatrix(), read\-\_\-intmatrix\-\_\-elements(), read\-\_\-intvector(), read\-\_\-intvector\-\_\-elements(), read\-\_\-keywords(), read\-\_\-keywords\-\_\-list(), read\-\_\-longarray(), read\-\_\-longbin(), read\-\_\-longbin\-\_\-elements(), read\-\_\-longmatrix(), read\-\_\-longmatrix\-\_\-elements(), read\-\_\-longvector(), read\-\_\-longvector\-\_\-elements(), read\-\_\-map(), read\-\_\-maptensor(), read\-\_\-matrixheader(), read\-\_\-parameters(), read\-\_\-plane\-\_\-strings(), read\-\_\-plane\-\_\-strings\-\_\-restricted(), read\-\_\-polygon(), read\-\_\-shortarray(), read\-\_\-shortbin(), read\-\_\-shortbin\-\_\-elements(), read\-\_\-shortmatrix(), read\-\_\-shortmatrix\-\_\-elements(), read\-\_\-shortvector(), read\-\_\-shortvector\-\_\-elements(), read\-\_\-square\-\_\-grid(), read\-\_\-stringarray(), read\-\_\-tensor(), read\-\_\-tensorheader(), read\-\_\-vectorheader(), readandstore\-\_\-comment(), readline\-\_\-array(), readline\-\_\-textarray(), realbuffer2list(), realpair\-\_\-into\-\_\-doublematrix(), reorder\-\_\-keywords\-\_\-list(), search\-\_\-array(), search\-\_\-named\-\_\-array(), shortmatrix\-\_\-element\-\_\-multiplication(), shortvector\-\_\-element\-\_\-multiplication(), simplefind(), simplehystogram(), smatrix(), split(), split2realvectors(), sprsin(), ssimplefindkeyword(), svector(), t\-\_\-fopen(), tridiag(), vector(), vectorize\-\_\-doublematrix(), vectorize\-\_\-floatmatrix(), vectorize\-\_\-longmatrix(), vectorize\-\_\-shortmatrix(), write\-\_\-chararray\-\_\-elements(), write\-\_\-charvector\-\_\-elements(), write\-\_\-comment(), write\-\_\-doublearray\-\_\-elements(), write\-\_\-doublebin\-\_\-elements(), write\-\_\-doublematrix\-\_\-elements(), write\-\_\-doubletensor\-\_\-elements(), write\-\_\-doublevector\-\_\-elements(), write\-\_\-esriascii(), write\-\_\-floatarray\-\_\-elements(), write\-\_\-floatmatrix\-\_\-elements(), write\-\_\-floatvector\-\_\-elements(), write\-\_\-frommatrix(), write\-\_\-header\-\_\-header(), write\-\_\-intarray\-\_\-elements(), write\-\_\-intbin\-\_\-elements(), write\-\_\-intmatrix\-\_\-elements(), write\-\_\-intvector\-\_\-elements(), write\-\_\-longarray\-\_\-elements(), write\-\_\-longbin\-\_\-elements(), write\-\_\-longmatrix\-\_\-elements(), write\-\_\-longvector\-\_\-elements(), write\-\_\-read\-\_\-filenames(), write\-\_\-shortarray\-\_\-elements(), write\-\_\-shortbin\-\_\-elements(), write\-\_\-shortmatrix\-\_\-elements(), write\-\_\-shortvector\-\_\-elements(), write\-\_\-stringbin\-\_\-elements(), write\-\_\-stringsarray\-\_\-elements(), write\-\_\-suffix(), write\-\_\-turtle(), and xyz\-\_\-into\-\_\-doublematrix().
+

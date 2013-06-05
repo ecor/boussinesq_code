@@ -1,0 +1,18 @@
+digraph "linear_span_doubletensor"
+{
+  bgcolor="transparent";
+  edge [fontname="FreeSans",fontsize="10",labelfontname="FreeSans",labelfontsize="10"];
+  node [fontname="FreeSans",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="linear_span_doubletensor",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="new_doubletensor",height=0.2,width=0.4,color="black",URL="$t__alloc_8h.html#a8d5ba9aeeb20f83c58c9d6edbba37ec2"];
+  Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="d3tensor",height=0.2,width=0.4,color="black",URL="$t__alloc_8h.html#ad88b8251cbbc0f65cdfc0aaba4a500b2"];
+  Node3 -> Node4 [color="midnightblue",fontsize="10",style="solid"];
+  Node4 [label="t_error",height=0.2,width=0.4,color="black",URL="$error_8c.html#af79ef7c6656ef0f3d2786e2b09c1755f"];
+  Node2 -> Node4 [color="midnightblue",fontsize="10",style="solid"];
+  Node1 -> Node5 [color="midnightblue",fontsize="10",style="solid"];
+  Node5 [label="no_value_function",height=0.2,width=0.4,color="black",URL="$linear__span_8c.html#a0e33215205b2aa5388d4ee80f730996d"];
+  Node1 -> Node4 [color="midnightblue",fontsize="10",style="solid"];
+}

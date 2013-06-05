@@ -1,0 +1,10 @@
+digraph "read_option_double"
+{
+  bgcolor="transparent";
+  edge [fontname="FreeSans",fontsize="10",labelfontname="FreeSans",labelfontsize="10"];
+  node [fontname="FreeSans",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="read_option_double",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="read_option_string",height=0.2,width=0.4,color="black",URL="$read__command__line_8c.html#a48221262c52ab4f67e2d724dee81eeed"];
+}

@@ -1,0 +1,272 @@
+\hypertarget{tabs_8h}{\section{A\-S\-C\-I\-I/tabs.h File Reference}
+\label{tabs_8h}\index{A\-S\-C\-I\-I/tabs.\-h@{A\-S\-C\-I\-I/tabs.\-h}}
+}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{tabs_8h_a73d01c2c1776a9a507f922209c8af541}{end\-\_\-vector}~-\/9.\-0\-E+5
+\item 
+\#define \hyperlink{tabs_8h_ae284edf08f8e8e46f27650e98af0bb4a}{end\-\_\-vector\-\_\-long}~999999
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+char $\ast$$\ast$ \hyperlink{tabs_8h_a7a6fffe07ecfd6e0ddad3a102050c474}{readline\-\_\-textarray} (F\-I\-L\-E $\ast$f, long offset)
+\item 
+void \hyperlink{tabs_8h_a36785b49237d55ee268233dc2fe65eab}{readline\-\_\-array} (F\-I\-L\-E $\ast$f, double $\ast$a, long offset, long ncol, double ndef, short $\ast$endoffile)
+\item 
+double \hyperlink{tabs_8h_ae3bba5d5ffec6d76efdc00e12cf914c9}{decod} (char $\ast$ch, long n, double ndef)
+\item 
+long \hyperlink{tabs_8h_a21bdb704431c6daf189b18722b783ed4}{dim1} (double $\ast$a)
+\item 
+long \hyperlink{tabs_8h_a156fb1a64fcf07f308d43e348d2c23f7}{dim1l} (long $\ast$a)
+\item 
+long \hyperlink{tabs_8h_ae87a1dddc5dec2e802086404477dc5cc}{dim2} (double $\ast$$\ast$a)
+\item 
+long \hyperlink{tabs_8h_a30f1dfeb230e1e0bc721df3f8ae5ca80}{dim\-\_\-string} (char $\ast$a)
+\item 
+long \hyperlink{tabs_8h_ad33a86d90a6cd309d0737f194e4d3189}{dim\-\_\-vect\-\_\-strings} (char $\ast$$\ast$a)
+\item 
+double $\ast$$\ast$ \hyperlink{tabs_8h_a2d5942a0dcbf7195aa4d66a5dbeb3c7c}{alloc2} (long n, long m)
+\item 
+double $\ast$ \hyperlink{tabs_8h_a700e10fdf594e76af3830a4d9ebea6a8}{alloc1} (long n)
+\item 
+long $\ast$$\ast$ \hyperlink{tabs_8h_a30b88974d6da0f763e57f2905a9f254b}{alloc\-\_\-long2} (long n)
+\item 
+long $\ast$ \hyperlink{tabs_8h_a086af220a6b8faf28ea16f1e8c54daa2}{alloc\-\_\-long1} (long n)
+\item 
+short \hyperlink{tabs_8h_a2a32ac16f895315a72c72e7458c1549a}{compare\-\_\-strings} (char $\ast$a, char $\ast$b)
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{tabs_8h_a73d01c2c1776a9a507f922209c8af541}{\index{tabs.\-h@{tabs.\-h}!end\-\_\-vector@{end\-\_\-vector}}
+\index{end\-\_\-vector@{end\-\_\-vector}!tabs.h@{tabs.\-h}}
+\subsubsection[{end\-\_\-vector}]{\setlength{\rightskip}{0pt plus 5cm}\#define end\-\_\-vector~-\/9.\-0\-E+5}}\label{tabs_8h_a73d01c2c1776a9a507f922209c8af541}
+
+
+Definition at line 26 of file tabs.\-h.
+
+
+
+Referenced by alloc1(), alloc2(), dim1(), and dim2().
+
+\hypertarget{tabs_8h_ae284edf08f8e8e46f27650e98af0bb4a}{\index{tabs.\-h@{tabs.\-h}!end\-\_\-vector\-\_\-long@{end\-\_\-vector\-\_\-long}}
+\index{end\-\_\-vector\-\_\-long@{end\-\_\-vector\-\_\-long}!tabs.h@{tabs.\-h}}
+\subsubsection[{end\-\_\-vector\-\_\-long}]{\setlength{\rightskip}{0pt plus 5cm}\#define end\-\_\-vector\-\_\-long~999999}}\label{tabs_8h_ae284edf08f8e8e46f27650e98af0bb4a}
+
+
+Definition at line 27 of file tabs.\-h.
+
+
+
+Referenced by alloc\-\_\-long1(), alloc\-\_\-long2(), and dim1l().
+
+
+
+\subsection{Function Documentation}
+\hypertarget{tabs_8h_a700e10fdf594e76af3830a4d9ebea6a8}{\index{tabs.\-h@{tabs.\-h}!alloc1@{alloc1}}
+\index{alloc1@{alloc1}!tabs.h@{tabs.\-h}}
+\subsubsection[{alloc1}]{\setlength{\rightskip}{0pt plus 5cm}double$\ast$ alloc1 (
+\begin{DoxyParamCaption}
+\item[{long}]{n}
+\end{DoxyParamCaption}
+)}}\label{tabs_8h_a700e10fdf594e76af3830a4d9ebea6a8}
+
+
+Definition at line 327 of file tabs.\-c.
+
+
+
+References end\-\_\-vector.
+
+\hypertarget{tabs_8h_a2d5942a0dcbf7195aa4d66a5dbeb3c7c}{\index{tabs.\-h@{tabs.\-h}!alloc2@{alloc2}}
+\index{alloc2@{alloc2}!tabs.h@{tabs.\-h}}
+\subsubsection[{alloc2}]{\setlength{\rightskip}{0pt plus 5cm}double$\ast$$\ast$ alloc2 (
+\begin{DoxyParamCaption}
+\item[{long}]{n, }
+\item[{long}]{m}
+\end{DoxyParamCaption}
+)}}\label{tabs_8h_a2d5942a0dcbf7195aa4d66a5dbeb3c7c}
+
+
+Definition at line 314 of file tabs.\-c.
+
+
+
+References end\-\_\-vector.
+
+\hypertarget{tabs_8h_a086af220a6b8faf28ea16f1e8c54daa2}{\index{tabs.\-h@{tabs.\-h}!alloc\-\_\-long1@{alloc\-\_\-long1}}
+\index{alloc\-\_\-long1@{alloc\-\_\-long1}!tabs.h@{tabs.\-h}}
+\subsubsection[{alloc\-\_\-long1}]{\setlength{\rightskip}{0pt plus 5cm}long$\ast$ alloc\-\_\-long1 (
+\begin{DoxyParamCaption}
+\item[{long}]{n}
+\end{DoxyParamCaption}
+)}}\label{tabs_8h_a086af220a6b8faf28ea16f1e8c54daa2}
+
+
+Definition at line 349 of file tabs.\-c.
+
+
+
+References end\-\_\-vector\-\_\-long.
+
+\hypertarget{tabs_8h_a30b88974d6da0f763e57f2905a9f254b}{\index{tabs.\-h@{tabs.\-h}!alloc\-\_\-long2@{alloc\-\_\-long2}}
+\index{alloc\-\_\-long2@{alloc\-\_\-long2}!tabs.h@{tabs.\-h}}
+\subsubsection[{alloc\-\_\-long2}]{\setlength{\rightskip}{0pt plus 5cm}long$\ast$$\ast$ alloc\-\_\-long2 (
+\begin{DoxyParamCaption}
+\item[{long}]{n}
+\end{DoxyParamCaption}
+)}}\label{tabs_8h_a30b88974d6da0f763e57f2905a9f254b}
+
+
+Definition at line 338 of file tabs.\-c.
+
+
+
+References end\-\_\-vector\-\_\-long.
+
+\hypertarget{tabs_8h_a2a32ac16f895315a72c72e7458c1549a}{\index{tabs.\-h@{tabs.\-h}!compare\-\_\-strings@{compare\-\_\-strings}}
+\index{compare\-\_\-strings@{compare\-\_\-strings}!tabs.h@{tabs.\-h}}
+\subsubsection[{compare\-\_\-strings}]{\setlength{\rightskip}{0pt plus 5cm}short compare\-\_\-strings (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{a, }
+\item[{char $\ast$}]{b}
+\end{DoxyParamCaption}
+)}}\label{tabs_8h_a2a32ac16f895315a72c72e7458c1549a}
+
+
+Definition at line 364 of file tabs.\-c.
+
+
+
+References dim\-\_\-string().
+
+\hypertarget{tabs_8h_ae3bba5d5ffec6d76efdc00e12cf914c9}{\index{tabs.\-h@{tabs.\-h}!decod@{decod}}
+\index{decod@{decod}!tabs.h@{tabs.\-h}}
+\subsubsection[{decod}]{\setlength{\rightskip}{0pt plus 5cm}double decod (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{ch, }
+\item[{long}]{n, }
+\item[{double}]{ndef}
+\end{DoxyParamCaption}
+)}}\label{tabs_8h_ae3bba5d5ffec6d76efdc00e12cf914c9}
+
+
+Definition at line 218 of file tabs.\-c.
+
+
+
+References t\-\_\-error().
+
+
+
+Referenced by readline\-\_\-array().
+
+\hypertarget{tabs_8h_a21bdb704431c6daf189b18722b783ed4}{\index{tabs.\-h@{tabs.\-h}!dim1@{dim1}}
+\index{dim1@{dim1}!tabs.h@{tabs.\-h}}
+\subsubsection[{dim1}]{\setlength{\rightskip}{0pt plus 5cm}long dim1 (
+\begin{DoxyParamCaption}
+\item[{double $\ast$}]{a}
+\end{DoxyParamCaption}
+)}}\label{tabs_8h_a21bdb704431c6daf189b18722b783ed4}
+
+
+Definition at line 280 of file tabs.\-c.
+
+
+
+References end\-\_\-vector.
+
+\hypertarget{tabs_8h_a156fb1a64fcf07f308d43e348d2c23f7}{\index{tabs.\-h@{tabs.\-h}!dim1l@{dim1l}}
+\index{dim1l@{dim1l}!tabs.h@{tabs.\-h}}
+\subsubsection[{dim1l}]{\setlength{\rightskip}{0pt plus 5cm}long dim1l (
+\begin{DoxyParamCaption}
+\item[{long $\ast$}]{a}
+\end{DoxyParamCaption}
+)}}\label{tabs_8h_a156fb1a64fcf07f308d43e348d2c23f7}
+
+
+Definition at line 286 of file tabs.\-c.
+
+
+
+References end\-\_\-vector\-\_\-long.
+
+\hypertarget{tabs_8h_ae87a1dddc5dec2e802086404477dc5cc}{\index{tabs.\-h@{tabs.\-h}!dim2@{dim2}}
+\index{dim2@{dim2}!tabs.h@{tabs.\-h}}
+\subsubsection[{dim2}]{\setlength{\rightskip}{0pt plus 5cm}long dim2 (
+\begin{DoxyParamCaption}
+\item[{double $\ast$$\ast$}]{a}
+\end{DoxyParamCaption}
+)}}\label{tabs_8h_ae87a1dddc5dec2e802086404477dc5cc}
+
+
+Definition at line 292 of file tabs.\-c.
+
+
+
+References end\-\_\-vector.
+
+\hypertarget{tabs_8h_a30f1dfeb230e1e0bc721df3f8ae5ca80}{\index{tabs.\-h@{tabs.\-h}!dim\-\_\-string@{dim\-\_\-string}}
+\index{dim\-\_\-string@{dim\-\_\-string}!tabs.h@{tabs.\-h}}
+\subsubsection[{dim\-\_\-string}]{\setlength{\rightskip}{0pt plus 5cm}long dim\-\_\-string (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{a}
+\end{DoxyParamCaption}
+)}}\label{tabs_8h_a30f1dfeb230e1e0bc721df3f8ae5ca80}
+
+
+Definition at line 298 of file tabs.\-c.
+
+
+
+Referenced by compare\-\_\-strings().
+
+\hypertarget{tabs_8h_ad33a86d90a6cd309d0737f194e4d3189}{\index{tabs.\-h@{tabs.\-h}!dim\-\_\-vect\-\_\-strings@{dim\-\_\-vect\-\_\-strings}}
+\index{dim\-\_\-vect\-\_\-strings@{dim\-\_\-vect\-\_\-strings}!tabs.h@{tabs.\-h}}
+\subsubsection[{dim\-\_\-vect\-\_\-strings}]{\setlength{\rightskip}{0pt plus 5cm}long dim\-\_\-vect\-\_\-strings (
+\begin{DoxyParamCaption}
+\item[{char $\ast$$\ast$}]{a}
+\end{DoxyParamCaption}
+)}}\label{tabs_8h_ad33a86d90a6cd309d0737f194e4d3189}
+
+
+Definition at line 304 of file tabs.\-c.
+
+\hypertarget{tabs_8h_a36785b49237d55ee268233dc2fe65eab}{\index{tabs.\-h@{tabs.\-h}!readline\-\_\-array@{readline\-\_\-array}}
+\index{readline\-\_\-array@{readline\-\_\-array}!tabs.h@{tabs.\-h}}
+\subsubsection[{readline\-\_\-array}]{\setlength{\rightskip}{0pt plus 5cm}void readline\-\_\-array (
+\begin{DoxyParamCaption}
+\item[{F\-I\-L\-E $\ast$}]{f, }
+\item[{double $\ast$}]{a, }
+\item[{long}]{offset, }
+\item[{long}]{ncol, }
+\item[{double}]{ndef, }
+\item[{short $\ast$}]{endoffile}
+\end{DoxyParamCaption}
+)}}\label{tabs_8h_a36785b49237d55ee268233dc2fe65eab}
+
+
+Definition at line 134 of file tabs.\-c.
+
+
+
+References decod(), and t\-\_\-error().
+
+\hypertarget{tabs_8h_a7a6fffe07ecfd6e0ddad3a102050c474}{\index{tabs.\-h@{tabs.\-h}!readline\-\_\-textarray@{readline\-\_\-textarray}}
+\index{readline\-\_\-textarray@{readline\-\_\-textarray}!tabs.h@{tabs.\-h}}
+\subsubsection[{readline\-\_\-textarray}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$$\ast$ readline\-\_\-textarray (
+\begin{DoxyParamCaption}
+\item[{F\-I\-L\-E $\ast$}]{f, }
+\item[{long}]{offset}
+\end{DoxyParamCaption}
+)}}\label{tabs_8h_a7a6fffe07ecfd6e0ddad3a102050c474}
+
+
+Definition at line 39 of file tabs.\-c.
+
+
+
+References t\-\_\-error().
+

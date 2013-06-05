@@ -1,0 +1,9 @@
+digraph "MATH2/geo_statistic.09375.h"
+{
+  bgcolor="transparent";
+  edge [fontname="FreeSans",fontsize="10",labelfontname="FreeSans",labelfontsize="10"];
+  node [fontname="FreeSans",fontsize="10",shape=record];
+  Node1 [label="MATH2/geo_statistic.09375.h",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node2 [label="MATH2/geo_statistic.09375.c",height=0.2,width=0.4,color="black",URL="$geo__statistic_809375_8c.html"];
+}

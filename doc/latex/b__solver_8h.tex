@@ -1,0 +1,350 @@
+\hypertarget{b__solver_8h}{\section{Boussinesq/b\-\_\-solver.h File Reference}
+\label{b__solver_8h}\index{Boussinesq/b\-\_\-solver.\-h@{Boussinesq/b\-\_\-solver.\-h}}
+}
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{struct_p_a_r_a_m}{P\-A\-R\-A\-M}
+\item 
+struct \hyperlink{struct_f_l_a_g}{F\-L\-A\-G}
+\item 
+struct \hyperlink{struct_o_u_t_p_u_t___f_i_l_e_n_a_m_e_s}{O\-U\-T\-P\-U\-T\-\_\-\-F\-I\-L\-E\-N\-A\-M\-E\-S}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+double \hyperlink{b__solver_8h_a092b6742da36d2030755953ce9b20c60}{t\-\_\-st\-\_\-operator\-\_\-element} (long i, \hyperlink{struct_d_o_u_b_l_e_v_e_c_t_o_r}{D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} $\ast$eta)
+\item 
+double \hyperlink{b__solver_8h_a5d82757e02d7bf9264f9138193e87832}{t\-\_\-st\-\_\-operator\-\_\-element\-\_\-no\-\_\-dirichlet} (long i, \hyperlink{struct_d_o_u_b_l_e_v_e_c_t_o_r}{D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} $\ast$eta)
+\item 
+double \hyperlink{b__solver_8h_aa28812ccdb9aa194c69d311db3b6648e}{t\-\_\-st\-\_\-operator\-\_\-element\-\_\-subs} (long i, \hyperlink{struct_d_o_u_b_l_e_v_e_c_t_o_r}{D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} $\ast$eta, double cond\-\_\-dirichlet)
+\item 
+double \hyperlink{b__solver_8h_a91803fd42436b7e4151bbd2e57be7d41}{water\-\_\-surface\-\_\-elevation\-\_\-mean} (double eta1, double eta2)
+\item 
+double \hyperlink{b__solver_8h_ad14097d21b985bb877fc58e0d63b6be4}{b\-\_\-smatrix\-\_\-element} (long i, \hyperlink{struct_d_o_u_b_l_e_v_e_c_t_o_r}{D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} $\ast$x)
+\item 
+int \hyperlink{b__solver_8h_a7ce77afa0282fe275a0e667cedfa165b}{b\-\_\-smatrix} (\hyperlink{struct_d_o_u_b_l_e_v_e_c_t_o_r}{D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} $\ast$y, \hyperlink{struct_d_o_u_b_l_e_v_e_c_t_o_r}{D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} $\ast$x)
+\item 
+long \hyperlink{b__solver_8h_ad0adbfadb450477f9f2b297202551975}{Newton\-\_\-convergence} (\hyperlink{struct_d_o_u_b_l_e_v_e_c_t_o_r}{D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} $\ast$x\-\_\-temp, \hyperlink{struct_d_o_u_b_l_e_v_e_c_t_o_r}{D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} $\ast$be, \hyperlink{struct_d_o_u_b_l_e_v_e_c_t_o_r}{D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} $\ast$be0)
+\item 
+int \hyperlink{b__solver_8h_adba7ead1faa7f8dae670343373ebe9a2}{time\-\_\-loop} (short print, int($\ast$write\-\_\-output)(void $\ast$v1, void $\ast$v2))
+\item 
+int \hyperlink{b__solver_8h_aee4599bf6ebf54b9607bdc146aae16ef}{write\-\_\-map\-\_\-results} (void $\ast$output, void $\ast$time\-\_\-string)
+\item 
+\hyperlink{struct_o_u_t_p_u_t___f_i_l_e_n_a_m_e_s}{O\-U\-T\-P\-U\-T\-\_\-\-F\-I\-L\-E\-N\-A\-M\-E\-S} $\ast$ \hyperlink{b__solver_8h_aca8b8c663042dbcf6c7fe5ce7f399f6d}{new\-\_\-output\-\_\-filenames} (short print)
+\item 
+void \hyperlink{b__solver_8h_a411189a0a7c246c7cce685e846fd2878}{free\-\_\-\-O\-U\-T\-P\-U\-T\-\_\-\-F\-I\-L\-E\-N\-A\-M\-E\-S} (\hyperlink{struct_o_u_t_p_u_t___f_i_l_e_n_a_m_e_s}{O\-U\-T\-P\-U\-T\-\_\-\-F\-I\-L\-E\-N\-A\-M\-E\-S} $\ast$fn)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{DoxyAuthor}{Author}
+Emanuele Cordano
+\end{DoxyAuthor}
+\begin{DoxyAttention}{Attention}
+
+\end{DoxyAttention}
+This file is part of Boussinesq.
+
+Boussinesq is free software\-: you can redistribute it and/or modify it under the terms of the G\-N\-U General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
+
+Boussinesq is distributed in the hope that it will be useful, but W\-I\-T\-H\-O\-U\-T A\-N\-Y W\-A\-R\-R\-A\-N\-T\-Y; without even the implied warranty of M\-E\-R\-C\-H\-A\-N\-T\-A\-B\-I\-L\-I\-T\-Y or F\-I\-T\-N\-E\-S\-S F\-O\-R A P\-A\-R\-T\-I\-C\-U\-L\-A\-R P\-U\-R\-P\-O\-S\-E. See the G\-N\-U General Public License for more details.
+
+You should have received a copy of the G\-N\-U General Public License along with Boussinesq. If not, see \href{http://www.gnu.org/licenses/}{\tt http\-://www.\-gnu.\-org/licenses/}. 
+
+Definition in file \hyperlink{b__solver_8h_source}{b\-\_\-solver.\-h}.
+
+
+
+\subsection{Function Documentation}
+\hypertarget{b__solver_8h_a7ce77afa0282fe275a0e667cedfa165b}{\index{b\-\_\-solver.\-h@{b\-\_\-solver.\-h}!b\-\_\-smatrix@{b\-\_\-smatrix}}
+\index{b\-\_\-smatrix@{b\-\_\-smatrix}!b_solver.h@{b\-\_\-solver.\-h}}
+\subsubsection[{b\-\_\-smatrix}]{\setlength{\rightskip}{0pt plus 5cm}int b\-\_\-smatrix (
+\begin{DoxyParamCaption}
+\item[{{\bf D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} $\ast$}]{y, }
+\item[{{\bf D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} $\ast$}]{x}
+\end{DoxyParamCaption}
+)}}\label{b__solver_8h_a7ce77afa0282fe275a0e667cedfa165b}
+\hypertarget{b__solver_8h_ad14097d21b985bb877fc58e0d63b6be4}{\index{b\-\_\-solver.\-h@{b\-\_\-solver.\-h}!b\-\_\-smatrix\-\_\-element@{b\-\_\-smatrix\-\_\-element}}
+\index{b\-\_\-smatrix\-\_\-element@{b\-\_\-smatrix\-\_\-element}!b_solver.h@{b\-\_\-solver.\-h}}
+\subsubsection[{b\-\_\-smatrix\-\_\-element}]{\setlength{\rightskip}{0pt plus 5cm}double b\-\_\-smatrix\-\_\-element (
+\begin{DoxyParamCaption}
+\item[{long}]{i, }
+\item[{{\bf D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} $\ast$}]{x}
+\end{DoxyParamCaption}
+)}}\label{b__solver_8h_ad14097d21b985bb877fc58e0d63b6be4}
+\begin{DoxyAuthor}{Author}
+Emanuele Cordano 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+29 June 2009
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em i} & -\/ index of the polygon at which t\-\_\-st\-\_\-operator\-\_\-element is calculated \\
+\hline
+{\em eta} & -\/ (\hyperlink{struct_d_o_u_b_l_e_v_e_c_t_o_r}{D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} $\ast$) vector of the unknowns\\
+\hline
+\end{DoxyParams}
+Function inverted and solved with a preconditioned conjugate gradient method obtained as follows\-: \[ \left[ \mathbf{T} \cdot \eta^{n+1} \right]_{i}= -\Delta t^{n} \, \sum_{j \in S_i} \, K_S \, A_j(\eta^n_{i,m(i,j)})\frac{x_{m(i,j)}^{n+1}-x_{i}^{n+1}}{\delta_{i,m(i,j)}}+ Ws(^m\eta^{n+1})x_i \] which is the \hyperlink{b__solver_8c_a092b6742da36d2030755953ce9b20c60}{t\-\_\-st\-\_\-operator\-\_\-element()} function plus x\-\_\-i multiplied the wet area of the i-\/th pixel. This function has the same signature of \hyperlink{b__solver_8c_a092b6742da36d2030755953ce9b20c60}{t\-\_\-st\-\_\-operator\-\_\-element()} Please see the documentation in pdf with the algebraic passages for further details.
+
+Definition at line 274 of file b\-\_\-solver.\-c.
+
+
+
+References P\-A\-R\-A\-M\-::deta, M\-I\-N\-\_\-\-T\-\_\-\-D\-I\-A\-G\-\_\-\-N\-E\-G\-A\-T\-I\-V\-E\-\_\-\-I\-N\-D\-E\-X, P\-A\-R\-A\-M\-::null\-\_\-dirichlet, t\-\_\-st\-\_\-operator\-\_\-element\-\_\-no\-\_\-dirichlet(), and wet\-\_\-area().
+
+
+
+Referenced by Newton\-\_\-convergence().
+
+\hypertarget{b__solver_8h_a411189a0a7c246c7cce685e846fd2878}{\index{b\-\_\-solver.\-h@{b\-\_\-solver.\-h}!free\-\_\-\-O\-U\-T\-P\-U\-T\-\_\-\-F\-I\-L\-E\-N\-A\-M\-E\-S@{free\-\_\-\-O\-U\-T\-P\-U\-T\-\_\-\-F\-I\-L\-E\-N\-A\-M\-E\-S}}
+\index{free\-\_\-\-O\-U\-T\-P\-U\-T\-\_\-\-F\-I\-L\-E\-N\-A\-M\-E\-S@{free\-\_\-\-O\-U\-T\-P\-U\-T\-\_\-\-F\-I\-L\-E\-N\-A\-M\-E\-S}!b_solver.h@{b\-\_\-solver.\-h}}
+\subsubsection[{free\-\_\-\-O\-U\-T\-P\-U\-T\-\_\-\-F\-I\-L\-E\-N\-A\-M\-E\-S}]{\setlength{\rightskip}{0pt plus 5cm}void free\-\_\-\-O\-U\-T\-P\-U\-T\-\_\-\-F\-I\-L\-E\-N\-A\-M\-E\-S (
+\begin{DoxyParamCaption}
+\item[{{\bf O\-U\-T\-P\-U\-T\-\_\-\-F\-I\-L\-E\-N\-A\-M\-E\-S} $\ast$}]{fn}
+\end{DoxyParamCaption}
+)}}\label{b__solver_8h_a411189a0a7c246c7cce685e846fd2878}
+
+
+Definition at line 801 of file b\-\_\-solver.\-c.
+
+
+
+References O\-U\-T\-P\-U\-T\-\_\-\-F\-I\-L\-E\-N\-A\-M\-E\-S\-::file\-\_\-error, and O\-U\-T\-P\-U\-T\-\_\-\-F\-I\-L\-E\-N\-A\-M\-E\-S\-::file\-\_\-result.
+
+
+
+Referenced by time\-\_\-loop().
+
+\hypertarget{b__solver_8h_aca8b8c663042dbcf6c7fe5ce7f399f6d}{\index{b\-\_\-solver.\-h@{b\-\_\-solver.\-h}!new\-\_\-output\-\_\-filenames@{new\-\_\-output\-\_\-filenames}}
+\index{new\-\_\-output\-\_\-filenames@{new\-\_\-output\-\_\-filenames}!b_solver.h@{b\-\_\-solver.\-h}}
+\subsubsection[{new\-\_\-output\-\_\-filenames}]{\setlength{\rightskip}{0pt plus 5cm}{\bf O\-U\-T\-P\-U\-T\-\_\-\-F\-I\-L\-E\-N\-A\-M\-E\-S}$\ast$ new\-\_\-output\-\_\-filenames (
+\begin{DoxyParamCaption}
+\item[{short}]{print}
+\end{DoxyParamCaption}
+)}}\label{b__solver_8h_aca8b8c663042dbcf6c7fe5ce7f399f6d}
+
+
+Definition at line 782 of file b\-\_\-solver.\-c.
+
+
+
+References copy\-\_\-string(), O\-U\-T\-P\-U\-T\-\_\-\-F\-I\-L\-E\-N\-A\-M\-E\-S\-::file\-\_\-error, O\-U\-T\-P\-U\-T\-\_\-\-F\-I\-L\-E\-N\-A\-M\-E\-S\-::file\-\_\-result, O\-\_\-\-C\-O\-A\-R\-S\-E\-M\-A\-P\-\_\-\-W\-A\-T\-E\-R\-M\-A\-S\-S\-\_\-\-E\-R\-R\-O\-R, O\-\_\-\-C\-O\-A\-R\-S\-E\-M\-A\-P\-\_\-\-W\-A\-T\-E\-R\-S\-U\-R\-F\-A\-C\-E\-\_\-\-E\-L\-E\-V\-A\-T\-I\-O\-N, and t\-\_\-error().
+
+
+
+Referenced by time\-\_\-loop().
+
+\hypertarget{b__solver_8h_ad0adbfadb450477f9f2b297202551975}{\index{b\-\_\-solver.\-h@{b\-\_\-solver.\-h}!Newton\-\_\-convergence@{Newton\-\_\-convergence}}
+\index{Newton\-\_\-convergence@{Newton\-\_\-convergence}!b_solver.h@{b\-\_\-solver.\-h}}
+\subsubsection[{Newton\-\_\-convergence}]{\setlength{\rightskip}{0pt plus 5cm}long Newton\-\_\-convergence (
+\begin{DoxyParamCaption}
+\item[{{\bf D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} $\ast$}]{x\-\_\-temp, }
+\item[{{\bf D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} $\ast$}]{be, }
+\item[{{\bf D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} $\ast$}]{be0}
+\end{DoxyParamCaption}
+)}}\label{b__solver_8h_ad0adbfadb450477f9f2b297202551975}
+\begin{DoxyAuthor}{Author}
+Emanuele Cordano 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+20 April 2009
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em x\-\_\-term} & (\hyperlink{struct_d_o_u_b_l_e_v_e_c_t_o_r}{D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} $\ast$) x\-\_\-term -\/ doublevector of residuals (unkowns) \\
+\hline
+{\em be} & (\hyperlink{struct_d_o_u_b_l_e_v_e_c_t_o_r}{D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} $\ast$) be -\/ known term of the equation in Newton Itaration Method (balance equation); \\
+\hline
+{\em be0} & (\hyperlink{struct_d_o_u_b_l_e_v_e_c_t_o_r}{D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} $\ast$) be -\/ known term of the equation in .... (balance equation);
+\begin{DoxyItemize}
+\item This functions contains the iterative the Newton-\/like iterative according to Casulli, 2008 \-: \[ ^{m+1}\eta^{n+1}= ^{m}\eta^{n+1}-\left[\mathbf{Ws}( ^{m}\eta^{n+1})+\mathbf{T}\right]^{-1}\left[\mathbf{V}( ^{m}\eta^{n+1})+\mathbf{T}\cdot^{m}\eta^{n+1} -\mathbf{b3}\right] \] where \$m\$ is the reiteration level. Please see the pdf documentation of the analytical passages for the documentation.
+\end{DoxyItemize}\\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 367 of file b\-\_\-solver.\-c.
+
+
+
+References b\-\_\-smatrix\-\_\-element(), free\-\_\-doublevector(), jacobi\-\_\-preconditioned\-\_\-conjugate\-\_\-gradient\-\_\-search(), join\-\_\-strings(), max\-\_\-doublevector(), P\-A\-R\-A\-M\-::max\-\_\-errors, M\-I\-N\-\_\-\-T\-\_\-\-D\-I\-A\-G, M\-I\-N\-\_\-\-T\-\_\-\-D\-I\-A\-G\-\_\-\-N\-E\-G\-A\-T\-I\-V\-E\-\_\-\-I\-N\-D\-E\-X, new\-\_\-doublevector(), D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R\-::nh, D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R\-::nl, P\-A\-R\-A\-M\-::null\-\_\-dirichlet, t\-\_\-st\-\_\-operator\-\_\-element(), volume(), wpath, and P\-A\-R\-A\-M\-::x\-\_\-temp\-\_\-adm.
+
+
+
+Referenced by time\-\_\-loop().
+
+\hypertarget{b__solver_8h_a092b6742da36d2030755953ce9b20c60}{\index{b\-\_\-solver.\-h@{b\-\_\-solver.\-h}!t\-\_\-st\-\_\-operator\-\_\-element@{t\-\_\-st\-\_\-operator\-\_\-element}}
+\index{t\-\_\-st\-\_\-operator\-\_\-element@{t\-\_\-st\-\_\-operator\-\_\-element}!b_solver.h@{b\-\_\-solver.\-h}}
+\subsubsection[{t\-\_\-st\-\_\-operator\-\_\-element}]{\setlength{\rightskip}{0pt plus 5cm}double t\-\_\-st\-\_\-operator\-\_\-element (
+\begin{DoxyParamCaption}
+\item[{long}]{i, }
+\item[{{\bf D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} $\ast$}]{eta}
+\end{DoxyParamCaption}
+)}}\label{b__solver_8h_a092b6742da36d2030755953ce9b20c60}
+\begin{DoxyAuthor}{Author}
+Emanuele Cordano 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+October 2009
+\end{DoxyDate}
+
+
+Definition at line 75 of file b\-\_\-solver.\-c.
+
+
+
+References M\-A\-X\-\_\-\-E\-L\-E\-V\-A\-T\-I\-O\-N\-\_\-\-V\-A\-L\-U\-E, t\-\_\-st\-\_\-advection\-\_\-operator\-\_\-element(), and t\-\_\-st\-\_\-operator\-\_\-element\-\_\-subs().
+
+
+
+Referenced by Newton\-\_\-convergence(), and time\-\_\-loop().
+
+\hypertarget{b__solver_8h_a5d82757e02d7bf9264f9138193e87832}{\index{b\-\_\-solver.\-h@{b\-\_\-solver.\-h}!t\-\_\-st\-\_\-operator\-\_\-element\-\_\-no\-\_\-dirichlet@{t\-\_\-st\-\_\-operator\-\_\-element\-\_\-no\-\_\-dirichlet}}
+\index{t\-\_\-st\-\_\-operator\-\_\-element\-\_\-no\-\_\-dirichlet@{t\-\_\-st\-\_\-operator\-\_\-element\-\_\-no\-\_\-dirichlet}!b_solver.h@{b\-\_\-solver.\-h}}
+\subsubsection[{t\-\_\-st\-\_\-operator\-\_\-element\-\_\-no\-\_\-dirichlet}]{\setlength{\rightskip}{0pt plus 5cm}double t\-\_\-st\-\_\-operator\-\_\-element\-\_\-no\-\_\-dirichlet (
+\begin{DoxyParamCaption}
+\item[{long}]{i, }
+\item[{{\bf D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} $\ast$}]{eta}
+\end{DoxyParamCaption}
+)}}\label{b__solver_8h_a5d82757e02d7bf9264f9138193e87832}
+\begin{DoxyAuthor}{Author}
+Emanuele Cordano 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+May 2010
+\end{DoxyDate}
+
+
+Definition at line 87 of file b\-\_\-solver.\-c.
+
+
+
+References P\-A\-R\-A\-M\-::null\-\_\-dirichlet, t\-\_\-st\-\_\-advection\-\_\-operator\-\_\-element(), and t\-\_\-st\-\_\-operator\-\_\-element\-\_\-subs().
+
+
+
+Referenced by b\-\_\-smatrix\-\_\-element(), and time\-\_\-loop().
+
+\hypertarget{b__solver_8h_aa28812ccdb9aa194c69d311db3b6648e}{\index{b\-\_\-solver.\-h@{b\-\_\-solver.\-h}!t\-\_\-st\-\_\-operator\-\_\-element\-\_\-subs@{t\-\_\-st\-\_\-operator\-\_\-element\-\_\-subs}}
+\index{t\-\_\-st\-\_\-operator\-\_\-element\-\_\-subs@{t\-\_\-st\-\_\-operator\-\_\-element\-\_\-subs}!b_solver.h@{b\-\_\-solver.\-h}}
+\subsubsection[{t\-\_\-st\-\_\-operator\-\_\-element\-\_\-subs}]{\setlength{\rightskip}{0pt plus 5cm}double t\-\_\-st\-\_\-operator\-\_\-element\-\_\-subs (
+\begin{DoxyParamCaption}
+\item[{long}]{i, }
+\item[{{\bf D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} $\ast$}]{eta, }
+\item[{double}]{cond\-\_\-dirichlet}
+\end{DoxyParamCaption}
+)}}\label{b__solver_8h_aa28812ccdb9aa194c69d311db3b6648e}
+\begin{DoxyAuthor}{Author}
+Emanuele Cordano 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+June 2009
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em i} & -\/ index of the polygon at which t\-\_\-st\-\_\-operator\-\_\-element is calculated \\
+\hline
+{\em eta} & -\/ (\hyperlink{struct_d_o_u_b_l_e_v_e_c_t_o_r}{D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} $\ast$) vector of the unknowns \\
+\hline
+{\em cond\-\_\-dirichlet} & -\/ (double) (=M\-A\-X\-\_\-\-E\-L\-E\-V\-A\-T\-I\-O\-N\-\_\-\-V\-A\-L\-U\-E) in case dirichlet value are neglected or (=param-\/$>$null\-\_\-dirichlet) othrwise (added by ec on 20100517)\\
+\hline
+\end{DoxyParams}
+\begin{DoxyVerb}       This function calculates the i-th element of the following vector
+       where eta is the vector of the independent variables
+\end{DoxyVerb}
+ \[ \left[ \mathbf{T} \cdot \eta^{n+1} \right]_{i}= -\Delta t^{n} \, \sum_{j \in S_i} \, K_S \, A_j(\eta^n_{i,m(i,j)})\frac{\eta_{m(i,j)}^{n+1}-\eta_{i}^{n+1}}{\delta_{i,m(i,j)}} \] Please see the pdf documentation with the algebraic passages for major details.
+
+Definition at line 99 of file b\-\_\-solver.\-c.
+
+
+
+References G\-R\-I\-D\-::boundary\-\_\-indicator, D\-O\-U\-B\-L\-E\-\_\-\-G\-R\-I\-D\-::coarse, polygon\-\_\-connection\-\_\-attributes\-::connections, polygon\-\_\-connection\-\_\-attributes\-::d\-\_\-connections, P\-A\-R\-A\-M\-::dt, P\-O\-L\-Y\-G\-O\-N\-::edge\-\_\-indices, P\-O\-L\-Y\-G\-O\-N\-V\-E\-C\-T\-O\-R\-::element, polygon\-\_\-connection\-\_\-attribute\-\_\-array\-::element, P\-A\-R\-A\-M\-::\-Ks, G\-R\-I\-D\-::links, L\-O\-N\-G\-V\-E\-C\-T\-O\-R\-::nl, G\-R\-I\-D\-::polygons, vertical\-\_\-area\-\_\-subs(), and water\-\_\-surface\-\_\-elevation\-\_\-mean().
+
+
+
+Referenced by t\-\_\-st\-\_\-operator\-\_\-element(), and t\-\_\-st\-\_\-operator\-\_\-element\-\_\-no\-\_\-dirichlet().
+
+\hypertarget{b__solver_8h_adba7ead1faa7f8dae670343373ebe9a2}{\index{b\-\_\-solver.\-h@{b\-\_\-solver.\-h}!time\-\_\-loop@{time\-\_\-loop}}
+\index{time\-\_\-loop@{time\-\_\-loop}!b_solver.h@{b\-\_\-solver.\-h}}
+\subsubsection[{time\-\_\-loop}]{\setlength{\rightskip}{0pt plus 5cm}int time\-\_\-loop (
+\begin{DoxyParamCaption}
+\item[{short}]{print, }
+\item[{int($\ast$)(void $\ast$v1, void $\ast$v2)}]{write\-\_\-output}
+\end{DoxyParamCaption}
+)}}\label{b__solver_8h_adba7ead1faa7f8dae670343373ebe9a2}
+\begin{DoxyAuthor}{Author}
+Emanuele Cordano 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+22 April 2009
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em (short)} & -\/ print F\-Luid\-Turtle Parametesrs \\
+\hline
+{\em int} & ($\ast$write\-\_\-output)(void $\ast$v1, void $\ast$v2) -\/ function which writes the output for every requested time steps\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+value 0 in case of success, -\/1 otherwise
+\end{DoxyReturn}
+In this routin the discretized system equation\-: \[ \mathbf{V}(\eta^{n+1})+\mathbf{T} \cdot \eta^{n+1} = \mathbf{b3} \] is solved. Please see the meanings of the symbols in the pdf documentation with algebraic passages. The nonlinear equation system is solved with a Newtton-\/like
+
+Definition at line 548 of file b\-\_\-solver.\-c.
+
+
+
+References P\-O\-L\-Y\-G\-O\-N\-::area2\-D, b\-\_\-advection(), D\-O\-U\-B\-L\-E\-\_\-\-G\-R\-I\-D\-::coarse, P\-A\-R\-A\-M\-::dt, P\-A\-R\-A\-M\-::dt\-\_\-print, P\-O\-L\-Y\-G\-O\-N\-V\-E\-C\-T\-O\-R\-::element, free\-\_\-doublevector(), free\-\_\-\-O\-U\-T\-P\-U\-T\-\_\-\-F\-I\-L\-E\-N\-A\-M\-E\-S(), free\-\_\-s\-\_\-times(), get\-\_\-diagonal(), get\-\_\-dirichletsnode(), get\-\_\-s\-\_\-times(), get\-\_\-sources(), I\-\_\-\-D\-I\-R\-I\-C\-H\-L\-E\-T\-T\-I\-M\-E\-S\-\_\-\-F\-T\-\_\-\-F\-I\-L\-E, I\-\_\-\-T\-I\-M\-E\-S\-\_\-\-F\-T\-\_\-\-F\-I\-L\-E, new\-\_\-doublevector(), new\-\_\-output\-\_\-filenames(), Newton\-\_\-convergence(), D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R\-::nh, D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R\-::nl, P\-A\-R\-A\-M\-::null\-\_\-dirichlet, G\-R\-I\-D\-::polygons, q\-\_\-discharge\-\_\-from\-\_\-outlet\-\_\-cell(), P\-A\-R\-A\-M\-::t, P\-A\-R\-A\-M\-::t\-\_\-end, t\-\_\-st\-\_\-operator\-\_\-element(), t\-\_\-st\-\_\-operator\-\_\-element\-\_\-no\-\_\-dirichlet(), P\-A\-R\-A\-M\-::t\-\_\-start, update\-\_\-\-F1\-\_\-wet\-\_\-vert\-\_\-area(), update\-\_\-velocity(), volume(), and write\-\_\-suffix().
+
+
+
+Referenced by main().
+
+\hypertarget{b__solver_8h_a91803fd42436b7e4151bbd2e57be7d41}{\index{b\-\_\-solver.\-h@{b\-\_\-solver.\-h}!water\-\_\-surface\-\_\-elevation\-\_\-mean@{water\-\_\-surface\-\_\-elevation\-\_\-mean}}
+\index{water\-\_\-surface\-\_\-elevation\-\_\-mean@{water\-\_\-surface\-\_\-elevation\-\_\-mean}!b_solver.h@{b\-\_\-solver.\-h}}
+\subsubsection[{water\-\_\-surface\-\_\-elevation\-\_\-mean}]{\setlength{\rightskip}{0pt plus 5cm}double water\-\_\-surface\-\_\-elevation\-\_\-mean (
+\begin{DoxyParamCaption}
+\item[{double}]{eta1, }
+\item[{double}]{eta2}
+\end{DoxyParamCaption}
+)}}\label{b__solver_8h_a91803fd42436b7e4151bbd2e57be7d41}
+\begin{DoxyAuthor}{Author}
+Emanuele Cordano 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+June 2010
+\end{DoxyDate}
+
+
+Definition at line 714 of file b\-\_\-solver.\-c.
+
+
+
+References F\-L\-A\-G\-::arithmetic\-\_\-mean0.
+
+
+
+Referenced by b\-\_\-advection(), t\-\_\-st\-\_\-advection\-\_\-operator\-\_\-element(), t\-\_\-st\-\_\-operator\-\_\-element\-\_\-subs(), update\-\_\-\-F1\-\_\-wet\-\_\-vert\-\_\-area(), and update\-\_\-velocity().
+
+\hypertarget{b__solver_8h_aee4599bf6ebf54b9607bdc146aae16ef}{\index{b\-\_\-solver.\-h@{b\-\_\-solver.\-h}!write\-\_\-map\-\_\-results@{write\-\_\-map\-\_\-results}}
+\index{write\-\_\-map\-\_\-results@{write\-\_\-map\-\_\-results}!b_solver.h@{b\-\_\-solver.\-h}}
+\subsubsection[{write\-\_\-map\-\_\-results}]{\setlength{\rightskip}{0pt plus 5cm}int write\-\_\-map\-\_\-results (
+\begin{DoxyParamCaption}
+\item[{void $\ast$}]{output, }
+\item[{void $\ast$}]{time\-\_\-string}
+\end{DoxyParamCaption}
+)}}\label{b__solver_8h_aee4599bf6ebf54b9607bdc146aae16ef}
+
+
+Definition at line 735 of file b\-\_\-solver.\-c.
+
+
+
+References D\-O\-U\-B\-L\-E\-S\-Q\-U\-A\-R\-E\-\_\-\-G\-R\-I\-D\-::big, D\-O\-U\-B\-L\-E\-R\-A\-S\-T\-E\-R\-\_\-\-M\-A\-P\-::coarse, D\-T\-M\-\_\-\-M\-A\-S\-K, O\-U\-T\-P\-U\-T\-\_\-\-F\-I\-L\-E\-N\-A\-M\-E\-S\-::file\-\_\-error, O\-U\-T\-P\-U\-T\-\_\-\-F\-I\-L\-E\-N\-A\-M\-E\-S\-::file\-\_\-result, S\-Q\-U\-A\-R\-E\-\_\-\-G\-R\-I\-D\-::indices\-\_\-pixel, join\-\_\-strings(), R\-A\-S\-T\-E\-R\-\_\-\-M\-A\-P\-::layer, R\-A\-S\-T\-E\-R\-\_\-\-M\-A\-P\-::\-U\-V, write\-\_\-doublevector\-\_\-in\-\_\-a\-\_\-ascii\-\_\-ft\-\_\-format\-\_\-single\-\_\-file(), and write\-\_\-raster\-\_\-from\-\_\-doublevector().
+
+
+
+Referenced by main().
+

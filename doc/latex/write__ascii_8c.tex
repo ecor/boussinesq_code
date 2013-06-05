@@ -1,0 +1,84 @@
+\hypertarget{write__ascii_8c}{\section{A\-S\-C\-I\-I/write\-\_\-ascii.c File Reference}
+\label{write__ascii_8c}\index{A\-S\-C\-I\-I/write\-\_\-ascii.\-c@{A\-S\-C\-I\-I/write\-\_\-ascii.\-c}}
+}
+{\ttfamily \#include \char`\"{}turtle.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}write\-\_\-ascii.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}extensions.\-h\char`\"{}}\\*
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{write__ascii_8c_ae04bf5f36bb9a6834fdeaba0916411bd}{write\-\_\-fluidturtle} (char $\ast$name, short type, \hyperlink{struct_d_o_u_b_l_e_m_a_t_r_i_x}{D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X} $\ast$D\-T\-M, \hyperlink{struct_t___i_n_i_t}{T\-\_\-\-I\-N\-I\-T} $\ast$U\-V)
+\item 
+void \hyperlink{write__ascii_8c_a89a50d4656229e59809b7b02044e1db6}{write\-\_\-grassascii} (char $\ast$name, short type, \hyperlink{struct_d_o_u_b_l_e_m_a_t_r_i_x}{D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X} $\ast$D\-T\-M, \hyperlink{struct_t___i_n_i_t}{T\-\_\-\-I\-N\-I\-T} $\ast$U\-V)
+\item 
+void \hyperlink{write__ascii_8c_aa78d11872f0249488f9b6a3d520a6366}{write\-\_\-esriascii} (char $\ast$name, short type, \hyperlink{struct_d_o_u_b_l_e_m_a_t_r_i_x}{D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X} $\ast$D\-T\-M, \hyperlink{struct_t___i_n_i_t}{T\-\_\-\-I\-N\-I\-T} $\ast$U\-V)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{write__ascii_8c_aa78d11872f0249488f9b6a3d520a6366}{\index{write\-\_\-ascii.\-c@{write\-\_\-ascii.\-c}!write\-\_\-esriascii@{write\-\_\-esriascii}}
+\index{write\-\_\-esriascii@{write\-\_\-esriascii}!write_ascii.c@{write\-\_\-ascii.\-c}}
+\subsubsection[{write\-\_\-esriascii}]{\setlength{\rightskip}{0pt plus 5cm}void write\-\_\-esriascii (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{name, }
+\item[{short}]{type, }
+\item[{{\bf D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X} $\ast$}]{D\-T\-M, }
+\item[{{\bf T\-\_\-\-I\-N\-I\-T} $\ast$}]{U\-V}
+\end{DoxyParamCaption}
+)}}\label{write__ascii_8c_aa78d11872f0249488f9b6a3d520a6366}
+
+
+Definition at line 107 of file write\-\_\-ascii.\-c.
+
+
+
+References ascii\-\_\-esri, D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R\-::co, D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X\-::co, join\-\_\-strings(), D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X\-::nch, D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X\-::nrh, t\-\_\-error(), T\-\_\-\-I\-N\-I\-T\-::\-U, and T\-\_\-\-I\-N\-I\-T\-::\-V.
+
+
+
+Referenced by write\-\_\-map().
+
+\hypertarget{write__ascii_8c_ae04bf5f36bb9a6834fdeaba0916411bd}{\index{write\-\_\-ascii.\-c@{write\-\_\-ascii.\-c}!write\-\_\-fluidturtle@{write\-\_\-fluidturtle}}
+\index{write\-\_\-fluidturtle@{write\-\_\-fluidturtle}!write_ascii.c@{write\-\_\-ascii.\-c}}
+\subsubsection[{write\-\_\-fluidturtle}]{\setlength{\rightskip}{0pt plus 5cm}void write\-\_\-fluidturtle (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{name, }
+\item[{short}]{type, }
+\item[{{\bf D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X} $\ast$}]{D\-T\-M, }
+\item[{{\bf T\-\_\-\-I\-N\-I\-T} $\ast$}]{U\-V}
+\end{DoxyParamCaption}
+)}}\label{write__ascii_8c_ae04bf5f36bb9a6834fdeaba0916411bd}
+
+
+Definition at line 29 of file write\-\_\-ascii.\-c.
+
+
+
+References ascii\-\_\-ft, D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R\-::co, D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X\-::co, join\-\_\-strings(), D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X\-::nch, D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X\-::nrh, t\-\_\-fclose(), t\-\_\-fopen(), T\-\_\-\-I\-N\-I\-T\-::\-U, and T\-\_\-\-I\-N\-I\-T\-::\-V.
+
+
+
+Referenced by write\-\_\-map().
+
+\hypertarget{write__ascii_8c_a89a50d4656229e59809b7b02044e1db6}{\index{write\-\_\-ascii.\-c@{write\-\_\-ascii.\-c}!write\-\_\-grassascii@{write\-\_\-grassascii}}
+\index{write\-\_\-grassascii@{write\-\_\-grassascii}!write_ascii.c@{write\-\_\-ascii.\-c}}
+\subsubsection[{write\-\_\-grassascii}]{\setlength{\rightskip}{0pt plus 5cm}void write\-\_\-grassascii (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{name, }
+\item[{short}]{type, }
+\item[{{\bf D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X} $\ast$}]{D\-T\-M, }
+\item[{{\bf T\-\_\-\-I\-N\-I\-T} $\ast$}]{U\-V}
+\end{DoxyParamCaption}
+)}}\label{write__ascii_8c_a89a50d4656229e59809b7b02044e1db6}
+
+
+Definition at line 66 of file write\-\_\-ascii.\-c.
+
+
+
+References ascii\-\_\-grass, D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R\-::co, D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X\-::co, join\-\_\-strings(), D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X\-::nch, D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X\-::nrh, T\-\_\-\-I\-N\-I\-T\-::\-U, and T\-\_\-\-I\-N\-I\-T\-::\-V.
+
+
+
+Referenced by write\-\_\-map().
+

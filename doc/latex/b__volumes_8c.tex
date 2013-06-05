@@ -1,0 +1,577 @@
+\hypertarget{b__volumes_8c}{\section{Boussinesq/b\-\_\-volumes.c File Reference}
+\label{b__volumes_8c}\index{Boussinesq/b\-\_\-volumes.\-c@{Boussinesq/b\-\_\-volumes.\-c}}
+}
+{\ttfamily \#include \char`\"{}turtle.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}t\-\_\-alloc.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}t\-\_\-utilities.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}rw\-\_\-maps.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}geometry.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}g\-\_\-raster2plvector.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}bigcells2.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}geometry2.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}b\-\_\-utilities.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}b\-\_\-solver.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}keywords\-\_\-file\-\_\-b.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}b\-\_\-volumes.\-h\char`\"{}}\\*
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+double \hyperlink{b__volumes_8c_a01596e297cd347cfcdde77ebf0f2ba86}{volume} (double eta, long i)
+\item 
+double \hyperlink{b__volumes_8c_a97fa57952a12ee7928d27550a38975c6}{volume\-\_\-surf} (double eta, long i)
+\item 
+double \hyperlink{b__volumes_8c_a1c66e2d4b15e6e8d0f008b6aee65dc66}{volume\-\_\-subs} (double eta, long i)
+\item 
+double \hyperlink{b__volumes_8c_adf82de40dd2bf86099b9a3bb80435ab0}{vertical\-\_\-area} (double eta, long j)
+\item 
+double \hyperlink{b__volumes_8c_aba354cc90060c9d911bd47a7c98170cf}{vertical\-\_\-area\-\_\-subs} (double eta, long j)
+\item 
+double \hyperlink{b__volumes_8c_a03db2e763463748d2af87419e099363c}{vertical\-\_\-area\-\_\-surf} (double eta, long j)
+\item 
+double \hyperlink{b__volumes_8c_a7542322fca1abef463947d740d24457e}{wet\-\_\-area} (double eta, long i, double deta)
+\item 
+double \hyperlink{b__volumes_8c_a3b83d707ea58c1cdce36f981de3e7d12}{min\-\_\-elevation} (long i)
+\item 
+double \hyperlink{b__volumes_8c_a84856fbcf04e3a87863837eeda036e3d}{q\-\_\-discharge\-\_\-from\-\_\-outlet\-\_\-subs\-\_\-line} (double eta, long j)
+\item 
+double \hyperlink{b__volumes_8c_a6589da10a9a71003103fe7d4e037e1ec}{q\-\_\-discharge\-\_\-from\-\_\-outlet\-\_\-cell} (double eta, long i)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{turtle_8h_ade34e6dff3489a3ddd297f003f01bbd2}{S\-T\-R\-I\-N\-G\-B\-I\-N} $\ast$ \hyperlink{b__volumes_8c_a528421ce34267070764970b021f6034a}{filenames}
+\item 
+\hyperlink{struct_d_o_u_b_l_e_r_a_s_t_e_r___m_a_p}{D\-O\-U\-B\-L\-E\-R\-A\-S\-T\-E\-R\-\_\-\-M\-A\-P} $\ast$ \hyperlink{b__volumes_8c_a44d81a9ca5648f4ec1c298c7f37fefff}{draster}
+\item 
+\hyperlink{struct_d_o_u_b_l_e___g_r_i_d}{D\-O\-U\-B\-L\-E\-\_\-\-G\-R\-I\-D} $\ast$ \hyperlink{b__volumes_8c_ab58c424a59f28ac6b17e7b7f5aae6152}{dgrid}
+\item 
+\hyperlink{struct_p_a_r_a_m}{P\-A\-R\-A\-M} $\ast$ \hyperlink{b__volumes_8c_ad8ac9ce29f12815d417a57b2c0dc31fb}{param}
+\item 
+\hyperlink{struct_f_l_a_g}{F\-L\-A\-G} $\ast$ \hyperlink{b__volumes_8c_af669d66807986c96b4927566ae5e8b45}{flag}
+\item 
+\hyperlink{struct_d_o_u_b_l_e_v_e_c_t_o_r}{D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} $\ast$ \hyperlink{b__volumes_8c_a48a2ac079f3ec064d28848bcdc54ed7c}{elevation\-\_\-bottom\-\_\-fine}
+\item 
+\hyperlink{struct_d_o_u_b_l_e_v_e_c_t_o_r}{D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} $\ast$ \hyperlink{b__volumes_8c_a93f8bd854f98f2abe47c108484cf1c6b}{elevation\-\_\-bottom\-\_\-coarse}
+\item 
+\hyperlink{struct_d_o_u_b_l_e_v_e_c_t_o_r}{D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} $\ast$ \hyperlink{b__volumes_8c_a495ebb69c21b8816ee4f7dfe0e1e6d98}{elevation\-\_\-bottom\-\_\-flines}
+\item 
+\hyperlink{struct_d_o_u_b_l_e_v_e_c_t_o_r}{D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} $\ast$ \hyperlink{b__volumes_8c_a4cd3286ed17aff6164594f8a2d59f898}{elevation\-\_\-bottom\-\_\-bottom}
+\item 
+\hyperlink{struct_d_o_u_b_l_e_v_e_c_t_o_r}{D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} $\ast$ \hyperlink{b__volumes_8c_a2f1a3b2841c6ed8ff4461dabf9a4b03c}{elevation\-\_\-terrain\-\_\-fine}
+\item 
+\hyperlink{struct_d_o_u_b_l_e_v_e_c_t_o_r}{D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} $\ast$ \hyperlink{b__volumes_8c_a3328ead9d7ff307ac4b6847cd4a1205b}{elevation\-\_\-terrain\-\_\-flines}
+\item 
+\hyperlink{struct_d_o_u_b_l_e_v_e_c_t_o_r}{D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} $\ast$ \hyperlink{b__volumes_8c_a8d58cb68a19f9ec3d36dcf606ce6ab8e}{outlet\-\_\-coefficient}
+\item 
+\hyperlink{struct_d_o_u_b_l_e_v_e_c_t_o_r}{D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} $\ast$ \hyperlink{b__volumes_8c_a54f93693853ec24ff2fe2dcc95d77e2c}{outlet\-\_\-coefficient\-\_\-surf}
+\item 
+\hyperlink{struct_d_o_u_b_l_e_v_e_c_t_o_r}{D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} $\ast$ \hyperlink{b__volumes_8c_acd5b5637e9d24f6f2641e08ed439b8b8}{porosity\-\_\-fine}
+\item 
+\hyperlink{struct_d_o_u_b_l_e_v_e_c_t_o_r}{D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} $\ast$ \hyperlink{b__volumes_8c_a3ace2c97e74d7e8aad3670b479cb606d}{water\-\_\-surface\-\_\-elevation}
+\begin{DoxyCompactList}\small\item\em extern \hyperlink{struct_d_o_u_b_l_e_v_e_c_t_o_r}{D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} {\itshape runoff\-\_\-coefficient; /}!$<$map of the coefficient of the rating curve in the outlet q\-\_\-discharge=C$\ast$h\-\_\-sup$^\wedge$m $\ast$/ \end{DoxyCompactList}\item 
+\hyperlink{struct_d_o_u_b_l_e_v_e_c_t_o_r}{D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} $\ast$ \hyperlink{b__volumes_8c_a97eff843a1a4985b0746ef826cc27822}{water\-\_\-mass\-\_\-error}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{DoxyAuthor}{Author}
+Emanuele Cordano
+\end{DoxyAuthor}
+\begin{DoxyAttention}{Attention}
+
+\end{DoxyAttention}
+This file is part of Boussinesq.
+
+Boussinesq is free software\-: you can redistribute it and/or modify it under the terms of the G\-N\-U General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
+
+Boussinesq is distributed in the hope that it will be useful, but W\-I\-T\-H\-O\-U\-T A\-N\-Y W\-A\-R\-R\-A\-N\-T\-Y; without even the implied warranty of M\-E\-R\-C\-H\-A\-N\-T\-A\-B\-I\-L\-I\-T\-Y or F\-I\-T\-N\-E\-S\-S F\-O\-R A P\-A\-R\-T\-I\-C\-U\-L\-A\-R P\-U\-R\-P\-O\-S\-E. See the G\-N\-U General Public License for more details.
+
+You should have received a copy of the G\-N\-U General Public License along with Boussinesq. If not, see \href{http://www.gnu.org/licenses/}{\tt http\-://www.\-gnu.\-org/licenses/}. 
+
+Definition in file \hyperlink{b__volumes_8c_source}{b\-\_\-volumes.\-c}.
+
+
+
+\subsection{Function Documentation}
+\hypertarget{b__volumes_8c_a3b83d707ea58c1cdce36f981de3e7d12}{\index{b\-\_\-volumes.\-c@{b\-\_\-volumes.\-c}!min\-\_\-elevation@{min\-\_\-elevation}}
+\index{min\-\_\-elevation@{min\-\_\-elevation}!b_volumes.c@{b\-\_\-volumes.\-c}}
+\subsubsection[{min\-\_\-elevation}]{\setlength{\rightskip}{0pt plus 5cm}double min\-\_\-elevation (
+\begin{DoxyParamCaption}
+\item[{long}]{i}
+\end{DoxyParamCaption}
+)}}\label{b__volumes_8c_a3b83d707ea58c1cdce36f981de3e7d12}
+\begin{DoxyAuthor}{Author}
+Emanuele Cordano 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+13 May 2009
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em i} & (long) -\/ index of the coarse cell\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the elevation of the lowest point of the cell
+\end{DoxyReturn}
+initialization of elevation with a very high double float number 
+
+Definition at line 357 of file b\-\_\-volumes.\-c.
+
+
+
+References L\-O\-N\-G\-B\-I\-N\-::index, min\-\_\-elevation(), L\-O\-N\-G\-V\-E\-C\-T\-O\-R\-::nh, D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R\-::nh, N\-L, L\-O\-N\-G\-V\-E\-C\-T\-O\-R\-::nl, D\-O\-U\-B\-L\-E\-\_\-\-G\-R\-I\-D\-::novalue, D\-O\-U\-B\-L\-E\-\_\-\-G\-R\-I\-D\-::small\-\_\-polygon\-\_\-content, and stop\-\_\-execution().
+
+
+
+Referenced by main(), and min\-\_\-elevation().
+
+\hypertarget{b__volumes_8c_a6589da10a9a71003103fe7d4e037e1ec}{\index{b\-\_\-volumes.\-c@{b\-\_\-volumes.\-c}!q\-\_\-discharge\-\_\-from\-\_\-outlet\-\_\-cell@{q\-\_\-discharge\-\_\-from\-\_\-outlet\-\_\-cell}}
+\index{q\-\_\-discharge\-\_\-from\-\_\-outlet\-\_\-cell@{q\-\_\-discharge\-\_\-from\-\_\-outlet\-\_\-cell}!b_volumes.c@{b\-\_\-volumes.\-c}}
+\subsubsection[{q\-\_\-discharge\-\_\-from\-\_\-outlet\-\_\-cell}]{\setlength{\rightskip}{0pt plus 5cm}double q\-\_\-discharge\-\_\-from\-\_\-outlet\-\_\-cell (
+\begin{DoxyParamCaption}
+\item[{double}]{eta, }
+\item[{long}]{i}
+\end{DoxyParamCaption}
+)}}\label{b__volumes_8c_a6589da10a9a71003103fe7d4e037e1ec}
+\begin{DoxyDate}{Date}
+14 October 2009 
+\end{DoxyDate}
+\begin{DoxyAuthor}{Author}
+Emanuele Cordano
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em eta} & -\/ (double) \\
+\hline
+{\em i} & -\/ (index of the cell)\\
+\hline
+\end{DoxyParams}
+It calculates the discharge through all boundary edges of the i-\/th cell in function of a value of a free surface elevation and fine-\/grid topography, according to what is specified in the documentation with detailed algebraic passages. It calls q\-\_\-discharge\-\_\-from\-\_\-outlet for each boundary edge!
+
+\begin{DoxyReturn}{Returns}
+outflow discarge area from the i-\/th cell
+\end{DoxyReturn}
+
+
+Definition at line 441 of file b\-\_\-volumes.\-c.
+
+
+
+References G\-R\-I\-D\-::boundary\-\_\-indicator, D\-O\-U\-B\-L\-E\-\_\-\-G\-R\-I\-D\-::coarse, polygon\-\_\-connection\-\_\-attributes\-::connections, P\-O\-L\-Y\-G\-O\-N\-::edge\-\_\-indices, P\-O\-L\-Y\-G\-O\-N\-V\-E\-C\-T\-O\-R\-::element, polygon\-\_\-connection\-\_\-attribute\-\_\-array\-::element, G\-R\-I\-D\-::links, L\-O\-N\-G\-V\-E\-C\-T\-O\-R\-::nh, L\-O\-N\-G\-V\-E\-C\-T\-O\-R\-::nl, G\-R\-I\-D\-::polygons, and q\-\_\-discharge\-\_\-from\-\_\-outlet\-\_\-subs\-\_\-line().
+
+
+
+Referenced by time\-\_\-loop().
+
+\hypertarget{b__volumes_8c_a84856fbcf04e3a87863837eeda036e3d}{\index{b\-\_\-volumes.\-c@{b\-\_\-volumes.\-c}!q\-\_\-discharge\-\_\-from\-\_\-outlet\-\_\-subs\-\_\-line@{q\-\_\-discharge\-\_\-from\-\_\-outlet\-\_\-subs\-\_\-line}}
+\index{q\-\_\-discharge\-\_\-from\-\_\-outlet\-\_\-subs\-\_\-line@{q\-\_\-discharge\-\_\-from\-\_\-outlet\-\_\-subs\-\_\-line}!b_volumes.c@{b\-\_\-volumes.\-c}}
+\subsubsection[{q\-\_\-discharge\-\_\-from\-\_\-outlet\-\_\-subs\-\_\-line}]{\setlength{\rightskip}{0pt plus 5cm}double q\-\_\-discharge\-\_\-from\-\_\-outlet\-\_\-subs\-\_\-line (
+\begin{DoxyParamCaption}
+\item[{double}]{eta, }
+\item[{long}]{j}
+\end{DoxyParamCaption}
+)}}\label{b__volumes_8c_a84856fbcf04e3a87863837eeda036e3d}
+
+\begin{DoxyParams}{Parameters}
+{\em Emanuele} & Cordano \\
+\hline
+\end{DoxyParams}
+\begin{DoxyDate}{Date}
+14 October 2009
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em eta} & -\/ (double) water surface elevation; \\
+\hline
+{\em j} & -\/ (long) line indicator;\\
+\hline
+\end{DoxyParams}
+It calculates the discharge of the j-\/th line in function of a value of a free surface elevation and fine-\/grid topography, according to what is specified in the documentation with detailed algebraic passages.
+
+\begin{DoxyReturn}{Returns}
+outflow discarge through a boundary line
+\end{DoxyReturn}
+
+
+Definition at line 400 of file b\-\_\-volumes.\-c.
+
+
+
+References L\-I\-N\-E\-V\-E\-C\-T\-O\-R\-::element, D\-O\-U\-B\-L\-E\-\_\-\-G\-R\-I\-D\-::fine, L\-O\-N\-G\-B\-I\-N\-::index, L\-I\-N\-E\-::length2d, G\-R\-I\-D\-::lines, L\-I\-N\-E\-V\-E\-C\-T\-O\-R\-::nh, L\-O\-N\-G\-V\-E\-C\-T\-O\-R\-::nh, N\-L, L\-I\-N\-E\-V\-E\-C\-T\-O\-R\-::nl, L\-O\-N\-G\-V\-E\-C\-T\-O\-R\-::nl, D\-O\-U\-B\-L\-E\-\_\-\-G\-R\-I\-D\-::novalue, P\-A\-R\-A\-M\-::p\-\_\-outlet, P\-A\-R\-A\-M\-::p\-\_\-outlet\-\_\-surf, D\-O\-U\-B\-L\-E\-\_\-\-G\-R\-I\-D\-::small\-\_\-line\-\_\-content, and stop\-\_\-execution().
+
+
+
+Referenced by q\-\_\-discharge\-\_\-from\-\_\-outlet\-\_\-cell().
+
+\hypertarget{b__volumes_8c_adf82de40dd2bf86099b9a3bb80435ab0}{\index{b\-\_\-volumes.\-c@{b\-\_\-volumes.\-c}!vertical\-\_\-area@{vertical\-\_\-area}}
+\index{vertical\-\_\-area@{vertical\-\_\-area}!b_volumes.c@{b\-\_\-volumes.\-c}}
+\subsubsection[{vertical\-\_\-area}]{\setlength{\rightskip}{0pt plus 5cm}double vertical\-\_\-area (
+\begin{DoxyParamCaption}
+\item[{double}]{eta, }
+\item[{long}]{j}
+\end{DoxyParamCaption}
+)}}\label{b__volumes_8c_adf82de40dd2bf86099b9a3bb80435ab0}
+\begin{DoxyAuthor}{Author}
+Emanuele Cordano 
+
+October 2009
+\end{DoxyAuthor}
+\begin{DoxyReturn}{Returns}
+total vertical area over the j-\/th line in function of water table eta.
+\end{DoxyReturn}
+
+
+Definition at line 193 of file b\-\_\-volumes.\-c.
+
+
+
+References vertical\-\_\-area\-\_\-subs().
+
+\hypertarget{b__volumes_8c_aba354cc90060c9d911bd47a7c98170cf}{\index{b\-\_\-volumes.\-c@{b\-\_\-volumes.\-c}!vertical\-\_\-area\-\_\-subs@{vertical\-\_\-area\-\_\-subs}}
+\index{vertical\-\_\-area\-\_\-subs@{vertical\-\_\-area\-\_\-subs}!b_volumes.c@{b\-\_\-volumes.\-c}}
+\subsubsection[{vertical\-\_\-area\-\_\-subs}]{\setlength{\rightskip}{0pt plus 5cm}double vertical\-\_\-area\-\_\-subs (
+\begin{DoxyParamCaption}
+\item[{double}]{eta, }
+\item[{long}]{j}
+\end{DoxyParamCaption}
+)}}\label{b__volumes_8c_aba354cc90060c9d911bd47a7c98170cf}
+
+\begin{DoxyParams}{Parameters}
+{\em Emanuele} & Cordano \\
+\hline
+\end{DoxyParams}
+\begin{DoxyDate}{Date}
+19 April 2009 (modified October 2009)
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em eta} & -\/ (double) water surface elevation; \\
+\hline
+{\em j} & -\/ (long) line indicator;\\
+\hline
+\end{DoxyParams}
+It calculates the (subsurface wet) vertical area of the j-\/th line in function of a value of a free surface elevation and fine-\/grid topography, according to what is specified in the documentation with detailed algebraic passages.
+
+\begin{DoxyReturn}{Returns}
+vertical wet area over a line between two polygons
+\end{DoxyReturn}
+
+
+Definition at line 211 of file b\-\_\-volumes.\-c.
+
+
+
+References L\-I\-N\-E\-V\-E\-C\-T\-O\-R\-::element, D\-O\-U\-B\-L\-E\-\_\-\-G\-R\-I\-D\-::fine, L\-O\-N\-G\-B\-I\-N\-::index, L\-I\-N\-E\-::length2d, G\-R\-I\-D\-::lines, L\-I\-N\-E\-V\-E\-C\-T\-O\-R\-::nh, L\-O\-N\-G\-V\-E\-C\-T\-O\-R\-::nh, N\-L, L\-I\-N\-E\-V\-E\-C\-T\-O\-R\-::nl, L\-O\-N\-G\-V\-E\-C\-T\-O\-R\-::nl, D\-O\-U\-B\-L\-E\-\_\-\-G\-R\-I\-D\-::novalue, D\-O\-U\-B\-L\-E\-\_\-\-G\-R\-I\-D\-::small\-\_\-line\-\_\-content, and stop\-\_\-execution().
+
+
+
+Referenced by t\-\_\-st\-\_\-operator\-\_\-element\-\_\-subs(), and vertical\-\_\-area().
+
+\hypertarget{b__volumes_8c_a03db2e763463748d2af87419e099363c}{\index{b\-\_\-volumes.\-c@{b\-\_\-volumes.\-c}!vertical\-\_\-area\-\_\-surf@{vertical\-\_\-area\-\_\-surf}}
+\index{vertical\-\_\-area\-\_\-surf@{vertical\-\_\-area\-\_\-surf}!b_volumes.c@{b\-\_\-volumes.\-c}}
+\subsubsection[{vertical\-\_\-area\-\_\-surf}]{\setlength{\rightskip}{0pt plus 5cm}double vertical\-\_\-area\-\_\-surf (
+\begin{DoxyParamCaption}
+\item[{double}]{eta, }
+\item[{long}]{j}
+\end{DoxyParamCaption}
+)}}\label{b__volumes_8c_a03db2e763463748d2af87419e099363c}
+
+\begin{DoxyParams}{Parameters}
+{\em Emanuele} & Cordano \\
+\hline
+\end{DoxyParams}
+\begin{DoxyDate}{Date}
+22 October 2009
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em eta} & -\/ (double) water surface elevation; \\
+\hline
+{\em j} & -\/ (long) line indicator;\\
+\hline
+\end{DoxyParams}
+It calculates the (surface wet) vertical area of the j-\/th line in function of a value of a free surface elevation and fine-\/grid topography, according to what is specified in the documentation with detailed algebraic passages.
+
+\begin{DoxyReturn}{Returns}
+(surface) vertical wet area over a line between two polygons
+\end{DoxyReturn}
+
+
+Definition at line 251 of file b\-\_\-volumes.\-c.
+
+
+
+References L\-I\-N\-E\-V\-E\-C\-T\-O\-R\-::element, D\-O\-U\-B\-L\-E\-\_\-\-G\-R\-I\-D\-::fine, L\-O\-N\-G\-B\-I\-N\-::index, L\-I\-N\-E\-::length2d, G\-R\-I\-D\-::lines, L\-I\-N\-E\-V\-E\-C\-T\-O\-R\-::nh, L\-O\-N\-G\-V\-E\-C\-T\-O\-R\-::nh, N\-L, L\-I\-N\-E\-V\-E\-C\-T\-O\-R\-::nl, D\-O\-U\-B\-L\-E\-\_\-\-G\-R\-I\-D\-::novalue, D\-O\-U\-B\-L\-E\-\_\-\-G\-R\-I\-D\-::small\-\_\-line\-\_\-content, and stop\-\_\-execution().
+
+
+
+Referenced by b\-\_\-advection(), t\-\_\-st\-\_\-advection\-\_\-operator\-\_\-element(), and update\-\_\-\-F1\-\_\-wet\-\_\-vert\-\_\-area().
+
+\hypertarget{b__volumes_8c_a01596e297cd347cfcdde77ebf0f2ba86}{\index{b\-\_\-volumes.\-c@{b\-\_\-volumes.\-c}!volume@{volume}}
+\index{volume@{volume}!b_volumes.c@{b\-\_\-volumes.\-c}}
+\subsubsection[{volume}]{\setlength{\rightskip}{0pt plus 5cm}double volume (
+\begin{DoxyParamCaption}
+\item[{double}]{eta, }
+\item[{long}]{i}
+\end{DoxyParamCaption}
+)}}\label{b__volumes_8c_a01596e297cd347cfcdde77ebf0f2ba86}
+map of instantaneous water mass error \begin{DoxyAuthor}{Author}
+Emanuele Cordano 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+October 2009
+\end{DoxyDate}
+\begin{DoxyReturn}{Returns}
+the volume of the i-\/th cell of the i-\/th cells
+\end{DoxyReturn}
+
+
+Definition at line 63 of file b\-\_\-volumes.\-c.
+
+
+
+References volume\-\_\-subs(), and volume\-\_\-surf().
+
+
+
+Referenced by Newton\-\_\-convergence(), and time\-\_\-loop().
+
+\hypertarget{b__volumes_8c_a1c66e2d4b15e6e8d0f008b6aee65dc66}{\index{b\-\_\-volumes.\-c@{b\-\_\-volumes.\-c}!volume\-\_\-subs@{volume\-\_\-subs}}
+\index{volume\-\_\-subs@{volume\-\_\-subs}!b_volumes.c@{b\-\_\-volumes.\-c}}
+\subsubsection[{volume\-\_\-subs}]{\setlength{\rightskip}{0pt plus 5cm}double volume\-\_\-subs (
+\begin{DoxyParamCaption}
+\item[{double}]{eta, }
+\item[{long}]{i}
+\end{DoxyParamCaption}
+)}}\label{b__volumes_8c_a1c66e2d4b15e6e8d0f008b6aee65dc66}
+\begin{DoxyAuthor}{Author}
+Emanuele Cordano (modified October 2009) 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+17 April 2009
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em eta} & -\/ (double) value of water-\/table level \\
+\hline
+{\em i} & -\/ (long) index of the (coarse) cell\\
+\hline
+\end{DoxyParams}
+It calculates the (subsurface water) volume of the i-\/th cell in function of a value of a free surface elevation and fine-\/grid topography, according to what is specified in the documentation with detailed algebraic passages.
+
+\begin{DoxyReturn}{Returns}
+water volume contained in a cell
+\end{DoxyReturn}
+
+
+Definition at line 136 of file b\-\_\-volumes.\-c.
+
+
+
+References P\-O\-L\-Y\-G\-O\-N\-::area2\-D, P\-O\-L\-Y\-G\-O\-N\-V\-E\-C\-T\-O\-R\-::element, D\-O\-U\-B\-L\-E\-\_\-\-G\-R\-I\-D\-::fine, L\-O\-N\-G\-B\-I\-N\-::index, L\-O\-N\-G\-V\-E\-C\-T\-O\-R\-::nh, D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R\-::nh, N\-L, L\-O\-N\-G\-V\-E\-C\-T\-O\-R\-::nl, G\-R\-I\-D\-::polygons, D\-O\-U\-B\-L\-E\-\_\-\-G\-R\-I\-D\-::small\-\_\-polygon\-\_\-content, and stop\-\_\-execution().
+
+
+
+Referenced by volume().
+
+\hypertarget{b__volumes_8c_a97fa57952a12ee7928d27550a38975c6}{\index{b\-\_\-volumes.\-c@{b\-\_\-volumes.\-c}!volume\-\_\-surf@{volume\-\_\-surf}}
+\index{volume\-\_\-surf@{volume\-\_\-surf}!b_volumes.c@{b\-\_\-volumes.\-c}}
+\subsubsection[{volume\-\_\-surf}]{\setlength{\rightskip}{0pt plus 5cm}double volume\-\_\-surf (
+\begin{DoxyParamCaption}
+\item[{double}]{eta, }
+\item[{long}]{i}
+\end{DoxyParamCaption}
+)}}\label{b__volumes_8c_a97fa57952a12ee7928d27550a38975c6}
+\begin{DoxyAuthor}{Author}
+Emanuele Cordano (modified October 2009) 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+22 October 2009
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em eta} & -\/ (double) value of water-\/table level \\
+\hline
+{\em i} & -\/ (long) index of the (coarse) cell\\
+\hline
+\end{DoxyParams}
+It calculates the (surface water) volume of the i-\/th cell in function of a value of a free surface elevation and fine-\/grid topography, according to what is specified in the documentation with detailed algebraic passages.
+
+\begin{DoxyReturn}{Returns}
+(surface water) water volume contained in a cell
+\end{DoxyReturn}
+
+
+Definition at line 80 of file b\-\_\-volumes.\-c.
+
+
+
+References P\-O\-L\-Y\-G\-O\-N\-::area2\-D, P\-O\-L\-Y\-G\-O\-N\-V\-E\-C\-T\-O\-R\-::element, D\-O\-U\-B\-L\-E\-\_\-\-G\-R\-I\-D\-::fine, L\-O\-N\-G\-B\-I\-N\-::index, L\-O\-N\-G\-V\-E\-C\-T\-O\-R\-::nh, D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R\-::nh, N\-L, L\-O\-N\-G\-V\-E\-C\-T\-O\-R\-::nl, G\-R\-I\-D\-::polygons, D\-O\-U\-B\-L\-E\-\_\-\-G\-R\-I\-D\-::small\-\_\-polygon\-\_\-content, and stop\-\_\-execution().
+
+
+
+Referenced by volume().
+
+\hypertarget{b__volumes_8c_a7542322fca1abef463947d740d24457e}{\index{b\-\_\-volumes.\-c@{b\-\_\-volumes.\-c}!wet\-\_\-area@{wet\-\_\-area}}
+\index{wet\-\_\-area@{wet\-\_\-area}!b_volumes.c@{b\-\_\-volumes.\-c}}
+\subsubsection[{wet\-\_\-area}]{\setlength{\rightskip}{0pt plus 5cm}double wet\-\_\-area (
+\begin{DoxyParamCaption}
+\item[{double}]{eta, }
+\item[{long}]{i, }
+\item[{double}]{deta}
+\end{DoxyParamCaption}
+)}}\label{b__volumes_8c_a7542322fca1abef463947d740d24457e}
+\begin{DoxyAuthor}{Author}
+Emanuele Cordano 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+8 May 2009
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em eta} & -\/ (double) value of water-\/table level \\
+\hline
+{\em i} & -\/ (long) index of the (coarse) cell \\
+\hline
+{\em deta} & -\/ (double) water surface delta utilized for derivate (area\-\_\-horiz)\\
+\hline
+\end{DoxyParams}
+It calculates the volume of the i-\/th cell in function of a value of a free surface elevation and fine-\/grid topography, according to what is specified in the documentation with detailed algebraic passages. The wet area is the derivative respect to the variable eta of the stored volume calculated by function \hyperlink{b__volumes_8c_a01596e297cd347cfcdde77ebf0f2ba86}{volume()}
+
+\begin{DoxyReturn}{Returns}
+wet area of the i-\/th cell
+\end{DoxyReturn}
+modified by Emanuele Cordano on 2 
+
+Definition at line 294 of file b\-\_\-volumes.\-c.
+
+
+
+References P\-O\-L\-Y\-G\-O\-N\-::area2\-D, P\-O\-L\-Y\-G\-O\-N\-V\-E\-C\-T\-O\-R\-::element, D\-O\-U\-B\-L\-E\-\_\-\-G\-R\-I\-D\-::fine, L\-O\-N\-G\-B\-I\-N\-::index, L\-O\-N\-G\-V\-E\-C\-T\-O\-R\-::nh, D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R\-::nh, N\-L, L\-O\-N\-G\-V\-E\-C\-T\-O\-R\-::nl, D\-O\-U\-B\-L\-E\-\_\-\-G\-R\-I\-D\-::novalue, G\-R\-I\-D\-::polygons, D\-O\-U\-B\-L\-E\-\_\-\-G\-R\-I\-D\-::small\-\_\-polygon\-\_\-content, and stop\-\_\-execution().
+
+
+
+Referenced by b\-\_\-smatrix\-\_\-element().
+
+
+
+\subsection{Variable Documentation}
+\hypertarget{b__volumes_8c_ab58c424a59f28ac6b17e7b7f5aae6152}{\index{b\-\_\-volumes.\-c@{b\-\_\-volumes.\-c}!dgrid@{dgrid}}
+\index{dgrid@{dgrid}!b_volumes.c@{b\-\_\-volumes.\-c}}
+\subsubsection[{dgrid}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\-O\-U\-B\-L\-E\-\_\-\-G\-R\-I\-D}$\ast$ dgrid}}\label{b__volumes_8c_ab58c424a59f28ac6b17e7b7f5aae6152}
+
+
+Definition at line 126 of file main.\-c.
+
+\hypertarget{b__volumes_8c_a44d81a9ca5648f4ec1c298c7f37fefff}{\index{b\-\_\-volumes.\-c@{b\-\_\-volumes.\-c}!draster@{draster}}
+\index{draster@{draster}!b_volumes.c@{b\-\_\-volumes.\-c}}
+\subsubsection[{draster}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\-O\-U\-B\-L\-E\-R\-A\-S\-T\-E\-R\-\_\-\-M\-A\-P}$\ast$ draster}}\label{b__volumes_8c_a44d81a9ca5648f4ec1c298c7f37fefff}
+
+
+Definition at line 128 of file main.\-c.
+
+\hypertarget{b__volumes_8c_a4cd3286ed17aff6164594f8a2d59f898}{\index{b\-\_\-volumes.\-c@{b\-\_\-volumes.\-c}!elevation\-\_\-bottom\-\_\-bottom@{elevation\-\_\-bottom\-\_\-bottom}}
+\index{elevation\-\_\-bottom\-\_\-bottom@{elevation\-\_\-bottom\-\_\-bottom}!b_volumes.c@{b\-\_\-volumes.\-c}}
+\subsubsection[{elevation\-\_\-bottom\-\_\-bottom}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R}$\ast$ elevation\-\_\-bottom\-\_\-bottom}}\label{b__volumes_8c_a4cd3286ed17aff6164594f8a2d59f898}
+map of the bottom elevation defined in the lines of the fine grid 
+
+Definition at line 134 of file main.\-c.
+
+\hypertarget{b__volumes_8c_a93f8bd854f98f2abe47c108484cf1c6b}{\index{b\-\_\-volumes.\-c@{b\-\_\-volumes.\-c}!elevation\-\_\-bottom\-\_\-coarse@{elevation\-\_\-bottom\-\_\-coarse}}
+\index{elevation\-\_\-bottom\-\_\-coarse@{elevation\-\_\-bottom\-\_\-coarse}!b_volumes.c@{b\-\_\-volumes.\-c}}
+\subsubsection[{elevation\-\_\-bottom\-\_\-coarse}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R}$\ast$ elevation\-\_\-bottom\-\_\-coarse}}\label{b__volumes_8c_a93f8bd854f98f2abe47c108484cf1c6b}
+map of the bottom elevation (fine grid) 
+
+Definition at line 132 of file main.\-c.
+
+\hypertarget{b__volumes_8c_a48a2ac079f3ec064d28848bcdc54ed7c}{\index{b\-\_\-volumes.\-c@{b\-\_\-volumes.\-c}!elevation\-\_\-bottom\-\_\-fine@{elevation\-\_\-bottom\-\_\-fine}}
+\index{elevation\-\_\-bottom\-\_\-fine@{elevation\-\_\-bottom\-\_\-fine}!b_volumes.c@{b\-\_\-volumes.\-c}}
+\subsubsection[{elevation\-\_\-bottom\-\_\-fine}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R}$\ast$ elevation\-\_\-bottom\-\_\-fine}}\label{b__volumes_8c_a48a2ac079f3ec064d28848bcdc54ed7c}
+
+
+Definition at line 131 of file main.\-c.
+
+\hypertarget{b__volumes_8c_a495ebb69c21b8816ee4f7dfe0e1e6d98}{\index{b\-\_\-volumes.\-c@{b\-\_\-volumes.\-c}!elevation\-\_\-bottom\-\_\-flines@{elevation\-\_\-bottom\-\_\-flines}}
+\index{elevation\-\_\-bottom\-\_\-flines@{elevation\-\_\-bottom\-\_\-flines}!b_volumes.c@{b\-\_\-volumes.\-c}}
+\subsubsection[{elevation\-\_\-bottom\-\_\-flines}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R}$\ast$ elevation\-\_\-bottom\-\_\-flines}}\label{b__volumes_8c_a495ebb69c21b8816ee4f7dfe0e1e6d98}
+map of the bottom elevation (coarse grid) 
+
+Definition at line 133 of file main.\-c.
+
+\hypertarget{b__volumes_8c_a2f1a3b2841c6ed8ff4461dabf9a4b03c}{\index{b\-\_\-volumes.\-c@{b\-\_\-volumes.\-c}!elevation\-\_\-terrain\-\_\-fine@{elevation\-\_\-terrain\-\_\-fine}}
+\index{elevation\-\_\-terrain\-\_\-fine@{elevation\-\_\-terrain\-\_\-fine}!b_volumes.c@{b\-\_\-volumes.\-c}}
+\subsubsection[{elevation\-\_\-terrain\-\_\-fine}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R}$\ast$ elevation\-\_\-terrain\-\_\-fine}}\label{b__volumes_8c_a2f1a3b2841c6ed8ff4461dabf9a4b03c}
+map of the elvetion of the bottom of he coarse cells 
+
+Definition at line 135 of file main.\-c.
+
+\hypertarget{b__volumes_8c_a3328ead9d7ff307ac4b6847cd4a1205b}{\index{b\-\_\-volumes.\-c@{b\-\_\-volumes.\-c}!elevation\-\_\-terrain\-\_\-flines@{elevation\-\_\-terrain\-\_\-flines}}
+\index{elevation\-\_\-terrain\-\_\-flines@{elevation\-\_\-terrain\-\_\-flines}!b_volumes.c@{b\-\_\-volumes.\-c}}
+\subsubsection[{elevation\-\_\-terrain\-\_\-flines}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R}$\ast$ elevation\-\_\-terrain\-\_\-flines}}\label{b__volumes_8c_a3328ead9d7ff307ac4b6847cd4a1205b}
+map of the surface terrain elevation (fine grid) 
+
+Definition at line 136 of file main.\-c.
+
+\hypertarget{b__volumes_8c_a528421ce34267070764970b021f6034a}{\index{b\-\_\-volumes.\-c@{b\-\_\-volumes.\-c}!filenames@{filenames}}
+\index{filenames@{filenames}!b_volumes.c@{b\-\_\-volumes.\-c}}
+\subsubsection[{filenames}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\-T\-R\-I\-N\-G\-B\-I\-N}$\ast$ filenames}}\label{b__volumes_8c_a528421ce34267070764970b021f6034a}
+
+
+Definition at line 124 of file main.\-c.
+
+\hypertarget{b__volumes_8c_af669d66807986c96b4927566ae5e8b45}{\index{b\-\_\-volumes.\-c@{b\-\_\-volumes.\-c}!flag@{flag}}
+\index{flag@{flag}!b_volumes.c@{b\-\_\-volumes.\-c}}
+\subsubsection[{flag}]{\setlength{\rightskip}{0pt plus 5cm}{\bf F\-L\-A\-G}$\ast$ flag}}\label{b__volumes_8c_af669d66807986c96b4927566ae5e8b45}
+
+
+Definition at line 149 of file main.\-c.
+
+\hypertarget{b__volumes_8c_a8d58cb68a19f9ec3d36dcf606ce6ab8e}{\index{b\-\_\-volumes.\-c@{b\-\_\-volumes.\-c}!outlet\-\_\-coefficient@{outlet\-\_\-coefficient}}
+\index{outlet\-\_\-coefficient@{outlet\-\_\-coefficient}!b_volumes.c@{b\-\_\-volumes.\-c}}
+\subsubsection[{outlet\-\_\-coefficient}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R}$\ast$ outlet\-\_\-coefficient}}\label{b__volumes_8c_a8d58cb68a19f9ec3d36dcf606ce6ab8e}
+map of the surface terrain elevation (fine grid lines) map of the coefficient of the rating curve in the outlet q\-\_\-discharge=C$\ast$h\-\_\-sup$^\wedge$m
+
+map of porosity defined on the pixels of the fine grid 
+
+Definition at line 138 of file main.\-c.
+
+\hypertarget{b__volumes_8c_a54f93693853ec24ff2fe2dcc95d77e2c}{\index{b\-\_\-volumes.\-c@{b\-\_\-volumes.\-c}!outlet\-\_\-coefficient\-\_\-surf@{outlet\-\_\-coefficient\-\_\-surf}}
+\index{outlet\-\_\-coefficient\-\_\-surf@{outlet\-\_\-coefficient\-\_\-surf}!b_volumes.c@{b\-\_\-volumes.\-c}}
+\subsubsection[{outlet\-\_\-coefficient\-\_\-surf}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R}$\ast$ outlet\-\_\-coefficient\-\_\-surf}}\label{b__volumes_8c_a54f93693853ec24ff2fe2dcc95d77e2c}
+map of the coefficient of the rating curve in the outlet (surface flow) q\-\_\-discharge=C$\ast$h\-\_\-sup$^\wedge$m 
+
+Definition at line 139 of file main.\-c.
+
+\hypertarget{b__volumes_8c_ad8ac9ce29f12815d417a57b2c0dc31fb}{\index{b\-\_\-volumes.\-c@{b\-\_\-volumes.\-c}!param@{param}}
+\index{param@{param}!b_volumes.c@{b\-\_\-volumes.\-c}}
+\subsubsection[{param}]{\setlength{\rightskip}{0pt plus 5cm}{\bf P\-A\-R\-A\-M}$\ast$ param}}\label{b__volumes_8c_ad8ac9ce29f12815d417a57b2c0dc31fb}
+coefficient F1 for surface flow as reported in Casulli,2008 
+
+Definition at line 148 of file main.\-c.
+
+\hypertarget{b__volumes_8c_acd5b5637e9d24f6f2641e08ed439b8b8}{\index{b\-\_\-volumes.\-c@{b\-\_\-volumes.\-c}!porosity\-\_\-fine@{porosity\-\_\-fine}}
+\index{porosity\-\_\-fine@{porosity\-\_\-fine}!b_volumes.c@{b\-\_\-volumes.\-c}}
+\subsubsection[{porosity\-\_\-fine}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R}$\ast$ porosity\-\_\-fine}}\label{b__volumes_8c_acd5b5637e9d24f6f2641e08ed439b8b8}
+map of the surface terrain elevation (fine grid lines) 
+
+Definition at line 137 of file main.\-c.
+
+\hypertarget{b__volumes_8c_a97eff843a1a4985b0746ef826cc27822}{\index{b\-\_\-volumes.\-c@{b\-\_\-volumes.\-c}!water\-\_\-mass\-\_\-error@{water\-\_\-mass\-\_\-error}}
+\index{water\-\_\-mass\-\_\-error@{water\-\_\-mass\-\_\-error}!b_volumes.c@{b\-\_\-volumes.\-c}}
+\subsubsection[{water\-\_\-mass\-\_\-error}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R}$\ast$ water\-\_\-mass\-\_\-error}}\label{b__volumes_8c_a97eff843a1a4985b0746ef826cc27822}
+map of instantaneous water surface on the pixels of the coarse grid 
+
+Definition at line 143 of file main.\-c.
+
+\hypertarget{b__volumes_8c_a3ace2c97e74d7e8aad3670b479cb606d}{\index{b\-\_\-volumes.\-c@{b\-\_\-volumes.\-c}!water\-\_\-surface\-\_\-elevation@{water\-\_\-surface\-\_\-elevation}}
+\index{water\-\_\-surface\-\_\-elevation@{water\-\_\-surface\-\_\-elevation}!b_volumes.c@{b\-\_\-volumes.\-c}}
+\subsubsection[{water\-\_\-surface\-\_\-elevation}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R}$\ast$ water\-\_\-surface\-\_\-elevation}}\label{b__volumes_8c_a3ace2c97e74d7e8aad3670b479cb606d}
+
+
+extern \hyperlink{struct_d_o_u_b_l_e_v_e_c_t_o_r}{D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} {\itshape runoff\-\_\-coefficient; /}!$<$map of the coefficient of the rating curve in the outlet q\-\_\-discharge=C$\ast$h\-\_\-sup$^\wedge$m $\ast$/ 
+
+map of porosity defined on the pixels of the fine grid 
+
+Definition at line 142 of file main.\-c.
+

@@ -1,0 +1,127 @@
+\hypertarget{preconditioned__conjugate__gradient_8c}{\section{M\-A\-T\-H2/preconditioned\-\_\-conjugate\-\_\-gradient.c File Reference}
+\label{preconditioned__conjugate__gradient_8c}\index{M\-A\-T\-H2/preconditioned\-\_\-conjugate\-\_\-gradient.\-c@{M\-A\-T\-H2/preconditioned\-\_\-conjugate\-\_\-gradient.\-c}}
+}
+{\ttfamily \#include \char`\"{}turtle.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}t\-\_\-utilities.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}doublevector\-\_\-utilities.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}preconditioned\-\_\-conjugate\-\_\-gradient.\-h\char`\"{}}\\*
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{preconditioned__conjugate__gradient_8c_a2b4f56dbc94cdba1f186f15a3977b100}{M\-A\-X\-\_\-\-V\-A\-L\-U\-E\-\_\-\-D\-I\-A\-G}~1e-\/10
+\item 
+\#define \hyperlink{preconditioned__conjugate__gradient_8c_ab41ee29dd68388be6ed6f2e790430ad4}{M\-A\-X\-\_\-\-R\-E\-I\-T\-E\-R\-T\-I\-O\-N}~1
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{preconditioned__conjugate__gradient_8c_ab12388fa1ebf00d925c86e6cf8b33555}{get\-\_\-diagonal} (\hyperlink{struct_d_o_u_b_l_e_v_e_c_t_o_r}{D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} $\ast$diagonal, \hyperlink{preconditioned__conjugate__gradient_8h_a856ecceb36502250c03b650d4480af1f}{t\-\_\-\-Matrix\-\_\-element} Matrix)
+\item 
+long \hyperlink{preconditioned__conjugate__gradient_8c_a68ab2501aa3f614f62b0279a63d708a8}{jacobi\-\_\-preconditioned\-\_\-conjugate\-\_\-gradient\-\_\-search} (long icnt, double epsilon, \hyperlink{struct_d_o_u_b_l_e_v_e_c_t_o_r}{D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} $\ast$x, \hyperlink{struct_d_o_u_b_l_e_v_e_c_t_o_r}{D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} $\ast$b, \hyperlink{preconditioned__conjugate__gradient_8h_a856ecceb36502250c03b650d4480af1f}{t\-\_\-\-Matrix\-\_\-element} funz)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{preconditioned__conjugate__gradient_8h_ac1084fe7d7f7b5ec1b0ef507d4c896d6}{t\-\_\-\-Matrix} \hyperlink{preconditioned__conjugate__gradient_8c_a751501afd7404325fc089626e1ed742e}{Functional\-\_\-\-M}
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{preconditioned__conjugate__gradient_8c_ab41ee29dd68388be6ed6f2e790430ad4}{\index{preconditioned\-\_\-conjugate\-\_\-gradient.\-c@{preconditioned\-\_\-conjugate\-\_\-gradient.\-c}!M\-A\-X\-\_\-\-R\-E\-I\-T\-E\-R\-T\-I\-O\-N@{M\-A\-X\-\_\-\-R\-E\-I\-T\-E\-R\-T\-I\-O\-N}}
+\index{M\-A\-X\-\_\-\-R\-E\-I\-T\-E\-R\-T\-I\-O\-N@{M\-A\-X\-\_\-\-R\-E\-I\-T\-E\-R\-T\-I\-O\-N}!preconditioned_conjugate_gradient.c@{preconditioned\-\_\-conjugate\-\_\-gradient.\-c}}
+\subsubsection[{M\-A\-X\-\_\-\-R\-E\-I\-T\-E\-R\-T\-I\-O\-N}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\-A\-X\-\_\-\-R\-E\-I\-T\-E\-R\-T\-I\-O\-N~1}}\label{preconditioned__conjugate__gradient_8c_ab41ee29dd68388be6ed6f2e790430ad4}
+
+
+Definition at line 36 of file preconditioned\-\_\-conjugate\-\_\-gradient.\-c.
+
+
+
+Referenced by jacobi\-\_\-preconditioned\-\_\-conjugate\-\_\-gradient\-\_\-search().
+
+\hypertarget{preconditioned__conjugate__gradient_8c_a2b4f56dbc94cdba1f186f15a3977b100}{\index{preconditioned\-\_\-conjugate\-\_\-gradient.\-c@{preconditioned\-\_\-conjugate\-\_\-gradient.\-c}!M\-A\-X\-\_\-\-V\-A\-L\-U\-E\-\_\-\-D\-I\-A\-G@{M\-A\-X\-\_\-\-V\-A\-L\-U\-E\-\_\-\-D\-I\-A\-G}}
+\index{M\-A\-X\-\_\-\-V\-A\-L\-U\-E\-\_\-\-D\-I\-A\-G@{M\-A\-X\-\_\-\-V\-A\-L\-U\-E\-\_\-\-D\-I\-A\-G}!preconditioned_conjugate_gradient.c@{preconditioned\-\_\-conjugate\-\_\-gradient.\-c}}
+\subsubsection[{M\-A\-X\-\_\-\-V\-A\-L\-U\-E\-\_\-\-D\-I\-A\-G}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\-A\-X\-\_\-\-V\-A\-L\-U\-E\-\_\-\-D\-I\-A\-G~1e-\/10}}\label{preconditioned__conjugate__gradient_8c_a2b4f56dbc94cdba1f186f15a3977b100}
+
+
+Definition at line 35 of file preconditioned\-\_\-conjugate\-\_\-gradient.\-c.
+
+
+
+\subsection{Function Documentation}
+\hypertarget{preconditioned__conjugate__gradient_8c_ab12388fa1ebf00d925c86e6cf8b33555}{\index{preconditioned\-\_\-conjugate\-\_\-gradient.\-c@{preconditioned\-\_\-conjugate\-\_\-gradient.\-c}!get\-\_\-diagonal@{get\-\_\-diagonal}}
+\index{get\-\_\-diagonal@{get\-\_\-diagonal}!preconditioned_conjugate_gradient.c@{preconditioned\-\_\-conjugate\-\_\-gradient.\-c}}
+\subsubsection[{get\-\_\-diagonal}]{\setlength{\rightskip}{0pt plus 5cm}int get\-\_\-diagonal (
+\begin{DoxyParamCaption}
+\item[{{\bf D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} $\ast$}]{diagonal, }
+\item[{{\bf t\-\_\-\-Matrix\-\_\-element}}]{Matrix}
+\end{DoxyParamCaption}
+)}}\label{preconditioned__conjugate__gradient_8c_ab12388fa1ebf00d925c86e6cf8b33555}
+
+
+Definition at line 41 of file preconditioned\-\_\-conjugate\-\_\-gradient.\-c.
+
+
+
+References free\-\_\-doublevector(), new\-\_\-doublevector(), D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R\-::nh, and D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R\-::nl.
+
+
+
+Referenced by jacobi\-\_\-preconditioned\-\_\-conjugate\-\_\-gradient\-\_\-search(), and time\-\_\-loop().
+
+\hypertarget{preconditioned__conjugate__gradient_8c_a68ab2501aa3f614f62b0279a63d708a8}{\index{preconditioned\-\_\-conjugate\-\_\-gradient.\-c@{preconditioned\-\_\-conjugate\-\_\-gradient.\-c}!jacobi\-\_\-preconditioned\-\_\-conjugate\-\_\-gradient\-\_\-search@{jacobi\-\_\-preconditioned\-\_\-conjugate\-\_\-gradient\-\_\-search}}
+\index{jacobi\-\_\-preconditioned\-\_\-conjugate\-\_\-gradient\-\_\-search@{jacobi\-\_\-preconditioned\-\_\-conjugate\-\_\-gradient\-\_\-search}!preconditioned_conjugate_gradient.c@{preconditioned\-\_\-conjugate\-\_\-gradient.\-c}}
+\subsubsection[{jacobi\-\_\-preconditioned\-\_\-conjugate\-\_\-gradient\-\_\-search}]{\setlength{\rightskip}{0pt plus 5cm}long jacobi\-\_\-preconditioned\-\_\-conjugate\-\_\-gradient\-\_\-search (
+\begin{DoxyParamCaption}
+\item[{long}]{icnt, }
+\item[{double}]{epsilon, }
+\item[{{\bf D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} $\ast$}]{x, }
+\item[{{\bf D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} $\ast$}]{b, }
+\item[{{\bf t\-\_\-\-Matrix\-\_\-element}}]{funz}
+\end{DoxyParamCaption}
+)}}\label{preconditioned__conjugate__gradient_8c_a68ab2501aa3f614f62b0279a63d708a8}
+
+\begin{DoxyParams}{Parameters}
+{\em icnt} & -\/ (long) number of reiterations \\
+\hline
+{\em epsilon} & -\/ (double) required tollerance (2-\/order norm of the residuals) \\
+\hline
+{\em x} & -\/ (\hyperlink{struct_d_o_u_b_l_e_v_e_c_t_o_r}{D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} $\ast$) vector of the unknowns x in Ax=b \\
+\hline
+{\em b} & -\/ (\hyperlink{struct_d_o_u_b_l_e_v_e_c_t_o_r}{D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} $\ast$) vector of b in Ax=b \\
+\hline
+{\em funz} & -\/ (t\-\_\-\-Matrix\-\_\-element) -\/ (int) pointer to the application A (x and y doublevector y=A(param)x ) it return 0 in case of success, -\/1 otherwise.\\
+\hline
+\end{DoxyParams}
+algorithm proposed by Jonathan Richard Shewckuck in \href{http://www.cs.cmu.edu/~jrs/jrspapers.html#cg}{\tt http\-://www.\-cs.\-cmu.\-edu/$\sim$jrs/jrspapers.\-html\#cg} and \href{http://www.cs.cmu.edu/~quake-papers/painless-conjugate-gradient.pdf}{\tt http\-://www.\-cs.\-cmu.\-edu/$\sim$quake-\/papers/painless-\/conjugate-\/gradient.\-pdf}
+
+\begin{DoxyAuthor}{Author}
+Emanuele Cordano 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+June 2009
+\end{DoxyDate}
+\begin{DoxyReturn}{Returns}
+the number of reitarations
+\end{DoxyReturn}
+
+
+Definition at line 80 of file preconditioned\-\_\-conjugate\-\_\-gradient.\-c.
+
+
+
+References free\-\_\-doublevector(), get\-\_\-diagonal(), max\-\_\-doublevector(), M\-A\-X\-\_\-\-R\-E\-I\-T\-E\-R\-T\-I\-O\-N, new\-\_\-doublevector(), D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R\-::nh, D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R\-::nl, and stop\-\_\-execution().
+
+
+
+Referenced by Newton\-\_\-convergence().
+
+
+
+\subsection{Variable Documentation}
+\hypertarget{preconditioned__conjugate__gradient_8c_a751501afd7404325fc089626e1ed742e}{\index{preconditioned\-\_\-conjugate\-\_\-gradient.\-c@{preconditioned\-\_\-conjugate\-\_\-gradient.\-c}!Functional\-\_\-\-M@{Functional\-\_\-\-M}}
+\index{Functional\-\_\-\-M@{Functional\-\_\-\-M}!preconditioned_conjugate_gradient.c@{preconditioned\-\_\-conjugate\-\_\-gradient.\-c}}
+\subsubsection[{Functional\-\_\-\-M}]{\setlength{\rightskip}{0pt plus 5cm}{\bf t\-\_\-\-Matrix} Functional\-\_\-\-M}}\label{preconditioned__conjugate__gradient_8c_a751501afd7404325fc089626e1ed742e}
+
+
+Definition at line 39 of file preconditioned\-\_\-conjugate\-\_\-gradient.\-c.
+

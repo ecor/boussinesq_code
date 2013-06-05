@@ -1,0 +1,1472 @@
+\hypertarget{datamanipulation_8c}{\section{F\-L\-U\-I\-D\-T\-U\-R\-T\-L\-E\-S/datamanipulation.c File Reference}
+\label{datamanipulation_8c}\index{F\-L\-U\-I\-D\-T\-U\-R\-T\-L\-E\-S/datamanipulation.\-c@{F\-L\-U\-I\-D\-T\-U\-R\-T\-L\-E\-S/datamanipulation.\-c}}
+}
+{\ttfamily \#include \char`\"{}turtle.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}t\-\_\-datamanipulation.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}t\-\_\-alloc.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}write\-\_\-dem.\-h\char`\"{}}\\*
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{struct_d_o_u_b_l_e_v_e_c_t_o_r}{D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} $\ast$ \hyperlink{datamanipulation_8c_aa97d56050c332aca07848cef7d06cbd8}{vectorize\-\_\-doublematrix} (\hyperlink{struct_d_o_u_b_l_e_m_a_t_r_i_x}{D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X} $\ast$input)
+\item 
+\hyperlink{struct_l_o_n_g_v_e_c_t_o_r}{L\-O\-N\-G\-V\-E\-C\-T\-O\-R} $\ast$ \hyperlink{datamanipulation_8c_a1b695ebb05cbaa4a08388804e8dfeb33}{vectorize\-\_\-longmatrix} (\hyperlink{struct_l_o_n_g_m_a_t_r_i_x}{L\-O\-N\-G\-M\-A\-T\-R\-I\-X} $\ast$input)
+\item 
+\hyperlink{struct_f_l_o_a_t_v_e_c_t_o_r}{F\-L\-O\-A\-T\-V\-E\-C\-T\-O\-R} $\ast$ \hyperlink{datamanipulation_8c_abd465a40fa7cf77a811683d342ea075d}{vectorize\-\_\-floatmatrix} (\hyperlink{struct_f_l_o_a_t_m_a_t_r_i_x}{F\-L\-O\-A\-T\-M\-A\-T\-R\-I\-X} $\ast$input)
+\item 
+\hyperlink{struct_s_h_o_r_t_v_e_c_t_o_r}{S\-H\-O\-R\-T\-V\-E\-C\-T\-O\-R} $\ast$ \hyperlink{datamanipulation_8c_a78391684b827f78ff0c2717c69fe79e8}{vectorize\-\_\-shortmatrix} (\hyperlink{struct_s_h_o_r_t_m_a_t_r_i_x}{S\-H\-O\-R\-T\-M\-A\-T\-R\-I\-X} $\ast$input)
+\item 
+void \hyperlink{datamanipulation_8c_af2f5f0d967d566f6776508b4cf78d6b2}{sortreal} (\hyperlink{struct_d_o_u_b_l_e_v_e_c_t_o_r}{D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} $\ast$ra)
+\item 
+void \hyperlink{datamanipulation_8c_a1d65c5e8d34adc1f0188a21705d72150}{sort2realvectors} (\hyperlink{struct_d_o_u_b_l_e_v_e_c_t_o_r}{D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} $\ast$ra, \hyperlink{struct_d_o_u_b_l_e_v_e_c_t_o_r}{D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} $\ast$rb)
+\item 
+void \hyperlink{datamanipulation_8c_a6e68d1bfd1cb58fee4e4c563aae89e8f}{sort2floatvectors} (\hyperlink{struct_f_l_o_a_t_v_e_c_t_o_r}{F\-L\-O\-A\-T\-V\-E\-C\-T\-O\-R} $\ast$ra, \hyperlink{struct_f_l_o_a_t_v_e_c_t_o_r}{F\-L\-O\-A\-T\-V\-E\-C\-T\-O\-R} $\ast$rb)
+\item 
+void \hyperlink{datamanipulation_8c_a80c996034834608964cab0e48b680e53}{sort2vectors} (\hyperlink{struct_l_o_n_g_v_e_c_t_o_r}{L\-O\-N\-G\-V\-E\-C\-T\-O\-R} $\ast$ra, \hyperlink{struct_f_l_o_a_t_v_e_c_t_o_r}{F\-L\-O\-A\-T\-V\-E\-C\-T\-O\-R} $\ast$rb)
+\item 
+\hyperlink{struct_d_o_u_b_l_e_m_a_t_r_i_x}{D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X} $\ast$ \hyperlink{datamanipulation_8c_a7e43d0225332bcc3204f552ecffdd4ee}{simplehystogram} (\hyperlink{struct_d_o_u_b_l_e_v_e_c_t_o_r}{D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} $\ast$U, long N, long mn)
+\item 
+\hyperlink{struct_d_o_u_b_l_e_m_a_t_r_i_x}{D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X} $\ast$ \hyperlink{datamanipulation_8c_a2fdd0d6b3b0565d8c4255ebcd15d2a0b}{exponentialhystogram} (\hyperlink{struct_d_o_u_b_l_e_v_e_c_t_o_r}{D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} $\ast$U, long N, long mn, long base)
+\item 
+void \hyperlink{datamanipulation_8c_aaa464926ae3270f7d414d1ad53fe76c4}{realpair\-\_\-into\-\_\-doublematrix} (\hyperlink{t__list_8h_a831404c432354181c65ede2328a78599}{R\-E\-A\-L\-P\-A\-I\-R} $\ast$head, \hyperlink{struct_d_o_u_b_l_e_m_a_t_r_i_x}{D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X} $\ast$indx)
+\item 
+void \hyperlink{datamanipulation_8c_a8c57716d9c9c2990de9ad58ca5d329fc}{xyz\-\_\-into\-\_\-doublematrix} (\hyperlink{t__list_8h_a6e545106fcdf9107bac15edf87713b2e}{X\-Y\-Z} $\ast$head, \hyperlink{struct_d_o_u_b_l_e_m_a_t_r_i_x}{D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X} $\ast$indx)
+\item 
+void \hyperlink{datamanipulation_8c_a11287d9ad90c5510b1bb23493c348691}{initialize\-\_\-longvector} (\hyperlink{struct_l_o_n_g_v_e_c_t_o_r}{L\-O\-N\-G\-V\-E\-C\-T\-O\-R} $\ast$L, long sign)
+\item 
+void \hyperlink{datamanipulation_8c_a33bb0c693f6e17417f2aa608ee83d705}{initialize\-\_\-shortvector} (\hyperlink{struct_s_h_o_r_t_v_e_c_t_o_r}{S\-H\-O\-R\-T\-V\-E\-C\-T\-O\-R} $\ast$L, short sign)
+\item 
+void \hyperlink{datamanipulation_8c_a38becedf79e63b876a220a6f7e23da9e}{initialize\-\_\-doublevector} (\hyperlink{struct_d_o_u_b_l_e_v_e_c_t_o_r}{D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} $\ast$L, double sign)
+\item 
+void \hyperlink{datamanipulation_8c_a4b479ddcc354161deb1dfe8c2f952a56}{initialize\-\_\-floatvector} (\hyperlink{struct_f_l_o_a_t_v_e_c_t_o_r}{F\-L\-O\-A\-T\-V\-E\-C\-T\-O\-R} $\ast$L, float sign)
+\item 
+void \hyperlink{datamanipulation_8c_a556874ad9f5f00208810da4f45435849}{initialize\-\_\-shortmatrix} (\hyperlink{struct_s_h_o_r_t_m_a_t_r_i_x}{S\-H\-O\-R\-T\-M\-A\-T\-R\-I\-X} $\ast$L, short sign)
+\item 
+void \hyperlink{datamanipulation_8c_a024021c68f153ec4201bc578414357e6}{initialize\-\_\-longmatrix} (\hyperlink{struct_l_o_n_g_m_a_t_r_i_x}{L\-O\-N\-G\-M\-A\-T\-R\-I\-X} $\ast$L, long sign)
+\item 
+void \hyperlink{datamanipulation_8c_a34d5dd5d6f4f8d52dd4f61445355b475}{initialize\-\_\-floatmatrix} (\hyperlink{struct_f_l_o_a_t_m_a_t_r_i_x}{F\-L\-O\-A\-T\-M\-A\-T\-R\-I\-X} $\ast$L, float sign)
+\item 
+void \hyperlink{datamanipulation_8c_a4b04cb6d111058011057da381a49e9cd}{initialize\-\_\-doublematrix} (\hyperlink{struct_d_o_u_b_l_e_m_a_t_r_i_x}{D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X} $\ast$L, double sign)
+\item 
+void \hyperlink{datamanipulation_8c_ab4e2d4b7705cc19da0430ebe7efd517d}{copy\-\_\-shortmatrix} (\hyperlink{struct_s_h_o_r_t_m_a_t_r_i_x}{S\-H\-O\-R\-T\-M\-A\-T\-R\-I\-X} $\ast$origin, \hyperlink{struct_s_h_o_r_t_m_a_t_r_i_x}{S\-H\-O\-R\-T\-M\-A\-T\-R\-I\-X} $\ast$destination)
+\item 
+void \hyperlink{datamanipulation_8c_a5c4f23cb53396e591dbb4230b61233a2}{copy\-\_\-intmatrix} (\hyperlink{struct_i_n_t_m_a_t_r_i_x}{I\-N\-T\-M\-A\-T\-R\-I\-X} $\ast$origin, \hyperlink{struct_i_n_t_m_a_t_r_i_x}{I\-N\-T\-M\-A\-T\-R\-I\-X} $\ast$destination)
+\item 
+void \hyperlink{datamanipulation_8c_ab3f6c67619d9fe75c48e4d887e18e1f6}{copy\-\_\-longmatrix} (\hyperlink{struct_l_o_n_g_m_a_t_r_i_x}{L\-O\-N\-G\-M\-A\-T\-R\-I\-X} $\ast$origin, \hyperlink{struct_l_o_n_g_m_a_t_r_i_x}{L\-O\-N\-G\-M\-A\-T\-R\-I\-X} $\ast$destination)
+\item 
+void \hyperlink{datamanipulation_8c_a2e2a0a03018c072d2dc72bf10542661e}{copy\-\_\-floatmatrix} (\hyperlink{struct_f_l_o_a_t_m_a_t_r_i_x}{F\-L\-O\-A\-T\-M\-A\-T\-R\-I\-X} $\ast$origin, \hyperlink{struct_f_l_o_a_t_m_a_t_r_i_x}{F\-L\-O\-A\-T\-M\-A\-T\-R\-I\-X} $\ast$destination)
+\item 
+void \hyperlink{datamanipulation_8c_a566158da06620664c24d3793d33fd1da}{copy\-\_\-doublematrix} (\hyperlink{struct_d_o_u_b_l_e_m_a_t_r_i_x}{D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X} $\ast$origin, \hyperlink{struct_d_o_u_b_l_e_m_a_t_r_i_x}{D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X} $\ast$destination)
+\item 
+void \hyperlink{datamanipulation_8c_a707d85f197d0dea652a4fcc444aa2986}{copy\-\_\-shortvector} (\hyperlink{struct_s_h_o_r_t_v_e_c_t_o_r}{S\-H\-O\-R\-T\-V\-E\-C\-T\-O\-R} $\ast$origin, \hyperlink{struct_s_h_o_r_t_v_e_c_t_o_r}{S\-H\-O\-R\-T\-V\-E\-C\-T\-O\-R} $\ast$destination)
+\item 
+void \hyperlink{datamanipulation_8c_acd39196ea557f4bb3dad6b8206b19c03}{copy\-\_\-intvector} (\hyperlink{struct_i_n_t_v_e_c_t_o_r}{I\-N\-T\-V\-E\-C\-T\-O\-R} $\ast$origin, \hyperlink{struct_i_n_t_v_e_c_t_o_r}{I\-N\-T\-V\-E\-C\-T\-O\-R} $\ast$destination)
+\item 
+void \hyperlink{datamanipulation_8c_a0d721adbcf9763d78b6f3ddd4f994647}{copy\-\_\-longvector} (\hyperlink{struct_l_o_n_g_v_e_c_t_o_r}{L\-O\-N\-G\-V\-E\-C\-T\-O\-R} $\ast$origin, \hyperlink{struct_l_o_n_g_v_e_c_t_o_r}{L\-O\-N\-G\-V\-E\-C\-T\-O\-R} $\ast$destination)
+\item 
+void \hyperlink{datamanipulation_8c_add8316fe7b1ae3091e06e79a0a77bcb4}{copy\-\_\-floatvector} (\hyperlink{struct_f_l_o_a_t_v_e_c_t_o_r}{F\-L\-O\-A\-T\-V\-E\-C\-T\-O\-R} $\ast$origin, \hyperlink{struct_f_l_o_a_t_v_e_c_t_o_r}{F\-L\-O\-A\-T\-V\-E\-C\-T\-O\-R} $\ast$destination)
+\item 
+void \hyperlink{datamanipulation_8c_a844d6e3cf8fe65ff64bce22a71694c0e}{copy\-\_\-doublevector} (\hyperlink{struct_d_o_u_b_l_e_v_e_c_t_o_r}{D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} $\ast$origin, \hyperlink{struct_d_o_u_b_l_e_v_e_c_t_o_r}{D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} $\ast$destination)
+\item 
+void \hyperlink{datamanipulation_8c_a830f6a98e3274cca5a720c39602093dd}{floatmatrix\-\_\-element\-\_\-multiplication} (\hyperlink{struct_f_l_o_a_t_m_a_t_r_i_x}{F\-L\-O\-A\-T\-M\-A\-T\-R\-I\-X} $\ast$dist, \hyperlink{struct_f_l_o_a_t_m_a_t_r_i_x}{F\-L\-O\-A\-T\-M\-A\-T\-R\-I\-X} $\ast$ca)
+\item 
+void \hyperlink{datamanipulation_8c_a373b1ebae19b1bef83f97c139ba09577}{doublematrix\-\_\-element\-\_\-multiplication} (\hyperlink{struct_d_o_u_b_l_e_m_a_t_r_i_x}{D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X} $\ast$dist, \hyperlink{struct_d_o_u_b_l_e_m_a_t_r_i_x}{D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X} $\ast$ca)
+\item 
+void \hyperlink{datamanipulation_8c_a0ee874ea600b44fed4a7c8957651ec37}{longmatrix\-\_\-element\-\_\-multiplication} (\hyperlink{struct_l_o_n_g_m_a_t_r_i_x}{L\-O\-N\-G\-M\-A\-T\-R\-I\-X} $\ast$dist, \hyperlink{struct_l_o_n_g_m_a_t_r_i_x}{L\-O\-N\-G\-M\-A\-T\-R\-I\-X} $\ast$ca)
+\item 
+void \hyperlink{datamanipulation_8c_ac38fe43658dabc32f658510169b69577}{shortmatrix\-\_\-element\-\_\-multiplication} (\hyperlink{struct_s_h_o_r_t_m_a_t_r_i_x}{S\-H\-O\-R\-T\-M\-A\-T\-R\-I\-X} $\ast$dist, \hyperlink{struct_s_h_o_r_t_m_a_t_r_i_x}{S\-H\-O\-R\-T\-M\-A\-T\-R\-I\-X} $\ast$ca)
+\item 
+void \hyperlink{datamanipulation_8c_a09d3260d83afc207c65009b0055bb2e8}{shortvector\-\_\-element\-\_\-multiplication} (\hyperlink{struct_s_h_o_r_t_v_e_c_t_o_r}{S\-H\-O\-R\-T\-V\-E\-C\-T\-O\-R} $\ast$dist, \hyperlink{struct_s_h_o_r_t_v_e_c_t_o_r}{S\-H\-O\-R\-T\-V\-E\-C\-T\-O\-R} $\ast$ca)
+\item 
+void \hyperlink{datamanipulation_8c_a836df795cb6e0567ad6b4e2863bfc4a3}{longvector\-\_\-element\-\_\-multiplication} (\hyperlink{struct_l_o_n_g_v_e_c_t_o_r}{L\-O\-N\-G\-V\-E\-C\-T\-O\-R} $\ast$dist, \hyperlink{struct_l_o_n_g_v_e_c_t_o_r}{L\-O\-N\-G\-V\-E\-C\-T\-O\-R} $\ast$ca)
+\item 
+void \hyperlink{datamanipulation_8c_ad39b70ea8eefb4e9b69095b1e2349096}{floatvector\-\_\-element\-\_\-multiplication} (\hyperlink{struct_f_l_o_a_t_v_e_c_t_o_r}{F\-L\-O\-A\-T\-V\-E\-C\-T\-O\-R} $\ast$dist, \hyperlink{struct_f_l_o_a_t_v_e_c_t_o_r}{F\-L\-O\-A\-T\-V\-E\-C\-T\-O\-R} $\ast$ca)
+\item 
+void \hyperlink{datamanipulation_8c_a40fad9cc48a8d7461de28a2bc4de9a26}{doublevector\-\_\-element\-\_\-multiplication} (\hyperlink{struct_d_o_u_b_l_e_v_e_c_t_o_r}{D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} $\ast$dist, \hyperlink{struct_d_o_u_b_l_e_v_e_c_t_o_r}{D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} $\ast$ca)
+\item 
+void \hyperlink{datamanipulation_8c_a8ebbbd82db022aa7b27071f3e864a6e5}{clean\-\_\-floatmatrix} (\hyperlink{struct_f_l_o_a_t_m_a_t_r_i_x}{F\-L\-O\-A\-T\-M\-A\-T\-R\-I\-X} $\ast$iv, \hyperlink{struct_f_l_o_a_t_m_a_t_r_i_x}{F\-L\-O\-A\-T\-M\-A\-T\-R\-I\-X} $\ast$ov, \hyperlink{struct_f_l_o_a_t_v_e_c_t_o_r}{F\-L\-O\-A\-T\-V\-E\-C\-T\-O\-R} $\ast$U, \hyperlink{struct_f_l_o_a_t_v_e_c_t_o_r}{F\-L\-O\-A\-T\-V\-E\-C\-T\-O\-R} $\ast$V)
+\item 
+\hyperlink{turtle_8h_af2577c240f36308c4c25cda8e769c61e}{D\-O\-U\-B\-L\-E\-B\-I\-N} $\ast$ \hyperlink{datamanipulation_8c_a7bdd4a2e82a65aed267762237939539c}{split} (\hyperlink{struct_d_o_u_b_l_e_v_e_c_t_o_r}{D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} $\ast$U, long N, \hyperlink{struct_f_l_o_a_t_v_e_c_t_o_r}{F\-L\-O\-A\-T\-V\-E\-C\-T\-O\-R} $\ast$novalue)
+\item 
+\hyperlink{turtle_8h_af2577c240f36308c4c25cda8e769c61e}{D\-O\-U\-B\-L\-E\-B\-I\-N} $\ast$ \hyperlink{datamanipulation_8c_a81e98a66212330c0006aa4ac92f4c491}{esponentialsplit} (\hyperlink{struct_d_o_u_b_l_e_v_e_c_t_o_r}{D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} $\ast$U, long N, double base, \hyperlink{struct_f_l_o_a_t_v_e_c_t_o_r}{F\-L\-O\-A\-T\-V\-E\-C\-T\-O\-R} $\ast$novalue)
+\item 
+double \hyperlink{datamanipulation_8c_a0f3e7fa37c9b8c6398c7fd0820f0c2ed}{split2realvectors} (\hyperlink{struct_d_o_u_b_l_e_v_e_c_t_o_r}{D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} $\ast$U, \hyperlink{struct_d_o_u_b_l_e_v_e_c_t_o_r}{D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} $\ast$T, \hyperlink{turtle_8h_af2577c240f36308c4c25cda8e769c61e}{D\-O\-U\-B\-L\-E\-B\-I\-N} $\ast$l, \hyperlink{turtle_8h_af2577c240f36308c4c25cda8e769c61e}{D\-O\-U\-B\-L\-E\-B\-I\-N} $\ast$m, long N, long num\-\_\-max, \hyperlink{struct_f_l_o_a_t_v_e_c_t_o_r}{F\-L\-O\-A\-T\-V\-E\-C\-T\-O\-R} $\ast$novalue)
+\item 
+double \hyperlink{datamanipulation_8c_a6d6185b63cbb586715e647c7878dad83}{esponentialsplit2realvectors} (\hyperlink{struct_d_o_u_b_l_e_v_e_c_t_o_r}{D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} $\ast$U, \hyperlink{struct_d_o_u_b_l_e_v_e_c_t_o_r}{D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} $\ast$W, \hyperlink{turtle_8h_af2577c240f36308c4c25cda8e769c61e}{D\-O\-U\-B\-L\-E\-B\-I\-N} $\ast$l, \hyperlink{turtle_8h_af2577c240f36308c4c25cda8e769c61e}{D\-O\-U\-B\-L\-E\-B\-I\-N} $\ast$m, long N, long num\-\_\-max, double base, \hyperlink{struct_f_l_o_a_t_v_e_c_t_o_r}{F\-L\-O\-A\-T\-V\-E\-C\-T\-O\-R} $\ast$novalue)
+\item 
+\hyperlink{struct_d_o_u_b_l_e_m_a_t_r_i_x}{D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X} $\ast$ \hyperlink{datamanipulation_8c_a48e124539954ab09ef9725d0eb2052df}{shrink\-\_\-doublematrix} (\hyperlink{struct_d_o_u_b_l_e_m_a_t_r_i_x}{D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X} $\ast$data, \hyperlink{struct_f_l_o_a_t_v_e_c_t_o_r}{F\-L\-O\-A\-T\-V\-E\-C\-T\-O\-R} $\ast$Q)
+\item 
+\hyperlink{struct_d_o_u_b_l_e_m_a_t_r_i_x}{D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X} $\ast$ \hyperlink{datamanipulation_8c_acbc7507c2b08f395d19e71663561be4d}{interpolating\-\_\-function} (\hyperlink{struct_d_o_u_b_l_e_m_a_t_r_i_x}{D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X} $\ast$cleandata)
+\item 
+double \hyperlink{datamanipulation_8c_a50bac13213b084b26b23b0bc70c91611}{interpolate} (double x, \hyperlink{struct_d_o_u_b_l_e_m_a_t_r_i_x}{D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X} $\ast$cleandata, \hyperlink{struct_d_o_u_b_l_e_m_a_t_r_i_x}{D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X} $\ast$W)
+\item 
+void \hyperlink{datamanipulation_8c_a002a2fd5be114be623385e9759c9d03c}{interpolate\-\_\-floatmatrix} (\hyperlink{struct_f_l_o_a_t_m_a_t_r_i_x}{F\-L\-O\-A\-T\-M\-A\-T\-R\-I\-X} $\ast$matrice, float dt, float istante, \hyperlink{struct_f_l_o_a_t_v_e_c_t_o_r}{F\-L\-O\-A\-T\-V\-E\-C\-T\-O\-R} $\ast$vettore)
+\item 
+void \hyperlink{datamanipulation_8c_af0a4c44942f99779e93ff13b46a0168d}{interpolate\-\_\-doublematrix} (\hyperlink{struct_d_o_u_b_l_e_m_a_t_r_i_x}{D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X} $\ast$matrice, float dt, float istante, \hyperlink{struct_d_o_u_b_l_e_v_e_c_t_o_r}{D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} $\ast$vettore)
+\item 
+double \hyperlink{datamanipulation_8c_a37869b810261a11244ebe2c8956ab0bc}{mean\-\_\-doublematrix\-\_\-column} (\hyperlink{struct_d_o_u_b_l_e_m_a_t_r_i_x}{D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X} $\ast$net, long column)
+\item 
+double \hyperlink{datamanipulation_8c_ad6a7a32fde183a4827501d77051281cf}{variance\-\_\-doublematrix\-\_\-column} (\hyperlink{struct_d_o_u_b_l_e_m_a_t_r_i_x}{D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X} $\ast$net, long column, double mean)
+\item 
+double \hyperlink{datamanipulation_8c_a6121bf1048ba496815c0b9396bb877e3}{approximate\-\_\-2\-\_\-multiple} (double number, double div)
+\item 
+\hyperlink{struct_d_o_u_b_l_e_m_a_t_r_i_x}{D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X} $\ast$ \hyperlink{datamanipulation_8c_a7c48c390cabffd530a759de3c59c4bb3}{ricampiona} (\hyperlink{struct_d_o_u_b_l_e_m_a_t_r_i_x}{D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X} $\ast$cleandata, float ti2, float dt2, long n2, float dt1)
+\item 
+\hyperlink{struct_d_o_u_b_l_e_m_a_t_r_i_x}{D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X} $\ast$ \hyperlink{datamanipulation_8c_a82d5513cd8f8ccb5ccfdd0f85a86e4fb}{quickinterpolate} (\hyperlink{struct_d_o_u_b_l_e_m_a_t_r_i_x}{D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X} $\ast$cleandata, short nint)
+\item 
+double \hyperlink{datamanipulation_8c_ae496a01b3e3a3a445da284f7a0b7f123}{mean\-\_\-function} (\hyperlink{struct_d_o_u_b_l_e_m_a_t_r_i_x}{D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X} $\ast$data, long n)
+\item 
+\hyperlink{struct_d_o_u_b_l_e_m_a_t_r_i_x}{D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X} $\ast$ \hyperlink{datamanipulation_8c_a9ac4b9c34863a92108d9356181c1af61}{cleandata\-\_\-matrix} (\hyperlink{struct_d_o_u_b_l_e_m_a_t_r_i_x}{D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X} $\ast$data, \hyperlink{struct_f_l_o_a_t_v_e_c_t_o_r}{F\-L\-O\-A\-T\-V\-E\-C\-T\-O\-R} $\ast$V, \hyperlink{struct_s_h_o_r_t_m_a_t_r_i_x}{S\-H\-O\-R\-T\-M\-A\-T\-R\-I\-X} $\ast$control)
+\item 
+void \hyperlink{datamanipulation_8c_a9ac56d1302e8a4829d48a9a98cac98eb}{fill\-\_\-data} (\hyperlink{struct_d_o_u_b_l_e_m_a_t_r_i_x}{D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X} $\ast$cleandata, \hyperlink{struct_s_h_o_r_t_m_a_t_r_i_x}{S\-H\-O\-R\-T\-M\-A\-T\-R\-I\-X} $\ast$control, long j, long n\-\_\-i, long n\-\_\-f, double x\-\_\-i, double x\-\_\-f)
+\item 
+\hyperlink{struct_d_o_u_b_l_e_m_a_t_r_i_x}{D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X} $\ast$ \hyperlink{datamanipulation_8c_a02c0ce0af2ee03a410853ac3cc358d3a}{aggregate} (\hyperlink{struct_d_o_u_b_l_e_m_a_t_r_i_x}{D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X} $\ast$data, long col, float nv)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{datamanipulation_8c_a02c0ce0af2ee03a410853ac3cc358d3a}{\index{datamanipulation.\-c@{datamanipulation.\-c}!aggregate@{aggregate}}
+\index{aggregate@{aggregate}!datamanipulation.c@{datamanipulation.\-c}}
+\subsubsection[{aggregate}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X}$\ast$ aggregate (
+\begin{DoxyParamCaption}
+\item[{{\bf D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X} $\ast$}]{data, }
+\item[{long}]{col, }
+\item[{float}]{nv}
+\end{DoxyParamCaption}
+)}}\label{datamanipulation_8c_a02c0ce0af2ee03a410853ac3cc358d3a}
+Name\-: aggregate
+
+Synopsis\-: \hyperlink{struct_d_o_u_b_l_e_m_a_t_r_i_x}{D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X} $\ast$aggregate(\hyperlink{struct_d_o_u_b_l_e_m_a_t_r_i_x}{D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X} $\ast$data, long col)
+
+Version\-: 0.\-96
+
+Description\-: calculates the mean aggregating all data wich have the same value in the column col
+
+Authors \& Date\-: Giacomo Bertoldi, October 2003
+
+input\-: data\-: double matrix with original data col\-: the column with return\-: double matrix aggregated data as mean values; in the last column you have the number of aggregated element
+
+Bugs\-: not are allowed novalues in the first and the last row
+
+F\-Ile\-: L\-I\-B\-R\-A\-R\-I\-E\-S/\-B\-A\-S\-I\-C\-S\-M\-A\-T\-H\-S\-T\-A\-T/datamanipulation.\-c 
+
+Definition at line 2584 of file datamanipulation.\-c.
+
+
+
+References D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X\-::co, doublematrix\-\_\-dem(), D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X\-::nch, new\-\_\-doublematrix(), new\-\_\-floatvector(), N\-O\-P\-R\-I\-N\-T, and D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X\-::nrh.
+
+\hypertarget{datamanipulation_8c_a6121bf1048ba496815c0b9396bb877e3}{\index{datamanipulation.\-c@{datamanipulation.\-c}!approximate\-\_\-2\-\_\-multiple@{approximate\-\_\-2\-\_\-multiple}}
+\index{approximate\-\_\-2\-\_\-multiple@{approximate\-\_\-2\-\_\-multiple}!datamanipulation.c@{datamanipulation.\-c}}
+\subsubsection[{approximate\-\_\-2\-\_\-multiple}]{\setlength{\rightskip}{0pt plus 5cm}double approximate\-\_\-2\-\_\-multiple (
+\begin{DoxyParamCaption}
+\item[{double}]{number, }
+\item[{double}]{div}
+\end{DoxyParamCaption}
+)}}\label{datamanipulation_8c_a6121bf1048ba496815c0b9396bb877e3}
+Name\-: approximate\-\_\-2\-\_\-multiple
+
+Synopsis\-: double \hyperlink{t__datamanipulation_8h_a6121bf1048ba496815c0b9396bb877e3}{approximate\-\_\-2\-\_\-multiple(double number,double div)};
+
+Version\-: 0.\-96
+
+Description\-: approximate the 'number' to the closest smaller multiple of 'div'
+
+Authors \& Date\-: Riccardo Rigon, January 2001
+
+Inputs\-: 1) the number to be approximated; 2) the smallest unit;
+
+Return\-: desired approximation
+
+F\-Ile\-: L\-I\-B\-R\-A\-R\-I\-E\-S/\-B\-A\-S\-I\-C\-S\-M\-A\-T\-H\-S\-T\-A\-T/datamanipulation.\-c 
+
+Definition at line 2335 of file datamanipulation.\-c.
+
+\hypertarget{datamanipulation_8c_a8ebbbd82db022aa7b27071f3e864a6e5}{\index{datamanipulation.\-c@{datamanipulation.\-c}!clean\-\_\-floatmatrix@{clean\-\_\-floatmatrix}}
+\index{clean\-\_\-floatmatrix@{clean\-\_\-floatmatrix}!datamanipulation.c@{datamanipulation.\-c}}
+\subsubsection[{clean\-\_\-floatmatrix}]{\setlength{\rightskip}{0pt plus 5cm}void clean\-\_\-floatmatrix (
+\begin{DoxyParamCaption}
+\item[{{\bf F\-L\-O\-A\-T\-M\-A\-T\-R\-I\-X} $\ast$}]{iv, }
+\item[{{\bf F\-L\-O\-A\-T\-M\-A\-T\-R\-I\-X} $\ast$}]{ov, }
+\item[{{\bf F\-L\-O\-A\-T\-V\-E\-C\-T\-O\-R} $\ast$}]{U, }
+\item[{{\bf F\-L\-O\-A\-T\-V\-E\-C\-T\-O\-R} $\ast$}]{V}
+\end{DoxyParamCaption}
+)}}\label{datamanipulation_8c_a8ebbbd82db022aa7b27071f3e864a6e5}
+
+
+
+
+Name\-: clean\-\_\-floatmatrix
+
+Synopsis\-: void \hyperlink{t__datamanipulation_8h_a8ebbbd82db022aa7b27071f3e864a6e5}{clean\-\_\-floatmatrix(\-F\-L\-O\-A\-T\-M\-A\-T\-R\-I\-X $\ast$iv,\-F\-L\-O\-A\-T\-M\-A\-T\-R\-I\-X $\ast$ov,\-F\-L\-O\-A\-T\-V\-E\-C\-T\-O\-R $\ast$\-U,\-F\-L\-O\-A\-T\-V\-E\-C\-T\-O\-R $\ast$\-V)};
+
+Description\-: sets to novalue1 those points in the first matrix that are marked as novalue2 in the second. A reasonable novalue is either smaller or larger than any other value in the matrix. In the first case, the first element of a novalue vector is $<$0. In the secon case it is $>$0. It is 0 if for some reason the novalue is some value value in between the data values.
+
+Inputs\-: 1) the pointer to the first matrix; 2) the pointer to the second matrix; 3) the novalue of the first matrix; 4) the novalue of the second matrix;
+
+F\-I\-L\-E\-: L\-I\-B\-R\-A\-R\-I\-E\-S/\-B\-A\-S\-I\-C\-M\-A\-T\-H\-S\-T\-A\-T/t\-\_\-datamanipulation.\-h, L\-I\-B\-R\-A\-R\-I\-E\-S/\-B\-A\-S\-I\-C\-M\-A\-T\-H\-S\-T\-A\-T/datamanipulation.\-c
+
+Authors \& Date\-: Riccardo Rigon, March 1, 1998 
+
+Definition at line 1338 of file datamanipulation.\-c.
+
+
+
+References F\-L\-O\-A\-T\-V\-E\-C\-T\-O\-R\-::co, F\-L\-O\-A\-T\-M\-A\-T\-R\-I\-X\-::co, F\-L\-O\-A\-T\-M\-A\-T\-R\-I\-X\-::nch, F\-L\-O\-A\-T\-M\-A\-T\-R\-I\-X\-::nrh, and t\-\_\-error().
+
+\hypertarget{datamanipulation_8c_a9ac4b9c34863a92108d9356181c1af61}{\index{datamanipulation.\-c@{datamanipulation.\-c}!cleandata\-\_\-matrix@{cleandata\-\_\-matrix}}
+\index{cleandata\-\_\-matrix@{cleandata\-\_\-matrix}!datamanipulation.c@{datamanipulation.\-c}}
+\subsubsection[{cleandata\-\_\-matrix}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X}$\ast$ cleandata\-\_\-matrix (
+\begin{DoxyParamCaption}
+\item[{{\bf D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X} $\ast$}]{cleandata, }
+\item[{{\bf F\-L\-O\-A\-T\-V\-E\-C\-T\-O\-R} $\ast$}]{V, }
+\item[{{\bf S\-H\-O\-R\-T\-M\-A\-T\-R\-I\-X} $\ast$}]{control}
+\end{DoxyParamCaption}
+)}}\label{datamanipulation_8c_a9ac4b9c34863a92108d9356181c1af61}
+Name\-: cleandata\-\_\-matrix
+
+Synopsis\-: \hyperlink{struct_d_o_u_b_l_e_m_a_t_r_i_x}{D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X} $\ast$cleandata\-\_\-matrix(\hyperlink{struct_d_o_u_b_l_e_m_a_t_r_i_x}{D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X} $\ast$cleandata, \hyperlink{struct_f_l_o_a_t_v_e_c_t_o_r}{F\-L\-O\-A\-T\-V\-E\-C\-T\-O\-R} $\ast$\-V, \hyperlink{struct_s_h_o_r_t_m_a_t_r_i_x}{S\-H\-O\-R\-T\-M\-A\-T\-R\-I\-X} $\ast$control);
+
+Version\-: 0.\-96
+
+Description\-: Elimina i novalues in una serie di dati interpolando linearmente tra i valori validi
+
+Authors \& Date\-: Giacomo Bertoldi, April 2001
+
+Inputs\-: 1) cleandata\-: the matrix to clean; 2) V\-: the vector of novalues; Outputs\-: 1) control\-: a matrix of the same size of cleandata with 1 for modified data, 0 for original data
+
+Return\-: cleaned matrix
+
+Bugs\-: not are allowed novalues in the first and the last row
+
+F\-Ile\-: L\-I\-B\-R\-A\-R\-I\-E\-S/\-B\-A\-S\-I\-C\-S\-M\-A\-T\-H\-S\-T\-A\-T/datamanipulation.\-c 
+
+Definition at line 2521 of file datamanipulation.\-c.
+
+
+
+References F\-L\-O\-A\-T\-V\-E\-C\-T\-O\-R\-::co, D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X\-::co, copy\-\_\-doublematrix(), fill\-\_\-data(), initialize\-\_\-shortmatrix(), D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X\-::nch, new\-\_\-doublematrix(), and D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X\-::nrh.
+
+\hypertarget{datamanipulation_8c_a566158da06620664c24d3793d33fd1da}{\index{datamanipulation.\-c@{datamanipulation.\-c}!copy\-\_\-doublematrix@{copy\-\_\-doublematrix}}
+\index{copy\-\_\-doublematrix@{copy\-\_\-doublematrix}!datamanipulation.c@{datamanipulation.\-c}}
+\subsubsection[{copy\-\_\-doublematrix}]{\setlength{\rightskip}{0pt plus 5cm}void copy\-\_\-doublematrix (
+\begin{DoxyParamCaption}
+\item[{{\bf D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X} $\ast$}]{origin, }
+\item[{{\bf D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X} $\ast$}]{destination}
+\end{DoxyParamCaption}
+)}}\label{datamanipulation_8c_a566158da06620664c24d3793d33fd1da}
+
+
+Definition at line 955 of file datamanipulation.\-c.
+
+
+
+References D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X\-::co, D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X\-::isdynamic, D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X\-::nch, D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X\-::nrh, and t\-\_\-error().
+
+
+
+Referenced by cleandata\-\_\-matrix().
+
+\hypertarget{datamanipulation_8c_a844d6e3cf8fe65ff64bce22a71694c0e}{\index{datamanipulation.\-c@{datamanipulation.\-c}!copy\-\_\-doublevector@{copy\-\_\-doublevector}}
+\index{copy\-\_\-doublevector@{copy\-\_\-doublevector}!datamanipulation.c@{datamanipulation.\-c}}
+\subsubsection[{copy\-\_\-doublevector}]{\setlength{\rightskip}{0pt plus 5cm}void copy\-\_\-doublevector (
+\begin{DoxyParamCaption}
+\item[{{\bf D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} $\ast$}]{origin, }
+\item[{{\bf D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} $\ast$}]{destination}
+\end{DoxyParamCaption}
+)}}\label{datamanipulation_8c_a844d6e3cf8fe65ff64bce22a71694c0e}
+
+
+Definition at line 1120 of file datamanipulation.\-c.
+
+
+
+References D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R\-::co, D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R\-::isdynamic, D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R\-::nh, and t\-\_\-error().
+
+
+
+Referenced by get\-\_\-dirichletsnode(), and get\-\_\-sources().
+
+\hypertarget{datamanipulation_8c_a2e2a0a03018c072d2dc72bf10542661e}{\index{datamanipulation.\-c@{datamanipulation.\-c}!copy\-\_\-floatmatrix@{copy\-\_\-floatmatrix}}
+\index{copy\-\_\-floatmatrix@{copy\-\_\-floatmatrix}!datamanipulation.c@{datamanipulation.\-c}}
+\subsubsection[{copy\-\_\-floatmatrix}]{\setlength{\rightskip}{0pt plus 5cm}void copy\-\_\-floatmatrix (
+\begin{DoxyParamCaption}
+\item[{{\bf F\-L\-O\-A\-T\-M\-A\-T\-R\-I\-X} $\ast$}]{origin, }
+\item[{{\bf F\-L\-O\-A\-T\-M\-A\-T\-R\-I\-X} $\ast$}]{destination}
+\end{DoxyParamCaption}
+)}}\label{datamanipulation_8c_a2e2a0a03018c072d2dc72bf10542661e}
+
+
+Definition at line 922 of file datamanipulation.\-c.
+
+
+
+References F\-L\-O\-A\-T\-M\-A\-T\-R\-I\-X\-::co, F\-L\-O\-A\-T\-M\-A\-T\-R\-I\-X\-::isdynamic, F\-L\-O\-A\-T\-M\-A\-T\-R\-I\-X\-::nch, F\-L\-O\-A\-T\-M\-A\-T\-R\-I\-X\-::nrh, and t\-\_\-error().
+
+\hypertarget{datamanipulation_8c_add8316fe7b1ae3091e06e79a0a77bcb4}{\index{datamanipulation.\-c@{datamanipulation.\-c}!copy\-\_\-floatvector@{copy\-\_\-floatvector}}
+\index{copy\-\_\-floatvector@{copy\-\_\-floatvector}!datamanipulation.c@{datamanipulation.\-c}}
+\subsubsection[{copy\-\_\-floatvector}]{\setlength{\rightskip}{0pt plus 5cm}void copy\-\_\-floatvector (
+\begin{DoxyParamCaption}
+\item[{{\bf F\-L\-O\-A\-T\-V\-E\-C\-T\-O\-R} $\ast$}]{origin, }
+\item[{{\bf F\-L\-O\-A\-T\-V\-E\-C\-T\-O\-R} $\ast$}]{destination}
+\end{DoxyParamCaption}
+)}}\label{datamanipulation_8c_add8316fe7b1ae3091e06e79a0a77bcb4}
+
+
+Definition at line 1088 of file datamanipulation.\-c.
+
+
+
+References F\-L\-O\-A\-T\-V\-E\-C\-T\-O\-R\-::co, F\-L\-O\-A\-T\-V\-E\-C\-T\-O\-R\-::isdynamic, F\-L\-O\-A\-T\-V\-E\-C\-T\-O\-R\-::nh, and t\-\_\-error().
+
+\hypertarget{datamanipulation_8c_a5c4f23cb53396e591dbb4230b61233a2}{\index{datamanipulation.\-c@{datamanipulation.\-c}!copy\-\_\-intmatrix@{copy\-\_\-intmatrix}}
+\index{copy\-\_\-intmatrix@{copy\-\_\-intmatrix}!datamanipulation.c@{datamanipulation.\-c}}
+\subsubsection[{copy\-\_\-intmatrix}]{\setlength{\rightskip}{0pt plus 5cm}void copy\-\_\-intmatrix (
+\begin{DoxyParamCaption}
+\item[{{\bf I\-N\-T\-M\-A\-T\-R\-I\-X} $\ast$}]{origin, }
+\item[{{\bf I\-N\-T\-M\-A\-T\-R\-I\-X} $\ast$}]{destination}
+\end{DoxyParamCaption}
+)}}\label{datamanipulation_8c_a5c4f23cb53396e591dbb4230b61233a2}
+
+
+Definition at line 852 of file datamanipulation.\-c.
+
+
+
+References I\-N\-T\-M\-A\-T\-R\-I\-X\-::co, I\-N\-T\-M\-A\-T\-R\-I\-X\-::isdynamic, I\-N\-T\-M\-A\-T\-R\-I\-X\-::nch, I\-N\-T\-M\-A\-T\-R\-I\-X\-::nrh, and t\-\_\-error().
+
+\hypertarget{datamanipulation_8c_acd39196ea557f4bb3dad6b8206b19c03}{\index{datamanipulation.\-c@{datamanipulation.\-c}!copy\-\_\-intvector@{copy\-\_\-intvector}}
+\index{copy\-\_\-intvector@{copy\-\_\-intvector}!datamanipulation.c@{datamanipulation.\-c}}
+\subsubsection[{copy\-\_\-intvector}]{\setlength{\rightskip}{0pt plus 5cm}void copy\-\_\-intvector (
+\begin{DoxyParamCaption}
+\item[{{\bf I\-N\-T\-V\-E\-C\-T\-O\-R} $\ast$}]{origin, }
+\item[{{\bf I\-N\-T\-V\-E\-C\-T\-O\-R} $\ast$}]{destination}
+\end{DoxyParamCaption}
+)}}\label{datamanipulation_8c_acd39196ea557f4bb3dad6b8206b19c03}
+
+
+Definition at line 1022 of file datamanipulation.\-c.
+
+
+
+References I\-N\-T\-V\-E\-C\-T\-O\-R\-::co, I\-N\-T\-V\-E\-C\-T\-O\-R\-::isdynamic, I\-N\-T\-V\-E\-C\-T\-O\-R\-::nh, and t\-\_\-error().
+
+\hypertarget{datamanipulation_8c_ab3f6c67619d9fe75c48e4d887e18e1f6}{\index{datamanipulation.\-c@{datamanipulation.\-c}!copy\-\_\-longmatrix@{copy\-\_\-longmatrix}}
+\index{copy\-\_\-longmatrix@{copy\-\_\-longmatrix}!datamanipulation.c@{datamanipulation.\-c}}
+\subsubsection[{copy\-\_\-longmatrix}]{\setlength{\rightskip}{0pt plus 5cm}void copy\-\_\-longmatrix (
+\begin{DoxyParamCaption}
+\item[{{\bf L\-O\-N\-G\-M\-A\-T\-R\-I\-X} $\ast$}]{, }
+\item[{{\bf L\-O\-N\-G\-M\-A\-T\-R\-I\-X} $\ast$}]{}
+\end{DoxyParamCaption}
+)}}\label{datamanipulation_8c_ab3f6c67619d9fe75c48e4d887e18e1f6}
+Name\-: copy\-\_\-\-\_\-matrix
+
+Synopsis\-:
+
+void \hyperlink{t__datamanipulation_8h_ae4ee22cc13a7e6e7a3aba2f3c7eb2ad5}{copy\-\_\-longmatrix(\-L\-O\-N\-G\-M\-A\-T\-R\-I\-X $\ast$,\-L\-O\-N\-G\-M\-A\-T\-R\-I\-X $\ast$)}; void \hyperlink{t__datamanipulation_8h_ad4f8a0c315ec48b400c5f7185f5972a7}{copy\-\_\-shortmatrix(\-S\-H\-O\-R\-T\-M\-A\-T\-R\-I\-X $\ast$,\-S\-H\-O\-R\-T\-M\-A\-T\-R\-I\-X $\ast$)}; void \hyperlink{t__datamanipulation_8h_ac910f4f2b9390817e1179962a51afd24}{copy\-\_\-intmatrix(\-I\-N\-T\-M\-A\-T\-R\-I\-X $\ast$,\-I\-N\-T\-M\-A\-T\-R\-I\-X $\ast$)}; void \hyperlink{t__datamanipulation_8h_a27046908e990c676bed85f3e63098cad}{copy\-\_\-floatmatrix(\-F\-L\-O\-A\-T\-M\-A\-T\-R\-I\-X $\ast$,\-F\-L\-O\-A\-T\-M\-A\-T\-R\-I\-X $\ast$)}; void \hyperlink{t__datamanipulation_8h_ad2366ad979289cb1e6aa1623bb367004}{copy\-\_\-doublematrix(\-D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X $\ast$,\-D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X $\ast$)}; void \hyperlink{t__datamanipulation_8h_ab08aa5e2c585bd98b24bf96a85a28f0a}{copy\-\_\-shortvector(\-S\-H\-O\-R\-T\-V\-E\-C\-T\-O\-R $\ast$,\-S\-H\-O\-R\-T\-V\-E\-C\-T\-O\-R $\ast$)}; void \hyperlink{t__datamanipulation_8h_a1c56fe3af1d36e05fe602aa7a35afd96}{copy\-\_\-intvector(\-I\-N\-T\-V\-E\-C\-T\-O\-R $\ast$,\-I\-N\-T\-V\-E\-C\-T\-O\-R $\ast$)}; void \hyperlink{t__datamanipulation_8h_a4cd1ea364d19beb8d804beeaaa951347}{copy\-\_\-longvector(\-L\-O\-N\-G\-V\-E\-C\-T\-O\-R $\ast$,\-L\-O\-N\-G\-V\-E\-C\-T\-O\-R $\ast$)}; void \hyperlink{t__datamanipulation_8h_a0c924de61de77318135b1f37c3c6f323}{copy\-\_\-floatvector(\-F\-L\-O\-A\-T\-V\-E\-C\-T\-O\-R $\ast$,\-F\-L\-O\-A\-T\-V\-E\-C\-T\-O\-R $\ast$)}; void \hyperlink{t__datamanipulation_8h_aa8b4b0fcb80a3d9281be19147af26dd7}{copy\-\_\-doublevector(\-D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R $\ast$,\-D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R $\ast$)};
+
+Version\-: 0.\-8
+
+Description\-: copy a matrix into a new one
+
+Authors \& date\-: Riccardo Rigon, January 1998
+
+Inputs\-: 1-\/ the destination matrix; 2-\/ the origin matrix
+
+F\-I\-L\-E\-: L\-I\-B\-R\-A\-R\-I\-E\-S/\-B\-A\-S\-I\-C\-M\-A\-T\-H\-S\-T\-A\-T/t\-\_\-datamanipulation.\-h, L\-I\-B\-R\-A\-R\-I\-E\-S/\-B\-A\-S\-I\-C\-M\-A\-T\-H\-S\-T\-A\-T/datamanipulation.\-c 
+
+Definition at line 888 of file datamanipulation.\-c.
+
+
+
+References L\-O\-N\-G\-M\-A\-T\-R\-I\-X\-::co, L\-O\-N\-G\-M\-A\-T\-R\-I\-X\-::isdynamic, L\-O\-N\-G\-M\-A\-T\-R\-I\-X\-::nch, L\-O\-N\-G\-M\-A\-T\-R\-I\-X\-::nrh, and t\-\_\-error().
+
+\hypertarget{datamanipulation_8c_a0d721adbcf9763d78b6f3ddd4f994647}{\index{datamanipulation.\-c@{datamanipulation.\-c}!copy\-\_\-longvector@{copy\-\_\-longvector}}
+\index{copy\-\_\-longvector@{copy\-\_\-longvector}!datamanipulation.c@{datamanipulation.\-c}}
+\subsubsection[{copy\-\_\-longvector}]{\setlength{\rightskip}{0pt plus 5cm}void copy\-\_\-longvector (
+\begin{DoxyParamCaption}
+\item[{{\bf L\-O\-N\-G\-V\-E\-C\-T\-O\-R} $\ast$}]{origin, }
+\item[{{\bf L\-O\-N\-G\-V\-E\-C\-T\-O\-R} $\ast$}]{destination}
+\end{DoxyParamCaption}
+)}}\label{datamanipulation_8c_a0d721adbcf9763d78b6f3ddd4f994647}
+
+
+Definition at line 1055 of file datamanipulation.\-c.
+
+
+
+References L\-O\-N\-G\-V\-E\-C\-T\-O\-R\-::co, L\-O\-N\-G\-V\-E\-C\-T\-O\-R\-::isdynamic, L\-O\-N\-G\-V\-E\-C\-T\-O\-R\-::nh, and t\-\_\-error().
+
+\hypertarget{datamanipulation_8c_ab4e2d4b7705cc19da0430ebe7efd517d}{\index{datamanipulation.\-c@{datamanipulation.\-c}!copy\-\_\-shortmatrix@{copy\-\_\-shortmatrix}}
+\index{copy\-\_\-shortmatrix@{copy\-\_\-shortmatrix}!datamanipulation.c@{datamanipulation.\-c}}
+\subsubsection[{copy\-\_\-shortmatrix}]{\setlength{\rightskip}{0pt plus 5cm}void copy\-\_\-shortmatrix (
+\begin{DoxyParamCaption}
+\item[{{\bf S\-H\-O\-R\-T\-M\-A\-T\-R\-I\-X} $\ast$}]{origin, }
+\item[{{\bf S\-H\-O\-R\-T\-M\-A\-T\-R\-I\-X} $\ast$}]{destination}
+\end{DoxyParamCaption}
+)}}\label{datamanipulation_8c_ab4e2d4b7705cc19da0430ebe7efd517d}
+
+
+Definition at line 820 of file datamanipulation.\-c.
+
+
+
+References S\-H\-O\-R\-T\-M\-A\-T\-R\-I\-X\-::co, S\-H\-O\-R\-T\-M\-A\-T\-R\-I\-X\-::isdynamic, S\-H\-O\-R\-T\-M\-A\-T\-R\-I\-X\-::nch, S\-H\-O\-R\-T\-M\-A\-T\-R\-I\-X\-::nrh, and t\-\_\-error().
+
+\hypertarget{datamanipulation_8c_a707d85f197d0dea652a4fcc444aa2986}{\index{datamanipulation.\-c@{datamanipulation.\-c}!copy\-\_\-shortvector@{copy\-\_\-shortvector}}
+\index{copy\-\_\-shortvector@{copy\-\_\-shortvector}!datamanipulation.c@{datamanipulation.\-c}}
+\subsubsection[{copy\-\_\-shortvector}]{\setlength{\rightskip}{0pt plus 5cm}void copy\-\_\-shortvector (
+\begin{DoxyParamCaption}
+\item[{{\bf S\-H\-O\-R\-T\-V\-E\-C\-T\-O\-R} $\ast$}]{origin, }
+\item[{{\bf S\-H\-O\-R\-T\-V\-E\-C\-T\-O\-R} $\ast$}]{destination}
+\end{DoxyParamCaption}
+)}}\label{datamanipulation_8c_a707d85f197d0dea652a4fcc444aa2986}
+
+
+Definition at line 990 of file datamanipulation.\-c.
+
+
+
+References S\-H\-O\-R\-T\-V\-E\-C\-T\-O\-R\-::co, S\-H\-O\-R\-T\-V\-E\-C\-T\-O\-R\-::isdynamic, S\-H\-O\-R\-T\-V\-E\-C\-T\-O\-R\-::nh, and t\-\_\-error().
+
+\hypertarget{datamanipulation_8c_a373b1ebae19b1bef83f97c139ba09577}{\index{datamanipulation.\-c@{datamanipulation.\-c}!doublematrix\-\_\-element\-\_\-multiplication@{doublematrix\-\_\-element\-\_\-multiplication}}
+\index{doublematrix\-\_\-element\-\_\-multiplication@{doublematrix\-\_\-element\-\_\-multiplication}!datamanipulation.c@{datamanipulation.\-c}}
+\subsubsection[{doublematrix\-\_\-element\-\_\-multiplication}]{\setlength{\rightskip}{0pt plus 5cm}void doublematrix\-\_\-element\-\_\-multiplication (
+\begin{DoxyParamCaption}
+\item[{{\bf D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X} $\ast$}]{dist, }
+\item[{{\bf D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X} $\ast$}]{ca}
+\end{DoxyParamCaption}
+)}}\label{datamanipulation_8c_a373b1ebae19b1bef83f97c139ba09577}
+
+
+Definition at line 1176 of file datamanipulation.\-c.
+
+
+
+References D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X\-::co, D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X\-::isdynamic, D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X\-::nch, D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X\-::nrh, and t\-\_\-error().
+
+\hypertarget{datamanipulation_8c_a40fad9cc48a8d7461de28a2bc4de9a26}{\index{datamanipulation.\-c@{datamanipulation.\-c}!doublevector\-\_\-element\-\_\-multiplication@{doublevector\-\_\-element\-\_\-multiplication}}
+\index{doublevector\-\_\-element\-\_\-multiplication@{doublevector\-\_\-element\-\_\-multiplication}!datamanipulation.c@{datamanipulation.\-c}}
+\subsubsection[{doublevector\-\_\-element\-\_\-multiplication}]{\setlength{\rightskip}{0pt plus 5cm}void doublevector\-\_\-element\-\_\-multiplication (
+\begin{DoxyParamCaption}
+\item[{{\bf D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} $\ast$}]{dist, }
+\item[{{\bf D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} $\ast$}]{ca}
+\end{DoxyParamCaption}
+)}}\label{datamanipulation_8c_a40fad9cc48a8d7461de28a2bc4de9a26}
+
+
+Definition at line 1315 of file datamanipulation.\-c.
+
+
+
+References D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R\-::co, D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R\-::isdynamic, D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R\-::nh, and t\-\_\-error().
+
+\hypertarget{datamanipulation_8c_a81e98a66212330c0006aa4ac92f4c491}{\index{datamanipulation.\-c@{datamanipulation.\-c}!esponentialsplit@{esponentialsplit}}
+\index{esponentialsplit@{esponentialsplit}!datamanipulation.c@{datamanipulation.\-c}}
+\subsubsection[{esponentialsplit}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\-O\-U\-B\-L\-E\-B\-I\-N}$\ast$ esponentialsplit (
+\begin{DoxyParamCaption}
+\item[{{\bf D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} $\ast$}]{U, }
+\item[{long}]{N, }
+\item[{double}]{base, }
+\item[{{\bf F\-L\-O\-A\-T\-V\-E\-C\-T\-O\-R} $\ast$}]{novalue}
+\end{DoxyParamCaption}
+)}}\label{datamanipulation_8c_a81e98a66212330c0006aa4ac92f4c491}
+
+
+Definition at line 1553 of file datamanipulation.\-c.
+
+
+
+References co, F\-L\-O\-A\-T\-V\-E\-C\-T\-O\-R\-::co, D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R\-::co, db\-::co, delete\-\_\-longpair\-\_\-list(), longpair\-::i, db\-::index, is\-Dynamic, D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R\-::isdynamic, db\-::isdynamic, longpair\-::j, new\-\_\-longpair(), new\-\_\-longvector(), longpair\-::next, L\-O\-N\-G\-V\-E\-C\-T\-O\-R\-::nh, D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R\-::nh, D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R\-::nl, N\-R\-\_\-\-E\-N\-D, and t\-\_\-error().
+
+\hypertarget{datamanipulation_8c_a6d6185b63cbb586715e647c7878dad83}{\index{datamanipulation.\-c@{datamanipulation.\-c}!esponentialsplit2realvectors@{esponentialsplit2realvectors}}
+\index{esponentialsplit2realvectors@{esponentialsplit2realvectors}!datamanipulation.c@{datamanipulation.\-c}}
+\subsubsection[{esponentialsplit2realvectors}]{\setlength{\rightskip}{0pt plus 5cm}double esponentialsplit2realvectors (
+\begin{DoxyParamCaption}
+\item[{{\bf D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} $\ast$}]{U, }
+\item[{{\bf D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} $\ast$}]{W, }
+\item[{{\bf D\-O\-U\-B\-L\-E\-B\-I\-N} $\ast$}]{l, }
+\item[{{\bf D\-O\-U\-B\-L\-E\-B\-I\-N} $\ast$}]{m, }
+\item[{long}]{N, }
+\item[{long}]{num\-\_\-max, }
+\item[{double}]{base, }
+\item[{{\bf F\-L\-O\-A\-T\-V\-E\-C\-T\-O\-R} $\ast$}]{novalue}
+\end{DoxyParamCaption}
+)}}\label{datamanipulation_8c_a6d6185b63cbb586715e647c7878dad83}
+
+
+Definition at line 1889 of file datamanipulation.\-c.
+
+
+
+References co, F\-L\-O\-A\-T\-V\-E\-C\-T\-O\-R\-::co, S\-H\-O\-R\-T\-V\-E\-C\-T\-O\-R\-::co, D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R\-::co, db\-::co, delete\-\_\-longpair\-\_\-list(), longpair\-::i, db\-::index, D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R\-::isdynamic, longpair\-::j, new\-\_\-longpair(), new\-\_\-longvector(), new\-\_\-shortvector(), longpair\-::next, L\-O\-N\-G\-V\-E\-C\-T\-O\-R\-::nh, D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R\-::nh, D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R\-::nl, N\-R\-\_\-\-E\-N\-D, and t\-\_\-error().
+
+\hypertarget{datamanipulation_8c_a2fdd0d6b3b0565d8c4255ebcd15d2a0b}{\index{datamanipulation.\-c@{datamanipulation.\-c}!exponentialhystogram@{exponentialhystogram}}
+\index{exponentialhystogram@{exponentialhystogram}!datamanipulation.c@{datamanipulation.\-c}}
+\subsubsection[{exponentialhystogram}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X}$\ast$ exponentialhystogram (
+\begin{DoxyParamCaption}
+\item[{{\bf D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} $\ast$}]{U, }
+\item[{long}]{N, }
+\item[{long}]{mn, }
+\item[{long}]{base}
+\end{DoxyParamCaption}
+)}}\label{datamanipulation_8c_a2fdd0d6b3b0565d8c4255ebcd15d2a0b}
+
+
+Definition at line 479 of file datamanipulation.\-c.
+
+
+
+References D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R\-::co, D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X\-::co, delete\-\_\-xyz(), delete\-\_\-xyz\-\_\-list(), new\-\_\-doublematrix(), new\-\_\-xyz(), xyz\-::next, D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R\-::nh, t\-\_\-error(), xyz\-::x, xyz\-\_\-into\-\_\-doublematrix(), xyz\-::y, and xyz\-::z.
+
+\hypertarget{datamanipulation_8c_a9ac56d1302e8a4829d48a9a98cac98eb}{\index{datamanipulation.\-c@{datamanipulation.\-c}!fill\-\_\-data@{fill\-\_\-data}}
+\index{fill\-\_\-data@{fill\-\_\-data}!datamanipulation.c@{datamanipulation.\-c}}
+\subsubsection[{fill\-\_\-data}]{\setlength{\rightskip}{0pt plus 5cm}void fill\-\_\-data (
+\begin{DoxyParamCaption}
+\item[{{\bf D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X} $\ast$}]{cleandata, }
+\item[{{\bf S\-H\-O\-R\-T\-M\-A\-T\-R\-I\-X} $\ast$}]{control, }
+\item[{long}]{j, }
+\item[{long}]{n\-\_\-i, }
+\item[{long}]{n\-\_\-f, }
+\item[{double}]{x\-\_\-i, }
+\item[{double}]{x\-\_\-f}
+\end{DoxyParamCaption}
+)}}\label{datamanipulation_8c_a9ac56d1302e8a4829d48a9a98cac98eb}
+Name\-: fill\-\_\-data
+
+Synopsis\-: void fill\-\_\-data(\-D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X $\ast$cleandata,long j,long n\-\_\-i,long n\-\_\-f,double x\-\_\-i,double x\-\_\-f);
+
+Version\-: 0.\-96
+
+Description\-: Elimina i novalues in una serie di dati interpolando linearmente tra i valori validi
+
+Authors \& Date\-: Giacomo Bertoldi, April 2001
+
+Inputs\-: 1) cleandata\-: the matrix to clean; 1) j\-: the colunm to clean 2) n\-\_\-i\-: the row before the first bad value 3) n\-\_\-l\-: the row past the last bad value 4) x\-\_\-i\-: the true value up 5) x\-\_\-i\-: the true value down Outputs\-: 1) cleandata\-: the matrix to clean; 2) control\-: a matrix of the same size of cleandata with 1 for modified data, 0 for original data
+
+Bugs\-: not are allowed novalues in the first and the last row
+
+F\-Ile\-: L\-I\-B\-R\-A\-R\-I\-E\-S/\-B\-A\-S\-I\-C\-S\-M\-A\-T\-H\-S\-T\-A\-T/datamanipulation.\-c 
+
+Definition at line 2565 of file datamanipulation.\-c.
+
+
+
+References S\-H\-O\-R\-T\-M\-A\-T\-R\-I\-X\-::co, and D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X\-::co.
+
+
+
+Referenced by cleandata\-\_\-matrix().
+
+\hypertarget{datamanipulation_8c_a830f6a98e3274cca5a720c39602093dd}{\index{datamanipulation.\-c@{datamanipulation.\-c}!floatmatrix\-\_\-element\-\_\-multiplication@{floatmatrix\-\_\-element\-\_\-multiplication}}
+\index{floatmatrix\-\_\-element\-\_\-multiplication@{floatmatrix\-\_\-element\-\_\-multiplication}!datamanipulation.c@{datamanipulation.\-c}}
+\subsubsection[{floatmatrix\-\_\-element\-\_\-multiplication}]{\setlength{\rightskip}{0pt plus 5cm}void floatmatrix\-\_\-element\-\_\-multiplication (
+\begin{DoxyParamCaption}
+\item[{{\bf F\-L\-O\-A\-T\-M\-A\-T\-R\-I\-X} $\ast$}]{dist, }
+\item[{{\bf F\-L\-O\-A\-T\-M\-A\-T\-R\-I\-X} $\ast$}]{ca}
+\end{DoxyParamCaption}
+)}}\label{datamanipulation_8c_a830f6a98e3274cca5a720c39602093dd}
+
+
+Definition at line 1152 of file datamanipulation.\-c.
+
+
+
+References F\-L\-O\-A\-T\-M\-A\-T\-R\-I\-X\-::co, F\-L\-O\-A\-T\-M\-A\-T\-R\-I\-X\-::isdynamic, F\-L\-O\-A\-T\-M\-A\-T\-R\-I\-X\-::nch, F\-L\-O\-A\-T\-M\-A\-T\-R\-I\-X\-::nrh, and t\-\_\-error().
+
+\hypertarget{datamanipulation_8c_ad39b70ea8eefb4e9b69095b1e2349096}{\index{datamanipulation.\-c@{datamanipulation.\-c}!floatvector\-\_\-element\-\_\-multiplication@{floatvector\-\_\-element\-\_\-multiplication}}
+\index{floatvector\-\_\-element\-\_\-multiplication@{floatvector\-\_\-element\-\_\-multiplication}!datamanipulation.c@{datamanipulation.\-c}}
+\subsubsection[{floatvector\-\_\-element\-\_\-multiplication}]{\setlength{\rightskip}{0pt plus 5cm}void floatvector\-\_\-element\-\_\-multiplication (
+\begin{DoxyParamCaption}
+\item[{{\bf F\-L\-O\-A\-T\-V\-E\-C\-T\-O\-R} $\ast$}]{dist, }
+\item[{{\bf F\-L\-O\-A\-T\-V\-E\-C\-T\-O\-R} $\ast$}]{ca}
+\end{DoxyParamCaption}
+)}}\label{datamanipulation_8c_ad39b70ea8eefb4e9b69095b1e2349096}
+
+
+Definition at line 1293 of file datamanipulation.\-c.
+
+
+
+References F\-L\-O\-A\-T\-V\-E\-C\-T\-O\-R\-::co, F\-L\-O\-A\-T\-V\-E\-C\-T\-O\-R\-::isdynamic, F\-L\-O\-A\-T\-V\-E\-C\-T\-O\-R\-::nh, and t\-\_\-error().
+
+\hypertarget{datamanipulation_8c_a4b04cb6d111058011057da381a49e9cd}{\index{datamanipulation.\-c@{datamanipulation.\-c}!initialize\-\_\-doublematrix@{initialize\-\_\-doublematrix}}
+\index{initialize\-\_\-doublematrix@{initialize\-\_\-doublematrix}!datamanipulation.c@{datamanipulation.\-c}}
+\subsubsection[{initialize\-\_\-doublematrix}]{\setlength{\rightskip}{0pt plus 5cm}void initialize\-\_\-doublematrix (
+\begin{DoxyParamCaption}
+\item[{{\bf D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X} $\ast$}]{L, }
+\item[{double}]{sign}
+\end{DoxyParamCaption}
+)}}\label{datamanipulation_8c_a4b04cb6d111058011057da381a49e9cd}
+
+
+Definition at line 796 of file datamanipulation.\-c.
+
+
+
+References D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X\-::co, D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X\-::isdynamic, D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X\-::nch, D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X\-::nrh, and t\-\_\-error().
+
+
+
+Referenced by quickinterpolate(), and ricampiona().
+
+\hypertarget{datamanipulation_8c_a38becedf79e63b876a220a6f7e23da9e}{\index{datamanipulation.\-c@{datamanipulation.\-c}!initialize\-\_\-doublevector@{initialize\-\_\-doublevector}}
+\index{initialize\-\_\-doublevector@{initialize\-\_\-doublevector}!datamanipulation.c@{datamanipulation.\-c}}
+\subsubsection[{initialize\-\_\-doublevector}]{\setlength{\rightskip}{0pt plus 5cm}void initialize\-\_\-doublevector (
+\begin{DoxyParamCaption}
+\item[{{\bf D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} $\ast$}]{L, }
+\item[{double}]{sign}
+\end{DoxyParamCaption}
+)}}\label{datamanipulation_8c_a38becedf79e63b876a220a6f7e23da9e}
+
+
+Definition at line 688 of file datamanipulation.\-c.
+
+
+
+References D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R\-::co, D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R\-::isdynamic, D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R\-::nh, and t\-\_\-error().
+
+
+
+Referenced by get\-\_\-connection(), and get\-\_\-connection\-\_\-squares().
+
+\hypertarget{datamanipulation_8c_a34d5dd5d6f4f8d52dd4f61445355b475}{\index{datamanipulation.\-c@{datamanipulation.\-c}!initialize\-\_\-floatmatrix@{initialize\-\_\-floatmatrix}}
+\index{initialize\-\_\-floatmatrix@{initialize\-\_\-floatmatrix}!datamanipulation.c@{datamanipulation.\-c}}
+\subsubsection[{initialize\-\_\-floatmatrix}]{\setlength{\rightskip}{0pt plus 5cm}void initialize\-\_\-floatmatrix (
+\begin{DoxyParamCaption}
+\item[{{\bf F\-L\-O\-A\-T\-M\-A\-T\-R\-I\-X} $\ast$}]{L, }
+\item[{float}]{sign}
+\end{DoxyParamCaption}
+)}}\label{datamanipulation_8c_a34d5dd5d6f4f8d52dd4f61445355b475}
+
+
+Definition at line 774 of file datamanipulation.\-c.
+
+
+
+References F\-L\-O\-A\-T\-M\-A\-T\-R\-I\-X\-::co, F\-L\-O\-A\-T\-M\-A\-T\-R\-I\-X\-::isdynamic, F\-L\-O\-A\-T\-M\-A\-T\-R\-I\-X\-::nch, F\-L\-O\-A\-T\-M\-A\-T\-R\-I\-X\-::nrh, and t\-\_\-error().
+
+\hypertarget{datamanipulation_8c_a4b479ddcc354161deb1dfe8c2f952a56}{\index{datamanipulation.\-c@{datamanipulation.\-c}!initialize\-\_\-floatvector@{initialize\-\_\-floatvector}}
+\index{initialize\-\_\-floatvector@{initialize\-\_\-floatvector}!datamanipulation.c@{datamanipulation.\-c}}
+\subsubsection[{initialize\-\_\-floatvector}]{\setlength{\rightskip}{0pt plus 5cm}void initialize\-\_\-floatvector (
+\begin{DoxyParamCaption}
+\item[{{\bf F\-L\-O\-A\-T\-V\-E\-C\-T\-O\-R} $\ast$}]{L, }
+\item[{float}]{sign}
+\end{DoxyParamCaption}
+)}}\label{datamanipulation_8c_a4b479ddcc354161deb1dfe8c2f952a56}
+
+
+Definition at line 708 of file datamanipulation.\-c.
+
+
+
+References F\-L\-O\-A\-T\-V\-E\-C\-T\-O\-R\-::co, F\-L\-O\-A\-T\-V\-E\-C\-T\-O\-R\-::isdynamic, F\-L\-O\-A\-T\-V\-E\-C\-T\-O\-R\-::nh, and t\-\_\-error().
+
+
+
+Referenced by ricampiona().
+
+\hypertarget{datamanipulation_8c_a024021c68f153ec4201bc578414357e6}{\index{datamanipulation.\-c@{datamanipulation.\-c}!initialize\-\_\-longmatrix@{initialize\-\_\-longmatrix}}
+\index{initialize\-\_\-longmatrix@{initialize\-\_\-longmatrix}!datamanipulation.c@{datamanipulation.\-c}}
+\subsubsection[{initialize\-\_\-longmatrix}]{\setlength{\rightskip}{0pt plus 5cm}void initialize\-\_\-longmatrix (
+\begin{DoxyParamCaption}
+\item[{{\bf L\-O\-N\-G\-M\-A\-T\-R\-I\-X} $\ast$}]{L, }
+\item[{long}]{sign}
+\end{DoxyParamCaption}
+)}}\label{datamanipulation_8c_a024021c68f153ec4201bc578414357e6}
+
+
+Definition at line 751 of file datamanipulation.\-c.
+
+
+
+References L\-O\-N\-G\-M\-A\-T\-R\-I\-X\-::co, L\-O\-N\-G\-M\-A\-T\-R\-I\-X\-::isdynamic, L\-O\-N\-G\-M\-A\-T\-R\-I\-X\-::nch, L\-O\-N\-G\-M\-A\-T\-R\-I\-X\-::nrh, and t\-\_\-error().
+
+\hypertarget{datamanipulation_8c_a11287d9ad90c5510b1bb23493c348691}{\index{datamanipulation.\-c@{datamanipulation.\-c}!initialize\-\_\-longvector@{initialize\-\_\-longvector}}
+\index{initialize\-\_\-longvector@{initialize\-\_\-longvector}!datamanipulation.c@{datamanipulation.\-c}}
+\subsubsection[{initialize\-\_\-longvector}]{\setlength{\rightskip}{0pt plus 5cm}void initialize\-\_\-longvector (
+\begin{DoxyParamCaption}
+\item[{{\bf L\-O\-N\-G\-V\-E\-C\-T\-O\-R} $\ast$}]{, }
+\item[{long}]{}
+\end{DoxyParamCaption}
+)}}\label{datamanipulation_8c_a11287d9ad90c5510b1bb23493c348691}
+Name\-: initialize\-\_\-
+
+Version\-: 1.\-0
+
+Synopsis\-: void \hyperlink{t__datamanipulation_8h_af3307772b9578f9ce0ae692e55ea3520}{initialize\-\_\-doublevector(\-D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R $\ast$,double )}; void \hyperlink{t__datamanipulation_8h_a6e4b989c4879c59c3b139a2fc6410114}{initialize\-\_\-longmatrix(\-L\-O\-N\-G\-M\-A\-T\-R\-I\-X $\ast$, long)};
+
+Description\-: It initialize the matrix or vector with the specified value
+
+Inputs\-: 1) The pointer to the structure to initalize; 2) the value used for initialization
+
+Examples\-: Variogram.\-c
+
+Authors \& Date\-: Riccardo Rigon, October 1997.
+
+F\-I\-L\-E\-: L\-I\-B\-R\-A\-R\-I\-E\-S/\-B\-A\-S\-I\-C\-M\-A\-T\-H\-S\-T\-A\-T/t\-\_\-datamanipulation.\-h, L\-I\-B\-R\-A\-R\-I\-E\-S/\-B\-A\-S\-I\-C\-M\-A\-T\-H\-S\-T\-A\-T/datamanipulation.\-c 
+
+Definition at line 648 of file datamanipulation.\-c.
+
+
+
+References L\-O\-N\-G\-V\-E\-C\-T\-O\-R\-::co, L\-O\-N\-G\-V\-E\-C\-T\-O\-R\-::isdynamic, L\-O\-N\-G\-V\-E\-C\-T\-O\-R\-::nh, and t\-\_\-error().
+
+
+
+Referenced by get\-\_\-connection(), and get\-\_\-connection\-\_\-squares().
+
+\hypertarget{datamanipulation_8c_a556874ad9f5f00208810da4f45435849}{\index{datamanipulation.\-c@{datamanipulation.\-c}!initialize\-\_\-shortmatrix@{initialize\-\_\-shortmatrix}}
+\index{initialize\-\_\-shortmatrix@{initialize\-\_\-shortmatrix}!datamanipulation.c@{datamanipulation.\-c}}
+\subsubsection[{initialize\-\_\-shortmatrix}]{\setlength{\rightskip}{0pt plus 5cm}void initialize\-\_\-shortmatrix (
+\begin{DoxyParamCaption}
+\item[{{\bf S\-H\-O\-R\-T\-M\-A\-T\-R\-I\-X} $\ast$}]{L, }
+\item[{short}]{sign}
+\end{DoxyParamCaption}
+)}}\label{datamanipulation_8c_a556874ad9f5f00208810da4f45435849}
+
+
+Definition at line 728 of file datamanipulation.\-c.
+
+
+
+References S\-H\-O\-R\-T\-M\-A\-T\-R\-I\-X\-::co, S\-H\-O\-R\-T\-M\-A\-T\-R\-I\-X\-::isdynamic, S\-H\-O\-R\-T\-M\-A\-T\-R\-I\-X\-::nch, S\-H\-O\-R\-T\-M\-A\-T\-R\-I\-X\-::nrh, and t\-\_\-error().
+
+
+
+Referenced by cleandata\-\_\-matrix().
+
+\hypertarget{datamanipulation_8c_a33bb0c693f6e17417f2aa608ee83d705}{\index{datamanipulation.\-c@{datamanipulation.\-c}!initialize\-\_\-shortvector@{initialize\-\_\-shortvector}}
+\index{initialize\-\_\-shortvector@{initialize\-\_\-shortvector}!datamanipulation.c@{datamanipulation.\-c}}
+\subsubsection[{initialize\-\_\-shortvector}]{\setlength{\rightskip}{0pt plus 5cm}void initialize\-\_\-shortvector (
+\begin{DoxyParamCaption}
+\item[{{\bf S\-H\-O\-R\-T\-V\-E\-C\-T\-O\-R} $\ast$}]{L, }
+\item[{short}]{sign}
+\end{DoxyParamCaption}
+)}}\label{datamanipulation_8c_a33bb0c693f6e17417f2aa608ee83d705}
+
+
+Definition at line 668 of file datamanipulation.\-c.
+
+
+
+References S\-H\-O\-R\-T\-V\-E\-C\-T\-O\-R\-::co, S\-H\-O\-R\-T\-V\-E\-C\-T\-O\-R\-::isdynamic, S\-H\-O\-R\-T\-V\-E\-C\-T\-O\-R\-::nh, and t\-\_\-error().
+
+\hypertarget{datamanipulation_8c_a50bac13213b084b26b23b0bc70c91611}{\index{datamanipulation.\-c@{datamanipulation.\-c}!interpolate@{interpolate}}
+\index{interpolate@{interpolate}!datamanipulation.c@{datamanipulation.\-c}}
+\subsubsection[{interpolate}]{\setlength{\rightskip}{0pt plus 5cm}double interpolate (
+\begin{DoxyParamCaption}
+\item[{double}]{x, }
+\item[{{\bf D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X} $\ast$}]{cleandata, }
+\item[{{\bf D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X} $\ast$}]{W}
+\end{DoxyParamCaption}
+)}}\label{datamanipulation_8c_a50bac13213b084b26b23b0bc70c91611}
+Name\-: interpolate
+
+Synopsis\-: double interpolate(double x,\hyperlink{struct_d_o_u_b_l_e_m_a_t_r_i_x}{D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X} {\itshape cleandata,\hyperlink{struct_d_o_u_b_l_e_m_a_t_r_i_x}{D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X}} W);
+
+Description\-: linearly interpolate the values of a function at x based onthe data in cleandata and the regression coefficient in w
+
+Inputs\-: 1) the point where to calculate the function; 2) the data set that serve as basis for the interpolation; 3) a pointer to the matrix containing the regressions par
+
+Return\-: the interpolated value
+
+F\-I\-L\-E\-: L\-I\-B\-R\-A\-R\-I\-E\-S/\-B\-A\-S\-I\-C\-M\-A\-T\-H\-S\-T\-A\-T/t\-\_\-datamanipulation.\-h, L\-I\-B\-R\-A\-R\-I\-E\-S/\-B\-A\-S\-I\-C\-M\-A\-T\-H\-S\-T\-A\-T/datamanipulation.\-c
+
+Examples\-: simple\-\_\-interpolation.\-c
+
+See Also\-: interpolating\-\_\-function
+
+Authors \& Date\-: Riccardo Rigon, February, 1999
+
+References\-: S. Wolfram, Mathematica 3.\-0, Cambridge University Press
+
+Bugs \& Limitations\-: Has been thought for functions not having vertical lines 
+
+Definition at line 2199 of file datamanipulation.\-c.
+
+
+
+References co, D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X\-::co, D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X\-::nrh, and t\-\_\-error().
+
+
+
+Referenced by ricampiona().
+
+\hypertarget{datamanipulation_8c_af0a4c44942f99779e93ff13b46a0168d}{\index{datamanipulation.\-c@{datamanipulation.\-c}!interpolate\-\_\-doublematrix@{interpolate\-\_\-doublematrix}}
+\index{interpolate\-\_\-doublematrix@{interpolate\-\_\-doublematrix}!datamanipulation.c@{datamanipulation.\-c}}
+\subsubsection[{interpolate\-\_\-doublematrix}]{\setlength{\rightskip}{0pt plus 5cm}void interpolate\-\_\-doublematrix (
+\begin{DoxyParamCaption}
+\item[{{\bf D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X} $\ast$}]{matrice, }
+\item[{float}]{dt, }
+\item[{float}]{istante, }
+\item[{{\bf D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} $\ast$}]{vettore}
+\end{DoxyParamCaption}
+)}}\label{datamanipulation_8c_af0a4c44942f99779e93ff13b46a0168d}
+Nuova subroutine che interpola da una matrice di dati double il valore all'istante scelto. Inputs\-: matrice\-: matrice di double con i dati dt\-: dt dati \mbox{[}s\mbox{]} istante\-: istante in cui si vuole interpolare Outputs\-:vettore\-: vettore di double con i dati per quell'istante 
+
+Definition at line 2262 of file datamanipulation.\-c.
+
+
+
+References D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R\-::co, D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X\-::co, D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X\-::nch, D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X\-::nrh, and t\-\_\-error().
+
+\hypertarget{datamanipulation_8c_a002a2fd5be114be623385e9759c9d03c}{\index{datamanipulation.\-c@{datamanipulation.\-c}!interpolate\-\_\-floatmatrix@{interpolate\-\_\-floatmatrix}}
+\index{interpolate\-\_\-floatmatrix@{interpolate\-\_\-floatmatrix}!datamanipulation.c@{datamanipulation.\-c}}
+\subsubsection[{interpolate\-\_\-floatmatrix}]{\setlength{\rightskip}{0pt plus 5cm}void interpolate\-\_\-floatmatrix (
+\begin{DoxyParamCaption}
+\item[{{\bf F\-L\-O\-A\-T\-M\-A\-T\-R\-I\-X} $\ast$}]{matrice, }
+\item[{float}]{dt, }
+\item[{float}]{istante, }
+\item[{{\bf F\-L\-O\-A\-T\-V\-E\-C\-T\-O\-R} $\ast$}]{vettore}
+\end{DoxyParamCaption}
+)}}\label{datamanipulation_8c_a002a2fd5be114be623385e9759c9d03c}
+Nuova subroutine che interpola da una matrice di dati float il valore all'istante scelto. Inputs\-: matrice\-: matrice di float con i dati dt\-: dt dati \mbox{[}s\mbox{]} istante\-: istante in cui si vuole interpolare Outputs\-:vettore\-: vettore di float con i dati per quell'istante 
+
+Definition at line 2229 of file datamanipulation.\-c.
+
+
+
+References F\-L\-O\-A\-T\-V\-E\-C\-T\-O\-R\-::co, F\-L\-O\-A\-T\-M\-A\-T\-R\-I\-X\-::co, F\-L\-O\-A\-T\-M\-A\-T\-R\-I\-X\-::nch, F\-L\-O\-A\-T\-M\-A\-T\-R\-I\-X\-::nrh, and t\-\_\-error().
+
+\hypertarget{datamanipulation_8c_acbc7507c2b08f395d19e71663561be4d}{\index{datamanipulation.\-c@{datamanipulation.\-c}!interpolating\-\_\-function@{interpolating\-\_\-function}}
+\index{interpolating\-\_\-function@{interpolating\-\_\-function}!datamanipulation.c@{datamanipulation.\-c}}
+\subsubsection[{interpolating\-\_\-function}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X}$\ast$ interpolating\-\_\-function (
+\begin{DoxyParamCaption}
+\item[{{\bf D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X} $\ast$}]{cleandata}
+\end{DoxyParamCaption}
+)}}\label{datamanipulation_8c_acbc7507c2b08f395d19e71663561be4d}
+Name\-: interpolating\-\_\-function
+
+Synopsis\-: \hyperlink{struct_d_o_u_b_l_e_m_a_t_r_i_x}{D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X} $\ast$interpolating\-\_\-function(\hyperlink{struct_d_o_u_b_l_e_m_a_t_r_i_x}{D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X} $\ast$cleandata);
+
+Description\-: takes a set of X Y odered pairs and produces the coefficient of the line passing trought two sdiacent pairs. These are stored in a matrix of double
+
+Inputs\-: 1) the pointer to the data matrix to be interpolated;
+
+Return\-: a pointer to the matrix of the angular coefficient and intercept
+
+F\-I\-L\-E\-: L\-I\-B\-R\-A\-R\-I\-E\-S/\-B\-A\-S\-I\-C\-M\-A\-T\-H\-S\-T\-A\-T/t\-\_\-datamanipulation.\-h, L\-I\-B\-R\-A\-R\-I\-E\-S/\-B\-A\-S\-I\-C\-M\-A\-T\-H\-S\-T\-A\-T/datamanipulation.\-c
+
+Examples\-: simple\-\_\-interpolation.\-c
+
+See Also\-: interpolate
+
+Authors \& Date\-: Riccardo Rigon, February, 1999
+
+References\-: S. Wolfram, Mathematica 3.\-0, Cambridge University Press 
+
+Definition at line 2147 of file datamanipulation.\-c.
+
+
+
+References D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X\-::co, new\-\_\-doublematrix(), and D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X\-::nrh.
+
+
+
+Referenced by ricampiona().
+
+\hypertarget{datamanipulation_8c_a0ee874ea600b44fed4a7c8957651ec37}{\index{datamanipulation.\-c@{datamanipulation.\-c}!longmatrix\-\_\-element\-\_\-multiplication@{longmatrix\-\_\-element\-\_\-multiplication}}
+\index{longmatrix\-\_\-element\-\_\-multiplication@{longmatrix\-\_\-element\-\_\-multiplication}!datamanipulation.c@{datamanipulation.\-c}}
+\subsubsection[{longmatrix\-\_\-element\-\_\-multiplication}]{\setlength{\rightskip}{0pt plus 5cm}void longmatrix\-\_\-element\-\_\-multiplication (
+\begin{DoxyParamCaption}
+\item[{{\bf L\-O\-N\-G\-M\-A\-T\-R\-I\-X} $\ast$}]{dist, }
+\item[{{\bf L\-O\-N\-G\-M\-A\-T\-R\-I\-X} $\ast$}]{ca}
+\end{DoxyParamCaption}
+)}}\label{datamanipulation_8c_a0ee874ea600b44fed4a7c8957651ec37}
+
+
+Definition at line 1200 of file datamanipulation.\-c.
+
+
+
+References L\-O\-N\-G\-M\-A\-T\-R\-I\-X\-::co, L\-O\-N\-G\-M\-A\-T\-R\-I\-X\-::isdynamic, L\-O\-N\-G\-M\-A\-T\-R\-I\-X\-::nch, L\-O\-N\-G\-M\-A\-T\-R\-I\-X\-::nrh, and t\-\_\-error().
+
+\hypertarget{datamanipulation_8c_a836df795cb6e0567ad6b4e2863bfc4a3}{\index{datamanipulation.\-c@{datamanipulation.\-c}!longvector\-\_\-element\-\_\-multiplication@{longvector\-\_\-element\-\_\-multiplication}}
+\index{longvector\-\_\-element\-\_\-multiplication@{longvector\-\_\-element\-\_\-multiplication}!datamanipulation.c@{datamanipulation.\-c}}
+\subsubsection[{longvector\-\_\-element\-\_\-multiplication}]{\setlength{\rightskip}{0pt plus 5cm}void longvector\-\_\-element\-\_\-multiplication (
+\begin{DoxyParamCaption}
+\item[{{\bf L\-O\-N\-G\-V\-E\-C\-T\-O\-R} $\ast$}]{dist, }
+\item[{{\bf L\-O\-N\-G\-V\-E\-C\-T\-O\-R} $\ast$}]{ca}
+\end{DoxyParamCaption}
+)}}\label{datamanipulation_8c_a836df795cb6e0567ad6b4e2863bfc4a3}
+
+
+Definition at line 1271 of file datamanipulation.\-c.
+
+
+
+References L\-O\-N\-G\-V\-E\-C\-T\-O\-R\-::co, L\-O\-N\-G\-V\-E\-C\-T\-O\-R\-::isdynamic, L\-O\-N\-G\-V\-E\-C\-T\-O\-R\-::nh, and t\-\_\-error().
+
+\hypertarget{datamanipulation_8c_a37869b810261a11244ebe2c8956ab0bc}{\index{datamanipulation.\-c@{datamanipulation.\-c}!mean\-\_\-doublematrix\-\_\-column@{mean\-\_\-doublematrix\-\_\-column}}
+\index{mean\-\_\-doublematrix\-\_\-column@{mean\-\_\-doublematrix\-\_\-column}!datamanipulation.c@{datamanipulation.\-c}}
+\subsubsection[{mean\-\_\-doublematrix\-\_\-column}]{\setlength{\rightskip}{0pt plus 5cm}double mean\-\_\-doublematrix\-\_\-column (
+\begin{DoxyParamCaption}
+\item[{{\bf D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X} $\ast$}]{net, }
+\item[{long}]{column}
+\end{DoxyParamCaption}
+)}}\label{datamanipulation_8c_a37869b810261a11244ebe2c8956ab0bc}
+Name\-: mean\-\_\-doublematrix\-\_\-column
+
+Synopsis\-: double \hyperlink{t__datamanipulation_8h_a37869b810261a11244ebe2c8956ab0bc}{mean\-\_\-doublematrix\-\_\-column(\-D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X$\ast$ net,long column)};
+
+Version\-: 0.\-96
+
+Description\-: evaluate the mean of the set of data contained in the specified column of the specified doublematrix.
+
+Authors \& Date\-: Riccardo Rigon, June 2000
+
+Inputs\-: 1) the pointer to the matrix to be analyzed; 2) the number of the column to be analyzed;
+
+Return\-:
+
+F\-Ile\-: L\-I\-B\-R\-A\-R\-I\-E\-S/\-B\-A\-S\-I\-C\-S\-M\-A\-T\-H\-S\-T\-A\-T/datamanipulation.\-c
+
+See Also\-: variance\-\_\-doublematrix\-\_\-column 
+
+Definition at line 2299 of file datamanipulation.\-c.
+
+
+
+References D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X\-::co, and D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X\-::nrh.
+
+\hypertarget{datamanipulation_8c_ae496a01b3e3a3a445da284f7a0b7f123}{\index{datamanipulation.\-c@{datamanipulation.\-c}!mean\-\_\-function@{mean\-\_\-function}}
+\index{mean\-\_\-function@{mean\-\_\-function}!datamanipulation.c@{datamanipulation.\-c}}
+\subsubsection[{mean\-\_\-function}]{\setlength{\rightskip}{0pt plus 5cm}double mean\-\_\-function (
+\begin{DoxyParamCaption}
+\item[{{\bf D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X} $\ast$}]{data, }
+\item[{long}]{n}
+\end{DoxyParamCaption}
+)}}\label{datamanipulation_8c_ae496a01b3e3a3a445da284f7a0b7f123}
+Name\-: mean\-\_\-function
+
+Synopsis\-: double \hyperlink{t__datamanipulation_8h_ae496a01b3e3a3a445da284f7a0b7f123}{mean\-\_\-function(\-D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X $\ast$data, long n)};
+
+Version\-: 0.\-96
+
+Description\-: evaluate the mean of the set of data contained in the specified doublematrix\-: the first column contain x -\/ data, the second column contain y -\/ data. The integral is evaluated with the trapezoidal rule.
+
+Authors \& Date\-: Giacomo Bertoldi, April 2001
+
+Inputs\-: 1) the pointer to the matrix to be analyzed; 1) the number of rows of the matrix
+
+Return\-:
+
+F\-Ile\-: L\-I\-B\-R\-A\-R\-I\-E\-S/\-B\-A\-S\-I\-C\-S\-M\-A\-T\-H\-S\-T\-A\-T/datamanipulation.\-c
+
+See Also\-: variance\-\_\-doublematrix\-\_\-column 
+
+Definition at line 2499 of file datamanipulation.\-c.
+
+
+
+References D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X\-::co.
+
+
+
+Referenced by ricampiona().
+
+\hypertarget{datamanipulation_8c_a82d5513cd8f8ccb5ccfdd0f85a86e4fb}{\index{datamanipulation.\-c@{datamanipulation.\-c}!quickinterpolate@{quickinterpolate}}
+\index{quickinterpolate@{quickinterpolate}!datamanipulation.c@{datamanipulation.\-c}}
+\subsubsection[{quickinterpolate}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X}$\ast$ quickinterpolate (
+\begin{DoxyParamCaption}
+\item[{{\bf D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X} $\ast$}]{cleandata, }
+\item[{short}]{nint}
+\end{DoxyParamCaption}
+)}}\label{datamanipulation_8c_a82d5513cd8f8ccb5ccfdd0f85a86e4fb}
+
+
+Definition at line 2466 of file datamanipulation.\-c.
+
+
+
+References D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X\-::co, initialize\-\_\-doublematrix(), D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X\-::nch, new\-\_\-doublematrix(), and D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X\-::nrh.
+
+\hypertarget{datamanipulation_8c_aaa464926ae3270f7d414d1ad53fe76c4}{\index{datamanipulation.\-c@{datamanipulation.\-c}!realpair\-\_\-into\-\_\-doublematrix@{realpair\-\_\-into\-\_\-doublematrix}}
+\index{realpair\-\_\-into\-\_\-doublematrix@{realpair\-\_\-into\-\_\-doublematrix}!datamanipulation.c@{datamanipulation.\-c}}
+\subsubsection[{realpair\-\_\-into\-\_\-doublematrix}]{\setlength{\rightskip}{0pt plus 5cm}void realpair\-\_\-into\-\_\-doublematrix (
+\begin{DoxyParamCaption}
+\item[{{\bf R\-E\-A\-L\-P\-A\-I\-R} $\ast$}]{, }
+\item[{{\bf D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X} $\ast$}]{}
+\end{DoxyParamCaption}
+)}}\label{datamanipulation_8c_aaa464926ae3270f7d414d1ad53fe76c4}
+Name\-: realpair\-\_\-intodoublematrix, xyz\-\_\-into\-\_\-doublematrix
+
+Synopsis\-: void \hyperlink{t__datamanipulation_8h_a381020bdf0012fc349a909e401095b29}{realpair\-\_\-into\-\_\-doublematrix(\-R\-E\-A\-L\-P\-A\-I\-R $\ast$ head,\-D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X $\ast$indx )} void \hyperlink{t__datamanipulation_8h_ade0d1fac287af71b53eece68245175c7}{xyz\-\_\-into\-\_\-doublematrix(\-X\-Y\-Z $\ast$ head,\-D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X $\ast$indx )}
+
+Description\-: takes a linked list (of two or three elements) and transform it into a matrix of double of the appropriate dimensions
+
+Inputs\-: 1) the linked list head; 2) the doublematrix pointer
+
+Examples\-: hystogram.\-c
+
+See Also\-:
+
+Authors \& Date\-: Riccardo Rigon, October 1997.
+
+F\-I\-L\-E\-: L\-I\-B\-R\-A\-R\-I\-E\-S/\-B\-A\-S\-I\-C\-M\-A\-T\-H\-S\-T\-A\-T/t\-\_\-datamanipulation.\-h, L\-I\-B\-R\-A\-R\-I\-E\-S/\-B\-A\-S\-I\-C\-M\-A\-T\-H\-S\-T\-A\-T/datamanipulation.\-c 
+
+Definition at line 591 of file datamanipulation.\-c.
+
+
+
+References D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X\-::co, realpair\-::next, D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X\-::nrh, t\-\_\-error(), realpair\-::x, and realpair\-::y.
+
+\hypertarget{datamanipulation_8c_a7c48c390cabffd530a759de3c59c4bb3}{\index{datamanipulation.\-c@{datamanipulation.\-c}!ricampiona@{ricampiona}}
+\index{ricampiona@{ricampiona}!datamanipulation.c@{datamanipulation.\-c}}
+\subsubsection[{ricampiona}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X}$\ast$ ricampiona (
+\begin{DoxyParamCaption}
+\item[{{\bf D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X} $\ast$}]{cleandata, }
+\item[{float}]{ti2, }
+\item[{float}]{dt2, }
+\item[{long}]{n2, }
+\item[{float}]{dt1}
+\end{DoxyParamCaption}
+)}}\label{datamanipulation_8c_a7c48c390cabffd530a759de3c59c4bb3}
+Name\-: ricampiona
+
+Synopsis\-: \hyperlink{struct_d_o_u_b_l_e_m_a_t_r_i_x}{D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X} $\ast$ricampiona(\hyperlink{struct_d_o_u_b_l_e_m_a_t_r_i_x}{D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X} $\ast$cleandata, float ti2, float dt2, long n2);
+
+Version\-: 0.\-96
+
+Description\-: Ricampiona una serie di dati da dt inferiori a dt superiori
+
+Authors \& Date\-: Giacomo Bertoldi, April 2001
+
+Inputs\-: 1) the number to be approximated; 2) the smallest unit;
+
+Return\-: desired approximation
+
+F\-Ile\-: L\-I\-B\-R\-A\-R\-I\-E\-S/\-B\-A\-S\-I\-C\-S\-M\-A\-T\-H\-S\-T\-A\-T/datamanipulation.\-c 
+
+Definition at line 2345 of file datamanipulation.\-c.
+
+
+
+References D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X\-::co, initialize\-\_\-doublematrix(), initialize\-\_\-floatvector(), interpolate(), interpolating\-\_\-function(), mean\-\_\-function(), D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X\-::nch, new\-\_\-doublematrix(), new\-\_\-floatvector(), and D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X\-::nrh.
+
+\hypertarget{datamanipulation_8c_ac38fe43658dabc32f658510169b69577}{\index{datamanipulation.\-c@{datamanipulation.\-c}!shortmatrix\-\_\-element\-\_\-multiplication@{shortmatrix\-\_\-element\-\_\-multiplication}}
+\index{shortmatrix\-\_\-element\-\_\-multiplication@{shortmatrix\-\_\-element\-\_\-multiplication}!datamanipulation.c@{datamanipulation.\-c}}
+\subsubsection[{shortmatrix\-\_\-element\-\_\-multiplication}]{\setlength{\rightskip}{0pt plus 5cm}void shortmatrix\-\_\-element\-\_\-multiplication (
+\begin{DoxyParamCaption}
+\item[{{\bf S\-H\-O\-R\-T\-M\-A\-T\-R\-I\-X} $\ast$}]{dist, }
+\item[{{\bf S\-H\-O\-R\-T\-M\-A\-T\-R\-I\-X} $\ast$}]{ca}
+\end{DoxyParamCaption}
+)}}\label{datamanipulation_8c_ac38fe43658dabc32f658510169b69577}
+
+
+Definition at line 1225 of file datamanipulation.\-c.
+
+
+
+References S\-H\-O\-R\-T\-M\-A\-T\-R\-I\-X\-::co, S\-H\-O\-R\-T\-M\-A\-T\-R\-I\-X\-::isdynamic, S\-H\-O\-R\-T\-M\-A\-T\-R\-I\-X\-::nch, S\-H\-O\-R\-T\-M\-A\-T\-R\-I\-X\-::nrh, and t\-\_\-error().
+
+\hypertarget{datamanipulation_8c_a09d3260d83afc207c65009b0055bb2e8}{\index{datamanipulation.\-c@{datamanipulation.\-c}!shortvector\-\_\-element\-\_\-multiplication@{shortvector\-\_\-element\-\_\-multiplication}}
+\index{shortvector\-\_\-element\-\_\-multiplication@{shortvector\-\_\-element\-\_\-multiplication}!datamanipulation.c@{datamanipulation.\-c}}
+\subsubsection[{shortvector\-\_\-element\-\_\-multiplication}]{\setlength{\rightskip}{0pt plus 5cm}void shortvector\-\_\-element\-\_\-multiplication (
+\begin{DoxyParamCaption}
+\item[{{\bf S\-H\-O\-R\-T\-V\-E\-C\-T\-O\-R} $\ast$}]{, }
+\item[{{\bf S\-H\-O\-R\-T\-V\-E\-C\-T\-O\-R} $\ast$}]{}
+\end{DoxyParamCaption}
+)}}\label{datamanipulation_8c_a09d3260d83afc207c65009b0055bb2e8}
+Name\-: \-\_\-element\-\_\-multiplication
+
+Synopsis\-: void \hyperlink{t__datamanipulation_8h_a2e717edc0d1c315c8baaebc14c85e920}{shortvector\-\_\-element\-\_\-multiplication(\-S\-H\-O\-R\-T\-V\-E\-C\-T\-O\-R$\ast$ ,\-S\-H\-O\-R\-T\-V\-E\-C\-T\-O\-R $\ast$)}; void \hyperlink{t__datamanipulation_8h_ac0d7645442e2f74488b7bcf8e49d10b5}{floatvector\-\_\-element\-\_\-multiplication(\-F\-L\-O\-A\-T\-V\-E\-C\-T\-O\-R$\ast$ ,\-F\-L\-O\-A\-T\-V\-E\-C\-T\-O\-R $\ast$)}; void \hyperlink{t__datamanipulation_8h_aaf474827a99c8005389e43b7f3b28d1b}{doublevector\-\_\-element\-\_\-multiplication(\-D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R$\ast$ ,\-D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R $\ast$)}; void \hyperlink{t__datamanipulation_8h_a37946cf299d18f5fed42f31edfd90645}{longvector\-\_\-element\-\_\-multiplication(\-L\-O\-N\-G\-V\-E\-C\-T\-O\-R$\ast$ ,\-L\-O\-N\-G\-V\-E\-C\-T\-O\-R $\ast$)};
+
+void \hyperlink{t__datamanipulation_8h_ad08c3e075a77487ae83a93df6d49e126}{shortmatrix\-\_\-element\-\_\-multiplication(\-S\-H\-O\-R\-T\-M\-A\-T\-R\-I\-X$\ast$ ,\-S\-H\-O\-R\-T\-M\-A\-T\-R\-I\-X $\ast$)}; void \hyperlink{t__datamanipulation_8h_aface8ff046cca72784b296709a748764}{floatmatrix\-\_\-element\-\_\-multiplication(\-F\-L\-O\-A\-T\-M\-A\-T\-R\-I\-X$\ast$ ,\-F\-L\-O\-A\-T\-M\-A\-T\-R\-I\-X $\ast$)}; void \hyperlink{t__datamanipulation_8h_a88eae3e4e1d15196ecf6a4a7a39e844d}{doublematrix\-\_\-element\-\_\-multiplication(\-D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X$\ast$ ,\-D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X $\ast$)}; void \hyperlink{t__datamanipulation_8h_a238a392d422233d46be39d17e61031b5}{longmatrix\-\_\-element\-\_\-multiplication(\-L\-O\-N\-G\-M\-A\-T\-R\-I\-X$\ast$ ,\-L\-O\-N\-G\-M\-A\-T\-R\-I\-X $\ast$)};
+
+Version\-: 0.\-1
+
+Description\-: multiplies each element of the first matrix (vector) with the correspondent element of the second. The result overwrite the first matrix
+
+Authors \& History\-: Riccardo Rigon, February 1998
+
+Inputs\-: the two matrixes or vectors to multiply
+
+References\-:
+
+F\-I\-L\-E\-: L\-I\-B\-R\-A\-R\-I\-E\-S/\-B\-A\-S\-I\-C\-M\-A\-T\-H\-S\-T\-A\-T/t\-\_\-datamanipulation.\-h, L\-I\-B\-R\-A\-R\-I\-E\-S/\-B\-A\-S\-I\-C\-M\-A\-T\-H\-S\-T\-A\-T/datamanipulation.\-c
+
+Notes\-: No control is made on the maximum or minimum value and calculation can go out of range 
+
+Definition at line 1249 of file datamanipulation.\-c.
+
+
+
+References S\-H\-O\-R\-T\-V\-E\-C\-T\-O\-R\-::co, S\-H\-O\-R\-T\-V\-E\-C\-T\-O\-R\-::isdynamic, S\-H\-O\-R\-T\-V\-E\-C\-T\-O\-R\-::nh, and t\-\_\-error().
+
+\hypertarget{datamanipulation_8c_a48e124539954ab09ef9725d0eb2052df}{\index{datamanipulation.\-c@{datamanipulation.\-c}!shrink\-\_\-doublematrix@{shrink\-\_\-doublematrix}}
+\index{shrink\-\_\-doublematrix@{shrink\-\_\-doublematrix}!datamanipulation.c@{datamanipulation.\-c}}
+\subsubsection[{shrink\-\_\-doublematrix}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X}$\ast$ shrink\-\_\-doublematrix (
+\begin{DoxyParamCaption}
+\item[{{\bf D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X} $\ast$}]{data, }
+\item[{{\bf F\-L\-O\-A\-T\-V\-E\-C\-T\-O\-R} $\ast$}]{Q}
+\end{DoxyParamCaption}
+)}}\label{datamanipulation_8c_a48e124539954ab09ef9725d0eb2052df}
+Name\-: shrink\-\_\-doublematrix
+
+Synopsis\-: \hyperlink{struct_d_o_u_b_l_e_m_a_t_r_i_x}{D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X} $\ast$shrink\-\_\-doublematrix(\hyperlink{struct_d_o_u_b_l_e_m_a_t_r_i_x}{D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X} $\ast$data,\hyperlink{struct_f_l_o_a_t_v_e_c_t_o_r}{F\-L\-O\-A\-T\-V\-E\-C\-T\-O\-R} $\ast$\-Q);
+
+Description\-: eliminates from the first matrix (data) those elements set to novalues and return a smaller matrix
+
+Inputs\-: 1) the pointer to the data matrix; 2) the novalue of the first matrix;
+
+Returns\-: the new \char`\"{}shrinked\char`\"{} matrix
+
+F\-I\-L\-E\-: L\-I\-B\-R\-A\-R\-I\-E\-S/\-B\-A\-S\-I\-C\-M\-A\-T\-H\-S\-T\-A\-T/t\-\_\-datamanipulation.\-h, L\-I\-B\-R\-A\-R\-I\-E\-S/\-B\-A\-S\-I\-C\-M\-A\-T\-H\-S\-T\-A\-T/datamanipulation.\-c
+
+Examples\-: simple\-\_\-interpolation.\-c
+
+Authors \& Date\-: Riccardo Rigon, March 1, 1998
+
+References\-:
+
+Notes\-: Has been thought for matrixes with 2 columns 
+
+Definition at line 2060 of file datamanipulation.\-c.
+
+
+
+References F\-L\-O\-A\-T\-V\-E\-C\-T\-O\-R\-::co, D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X\-::co, new\-\_\-doublematrix(), and D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X\-::nrh.
+
+\hypertarget{datamanipulation_8c_a7e43d0225332bcc3204f552ecffdd4ee}{\index{datamanipulation.\-c@{datamanipulation.\-c}!simplehystogram@{simplehystogram}}
+\index{simplehystogram@{simplehystogram}!datamanipulation.c@{datamanipulation.\-c}}
+\subsubsection[{simplehystogram}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X}$\ast$ simplehystogram (
+\begin{DoxyParamCaption}
+\item[{{\bf D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} $\ast$}]{, }
+\item[{long}]{, }
+\item[{long}]{}
+\end{DoxyParamCaption}
+)}}\label{datamanipulation_8c_a7e43d0225332bcc3204f552ecffdd4ee}
+Name\-: simplehystogram, loghystogram
+
+Version\-: 1.\-0
+
+Synopsis\-: \hyperlink{struct_d_o_u_b_l_e_m_a_t_r_i_x}{D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X} $\ast$simplehystogram(\hyperlink{struct_d_o_u_b_l_e_v_e_c_t_o_r}{D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} $\ast$\-U,long N,long mn), \hyperlink{struct_d_o_u_b_l_e_m_a_t_r_i_x}{D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X} $\ast$loghystogram(\hyperlink{struct_d_o_u_b_l_e_v_e_c_t_o_r}{D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} $\ast$\-U,long N,long mn, long base)
+
+Description\-: Doing the hystogram of a set of data is more art than science. It requires to discretize the domain of the sample data in intervals suitable for size and shape. Each interval is usually called 'bin'. It seems obvious that the bin have to be of equal size. But it is not. Suppose for instance that the data collects the number of points sharing the same number of upstream sources. Exploring the river in the downstream direction one can see that this number makes jumps according to a power law. Also, in a river of infinite size, the values of the possible number of sources span the entire set of integers numbers. Nevertheless a real river behave like a finite sample of the infinite one and the domain of the sample will cover only a spotted subset of the integers where spots (i.\-e. empty intervals) become larger and larger with size. This means that keeping fixed the size of the bin most of the bins will be empty. A recipe is to take then ( an exponentially) variable size bins.
+
+Inputs\-: 1) a sorted vector containing the data to be binned; 2) the number of bins (instead of fixing the size of each bin is usually convenient to select a fixed number of bins ). If the number of bins is set to 0, is simply counted the number of elements with the same abscissa; 3) the minimum number of elements required in each bin (this implies that if a bin has not enough elements the numbers of elements of two adjacent bins are summed). In the case of the exponential binning, the j-\/th bin extends from base$^\wedge$(j$\ast$delta) to base$^\wedge$((j+1)$\ast$delta) where base is the fourth input field and delta the extension of each bin in the logarithm axis.
+
+Return\-: a matrix of double\-: the first column contains the number of elements in each mean, the second coulumns the mean abscissa of the data in the bin, the third the highest limit of each bin interval
+
+Examples\-: hystogram.\-c
+
+Authors \& Date\-: Riccardo Rigon, October 1997.
+
+F\-I\-L\-E\-: L\-I\-B\-R\-A\-R\-I\-E\-S/\-B\-A\-S\-I\-C\-M\-A\-T\-H\-S\-T\-A\-T/t\-\_\-datamanipulation.\-h, L\-I\-B\-R\-A\-R\-I\-E\-S/\-B\-A\-S\-I\-C\-M\-A\-T\-H\-S\-T\-A\-T/datamanipulation.\-c
+
+Notes\-: In the case of an exponential binning, the mean abscissa of the data is calculated with the aritmetic mean (it could be calculated as the geometric mean instead. Because novalues is not specified novalues are not dropped from the data vector. 
+
+Definition at line 369 of file datamanipulation.\-c.
+
+
+
+References D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R\-::co, D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X\-::co, delete\-\_\-xyz(), delete\-\_\-xyz\-\_\-list(), new\-\_\-doublematrix(), new\-\_\-xyz(), xyz\-::next, D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R\-::nh, t\-\_\-error(), xyz\-::x, xyz\-\_\-into\-\_\-doublematrix(), xyz\-::y, and xyz\-::z.
+
+\hypertarget{datamanipulation_8c_a6e68d1bfd1cb58fee4e4c563aae89e8f}{\index{datamanipulation.\-c@{datamanipulation.\-c}!sort2floatvectors@{sort2floatvectors}}
+\index{sort2floatvectors@{sort2floatvectors}!datamanipulation.c@{datamanipulation.\-c}}
+\subsubsection[{sort2floatvectors}]{\setlength{\rightskip}{0pt plus 5cm}void sort2floatvectors (
+\begin{DoxyParamCaption}
+\item[{{\bf F\-L\-O\-A\-T\-V\-E\-C\-T\-O\-R} $\ast$}]{ra, }
+\item[{{\bf F\-L\-O\-A\-T\-V\-E\-C\-T\-O\-R} $\ast$}]{rb}
+\end{DoxyParamCaption}
+)}}\label{datamanipulation_8c_a6e68d1bfd1cb58fee4e4c563aae89e8f}
+
+
+Definition at line 252 of file datamanipulation.\-c.
+
+
+
+References co, F\-L\-O\-A\-T\-V\-E\-C\-T\-O\-R\-::co, and F\-L\-O\-A\-T\-V\-E\-C\-T\-O\-R\-::nh.
+
+\hypertarget{datamanipulation_8c_a1d65c5e8d34adc1f0188a21705d72150}{\index{datamanipulation.\-c@{datamanipulation.\-c}!sort2realvectors@{sort2realvectors}}
+\index{sort2realvectors@{sort2realvectors}!datamanipulation.c@{datamanipulation.\-c}}
+\subsubsection[{sort2realvectors}]{\setlength{\rightskip}{0pt plus 5cm}void sort2realvectors (
+\begin{DoxyParamCaption}
+\item[{{\bf D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} $\ast$}]{, }
+\item[{{\bf D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} $\ast$}]{}
+\end{DoxyParamCaption}
+)}}\label{datamanipulation_8c_a1d65c5e8d34adc1f0188a21705d72150}
+Name\-: sort2realvectors
+
+Version\-: 1.\-0
+
+Synopsis\-: void \hyperlink{t__datamanipulation_8h_a6f053fbaf9b5c897a589f253212ff779}{sort2realvectors(\-D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R $\ast$,\-D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R $\ast$)};
+
+Description\-: sort a vector of double and accorsingly a second vector. The routine is very similar to the heap sort presented in Numerical Recipes to which one could refer for reference.
+
+Inputs\-: the input vector
+
+Examples\-: A\-P\-P\-L\-I\-C\-A\-T\-I\-O\-N\-S/\-D\-A\-T\-A\-\_\-\-M\-A\-N\-I\-P\-U\-L\-A\-T\-I\-O\-N/coupledfield\-\_\-moments.\-c
+
+Authors \& Date\-: Riccardo Rigon, October 1997.
+
+F\-I\-L\-E\-: L\-I\-B\-R\-A\-R\-I\-E\-S/\-B\-A\-S\-I\-C\-M\-A\-T\-H\-S\-T\-A\-T/t\-\_\-datamanipulation.\-h, L\-I\-B\-R\-A\-R\-I\-E\-S/\-B\-A\-S\-I\-C\-M\-A\-T\-H\-S\-T\-A\-T/datamanipulation.\-c 
+
+Definition at line 201 of file datamanipulation.\-c.
+
+
+
+References co, D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R\-::co, and D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R\-::nh.
+
+\hypertarget{datamanipulation_8c_a80c996034834608964cab0e48b680e53}{\index{datamanipulation.\-c@{datamanipulation.\-c}!sort2vectors@{sort2vectors}}
+\index{sort2vectors@{sort2vectors}!datamanipulation.c@{datamanipulation.\-c}}
+\subsubsection[{sort2vectors}]{\setlength{\rightskip}{0pt plus 5cm}void sort2vectors (
+\begin{DoxyParamCaption}
+\item[{{\bf L\-O\-N\-G\-V\-E\-C\-T\-O\-R} $\ast$}]{ra, }
+\item[{{\bf F\-L\-O\-A\-T\-V\-E\-C\-T\-O\-R} $\ast$}]{rb}
+\end{DoxyParamCaption}
+)}}\label{datamanipulation_8c_a80c996034834608964cab0e48b680e53}
+
+
+Definition at line 301 of file datamanipulation.\-c.
+
+
+
+References co, F\-L\-O\-A\-T\-V\-E\-C\-T\-O\-R\-::co, L\-O\-N\-G\-V\-E\-C\-T\-O\-R\-::co, and L\-O\-N\-G\-V\-E\-C\-T\-O\-R\-::nh.
+
+\hypertarget{datamanipulation_8c_af2f5f0d967d566f6776508b4cf78d6b2}{\index{datamanipulation.\-c@{datamanipulation.\-c}!sortreal@{sortreal}}
+\index{sortreal@{sortreal}!datamanipulation.c@{datamanipulation.\-c}}
+\subsubsection[{sortreal}]{\setlength{\rightskip}{0pt plus 5cm}void sortreal (
+\begin{DoxyParamCaption}
+\item[{{\bf D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} $\ast$}]{}
+\end{DoxyParamCaption}
+)}}\label{datamanipulation_8c_af2f5f0d967d566f6776508b4cf78d6b2}
+Name\-: sortreal
+
+Version\-: 1.\-0
+
+Synopsis\-: void \hyperlink{t__datamanipulation_8h_a6f98282ece31a3831ba046e2d139dc80}{sortreal(\-D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R $\ast$ra)}
+
+Description\-: sort a vector of double. The routine is very similar to the heap sort presented in Numerical Recipes to which one could refer for reference.
+
+Inputs\-: the input vector
+
+Examples\-: A\-P\-P\-L\-I\-C\-A\-T\-I\-O\-N\-S/\-D\-A\-T\-A\-\_\-\-M\-A\-N\-I\-P\-U\-L\-A\-T\-I\-O\-N/coupledfield\-\_\-moments.\-c
+
+Authors \& Date\-: Riccardo Rigon, October 1997.
+
+F\-I\-L\-E\-: L\-I\-B\-R\-A\-R\-I\-E\-S/\-B\-A\-S\-I\-C\-M\-A\-T\-H\-S\-T\-A\-T/t\-\_\-datamanipulation.\-h, L\-I\-B\-R\-A\-R\-I\-E\-S/\-B\-A\-S\-I\-C\-M\-A\-T\-H\-S\-T\-A\-T/datamanipulation.\-c 
+
+Definition at line 160 of file datamanipulation.\-c.
+
+
+
+References co, D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R\-::co, and D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R\-::nh.
+
+\hypertarget{datamanipulation_8c_a7bdd4a2e82a65aed267762237939539c}{\index{datamanipulation.\-c@{datamanipulation.\-c}!split@{split}}
+\index{split@{split}!datamanipulation.c@{datamanipulation.\-c}}
+\subsubsection[{split}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\-O\-U\-B\-L\-E\-B\-I\-N}$\ast$ split (
+\begin{DoxyParamCaption}
+\item[{{\bf D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} $\ast$}]{, }
+\item[{long}]{, }
+\item[{{\bf F\-L\-O\-A\-T\-V\-E\-C\-T\-O\-R} $\ast$}]{}
+\end{DoxyParamCaption}
+)}}\label{datamanipulation_8c_a7bdd4a2e82a65aed267762237939539c}
+Name\-: split, exponentialsplit
+
+Synopsis\-:
+
+D\-O\-U\-B\-L\-E\-B\-I\-N $\ast$split(\hyperlink{struct_d_o_u_b_l_e_v_e_c_t_o_r}{D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} $\ast$tobesplitted,long N ,double novalue); D\-O\-U\-B\-L\-E\-B\-I\-N $\ast$esponentialsplit(\hyperlink{struct_d_o_u_b_l_e_v_e_c_t_o_r}{D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} $\ast$tobesplitted,long N ,double base,double novalue);
+
+Version\-: 0.\-9
+
+Description\-: it takes a vector of double and split it in N parts. If N $<$1 each part just contains the elements of the vectors that have the same values, if N $>$2 first, the range of data is subdivided in N-\/1 intervals of equal size from the minimum value (say\-: min) to the maximunm value (say\-: max) in the vector escluding those elements that are marked as 'novalue' -\/ a novalue must be either greater or less than the effective elements values -\/ . Secondly lists the elements that lie in a bin from min-\/0.\-5$\ast$delta to max+0.5$\ast$delta, for a total number of N bins. The program works setting a proper set of pointer to transform the vector in a bin of double (see \hyperlink{turtle_8h}{turtle.\-h}) the pointer to the vector is eventually deallocated and substituted (you do not have to deallocate it anymore ) with the pointer to a bin. exponentialsplit works exactly the same as split but the bins are of equal size in the logarithmic space, meaning that delta is exponentially varying with increasing values. One can chose the logarithm base in which to work.
+
+Inputs\-: split\-: 1) The vector to be splitted; 2) The number of bins; 3) the novalue exponentialsplit\-: 1) The vector to be splitted; 2) The number of bins; 4) The base of the logarithm; 5) the novale
+
+Authors \& Hystory\-: Riccardo Rigon, Paolo D'Odorico, November 1997, February 1998
+
+F\-I\-L\-E\-: L\-I\-B\-R\-A\-R\-I\-E\-S/\-B\-A\-S\-I\-C\-M\-A\-T\-H\-S\-T\-A\-T/t\-\_\-datamanipulation.\-h, L\-I\-B\-R\-A\-R\-I\-E\-S/\-B\-A\-S\-I\-C\-M\-A\-T\-H\-S\-T\-A\-T/datamanipulation.\-c
+
+Return\-: a pointer to the D\-O\-U\-B\-L\-E\-B\-I\-N
+
+F\-I\-L\-E\-: L\-I\-B\-R\-A\-R\-I\-E\-S/\-B\-A\-S\-I\-C\-M\-A\-T\-H\-S\-T\-A\-T/t\-\_\-datamanipulation.\-h, L\-I\-B\-R\-A\-R\-I\-E\-S/\-B\-A\-S\-I\-C\-M\-A\-T\-H\-S\-T\-A\-T/datamanipulation.\-c
+
+Needs\-: L\-I\-B\-R\-A\-R\-I\-E\-S/\-B\-A\-S\-I\-C\-M\-A\-T\-H\-S\-T\-A\-T/statistics.\-c, L\-I\-B\-R\-A\-R\-I\-E\-S/\-B\-A\-S\-I\-C\-M\-A\-T\-H\-S\-T\-A\-T/t\-\_\-statistics.\-h
+
+References\-: Fractal River Basins, I. Rodriguez-\/\-Iturbe and A. Rinaldo, C.\-U.\-P., 1997
+
+Notes\-: Probably there is not a correct cleaning on memory ... when trasforming the vector into the bin the novalue part of the vector remain kind of hidden 
+
+Definition at line 1390 of file datamanipulation.\-c.
+
+
+
+References co, F\-L\-O\-A\-T\-V\-E\-C\-T\-O\-R\-::co, D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R\-::co, db\-::co, delete\-\_\-longpair\-\_\-list(), longpair\-::i, db\-::index, is\-Dynamic, D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R\-::isdynamic, db\-::isdynamic, longpair\-::j, new\-\_\-longpair(), new\-\_\-longvector(), longpair\-::next, L\-O\-N\-G\-V\-E\-C\-T\-O\-R\-::nh, D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R\-::nh, D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R\-::nl, N\-R\-\_\-\-E\-N\-D, and t\-\_\-error().
+
+\hypertarget{datamanipulation_8c_a0f3e7fa37c9b8c6398c7fd0820f0c2ed}{\index{datamanipulation.\-c@{datamanipulation.\-c}!split2realvectors@{split2realvectors}}
+\index{split2realvectors@{split2realvectors}!datamanipulation.c@{datamanipulation.\-c}}
+\subsubsection[{split2realvectors}]{\setlength{\rightskip}{0pt plus 5cm}double split2realvectors (
+\begin{DoxyParamCaption}
+\item[{{\bf D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} $\ast$}]{, }
+\item[{{\bf D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} $\ast$}]{, }
+\item[{{\bf D\-O\-U\-B\-L\-E\-B\-I\-N} $\ast$}]{, }
+\item[{{\bf D\-O\-U\-B\-L\-E\-B\-I\-N} $\ast$}]{, }
+\item[{long}]{, }
+\item[{long}]{, }
+\item[{{\bf F\-L\-O\-A\-T\-V\-E\-C\-T\-O\-R} $\ast$}]{}
+\end{DoxyParamCaption}
+)}}\label{datamanipulation_8c_a0f3e7fa37c9b8c6398c7fd0820f0c2ed}
+Name\-: split2realvectors, exponentialspliterealvectors
+
+Version\-: 0.\-9
+
+Synopsis\-:
+
+void split2realvectors(\-D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R $\ast$\-F\-I\-R\-S\-T,\-D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R $\ast$\-S\-E\-C\-O\-N\-D,\-D\-O\-U\-B\-L\-E\-B\-I\-N $\ast$\-O\-N\-E,\-D\-O\-U\-B\-L\-E\-B\-I\-N $\ast$\-T\-W\-O,long N,double novalue); void esponentialsplit2realvectors(\-D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R $\ast$\-F\-I\-R\-S\-T,\-D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R $\ast$\-S\-E\-C\-O\-N\-D,\-D\-O\-U\-B\-L\-E\-B\-I\-N $\ast$\-O\-N\-E,\-D\-O\-U\-B\-L\-E\-B\-I\-N $\ast$\-T\-W\-O,long N,double base, double  novalue);
+
+Description\-: They works as split or exponentialsplit on the first of two real vectors. The second one is splitted in the same position the first one is splitted.
+
+Inputs\-: split2realvectors\-: 1) The first vector to be splitted; 2) The second vector to be splitted; 3) The pointer to the first resulting bin; 4) The pointer to the second resulting bin; 5) The number of bins; 6) the novalue. exponentialsplit2realvectors\-: 1) The first vector to be splitted; 2) The second vector to be splitted; 3) The pointer to the first resulting bin; 4) The pointer to the second resulting bin; 5) The number of bins;6) the base of the logarithm; 7) the novalue.
+
+Authors \& Hystory\-: Riccardo Rigon, Paolo D'Odorico, November 1997, February 1998
+
+F\-I\-L\-E\-: L\-I\-B\-R\-A\-R\-I\-E\-S/\-B\-A\-S\-I\-C\-M\-A\-T\-H\-S\-T\-A\-T/t\-\_\-datamanipulation.\-h, L\-I\-B\-R\-A\-R\-I\-E\-S/\-B\-A\-S\-I\-C\-M\-A\-T\-H\-S\-T\-A\-T/datamanipulation.\-c
+
+Needs\-: L\-I\-B\-R\-A\-R\-I\-E\-S/\-B\-A\-S\-I\-C\-M\-A\-T\-H\-S\-T\-A\-T/statistics.\-c, L\-I\-B\-R\-A\-R\-I\-E\-S/\-B\-A\-S\-I\-C\-M\-A\-T\-H\-S\-T\-A\-T/t\-\_\-statistics.\-h
+
+Examples\-: coupledfield\-\_\-moments.\-c
+
+See Also\-: hystogram, coupled\-\_\-field\-\_\-moments.\-c
+
+References\-: Fractal River Basins, I. Rodriguez-\/\-Iturbe and A. Rinaldo, C.\-U.\-P., 1997
+
+N\-O\-T\-E\-S\-: Probably there is not a correct cleaning of memory ... when trasforming the vector into the bin the novalue part of the vector remains hidden. Instead of using a longpair list, it can be used a simpler type of linked list with only one value stored. Low testing. 
+
+Definition at line 1719 of file datamanipulation.\-c.
+
+
+
+References co, F\-L\-O\-A\-T\-V\-E\-C\-T\-O\-R\-::co, D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R\-::co, db\-::co, delete\-\_\-longpair\-\_\-list(), longpair\-::i, db\-::index, D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R\-::isdynamic, longpair\-::j, new\-\_\-longpair(), new\-\_\-longvector(), longpair\-::next, L\-O\-N\-G\-V\-E\-C\-T\-O\-R\-::nh, D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R\-::nh, D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R\-::nl, N\-R\-\_\-\-E\-N\-D, and t\-\_\-error().
+
+\hypertarget{datamanipulation_8c_ad6a7a32fde183a4827501d77051281cf}{\index{datamanipulation.\-c@{datamanipulation.\-c}!variance\-\_\-doublematrix\-\_\-column@{variance\-\_\-doublematrix\-\_\-column}}
+\index{variance\-\_\-doublematrix\-\_\-column@{variance\-\_\-doublematrix\-\_\-column}!datamanipulation.c@{datamanipulation.\-c}}
+\subsubsection[{variance\-\_\-doublematrix\-\_\-column}]{\setlength{\rightskip}{0pt plus 5cm}double variance\-\_\-doublematrix\-\_\-column (
+\begin{DoxyParamCaption}
+\item[{{\bf D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X} $\ast$}]{net, }
+\item[{long}]{column, }
+\item[{double}]{mean}
+\end{DoxyParamCaption}
+)}}\label{datamanipulation_8c_ad6a7a32fde183a4827501d77051281cf}
+Name\-: variance\-\_\-doublematrix\-\_\-column
+
+Synopsis\-: double \hyperlink{t__datamanipulation_8h_ad6a7a32fde183a4827501d77051281cf}{variance\-\_\-doublematrix\-\_\-column(\-D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X$\ast$ net,long column,double mean)};
+
+Version\-: 0.\-96
+
+Description\-: evaluate the variance of the set of data contained in the specified column of the specified doublematrix. If the field mean is set to 0, it returns the second moment
+
+Authors \& Date\-: Riccardo Rigon, June 2000
+
+Inputs\-: 1) the pointer to the matrix to be analyzed; 2) the number of the column to be analyzed; 3) the mean value used to evaluate the variance
+
+Return\-:
+
+F\-Ile\-: L\-I\-B\-R\-A\-R\-I\-E\-S/\-B\-A\-S\-I\-C\-S\-M\-A\-T\-H\-S\-T\-A\-T/datamanipulation.\-c
+
+See Also\-: mean\-\_\-doublematrix\-\_\-column 
+
+Definition at line 2316 of file datamanipulation.\-c.
+
+
+
+References D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X\-::co, and D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X\-::nrh.
+
+\hypertarget{datamanipulation_8c_aa97d56050c332aca07848cef7d06cbd8}{\index{datamanipulation.\-c@{datamanipulation.\-c}!vectorize\-\_\-doublematrix@{vectorize\-\_\-doublematrix}}
+\index{vectorize\-\_\-doublematrix@{vectorize\-\_\-doublematrix}!datamanipulation.c@{datamanipulation.\-c}}
+\subsubsection[{vectorize\-\_\-doublematrix}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R}$\ast$ vectorize\-\_\-doublematrix (
+\begin{DoxyParamCaption}
+\item[{{\bf D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X} $\ast$}]{input}
+\end{DoxyParamCaption}
+)}}\label{datamanipulation_8c_aa97d56050c332aca07848cef7d06cbd8}
+Name\-: vectorize\-\_\-doublematrix
+
+Version\-: 1.\-0
+
+Synopsis\-: \hyperlink{struct_d_o_u_b_l_e_v_e_c_t_o_r}{D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} $\ast$vectorize\-\_\-doublematrix(\hyperlink{struct_d_o_u_b_l_e_m_a_t_r_i_x}{D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X} $\ast$input)
+
+Description\-: takes a double matrix and transforms it to a vector. Actually this is easy done cause the data of the matrix are stored in adjacent addresses. Thus, the function allocat the vector structure; put the address of the vector elements to the first of the matrix elements. Free the memory used by the matrix structure (but not that used by data).
+
+Inputs\-: the input matrix
+
+Return\-: the pointer to the doublevector containing now the data.
+
+Examples\-: A\-P\-P\-L\-I\-C\-A\-T\-I\-O\-N\-S/\-D\-A\-T\-A\-\_\-\-M\-A\-N\-I\-P\-U\-L\-A\-T\-I\-O\-N/coupledfield\-\_\-moments.\-c
+
+Authors \& Date\-: Riccardo Rigon, October 1997.
+
+F\-I\-L\-E\-: L\-I\-B\-R\-A\-R\-I\-E\-S/\-B\-A\-S\-I\-C\-M\-A\-T\-H\-S\-T\-A\-T/t\-\_\-datamanipulation.\-h, L\-I\-B\-R\-A\-R\-I\-E\-S/\-B\-A\-S\-I\-C\-M\-A\-T\-H\-S\-T\-A\-T/datamanipulation.\-c 
+
+Definition at line 11 of file datamanipulation.\-c.
+
+
+
+References D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R\-::co, D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X\-::co, D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R\-::isdynamic, D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X\-::isdynamic, D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X\-::nch, D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R\-::nh, D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R\-::nl, D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X\-::nrh, and t\-\_\-error().
+
+\hypertarget{datamanipulation_8c_abd465a40fa7cf77a811683d342ea075d}{\index{datamanipulation.\-c@{datamanipulation.\-c}!vectorize\-\_\-floatmatrix@{vectorize\-\_\-floatmatrix}}
+\index{vectorize\-\_\-floatmatrix@{vectorize\-\_\-floatmatrix}!datamanipulation.c@{datamanipulation.\-c}}
+\subsubsection[{vectorize\-\_\-floatmatrix}]{\setlength{\rightskip}{0pt plus 5cm}{\bf F\-L\-O\-A\-T\-V\-E\-C\-T\-O\-R}$\ast$ vectorize\-\_\-floatmatrix (
+\begin{DoxyParamCaption}
+\item[{{\bf F\-L\-O\-A\-T\-M\-A\-T\-R\-I\-X} $\ast$}]{input}
+\end{DoxyParamCaption}
+)}}\label{datamanipulation_8c_abd465a40fa7cf77a811683d342ea075d}
+
+
+Definition at line 87 of file datamanipulation.\-c.
+
+
+
+References F\-L\-O\-A\-T\-V\-E\-C\-T\-O\-R\-::co, F\-L\-O\-A\-T\-M\-A\-T\-R\-I\-X\-::co, F\-L\-O\-A\-T\-V\-E\-C\-T\-O\-R\-::isdynamic, F\-L\-O\-A\-T\-M\-A\-T\-R\-I\-X\-::isdynamic, F\-L\-O\-A\-T\-M\-A\-T\-R\-I\-X\-::nch, F\-L\-O\-A\-T\-V\-E\-C\-T\-O\-R\-::nh, F\-L\-O\-A\-T\-V\-E\-C\-T\-O\-R\-::nl, F\-L\-O\-A\-T\-M\-A\-T\-R\-I\-X\-::nrh, and t\-\_\-error().
+
+\hypertarget{datamanipulation_8c_a1b695ebb05cbaa4a08388804e8dfeb33}{\index{datamanipulation.\-c@{datamanipulation.\-c}!vectorize\-\_\-longmatrix@{vectorize\-\_\-longmatrix}}
+\index{vectorize\-\_\-longmatrix@{vectorize\-\_\-longmatrix}!datamanipulation.c@{datamanipulation.\-c}}
+\subsubsection[{vectorize\-\_\-longmatrix}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\-O\-N\-G\-V\-E\-C\-T\-O\-R}$\ast$ vectorize\-\_\-longmatrix (
+\begin{DoxyParamCaption}
+\item[{{\bf L\-O\-N\-G\-M\-A\-T\-R\-I\-X} $\ast$}]{input}
+\end{DoxyParamCaption}
+)}}\label{datamanipulation_8c_a1b695ebb05cbaa4a08388804e8dfeb33}
+
+
+Definition at line 50 of file datamanipulation.\-c.
+
+
+
+References L\-O\-N\-G\-V\-E\-C\-T\-O\-R\-::co, L\-O\-N\-G\-M\-A\-T\-R\-I\-X\-::co, L\-O\-N\-G\-V\-E\-C\-T\-O\-R\-::isdynamic, L\-O\-N\-G\-M\-A\-T\-R\-I\-X\-::isdynamic, L\-O\-N\-G\-M\-A\-T\-R\-I\-X\-::nch, L\-O\-N\-G\-V\-E\-C\-T\-O\-R\-::nh, L\-O\-N\-G\-V\-E\-C\-T\-O\-R\-::nl, L\-O\-N\-G\-M\-A\-T\-R\-I\-X\-::nrh, and t\-\_\-error().
+
+\hypertarget{datamanipulation_8c_a78391684b827f78ff0c2717c69fe79e8}{\index{datamanipulation.\-c@{datamanipulation.\-c}!vectorize\-\_\-shortmatrix@{vectorize\-\_\-shortmatrix}}
+\index{vectorize\-\_\-shortmatrix@{vectorize\-\_\-shortmatrix}!datamanipulation.c@{datamanipulation.\-c}}
+\subsubsection[{vectorize\-\_\-shortmatrix}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\-H\-O\-R\-T\-V\-E\-C\-T\-O\-R}$\ast$ vectorize\-\_\-shortmatrix (
+\begin{DoxyParamCaption}
+\item[{{\bf S\-H\-O\-R\-T\-M\-A\-T\-R\-I\-X} $\ast$}]{input}
+\end{DoxyParamCaption}
+)}}\label{datamanipulation_8c_a78391684b827f78ff0c2717c69fe79e8}
+
+
+Definition at line 123 of file datamanipulation.\-c.
+
+
+
+References S\-H\-O\-R\-T\-V\-E\-C\-T\-O\-R\-::co, S\-H\-O\-R\-T\-M\-A\-T\-R\-I\-X\-::co, S\-H\-O\-R\-T\-V\-E\-C\-T\-O\-R\-::isdynamic, S\-H\-O\-R\-T\-M\-A\-T\-R\-I\-X\-::isdynamic, S\-H\-O\-R\-T\-M\-A\-T\-R\-I\-X\-::nch, S\-H\-O\-R\-T\-V\-E\-C\-T\-O\-R\-::nh, S\-H\-O\-R\-T\-V\-E\-C\-T\-O\-R\-::nl, S\-H\-O\-R\-T\-M\-A\-T\-R\-I\-X\-::nrh, and t\-\_\-error().
+
+\hypertarget{datamanipulation_8c_a8c57716d9c9c2990de9ad58ca5d329fc}{\index{datamanipulation.\-c@{datamanipulation.\-c}!xyz\-\_\-into\-\_\-doublematrix@{xyz\-\_\-into\-\_\-doublematrix}}
+\index{xyz\-\_\-into\-\_\-doublematrix@{xyz\-\_\-into\-\_\-doublematrix}!datamanipulation.c@{datamanipulation.\-c}}
+\subsubsection[{xyz\-\_\-into\-\_\-doublematrix}]{\setlength{\rightskip}{0pt plus 5cm}void xyz\-\_\-into\-\_\-doublematrix (
+\begin{DoxyParamCaption}
+\item[{{\bf X\-Y\-Z} $\ast$}]{head, }
+\item[{{\bf D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X} $\ast$}]{indx}
+\end{DoxyParamCaption}
+)}}\label{datamanipulation_8c_a8c57716d9c9c2990de9ad58ca5d329fc}
+
+
+Definition at line 620 of file datamanipulation.\-c.
+
+
+
+References D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X\-::co, xyz\-::next, D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X\-::nrh, t\-\_\-error(), xyz\-::x, xyz\-::y, and xyz\-::z.
+
+
+
+Referenced by exponentialhystogram(), and simplehystogram().
+

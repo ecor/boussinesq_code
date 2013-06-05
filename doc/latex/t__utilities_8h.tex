@@ -1,0 +1,376 @@
+\hypertarget{t__utilities_8h}{\section{F\-L\-U\-I\-D\-T\-U\-R\-T\-L\-E\-S/t\-\_\-utilities.h File Reference}
+\label{t__utilities_8h}\index{F\-L\-U\-I\-D\-T\-U\-R\-T\-L\-E\-S/t\-\_\-utilities.\-h@{F\-L\-U\-I\-D\-T\-U\-R\-T\-L\-E\-S/t\-\_\-utilities.\-h}}
+}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{t__utilities_8h_a2bebd3800fadbad87d4ae76050dc7191}{F\-L}~512
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+long \hyperlink{t__utilities_8h_a64bdb2d6f8795e5e1d607b54c76de170}{search\-\_\-array} (F\-I\-L\-E $\ast$, char $\ast$, char $\ast$)
+\item 
+long \hyperlink{t__utilities_8h_acad908e9220bc605ed32e57a1ead1e09}{search\-\_\-named\-\_\-array} (F\-I\-L\-E $\ast$, char $\ast$)
+\item 
+long \hyperlink{t__utilities_8h_a35efd34af6815c5b4dfd8de69addd537}{simplefind} (F\-I\-L\-E $\ast$, const char $\ast$)
+\item 
+short \hyperlink{t__utilities_8h_a7b8ea821c9359c8e3fc8f94f698fa944}{file\-\_\-copy} (F\-I\-L\-E $\ast$, F\-I\-L\-E $\ast$)
+\item 
+long \hyperlink{t__utilities_8h_abc7f12c2dcc7b32cde0550c409ed95ed}{ssimplefindkeyword} (char $\ast$, long, const char $\ast$)
+\item 
+void \hyperlink{t__utilities_8h_adc5efe5d49c315e7939a7dece146b9e3}{meter} (long index, long rows, short frequence, const char $\ast$message, const char $\ast$separator)
+\item 
+short \hyperlink{t__utilities_8h_aae27bfbc4910e4a61874d78027c761ac}{join\-\_\-strings\-\_\-into} (char $\ast$string, char $\ast$first, char $\ast$second)
+\item 
+short \hyperlink{t__utilities_8h_aa138c9a7333bc53eeb94eaeace876042}{join\-\_\-3strings\-\_\-into} (char $\ast$string, char $\ast$first, char $\ast$second, char $\ast$third)
+\item 
+void \hyperlink{t__utilities_8h_aad115bd95a94025215aa780dfcf894aa}{stop\-\_\-execution} (void)
+\item 
+void \hyperlink{t__utilities_8h_a73d319e433a56e137843274046ed14dc}{time2date} (float time, long $\ast$giulian, long $\ast$year, long $\ast$month, long $\ast$day, long $\ast$hour, long $\ast$min, float $\ast$sec)
+\item 
+void \hyperlink{t__utilities_8h_ab28f54847a9a106447c42761598cb45f}{giulian2day} (long giulian, long year, long $\ast$month, long $\ast$day)
+\item 
+void \hyperlink{t__utilities_8h_a8547e1b6be424fe926f702d63e1baec0}{day2giulian} (long year, long month, long day, long $\ast$giulian)
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{t__utilities_8h_a2bebd3800fadbad87d4ae76050dc7191}{\index{t\-\_\-utilities.\-h@{t\-\_\-utilities.\-h}!F\-L@{F\-L}}
+\index{F\-L@{F\-L}!t_utilities.h@{t\-\_\-utilities.\-h}}
+\subsubsection[{F\-L}]{\setlength{\rightskip}{0pt plus 5cm}\#define F\-L~512}}\label{t__utilities_8h_a2bebd3800fadbad87d4ae76050dc7191}
+
+
+Definition at line 1 of file t\-\_\-utilities.\-h.
+
+
+
+Referenced by join\-\_\-3strings\-\_\-into(), and join\-\_\-strings\-\_\-into().
+
+
+
+\subsection{Function Documentation}
+\hypertarget{t__utilities_8h_a8547e1b6be424fe926f702d63e1baec0}{\index{t\-\_\-utilities.\-h@{t\-\_\-utilities.\-h}!day2giulian@{day2giulian}}
+\index{day2giulian@{day2giulian}!t_utilities.h@{t\-\_\-utilities.\-h}}
+\subsubsection[{day2giulian}]{\setlength{\rightskip}{0pt plus 5cm}void day2giulian (
+\begin{DoxyParamCaption}
+\item[{long}]{year, }
+\item[{long}]{month, }
+\item[{long}]{day, }
+\item[{long $\ast$}]{giulian}
+\end{DoxyParamCaption}
+)}}\label{t__utilities_8h_a8547e1b6be424fe926f702d63e1baec0}
+
+
+Definition at line 427 of file utilities.\-c.
+
+\hypertarget{t__utilities_8h_a7b8ea821c9359c8e3fc8f94f698fa944}{\index{t\-\_\-utilities.\-h@{t\-\_\-utilities.\-h}!file\-\_\-copy@{file\-\_\-copy}}
+\index{file\-\_\-copy@{file\-\_\-copy}!t_utilities.h@{t\-\_\-utilities.\-h}}
+\subsubsection[{file\-\_\-copy}]{\setlength{\rightskip}{0pt plus 5cm}short file\-\_\-copy (
+\begin{DoxyParamCaption}
+\item[{F\-I\-L\-E $\ast$}]{, }
+\item[{F\-I\-L\-E $\ast$}]{}
+\end{DoxyParamCaption}
+)}}\label{t__utilities_8h_a7b8ea821c9359c8e3fc8f94f698fa944}
+Name\-: file\-\_\-copy
+
+Version\-: 0.\-9
+
+Synopsis\-: short \hyperlink{utilities_8c_a0438c08538f783efacb6e3c235e1b927}{file\-\_\-copy(\-F\-I\-L\-E $\ast$destination,\-F\-I\-L\-E $\ast$origin)}
+
+Description\-: It copies the file \char`\"{}origin\char`\"{} in file \char`\"{}destination\char`\"{}
+
+Authors \& Date\-: Riccardo Rigon, June 1998
+
+F\-I\-L\-E\-: L\-I\-B\-R\-A\-I\-R\-E\-S/\-B\-A\-S\-I\-C\-S/t\-\_\-utilities.\-h, L\-I\-B\-R\-A\-R\-I\-E\-S/\-B\-A\-S\-I\-C\-S/utilities.\-c
+
+Inputs\-: A pointer to the destination F\-I\-L\-E, a pointer to the origin F\-I\-L\-E 
+
+Definition at line 250 of file utilities.\-c.
+
+
+
+References skip\-\_\-whitespaces(), and t\-\_\-error().
+
+\hypertarget{t__utilities_8h_ab28f54847a9a106447c42761598cb45f}{\index{t\-\_\-utilities.\-h@{t\-\_\-utilities.\-h}!giulian2day@{giulian2day}}
+\index{giulian2day@{giulian2day}!t_utilities.h@{t\-\_\-utilities.\-h}}
+\subsubsection[{giulian2day}]{\setlength{\rightskip}{0pt plus 5cm}void giulian2day (
+\begin{DoxyParamCaption}
+\item[{long}]{giulian, }
+\item[{long}]{year, }
+\item[{long $\ast$}]{month, }
+\item[{long $\ast$}]{day}
+\end{DoxyParamCaption}
+)}}\label{t__utilities_8h_ab28f54847a9a106447c42761598cb45f}
+
+
+Definition at line 397 of file utilities.\-c.
+
+\hypertarget{t__utilities_8h_aa138c9a7333bc53eeb94eaeace876042}{\index{t\-\_\-utilities.\-h@{t\-\_\-utilities.\-h}!join\-\_\-3strings\-\_\-into@{join\-\_\-3strings\-\_\-into}}
+\index{join\-\_\-3strings\-\_\-into@{join\-\_\-3strings\-\_\-into}!t_utilities.h@{t\-\_\-utilities.\-h}}
+\subsubsection[{join\-\_\-3strings\-\_\-into}]{\setlength{\rightskip}{0pt plus 5cm}short join\-\_\-3strings\-\_\-into (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{string, }
+\item[{char $\ast$}]{first, }
+\item[{char $\ast$}]{second, }
+\item[{char $\ast$}]{third}
+\end{DoxyParamCaption}
+)}}\label{t__utilities_8h_aa138c9a7333bc53eeb94eaeace876042}
+
+
+Definition at line 300 of file utilities.\-c.
+
+
+
+References F\-L, and t\-\_\-error().
+
+\hypertarget{t__utilities_8h_aae27bfbc4910e4a61874d78027c761ac}{\index{t\-\_\-utilities.\-h@{t\-\_\-utilities.\-h}!join\-\_\-strings\-\_\-into@{join\-\_\-strings\-\_\-into}}
+\index{join\-\_\-strings\-\_\-into@{join\-\_\-strings\-\_\-into}!t_utilities.h@{t\-\_\-utilities.\-h}}
+\subsubsection[{join\-\_\-strings\-\_\-into}]{\setlength{\rightskip}{0pt plus 5cm}short join\-\_\-strings\-\_\-into (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{string, }
+\item[{char $\ast$}]{first, }
+\item[{char $\ast$}]{second}
+\end{DoxyParamCaption}
+)}}\label{t__utilities_8h_aae27bfbc4910e4a61874d78027c761ac}
+Name\-: join\-\_\-strings\-\_\-into, join\-\_\-3strings\-\_\-into
+
+Synopsis\-: short join\-\_\-strings\-\_\-into(char $<$em$>$str, char $\ast$first,char $\ast$second); short join\-\_\-3strings\-\_\-into(char $\ast$str, char $\ast$first,char $\ast$second,char third);
+
+Version\-: 1.\-0
+
+Description\-: joins two, or three strings -\/first and second ... and third -\/ into str
+
+Authors \& Date\-: Riccardo Rigon, 1999
+
+F\-I\-L\-E\-: L\-I\-B\-R\-A\-R\-I\-E\-S/\-B\-A\-S\-I\-C\-S/t\-\_\-utilities.\-h, L\-I\-B\-R\-A\-R\-I\-E\-S/\-B\-A\-S\-I\-C\-S/utilities.\-c
+
+Inputs\-: 1-\/ a pointer vector opf characters containing the final string; 2-\/ the first string; 3-\/the second string; 4 -\/ the third string
+
+Notes\-: Strings str is assumed to have the rigth dimensions to contain the other strings.
+
+Examples\-: make\-\_\-doc 
+
+Definition at line 282 of file utilities.\-c.
+
+
+
+References F\-L, and t\-\_\-error().
+
+\hypertarget{t__utilities_8h_adc5efe5d49c315e7939a7dece146b9e3}{\index{t\-\_\-utilities.\-h@{t\-\_\-utilities.\-h}!meter@{meter}}
+\index{meter@{meter}!t_utilities.h@{t\-\_\-utilities.\-h}}
+\subsubsection[{meter}]{\setlength{\rightskip}{0pt plus 5cm}void meter (
+\begin{DoxyParamCaption}
+\item[{long}]{index, }
+\item[{long}]{rows, }
+\item[{short}]{frequence, }
+\item[{const char $\ast$}]{message, }
+\item[{const char $\ast$}]{separator}
+\end{DoxyParamCaption}
+)}}\label{t__utilities_8h_adc5efe5d49c315e7939a7dece146b9e3}
+Name\-: meter
+
+Synopsis\-: void meter( long  index, long rows,  short frequence,const char$\ast$ message, const char$\ast$ separator);
+
+Version\-: 1.\-0
+
+Description\-: It can be used to print to the video a message saying how much of a cycle is already done
+
+Authors \& Date\-: Riccardo Rigon, 1999
+
+F\-I\-L\-E\-: L\-I\-B\-R\-A\-R\-I\-E\-S/\-B\-A\-S\-I\-C\-S/t\-\_\-utilities.\-h, L\-I\-B\-R\-A\-R\-I\-E\-S/\-B\-A\-S\-I\-C\-S/utilities.\-c
+
+Inputs\-: 1-\/ the variable containing the cycle position; 2-\/ the number of rows of a matrix or the total number of elements to be parsed; 3-\/ How many messages are requested to be output; 4-\/ the message to be print; 5-\/ the separator between successive messages. i.\-e \par
+,  and so on
+
+Examples\-: tca 
+
+Definition at line 170 of file utilities.\-c.
+
+\hypertarget{t__utilities_8h_a64bdb2d6f8795e5e1d607b54c76de170}{\index{t\-\_\-utilities.\-h@{t\-\_\-utilities.\-h}!search\-\_\-array@{search\-\_\-array}}
+\index{search\-\_\-array@{search\-\_\-array}!t_utilities.h@{t\-\_\-utilities.\-h}}
+\subsubsection[{search\-\_\-array}]{\setlength{\rightskip}{0pt plus 5cm}long search\-\_\-array (
+\begin{DoxyParamCaption}
+\item[{F\-I\-L\-E $\ast$}]{, }
+\item[{char $\ast$}]{, }
+\item[{char $\ast$}]{}
+\end{DoxyParamCaption}
+)}}\label{t__utilities_8h_a64bdb2d6f8795e5e1d607b54c76de170}
+Name\-: search\-\_\-array
+
+Synopsis\-: long \hyperlink{utilities_8c_a0e3a131df5f2ea4743329fcc0d08cdc8}{search\-\_\-array(\-F\-I\-L\-E $\ast$ input,char $\ast$type, char $\ast$category)}
+
+Version\-: 0.\-8
+
+Description\-: It searches array looks for the next array in file having the type and the category specified. Here as \char`\"{}array\char`\"{} is meant also the header of a matrix or a vector
+
+Authors \& date\-: Riccardo Rigon, February 1998
+
+F\-I\-L\-E\-: L\-I\-B\-R\-A\-I\-R\-E\-S/\-B\-A\-S\-I\-C\-S/t\-\_\-utilities.\-h, L\-I\-B\-R\-A\-R\-I\-E\-S/\-B\-A\-S\-I\-C\-S/utilities.\-c
+
+Inputs\-: 1) The pointer to the opened file; 2) The type of the array 3) The category of the array
+
+Return\-: the position in file of the searched array
+
+See Also\-: search\-\_\-named\-\_\-array, simple\-\_\-find 
+
+Definition at line 55 of file utilities.\-c.
+
+
+
+References H\-E\-A\-D\-E\-R\-::category, t\-\_\-keywords\-::category, header\-\_\-scan(), simplefind(), t\-\_\-error(), T\-\_\-\-K\-E\-Y\-W\-O\-R\-D\-S, H\-E\-A\-D\-E\-R\-::type, and t\-\_\-keywords\-::type.
+
+\hypertarget{t__utilities_8h_acad908e9220bc605ed32e57a1ead1e09}{\index{t\-\_\-utilities.\-h@{t\-\_\-utilities.\-h}!search\-\_\-named\-\_\-array@{search\-\_\-named\-\_\-array}}
+\index{search\-\_\-named\-\_\-array@{search\-\_\-named\-\_\-array}!t_utilities.h@{t\-\_\-utilities.\-h}}
+\subsubsection[{search\-\_\-named\-\_\-array}]{\setlength{\rightskip}{0pt plus 5cm}long search\-\_\-named\-\_\-array (
+\begin{DoxyParamCaption}
+\item[{F\-I\-L\-E $\ast$}]{, }
+\item[{char $\ast$}]{}
+\end{DoxyParamCaption}
+)}}\label{t__utilities_8h_acad908e9220bc605ed32e57a1ead1e09}
+Name\-: search\-\_\-named\-\_\-array
+
+Synopsis\-: long \hyperlink{utilities_8c_aab2417df5ffd5082c5ece8e27ae842bf}{search\-\_\-named\-\_\-array(\-F\-I\-L\-E $\ast$ input,char $\ast$name)}
+
+Version\-: 0.\-8
+
+Description\-: search named array looks for the next array in file having the name specified. Here as \char`\"{}array\char`\"{} is meant also the header of a matrix or a vector
+
+Authors \& date\-: Riccardo Rigon, February 1998
+
+F\-I\-L\-E\-: L\-I\-B\-R\-A\-I\-R\-E\-S/\-B\-A\-S\-I\-C\-S/t\-\_\-utilities.\-h, L\-I\-B\-R\-A\-R\-I\-E\-S/\-B\-A\-S\-I\-C\-S/utilities.\-c
+
+Inputs\-: 1) The pointer to the opened file; 2) The name of the array
+
+Return\-: the position in file of the searched array
+
+See Also\-: search\-\_\-array, simple\-\_\-find 
+
+Definition at line 9 of file utilities.\-c.
+
+
+
+References header\-\_\-scan(), H\-E\-A\-D\-E\-R\-::name, simplefind(), and t\-\_\-error().
+
+\hypertarget{t__utilities_8h_a35efd34af6815c5b4dfd8de69addd537}{\index{t\-\_\-utilities.\-h@{t\-\_\-utilities.\-h}!simplefind@{simplefind}}
+\index{simplefind@{simplefind}!t_utilities.h@{t\-\_\-utilities.\-h}}
+\subsubsection[{simplefind}]{\setlength{\rightskip}{0pt plus 5cm}long simplefind (
+\begin{DoxyParamCaption}
+\item[{F\-I\-L\-E $\ast$}]{, }
+\item[{const char $\ast$}]{}
+\end{DoxyParamCaption}
+)}}\label{t__utilities_8h_a35efd34af6815c5b4dfd8de69addd537}
+Name\-: long simplefind
+
+Synopsis\-: long \hyperlink{utilities_8c_a35ffae7df6ef6d69a367b5cf9ab5a8b3}{simplefind(\-F\-I\-L\-E $\ast$input,const char $\ast$string)};
+
+Version\-: 0.\-8
+
+Description\-: simplefind look for the next occurence in input file of the \char`\"{}string\char`\"{}
+
+F\-I\-L\-E\-: L\-I\-B\-R\-A\-I\-R\-E\-S/\-B\-A\-S\-I\-C\-S/t\-\_\-utilities.\-h, L\-I\-B\-R\-A\-R\-I\-E\-S/\-B\-A\-S\-I\-C\-S/utilities.\-c
+
+Authors \& date\-: Riccardo Rigon, February 1998
+
+F\-I\-L\-E\-: L\-I\-B\-R\-A\-I\-R\-E\-S/\-B\-A\-S\-I\-C\-S/t\-\_\-utilities.\-h, L\-I\-B\-R\-A\-R\-I\-E\-S/\-B\-A\-S\-I\-C\-S/utilities.\-c
+
+Inputs\-: 1) The pointer to the opened file 2) The pointer to the searched string
+
+Return\-: the position in input file of the found array
+
+See A\-Lso\-: search\-\_\-array, search\-\_\-named\-\_\-array 
+
+Definition at line 116 of file utilities.\-c.
+
+
+
+References t\-\_\-error().
+
+
+
+Referenced by get\-\_\-filename(), get\-\_\-parameter(), get\-\_\-strings(), read\-\_\-filenames(), read\-\_\-parameters(), search\-\_\-array(), and search\-\_\-named\-\_\-array().
+
+\hypertarget{t__utilities_8h_abc7f12c2dcc7b32cde0550c409ed95ed}{\index{t\-\_\-utilities.\-h@{t\-\_\-utilities.\-h}!ssimplefindkeyword@{ssimplefindkeyword}}
+\index{ssimplefindkeyword@{ssimplefindkeyword}!t_utilities.h@{t\-\_\-utilities.\-h}}
+\subsubsection[{ssimplefindkeyword}]{\setlength{\rightskip}{0pt plus 5cm}long ssimplefindkeyword (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{, }
+\item[{long}]{, }
+\item[{const char $\ast$}]{}
+\end{DoxyParamCaption}
+)}}\label{t__utilities_8h_abc7f12c2dcc7b32cde0550c409ed95ed}
+Name\-: ssimplefindkeyword
+
+Version\-: 0.\-95
+
+Synopsis\-: long \hyperlink{utilities_8c_a4593333208669c04734ca182feee7819}{ssimplefindkeyword(char $\ast$buffer,long bufferlength, const char $\ast$string)}
+
+Description\-: It finds a keyword contained in \char`\"{}string\char`\"{} in a \char`\"{}buffer\char`\"{} of length \char`\"{}bufferlength\char`\"{}. It also mark the position of the buffer preceding the returned position with a null character so that finally \char`\"{}buffer\char`\"{} is subdivided in many substrings.
+
+Authors \& Date\-: Riccardo Rigon, June 1998, December 1999.
+
+Inputs\-: A pointer to the buffer, the buffer length, the string to be searched
+
+Return\-: the position in buffer of the searched keyword
+
+File\-: L\-I\-B\-R\-A\-R\-I\-E\-S/\-U\-T\-I\-L\-I\-T\-I\-E\-S/utilities.\-c, L\-I\-B\-R\-A\-R\-I\-E\-S/\-U\-T\-I\-L\-I\-T\-I\-E\-S/t\-\_\-utilities.\-h
+
+Examples\-: make\-\_\-doc
+
+See Also\-: ../\-H\-A\-N\-D\-M\-A\-D\-E/documentation.html 
+
+Definition at line 186 of file utilities.\-c.
+
+
+
+References t\-\_\-error().
+
+\hypertarget{t__utilities_8h_aad115bd95a94025215aa780dfcf894aa}{\index{t\-\_\-utilities.\-h@{t\-\_\-utilities.\-h}!stop\-\_\-execution@{stop\-\_\-execution}}
+\index{stop\-\_\-execution@{stop\-\_\-execution}!t_utilities.h@{t\-\_\-utilities.\-h}}
+\subsubsection[{stop\-\_\-execution}]{\setlength{\rightskip}{0pt plus 5cm}void stop\-\_\-execution (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{t__utilities_8h_aad115bd95a94025215aa780dfcf894aa}
+Name\-: stop\-\_\-execution
+
+Synopsis\-: void \hyperlink{utilities_8c_aad115bd95a94025215aa780dfcf894aa}{stop\-\_\-execution(void)};
+
+Version\-: 0.\-96
+
+Description\-: top the execution of a program an wait for a key to bey pressed. It can be used in old style debugging to avoid to declare unuseful variables in routines
+
+Authors \& Date\-: Riccardo Rigon, June 2000
+
+Inputs\-: void
+
+Return\-: void
+
+F\-Ile\-: L\-I\-B\-R\-A\-R\-I\-E\-S/\-B\-A\-S\-I\-C\-S/utilities.\-c
+
+See Also\-: variance\-\_\-doublematrix\-\_\-column 
+
+Definition at line 319 of file utilities.\-c.
+
+
+
+Referenced by jacobi\-\_\-preconditioned\-\_\-conjugate\-\_\-gradient\-\_\-search(), min\-\_\-elevation(), new\-\_\-longbin\-\_\-from\-\_\-longbin\-\_\-cleaning\-\_\-novalues(), q\-\_\-discharge\-\_\-from\-\_\-outlet\-\_\-subs\-\_\-line(), read\-\_\-doublesquare\-\_\-grid(), read\-\_\-esriascii(), read\-\_\-grassascii(), read\-\_\-map(), vertical\-\_\-area\-\_\-subs(), vertical\-\_\-area\-\_\-surf(), volume\-\_\-subs(), volume\-\_\-surf(), and wet\-\_\-area().
+
+\hypertarget{t__utilities_8h_a73d319e433a56e137843274046ed14dc}{\index{t\-\_\-utilities.\-h@{t\-\_\-utilities.\-h}!time2date@{time2date}}
+\index{time2date@{time2date}!t_utilities.h@{t\-\_\-utilities.\-h}}
+\subsubsection[{time2date}]{\setlength{\rightskip}{0pt plus 5cm}void time2date (
+\begin{DoxyParamCaption}
+\item[{float}]{time, }
+\item[{long $\ast$}]{giulian, }
+\item[{long $\ast$}]{year, }
+\item[{long $\ast$}]{month, }
+\item[{long $\ast$}]{day, }
+\item[{long $\ast$}]{hour, }
+\item[{long $\ast$}]{min, }
+\item[{float $\ast$}]{sec}
+\end{DoxyParamCaption}
+)}}\label{t__utilities_8h_a73d319e433a56e137843274046ed14dc}
+
+
+Definition at line 332 of file utilities.\-c.
+

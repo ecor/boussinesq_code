@@ -1,0 +1,18 @@
+The program Boussinesq simulates the dynamics of water-\/table surface solved in a hillslope or a small catchment. The theory is based on the 2\-D Boussinesq Equation\-: \[ s\frac {\partial \eta} {\partial t} = \nabla \cdot \left[ K_S \, H (\eta,x,y) \, \nabla \eta \right]+Q \] where $ \eta $ is the piezometric elevation (unknown), $ t $ is time, $ \nabla $ is the space gradient operator, $ H(\eta,x,y) $ is the thickness of the aquifer which is a function of $ \eta $ and space, $Q $ is a source term which also accounts for boundary conditions, $K_S $ is the saturated hydraulic conductivity and $s $ is porosity . \begin{DoxyWarning}{Warning}
+The Boussinesq Equation is solved with finite volume numerical methods according to Casulli, 2008 ( \href{http://www3.interscience.wiley.com/journal/121377724/abstract?CRETRY=1&SRETRY=0}{\tt http\-://www3.\-interscience.\-wiley.\-com/journal/121377724/abstract?\-C\-R\-E\-T\-R\-Y=1\&\-S\-R\-E\-T\-R\-Y=0} and \href{http://onlinelibrary.wiley.com/doi/10.1002/wrcr.20072/references}{\tt http\-://onlinelibrary.\-wiley.\-com/doi/10.\-1002/wrcr.\-20072/references}) The Maps of distributed quantiaties are distributed as vectors of double float numbers (D\-O\-B\-L\-E\-V\-E\-C\-T\-O\-R data struct type ,in this case)
+\end{DoxyWarning}
+\begin{DoxyAuthor}{Author}
+Emanuele Cordano (\href{mailto:emanuele.cordano@gmail.com}{\tt emanuele.\-cordano@gmail.\-com}), Riccardo Rigon, Vincenzo Casulli, Stefano Endrizzi, Matteo Dall'Amico
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+3.\-2.\-1
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+2008-\/2009 (2013)
+\end{DoxyDate}
+\begin{DoxyAttention}{Attention}
+Boussinesq is free software\-: you can redistribute it and/or modify it under the terms of the G\-N\-U General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
+\end{DoxyAttention}
+This program is distributed in the hope that it will be useful, but W\-I\-T\-H\-O\-U\-T A\-N\-Y W\-A\-R\-R\-A\-N\-T\-Y; without even the implied warranty of M\-E\-R\-C\-H\-A\-N\-T\-A\-B\-I\-L\-I\-T\-Y or F\-I\-T\-N\-E\-S\-S F\-O\-R A P\-A\-R\-T\-I\-C\-U\-L\-A\-R P\-U\-R\-P\-O\-S\-E. See the G\-N\-U General Public License for more details.
+
+You should have received a copy of the G\-N\-U General Public License along with this program. If not, see \href{http://www.gnu.org/licenses/}{\tt http\-://www.\-gnu.\-org/licenses/}. 

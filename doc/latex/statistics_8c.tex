@@ -1,0 +1,301 @@
+\hypertarget{statistics_8c}{\section{F\-L\-U\-I\-D\-T\-U\-R\-T\-L\-E\-S/statistics.c File Reference}
+\label{statistics_8c}\index{F\-L\-U\-I\-D\-T\-U\-R\-T\-L\-E\-S/statistics.\-c@{F\-L\-U\-I\-D\-T\-U\-R\-T\-L\-E\-S/statistics.\-c}}
+}
+{\ttfamily \#include \char`\"{}turtle.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}t\-\_\-statistics.\-h\char`\"{}}\\*
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{statistics_8c_a52e707b2d97bfbe09ab9c30c509168bd}{M\-A\-X\-C\-O\-U\-N\-T\-E\-R}~3
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+float \hyperlink{statistics_8c_a6d729d9ebe3a1a80c541a4d621c64158}{longvector\-\_\-n\-\_\-moment} (\hyperlink{struct_l_o_n_g_v_e_c_t_o_r}{L\-O\-N\-G\-V\-E\-C\-T\-O\-R} $\ast$v, float mean, float N\-N, long novalue)
+\item 
+float \hyperlink{statistics_8c_a7075d23ec70d1fb80b1885b42542b279}{floatvector\-\_\-n\-\_\-moment} (\hyperlink{struct_f_l_o_a_t_v_e_c_t_o_r}{F\-L\-O\-A\-T\-V\-E\-C\-T\-O\-R} $\ast$v, float mean, float N\-N, float novalue)
+\item 
+double \hyperlink{statistics_8c_a1f34f56641a88ea58d25345fff5177b7}{doublevector\-\_\-n\-\_\-moment} (\hyperlink{struct_d_o_u_b_l_e_v_e_c_t_o_r}{D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} $\ast$v, float mean, float N\-N, double novalue)
+\item 
+float \hyperlink{statistics_8c_a8f6b421440c4cb7313052a0a217841fa}{floatmatrix\-\_\-n\-\_\-moment} (\hyperlink{struct_f_l_o_a_t_m_a_t_r_i_x}{F\-L\-O\-A\-T\-M\-A\-T\-R\-I\-X} $\ast$m, float mean, float N\-N, float novalue)
+\item 
+double \hyperlink{statistics_8c_af1291a1d910ba73397bf3f7c84ef2128}{doublematrix\-\_\-n\-\_\-moment} (\hyperlink{struct_d_o_u_b_l_e_m_a_t_r_i_x}{D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X} $\ast$m, double mean, double N\-N, double novalue)
+\item 
+float \hyperlink{statistics_8c_ae92875ab6eaef1df28afc712b9d155e8}{longmatrix\-\_\-n\-\_\-moment} (\hyperlink{struct_l_o_n_g_m_a_t_r_i_x}{L\-O\-N\-G\-M\-A\-T\-R\-I\-X} $\ast$m, double mean, double N\-N, long novalue)
+\item 
+float \hyperlink{statistics_8c_ac95867cf07f99da50e6aa92fe89edd41}{floatmatrix\-\_\-restricted\-\_\-n\-\_\-moment} (\hyperlink{struct_f_l_o_a_t_m_a_t_r_i_x}{F\-L\-O\-A\-T\-M\-A\-T\-R\-I\-X} $\ast$m, \hyperlink{struct_f_l_o_a_t_m_a_t_r_i_x}{F\-L\-O\-A\-T\-M\-A\-T\-R\-I\-X} $\ast$s, float mean, float N\-N, float novalue, float novalue2)
+\item 
+float \hyperlink{statistics_8c_a5c9be3af6cf15716dd9c606378de98de}{longvector\-\_\-correlation} (\hyperlink{struct_l_o_n_g_v_e_c_t_o_r}{L\-O\-N\-G\-V\-E\-C\-T\-O\-R} $\ast$v, \hyperlink{struct_l_o_n_g_v_e_c_t_o_r}{L\-O\-N\-G\-V\-E\-C\-T\-O\-R} $\ast$u, float m1, float m2, long r, long novalue)
+\item 
+float \hyperlink{statistics_8c_ab94adcb41ef3d9feb64141bda018b5e7}{floatvector\-\_\-correlation} (\hyperlink{struct_f_l_o_a_t_v_e_c_t_o_r}{F\-L\-O\-A\-T\-V\-E\-C\-T\-O\-R} $\ast$v, \hyperlink{struct_f_l_o_a_t_v_e_c_t_o_r}{F\-L\-O\-A\-T\-V\-E\-C\-T\-O\-R} $\ast$u, float m1, float m2, long r, float novalue)
+\item 
+double \hyperlink{statistics_8c_a88b0be63479ab6ca2fea70694c4961df}{doublevector\-\_\-correlation} (\hyperlink{struct_d_o_u_b_l_e_v_e_c_t_o_r}{D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} $\ast$v, \hyperlink{struct_d_o_u_b_l_e_v_e_c_t_o_r}{D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} $\ast$u, double m1, double m2, long r, double novalue)
+\item 
+double \hyperlink{statistics_8c_aef2ede7d40ee8ba0578102ca493e3be2}{double\-\_\-n\-\_\-moment} (double $\ast$m, long nh, double mean, double N\-N, double novalue)
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{statistics_8c_a52e707b2d97bfbe09ab9c30c509168bd}{\index{statistics.\-c@{statistics.\-c}!M\-A\-X\-C\-O\-U\-N\-T\-E\-R@{M\-A\-X\-C\-O\-U\-N\-T\-E\-R}}
+\index{M\-A\-X\-C\-O\-U\-N\-T\-E\-R@{M\-A\-X\-C\-O\-U\-N\-T\-E\-R}!statistics.c@{statistics.\-c}}
+\subsubsection[{M\-A\-X\-C\-O\-U\-N\-T\-E\-R}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\-A\-X\-C\-O\-U\-N\-T\-E\-R~3}}\label{statistics_8c_a52e707b2d97bfbe09ab9c30c509168bd}
+
+
+Definition at line 3 of file statistics.\-c.
+
+
+
+\subsection{Function Documentation}
+\hypertarget{statistics_8c_aef2ede7d40ee8ba0578102ca493e3be2}{\index{statistics.\-c@{statistics.\-c}!double\-\_\-n\-\_\-moment@{double\-\_\-n\-\_\-moment}}
+\index{double\-\_\-n\-\_\-moment@{double\-\_\-n\-\_\-moment}!statistics.c@{statistics.\-c}}
+\subsubsection[{double\-\_\-n\-\_\-moment}]{\setlength{\rightskip}{0pt plus 5cm}double double\-\_\-n\-\_\-moment (
+\begin{DoxyParamCaption}
+\item[{double $\ast$}]{m, }
+\item[{long}]{nh, }
+\item[{double}]{mean, }
+\item[{double}]{N\-N, }
+\item[{double}]{novalue}
+\end{DoxyParamCaption}
+)}}\label{statistics_8c_aef2ede7d40ee8ba0578102ca493e3be2}
+
+
+Definition at line 526 of file statistics.\-c.
+
+
+
+References t\-\_\-error().
+
+\hypertarget{statistics_8c_af1291a1d910ba73397bf3f7c84ef2128}{\index{statistics.\-c@{statistics.\-c}!doublematrix\-\_\-n\-\_\-moment@{doublematrix\-\_\-n\-\_\-moment}}
+\index{doublematrix\-\_\-n\-\_\-moment@{doublematrix\-\_\-n\-\_\-moment}!statistics.c@{statistics.\-c}}
+\subsubsection[{doublematrix\-\_\-n\-\_\-moment}]{\setlength{\rightskip}{0pt plus 5cm}double doublematrix\-\_\-n\-\_\-moment (
+\begin{DoxyParamCaption}
+\item[{{\bf D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X} $\ast$}]{m, }
+\item[{double}]{mean, }
+\item[{double}]{N\-N, }
+\item[{double}]{novalue}
+\end{DoxyParamCaption}
+)}}\label{statistics_8c_af1291a1d910ba73397bf3f7c84ef2128}
+
+
+Definition at line 236 of file statistics.\-c.
+
+
+
+References D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X\-::co, D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X\-::isdynamic, D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X\-::nch, D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X\-::nrh, and t\-\_\-error().
+
+\hypertarget{statistics_8c_a88b0be63479ab6ca2fea70694c4961df}{\index{statistics.\-c@{statistics.\-c}!doublevector\-\_\-correlation@{doublevector\-\_\-correlation}}
+\index{doublevector\-\_\-correlation@{doublevector\-\_\-correlation}!statistics.c@{statistics.\-c}}
+\subsubsection[{doublevector\-\_\-correlation}]{\setlength{\rightskip}{0pt plus 5cm}double doublevector\-\_\-correlation (
+\begin{DoxyParamCaption}
+\item[{{\bf D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} $\ast$}]{, }
+\item[{{\bf D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} $\ast$}]{, }
+\item[{double}]{, }
+\item[{double}]{, }
+\item[{long}]{, }
+\item[{double}]{}
+\end{DoxyParamCaption}
+)}}\label{statistics_8c_a88b0be63479ab6ca2fea70694c4961df}
+Name\-: doublevector\-\_\-correlation, floatvector\-\_\-correlation, longvector\-\_\-correlation
+
+Synopsis\-: double \hyperlink{t__statistics_8h_a3985f9822b163549aba88c5c19a9cbcd}{doublevector\-\_\-correlation(\-D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R $\ast$,\-D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R $\ast$,double ,double ,long ,double )}; float \hyperlink{t__statistics_8h_a157f2904958d308dc67349fe9f446a9c}{floatvector\-\_\-correlation(\-F\-L\-O\-A\-T\-V\-E\-C\-T\-O\-R $\ast$,\-F\-L\-O\-A\-T\-V\-E\-C\-T\-O\-R $\ast$u,float ,float ,long  ,float )}; float \hyperlink{t__statistics_8h_a1f7435372f7d4708d1dceafcdcbeae28}{longvector\-\_\-correlation(\-L\-O\-N\-G\-V\-E\-C\-T\-O\-R $\ast$,\-L\-O\-N\-G\-V\-E\-C\-T\-O\-R $\ast$,float,float ,long ,long)};
+
+Description\-: It calculates the biased corretion between two vectors of the specified type.
+
+Inputs\-: 1) the first vector; 2) the second vector; 3) the first vector mean; 4) the second vector mean; 5) the lag at which the correlation is calculated; 6) the value that identify \char`\"{}\-N\-O D\-A\-T\-A\char`\"{}
+
+Return\-: biased correlation (the division factor is the length of the vector minus the number of missing data)
+
+F\-I\-L\-E\-: L\-I\-B\-R\-A\-R\-I\-E\-S/\-B\-A\-S\-I\-C\-M\-A\-T\-H\-S\-T\-A\-T/statistics.\-c, L\-I\-B\-R\-A\-R\-I\-E\-S/\-B\-A\-S\-I\-C\-M\-A\-T\-H\-S\-T\-A\-T/t\-\_\-statistics.\-h
+
+Examples\-: hystogram.\-c
+
+Authors \& Date\-: Paolo D'Odorico, Riccardo Rigon, February 1998.
+
+References\-: Probability, Statistics, and Reliability for Civil and Environmental Engineers 
+
+Definition at line 490 of file statistics.\-c.
+
+
+
+References D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R\-::co, D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R\-::isdynamic, D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R\-::nh, and t\-\_\-error().
+
+\hypertarget{statistics_8c_a1f34f56641a88ea58d25345fff5177b7}{\index{statistics.\-c@{statistics.\-c}!doublevector\-\_\-n\-\_\-moment@{doublevector\-\_\-n\-\_\-moment}}
+\index{doublevector\-\_\-n\-\_\-moment@{doublevector\-\_\-n\-\_\-moment}!statistics.c@{statistics.\-c}}
+\subsubsection[{doublevector\-\_\-n\-\_\-moment}]{\setlength{\rightskip}{0pt plus 5cm}double doublevector\-\_\-n\-\_\-moment (
+\begin{DoxyParamCaption}
+\item[{{\bf D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} $\ast$}]{v, }
+\item[{float}]{mean, }
+\item[{float}]{N\-N, }
+\item[{double}]{novalue}
+\end{DoxyParamCaption}
+)}}\label{statistics_8c_a1f34f56641a88ea58d25345fff5177b7}
+
+
+Definition at line 117 of file statistics.\-c.
+
+
+
+References D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R\-::co, D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R\-::isdynamic, D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R\-::nh, and t\-\_\-error().
+
+\hypertarget{statistics_8c_a8f6b421440c4cb7313052a0a217841fa}{\index{statistics.\-c@{statistics.\-c}!floatmatrix\-\_\-n\-\_\-moment@{floatmatrix\-\_\-n\-\_\-moment}}
+\index{floatmatrix\-\_\-n\-\_\-moment@{floatmatrix\-\_\-n\-\_\-moment}!statistics.c@{statistics.\-c}}
+\subsubsection[{floatmatrix\-\_\-n\-\_\-moment}]{\setlength{\rightskip}{0pt plus 5cm}float floatmatrix\-\_\-n\-\_\-moment (
+\begin{DoxyParamCaption}
+\item[{{\bf F\-L\-O\-A\-T\-M\-A\-T\-R\-I\-X} $\ast$}]{m, }
+\item[{float}]{mean, }
+\item[{float}]{N\-N, }
+\item[{float}]{novalue}
+\end{DoxyParamCaption}
+)}}\label{statistics_8c_a8f6b421440c4cb7313052a0a217841fa}
+
+
+Definition at line 174 of file statistics.\-c.
+
+
+
+References F\-L\-O\-A\-T\-M\-A\-T\-R\-I\-X\-::co, F\-L\-O\-A\-T\-M\-A\-T\-R\-I\-X\-::isdynamic, F\-L\-O\-A\-T\-M\-A\-T\-R\-I\-X\-::nch, F\-L\-O\-A\-T\-M\-A\-T\-R\-I\-X\-::nrh, and t\-\_\-error().
+
+\hypertarget{statistics_8c_ac95867cf07f99da50e6aa92fe89edd41}{\index{statistics.\-c@{statistics.\-c}!floatmatrix\-\_\-restricted\-\_\-n\-\_\-moment@{floatmatrix\-\_\-restricted\-\_\-n\-\_\-moment}}
+\index{floatmatrix\-\_\-restricted\-\_\-n\-\_\-moment@{floatmatrix\-\_\-restricted\-\_\-n\-\_\-moment}!statistics.c@{statistics.\-c}}
+\subsubsection[{floatmatrix\-\_\-restricted\-\_\-n\-\_\-moment}]{\setlength{\rightskip}{0pt plus 5cm}float floatmatrix\-\_\-restricted\-\_\-n\-\_\-moment (
+\begin{DoxyParamCaption}
+\item[{{\bf F\-L\-O\-A\-T\-M\-A\-T\-R\-I\-X} $\ast$}]{, }
+\item[{{\bf F\-L\-O\-A\-T\-M\-A\-T\-R\-I\-X} $\ast$}]{, }
+\item[{float}]{, }
+\item[{float}]{, }
+\item[{float}]{, }
+\item[{float}]{}
+\end{DoxyParamCaption}
+)}}\label{statistics_8c_ac95867cf07f99da50e6aa92fe89edd41}
+Name\-:floatmatrix\-\_\-restricted \-\_\-n\-\_\-moment
+
+Synopsis\-: float floatmatrix\-\_\-n\-\_\-moment(\-F\-L\-O\-A\-T\-M\-A\-T\-R\-I\-X $\ast$first,\-F\-L\-O\-A\-T\-M\-A\-T\-R\-I\-X $\ast$second, float ,float , float,float );
+
+Description\-: It calculates the biased n moment of a vector or a matrix of the specified type as floatmatrix\-\_\-n\-\_\-moment but it uses the subset of points that are not novalue2 in a second nmatrix
+
+Inputs\-: 1) the first matrix; 2) The second matrix; 3) the first matrix mean; 4) the second matrix mean; 5) the value that identify \char`\"{}\-N\-O D\-A\-T\-A\char`\"{} or \char`\"{}\-M\-I\-S\-S\-I\-N\-G D\-A\-T\-A\char`\"{} in the first matrix (a sequence of mesasured data usually contains points where the data were not detected or monitored); 6) the vector that identify \char`\"{}\-N\-O D\-A\-T\-A\char`\"{} in the second matrix
+
+Return\-: biased n moment (the division factor is the length of the vector minus the number of missing data)
+
+Authors \& date\-: Paolo D'Odorico, Riccardo Rigon, February 1998.
+
+F\-I\-L\-E\-: L\-I\-B\-R\-A\-R\-I\-E\-S/\-B\-A\-S\-I\-C\-M\-A\-T\-H\-S\-T\-A\-T/statistics.\-c, L\-I\-B\-R\-A\-R\-I\-E\-S/\-B\-A\-S\-I\-C\-M\-A\-T\-H\-S\-T\-A\-T/t\-\_\-statistics.\-h
+
+Examples\-: L\-I\-B\-R\-A\-R\-I\-E\-S/\-A\-P\-P\-L\-I\-C\-A\-T\-I\-O\-N\-S/\-G\-E\-O\-M\-O\-R\-P\-H\-O\-L\-O\-G\-Y/\-R\-I\-V\-E\-R\-\_\-\-N\-E\-T\-W\-O\-R\-K\-S/sum\-\_\-downstream.\-c 
+
+Definition at line 357 of file statistics.\-c.
+
+
+
+References F\-L\-O\-A\-T\-M\-A\-T\-R\-I\-X\-::co, F\-L\-O\-A\-T\-M\-A\-T\-R\-I\-X\-::isdynamic, F\-L\-O\-A\-T\-M\-A\-T\-R\-I\-X\-::nch, F\-L\-O\-A\-T\-M\-A\-T\-R\-I\-X\-::nrh, and t\-\_\-error().
+
+\hypertarget{statistics_8c_ab94adcb41ef3d9feb64141bda018b5e7}{\index{statistics.\-c@{statistics.\-c}!floatvector\-\_\-correlation@{floatvector\-\_\-correlation}}
+\index{floatvector\-\_\-correlation@{floatvector\-\_\-correlation}!statistics.c@{statistics.\-c}}
+\subsubsection[{floatvector\-\_\-correlation}]{\setlength{\rightskip}{0pt plus 5cm}float floatvector\-\_\-correlation (
+\begin{DoxyParamCaption}
+\item[{{\bf F\-L\-O\-A\-T\-V\-E\-C\-T\-O\-R} $\ast$}]{v, }
+\item[{{\bf F\-L\-O\-A\-T\-V\-E\-C\-T\-O\-R} $\ast$}]{u, }
+\item[{float}]{m1, }
+\item[{float}]{m2, }
+\item[{long}]{r, }
+\item[{float}]{novalue}
+\end{DoxyParamCaption}
+)}}\label{statistics_8c_ab94adcb41ef3d9feb64141bda018b5e7}
+
+
+Definition at line 456 of file statistics.\-c.
+
+
+
+References F\-L\-O\-A\-T\-V\-E\-C\-T\-O\-R\-::co, F\-L\-O\-A\-T\-V\-E\-C\-T\-O\-R\-::isdynamic, F\-L\-O\-A\-T\-V\-E\-C\-T\-O\-R\-::nh, and t\-\_\-error().
+
+\hypertarget{statistics_8c_a7075d23ec70d1fb80b1885b42542b279}{\index{statistics.\-c@{statistics.\-c}!floatvector\-\_\-n\-\_\-moment@{floatvector\-\_\-n\-\_\-moment}}
+\index{floatvector\-\_\-n\-\_\-moment@{floatvector\-\_\-n\-\_\-moment}!statistics.c@{statistics.\-c}}
+\subsubsection[{floatvector\-\_\-n\-\_\-moment}]{\setlength{\rightskip}{0pt plus 5cm}float floatvector\-\_\-n\-\_\-moment (
+\begin{DoxyParamCaption}
+\item[{{\bf F\-L\-O\-A\-T\-V\-E\-C\-T\-O\-R} $\ast$}]{v, }
+\item[{float}]{mean, }
+\item[{float}]{N\-N, }
+\item[{float}]{novalue}
+\end{DoxyParamCaption}
+)}}\label{statistics_8c_a7075d23ec70d1fb80b1885b42542b279}
+
+
+Definition at line 61 of file statistics.\-c.
+
+
+
+References F\-L\-O\-A\-T\-V\-E\-C\-T\-O\-R\-::co, F\-L\-O\-A\-T\-V\-E\-C\-T\-O\-R\-::isdynamic, F\-L\-O\-A\-T\-V\-E\-C\-T\-O\-R\-::nh, and t\-\_\-error().
+
+\hypertarget{statistics_8c_ae92875ab6eaef1df28afc712b9d155e8}{\index{statistics.\-c@{statistics.\-c}!longmatrix\-\_\-n\-\_\-moment@{longmatrix\-\_\-n\-\_\-moment}}
+\index{longmatrix\-\_\-n\-\_\-moment@{longmatrix\-\_\-n\-\_\-moment}!statistics.c@{statistics.\-c}}
+\subsubsection[{longmatrix\-\_\-n\-\_\-moment}]{\setlength{\rightskip}{0pt plus 5cm}float longmatrix\-\_\-n\-\_\-moment (
+\begin{DoxyParamCaption}
+\item[{{\bf L\-O\-N\-G\-M\-A\-T\-R\-I\-X} $\ast$}]{, }
+\item[{double}]{, }
+\item[{double}]{, }
+\item[{long}]{}
+\end{DoxyParamCaption}
+)}}\label{statistics_8c_ae92875ab6eaef1df28afc712b9d155e8}
+Name\-: \-\_\-n\-\_\-moment
+
+Synopsis\-: float \hyperlink{t__statistics_8h_a8330563e1cfffb1a0cf3e7cc7b13c2db}{longmatrix\-\_\-n\-\_\-moment(\-L\-O\-N\-G\-M\-A\-T\-R\-I\-X $\ast$, double ,double , long )}; double \hyperlink{t__statistics_8h_a3463f1441614892fa0a091fd95af3f1f}{doublematrix\-\_\-n\-\_\-moment(\-D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X $\ast$, double ,double  , double )}; float \hyperlink{t__statistics_8h_a7b807377ee62171141d204ded0533de0}{floatmatrix\-\_\-n\-\_\-moment(\-F\-L\-O\-A\-T\-M\-A\-T\-R\-I\-X $\ast$, float ,float , float )}; double \hyperlink{t__statistics_8h_a98b073a2b4216728615f1ce3f8e4aaf0}{doublevector\-\_\-n\-\_\-moment(\-D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R $\ast$, float ,float , double )}; float \hyperlink{t__statistics_8h_ad76f7d2de7629f3db8a4a62188747f7f}{floatvector\-\_\-n\-\_\-moment(\-F\-L\-O\-A\-T\-V\-E\-C\-T\-O\-R $\ast$, float ,float , float )}; float \hyperlink{t__statistics_8h_a6862ed504c5489358136157708a4b54a}{longvector\-\_\-n\-\_\-moment(\-L\-O\-N\-G\-V\-E\-C\-T\-O\-R $\ast$, float ,float , long )};
+
+Description\-: It calculates the biased n moment of a vector or a matrix of the specified type
+
+Inputs\-: 1) the first vector; 2) the second vector; 3) the first vector mean; 4) the second vector mean; 5) the value that identify \char`\"{}\-N\-O D\-A\-T\-A\char`\"{} or \char`\"{}\-M\-I\-S\-S\-I\-N\-G D\-A\-T\-A\char`\"{} (a sequence of mesasured data usually contains points where the data were not detected or monitored)
+
+Return\-: biased n moment (the division factor is the length of the vector minus the number of missing data)
+
+Examples\-: L\-I\-B\-R\-A\-R\-I\-E\-S/\-A\-P\-P\-L\-I\-C\-A\-T\-I\-O\-N\-S/\-D\-A\-T\-A\-\_\-\-M\-A\-N\-I\-P\-U\-L\-A\-T\-I\-O\-N/hystogram.\-c
+
+See Also\-: doublevector\-\_\-correlation
+
+Authors \& date\-: Paolo D'Odorico, Riccardo Rigon, February 1998.
+
+F\-I\-L\-E\-: L\-I\-B\-R\-A\-R\-I\-E\-S/\-B\-A\-S\-I\-C\-M\-A\-T\-H\-S\-T\-A\-T/statistics.\-c, L\-I\-B\-R\-A\-R\-I\-E\-S/\-B\-A\-S\-I\-C\-M\-A\-T\-H\-S\-T\-A\-T/t\-\_\-statistics.\-h 
+
+Definition at line 298 of file statistics.\-c.
+
+
+
+References L\-O\-N\-G\-M\-A\-T\-R\-I\-X\-::co, L\-O\-N\-G\-M\-A\-T\-R\-I\-X\-::isdynamic, L\-O\-N\-G\-M\-A\-T\-R\-I\-X\-::nch, L\-O\-N\-G\-M\-A\-T\-R\-I\-X\-::nrh, and t\-\_\-error().
+
+\hypertarget{statistics_8c_a5c9be3af6cf15716dd9c606378de98de}{\index{statistics.\-c@{statistics.\-c}!longvector\-\_\-correlation@{longvector\-\_\-correlation}}
+\index{longvector\-\_\-correlation@{longvector\-\_\-correlation}!statistics.c@{statistics.\-c}}
+\subsubsection[{longvector\-\_\-correlation}]{\setlength{\rightskip}{0pt plus 5cm}float longvector\-\_\-correlation (
+\begin{DoxyParamCaption}
+\item[{{\bf L\-O\-N\-G\-V\-E\-C\-T\-O\-R} $\ast$}]{v, }
+\item[{{\bf L\-O\-N\-G\-V\-E\-C\-T\-O\-R} $\ast$}]{u, }
+\item[{float}]{m1, }
+\item[{float}]{m2, }
+\item[{long}]{r, }
+\item[{long}]{novalue}
+\end{DoxyParamCaption}
+)}}\label{statistics_8c_a5c9be3af6cf15716dd9c606378de98de}
+
+
+Definition at line 421 of file statistics.\-c.
+
+
+
+References L\-O\-N\-G\-V\-E\-C\-T\-O\-R\-::co, L\-O\-N\-G\-V\-E\-C\-T\-O\-R\-::isdynamic, L\-O\-N\-G\-V\-E\-C\-T\-O\-R\-::nh, and t\-\_\-error().
+
+\hypertarget{statistics_8c_a6d729d9ebe3a1a80c541a4d621c64158}{\index{statistics.\-c@{statistics.\-c}!longvector\-\_\-n\-\_\-moment@{longvector\-\_\-n\-\_\-moment}}
+\index{longvector\-\_\-n\-\_\-moment@{longvector\-\_\-n\-\_\-moment}!statistics.c@{statistics.\-c}}
+\subsubsection[{longvector\-\_\-n\-\_\-moment}]{\setlength{\rightskip}{0pt plus 5cm}float longvector\-\_\-n\-\_\-moment (
+\begin{DoxyParamCaption}
+\item[{{\bf L\-O\-N\-G\-V\-E\-C\-T\-O\-R} $\ast$}]{v, }
+\item[{float}]{mean, }
+\item[{float}]{N\-N, }
+\item[{long}]{novalue}
+\end{DoxyParamCaption}
+)}}\label{statistics_8c_a6d729d9ebe3a1a80c541a4d621c64158}
+
+
+Definition at line 6 of file statistics.\-c.
+
+
+
+References L\-O\-N\-G\-V\-E\-C\-T\-O\-R\-::co, L\-O\-N\-G\-V\-E\-C\-T\-O\-R\-::isdynamic, L\-O\-N\-G\-V\-E\-C\-T\-O\-R\-::nh, and t\-\_\-error().
+

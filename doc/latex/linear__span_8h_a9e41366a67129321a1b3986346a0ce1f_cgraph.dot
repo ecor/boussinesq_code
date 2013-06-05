@@ -1,0 +1,16 @@
+digraph "prod_doublematvet"
+{
+  bgcolor="transparent";
+  edge [fontname="FreeSans",fontsize="10",labelfontname="FreeSans",labelfontsize="10"];
+  node [fontname="FreeSans",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="prod_doublematvet",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="new_doublevector",height=0.2,width=0.4,color="black",URL="$alloc_8c.html#a724e4d54ff17ee3caa26463378109887"];
+  Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="dvector",height=0.2,width=0.4,color="black",URL="$alloc_8c.html#ae21c4c252ad5d5710ebd03d6f07e40de"];
+  Node3 -> Node4 [color="midnightblue",fontsize="10",style="solid"];
+  Node4 [label="t_error",height=0.2,width=0.4,color="black",URL="$error_8c.html#af79ef7c6656ef0f3d2786e2b09c1755f"];
+  Node2 -> Node4 [color="midnightblue",fontsize="10",style="solid"];
+  Node1 -> Node4 [color="midnightblue",fontsize="10",style="solid"];
+}

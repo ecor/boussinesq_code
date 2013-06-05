@@ -1,0 +1,306 @@
+\hypertarget{geometry__utilities_8h}{\section{B\-G\-E\-O\-M\-E\-T\-R\-Y/geometry\-\_\-utilities.h File Reference}
+\label{geometry__utilities_8h}\index{B\-G\-E\-O\-M\-E\-T\-R\-Y/geometry\-\_\-utilities.\-h@{B\-G\-E\-O\-M\-E\-T\-R\-Y/geometry\-\_\-utilities.\-h}}
+}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{geometry__utilities_8h_a9bb06bb1bea73190de961869ae691403}{signum} (long a)
+\item 
+double \hyperlink{geometry__utilities_8h_a12c64e39bdb724a66dab8a3c95e501b1}{area2d} (\hyperlink{struct_p_o_i_n_t}{P\-O\-I\-N\-T} $\ast$P1, \hyperlink{struct_p_o_i_n_t}{P\-O\-I\-N\-T} $\ast$P2, \hyperlink{struct_p_o_i_n_t}{P\-O\-I\-N\-T} $\ast$P3)
+\item 
+int \hyperlink{geometry__utilities_8h_adf07f959f39f183cdda64984fd97471e}{check\-\_\-3\-\_\-numbers} (long a, long b, long c)
+\item 
+int \hyperlink{geometry__utilities_8h_a06dbe2dc026c9995a3cff49c5ab9ff46}{check\-\_\-vertex\-\_\-intersection\-\_\-2\-\_\-lines} (long b1, long e1, long b2, long e2)
+\item 
+long \hyperlink{geometry__utilities_8h_a1ff1ee95b124d56c7a5e5c7c1f3ff425}{query\-\_\-freq\-\_\-longvector} (\hyperlink{struct_l_o_n_g_v_e_c_t_o_r}{L\-O\-N\-G\-V\-E\-C\-T\-O\-R} $\ast$\hyperlink{t__alloc_8h_af4f505f2dcb9ffd8fb12a7750b38b7e5}{lvector}, long value)
+\item 
+int \hyperlink{geometry__utilities_8h_acc2804c94dc8291d2b41d30316158605}{segment\-\_\-intersection\-\_\-occurence} (\hyperlink{struct_l_i_n_e}{L\-I\-N\-E} $\ast$L1, \hyperlink{struct_l_i_n_e}{L\-I\-N\-E} $\ast$L2)
+\item 
+int \hyperlink{geometry__utilities_8h_a1592fc15598ad4a9665f2a1c903fa2a6}{signum\-\_\-double} (double a)
+\item 
+double \hyperlink{geometry__utilities_8h_a07ea39ba382bc83eec795d9381a19b76}{distance2\-D} (\hyperlink{struct_p_o_i_n_t}{P\-O\-I\-N\-T} $\ast$P1, \hyperlink{struct_p_o_i_n_t}{P\-O\-I\-N\-T} $\ast$P2)
+\item 
+long \hyperlink{geometry__utilities_8h_a2e90fff5f5dcf081b2b49d0ecd9e4c04}{shared\-\_\-edges} (\hyperlink{struct_p_o_l_y_g_o_n}{P\-O\-L\-Y\-G\-O\-N} $\ast$P\-O1, \hyperlink{struct_p_o_l_y_g_o_n}{P\-O\-L\-Y\-G\-O\-N} $\ast$P\-O2, long no\-\_\-intersection, long $\ast$l\-\_\-po1, long $\ast$l\-\_\-po2, double $\ast$dist\-\_\-centroids)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{geometry__utilities_8h_a12c64e39bdb724a66dab8a3c95e501b1}{\index{geometry\-\_\-utilities.\-h@{geometry\-\_\-utilities.\-h}!area2d@{area2d}}
+\index{area2d@{area2d}!geometry_utilities.h@{geometry\-\_\-utilities.\-h}}
+\subsubsection[{area2d}]{\setlength{\rightskip}{0pt plus 5cm}double area2d (
+\begin{DoxyParamCaption}
+\item[{{\bf P\-O\-I\-N\-T} $\ast$}]{P1, }
+\item[{{\bf P\-O\-I\-N\-T} $\ast$}]{P2, }
+\item[{{\bf P\-O\-I\-N\-T} $\ast$}]{P3}
+\end{DoxyParamCaption}
+)}}\label{geometry__utilities_8h_a12c64e39bdb724a66dab8a3c95e501b1}
+\begin{DoxyReturn}{Returns}
+calculetes the area of the triangle among three points; 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Emanuele Cordano 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+October 2008
+\end{DoxyDate}
+area's formulas on \href{http://it.wikipedia.org/wiki/Triangolo}{\tt http\-://it.\-wikipedia.\-org/wiki/\-Triangolo}
+
+Definition at line 154 of file geometry\-\_\-utilities.\-c.
+
+
+
+References P\-O\-I\-N\-T\-::x, and P\-O\-I\-N\-T\-::y.
+
+
+
+Referenced by new\-\_\-polygon\-\_\-from\-\_\-a\-\_\-linevector().
+
+\hypertarget{geometry__utilities_8h_adf07f959f39f183cdda64984fd97471e}{\index{geometry\-\_\-utilities.\-h@{geometry\-\_\-utilities.\-h}!check\-\_\-3\-\_\-numbers@{check\-\_\-3\-\_\-numbers}}
+\index{check\-\_\-3\-\_\-numbers@{check\-\_\-3\-\_\-numbers}!geometry_utilities.h@{geometry\-\_\-utilities.\-h}}
+\subsubsection[{check\-\_\-3\-\_\-numbers}]{\setlength{\rightskip}{0pt plus 5cm}int check\-\_\-3\-\_\-numbers (
+\begin{DoxyParamCaption}
+\item[{long}]{a, }
+\item[{long}]{b, }
+\item[{long}]{c}
+\end{DoxyParamCaption}
+)}}\label{geometry__utilities_8h_adf07f959f39f183cdda64984fd97471e}
+
+\begin{DoxyParams}{Parameters}
+{\em (long)} & a,b,c -\/ three long integer values \\
+\hline
+\end{DoxyParams}
+\begin{DoxyAuthor}{Author}
+Emanuele Cordano 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+October 2008
+\end{DoxyDate}
+\begin{DoxyReturn}{Returns}
+1 if a=b=c , 0 otherwise
+\end{DoxyReturn}
+
+
+Definition at line 139 of file geometry\-\_\-utilities.\-c.
+
+
+
+References F\-A\-L\-S\-E, and T\-R\-U\-E.
+
+\hypertarget{geometry__utilities_8h_a06dbe2dc026c9995a3cff49c5ab9ff46}{\index{geometry\-\_\-utilities.\-h@{geometry\-\_\-utilities.\-h}!check\-\_\-vertex\-\_\-intersection\-\_\-2\-\_\-lines@{check\-\_\-vertex\-\_\-intersection\-\_\-2\-\_\-lines}}
+\index{check\-\_\-vertex\-\_\-intersection\-\_\-2\-\_\-lines@{check\-\_\-vertex\-\_\-intersection\-\_\-2\-\_\-lines}!geometry_utilities.h@{geometry\-\_\-utilities.\-h}}
+\subsubsection[{check\-\_\-vertex\-\_\-intersection\-\_\-2\-\_\-lines}]{\setlength{\rightskip}{0pt plus 5cm}int check\-\_\-vertex\-\_\-intersection\-\_\-2\-\_\-lines (
+\begin{DoxyParamCaption}
+\item[{long}]{b1, }
+\item[{long}]{e1, }
+\item[{long}]{b2, }
+\item[{long}]{e2}
+\end{DoxyParamCaption}
+)}}\label{geometry__utilities_8h_a06dbe2dc026c9995a3cff49c5ab9ff46}
+
+\begin{DoxyParams}{Parameters}
+{\em (long)} & b1 -\/ begin point index of line 1 \\
+\hline
+{\em (long)} & e1 -\/ end point index of line 1 \\
+\hline
+{\em (long)} & b2 -\/ begin point index of line 2 \\
+\hline
+{\em (long)} & e2 -\/ end point index of line 2\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 if the lines are not connected, 1 if they share only 1 edge, 2 if they share both the edges 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Emanuele Cordano  October 2008
+\end{DoxyAuthor}
+the two lines coincide
+
+the lines share a vertex
+
+the lines has no intersection at the edges 
+
+Definition at line 113 of file geometry\-\_\-utilities.\-c.
+
+
+
+References signum().
+
+\hypertarget{geometry__utilities_8h_a07ea39ba382bc83eec795d9381a19b76}{\index{geometry\-\_\-utilities.\-h@{geometry\-\_\-utilities.\-h}!distance2\-D@{distance2\-D}}
+\index{distance2\-D@{distance2\-D}!geometry_utilities.h@{geometry\-\_\-utilities.\-h}}
+\subsubsection[{distance2\-D}]{\setlength{\rightskip}{0pt plus 5cm}double distance2\-D (
+\begin{DoxyParamCaption}
+\item[{{\bf P\-O\-I\-N\-T} $\ast$}]{P1, }
+\item[{{\bf P\-O\-I\-N\-T} $\ast$}]{P2}
+\end{DoxyParamCaption}
+)}}\label{geometry__utilities_8h_a07ea39ba382bc83eec795d9381a19b76}
+\begin{DoxyReturn}{Returns}
+euclidean 2d distance between points P1 and P2 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Emanuele Cordano 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+October 2008
+\end{DoxyDate}
+
+
+Definition at line 177 of file geometry\-\_\-utilities.\-c.
+
+
+
+References P\-O\-I\-N\-T\-::x, and P\-O\-I\-N\-T\-::y.
+
+
+
+Referenced by new\-\_\-line\-\_\-from\-\_\-points(), and shared\-\_\-edges().
+
+\hypertarget{geometry__utilities_8h_a1ff1ee95b124d56c7a5e5c7c1f3ff425}{\index{geometry\-\_\-utilities.\-h@{geometry\-\_\-utilities.\-h}!query\-\_\-freq\-\_\-longvector@{query\-\_\-freq\-\_\-longvector}}
+\index{query\-\_\-freq\-\_\-longvector@{query\-\_\-freq\-\_\-longvector}!geometry_utilities.h@{geometry\-\_\-utilities.\-h}}
+\subsubsection[{query\-\_\-freq\-\_\-longvector}]{\setlength{\rightskip}{0pt plus 5cm}long query\-\_\-freq\-\_\-longvector (
+\begin{DoxyParamCaption}
+\item[{{\bf L\-O\-N\-G\-V\-E\-C\-T\-O\-R} $\ast$}]{lvector, }
+\item[{long}]{value}
+\end{DoxyParamCaption}
+)}}\label{geometry__utilities_8h_a1ff1ee95b124d56c7a5e5c7c1f3ff425}
+\begin{DoxyAuthor}{Author}
+Emanuele Cordano \textbackslash{}date October 2008
+\end{DoxyAuthor}
+
+
+Definition at line 98 of file geometry\-\_\-utilities.\-c.
+
+
+
+References L\-O\-N\-G\-V\-E\-C\-T\-O\-R\-::nl.
+
+
+
+Referenced by new\-\_\-polygon\-\_\-from\-\_\-a\-\_\-linevector().
+
+\hypertarget{geometry__utilities_8h_acc2804c94dc8291d2b41d30316158605}{\index{geometry\-\_\-utilities.\-h@{geometry\-\_\-utilities.\-h}!segment\-\_\-intersection\-\_\-occurence@{segment\-\_\-intersection\-\_\-occurence}}
+\index{segment\-\_\-intersection\-\_\-occurence@{segment\-\_\-intersection\-\_\-occurence}!geometry_utilities.h@{geometry\-\_\-utilities.\-h}}
+\subsubsection[{segment\-\_\-intersection\-\_\-occurence}]{\setlength{\rightskip}{0pt plus 5cm}int segment\-\_\-intersection\-\_\-occurence (
+\begin{DoxyParamCaption}
+\item[{{\bf L\-I\-N\-E} $\ast$}]{L1, }
+\item[{{\bf L\-I\-N\-E} $\ast$}]{L2}
+\end{DoxyParamCaption}
+)}}\label{geometry__utilities_8h_acc2804c94dc8291d2b41d30316158605}
+\begin{DoxyAuthor}{Author}
+Emanuele Cordano 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+October 2008 
+\end{DoxyDate}
+\begin{DoxyReturn}{Returns}
+0 if the lines are not connected, 1 if they share only 1 point, 2 if they share more than 1 point
+\end{DoxyReturn}
+Apply Cramer's Rule (\href{http://en.wikipedia.org/wiki/Cramer%27s_rule}{\tt http\-://en.\-wikipedia.\-org/wiki/\-Cramer\%27s\-\_\-rule}) 
+
+Definition at line 61 of file geometry\-\_\-utilities.\-c.
+
+
+
+References L\-I\-N\-E\-::begin, L\-I\-N\-E\-::end, P\-O\-I\-N\-T\-::x, and P\-O\-I\-N\-T\-::y.
+
+
+
+Referenced by new\-\_\-polygon\-\_\-from\-\_\-a\-\_\-linevector().
+
+\hypertarget{geometry__utilities_8h_a2e90fff5f5dcf081b2b49d0ecd9e4c04}{\index{geometry\-\_\-utilities.\-h@{geometry\-\_\-utilities.\-h}!shared\-\_\-edges@{shared\-\_\-edges}}
+\index{shared\-\_\-edges@{shared\-\_\-edges}!geometry_utilities.h@{geometry\-\_\-utilities.\-h}}
+\subsubsection[{shared\-\_\-edges}]{\setlength{\rightskip}{0pt plus 5cm}long shared\-\_\-edges (
+\begin{DoxyParamCaption}
+\item[{{\bf P\-O\-L\-Y\-G\-O\-N} $\ast$}]{P\-O1, }
+\item[{{\bf P\-O\-L\-Y\-G\-O\-N} $\ast$}]{P\-O2, }
+\item[{long}]{no\-\_\-intersection, }
+\item[{long $\ast$}]{l\-\_\-po1, }
+\item[{long $\ast$}]{l\-\_\-po2, }
+\item[{double $\ast$}]{dist\-\_\-centroids}
+\end{DoxyParamCaption}
+)}}\label{geometry__utilities_8h_a2e90fff5f5dcf081b2b49d0ecd9e4c04}
+\begin{DoxyAuthor}{Author}
+Emanuele Cordano 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+November 2008
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em P\-O1} & -\/ (\hyperlink{struct_p_o_l_y_g_o_n}{P\-O\-L\-Y\-G\-O\-N} $\ast$) the first polygon \\
+\hline
+{\em P\-O2} & -\/ (\hyperlink{struct_p_o_l_y_g_o_n}{P\-O\-L\-Y\-G\-O\-N} $\ast$) the second polygon \\
+\hline
+{\em no\-\_\-intersection} & -\/ (long) integer vale which is returend in case P\-O1 and P\-O2 do not share any edge. \\
+\hline
+{\em l\-\_\-po1} & -\/ (double) number of the shared edge respect to the polygon P\-O1 \\
+\hline
+{\em l\-\_\-po2} & -\/ (double) number of the shared edge respect to the polygon P\-O2\\
+\hline
+{\em dist\-\_\-centroids} & -\/ (double) distance between the two centroids of the polygons\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the index of the edge shared between the two polygons;
+\end{DoxyReturn}
+
+
+Definition at line 186 of file geometry\-\_\-utilities.\-c.
+
+
+
+References P\-O\-L\-Y\-G\-O\-N\-::centroid, distance2\-D(), P\-O\-L\-Y\-G\-O\-N\-::edge\-\_\-indices, P\-O\-L\-Y\-G\-O\-N\-::index, and L\-O\-N\-G\-V\-E\-C\-T\-O\-R\-::nl.
+
+
+
+Referenced by get\-\_\-connection(), and get\-\_\-connection\-\_\-squares().
+
+\hypertarget{geometry__utilities_8h_a9bb06bb1bea73190de961869ae691403}{\index{geometry\-\_\-utilities.\-h@{geometry\-\_\-utilities.\-h}!signum@{signum}}
+\index{signum@{signum}!geometry_utilities.h@{geometry\-\_\-utilities.\-h}}
+\subsubsection[{signum}]{\setlength{\rightskip}{0pt plus 5cm}int signum (
+\begin{DoxyParamCaption}
+\item[{long}]{a}
+\end{DoxyParamCaption}
+)}}\label{geometry__utilities_8h_a9bb06bb1bea73190de961869ae691403}
+\begin{DoxyVerb}BGEOMETRY BUILDS THE MESH FROM A RASTER FOR THE BOUSSINESQ MODEL
+\end{DoxyVerb}
+ Key\-Palette Version 0.\-9375 K\-Mackenzie
+
+file \hyperlink{geometry__utilities_8c}{geometry\-\_\-utilities.\-c}
+
+Copyright, 2009 Emanuele Cordano and Riccardo Rigon
+
+This file is part of B\-G\-E\-O\-M\-E\-T\-R\-Y. B\-G\-E\-O\-M\-E\-T\-R\-Y is free software\-: you can redistribute it and/or modify it under the terms of the G\-N\-U General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
+
+B\-G\-E\-O\-M\-E\-T\-R\-Y is distributed in the hope that it will be useful, but W\-I\-T\-H\-O\-U\-T A\-N\-Y W\-A\-R\-R\-A\-N\-T\-Y; without even the implied warranty of M\-E\-R\-C\-H\-A\-N\-T\-A\-B\-I\-L\-I\-T\-Y or F\-I\-T\-N\-E\-S\-S F\-O\-R A P\-A\-R\-T\-I\-C\-U\-L\-A\-R P\-U\-R\-P\-O\-S\-E. See the G\-N\-U General Public License for more details.
+
+You should have received a copy of the G\-N\-U General Public License along with this program. If not, see \href{http://www.gnu.org/licenses/}{\tt http\-://www.\-gnu.\-org/licenses/}. \begin{DoxyAuthor}{Author}
+Emanuele Cordano
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+October 2008
+\end{DoxyDate}
+
+
+Definition at line 27 of file geometry\-\_\-utilities.\-c.
+
+
+
+Referenced by check\-\_\-vertex\-\_\-intersection\-\_\-2\-\_\-lines().
+
+\hypertarget{geometry__utilities_8h_a1592fc15598ad4a9665f2a1c903fa2a6}{\index{geometry\-\_\-utilities.\-h@{geometry\-\_\-utilities.\-h}!signum\-\_\-double@{signum\-\_\-double}}
+\index{signum\-\_\-double@{signum\-\_\-double}!geometry_utilities.h@{geometry\-\_\-utilities.\-h}}
+\subsubsection[{signum\-\_\-double}]{\setlength{\rightskip}{0pt plus 5cm}int signum\-\_\-double (
+\begin{DoxyParamCaption}
+\item[{double}]{a}
+\end{DoxyParamCaption}
+)}}\label{geometry__utilities_8h_a1592fc15598ad4a9665f2a1c903fa2a6}
+\begin{DoxyAuthor}{Author}
+Emanuele Cordano
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+October 2008
+\end{DoxyDate}
+
+
+Definition at line 44 of file geometry\-\_\-utilities.\-c.
+

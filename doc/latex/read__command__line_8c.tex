@@ -1,0 +1,116 @@
+\hypertarget{read__command__line_8c}{\section{Key\-Palette/read\-\_\-command\-\_\-line.c File Reference}
+\label{read__command__line_8c}\index{Key\-Palette/read\-\_\-command\-\_\-line.\-c@{Key\-Palette/read\-\_\-command\-\_\-line.\-c}}
+}
+{\ttfamily \#include $<$stdio.\-h$>$}\\*
+{\ttfamily \#include $<$stdlib.\-h$>$}\\*
+{\ttfamily \#include $<$string.\-h$>$}\\*
+{\ttfamily \#include \char`\"{}read\-\_\-command\-\_\-line.\-h\char`\"{}}\\*
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{read__command__line_8c_aa90cac659d18e8ef6294c7ae337f6b58}{S\-U\-C\-C\-E\-S\-S}~1
+\item 
+\#define \hyperlink{read__command__line_8c_aa27908f9ea107c6caaafe1517484ad2e}{N\-O\-\_\-\-S\-U\-C\-C\-E\-S\-S}~0
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+char $\ast$ \hyperlink{read__command__line_8c_a48221262c52ab4f67e2d724dee81eeed}{read\-\_\-option\-\_\-string} (int argc, char $\ast$argv\mbox{[}$\,$\mbox{]}, char $\ast$option\-\_\-f, char $\ast$no\-\_\-option\-\_\-argument, short print)
+\item 
+double \hyperlink{read__command__line_8c_a27a958ceee1b961e76721765549d2de1}{read\-\_\-option\-\_\-double} (int argc, char $\ast$argv\mbox{[}$\,$\mbox{]}, char $\ast$option\-\_\-f, char $\ast$no\-\_\-option\-\_\-argument, double default\-\_\-value, short print)
+\item 
+int \hyperlink{read__command__line_8c_a57b556fbfb5bc37de3e563b5445017fa}{read\-\_\-flag} (int argc, char $\ast$argv\mbox{[}$\,$\mbox{]}, char $\ast$\hyperlink{main_8c_af669d66807986c96b4927566ae5e8b45}{flag}, short print)
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{read__command__line_8c_aa27908f9ea107c6caaafe1517484ad2e}{\index{read\-\_\-command\-\_\-line.\-c@{read\-\_\-command\-\_\-line.\-c}!N\-O\-\_\-\-S\-U\-C\-C\-E\-S\-S@{N\-O\-\_\-\-S\-U\-C\-C\-E\-S\-S}}
+\index{N\-O\-\_\-\-S\-U\-C\-C\-E\-S\-S@{N\-O\-\_\-\-S\-U\-C\-C\-E\-S\-S}!read_command_line.c@{read\-\_\-command\-\_\-line.\-c}}
+\subsubsection[{N\-O\-\_\-\-S\-U\-C\-C\-E\-S\-S}]{\setlength{\rightskip}{0pt plus 5cm}\#define N\-O\-\_\-\-S\-U\-C\-C\-E\-S\-S~0}}\label{read__command__line_8c_aa27908f9ea107c6caaafe1517484ad2e}
+
+
+Definition at line 33 of file read\-\_\-command\-\_\-line.\-c.
+
+
+
+Referenced by read\-\_\-flag(), and read\-\_\-option\-\_\-string().
+
+\hypertarget{read__command__line_8c_aa90cac659d18e8ef6294c7ae337f6b58}{\index{read\-\_\-command\-\_\-line.\-c@{read\-\_\-command\-\_\-line.\-c}!S\-U\-C\-C\-E\-S\-S@{S\-U\-C\-C\-E\-S\-S}}
+\index{S\-U\-C\-C\-E\-S\-S@{S\-U\-C\-C\-E\-S\-S}!read_command_line.c@{read\-\_\-command\-\_\-line.\-c}}
+\subsubsection[{S\-U\-C\-C\-E\-S\-S}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\-U\-C\-C\-E\-S\-S~1}}\label{read__command__line_8c_aa90cac659d18e8ef6294c7ae337f6b58}
+
+
+Definition at line 32 of file read\-\_\-command\-\_\-line.\-c.
+
+
+
+Referenced by read\-\_\-flag().
+
+
+
+\subsection{Function Documentation}
+\hypertarget{read__command__line_8c_a57b556fbfb5bc37de3e563b5445017fa}{\index{read\-\_\-command\-\_\-line.\-c@{read\-\_\-command\-\_\-line.\-c}!read\-\_\-flag@{read\-\_\-flag}}
+\index{read\-\_\-flag@{read\-\_\-flag}!read_command_line.c@{read\-\_\-command\-\_\-line.\-c}}
+\subsubsection[{read\-\_\-flag}]{\setlength{\rightskip}{0pt plus 5cm}int read\-\_\-flag (
+\begin{DoxyParamCaption}
+\item[{int}]{argc, }
+\item[{char $\ast$}]{argv\mbox{[}$\,$\mbox{]}, }
+\item[{char $\ast$}]{flag, }
+\item[{short}]{print}
+\end{DoxyParamCaption}
+)}}\label{read__command__line_8c_a57b556fbfb5bc37de3e563b5445017fa}
+
+
+Definition at line 117 of file read\-\_\-command\-\_\-line.\-c.
+
+
+
+References N\-O\-\_\-\-S\-U\-C\-C\-E\-S\-S, and S\-U\-C\-C\-E\-S\-S.
+
+
+
+Referenced by main().
+
+\hypertarget{read__command__line_8c_a27a958ceee1b961e76721765549d2de1}{\index{read\-\_\-command\-\_\-line.\-c@{read\-\_\-command\-\_\-line.\-c}!read\-\_\-option\-\_\-double@{read\-\_\-option\-\_\-double}}
+\index{read\-\_\-option\-\_\-double@{read\-\_\-option\-\_\-double}!read_command_line.c@{read\-\_\-command\-\_\-line.\-c}}
+\subsubsection[{read\-\_\-option\-\_\-double}]{\setlength{\rightskip}{0pt plus 5cm}double read\-\_\-option\-\_\-double (
+\begin{DoxyParamCaption}
+\item[{int}]{argc, }
+\item[{char $\ast$}]{argv\mbox{[}$\,$\mbox{]}, }
+\item[{char $\ast$}]{option\-\_\-f, }
+\item[{char $\ast$}]{no\-\_\-option\-\_\-argument, }
+\item[{double}]{default\-\_\-value, }
+\item[{short}]{print}
+\end{DoxyParamCaption}
+)}}\label{read__command__line_8c_a27a958ceee1b961e76721765549d2de1}
+
+
+Definition at line 83 of file read\-\_\-command\-\_\-line.\-c.
+
+
+
+References read\-\_\-option\-\_\-string().
+
+\hypertarget{read__command__line_8c_a48221262c52ab4f67e2d724dee81eeed}{\index{read\-\_\-command\-\_\-line.\-c@{read\-\_\-command\-\_\-line.\-c}!read\-\_\-option\-\_\-string@{read\-\_\-option\-\_\-string}}
+\index{read\-\_\-option\-\_\-string@{read\-\_\-option\-\_\-string}!read_command_line.c@{read\-\_\-command\-\_\-line.\-c}}
+\subsubsection[{read\-\_\-option\-\_\-string}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ read\-\_\-option\-\_\-string (
+\begin{DoxyParamCaption}
+\item[{int}]{argc, }
+\item[{char $\ast$}]{argv\mbox{[}$\,$\mbox{]}, }
+\item[{char $\ast$}]{option\-\_\-f, }
+\item[{char $\ast$}]{no\-\_\-option\-\_\-argument, }
+\item[{short}]{print}
+\end{DoxyParamCaption}
+)}}\label{read__command__line_8c_a48221262c52ab4f67e2d724dee81eeed}
+
+
+Definition at line 38 of file read\-\_\-command\-\_\-line.\-c.
+
+
+
+References N\-O\-\_\-\-S\-U\-C\-C\-E\-S\-S.
+
+
+
+Referenced by main(), and read\-\_\-option\-\_\-double().
+

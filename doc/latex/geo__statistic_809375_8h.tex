@@ -1,0 +1,138 @@
+\hypertarget{geo__statistic_809375_8h}{\section{M\-A\-T\-H2/geo\-\_\-statistic.09375.h File Reference}
+\label{geo__statistic_809375_8h}\index{M\-A\-T\-H2/geo\-\_\-statistic.\-09375.\-h@{M\-A\-T\-H2/geo\-\_\-statistic.\-09375.\-h}}
+}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{geo__statistic_809375_8h_aa488ee0cfd6336d5bc1af97d776015ad}{ordi\-\_\-kriging2} (\hyperlink{struct_d_o_u_b_l_e_m_a_t_r_i_x}{D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X} $\ast$weights, \hyperlink{struct_d_o_u_b_l_e_v_e_c_t_o_r}{D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} $\ast$E, \hyperlink{struct_d_o_u_b_l_e_v_e_c_t_o_r}{D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} $\ast$N, \hyperlink{struct_d_o_u_b_l_e_m_a_t_r_i_x}{D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X} $\ast$Z0, \hyperlink{struct_t___i_n_i_t}{T\-\_\-\-I\-N\-I\-T} $\ast$U\-V, double int\-\_\-scale, double variance)
+\item 
+void \hyperlink{geo__statistic_809375_8h_a83b5ae24122fb98a4875dbea2e82c6ec}{variogramma2} (\hyperlink{struct_d_o_u_b_l_e_v_e_c_t_o_r}{D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} $\ast$E, \hyperlink{struct_d_o_u_b_l_e_v_e_c_t_o_r}{D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} $\ast$N, \hyperlink{struct_d_o_u_b_l_e_m_a_t_r_i_x}{D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X} $\ast$Z0, \hyperlink{struct_d_o_u_b_l_e_m_a_t_r_i_x}{D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X} $\ast$variogr, \hyperlink{struct_d_o_u_b_l_e_v_e_c_t_o_r}{D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} $\ast$U, double int\-\_\-scale, double variance)
+\item 
+double \hyperlink{geo__statistic_809375_8h_a8915807e564b4499862e683cd93cabcf}{gamma2} (double r, double scala\-\_\-integr, double varianza)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{geo__statistic_809375_8h_a8915807e564b4499862e683cd93cabcf}{\index{geo\-\_\-statistic.\-09375.\-h@{geo\-\_\-statistic.\-09375.\-h}!gamma2@{gamma2}}
+\index{gamma2@{gamma2}!geo_statistic.09375.h@{geo\-\_\-statistic.\-09375.\-h}}
+\subsubsection[{gamma2}]{\setlength{\rightskip}{0pt plus 5cm}double gamma2 (
+\begin{DoxyParamCaption}
+\item[{double}]{r, }
+\item[{double}]{scala\-\_\-integr, }
+\item[{double}]{varianza}
+\end{DoxyParamCaption}
+)}}\label{geo__statistic_809375_8h_a8915807e564b4499862e683cd93cabcf}
+Name\-: gamma1
+
+double gamma1(double r, double scala\-\_\-integr, double varianza);
+
+General information\-: e` una funzione di correalzione esponenziale
+
+Authors \& Date\-: Riccardo Rigon, Paolo Verardo, Giacomo Bertoldi 1999
+
+Inputs\-: 1) r distanza \mbox{[}m\mbox{]} 2) scala\-\_\-integr scala integrale \mbox{[}m\mbox{]} 3) varianza
+
+Needs\-: \hyperlink{t__io_8c}{t\-\_\-io.\-c}, t\-\_\-alloc.\-c, t\-\_\-error.\-c.
+
+Example\-: Pegoretti, M., Geomodel\-:implementazione di un modello scalabile di deflusso e bilancio idrologico di bacino, Tesi di Laurea, Relatore R.\-Rigon, Universita' degli studi di Trento, A.\-A. 1997-\/98.
+
+See Also\-: turtle.\-dat file
+
+References\-: Pegoretti, M., Geomodel\-:implementazione di un modello scalabile di deflusso e bilancio idrologico di bacino, Tesi di Laurea, Relatore R.\-Rigon, Universita' degli studi di Trento, A.\-A. 1997-\/98. Bugs\-: 
+
+Definition at line 294 of file geo\-\_\-statistic.\-09375.\-c.
+
+
+
+References gamma2().
+
+
+
+Referenced by gamma2(), ordi\-\_\-kriging2(), and variogramma2().
+
+\hypertarget{geo__statistic_809375_8h_aa488ee0cfd6336d5bc1af97d776015ad}{\index{geo\-\_\-statistic.\-09375.\-h@{geo\-\_\-statistic.\-09375.\-h}!ordi\-\_\-kriging2@{ordi\-\_\-kriging2}}
+\index{ordi\-\_\-kriging2@{ordi\-\_\-kriging2}!geo_statistic.09375.h@{geo\-\_\-statistic.\-09375.\-h}}
+\subsubsection[{ordi\-\_\-kriging2}]{\setlength{\rightskip}{0pt plus 5cm}void ordi\-\_\-kriging2 (
+\begin{DoxyParamCaption}
+\item[{{\bf D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X} $\ast$}]{weights, }
+\item[{{\bf D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} $\ast$}]{E, }
+\item[{{\bf D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} $\ast$}]{N, }
+\item[{{\bf D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X} $\ast$}]{Z0, }
+\item[{{\bf T\-\_\-\-I\-N\-I\-T} $\ast$}]{U\-V, }
+\item[{double}]{int\-\_\-scale, }
+\item[{double}]{variance}
+\end{DoxyParamCaption}
+)}}\label{geo__statistic_809375_8h_aa488ee0cfd6336d5bc1af97d776015ad}
+Name\-: ordi\-\_\-kriging
+
+Synopsis\-: void ordi\-\_\-kriging(\hyperlink{struct_d_o_u_b_l_e_m_a_t_r_i_x}{D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X} $\ast$pesi,\hyperlink{struct_d_o_u_b_l_e_m_a_t_r_i_x}{D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X} $\ast$coord,\hyperlink{struct_d_o_u_b_l_e_m_a_t_r_i_x}{D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X} $\ast$\-Z0,\hyperlink{struct_d_o_u_b_l_e_v_e_c_t_o_r}{D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} $\ast$\-U, \hyperlink{struct_d_o_u_b_l_e_v_e_c_t_o_r}{D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} $\ast$\-V, double $\ast$scala\-\_\-integr1, double $\ast$varianza1)
+
+General information\-: Calcola la distribuzione delle pioggia tramite algoritmo di ordinary kriging. I pesi vengono calcolati tramite la risoluzione delle equazioni con una decomposizione L\-U (cfr. 2.\-3 in Numerical Recepies in C)
+
+Authors \& Date\-: Riccardo Rigon, Marco Pegoretti, Giacomo Bertoldi 1998 \begin{DoxyVerb}    Inputs: 1) coord: coord matrice con coordinate stazioni
+                    2) Z0 matrice con elevazioni
+                    3) U vettore con dimensioni pixels
+                    4) V vettore con header elevazioni
+                    5) scala_integr1: integral spatial scale
+                    6) varianza1: spatial variance
+    Outputs:1) pesi: krigingweights DOUBLEMATRIX [row*col,n_stazioni]
+\end{DoxyVerb}
+
+
+Needs\-: \hyperlink{t__io_8c}{t\-\_\-io.\-c}, t\-\_\-alloc.\-c, t\-\_\-error.\-c, \hyperlink{linearalgebra_8c}{Linear\-Algebra.\-c}
+
+Example\-: Pegoretti, Marco, Geomodel, implementazione di un modello scalabile di deflusso e bilancio idrologico di bacino, Tesi di Laurea, Relatore R.\-Rigon, Universita' degli studi di Trento, A.\-A. 1997-\/98.
+
+See Also\-: turtle.\-dat file
+
+References\-: Pegoretti, Marco, Geomodel, implementazione di un modello scalabile di deflusso e bilancio idrologico di bacino, Tesi di Laurea, Relatore R.\-Rigon, Universita' degli studi di Trento, A.\-A. 1997-\/98. Bugs\-: 
+
+Definition at line 78 of file geo\-\_\-statistic.\-09375.\-c.
+
+
+
+References S\-H\-O\-R\-T\-V\-E\-C\-T\-O\-R\-::co, D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R\-::co, D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X\-::co, free\-\_\-doublematrix(), free\-\_\-doublevector(), free\-\_\-shortvector(), gamma2(), lubksb(), ludcmp(), D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X\-::nch, new\-\_\-doublematrix(), new\-\_\-doublevector(), new\-\_\-shortvector(), D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R\-::nh, D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X\-::nrh, T\-\_\-\-I\-N\-I\-T\-::\-U, T\-\_\-\-I\-N\-I\-T\-::\-V, and variogramma2().
+
+\hypertarget{geo__statistic_809375_8h_a83b5ae24122fb98a4875dbea2e82c6ec}{\index{geo\-\_\-statistic.\-09375.\-h@{geo\-\_\-statistic.\-09375.\-h}!variogramma2@{variogramma2}}
+\index{variogramma2@{variogramma2}!geo_statistic.09375.h@{geo\-\_\-statistic.\-09375.\-h}}
+\subsubsection[{variogramma2}]{\setlength{\rightskip}{0pt plus 5cm}void variogramma2 (
+\begin{DoxyParamCaption}
+\item[{{\bf D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} $\ast$}]{E, }
+\item[{{\bf D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} $\ast$}]{N, }
+\item[{{\bf D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X} $\ast$}]{Z0, }
+\item[{{\bf D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X} $\ast$}]{variogr, }
+\item[{{\bf D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} $\ast$}]{U, }
+\item[{double}]{int\-\_\-scale, }
+\item[{double}]{variance}
+\end{DoxyParamCaption}
+)}}\label{geo__statistic_809375_8h_a83b5ae24122fb98a4875dbea2e82c6ec}
+Name\-: variogramma;
+
+void variogramma(\hyperlink{struct_d_o_u_b_l_e_m_a_t_r_i_x}{D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X} $\ast$coord,\hyperlink{struct_d_o_u_b_l_e_m_a_t_r_i_x}{D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X} $\ast$\-Z0,\hyperlink{struct_d_o_u_b_l_e_m_a_t_r_i_x}{D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X} $\ast$variogr,\hyperlink{struct_d_o_u_b_l_e_v_e_c_t_o_r}{D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} $\ast$\-U, double scala\-\_\-integr, double varianza);
+
+General information\-: variogramma e' una routine che riporta il variogramma di una matrice di elevazioni rispetto ad alcuni punti di cui sono note le coordinate. Questi punti potrebbero essere per esempio delle stazioni pluviometriche
+
+Authors \& Date\-: Riccardo Rigon, Paolo Verardo, 1999
+
+Inputs\-: 1)Z0\-: matrice delle elevazioni(\-Z0) 2)coord\-: matrice che indica le coordinate dei punti 3)U\-: vettore con le dimensioni dei pixel e le coordinate X,Y dell'angolo in basso a sinistra 4)variogr\-: matrice con la varianza di ogni pixel rispetto alle stazioni 4) V vettore con header elevazioni 5) scala\-\_\-integr1\-: integral spatial scale 6) varianza1\-: spatial variance
+
+Needs\-: \hyperlink{t__io_8c}{t\-\_\-io.\-c}, t\-\_\-alloc.\-c, t\-\_\-error.\-c.
+
+Example\-: Pegoretti, M., Geomodel\-:implementazione di un modello scalabile di deflusso e bilancio idrologico di bacino, Tesi di Laurea, Relatore R.\-Rigon, Universita' degli studi di Trento, A.\-A. 1997-\/98.
+
+See Also\-: turtle.\-dat file
+
+References\-: Pegoretti, M., Geomodel\-:implementazione di un modello scalabile di deflusso e bilancio idrologico di bacino, Tesi di Laurea, Relatore R.\-Rigon, Universita' degli studi di Trento, A.\-A. 1997-\/98.
+
+Bugs\-: 
+
+Definition at line 243 of file geo\-\_\-statistic.\-09375.\-c.
+
+
+
+References D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R\-::co, D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X\-::co, gamma2(), D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X\-::nch, D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R\-::nh, and D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X\-::nrh.
+
+
+
+Referenced by ordi\-\_\-kriging2().
+

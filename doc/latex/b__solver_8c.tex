@@ -1,0 +1,633 @@
+\hypertarget{b__solver_8c}{\section{Boussinesq/b\-\_\-solver.c File Reference}
+\label{b__solver_8c}\index{Boussinesq/b\-\_\-solver.\-c@{Boussinesq/b\-\_\-solver.\-c}}
+}
+{\ttfamily \#include \char`\"{}turtle.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}t\-\_\-alloc.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}t\-\_\-datamanipulation.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}t\-\_\-utilities.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}rw\-\_\-maps.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}doublevector\-\_\-utilities.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}preconditioned\-\_\-conjugate\-\_\-gradient.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}keywords\-\_\-file\-\_\-b.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}geometry.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}g\-\_\-raster2plvector.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}bigcells2.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}geometry2.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}b\-\_\-utilities.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}b\-\_\-volumes.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}b\-\_\-sources.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}b\-\_\-v\-\_\-advection.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}b\-\_\-solver.\-h\char`\"{}}\\*
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{b__solver_8c_a46099aeb32da2786d7558d9fe407e622}{M\-I\-N\-\_\-\-T\-\_\-\-D\-I\-A\-G\-\_\-\-N\-E\-G\-A\-T\-I\-V\-E\-\_\-\-I\-N\-D\-E\-X}~-\/20
+\item 
+\#define \hyperlink{b__solver_8c_acdd350439529b0f8064bd22c4939454c}{M\-I\-N\-\_\-\-T\-\_\-\-D\-I\-A\-G}~1.\-0e-\/10
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+double \hyperlink{b__solver_8c_a092b6742da36d2030755953ce9b20c60}{t\-\_\-st\-\_\-operator\-\_\-element} (long i, \hyperlink{struct_d_o_u_b_l_e_v_e_c_t_o_r}{D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} $\ast$eta)
+\item 
+double \hyperlink{b__solver_8c_a5d82757e02d7bf9264f9138193e87832}{t\-\_\-st\-\_\-operator\-\_\-element\-\_\-no\-\_\-dirichlet} (long i, \hyperlink{struct_d_o_u_b_l_e_v_e_c_t_o_r}{D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} $\ast$eta)
+\item 
+double \hyperlink{b__solver_8c_aa28812ccdb9aa194c69d311db3b6648e}{t\-\_\-st\-\_\-operator\-\_\-element\-\_\-subs} (long i, \hyperlink{struct_d_o_u_b_l_e_v_e_c_t_o_r}{D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} $\ast$eta, double cond\-\_\-dirichlet)
+\item 
+double \hyperlink{b__solver_8c_ad14097d21b985bb877fc58e0d63b6be4}{b\-\_\-smatrix\-\_\-element} (long i, \hyperlink{struct_d_o_u_b_l_e_v_e_c_t_o_r}{D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} $\ast$x)
+\item 
+long \hyperlink{b__solver_8c_ad0adbfadb450477f9f2b297202551975}{Newton\-\_\-convergence} (\hyperlink{struct_d_o_u_b_l_e_v_e_c_t_o_r}{D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} $\ast$x\-\_\-temp, \hyperlink{struct_d_o_u_b_l_e_v_e_c_t_o_r}{D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} $\ast$be, \hyperlink{struct_d_o_u_b_l_e_v_e_c_t_o_r}{D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} $\ast$be0)
+\item 
+int \hyperlink{b__solver_8c_adba7ead1faa7f8dae670343373ebe9a2}{time\-\_\-loop} (short print, int($\ast$write\-\_\-output)(void $\ast$v1, void $\ast$v2))
+\item 
+double \hyperlink{b__solver_8c_a91803fd42436b7e4151bbd2e57be7d41}{water\-\_\-surface\-\_\-elevation\-\_\-mean} (double eta1, double eta2)
+\item 
+int \hyperlink{b__solver_8c_a876e1955106e2c27653f6b7d988b5a04}{write\-\_\-map\-\_\-results} (void $\ast$output, void $\ast$S\-S\-S\-S)
+\item 
+\hyperlink{struct_o_u_t_p_u_t___f_i_l_e_n_a_m_e_s}{O\-U\-T\-P\-U\-T\-\_\-\-F\-I\-L\-E\-N\-A\-M\-E\-S} $\ast$ \hyperlink{b__solver_8c_aca8b8c663042dbcf6c7fe5ce7f399f6d}{new\-\_\-output\-\_\-filenames} (short print)
+\item 
+void \hyperlink{b__solver_8c_a411189a0a7c246c7cce685e846fd2878}{free\-\_\-\-O\-U\-T\-P\-U\-T\-\_\-\-F\-I\-L\-E\-N\-A\-M\-E\-S} (\hyperlink{struct_o_u_t_p_u_t___f_i_l_e_n_a_m_e_s}{O\-U\-T\-P\-U\-T\-\_\-\-F\-I\-L\-E\-N\-A\-M\-E\-S} $\ast$fn)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{turtle_8h_ade34e6dff3489a3ddd297f003f01bbd2}{S\-T\-R\-I\-N\-G\-B\-I\-N} $\ast$ \hyperlink{b__solver_8c_a528421ce34267070764970b021f6034a}{filenames}
+\item 
+\hyperlink{struct_d_o_u_b_l_e_s_q_u_a_r_e___g_r_i_d}{D\-O\-U\-B\-L\-E\-S\-Q\-U\-A\-R\-E\-\_\-\-G\-R\-I\-D} $\ast$ \hyperlink{b__solver_8c_a9b5f80541820877b6d4a8841650da32a}{dsq}
+\item 
+\hyperlink{struct_d_o_u_b_l_e___g_r_i_d}{D\-O\-U\-B\-L\-E\-\_\-\-G\-R\-I\-D} $\ast$ \hyperlink{b__solver_8c_ab58c424a59f28ac6b17e7b7f5aae6152}{dgrid}
+\item 
+\hyperlink{struct_d_o_u_b_l_e_r_a_s_t_e_r___m_a_p}{D\-O\-U\-B\-L\-E\-R\-A\-S\-T\-E\-R\-\_\-\-M\-A\-P} $\ast$ \hyperlink{b__solver_8c_a44d81a9ca5648f4ec1c298c7f37fefff}{draster}
+\item 
+char $\ast$ \hyperlink{b__solver_8c_aa018d0410be770cac4c05bac5dea04f2}{wpath}
+\item 
+\hyperlink{struct_p_a_r_a_m}{P\-A\-R\-A\-M} $\ast$ \hyperlink{b__solver_8c_ad8ac9ce29f12815d417a57b2c0dc31fb}{param}
+\item 
+\hyperlink{struct_f_l_a_g}{F\-L\-A\-G} $\ast$ \hyperlink{b__solver_8c_af669d66807986c96b4927566ae5e8b45}{flag}
+\item 
+\hyperlink{struct_d_o_u_b_l_e_v_e_c_t_o_r}{D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} $\ast$ \hyperlink{b__solver_8c_a48a2ac079f3ec064d28848bcdc54ed7c}{elevation\-\_\-bottom\-\_\-fine}
+\item 
+\hyperlink{struct_d_o_u_b_l_e_v_e_c_t_o_r}{D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} $\ast$ \hyperlink{b__solver_8c_a93f8bd854f98f2abe47c108484cf1c6b}{elevation\-\_\-bottom\-\_\-coarse}
+\item 
+\hyperlink{struct_d_o_u_b_l_e_v_e_c_t_o_r}{D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} $\ast$ \hyperlink{b__solver_8c_a495ebb69c21b8816ee4f7dfe0e1e6d98}{elevation\-\_\-bottom\-\_\-flines}
+\item 
+\hyperlink{struct_d_o_u_b_l_e_v_e_c_t_o_r}{D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} $\ast$ \hyperlink{b__solver_8c_a4cd3286ed17aff6164594f8a2d59f898}{elevation\-\_\-bottom\-\_\-bottom}
+\item 
+\hyperlink{struct_d_o_u_b_l_e_v_e_c_t_o_r}{D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} $\ast$ \hyperlink{b__solver_8c_acd5b5637e9d24f6f2641e08ed439b8b8}{porosity\-\_\-fine}
+\item 
+\hyperlink{struct_d_o_u_b_l_e_v_e_c_t_o_r}{D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} $\ast$ \hyperlink{b__solver_8c_a8d58cb68a19f9ec3d36dcf606ce6ab8e}{outlet\-\_\-coefficient}
+\item 
+\hyperlink{struct_d_o_u_b_l_e_v_e_c_t_o_r}{D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} $\ast$ \hyperlink{b__solver_8c_a3ace2c97e74d7e8aad3670b479cb606d}{water\-\_\-surface\-\_\-elevation}
+\item 
+\hyperlink{struct_d_o_u_b_l_e_v_e_c_t_o_r}{D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} $\ast$ \hyperlink{b__solver_8c_a97eff843a1a4985b0746ef826cc27822}{water\-\_\-mass\-\_\-error}
+\item 
+\hyperlink{struct_d_o_u_b_l_e_v_e_c_t_o_r}{D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} $\ast$ \hyperlink{b__solver_8c_ace3cfe323c8bb9508ed135a5e3be0f8c}{water\-\_\-depth}
+\item 
+\hyperlink{struct_d_o_u_b_l_e_v_e_c_t_o_r}{D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} $\ast$ \hyperlink{b__solver_8c_ac2670c558f0154ba997b23d6d8184b6b}{surface\-\_\-water\-\_\-velocity}
+\item 
+\hyperlink{struct_d_o_u_b_l_e_v_e_c_t_o_r}{D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} $\ast$ \hyperlink{b__solver_8c_ad2a1214f97f2ea07f385b7c6ce403096}{F1\-\_\-wet\-\_\-vert\-\_\-area}
+\item 
+\hyperlink{struct_d_o_u_b_l_e_v_e_c_t_o_r}{D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} $\ast$ \hyperlink{b__solver_8c_a4ba789d32e2325ae5d8c21f4643c08f1}{eta\-\_\-v}
+\item 
+\hyperlink{struct_d_o_u_b_l_e_v_e_c_t_o_r}{D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} $\ast$ \hyperlink{b__solver_8c_a04a25d32cf47c13341c9c9e6cab145ae}{sources}
+\item 
+\hyperlink{struct_d_o_u_b_l_e_v_e_c_t_o_r}{D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} $\ast$ \hyperlink{b__solver_8c_a3e926bbffae6b8e632a255e2feb9d3d1}{dirichlet}
+\item 
+\hyperlink{struct_d_o_u_b_l_e_v_e_c_t_o_r}{D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} $\ast$ \hyperlink{b__solver_8c_aa616eec89ee73fc90cbc94d4092b6b14}{t\-\_\-diagonal}
+\item 
+\hyperlink{struct_d_o_u_b_l_e_v_e_c_t_o_r}{D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} $\ast$ \hyperlink{b__solver_8c_aec5469dc4b389b4c220d14002792f70d}{t\-\_\-diagonal\-\_\-no\-\_\-dirichlet}
+\item 
+\hyperlink{struct_s___t_i_m_e_s}{S\-\_\-\-T\-I\-M\-E\-S} $\ast$ \hyperlink{b__solver_8c_ac73bbfd9a6e0ad893d203003e268a1be}{s\-\_\-times}
+\item 
+\hyperlink{struct_s___t_i_m_e_s}{S\-\_\-\-T\-I\-M\-E\-S} $\ast$ \hyperlink{b__solver_8c_acdfd95279a09d044eec55a5734ae3025}{dirichlet\-\_\-times}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{DoxyAuthor}{Author}
+Emanuele Cordano
+\end{DoxyAuthor}
+\begin{DoxyAttention}{Attention}
+
+\end{DoxyAttention}
+This file is part of Boussinesq.
+
+Boussinesq is free software\-: you can redistribute it and/or modify it under the terms of the G\-N\-U General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
+
+Boussinesq is distributed in the hope that it will be useful, but W\-I\-T\-H\-O\-U\-T A\-N\-Y W\-A\-R\-R\-A\-N\-T\-Y; without even the implied warranty of M\-E\-R\-C\-H\-A\-N\-T\-A\-B\-I\-L\-I\-T\-Y or F\-I\-T\-N\-E\-S\-S F\-O\-R A P\-A\-R\-T\-I\-C\-U\-L\-A\-R P\-U\-R\-P\-O\-S\-E. See the G\-N\-U General Public License for more details.
+
+You should have received a copy of the G\-N\-U General Public License along with Boussinesq. If not, see \href{http://www.gnu.org/licenses/}{\tt http\-://www.\-gnu.\-org/licenses/}. 
+
+Definition in file \hyperlink{b__solver_8c_source}{b\-\_\-solver.\-c}.
+
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{b__solver_8c_acdd350439529b0f8064bd22c4939454c}{\index{b\-\_\-solver.\-c@{b\-\_\-solver.\-c}!M\-I\-N\-\_\-\-T\-\_\-\-D\-I\-A\-G@{M\-I\-N\-\_\-\-T\-\_\-\-D\-I\-A\-G}}
+\index{M\-I\-N\-\_\-\-T\-\_\-\-D\-I\-A\-G@{M\-I\-N\-\_\-\-T\-\_\-\-D\-I\-A\-G}!b_solver.c@{b\-\_\-solver.\-c}}
+\subsubsection[{M\-I\-N\-\_\-\-T\-\_\-\-D\-I\-A\-G}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\-I\-N\-\_\-\-T\-\_\-\-D\-I\-A\-G~1.\-0e-\/10}}\label{b__solver_8c_acdd350439529b0f8064bd22c4939454c}
+
+
+Definition at line 50 of file b\-\_\-solver.\-c.
+
+
+
+Referenced by Newton\-\_\-convergence().
+
+\hypertarget{b__solver_8c_a46099aeb32da2786d7558d9fe407e622}{\index{b\-\_\-solver.\-c@{b\-\_\-solver.\-c}!M\-I\-N\-\_\-\-T\-\_\-\-D\-I\-A\-G\-\_\-\-N\-E\-G\-A\-T\-I\-V\-E\-\_\-\-I\-N\-D\-E\-X@{M\-I\-N\-\_\-\-T\-\_\-\-D\-I\-A\-G\-\_\-\-N\-E\-G\-A\-T\-I\-V\-E\-\_\-\-I\-N\-D\-E\-X}}
+\index{M\-I\-N\-\_\-\-T\-\_\-\-D\-I\-A\-G\-\_\-\-N\-E\-G\-A\-T\-I\-V\-E\-\_\-\-I\-N\-D\-E\-X@{M\-I\-N\-\_\-\-T\-\_\-\-D\-I\-A\-G\-\_\-\-N\-E\-G\-A\-T\-I\-V\-E\-\_\-\-I\-N\-D\-E\-X}!b_solver.c@{b\-\_\-solver.\-c}}
+\subsubsection[{M\-I\-N\-\_\-\-T\-\_\-\-D\-I\-A\-G\-\_\-\-N\-E\-G\-A\-T\-I\-V\-E\-\_\-\-I\-N\-D\-E\-X}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\-I\-N\-\_\-\-T\-\_\-\-D\-I\-A\-G\-\_\-\-N\-E\-G\-A\-T\-I\-V\-E\-\_\-\-I\-N\-D\-E\-X~-\/20}}\label{b__solver_8c_a46099aeb32da2786d7558d9fe407e622}
+
+
+Definition at line 48 of file b\-\_\-solver.\-c.
+
+
+
+Referenced by b\-\_\-smatrix\-\_\-element(), and Newton\-\_\-convergence().
+
+
+
+\subsection{Function Documentation}
+\hypertarget{b__solver_8c_ad14097d21b985bb877fc58e0d63b6be4}{\index{b\-\_\-solver.\-c@{b\-\_\-solver.\-c}!b\-\_\-smatrix\-\_\-element@{b\-\_\-smatrix\-\_\-element}}
+\index{b\-\_\-smatrix\-\_\-element@{b\-\_\-smatrix\-\_\-element}!b_solver.c@{b\-\_\-solver.\-c}}
+\subsubsection[{b\-\_\-smatrix\-\_\-element}]{\setlength{\rightskip}{0pt plus 5cm}double b\-\_\-smatrix\-\_\-element (
+\begin{DoxyParamCaption}
+\item[{long}]{i, }
+\item[{{\bf D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} $\ast$}]{x}
+\end{DoxyParamCaption}
+)}}\label{b__solver_8c_ad14097d21b985bb877fc58e0d63b6be4}
+\begin{DoxyAuthor}{Author}
+Emanuele Cordano 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+29 June 2009
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em i} & -\/ index of the polygon at which t\-\_\-st\-\_\-operator\-\_\-element is calculated \\
+\hline
+{\em eta} & -\/ (\hyperlink{struct_d_o_u_b_l_e_v_e_c_t_o_r}{D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} $\ast$) vector of the unknowns\\
+\hline
+\end{DoxyParams}
+Function inverted and solved with a preconditioned conjugate gradient method obtained as follows\-: \[ \left[ \mathbf{T} \cdot \eta^{n+1} \right]_{i}= -\Delta t^{n} \, \sum_{j \in S_i} \, K_S \, A_j(\eta^n_{i,m(i,j)})\frac{x_{m(i,j)}^{n+1}-x_{i}^{n+1}}{\delta_{i,m(i,j)}}+ Ws(^m\eta^{n+1})x_i \] which is the \hyperlink{b__solver_8c_a092b6742da36d2030755953ce9b20c60}{t\-\_\-st\-\_\-operator\-\_\-element()} function plus x\-\_\-i multiplied the wet area of the i-\/th pixel. This function has the same signature of \hyperlink{b__solver_8c_a092b6742da36d2030755953ce9b20c60}{t\-\_\-st\-\_\-operator\-\_\-element()} Please see the documentation in pdf with the algebraic passages for further details.
+
+Definition at line 274 of file b\-\_\-solver.\-c.
+
+
+
+References P\-A\-R\-A\-M\-::deta, M\-I\-N\-\_\-\-T\-\_\-\-D\-I\-A\-G\-\_\-\-N\-E\-G\-A\-T\-I\-V\-E\-\_\-\-I\-N\-D\-E\-X, P\-A\-R\-A\-M\-::null\-\_\-dirichlet, t\-\_\-st\-\_\-operator\-\_\-element\-\_\-no\-\_\-dirichlet(), and wet\-\_\-area().
+
+
+
+Referenced by Newton\-\_\-convergence().
+
+\hypertarget{b__solver_8c_a411189a0a7c246c7cce685e846fd2878}{\index{b\-\_\-solver.\-c@{b\-\_\-solver.\-c}!free\-\_\-\-O\-U\-T\-P\-U\-T\-\_\-\-F\-I\-L\-E\-N\-A\-M\-E\-S@{free\-\_\-\-O\-U\-T\-P\-U\-T\-\_\-\-F\-I\-L\-E\-N\-A\-M\-E\-S}}
+\index{free\-\_\-\-O\-U\-T\-P\-U\-T\-\_\-\-F\-I\-L\-E\-N\-A\-M\-E\-S@{free\-\_\-\-O\-U\-T\-P\-U\-T\-\_\-\-F\-I\-L\-E\-N\-A\-M\-E\-S}!b_solver.c@{b\-\_\-solver.\-c}}
+\subsubsection[{free\-\_\-\-O\-U\-T\-P\-U\-T\-\_\-\-F\-I\-L\-E\-N\-A\-M\-E\-S}]{\setlength{\rightskip}{0pt plus 5cm}void free\-\_\-\-O\-U\-T\-P\-U\-T\-\_\-\-F\-I\-L\-E\-N\-A\-M\-E\-S (
+\begin{DoxyParamCaption}
+\item[{{\bf O\-U\-T\-P\-U\-T\-\_\-\-F\-I\-L\-E\-N\-A\-M\-E\-S} $\ast$}]{fn}
+\end{DoxyParamCaption}
+)}}\label{b__solver_8c_a411189a0a7c246c7cce685e846fd2878}
+
+
+Definition at line 801 of file b\-\_\-solver.\-c.
+
+
+
+References O\-U\-T\-P\-U\-T\-\_\-\-F\-I\-L\-E\-N\-A\-M\-E\-S\-::file\-\_\-error, and O\-U\-T\-P\-U\-T\-\_\-\-F\-I\-L\-E\-N\-A\-M\-E\-S\-::file\-\_\-result.
+
+
+
+Referenced by time\-\_\-loop().
+
+\hypertarget{b__solver_8c_aca8b8c663042dbcf6c7fe5ce7f399f6d}{\index{b\-\_\-solver.\-c@{b\-\_\-solver.\-c}!new\-\_\-output\-\_\-filenames@{new\-\_\-output\-\_\-filenames}}
+\index{new\-\_\-output\-\_\-filenames@{new\-\_\-output\-\_\-filenames}!b_solver.c@{b\-\_\-solver.\-c}}
+\subsubsection[{new\-\_\-output\-\_\-filenames}]{\setlength{\rightskip}{0pt plus 5cm}{\bf O\-U\-T\-P\-U\-T\-\_\-\-F\-I\-L\-E\-N\-A\-M\-E\-S}$\ast$ new\-\_\-output\-\_\-filenames (
+\begin{DoxyParamCaption}
+\item[{short}]{print}
+\end{DoxyParamCaption}
+)}}\label{b__solver_8c_aca8b8c663042dbcf6c7fe5ce7f399f6d}
+
+
+Definition at line 782 of file b\-\_\-solver.\-c.
+
+
+
+References copy\-\_\-string(), O\-U\-T\-P\-U\-T\-\_\-\-F\-I\-L\-E\-N\-A\-M\-E\-S\-::file\-\_\-error, O\-U\-T\-P\-U\-T\-\_\-\-F\-I\-L\-E\-N\-A\-M\-E\-S\-::file\-\_\-result, O\-\_\-\-C\-O\-A\-R\-S\-E\-M\-A\-P\-\_\-\-W\-A\-T\-E\-R\-M\-A\-S\-S\-\_\-\-E\-R\-R\-O\-R, O\-\_\-\-C\-O\-A\-R\-S\-E\-M\-A\-P\-\_\-\-W\-A\-T\-E\-R\-S\-U\-R\-F\-A\-C\-E\-\_\-\-E\-L\-E\-V\-A\-T\-I\-O\-N, and t\-\_\-error().
+
+
+
+Referenced by time\-\_\-loop().
+
+\hypertarget{b__solver_8c_ad0adbfadb450477f9f2b297202551975}{\index{b\-\_\-solver.\-c@{b\-\_\-solver.\-c}!Newton\-\_\-convergence@{Newton\-\_\-convergence}}
+\index{Newton\-\_\-convergence@{Newton\-\_\-convergence}!b_solver.c@{b\-\_\-solver.\-c}}
+\subsubsection[{Newton\-\_\-convergence}]{\setlength{\rightskip}{0pt plus 5cm}long Newton\-\_\-convergence (
+\begin{DoxyParamCaption}
+\item[{{\bf D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} $\ast$}]{x\-\_\-temp, }
+\item[{{\bf D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} $\ast$}]{be, }
+\item[{{\bf D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} $\ast$}]{be0}
+\end{DoxyParamCaption}
+)}}\label{b__solver_8c_ad0adbfadb450477f9f2b297202551975}
+\begin{DoxyAuthor}{Author}
+Emanuele Cordano 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+20 April 2009
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em x\-\_\-term} & (\hyperlink{struct_d_o_u_b_l_e_v_e_c_t_o_r}{D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} $\ast$) x\-\_\-term -\/ doublevector of residuals (unkowns) \\
+\hline
+{\em be} & (\hyperlink{struct_d_o_u_b_l_e_v_e_c_t_o_r}{D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} $\ast$) be -\/ known term of the equation in Newton Itaration Method (balance equation); \\
+\hline
+{\em be0} & (\hyperlink{struct_d_o_u_b_l_e_v_e_c_t_o_r}{D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} $\ast$) be -\/ known term of the equation in .... (balance equation);
+\begin{DoxyItemize}
+\item This functions contains the iterative the Newton-\/like iterative according to Casulli, 2008 \-: \[ ^{m+1}\eta^{n+1}= ^{m}\eta^{n+1}-\left[\mathbf{Ws}( ^{m}\eta^{n+1})+\mathbf{T}\right]^{-1}\left[\mathbf{V}( ^{m}\eta^{n+1})+\mathbf{T}\cdot^{m}\eta^{n+1} -\mathbf{b3}\right] \] where \$m\$ is the reiteration level. Please see the pdf documentation of the analytical passages for the documentation.
+\end{DoxyItemize}\\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 367 of file b\-\_\-solver.\-c.
+
+
+
+References b\-\_\-smatrix\-\_\-element(), free\-\_\-doublevector(), jacobi\-\_\-preconditioned\-\_\-conjugate\-\_\-gradient\-\_\-search(), join\-\_\-strings(), max\-\_\-doublevector(), P\-A\-R\-A\-M\-::max\-\_\-errors, M\-I\-N\-\_\-\-T\-\_\-\-D\-I\-A\-G, M\-I\-N\-\_\-\-T\-\_\-\-D\-I\-A\-G\-\_\-\-N\-E\-G\-A\-T\-I\-V\-E\-\_\-\-I\-N\-D\-E\-X, new\-\_\-doublevector(), D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R\-::nh, D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R\-::nl, P\-A\-R\-A\-M\-::null\-\_\-dirichlet, t\-\_\-st\-\_\-operator\-\_\-element(), volume(), wpath, and P\-A\-R\-A\-M\-::x\-\_\-temp\-\_\-adm.
+
+
+
+Referenced by time\-\_\-loop().
+
+\hypertarget{b__solver_8c_a092b6742da36d2030755953ce9b20c60}{\index{b\-\_\-solver.\-c@{b\-\_\-solver.\-c}!t\-\_\-st\-\_\-operator\-\_\-element@{t\-\_\-st\-\_\-operator\-\_\-element}}
+\index{t\-\_\-st\-\_\-operator\-\_\-element@{t\-\_\-st\-\_\-operator\-\_\-element}!b_solver.c@{b\-\_\-solver.\-c}}
+\subsubsection[{t\-\_\-st\-\_\-operator\-\_\-element}]{\setlength{\rightskip}{0pt plus 5cm}double t\-\_\-st\-\_\-operator\-\_\-element (
+\begin{DoxyParamCaption}
+\item[{long}]{i, }
+\item[{{\bf D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} $\ast$}]{eta}
+\end{DoxyParamCaption}
+)}}\label{b__solver_8c_a092b6742da36d2030755953ce9b20c60}
+\begin{DoxyAuthor}{Author}
+Emanuele Cordano 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+October 2009
+\end{DoxyDate}
+
+
+Definition at line 75 of file b\-\_\-solver.\-c.
+
+
+
+References M\-A\-X\-\_\-\-E\-L\-E\-V\-A\-T\-I\-O\-N\-\_\-\-V\-A\-L\-U\-E, t\-\_\-st\-\_\-advection\-\_\-operator\-\_\-element(), and t\-\_\-st\-\_\-operator\-\_\-element\-\_\-subs().
+
+
+
+Referenced by Newton\-\_\-convergence(), and time\-\_\-loop().
+
+\hypertarget{b__solver_8c_a5d82757e02d7bf9264f9138193e87832}{\index{b\-\_\-solver.\-c@{b\-\_\-solver.\-c}!t\-\_\-st\-\_\-operator\-\_\-element\-\_\-no\-\_\-dirichlet@{t\-\_\-st\-\_\-operator\-\_\-element\-\_\-no\-\_\-dirichlet}}
+\index{t\-\_\-st\-\_\-operator\-\_\-element\-\_\-no\-\_\-dirichlet@{t\-\_\-st\-\_\-operator\-\_\-element\-\_\-no\-\_\-dirichlet}!b_solver.c@{b\-\_\-solver.\-c}}
+\subsubsection[{t\-\_\-st\-\_\-operator\-\_\-element\-\_\-no\-\_\-dirichlet}]{\setlength{\rightskip}{0pt plus 5cm}double t\-\_\-st\-\_\-operator\-\_\-element\-\_\-no\-\_\-dirichlet (
+\begin{DoxyParamCaption}
+\item[{long}]{i, }
+\item[{{\bf D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} $\ast$}]{eta}
+\end{DoxyParamCaption}
+)}}\label{b__solver_8c_a5d82757e02d7bf9264f9138193e87832}
+\begin{DoxyAuthor}{Author}
+Emanuele Cordano 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+May 2010
+\end{DoxyDate}
+
+
+Definition at line 87 of file b\-\_\-solver.\-c.
+
+
+
+References P\-A\-R\-A\-M\-::null\-\_\-dirichlet, t\-\_\-st\-\_\-advection\-\_\-operator\-\_\-element(), and t\-\_\-st\-\_\-operator\-\_\-element\-\_\-subs().
+
+
+
+Referenced by b\-\_\-smatrix\-\_\-element(), and time\-\_\-loop().
+
+\hypertarget{b__solver_8c_aa28812ccdb9aa194c69d311db3b6648e}{\index{b\-\_\-solver.\-c@{b\-\_\-solver.\-c}!t\-\_\-st\-\_\-operator\-\_\-element\-\_\-subs@{t\-\_\-st\-\_\-operator\-\_\-element\-\_\-subs}}
+\index{t\-\_\-st\-\_\-operator\-\_\-element\-\_\-subs@{t\-\_\-st\-\_\-operator\-\_\-element\-\_\-subs}!b_solver.c@{b\-\_\-solver.\-c}}
+\subsubsection[{t\-\_\-st\-\_\-operator\-\_\-element\-\_\-subs}]{\setlength{\rightskip}{0pt plus 5cm}double t\-\_\-st\-\_\-operator\-\_\-element\-\_\-subs (
+\begin{DoxyParamCaption}
+\item[{long}]{i, }
+\item[{{\bf D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} $\ast$}]{eta, }
+\item[{double}]{cond\-\_\-dirichlet}
+\end{DoxyParamCaption}
+)}}\label{b__solver_8c_aa28812ccdb9aa194c69d311db3b6648e}
+\begin{DoxyAuthor}{Author}
+Emanuele Cordano 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+June 2009
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em i} & -\/ index of the polygon at which t\-\_\-st\-\_\-operator\-\_\-element is calculated \\
+\hline
+{\em eta} & -\/ (\hyperlink{struct_d_o_u_b_l_e_v_e_c_t_o_r}{D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} $\ast$) vector of the unknowns \\
+\hline
+{\em cond\-\_\-dirichlet} & -\/ (double) (=M\-A\-X\-\_\-\-E\-L\-E\-V\-A\-T\-I\-O\-N\-\_\-\-V\-A\-L\-U\-E) in case dirichlet value are neglected or (=param-\/$>$null\-\_\-dirichlet) othrwise (added by ec on 20100517)\\
+\hline
+\end{DoxyParams}
+\begin{DoxyVerb}       This function calculates the i-th element of the following vector
+       where eta is the vector of the independent variables
+\end{DoxyVerb}
+ \[ \left[ \mathbf{T} \cdot \eta^{n+1} \right]_{i}= -\Delta t^{n} \, \sum_{j \in S_i} \, K_S \, A_j(\eta^n_{i,m(i,j)})\frac{\eta_{m(i,j)}^{n+1}-\eta_{i}^{n+1}}{\delta_{i,m(i,j)}} \] Please see the pdf documentation with the algebraic passages for major details.
+
+Definition at line 99 of file b\-\_\-solver.\-c.
+
+
+
+References G\-R\-I\-D\-::boundary\-\_\-indicator, D\-O\-U\-B\-L\-E\-\_\-\-G\-R\-I\-D\-::coarse, polygon\-\_\-connection\-\_\-attributes\-::connections, polygon\-\_\-connection\-\_\-attributes\-::d\-\_\-connections, P\-A\-R\-A\-M\-::dt, P\-O\-L\-Y\-G\-O\-N\-::edge\-\_\-indices, P\-O\-L\-Y\-G\-O\-N\-V\-E\-C\-T\-O\-R\-::element, polygon\-\_\-connection\-\_\-attribute\-\_\-array\-::element, P\-A\-R\-A\-M\-::\-Ks, G\-R\-I\-D\-::links, L\-O\-N\-G\-V\-E\-C\-T\-O\-R\-::nl, G\-R\-I\-D\-::polygons, vertical\-\_\-area\-\_\-subs(), and water\-\_\-surface\-\_\-elevation\-\_\-mean().
+
+
+
+Referenced by t\-\_\-st\-\_\-operator\-\_\-element(), and t\-\_\-st\-\_\-operator\-\_\-element\-\_\-no\-\_\-dirichlet().
+
+\hypertarget{b__solver_8c_adba7ead1faa7f8dae670343373ebe9a2}{\index{b\-\_\-solver.\-c@{b\-\_\-solver.\-c}!time\-\_\-loop@{time\-\_\-loop}}
+\index{time\-\_\-loop@{time\-\_\-loop}!b_solver.c@{b\-\_\-solver.\-c}}
+\subsubsection[{time\-\_\-loop}]{\setlength{\rightskip}{0pt plus 5cm}int time\-\_\-loop (
+\begin{DoxyParamCaption}
+\item[{short}]{print, }
+\item[{int($\ast$)(void $\ast$v1, void $\ast$v2)}]{write\-\_\-output}
+\end{DoxyParamCaption}
+)}}\label{b__solver_8c_adba7ead1faa7f8dae670343373ebe9a2}
+\begin{DoxyAuthor}{Author}
+Emanuele Cordano 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+22 April 2009
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em (short)} & -\/ print F\-Luid\-Turtle Parametesrs \\
+\hline
+{\em int} & ($\ast$write\-\_\-output)(void $\ast$v1, void $\ast$v2) -\/ function which writes the output for every requested time steps\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+value 0 in case of success, -\/1 otherwise
+\end{DoxyReturn}
+In this routin the discretized system equation\-: \[ \mathbf{V}(\eta^{n+1})+\mathbf{T} \cdot \eta^{n+1} = \mathbf{b3} \] is solved. Please see the meanings of the symbols in the pdf documentation with algebraic passages. The nonlinear equation system is solved with a Newtton-\/like
+
+Definition at line 548 of file b\-\_\-solver.\-c.
+
+
+
+References P\-O\-L\-Y\-G\-O\-N\-::area2\-D, b\-\_\-advection(), D\-O\-U\-B\-L\-E\-\_\-\-G\-R\-I\-D\-::coarse, P\-A\-R\-A\-M\-::dt, P\-A\-R\-A\-M\-::dt\-\_\-print, P\-O\-L\-Y\-G\-O\-N\-V\-E\-C\-T\-O\-R\-::element, free\-\_\-doublevector(), free\-\_\-\-O\-U\-T\-P\-U\-T\-\_\-\-F\-I\-L\-E\-N\-A\-M\-E\-S(), free\-\_\-s\-\_\-times(), get\-\_\-diagonal(), get\-\_\-dirichletsnode(), get\-\_\-s\-\_\-times(), get\-\_\-sources(), I\-\_\-\-D\-I\-R\-I\-C\-H\-L\-E\-T\-T\-I\-M\-E\-S\-\_\-\-F\-T\-\_\-\-F\-I\-L\-E, I\-\_\-\-T\-I\-M\-E\-S\-\_\-\-F\-T\-\_\-\-F\-I\-L\-E, new\-\_\-doublevector(), new\-\_\-output\-\_\-filenames(), Newton\-\_\-convergence(), D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R\-::nh, D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R\-::nl, P\-A\-R\-A\-M\-::null\-\_\-dirichlet, G\-R\-I\-D\-::polygons, q\-\_\-discharge\-\_\-from\-\_\-outlet\-\_\-cell(), P\-A\-R\-A\-M\-::t, P\-A\-R\-A\-M\-::t\-\_\-end, t\-\_\-st\-\_\-operator\-\_\-element(), t\-\_\-st\-\_\-operator\-\_\-element\-\_\-no\-\_\-dirichlet(), P\-A\-R\-A\-M\-::t\-\_\-start, update\-\_\-\-F1\-\_\-wet\-\_\-vert\-\_\-area(), update\-\_\-velocity(), volume(), and write\-\_\-suffix().
+
+
+
+Referenced by main().
+
+\hypertarget{b__solver_8c_a91803fd42436b7e4151bbd2e57be7d41}{\index{b\-\_\-solver.\-c@{b\-\_\-solver.\-c}!water\-\_\-surface\-\_\-elevation\-\_\-mean@{water\-\_\-surface\-\_\-elevation\-\_\-mean}}
+\index{water\-\_\-surface\-\_\-elevation\-\_\-mean@{water\-\_\-surface\-\_\-elevation\-\_\-mean}!b_solver.c@{b\-\_\-solver.\-c}}
+\subsubsection[{water\-\_\-surface\-\_\-elevation\-\_\-mean}]{\setlength{\rightskip}{0pt plus 5cm}double water\-\_\-surface\-\_\-elevation\-\_\-mean (
+\begin{DoxyParamCaption}
+\item[{double}]{eta1, }
+\item[{double}]{eta2}
+\end{DoxyParamCaption}
+)}}\label{b__solver_8c_a91803fd42436b7e4151bbd2e57be7d41}
+\begin{DoxyAuthor}{Author}
+Emanuele Cordano 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+June 2010
+\end{DoxyDate}
+
+
+Definition at line 714 of file b\-\_\-solver.\-c.
+
+
+
+References F\-L\-A\-G\-::arithmetic\-\_\-mean0.
+
+
+
+Referenced by b\-\_\-advection(), t\-\_\-st\-\_\-advection\-\_\-operator\-\_\-element(), t\-\_\-st\-\_\-operator\-\_\-element\-\_\-subs(), update\-\_\-\-F1\-\_\-wet\-\_\-vert\-\_\-area(), and update\-\_\-velocity().
+
+\hypertarget{b__solver_8c_a876e1955106e2c27653f6b7d988b5a04}{\index{b\-\_\-solver.\-c@{b\-\_\-solver.\-c}!write\-\_\-map\-\_\-results@{write\-\_\-map\-\_\-results}}
+\index{write\-\_\-map\-\_\-results@{write\-\_\-map\-\_\-results}!b_solver.c@{b\-\_\-solver.\-c}}
+\subsubsection[{write\-\_\-map\-\_\-results}]{\setlength{\rightskip}{0pt plus 5cm}int write\-\_\-map\-\_\-results (
+\begin{DoxyParamCaption}
+\item[{void $\ast$}]{output, }
+\item[{void $\ast$}]{S\-S\-S\-S}
+\end{DoxyParamCaption}
+)}}\label{b__solver_8c_a876e1955106e2c27653f6b7d988b5a04}
+
+
+Definition at line 735 of file b\-\_\-solver.\-c.
+
+
+
+References D\-O\-U\-B\-L\-E\-S\-Q\-U\-A\-R\-E\-\_\-\-G\-R\-I\-D\-::big, D\-O\-U\-B\-L\-E\-R\-A\-S\-T\-E\-R\-\_\-\-M\-A\-P\-::coarse, D\-T\-M\-\_\-\-M\-A\-S\-K, O\-U\-T\-P\-U\-T\-\_\-\-F\-I\-L\-E\-N\-A\-M\-E\-S\-::file\-\_\-error, O\-U\-T\-P\-U\-T\-\_\-\-F\-I\-L\-E\-N\-A\-M\-E\-S\-::file\-\_\-result, S\-Q\-U\-A\-R\-E\-\_\-\-G\-R\-I\-D\-::indices\-\_\-pixel, join\-\_\-strings(), R\-A\-S\-T\-E\-R\-\_\-\-M\-A\-P\-::layer, R\-A\-S\-T\-E\-R\-\_\-\-M\-A\-P\-::\-U\-V, write\-\_\-doublevector\-\_\-in\-\_\-a\-\_\-ascii\-\_\-ft\-\_\-format\-\_\-single\-\_\-file(), and write\-\_\-raster\-\_\-from\-\_\-doublevector().
+
+
+
+Referenced by main().
+
+
+
+\subsection{Variable Documentation}
+\hypertarget{b__solver_8c_ab58c424a59f28ac6b17e7b7f5aae6152}{\index{b\-\_\-solver.\-c@{b\-\_\-solver.\-c}!dgrid@{dgrid}}
+\index{dgrid@{dgrid}!b_solver.c@{b\-\_\-solver.\-c}}
+\subsubsection[{dgrid}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\-O\-U\-B\-L\-E\-\_\-\-G\-R\-I\-D}$\ast$ dgrid}}\label{b__solver_8c_ab58c424a59f28ac6b17e7b7f5aae6152}
+
+
+Definition at line 126 of file main.\-c.
+
+
+
+Referenced by new\-\_\-double\-\_\-grid\-\_\-from\-\_\-doublesquare\-\_\-grid().
+
+\hypertarget{b__solver_8c_a3e926bbffae6b8e632a255e2feb9d3d1}{\index{b\-\_\-solver.\-c@{b\-\_\-solver.\-c}!dirichlet@{dirichlet}}
+\index{dirichlet@{dirichlet}!b_solver.c@{b\-\_\-solver.\-c}}
+\subsubsection[{dirichlet}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} $\ast$ dirichlet}}\label{b__solver_8c_a3e926bbffae6b8e632a255e2feb9d3d1}
+coefficient F1 for surface flow as reported in Casulli,2008 
+
+Definition at line 71 of file b\-\_\-solver.\-c.
+
+\hypertarget{b__solver_8c_acdfd95279a09d044eec55a5734ae3025}{\index{b\-\_\-solver.\-c@{b\-\_\-solver.\-c}!dirichlet\-\_\-times@{dirichlet\-\_\-times}}
+\index{dirichlet\-\_\-times@{dirichlet\-\_\-times}!b_solver.c@{b\-\_\-solver.\-c}}
+\subsubsection[{dirichlet\-\_\-times}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\-\_\-\-T\-I\-M\-E\-S} $\ast$ dirichlet\-\_\-times}}\label{b__solver_8c_acdfd95279a09d044eec55a5734ae3025}
+
+
+Definition at line 72 of file b\-\_\-solver.\-c.
+
+\hypertarget{b__solver_8c_a44d81a9ca5648f4ec1c298c7f37fefff}{\index{b\-\_\-solver.\-c@{b\-\_\-solver.\-c}!draster@{draster}}
+\index{draster@{draster}!b_solver.c@{b\-\_\-solver.\-c}}
+\subsubsection[{draster}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\-O\-U\-B\-L\-E\-R\-A\-S\-T\-E\-R\-\_\-\-M\-A\-P}$\ast$ draster}}\label{b__solver_8c_a44d81a9ca5648f4ec1c298c7f37fefff}
+
+
+Definition at line 128 of file main.\-c.
+
+
+
+Referenced by get\-\_\-doubleraster\-\_\-map().
+
+\hypertarget{b__solver_8c_a9b5f80541820877b6d4a8841650da32a}{\index{b\-\_\-solver.\-c@{b\-\_\-solver.\-c}!dsq@{dsq}}
+\index{dsq@{dsq}!b_solver.c@{b\-\_\-solver.\-c}}
+\subsubsection[{dsq}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\-O\-U\-B\-L\-E\-S\-Q\-U\-A\-R\-E\-\_\-\-G\-R\-I\-D}$\ast$ dsq}}\label{b__solver_8c_a9b5f80541820877b6d4a8841650da32a}
+
+
+Definition at line 125 of file main.\-c.
+
+
+
+Referenced by get\-\_\-doublesquare\-\_\-grid(), and read\-\_\-doublesquare\-\_\-grid().
+
+\hypertarget{b__solver_8c_a4cd3286ed17aff6164594f8a2d59f898}{\index{b\-\_\-solver.\-c@{b\-\_\-solver.\-c}!elevation\-\_\-bottom\-\_\-bottom@{elevation\-\_\-bottom\-\_\-bottom}}
+\index{elevation\-\_\-bottom\-\_\-bottom@{elevation\-\_\-bottom\-\_\-bottom}!b_solver.c@{b\-\_\-solver.\-c}}
+\subsubsection[{elevation\-\_\-bottom\-\_\-bottom}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R}$\ast$ elevation\-\_\-bottom\-\_\-bottom}}\label{b__solver_8c_a4cd3286ed17aff6164594f8a2d59f898}
+map of the bottom elevation defined in the lines of the fine grid 
+
+Definition at line 134 of file main.\-c.
+
+\hypertarget{b__solver_8c_a93f8bd854f98f2abe47c108484cf1c6b}{\index{b\-\_\-solver.\-c@{b\-\_\-solver.\-c}!elevation\-\_\-bottom\-\_\-coarse@{elevation\-\_\-bottom\-\_\-coarse}}
+\index{elevation\-\_\-bottom\-\_\-coarse@{elevation\-\_\-bottom\-\_\-coarse}!b_solver.c@{b\-\_\-solver.\-c}}
+\subsubsection[{elevation\-\_\-bottom\-\_\-coarse}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R}$\ast$ elevation\-\_\-bottom\-\_\-coarse}}\label{b__solver_8c_a93f8bd854f98f2abe47c108484cf1c6b}
+map of the bottom elevation (fine grid) 
+
+Definition at line 132 of file main.\-c.
+
+\hypertarget{b__solver_8c_a48a2ac079f3ec064d28848bcdc54ed7c}{\index{b\-\_\-solver.\-c@{b\-\_\-solver.\-c}!elevation\-\_\-bottom\-\_\-fine@{elevation\-\_\-bottom\-\_\-fine}}
+\index{elevation\-\_\-bottom\-\_\-fine@{elevation\-\_\-bottom\-\_\-fine}!b_solver.c@{b\-\_\-solver.\-c}}
+\subsubsection[{elevation\-\_\-bottom\-\_\-fine}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R}$\ast$ elevation\-\_\-bottom\-\_\-fine}}\label{b__solver_8c_a48a2ac079f3ec064d28848bcdc54ed7c}
+
+
+Definition at line 131 of file main.\-c.
+
+\hypertarget{b__solver_8c_a495ebb69c21b8816ee4f7dfe0e1e6d98}{\index{b\-\_\-solver.\-c@{b\-\_\-solver.\-c}!elevation\-\_\-bottom\-\_\-flines@{elevation\-\_\-bottom\-\_\-flines}}
+\index{elevation\-\_\-bottom\-\_\-flines@{elevation\-\_\-bottom\-\_\-flines}!b_solver.c@{b\-\_\-solver.\-c}}
+\subsubsection[{elevation\-\_\-bottom\-\_\-flines}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R}$\ast$ elevation\-\_\-bottom\-\_\-flines}}\label{b__solver_8c_a495ebb69c21b8816ee4f7dfe0e1e6d98}
+map of the bottom elevation (coarse grid) 
+
+Definition at line 133 of file main.\-c.
+
+\hypertarget{b__solver_8c_a4ba789d32e2325ae5d8c21f4643c08f1}{\index{b\-\_\-solver.\-c@{b\-\_\-solver.\-c}!eta\-\_\-v@{eta\-\_\-v}}
+\index{eta\-\_\-v@{eta\-\_\-v}!b_solver.c@{b\-\_\-solver.\-c}}
+\subsubsection[{eta\-\_\-v}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R}$\ast$ eta\-\_\-v}}\label{b__solver_8c_a4ba789d32e2325ae5d8c21f4643c08f1}
+coefficient F1 for surface flow as reported in Casulli,2008 
+
+Definition at line 71 of file b\-\_\-solver.\-c.
+
+\hypertarget{b__solver_8c_ad2a1214f97f2ea07f385b7c6ce403096}{\index{b\-\_\-solver.\-c@{b\-\_\-solver.\-c}!F1\-\_\-wet\-\_\-vert\-\_\-area@{F1\-\_\-wet\-\_\-vert\-\_\-area}}
+\index{F1\-\_\-wet\-\_\-vert\-\_\-area@{F1\-\_\-wet\-\_\-vert\-\_\-area}!b_solver.c@{b\-\_\-solver.\-c}}
+\subsubsection[{F1\-\_\-wet\-\_\-vert\-\_\-area}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R}$\ast$ F1\-\_\-wet\-\_\-vert\-\_\-area}}\label{b__solver_8c_ad2a1214f97f2ea07f385b7c6ce403096}
+map of the surface velocity defined in the lines (velocity is positive when going kp1 to kp2 polygons with kp1$>$kp2 )
+
+map of the (wet area) surface velocity defined in the lines (velocity is positive when going kp1 to kp2 polygons with kp1$>$kp2 ) 
+
+Definition at line 147 of file main.\-c.
+
+\hypertarget{b__solver_8c_a528421ce34267070764970b021f6034a}{\index{b\-\_\-solver.\-c@{b\-\_\-solver.\-c}!filenames@{filenames}}
+\index{filenames@{filenames}!b_solver.c@{b\-\_\-solver.\-c}}
+\subsubsection[{filenames}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\-T\-R\-I\-N\-G\-B\-I\-N}$\ast$ filenames}}\label{b__solver_8c_a528421ce34267070764970b021f6034a}
+
+
+Definition at line 124 of file main.\-c.
+
+\hypertarget{b__solver_8c_af669d66807986c96b4927566ae5e8b45}{\index{b\-\_\-solver.\-c@{b\-\_\-solver.\-c}!flag@{flag}}
+\index{flag@{flag}!b_solver.c@{b\-\_\-solver.\-c}}
+\subsubsection[{flag}]{\setlength{\rightskip}{0pt plus 5cm}{\bf F\-L\-A\-G}$\ast$ flag}}\label{b__solver_8c_af669d66807986c96b4927566ae5e8b45}
+
+
+Definition at line 149 of file main.\-c.
+
+\hypertarget{b__solver_8c_a8d58cb68a19f9ec3d36dcf606ce6ab8e}{\index{b\-\_\-solver.\-c@{b\-\_\-solver.\-c}!outlet\-\_\-coefficient@{outlet\-\_\-coefficient}}
+\index{outlet\-\_\-coefficient@{outlet\-\_\-coefficient}!b_solver.c@{b\-\_\-solver.\-c}}
+\subsubsection[{outlet\-\_\-coefficient}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R}$\ast$ outlet\-\_\-coefficient}}\label{b__solver_8c_a8d58cb68a19f9ec3d36dcf606ce6ab8e}
+map of porosity defined on the pixels of the fine grid map of the coefficient of the rating curve in the outlet q\-\_\-discharge=C$\ast$h\-\_\-sup$^\wedge$m
+
+map of porosity defined on the pixels of the fine grid 
+
+Definition at line 138 of file main.\-c.
+
+\hypertarget{b__solver_8c_ad8ac9ce29f12815d417a57b2c0dc31fb}{\index{b\-\_\-solver.\-c@{b\-\_\-solver.\-c}!param@{param}}
+\index{param@{param}!b_solver.c@{b\-\_\-solver.\-c}}
+\subsubsection[{param}]{\setlength{\rightskip}{0pt plus 5cm}{\bf P\-A\-R\-A\-M}$\ast$ param}}\label{b__solver_8c_ad8ac9ce29f12815d417a57b2c0dc31fb}
+coefficient F1 for surface flow as reported in Casulli,2008 
+
+Definition at line 148 of file main.\-c.
+
+\hypertarget{b__solver_8c_acd5b5637e9d24f6f2641e08ed439b8b8}{\index{b\-\_\-solver.\-c@{b\-\_\-solver.\-c}!porosity\-\_\-fine@{porosity\-\_\-fine}}
+\index{porosity\-\_\-fine@{porosity\-\_\-fine}!b_solver.c@{b\-\_\-solver.\-c}}
+\subsubsection[{porosity\-\_\-fine}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R}$\ast$ porosity\-\_\-fine}}\label{b__solver_8c_acd5b5637e9d24f6f2641e08ed439b8b8}
+map of the elvetion of the bottom of he coarse cells
+
+map of the surface terrain elevation (fine grid lines) 
+
+Definition at line 137 of file main.\-c.
+
+\hypertarget{b__solver_8c_ac73bbfd9a6e0ad893d203003e268a1be}{\index{b\-\_\-solver.\-c@{b\-\_\-solver.\-c}!s\-\_\-times@{s\-\_\-times}}
+\index{s\-\_\-times@{s\-\_\-times}!b_solver.c@{b\-\_\-solver.\-c}}
+\subsubsection[{s\-\_\-times}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\-\_\-\-T\-I\-M\-E\-S}$\ast$ s\-\_\-times}}\label{b__solver_8c_ac73bbfd9a6e0ad893d203003e268a1be}
+eta\-\_\-v and sources and dirichlet are defined as a global value, t\-\_\-diagonal is the diagonal of t\-\_\-st\-\_\-element tensor 
+
+Definition at line 72 of file b\-\_\-solver.\-c.
+
+\hypertarget{b__solver_8c_a04a25d32cf47c13341c9c9e6cab145ae}{\index{b\-\_\-solver.\-c@{b\-\_\-solver.\-c}!sources@{sources}}
+\index{sources@{sources}!b_solver.c@{b\-\_\-solver.\-c}}
+\subsubsection[{sources}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} $\ast$ sources}}\label{b__solver_8c_a04a25d32cf47c13341c9c9e6cab145ae}
+
+
+Definition at line 71 of file b\-\_\-solver.\-c.
+
+\hypertarget{b__solver_8c_ac2670c558f0154ba997b23d6d8184b6b}{\index{b\-\_\-solver.\-c@{b\-\_\-solver.\-c}!surface\-\_\-water\-\_\-velocity@{surface\-\_\-water\-\_\-velocity}}
+\index{surface\-\_\-water\-\_\-velocity@{surface\-\_\-water\-\_\-velocity}!b_solver.c@{b\-\_\-solver.\-c}}
+\subsubsection[{surface\-\_\-water\-\_\-velocity}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R}$\ast$ surface\-\_\-water\-\_\-velocity}}\label{b__solver_8c_ac2670c558f0154ba997b23d6d8184b6b}
+
+
+Definition at line 146 of file main.\-c.
+
+\hypertarget{b__solver_8c_aa616eec89ee73fc90cbc94d4092b6b14}{\index{b\-\_\-solver.\-c@{b\-\_\-solver.\-c}!t\-\_\-diagonal@{t\-\_\-diagonal}}
+\index{t\-\_\-diagonal@{t\-\_\-diagonal}!b_solver.c@{b\-\_\-solver.\-c}}
+\subsubsection[{t\-\_\-diagonal}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} $\ast$ t\-\_\-diagonal}}\label{b__solver_8c_aa616eec89ee73fc90cbc94d4092b6b14}
+
+
+Definition at line 71 of file b\-\_\-solver.\-c.
+
+\hypertarget{b__solver_8c_aec5469dc4b389b4c220d14002792f70d}{\index{b\-\_\-solver.\-c@{b\-\_\-solver.\-c}!t\-\_\-diagonal\-\_\-no\-\_\-dirichlet@{t\-\_\-diagonal\-\_\-no\-\_\-dirichlet}}
+\index{t\-\_\-diagonal\-\_\-no\-\_\-dirichlet@{t\-\_\-diagonal\-\_\-no\-\_\-dirichlet}!b_solver.c@{b\-\_\-solver.\-c}}
+\subsubsection[{t\-\_\-diagonal\-\_\-no\-\_\-dirichlet}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} $\ast$ t\-\_\-diagonal\-\_\-no\-\_\-dirichlet}}\label{b__solver_8c_aec5469dc4b389b4c220d14002792f70d}
+
+
+Definition at line 71 of file b\-\_\-solver.\-c.
+
+\hypertarget{b__solver_8c_ace3cfe323c8bb9508ed135a5e3be0f8c}{\index{b\-\_\-solver.\-c@{b\-\_\-solver.\-c}!water\-\_\-depth@{water\-\_\-depth}}
+\index{water\-\_\-depth@{water\-\_\-depth}!b_solver.c@{b\-\_\-solver.\-c}}
+\subsubsection[{water\-\_\-depth}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R}$\ast$ water\-\_\-depth}}\label{b__solver_8c_ace3cfe323c8bb9508ed135a5e3be0f8c}
+map of instantaneous water mass error 
+
+Definition at line 144 of file main.\-c.
+
+\hypertarget{b__solver_8c_a97eff843a1a4985b0746ef826cc27822}{\index{b\-\_\-solver.\-c@{b\-\_\-solver.\-c}!water\-\_\-mass\-\_\-error@{water\-\_\-mass\-\_\-error}}
+\index{water\-\_\-mass\-\_\-error@{water\-\_\-mass\-\_\-error}!b_solver.c@{b\-\_\-solver.\-c}}
+\subsubsection[{water\-\_\-mass\-\_\-error}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R}$\ast$ water\-\_\-mass\-\_\-error}}\label{b__solver_8c_a97eff843a1a4985b0746ef826cc27822}
+map of instantaneous water surface on the pixels of the coarse grid 
+
+Definition at line 143 of file main.\-c.
+
+\hypertarget{b__solver_8c_a3ace2c97e74d7e8aad3670b479cb606d}{\index{b\-\_\-solver.\-c@{b\-\_\-solver.\-c}!water\-\_\-surface\-\_\-elevation@{water\-\_\-surface\-\_\-elevation}}
+\index{water\-\_\-surface\-\_\-elevation@{water\-\_\-surface\-\_\-elevation}!b_solver.c@{b\-\_\-solver.\-c}}
+\subsubsection[{water\-\_\-surface\-\_\-elevation}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R}$\ast$ water\-\_\-surface\-\_\-elevation}}\label{b__solver_8c_a3ace2c97e74d7e8aad3670b479cb606d}
+
+
+Definition at line 142 of file main.\-c.
+
+\hypertarget{b__solver_8c_aa018d0410be770cac4c05bac5dea04f2}{\index{b\-\_\-solver.\-c@{b\-\_\-solver.\-c}!wpath@{wpath}}
+\index{wpath@{wpath}!b_solver.c@{b\-\_\-solver.\-c}}
+\subsubsection[{wpath}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ wpath}}\label{b__solver_8c_aa018d0410be770cac4c05bac5dea04f2}
+
+
+Definition at line 151 of file main.\-c.
+
+
+
+Referenced by main(), and Newton\-\_\-convergence().
+

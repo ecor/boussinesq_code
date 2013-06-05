@@ -1,0 +1,13 @@
+digraph "ASCII/extensions.h"
+{
+  bgcolor="transparent";
+  edge [fontname="FreeSans",fontsize="10",labelfontname="FreeSans",labelfontsize="10"];
+  node [fontname="FreeSans",fontsize="10",shape=record];
+  Node1 [label="ASCII/extensions.h",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="ASCII/import_ascii.c",height=0.2,width=0.4,color="black",URL="$import__ascii_8c.html"];
+  Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="ASCII/rw_maps.c",height=0.2,width=0.4,color="black",URL="$rw__maps_8c.html"];
+  Node1 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node4 [label="ASCII/write_ascii.c",height=0.2,width=0.4,color="black",URL="$write__ascii_8c.html"];
+}

@@ -1,0 +1,18 @@
+digraph "quickinterpolate"
+{
+  bgcolor="transparent";
+  edge [fontname="FreeSans",fontsize="10",labelfontname="FreeSans",labelfontsize="10"];
+  node [fontname="FreeSans",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="quickinterpolate",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="initialize_doublematrix",height=0.2,width=0.4,color="black",URL="$datamanipulation_8c.html#a4b04cb6d111058011057da381a49e9cd"];
+  Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="t_error",height=0.2,width=0.4,color="black",URL="$error_8c.html#af79ef7c6656ef0f3d2786e2b09c1755f"];
+  Node1 -> Node4 [color="midnightblue",fontsize="10",style="solid"];
+  Node4 [label="new_doublematrix",height=0.2,width=0.4,color="black",URL="$alloc_8c.html#a3b21f96183e0428ef02e28072baee562"];
+  Node4 -> Node5 [color="midnightblue",fontsize="10",style="solid"];
+  Node5 [label="dmatrix",height=0.2,width=0.4,color="black",URL="$alloc_8c.html#ab1a02a50dfbc26318f6bb296731b6f3a"];
+  Node5 -> Node3 [color="midnightblue",fontsize="10",style="solid"];
+  Node4 -> Node3 [color="midnightblue",fontsize="10",style="solid"];
+}

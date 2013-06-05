@@ -1,0 +1,208 @@
+\hypertarget{geometry__freememory_8h}{\section{B\-G\-E\-O\-M\-E\-T\-R\-Y/geometry\-\_\-freememory.h File Reference}
+\label{geometry__freememory_8h}\index{B\-G\-E\-O\-M\-E\-T\-R\-Y/geometry\-\_\-freememory.\-h@{B\-G\-E\-O\-M\-E\-T\-R\-Y/geometry\-\_\-freememory.\-h}}
+}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{geometry__freememory_8h_a92e2bb48750a3d7406b6b4f16782cd0e}{free\-\_\-point} (\hyperlink{struct_p_o_i_n_t}{P\-O\-I\-N\-T} $\ast$P)
+\item 
+void \hyperlink{geometry__freememory_8h_a93dcdfbfce9f9d5bd54d6df2cf53e664}{free\-\_\-line} (\hyperlink{struct_l_i_n_e}{L\-I\-N\-E} $\ast$L)
+\item 
+void \hyperlink{geometry__freememory_8h_a1f5f9fb25ccc4a2698ae3f4ee1ee2459}{free\-\_\-polygon} (\hyperlink{struct_p_o_l_y_g_o_n}{P\-O\-L\-Y\-G\-O\-N} $\ast$P\-O)
+\item 
+void \hyperlink{geometry__freememory_8h_a3dd1b81fd65e4b4c54ba62e87ca4c6b5}{free\-\_\-linevector} (\hyperlink{struct_l_i_n_e_v_e_c_t_o_r}{L\-I\-N\-E\-V\-E\-C\-T\-O\-R} $\ast$lv)
+\item 
+void \hyperlink{geometry__freememory_8h_a4532941a5ba16950eba90103786b3344}{free\-\_\-polygonvector} (\hyperlink{struct_p_o_l_y_g_o_n_v_e_c_t_o_r}{P\-O\-L\-Y\-G\-O\-N\-V\-E\-C\-T\-O\-R} $\ast$pv)
+\item 
+void \hyperlink{geometry__freememory_8h_aa958efb37e573247a54179567bf338bd}{free\-\_\-polygon\-\_\-connection\-\_\-attributes} (\hyperlink{structpolygon__connection__attributes}{polygon\-\_\-connection\-\_\-attributes} $\ast$pca)
+\item 
+void \hyperlink{geometry__freememory_8h_a3f2e35ee3b7beb53a4c137f48d2ad87c}{free\-\_\-polygon\-\_\-connection\-\_\-attribute\-\_\-array} (\hyperlink{structpolygon__connection__attribute__array}{polygon\-\_\-connection\-\_\-attribute\-\_\-array} $\ast$pcaa)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{geometry__freememory_8h_a93dcdfbfce9f9d5bd54d6df2cf53e664}{\index{geometry\-\_\-freememory.\-h@{geometry\-\_\-freememory.\-h}!free\-\_\-line@{free\-\_\-line}}
+\index{free\-\_\-line@{free\-\_\-line}!geometry_freememory.h@{geometry\-\_\-freememory.\-h}}
+\subsubsection[{free\-\_\-line}]{\setlength{\rightskip}{0pt plus 5cm}void free\-\_\-line (
+\begin{DoxyParamCaption}
+\item[{{\bf L\-I\-N\-E} $\ast$}]{L}
+\end{DoxyParamCaption}
+)}}\label{geometry__freememory_8h_a93dcdfbfce9f9d5bd54d6df2cf53e664}
+\begin{DoxyAuthor}{Author}
+Emanuele Cordano 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+November 2008
+\end{DoxyDate}
+
+
+Definition at line 48 of file geometry\-\_\-freememory.\-c.
+
+
+
+References L\-I\-N\-E\-::begin, L\-I\-N\-E\-::end, and free\-\_\-point().
+
+
+
+Referenced by free\-\_\-linevector().
+
+\hypertarget{geometry__freememory_8h_a3dd1b81fd65e4b4c54ba62e87ca4c6b5}{\index{geometry\-\_\-freememory.\-h@{geometry\-\_\-freememory.\-h}!free\-\_\-linevector@{free\-\_\-linevector}}
+\index{free\-\_\-linevector@{free\-\_\-linevector}!geometry_freememory.h@{geometry\-\_\-freememory.\-h}}
+\subsubsection[{free\-\_\-linevector}]{\setlength{\rightskip}{0pt plus 5cm}void free\-\_\-linevector (
+\begin{DoxyParamCaption}
+\item[{{\bf L\-I\-N\-E\-V\-E\-C\-T\-O\-R} $\ast$}]{lv}
+\end{DoxyParamCaption}
+)}}\label{geometry__freememory_8h_a3dd1b81fd65e4b4c54ba62e87ca4c6b5}
+\begin{DoxyAuthor}{Author}
+Emanuele Cordano 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+November 2008
+\end{DoxyDate}
+
+
+Definition at line 77 of file geometry\-\_\-freememory.\-c.
+
+
+
+References L\-I\-N\-E\-V\-E\-C\-T\-O\-R\-::element, free\-\_\-line(), and L\-I\-N\-E\-V\-E\-C\-T\-O\-R\-::nl.
+
+
+
+Referenced by free\-\_\-grid(), get\-\_\-polygon(), and new\-\_\-pixel\-\_\-from\-\_\-raster().
+
+\hypertarget{geometry__freememory_8h_a92e2bb48750a3d7406b6b4f16782cd0e}{\index{geometry\-\_\-freememory.\-h@{geometry\-\_\-freememory.\-h}!free\-\_\-point@{free\-\_\-point}}
+\index{free\-\_\-point@{free\-\_\-point}!geometry_freememory.h@{geometry\-\_\-freememory.\-h}}
+\subsubsection[{free\-\_\-point}]{\setlength{\rightskip}{0pt plus 5cm}void free\-\_\-point (
+\begin{DoxyParamCaption}
+\item[{{\bf P\-O\-I\-N\-T} $\ast$}]{P}
+\end{DoxyParamCaption}
+)}}\label{geometry__freememory_8h_a92e2bb48750a3d7406b6b4f16782cd0e}
+\begin{DoxyVerb}BGEOMETRY BUILDS THE MESH FROM A RASTER FOR THE BOUSSINESQ MODEL
+\end{DoxyVerb}
+ Key\-Palette Version 0.\-9375 K\-Mackenzie
+
+file \hyperlink{geometry__freememory_8h}{geometry\-\_\-freememory.\-h}
+
+Copyright, 2009 Emanuele Cordano and Riccardo Rigon
+
+This file is part of B\-G\-E\-O\-M\-E\-T\-R\-Y. B\-G\-E\-O\-M\-E\-T\-R\-Y is free software\-: you can redistribute it and/or modify it under the terms of the G\-N\-U General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
+
+B\-G\-E\-O\-M\-E\-T\-R\-Y is distributed in the hope that it will be useful, but W\-I\-T\-H\-O\-U\-T A\-N\-Y W\-A\-R\-R\-A\-N\-T\-Y; without even the implied warranty of M\-E\-R\-C\-H\-A\-N\-T\-A\-B\-I\-L\-I\-T\-Y or F\-I\-T\-N\-E\-S\-S F\-O\-R A P\-A\-R\-T\-I\-C\-U\-L\-A\-R P\-U\-R\-P\-O\-S\-E. See the G\-N\-U General Public License for more details.
+
+You should have received a copy of the G\-N\-U General Public License along with this program. If not, see \href{http://www.gnu.org/licenses/}{\tt http\-://www.\-gnu.\-org/licenses/}.
+
+\begin{DoxyVerb}BGEOMETRY BUILDS THE MESH FROM A RASTER FOR THE BOUSSINESQ MODEL
+\end{DoxyVerb}
+ Key\-Palette Version 0.\-9375 K\-Mackenzie
+
+file \hyperlink{geometry__freememory_8c}{geometry\-\_\-freememory.\-c}
+
+Copyright, 2009 Emanuele Cordano and Riccardo Rigon
+
+This file is part of B\-G\-E\-O\-M\-E\-T\-R\-Y. B\-G\-E\-O\-M\-E\-T\-R\-Y is free software\-: you can redistribute it and/or modify it under the terms of the G\-N\-U General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
+
+B\-G\-E\-O\-M\-E\-T\-R\-Y is distributed in the hope that it will be useful, but W\-I\-T\-H\-O\-U\-T A\-N\-Y W\-A\-R\-R\-A\-N\-T\-Y; without even the implied warranty of M\-E\-R\-C\-H\-A\-N\-T\-A\-B\-I\-L\-I\-T\-Y or F\-I\-T\-N\-E\-S\-S F\-O\-R A P\-A\-R\-T\-I\-C\-U\-L\-A\-R P\-U\-R\-P\-O\-S\-E. See the G\-N\-U General Public License for more details.
+
+You should have received a copy of the G\-N\-U General Public License along with this program. If not, see \href{http://www.gnu.org/licenses/}{\tt http\-://www.\-gnu.\-org/licenses/}. \begin{DoxyAuthor}{Author}
+Emanuele Cordano 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+November 2008
+\end{DoxyDate}
+if (P) printf (\char`\"{}\-Warning\-: point \%ld was not deallacated!!\char`\"{},P-\/$>$index); 
+
+Definition at line 34 of file geometry\-\_\-freememory.\-c.
+
+
+
+Referenced by free\-\_\-line(), free\-\_\-polygon(), get\-\_\-line(), get\-\_\-polygon(), new\-\_\-horizontal\-\_\-line\-\_\-from\-\_\-raster(), new\-\_\-pixel\-\_\-from\-\_\-raster(), new\-\_\-vertical\-\_\-line\-\_\-from\-\_\-raster(), and read\-\_\-linevector().
+
+\hypertarget{geometry__freememory_8h_a1f5f9fb25ccc4a2698ae3f4ee1ee2459}{\index{geometry\-\_\-freememory.\-h@{geometry\-\_\-freememory.\-h}!free\-\_\-polygon@{free\-\_\-polygon}}
+\index{free\-\_\-polygon@{free\-\_\-polygon}!geometry_freememory.h@{geometry\-\_\-freememory.\-h}}
+\subsubsection[{free\-\_\-polygon}]{\setlength{\rightskip}{0pt plus 5cm}void free\-\_\-polygon (
+\begin{DoxyParamCaption}
+\item[{{\bf P\-O\-L\-Y\-G\-O\-N} $\ast$}]{P\-O}
+\end{DoxyParamCaption}
+)}}\label{geometry__freememory_8h_a1f5f9fb25ccc4a2698ae3f4ee1ee2459}
+\begin{DoxyAuthor}{Author}
+Emanuele Cordano 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+November 2008
+\end{DoxyDate}
+
+
+Definition at line 63 of file geometry\-\_\-freememory.\-c.
+
+
+
+References P\-O\-L\-Y\-G\-O\-N\-::centroid, P\-O\-L\-Y\-G\-O\-N\-::edge\-\_\-indices, free\-\_\-longvector(), and free\-\_\-point().
+
+
+
+Referenced by free\-\_\-polygonvector().
+
+\hypertarget{geometry__freememory_8h_a3f2e35ee3b7beb53a4c137f48d2ad87c}{\index{geometry\-\_\-freememory.\-h@{geometry\-\_\-freememory.\-h}!free\-\_\-polygon\-\_\-connection\-\_\-attribute\-\_\-array@{free\-\_\-polygon\-\_\-connection\-\_\-attribute\-\_\-array}}
+\index{free\-\_\-polygon\-\_\-connection\-\_\-attribute\-\_\-array@{free\-\_\-polygon\-\_\-connection\-\_\-attribute\-\_\-array}!geometry_freememory.h@{geometry\-\_\-freememory.\-h}}
+\subsubsection[{free\-\_\-polygon\-\_\-connection\-\_\-attribute\-\_\-array}]{\setlength{\rightskip}{0pt plus 5cm}void free\-\_\-polygon\-\_\-connection\-\_\-attribute\-\_\-array (
+\begin{DoxyParamCaption}
+\item[{{\bf polygon\-\_\-connection\-\_\-attribute\-\_\-array} $\ast$}]{pcaa}
+\end{DoxyParamCaption}
+)}}\label{geometry__freememory_8h_a3f2e35ee3b7beb53a4c137f48d2ad87c}
+
+
+Definition at line 144 of file geometry\-\_\-freememory.\-c.
+
+
+
+References polygon\-\_\-connection\-\_\-attribute\-\_\-array\-::element, free\-\_\-polygon\-\_\-connection\-\_\-attributes(), polygon\-\_\-connection\-\_\-attribute\-\_\-array\-::nh, and polygon\-\_\-connection\-\_\-attribute\-\_\-array\-::nl.
+
+
+
+Referenced by free\-\_\-grid().
+
+\hypertarget{geometry__freememory_8h_aa958efb37e573247a54179567bf338bd}{\index{geometry\-\_\-freememory.\-h@{geometry\-\_\-freememory.\-h}!free\-\_\-polygon\-\_\-connection\-\_\-attributes@{free\-\_\-polygon\-\_\-connection\-\_\-attributes}}
+\index{free\-\_\-polygon\-\_\-connection\-\_\-attributes@{free\-\_\-polygon\-\_\-connection\-\_\-attributes}!geometry_freememory.h@{geometry\-\_\-freememory.\-h}}
+\subsubsection[{free\-\_\-polygon\-\_\-connection\-\_\-attributes}]{\setlength{\rightskip}{0pt plus 5cm}void free\-\_\-polygon\-\_\-connection\-\_\-attributes (
+\begin{DoxyParamCaption}
+\item[{{\bf polygon\-\_\-connection\-\_\-attributes} $\ast$}]{pca}
+\end{DoxyParamCaption}
+)}}\label{geometry__freememory_8h_aa958efb37e573247a54179567bf338bd}
+
+
+Definition at line 137 of file geometry\-\_\-freememory.\-c.
+
+
+
+References polygon\-\_\-connection\-\_\-attributes\-::connections, polygon\-\_\-connection\-\_\-attributes\-::d\-\_\-connections, free\-\_\-doublevector(), and free\-\_\-longvector().
+
+
+
+Referenced by free\-\_\-polygon\-\_\-connection\-\_\-attribute\-\_\-array().
+
+\hypertarget{geometry__freememory_8h_a4532941a5ba16950eba90103786b3344}{\index{geometry\-\_\-freememory.\-h@{geometry\-\_\-freememory.\-h}!free\-\_\-polygonvector@{free\-\_\-polygonvector}}
+\index{free\-\_\-polygonvector@{free\-\_\-polygonvector}!geometry_freememory.h@{geometry\-\_\-freememory.\-h}}
+\subsubsection[{free\-\_\-polygonvector}]{\setlength{\rightskip}{0pt plus 5cm}void free\-\_\-polygonvector (
+\begin{DoxyParamCaption}
+\item[{{\bf P\-O\-L\-Y\-G\-O\-N\-V\-E\-C\-T\-O\-R} $\ast$}]{pv}
+\end{DoxyParamCaption}
+)}}\label{geometry__freememory_8h_a4532941a5ba16950eba90103786b3344}
+\begin{DoxyAuthor}{Author}
+Emanuele Cordano 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+November 2008
+\end{DoxyDate}
+
+
+Definition at line 96 of file geometry\-\_\-freememory.\-c.
+
+
+
+References P\-O\-L\-Y\-G\-O\-N\-V\-E\-C\-T\-O\-R\-::element, free\-\_\-polygon(), and P\-O\-L\-Y\-G\-O\-N\-V\-E\-C\-T\-O\-R\-::nl.
+
+
+
+Referenced by free\-\_\-grid().
+

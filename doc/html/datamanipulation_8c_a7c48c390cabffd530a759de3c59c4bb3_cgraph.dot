@@ -1,0 +1,35 @@
+digraph "ricampiona"
+{
+  bgcolor="transparent";
+  edge [fontname="FreeSans",fontsize="10",labelfontname="FreeSans",labelfontsize="10"];
+  node [fontname="FreeSans",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="ricampiona",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node2 [label="initialize_doublematrix",height=0.2,width=0.4,color="black",URL="$datamanipulation_8c.html#a4b04cb6d111058011057da381a49e9cd"];
+  Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node3 [label="t_error",height=0.2,width=0.4,color="black",URL="$error_8c.html#af79ef7c6656ef0f3d2786e2b09c1755f"];
+  Node1 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node4 [label="initialize_floatvector",height=0.2,width=0.4,color="black",URL="$datamanipulation_8c.html#a4b479ddcc354161deb1dfe8c2f952a56"];
+  Node4 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node1 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node5 [label="interpolate",height=0.2,width=0.4,color="black",URL="$datamanipulation_8c.html#a50bac13213b084b26b23b0bc70c91611"];
+  Node5 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node1 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node6 [label="interpolating_function",height=0.2,width=0.4,color="black",URL="$datamanipulation_8c.html#acbc7507c2b08f395d19e71663561be4d"];
+  Node6 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node7 [label="new_doublematrix",height=0.2,width=0.4,color="black",URL="$alloc_8c.html#a3b21f96183e0428ef02e28072baee562"];
+  Node7 -> Node8 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node8 [label="dmatrix",height=0.2,width=0.4,color="black",URL="$alloc_8c.html#ab1a02a50dfbc26318f6bb296731b6f3a"];
+  Node8 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node7 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node1 -> Node9 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node9 [label="mean_function",height=0.2,width=0.4,color="black",URL="$datamanipulation_8c.html#ae496a01b3e3a3a445da284f7a0b7f123"];
+  Node1 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node1 -> Node10 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node10 [label="new_floatvector",height=0.2,width=0.4,color="black",URL="$alloc_8c.html#a2fafc1bcbf8b1044b62e576a3dae1001"];
+  Node10 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node10 -> Node11 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node11 [label="vector",height=0.2,width=0.4,color="black",URL="$alloc_8c.html#a3e3ccfdcdd496df99eaa29f65fe68b31"];
+  Node11 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+}

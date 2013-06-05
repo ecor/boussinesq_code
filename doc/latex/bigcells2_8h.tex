@@ -1,0 +1,659 @@
+\hypertarget{bigcells2_8h}{\section{B\-G\-E\-O\-M\-E\-T\-R\-Y/bigcells2.h File Reference}
+\label{bigcells2_8h}\index{B\-G\-E\-O\-M\-E\-T\-R\-Y/bigcells2.\-h@{B\-G\-E\-O\-M\-E\-T\-R\-Y/bigcells2.\-h}}
+}
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{struct_g_r_i_d}{G\-R\-I\-D}
+\item 
+struct \hyperlink{struct_s_q_u_a_r_e___g_r_i_d}{S\-Q\-U\-A\-R\-E\-\_\-\-G\-R\-I\-D}
+\item 
+struct \hyperlink{struct_l_o_n_g_m_a_t_r_i_x___v_e_c_t_o_r}{L\-O\-N\-G\-M\-A\-T\-R\-I\-X\-\_\-\-V\-E\-C\-T\-O\-R}
+\item 
+struct \hyperlink{struct_d_o_u_b_l_e_s_q_u_a_r_e___g_r_i_d}{D\-O\-U\-B\-L\-E\-S\-Q\-U\-A\-R\-E\-\_\-\-G\-R\-I\-D}
+\item 
+struct \hyperlink{struct_r_a_s_t_e_r___m_a_p}{R\-A\-S\-T\-E\-R\-\_\-\-M\-A\-P}
+\item 
+struct \hyperlink{struct_d_o_u_b_l_e_r_a_s_t_e_r___m_a_p}{D\-O\-U\-B\-L\-E\-R\-A\-S\-T\-E\-R\-\_\-\-M\-A\-P}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{struct_s_q_u_a_r_e___g_r_i_d}{S\-Q\-U\-A\-R\-E\-\_\-\-G\-R\-I\-D} $\ast$ \hyperlink{bigcells2_8h_ac64b8ba634b9de13cdc9afbf01293e05}{get\-\_\-square\-\_\-grid} (\hyperlink{struct_d_o_u_b_l_e_m_a_t_r_i_x}{D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X} $\ast$D\-T\-M, \hyperlink{struct_t___i_n_i_t}{T\-\_\-\-I\-N\-I\-T} $\ast$U\-V, char $\ast$file\-\_\-resume\-\_\-lines, char $\ast$file\-\_\-resume\-\_\-polygons, char $\ast$file\-\_\-resume\-\_\-connections, long($\ast$\hyperlink{g__raster2plvector_8h_a3abb055f6b19a51bd5dc90f5f35f9017}{index\-\_\-pixel\-\_\-from\-\_\-a\-\_\-bin})(long r, long c, \hyperlink{struct_l_o_n_g_v_e_c_t_o_r}{L\-O\-N\-G\-V\-E\-C\-T\-O\-R} $\ast$s\-\_\-index), int($\ast$check\-\_\-novalues)(double x, \hyperlink{struct_d_o_u_b_l_e_v_e_c_t_o_r}{D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} $\ast$V), long displacement, short print)
+\item 
+void \hyperlink{bigcells2_8h_a4fa7cdf8be5d8e37c07f2b88f5d5af9b}{write\-\_\-grid} (\hyperlink{struct_g_r_i_d}{G\-R\-I\-D} $\ast$grid)
+\item 
+void \hyperlink{bigcells2_8h_a4c41a596dfaed1f8a4ff7e682ed2e961}{free\-\_\-longmatrix\-\_\-vector} (\hyperlink{struct_l_o_n_g_m_a_t_r_i_x___v_e_c_t_o_r}{L\-O\-N\-G\-M\-A\-T\-R\-I\-X\-\_\-\-V\-E\-C\-T\-O\-R} $\ast$lmv)
+\item 
+\hyperlink{struct_r_a_s_t_e_r___m_a_p}{R\-A\-S\-T\-E\-R\-\_\-\-M\-A\-P} $\ast$ \hyperlink{bigcells2_8h_ac68388f3ff2b8768d62e0602bab1bc66}{new\-\_\-raster\-\_\-map} (long nh)
+\item 
+int \hyperlink{bigcells2_8h_aea4606196c201e3c97e68b1c673e65e4}{add\-\_\-map\-\_\-to\-\_\-raster} (long index, char $\ast$filename, \hyperlink{struct_r_a_s_t_e_r___m_a_p}{R\-A\-S\-T\-E\-R\-\_\-\-M\-A\-P} $\ast$raster, short a, short print)
+\item 
+\hyperlink{struct_d_o_u_b_l_e_r_a_s_t_e_r___m_a_p}{D\-O\-U\-B\-L\-E\-R\-A\-S\-T\-E\-R\-\_\-\-M\-A\-P} $\ast$ \hyperlink{bigcells2_8h_a17f66d49a2e2df1a139dc8b08c09ab8c}{get\-\_\-doubleraster\-\_\-map} (long n\-\_\-coarsemaps, long n\-\_\-finemaps, char $\ast$coarse\-\_\-mapname, char $\ast$fine\-\_\-mapname, short print)
+\item 
+\hyperlink{struct_d_o_u_b_l_e_s_q_u_a_r_e___g_r_i_d}{D\-O\-U\-B\-L\-E\-S\-Q\-U\-A\-R\-E\-\_\-\-G\-R\-I\-D} $\ast$ \hyperlink{bigcells2_8h_abf0a76de7bdf208e685c2daec3ecaee5}{get\-\_\-doublesquare\-\_\-grid} (\hyperlink{struct_d_o_u_b_l_e_r_a_s_t_e_r___m_a_p}{D\-O\-U\-B\-L\-E\-R\-A\-S\-T\-E\-R\-\_\-\-M\-A\-P} $\ast$\hyperlink{main_8c_a44d81a9ca5648f4ec1c298c7f37fefff}{draster}, char $\ast$resume\-\_\-filenames, long($\ast$index\-\_\-pixel\-\_\-from\-\_\-a\-\_\-bin\-\_\-coarse)(long r, long c, \hyperlink{struct_l_o_n_g_v_e_c_t_o_r}{L\-O\-N\-G\-V\-E\-C\-T\-O\-R} $\ast$s\-\_\-index), long($\ast$index\-\_\-pixel\-\_\-from\-\_\-a\-\_\-bin\-\_\-fine)(long r, long c, \hyperlink{struct_l_o_n_g_v_e_c_t_o_r}{L\-O\-N\-G\-V\-E\-C\-T\-O\-R} $\ast$s\-\_\-index), long d\-\_\-coarse, long d\-\_\-fine, short print)
+\item 
+\hyperlink{struct_l_o_n_g_m_a_t_r_i_x___v_e_c_t_o_r}{L\-O\-N\-G\-M\-A\-T\-R\-I\-X\-\_\-\-V\-E\-C\-T\-O\-R} $\ast$ \hyperlink{bigcells2_8h_a28d23a3c17a001b437d91ee44fa24c50}{new\-\_\-longmatrix\-\_\-vector} (long nh)
+\item 
+\hyperlink{struct_l_o_n_g_m_a_t_r_i_x___v_e_c_t_o_r}{L\-O\-N\-G\-M\-A\-T\-R\-I\-X\-\_\-\-V\-E\-C\-T\-O\-R} $\ast$ \hyperlink{bigcells2_8h_acf5e84bd0e0ff3b1577c69bd00a24aee}{get\-\_\-fine\-\_\-indices} (\hyperlink{struct_l_o_n_g_m_a_t_r_i_x}{L\-O\-N\-G\-M\-A\-T\-R\-I\-X} $\ast$fine, \hyperlink{struct_l_o_n_g_m_a_t_r_i_x}{L\-O\-N\-G\-M\-A\-T\-R\-I\-X} $\ast$coarse, long i\-\_\-firstcell, long i\-\_\-lastcell, long novalue, short print)
+\item 
+\hyperlink{struct_l_o_n_g_b_i_n}{L\-O\-N\-G\-B\-I\-N} $\ast$ \hyperlink{bigcells2_8h_ac877d719a770d72858ad8820d90edfd2}{get\-\_\-fine\-\_\-line\-\_\-indices} (\hyperlink{struct_l_o_n_g_m_a_t_r_i_x}{L\-O\-N\-G\-M\-A\-T\-R\-I\-X} $\ast$h\-\_\-fine, \hyperlink{struct_l_o_n_g_m_a_t_r_i_x}{L\-O\-N\-G\-M\-A\-T\-R\-I\-X} $\ast$h\-\_\-coarse, \hyperlink{struct_l_o_n_g_m_a_t_r_i_x}{L\-O\-N\-G\-M\-A\-T\-R\-I\-X} $\ast$v\-\_\-fine, \hyperlink{struct_l_o_n_g_m_a_t_r_i_x}{L\-O\-N\-G\-M\-A\-T\-R\-I\-X} $\ast$v\-\_\-coarse, long n\-\_\-horizontal, long n\-\_\-lines, long novalue, short print)
+\item 
+int \hyperlink{bigcells2_8h_a355a9a3e61f4ddac3a3b744b79f4116a}{write\-\_\-longmatrix\-\_\-vector} (\hyperlink{struct_l_o_n_g_m_a_t_r_i_x___v_e_c_t_o_r}{L\-O\-N\-G\-M\-A\-T\-R\-I\-X\-\_\-\-V\-E\-C\-T\-O\-R} $\ast$lmv, char $\ast$filename)
+\item 
+int \hyperlink{bigcells2_8h_adfe869470fbeabfed8fc1c3d61b106bc}{write\-\_\-doublesquare\-\_\-grid} (\hyperlink{struct_d_o_u_b_l_e_s_q_u_a_r_e___g_r_i_d}{D\-O\-U\-B\-L\-E\-S\-Q\-U\-A\-R\-E\-\_\-\-G\-R\-I\-D} $\ast$\hyperlink{main_8c_a9b5f80541820877b6d4a8841650da32a}{dsq})
+\item 
+void \hyperlink{bigcells2_8h_afd97af8f60b782ce34aa2491b8c19a08}{free\-\_\-grid} (\hyperlink{struct_g_r_i_d}{G\-R\-I\-D} $\ast$grid)
+\item 
+void \hyperlink{bigcells2_8h_a4474c828c8098bbd2222c31d9db8614e}{free\-\_\-square\-\_\-grid} (\hyperlink{struct_s_q_u_a_r_e___g_r_i_d}{S\-Q\-U\-A\-R\-E\-\_\-\-G\-R\-I\-D} $\ast$sq)
+\item 
+void \hyperlink{bigcells2_8h_a613614a54c1b1740929d26849caa4e12}{free\-\_\-raster\-\_\-map} (\hyperlink{struct_r_a_s_t_e_r___m_a_p}{R\-A\-S\-T\-E\-R\-\_\-\-M\-A\-P} $\ast$raster)
+\item 
+void \hyperlink{bigcells2_8h_a9336eab122542d932fb988c4089982f7}{free\-\_\-doubleraster\-\_\-map} (\hyperlink{struct_d_o_u_b_l_e_r_a_s_t_e_r___m_a_p}{D\-O\-U\-B\-L\-E\-R\-A\-S\-T\-E\-R\-\_\-\-M\-A\-P} $\ast$\hyperlink{main_8c_a44d81a9ca5648f4ec1c298c7f37fefff}{draster})
+\item 
+void \hyperlink{bigcells2_8h_abf1d72a0131982df1a25617b686db4b1}{free\-\_\-doublesquare\-\_\-grid} (\hyperlink{struct_d_o_u_b_l_e_s_q_u_a_r_e___g_r_i_d}{D\-O\-U\-B\-L\-E\-S\-Q\-U\-A\-R\-E\-\_\-\-G\-R\-I\-D} $\ast$\hyperlink{main_8c_a9b5f80541820877b6d4a8841650da32a}{dsq})
+\item 
+char $\ast$ \hyperlink{bigcells2_8h_aeb6b3727983f3bfd33e4e2b84010bee0}{strcpy2} (char $\ast$dest, const char $\ast$src)
+\item 
+char $\ast$ \hyperlink{bigcells2_8h_a2eec32e670f285ae6dbcd2e6513e4b78}{copy\-\_\-string} (char $\ast$origin)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{bigcells2_8h_aea4606196c201e3c97e68b1c673e65e4}{\index{bigcells2.\-h@{bigcells2.\-h}!add\-\_\-map\-\_\-to\-\_\-raster@{add\-\_\-map\-\_\-to\-\_\-raster}}
+\index{add\-\_\-map\-\_\-to\-\_\-raster@{add\-\_\-map\-\_\-to\-\_\-raster}!bigcells2.h@{bigcells2.\-h}}
+\subsubsection[{add\-\_\-map\-\_\-to\-\_\-raster}]{\setlength{\rightskip}{0pt plus 5cm}int add\-\_\-map\-\_\-to\-\_\-raster (
+\begin{DoxyParamCaption}
+\item[{long}]{index, }
+\item[{char $\ast$}]{filename, }
+\item[{{\bf R\-A\-S\-T\-E\-R\-\_\-\-M\-A\-P} $\ast$}]{raster, }
+\item[{short}]{a, }
+\item[{short}]{print}
+\end{DoxyParamCaption}
+)}}\label{bigcells2_8h_aea4606196c201e3c97e68b1c673e65e4}
+\begin{DoxyAuthor}{Author}
+Emanuele Cordano 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+April 2008
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em index} & (param) -\/ index at which he map is added in the raster map class; \\
+\hline
+{\em filename} & (char $\ast$) -\/ filename of the map in asccii format \\
+\hline
+{\em raster} & (\hyperlink{struct_r_a_s_t_e_r___m_a_p}{R\-A\-S\-T\-E\-R\-\_\-\-M\-A\-P} $\ast$) -\/ raster map class \\
+\hline
+{\em a} & -\/ (short) parameter to check boundary and novalue (0\-: nocheck, 1\-: check boundary, 2\-: check boundary and novaule (if raster-\/$>$reference\-\_\-index\-\_\-map is set to N\-U\-L\-L, a=0 by default) \\
+\hline
+{\em print} & (short) -\/ print parameter\\
+\hline
+\end{DoxyParams}
+add a map from asccii format to a raster\-\_\-map class
+
+Definition at line 161 of file bigcells2.\-c.
+
+
+
+References free\-\_\-doublematrix(), I\-N\-T\-E\-G\-E\-R\-\_\-\-N\-U\-L\-L, R\-A\-S\-T\-E\-R\-\_\-\-M\-A\-P\-::layer, D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X\-::nch, new\-\_\-doublematrix(), R\-A\-S\-T\-E\-R\-\_\-\-M\-A\-P\-::nh, D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X\-::nrh, read\-\_\-map(), R\-A\-S\-T\-E\-R\-\_\-\-M\-A\-P\-::reference\-\_\-index\-\_\-map, and R\-A\-S\-T\-E\-R\-\_\-\-M\-A\-P\-::\-U\-V.
+
+
+
+Referenced by get\-\_\-doubleraster\-\_\-map().
+
+\hypertarget{bigcells2_8h_a2eec32e670f285ae6dbcd2e6513e4b78}{\index{bigcells2.\-h@{bigcells2.\-h}!copy\-\_\-string@{copy\-\_\-string}}
+\index{copy\-\_\-string@{copy\-\_\-string}!bigcells2.h@{bigcells2.\-h}}
+\subsubsection[{copy\-\_\-string}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ copy\-\_\-string (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{origin}
+\end{DoxyParamCaption}
+)}}\label{bigcells2_8h_a2eec32e670f285ae6dbcd2e6513e4b78}
+\begin{DoxyAuthor}{Author}
+Emanuele Cordano 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+April 2009
+\end{DoxyDate}
+
+
+Definition at line 705 of file bigcells2.\-c.
+
+
+
+Referenced by get\-\_\-doubleraster\-\_\-map(), get\-\_\-doublesquare\-\_\-grid(), get\-\_\-square\-\_\-grid(), new\-\_\-grid\-\_\-from\-\_\-grid(), new\-\_\-output\-\_\-filenames(), read\-\_\-doublesquare\-\_\-grid(), and read\-\_\-grid().
+
+\hypertarget{bigcells2_8h_a9336eab122542d932fb988c4089982f7}{\index{bigcells2.\-h@{bigcells2.\-h}!free\-\_\-doubleraster\-\_\-map@{free\-\_\-doubleraster\-\_\-map}}
+\index{free\-\_\-doubleraster\-\_\-map@{free\-\_\-doubleraster\-\_\-map}!bigcells2.h@{bigcells2.\-h}}
+\subsubsection[{free\-\_\-doubleraster\-\_\-map}]{\setlength{\rightskip}{0pt plus 5cm}void free\-\_\-doubleraster\-\_\-map (
+\begin{DoxyParamCaption}
+\item[{{\bf D\-O\-U\-B\-L\-E\-R\-A\-S\-T\-E\-R\-\_\-\-M\-A\-P} $\ast$}]{draster}
+\end{DoxyParamCaption}
+)}}\label{bigcells2_8h_a9336eab122542d932fb988c4089982f7}
+\begin{DoxyAuthor}{Author}
+Emanuele Cordano 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+April 2009
+\end{DoxyDate}
+
+
+Definition at line 651 of file bigcells2.\-c.
+
+
+
+References D\-O\-U\-B\-L\-E\-R\-A\-S\-T\-E\-R\-\_\-\-M\-A\-P\-::coarse, D\-O\-U\-B\-L\-E\-R\-A\-S\-T\-E\-R\-\_\-\-M\-A\-P\-::fine, free\-\_\-raster\-\_\-map(), D\-O\-U\-B\-L\-E\-R\-A\-S\-T\-E\-R\-\_\-\-M\-A\-P\-::mapname\-\_\-coarse, and D\-O\-U\-B\-L\-E\-R\-A\-S\-T\-E\-R\-\_\-\-M\-A\-P\-::mapname\-\_\-fine.
+
+
+
+Referenced by main().
+
+\hypertarget{bigcells2_8h_abf1d72a0131982df1a25617b686db4b1}{\index{bigcells2.\-h@{bigcells2.\-h}!free\-\_\-doublesquare\-\_\-grid@{free\-\_\-doublesquare\-\_\-grid}}
+\index{free\-\_\-doublesquare\-\_\-grid@{free\-\_\-doublesquare\-\_\-grid}!bigcells2.h@{bigcells2.\-h}}
+\subsubsection[{free\-\_\-doublesquare\-\_\-grid}]{\setlength{\rightskip}{0pt plus 5cm}void free\-\_\-doublesquare\-\_\-grid (
+\begin{DoxyParamCaption}
+\item[{{\bf D\-O\-U\-B\-L\-E\-S\-Q\-U\-A\-R\-E\-\_\-\-G\-R\-I\-D} $\ast$}]{dsq}
+\end{DoxyParamCaption}
+)}}\label{bigcells2_8h_abf1d72a0131982df1a25617b686db4b1}
+\begin{DoxyAuthor}{Author}
+Emanuele Cordano 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+April 2009
+\end{DoxyDate}
+
+
+Definition at line 666 of file bigcells2.\-c.
+
+
+
+References D\-O\-U\-B\-L\-E\-S\-Q\-U\-A\-R\-E\-\_\-\-G\-R\-I\-D\-::big, D\-O\-U\-B\-L\-E\-S\-Q\-U\-A\-R\-E\-\_\-\-G\-R\-I\-D\-::file\-\_\-resume\-\_\-c\-\_\-line, D\-O\-U\-B\-L\-E\-S\-Q\-U\-A\-R\-E\-\_\-\-G\-R\-I\-D\-::file\-\_\-resume\-\_\-c\-\_\-polygon, D\-O\-U\-B\-L\-E\-S\-Q\-U\-A\-R\-E\-\_\-\-G\-R\-I\-D\-::fine, free\-\_\-longbin(), free\-\_\-longmatrix\-\_\-vector(), free\-\_\-square\-\_\-grid(), D\-O\-U\-B\-L\-E\-S\-Q\-U\-A\-R\-E\-\_\-\-G\-R\-I\-D\-::small\-\_\-content\-\_\-line, and D\-O\-U\-B\-L\-E\-S\-Q\-U\-A\-R\-E\-\_\-\-G\-R\-I\-D\-::small\-\_\-content\-\_\-polygon.
+
+
+
+Referenced by main().
+
+\hypertarget{bigcells2_8h_afd97af8f60b782ce34aa2491b8c19a08}{\index{bigcells2.\-h@{bigcells2.\-h}!free\-\_\-grid@{free\-\_\-grid}}
+\index{free\-\_\-grid@{free\-\_\-grid}!bigcells2.h@{bigcells2.\-h}}
+\subsubsection[{free\-\_\-grid}]{\setlength{\rightskip}{0pt plus 5cm}void free\-\_\-grid (
+\begin{DoxyParamCaption}
+\item[{{\bf G\-R\-I\-D} $\ast$}]{grid}
+\end{DoxyParamCaption}
+)}}\label{bigcells2_8h_afd97af8f60b782ce34aa2491b8c19a08}
+\begin{DoxyAuthor}{Author}
+Emanuele Cordano 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+April 2009
+\end{DoxyDate}
+
+
+Definition at line 584 of file bigcells2.\-c.
+
+
+
+References G\-R\-I\-D\-::file\-\_\-resume\-\_\-connections, G\-R\-I\-D\-::file\-\_\-resume\-\_\-lines, G\-R\-I\-D\-::file\-\_\-resume\-\_\-polygons, free\-\_\-linevector(), free\-\_\-polygon\-\_\-connection\-\_\-attribute\-\_\-array(), free\-\_\-polygonvector(), G\-R\-I\-D\-::lines, G\-R\-I\-D\-::links, and G\-R\-I\-D\-::polygons.
+
+
+
+Referenced by free\-\_\-\-D\-O\-U\-B\-L\-E\-\_\-\-G\-R\-I\-D(), and free\-\_\-square\-\_\-grid().
+
+\hypertarget{bigcells2_8h_a4c41a596dfaed1f8a4ff7e682ed2e961}{\index{bigcells2.\-h@{bigcells2.\-h}!free\-\_\-longmatrix\-\_\-vector@{free\-\_\-longmatrix\-\_\-vector}}
+\index{free\-\_\-longmatrix\-\_\-vector@{free\-\_\-longmatrix\-\_\-vector}!bigcells2.h@{bigcells2.\-h}}
+\subsubsection[{free\-\_\-longmatrix\-\_\-vector}]{\setlength{\rightskip}{0pt plus 5cm}void free\-\_\-longmatrix\-\_\-vector (
+\begin{DoxyParamCaption}
+\item[{{\bf L\-O\-N\-G\-M\-A\-T\-R\-I\-X\-\_\-\-V\-E\-C\-T\-O\-R} $\ast$}]{lmv}
+\end{DoxyParamCaption}
+)}}\label{bigcells2_8h_a4c41a596dfaed1f8a4ff7e682ed2e961}
+free function \begin{DoxyAuthor}{Author}
+Emanuele Cordano 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+April 2009
+\end{DoxyDate}
+
+
+Definition at line 560 of file bigcells2.\-c.
+
+
+
+References L\-O\-N\-G\-M\-A\-T\-R\-I\-X\-\_\-\-V\-E\-C\-T\-O\-R\-::element, free\-\_\-longmatrix(), L\-O\-N\-G\-M\-A\-T\-R\-I\-X\-\_\-\-V\-E\-C\-T\-O\-R\-::nh, and L\-O\-N\-G\-M\-A\-T\-R\-I\-X\-\_\-\-V\-E\-C\-T\-O\-R\-::nl.
+
+
+
+Referenced by free\-\_\-doublesquare\-\_\-grid(), and get\-\_\-fine\-\_\-line\-\_\-indices().
+
+\hypertarget{bigcells2_8h_a613614a54c1b1740929d26849caa4e12}{\index{bigcells2.\-h@{bigcells2.\-h}!free\-\_\-raster\-\_\-map@{free\-\_\-raster\-\_\-map}}
+\index{free\-\_\-raster\-\_\-map@{free\-\_\-raster\-\_\-map}!bigcells2.h@{bigcells2.\-h}}
+\subsubsection[{free\-\_\-raster\-\_\-map}]{\setlength{\rightskip}{0pt plus 5cm}void free\-\_\-raster\-\_\-map (
+\begin{DoxyParamCaption}
+\item[{{\bf R\-A\-S\-T\-E\-R\-\_\-\-M\-A\-P} $\ast$}]{raster}
+\end{DoxyParamCaption}
+)}}\label{bigcells2_8h_a613614a54c1b1740929d26849caa4e12}
+\begin{DoxyAuthor}{Author}
+Emanuele Cordano 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+April 2008
+\end{DoxyDate}
+
+
+Definition at line 629 of file bigcells2.\-c.
+
+
+
+References free\-\_\-doublematrix(), free\-\_\-doublevector(), R\-A\-S\-T\-E\-R\-\_\-\-M\-A\-P\-::layer, R\-A\-S\-T\-E\-R\-\_\-\-M\-A\-P\-::nl, T\-\_\-\-I\-N\-I\-T\-::\-U, R\-A\-S\-T\-E\-R\-\_\-\-M\-A\-P\-::\-U\-V, and T\-\_\-\-I\-N\-I\-T\-::\-V.
+
+
+
+Referenced by free\-\_\-doubleraster\-\_\-map().
+
+\hypertarget{bigcells2_8h_a4474c828c8098bbd2222c31d9db8614e}{\index{bigcells2.\-h@{bigcells2.\-h}!free\-\_\-square\-\_\-grid@{free\-\_\-square\-\_\-grid}}
+\index{free\-\_\-square\-\_\-grid@{free\-\_\-square\-\_\-grid}!bigcells2.h@{bigcells2.\-h}}
+\subsubsection[{free\-\_\-square\-\_\-grid}]{\setlength{\rightskip}{0pt plus 5cm}void free\-\_\-square\-\_\-grid (
+\begin{DoxyParamCaption}
+\item[{{\bf S\-Q\-U\-A\-R\-E\-\_\-\-G\-R\-I\-D} $\ast$}]{sq}
+\end{DoxyParamCaption}
+)}}\label{bigcells2_8h_a4474c828c8098bbd2222c31d9db8614e}
+\begin{DoxyAuthor}{Author}
+Emanuele Cordano 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+April 2009 An attemp was made to free a non dynamic matrix free\-\_\-longmatrix
+\end{DoxyDate}
+
+
+Definition at line 606 of file bigcells2.\-c.
+
+
+
+References free\-\_\-grid(), free\-\_\-longmatrix(), S\-Q\-U\-A\-R\-E\-\_\-\-G\-R\-I\-D\-::grid, S\-Q\-U\-A\-R\-E\-\_\-\-G\-R\-I\-D\-::indices\-\_\-horizontal\-\_\-lines, S\-Q\-U\-A\-R\-E\-\_\-\-G\-R\-I\-D\-::indices\-\_\-pixel, S\-Q\-U\-A\-R\-E\-\_\-\-G\-R\-I\-D\-::indices\-\_\-vertex, and S\-Q\-U\-A\-R\-E\-\_\-\-G\-R\-I\-D\-::indices\-\_\-vertical\-\_\-lines.
+
+
+
+Referenced by free\-\_\-doublesquare\-\_\-grid().
+
+\hypertarget{bigcells2_8h_a17f66d49a2e2df1a139dc8b08c09ab8c}{\index{bigcells2.\-h@{bigcells2.\-h}!get\-\_\-doubleraster\-\_\-map@{get\-\_\-doubleraster\-\_\-map}}
+\index{get\-\_\-doubleraster\-\_\-map@{get\-\_\-doubleraster\-\_\-map}!bigcells2.h@{bigcells2.\-h}}
+\subsubsection[{get\-\_\-doubleraster\-\_\-map}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\-O\-U\-B\-L\-E\-R\-A\-S\-T\-E\-R\-\_\-\-M\-A\-P}$\ast$ get\-\_\-doubleraster\-\_\-map (
+\begin{DoxyParamCaption}
+\item[{long}]{n\-\_\-coarsemaps, }
+\item[{long}]{n\-\_\-finemaps, }
+\item[{char $\ast$}]{coarse\-\_\-mapname, }
+\item[{char $\ast$}]{fine\-\_\-mapname, }
+\item[{short}]{print}
+\end{DoxyParamCaption}
+)}}\label{bigcells2_8h_a17f66d49a2e2df1a139dc8b08c09ab8c}
+\begin{DoxyAuthor}{Author}
+Emanuele Cordano 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+April 2009
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em -\/} & (long) number of coarse-\/grid maps \\
+\hline
+{\em -\/} & (long) number of fine-\/grid maps \\
+\hline
+{\em -\/} & (char $\ast$) -\/ name of the file containing the coarse grid map (reference map) \\
+\hline
+{\em -\/} & (char $\ast$) -\/ name of the file containing the fine grid map (reference map); \\
+\hline
+{\em (short)} & print;\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a \hyperlink{struct_d_o_u_b_l_e_r_a_s_t_e_r___m_a_p}{D\-O\-U\-B\-L\-E\-R\-A\-S\-T\-E\-R\-\_\-\-M\-A\-P}
+\end{DoxyReturn}
+
+
+Definition at line 372 of file bigcells2.\-c.
+
+
+
+References add\-\_\-map\-\_\-to\-\_\-raster(), D\-O\-U\-B\-L\-E\-R\-A\-S\-T\-E\-R\-\_\-\-M\-A\-P\-::coarse, copy\-\_\-string(), draster, D\-O\-U\-B\-L\-E\-R\-A\-S\-T\-E\-R\-\_\-\-M\-A\-P\-::fine, D\-O\-U\-B\-L\-E\-R\-A\-S\-T\-E\-R\-\_\-\-M\-A\-P\-::mapname\-\_\-coarse, D\-O\-U\-B\-L\-E\-R\-A\-S\-T\-E\-R\-\_\-\-M\-A\-P\-::mapname\-\_\-fine, new\-\_\-raster\-\_\-map(), R\-A\-S\-T\-E\-R\-\_\-\-M\-A\-P\-::nl, and t\-\_\-error().
+
+
+
+Referenced by main().
+
+\hypertarget{bigcells2_8h_abf0a76de7bdf208e685c2daec3ecaee5}{\index{bigcells2.\-h@{bigcells2.\-h}!get\-\_\-doublesquare\-\_\-grid@{get\-\_\-doublesquare\-\_\-grid}}
+\index{get\-\_\-doublesquare\-\_\-grid@{get\-\_\-doublesquare\-\_\-grid}!bigcells2.h@{bigcells2.\-h}}
+\subsubsection[{get\-\_\-doublesquare\-\_\-grid}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\-O\-U\-B\-L\-E\-S\-Q\-U\-A\-R\-E\-\_\-\-G\-R\-I\-D}$\ast$ get\-\_\-doublesquare\-\_\-grid (
+\begin{DoxyParamCaption}
+\item[{{\bf D\-O\-U\-B\-L\-E\-R\-A\-S\-T\-E\-R\-\_\-\-M\-A\-P} $\ast$}]{draster, }
+\item[{char $\ast$}]{resume\-\_\-filenames, }
+\item[{long($\ast$)(long r, long c, {\bf L\-O\-N\-G\-V\-E\-C\-T\-O\-R} $\ast$s\-\_\-index)}]{index\-\_\-pixel\-\_\-from\-\_\-a\-\_\-bin\-\_\-coarse, }
+\item[{long($\ast$)(long r, long c, {\bf L\-O\-N\-G\-V\-E\-C\-T\-O\-R} $\ast$s\-\_\-index)}]{index\-\_\-pixel\-\_\-from\-\_\-a\-\_\-bin\-\_\-fine, }
+\item[{long}]{d\-\_\-coarse, }
+\item[{long}]{d\-\_\-fine, }
+\item[{short}]{print}
+\end{DoxyParamCaption}
+)}}\label{bigcells2_8h_abf0a76de7bdf208e685c2daec3ecaee5}
+\begin{DoxyAuthor}{Author}
+Emanuele Cordano 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+April 2009
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em -\/} & \hyperlink{struct_d_o_u_b_l_e_r_a_s_t_e_r___m_a_p}{D\-O\-U\-B\-L\-E\-R\-A\-S\-T\-E\-R\-\_\-\-M\-A\-P} $\ast$draster \\
+\hline
+{\em -\/} & (char $\ast$) root neme of textfiles containing the struct information. \\
+\hline
+{\em long} & ($\ast$index\-\_\-pixel\-\_\-from\-\_\-a\-\_\-bin\-\_\-coarse)(long r, long c,\hyperlink{struct_l_o_n_g_v_e_c_t_o_r}{L\-O\-N\-G\-V\-E\-C\-T\-O\-R} $\ast$s\-\_\-index) -\/ equation of the filling curve for the pixel of a coarse grid \\
+\hline
+{\em long} & ($\ast$index\-\_\-pixel\-\_\-from\-\_\-a\-\_\-bin\-\_\-fine)(long r, long c,\hyperlink{struct_l_o_n_g_v_e_c_t_o_r}{L\-O\-N\-G\-V\-E\-C\-T\-O\-R} $\ast$s\-\_\-index),long d\-\_\-coarse,long d\-\_\-fine,short print) -\/ equation of the filling curve for the pixel of a fine grid \\
+\hline
+{\em (long)} & d\-\_\-coarse -\/ displacement for coarse grid \\
+\hline
+{\em (long)} & d\-\_\-fine -\/ displacement for fine grid \\
+\hline
+{\em (short)} & print\\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 421 of file bigcells2.\-c.
+
+
+
+References D\-O\-U\-B\-L\-E\-S\-Q\-U\-A\-R\-E\-\_\-\-G\-R\-I\-D\-::big, R\-A\-S\-T\-E\-R\-\_\-\-M\-A\-P\-::check\-\_\-novalues, D\-O\-U\-B\-L\-E\-R\-A\-S\-T\-E\-R\-\_\-\-M\-A\-P\-::coarse, copy\-\_\-string(), dsq, D\-O\-U\-B\-L\-E\-S\-Q\-U\-A\-R\-E\-\_\-\-G\-R\-I\-D\-::file\-\_\-resume\-\_\-c\-\_\-line, D\-O\-U\-B\-L\-E\-S\-Q\-U\-A\-R\-E\-\_\-\-G\-R\-I\-D\-::file\-\_\-resume\-\_\-c\-\_\-polygon, D\-O\-U\-B\-L\-E\-S\-Q\-U\-A\-R\-E\-\_\-\-G\-R\-I\-D\-::fine, D\-O\-U\-B\-L\-E\-R\-A\-S\-T\-E\-R\-\_\-\-M\-A\-P\-::fine, get\-\_\-fine\-\_\-indices(), get\-\_\-fine\-\_\-line\-\_\-indices(), get\-\_\-square\-\_\-grid(), S\-Q\-U\-A\-R\-E\-\_\-\-G\-R\-I\-D\-::grid, S\-Q\-U\-A\-R\-E\-\_\-\-G\-R\-I\-D\-::indices\-\_\-horizontal\-\_\-lines, S\-Q\-U\-A\-R\-E\-\_\-\-G\-R\-I\-D\-::indices\-\_\-pixel, S\-Q\-U\-A\-R\-E\-\_\-\-G\-R\-I\-D\-::indices\-\_\-vertical\-\_\-lines, join\-\_\-strings(), R\-A\-S\-T\-E\-R\-\_\-\-M\-A\-P\-::layer, G\-R\-I\-D\-::lines, L\-I\-N\-E\-V\-E\-C\-T\-O\-R\-::nh, P\-O\-L\-Y\-G\-O\-N\-V\-E\-C\-T\-O\-R\-::nh, S\-Q\-U\-A\-R\-E\-\_\-\-G\-R\-I\-D\-::nhorizontal\-\_\-lines, P\-O\-L\-Y\-G\-O\-N\-V\-E\-C\-T\-O\-R\-::nl, S\-Q\-U\-A\-R\-E\-\_\-\-G\-R\-I\-D\-::novalue, G\-R\-I\-D\-::polygons, R\-A\-S\-T\-E\-R\-\_\-\-M\-A\-P\-::reference\-\_\-index\-\_\-map, D\-O\-U\-B\-L\-E\-S\-Q\-U\-A\-R\-E\-\_\-\-G\-R\-I\-D\-::small\-\_\-content\-\_\-line, D\-O\-U\-B\-L\-E\-S\-Q\-U\-A\-R\-E\-\_\-\-G\-R\-I\-D\-::small\-\_\-content\-\_\-polygon, t\-\_\-error(), and R\-A\-S\-T\-E\-R\-\_\-\-M\-A\-P\-::\-U\-V.
+
+
+
+Referenced by main().
+
+\hypertarget{bigcells2_8h_acf5e84bd0e0ff3b1577c69bd00a24aee}{\index{bigcells2.\-h@{bigcells2.\-h}!get\-\_\-fine\-\_\-indices@{get\-\_\-fine\-\_\-indices}}
+\index{get\-\_\-fine\-\_\-indices@{get\-\_\-fine\-\_\-indices}!bigcells2.h@{bigcells2.\-h}}
+\subsubsection[{get\-\_\-fine\-\_\-indices}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\-O\-N\-G\-M\-A\-T\-R\-I\-X\-\_\-\-V\-E\-C\-T\-O\-R}$\ast$ get\-\_\-fine\-\_\-indices (
+\begin{DoxyParamCaption}
+\item[{{\bf L\-O\-N\-G\-M\-A\-T\-R\-I\-X} $\ast$}]{fine, }
+\item[{{\bf L\-O\-N\-G\-M\-A\-T\-R\-I\-X} $\ast$}]{coarse, }
+\item[{long}]{i\-\_\-firstcell, }
+\item[{long}]{i\-\_\-lastcell, }
+\item[{long}]{novalue, }
+\item[{short}]{print}
+\end{DoxyParamCaption}
+)}}\label{bigcells2_8h_acf5e84bd0e0ff3b1577c69bd00a24aee}
+\begin{DoxyAuthor}{Author}
+Emanuele Cordano 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+April 2009
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em (\-L\-O\-N\-G\-M\-A\-T\-R\-I\-X$\ast$)} & fine; \\
+\hline
+{\em (\-L\-O\-N\-G\-M\-A\-T\-R\-I\-X$\ast$)} & coarse; \\
+\hline
+{\em (long)} & i\-\_\-firstcell; \\
+\hline
+{\em (long)} & I\-\_\-lastcells; \\
+\hline
+{\em (long)} & novalue; \\
+\hline
+{\em (short)} & print;\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a \hyperlink{struct_l_o_n_g_m_a_t_r_i_x___v_e_c_t_o_r}{L\-O\-N\-G\-M\-A\-T\-R\-I\-X\-\_\-\-V\-E\-C\-T\-O\-R} which has the addresses of the
+\end{DoxyReturn}
+
+
+Definition at line 229 of file bigcells2.\-c.
+
+
+
+References L\-O\-N\-G\-M\-A\-T\-R\-I\-X\-\_\-\-V\-E\-C\-T\-O\-R\-::element, L\-O\-N\-G\-M\-A\-T\-R\-I\-X\-::nch, L\-O\-N\-G\-M\-A\-T\-R\-I\-X\-::ncl, new\-\_\-longmatrix(), new\-\_\-longmatrix\-\_\-vector(), L\-O\-N\-G\-M\-A\-T\-R\-I\-X\-\_\-\-V\-E\-C\-T\-O\-R\-::nh, L\-O\-N\-G\-M\-A\-T\-R\-I\-X\-\_\-\-V\-E\-C\-T\-O\-R\-::nl, L\-O\-N\-G\-M\-A\-T\-R\-I\-X\-::nrh, L\-O\-N\-G\-M\-A\-T\-R\-I\-X\-::nrl, and t\-\_\-error().
+
+
+
+Referenced by get\-\_\-doublesquare\-\_\-grid(), and get\-\_\-fine\-\_\-line\-\_\-indices().
+
+\hypertarget{bigcells2_8h_ac877d719a770d72858ad8820d90edfd2}{\index{bigcells2.\-h@{bigcells2.\-h}!get\-\_\-fine\-\_\-line\-\_\-indices@{get\-\_\-fine\-\_\-line\-\_\-indices}}
+\index{get\-\_\-fine\-\_\-line\-\_\-indices@{get\-\_\-fine\-\_\-line\-\_\-indices}!bigcells2.h@{bigcells2.\-h}}
+\subsubsection[{get\-\_\-fine\-\_\-line\-\_\-indices}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\-O\-N\-G\-B\-I\-N}$\ast$ get\-\_\-fine\-\_\-line\-\_\-indices (
+\begin{DoxyParamCaption}
+\item[{{\bf L\-O\-N\-G\-M\-A\-T\-R\-I\-X} $\ast$}]{h\-\_\-fine, }
+\item[{{\bf L\-O\-N\-G\-M\-A\-T\-R\-I\-X} $\ast$}]{h\-\_\-coarse, }
+\item[{{\bf L\-O\-N\-G\-M\-A\-T\-R\-I\-X} $\ast$}]{v\-\_\-fine, }
+\item[{{\bf L\-O\-N\-G\-M\-A\-T\-R\-I\-X} $\ast$}]{v\-\_\-coarse, }
+\item[{long}]{n\-\_\-horizontal, }
+\item[{long}]{n\-\_\-lines, }
+\item[{long}]{novalue, }
+\item[{short}]{print}
+\end{DoxyParamCaption}
+)}}\label{bigcells2_8h_ac877d719a770d72858ad8820d90edfd2}
+\begin{DoxyAuthor}{Author}
+Emanuele Cordano 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+April 2009
+\end{DoxyDate}
+vedre qui!!! 
+
+Definition at line 306 of file bigcells2.\-c.
+
+
+
+References L\-O\-N\-G\-M\-A\-T\-R\-I\-X\-\_\-\-V\-E\-C\-T\-O\-R\-::element, free\-\_\-longmatrix\-\_\-vector(), free\-\_\-longvector(), get\-\_\-fine\-\_\-indices(), L\-O\-N\-G\-B\-I\-N\-::index, L\-O\-N\-G\-M\-A\-T\-R\-I\-X\-::nch, L\-O\-N\-G\-M\-A\-T\-R\-I\-X\-::ncl, new\-\_\-longbin(), new\-\_\-longvector(), L\-O\-N\-G\-V\-E\-C\-T\-O\-R\-::nh, L\-O\-N\-G\-V\-E\-C\-T\-O\-R\-::nl, L\-O\-N\-G\-M\-A\-T\-R\-I\-X\-::nrh, and L\-O\-N\-G\-M\-A\-T\-R\-I\-X\-::nrl.
+
+
+
+Referenced by get\-\_\-doublesquare\-\_\-grid().
+
+\hypertarget{bigcells2_8h_ac64b8ba634b9de13cdc9afbf01293e05}{\index{bigcells2.\-h@{bigcells2.\-h}!get\-\_\-square\-\_\-grid@{get\-\_\-square\-\_\-grid}}
+\index{get\-\_\-square\-\_\-grid@{get\-\_\-square\-\_\-grid}!bigcells2.h@{bigcells2.\-h}}
+\subsubsection[{get\-\_\-square\-\_\-grid}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\-Q\-U\-A\-R\-E\-\_\-\-G\-R\-I\-D}$\ast$ get\-\_\-square\-\_\-grid (
+\begin{DoxyParamCaption}
+\item[{{\bf D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X} $\ast$}]{D\-T\-M, }
+\item[{{\bf T\-\_\-\-I\-N\-I\-T} $\ast$}]{U\-V, }
+\item[{char $\ast$}]{file\-\_\-resume\-\_\-lines, }
+\item[{char $\ast$}]{file\-\_\-resume\-\_\-polygons, }
+\item[{char $\ast$}]{file\-\_\-resume\-\_\-connections, }
+\item[{long($\ast$)(long r, long c, {\bf L\-O\-N\-G\-V\-E\-C\-T\-O\-R} $\ast$s\-\_\-index)}]{index\-\_\-pixel\-\_\-from\-\_\-a\-\_\-bin, }
+\item[{int($\ast$)(double x, {\bf D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} $\ast$V)}]{check\-\_\-novalues, }
+\item[{long}]{displacement, }
+\item[{short}]{print}
+\end{DoxyParamCaption}
+)}}\label{bigcells2_8h_ac64b8ba634b9de13cdc9afbf01293e05}
+232\-: \hyperlink{struct_l_o_n_g_m_a_t_r_i_x}{L\-O\-N\-G\-M\-A\-T\-R\-I\-X} $\ast$m\-\_\-indices\-\_\-from\-\_\-mask(\hyperlink{struct_d_o_u_b_l_e_m_a_t_r_i_x}{D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X} $\ast$mask,long row\-\_\-shift,long col\-\_\-shift,long novalue,long I\-B\-A\-S\-E,long ($\ast$index\-\_\-pixel\-\_\-from\-\_\-a\-\_\-bin)(long r, long c,\hyperlink{struct_l_o_n_g_v_e_c_t_o_r}{L\-O\-N\-G\-V\-E\-C\-T\-O\-R} $\ast$s\-\_\-index),\hyperlink{struct_d_o_u_b_l_e_v_e_c_t_o_r}{D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} $\ast$\-V, int ($\ast$check\-\_\-novalues)(double x, \hyperlink{struct_d_o_u_b_l_e_v_e_c_t_o_r}{D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} $\ast$\-V))\{ \begin{DoxyAuthor}{Author}
+Emanuele Cordano 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+April and July 2008
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em -\/} & D\-T\-M (\hyperlink{struct_d_o_u_b_l_e_m_a_t_r_i_x}{D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X} $\ast$) -\/ reference map \\
+\hline
+{\em -\/} & U\-V (\hyperlink{struct_t___i_n_i_t}{T\-\_\-\-I\-N\-I\-T} $\ast$) -\/ \hyperlink{struct_t___i_n_i_t}{T\-\_\-\-I\-N\-I\-T} information \\
+\hline
+{\em -\/} & (char $\ast$) -\/ name of file\-\_\-resume\-\_\-lines \\
+\hline
+{\em -\/} & (char $\ast$) -\/ name of file\-\_\-resume\-\_\-polygons \\
+\hline
+{\em -\/} & (char $\ast$) -\/ name of file\-\_\-resume\-\_\-connections; \\
+\hline
+{\em -\/} & long ($\ast$index\-\_\-pixel\-\_\-from\-\_\-a\-\_\-bin)(long r, long c,\hyperlink{struct_l_o_n_g_v_e_c_t_o_r}{L\-O\-N\-G\-V\-E\-C\-T\-O\-R} $\ast$s\-\_\-index) \\
+\hline
+{\em -\/} & int ($\ast$check\-\_\-novalues)(double x, \hyperlink{struct_d_o_u_b_l_e_v_e_c_t_o_r}{D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} $\ast$\-V) \\
+\hline
+{\em displacement\-\_\-index} & (long), displacement amang which connected polygon are searched \\
+\hline
+{\em -\/} & print (short)\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a square grid
+\end{DoxyReturn}
+build lines and polygons
+
+chech the simmetry of the connections 
+
+Definition at line 44 of file bigcells2.\-c.
+
+
+
+References B\-O\-U\-N\-D\-A\-R\-Y, G\-R\-I\-D\-::boundary\-\_\-indicator, connections\-\_\-symmetry(), copy\-\_\-string(), E\-W\-R\-E\-S, G\-R\-I\-D\-::file\-\_\-resume\-\_\-connections, G\-R\-I\-D\-::file\-\_\-resume\-\_\-lines, G\-R\-I\-D\-::file\-\_\-resume\-\_\-polygons, get\-\_\-connection\-\_\-array\-\_\-squares(), get\-\_\-linevector\-\_\-from\-\_\-raster\-\_\-grid(), get\-\_\-polygonvector\-\_\-from\-\_\-raster(), S\-Q\-U\-A\-R\-E\-\_\-\-G\-R\-I\-D\-::grid, index\-\_\-pixel\-\_\-from\-\_\-a\-\_\-bin(), S\-Q\-U\-A\-R\-E\-\_\-\-G\-R\-I\-D\-::indices\-\_\-horizontal\-\_\-lines, S\-Q\-U\-A\-R\-E\-\_\-\-G\-R\-I\-D\-::indices\-\_\-pixel, S\-Q\-U\-A\-R\-E\-\_\-\-G\-R\-I\-D\-::indices\-\_\-vertex, S\-Q\-U\-A\-R\-E\-\_\-\-G\-R\-I\-D\-::indices\-\_\-vertical\-\_\-lines, I\-N\-T\-E\-G\-E\-R\-\_\-\-N\-U\-L\-L, G\-R\-I\-D\-::lines, G\-R\-I\-D\-::links, m\-\_\-indices\-\_\-from\-\_\-mask(), L\-O\-N\-G\-M\-A\-T\-R\-I\-X\-::ncl, L\-I\-N\-E\-V\-E\-C\-T\-O\-R\-::nh, P\-O\-L\-Y\-G\-O\-N\-V\-E\-C\-T\-O\-R\-::nh, S\-Q\-U\-A\-R\-E\-\_\-\-G\-R\-I\-D\-::nhorizontal\-\_\-lines, S\-Q\-U\-A\-R\-E\-\_\-\-G\-R\-I\-D\-::novalue, L\-O\-N\-G\-M\-A\-T\-R\-I\-X\-::nrl, N\-S\-R\-E\-S, G\-R\-I\-D\-::polygons, t\-\_\-error(), T\-\_\-\-I\-N\-I\-T\-::\-U, T\-\_\-\-I\-N\-I\-T\-::\-V, X\-\_\-\-B\-O\-T\-T\-O\-M\-L\-E\-F\-T\-C\-O\-R\-N\-E\-R, and Y\-\_\-\-B\-O\-T\-T\-O\-M\-L\-E\-F\-T\-C\-O\-R\-N\-E\-R.
+
+
+
+Referenced by get\-\_\-doublesquare\-\_\-grid().
+
+\hypertarget{bigcells2_8h_a28d23a3c17a001b437d91ee44fa24c50}{\index{bigcells2.\-h@{bigcells2.\-h}!new\-\_\-longmatrix\-\_\-vector@{new\-\_\-longmatrix\-\_\-vector}}
+\index{new\-\_\-longmatrix\-\_\-vector@{new\-\_\-longmatrix\-\_\-vector}!bigcells2.h@{bigcells2.\-h}}
+\subsubsection[{new\-\_\-longmatrix\-\_\-vector}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\-O\-N\-G\-M\-A\-T\-R\-I\-X\-\_\-\-V\-E\-C\-T\-O\-R}$\ast$ new\-\_\-longmatrix\-\_\-vector (
+\begin{DoxyParamCaption}
+\item[{long}]{nh}
+\end{DoxyParamCaption}
+)}}\label{bigcells2_8h_a28d23a3c17a001b437d91ee44fa24c50}
+\begin{DoxyAuthor}{Author}
+Emanuele Cordano 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+April 2009
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em nh} & (long) -\/ number of elements;\\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 201 of file bigcells2.\-c.
+
+
+
+References L\-O\-N\-G\-M\-A\-T\-R\-I\-X\-\_\-\-V\-E\-C\-T\-O\-R\-::element, L\-O\-N\-G\-M\-A\-T\-R\-I\-X\-\_\-\-V\-E\-C\-T\-O\-R\-::nh, L\-O\-N\-G\-M\-A\-T\-R\-I\-X\-\_\-\-V\-E\-C\-T\-O\-R\-::nl, N\-L, N\-R\-\_\-\-E\-N\-D, t\-\_\-error(), and vector().
+
+
+
+Referenced by get\-\_\-fine\-\_\-indices(), and read\-\_\-fine\-\_\-indices().
+
+\hypertarget{bigcells2_8h_ac68388f3ff2b8768d62e0602bab1bc66}{\index{bigcells2.\-h@{bigcells2.\-h}!new\-\_\-raster\-\_\-map@{new\-\_\-raster\-\_\-map}}
+\index{new\-\_\-raster\-\_\-map@{new\-\_\-raster\-\_\-map}!bigcells2.h@{bigcells2.\-h}}
+\subsubsection[{new\-\_\-raster\-\_\-map}]{\setlength{\rightskip}{0pt plus 5cm}{\bf R\-A\-S\-T\-E\-R\-\_\-\-M\-A\-P}$\ast$ new\-\_\-raster\-\_\-map (
+\begin{DoxyParamCaption}
+\item[{long}]{nh}
+\end{DoxyParamCaption}
+)}}\label{bigcells2_8h_ac68388f3ff2b8768d62e0602bab1bc66}
+\begin{DoxyAuthor}{Author}
+Emanuele Cordano 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+April 2009
+\end{DoxyDate}
+nh -\/ number of layers;
+
+and allocates a \hyperlink{struct_r_a_s_t_e_r___m_a_p}{R\-A\-S\-T\-E\-R\-\_\-\-M\-A\-P} class
+
+Definition at line 129 of file bigcells2.\-c.
+
+
+
+References R\-A\-S\-T\-E\-R\-\_\-\-M\-A\-P\-::check\-\_\-novalues, I\-N\-T\-E\-G\-E\-R\-\_\-\-N\-U\-L\-L, R\-A\-S\-T\-E\-R\-\_\-\-M\-A\-P\-::layer, R\-A\-S\-T\-E\-R\-\_\-\-M\-A\-P\-::nh, N\-L, R\-A\-S\-T\-E\-R\-\_\-\-M\-A\-P\-::nl, no\-\_\-value\-\_\-function(), N\-R\-\_\-\-E\-N\-D, R\-A\-S\-T\-E\-R\-\_\-\-M\-A\-P\-::reference\-\_\-index\-\_\-map, t\-\_\-error(), and R\-A\-S\-T\-E\-R\-\_\-\-M\-A\-P\-::\-U\-V.
+
+
+
+Referenced by get\-\_\-doubleraster\-\_\-map().
+
+\hypertarget{bigcells2_8h_aeb6b3727983f3bfd33e4e2b84010bee0}{\index{bigcells2.\-h@{bigcells2.\-h}!strcpy2@{strcpy2}}
+\index{strcpy2@{strcpy2}!bigcells2.h@{bigcells2.\-h}}
+\subsubsection[{strcpy2}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ strcpy2 (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{dest, }
+\item[{const char $\ast$}]{src}
+\end{DoxyParamCaption}
+)}}\label{bigcells2_8h_aeb6b3727983f3bfd33e4e2b84010bee0}
+proof utilities 
+
+Definition at line 692 of file bigcells2.\-c.
+
+\hypertarget{bigcells2_8h_adfe869470fbeabfed8fc1c3d61b106bc}{\index{bigcells2.\-h@{bigcells2.\-h}!write\-\_\-doublesquare\-\_\-grid@{write\-\_\-doublesquare\-\_\-grid}}
+\index{write\-\_\-doublesquare\-\_\-grid@{write\-\_\-doublesquare\-\_\-grid}!bigcells2.h@{bigcells2.\-h}}
+\subsubsection[{write\-\_\-doublesquare\-\_\-grid}]{\setlength{\rightskip}{0pt plus 5cm}int write\-\_\-doublesquare\-\_\-grid (
+\begin{DoxyParamCaption}
+\item[{{\bf D\-O\-U\-B\-L\-E\-S\-Q\-U\-A\-R\-E\-\_\-\-G\-R\-I\-D} $\ast$}]{dsq}
+\end{DoxyParamCaption}
+)}}\label{bigcells2_8h_adfe869470fbeabfed8fc1c3d61b106bc}
+\begin{DoxyAuthor}{Author}
+Emanuele Cordano 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+April 2009
+\end{DoxyDate}
+
+
+Definition at line 545 of file bigcells2.\-c.
+
+
+
+References D\-O\-U\-B\-L\-E\-S\-Q\-U\-A\-R\-E\-\_\-\-G\-R\-I\-D\-::big, D\-O\-U\-B\-L\-E\-S\-Q\-U\-A\-R\-E\-\_\-\-G\-R\-I\-D\-::file\-\_\-resume\-\_\-c\-\_\-line, D\-O\-U\-B\-L\-E\-S\-Q\-U\-A\-R\-E\-\_\-\-G\-R\-I\-D\-::file\-\_\-resume\-\_\-c\-\_\-polygon, D\-O\-U\-B\-L\-E\-S\-Q\-U\-A\-R\-E\-\_\-\-G\-R\-I\-D\-::fine, S\-Q\-U\-A\-R\-E\-\_\-\-G\-R\-I\-D\-::grid, D\-O\-U\-B\-L\-E\-S\-Q\-U\-A\-R\-E\-\_\-\-G\-R\-I\-D\-::small\-\_\-content\-\_\-line, D\-O\-U\-B\-L\-E\-S\-Q\-U\-A\-R\-E\-\_\-\-G\-R\-I\-D\-::small\-\_\-content\-\_\-polygon, write\-\_\-grid(), write\-\_\-longmatrix\-\_\-vector(), and write\-\_\-small\-\_\-lines\-\_\-indices().
+
+
+
+Referenced by main().
+
+\hypertarget{bigcells2_8h_a4fa7cdf8be5d8e37c07f2b88f5d5af9b}{\index{bigcells2.\-h@{bigcells2.\-h}!write\-\_\-grid@{write\-\_\-grid}}
+\index{write\-\_\-grid@{write\-\_\-grid}!bigcells2.h@{bigcells2.\-h}}
+\subsubsection[{write\-\_\-grid}]{\setlength{\rightskip}{0pt plus 5cm}void write\-\_\-grid (
+\begin{DoxyParamCaption}
+\item[{{\bf G\-R\-I\-D} $\ast$}]{grid}
+\end{DoxyParamCaption}
+)}}\label{bigcells2_8h_a4fa7cdf8be5d8e37c07f2b88f5d5af9b}
+\begin{DoxyAuthor}{Author}
+Emanuele Cordano 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+April 2009
+\end{DoxyDate}
+
+
+Definition at line 107 of file bigcells2.\-c.
+
+
+
+References G\-R\-I\-D\-::file\-\_\-resume\-\_\-connections, G\-R\-I\-D\-::file\-\_\-resume\-\_\-lines, G\-R\-I\-D\-::file\-\_\-resume\-\_\-polygons, G\-R\-I\-D\-::lines, G\-R\-I\-D\-::links, G\-R\-I\-D\-::polygons, write\-\_\-linevector(), write\-\_\-polygonconnectionattributearray(), and write\-\_\-polygonvector().
+
+
+
+Referenced by write\-\_\-doublesquare\-\_\-grid().
+
+\hypertarget{bigcells2_8h_a355a9a3e61f4ddac3a3b744b79f4116a}{\index{bigcells2.\-h@{bigcells2.\-h}!write\-\_\-longmatrix\-\_\-vector@{write\-\_\-longmatrix\-\_\-vector}}
+\index{write\-\_\-longmatrix\-\_\-vector@{write\-\_\-longmatrix\-\_\-vector}!bigcells2.h@{bigcells2.\-h}}
+\subsubsection[{write\-\_\-longmatrix\-\_\-vector}]{\setlength{\rightskip}{0pt plus 5cm}int write\-\_\-longmatrix\-\_\-vector (
+\begin{DoxyParamCaption}
+\item[{{\bf L\-O\-N\-G\-M\-A\-T\-R\-I\-X\-\_\-\-V\-E\-C\-T\-O\-R} $\ast$}]{lmv, }
+\item[{char $\ast$}]{filename}
+\end{DoxyParamCaption}
+)}}\label{bigcells2_8h_a355a9a3e61f4ddac3a3b744b79f4116a}
+write functions 
+\begin{DoxyParams}{Parameters}
+{\em (\-L\-O\-N\-G\-M\-A\-T\-R\-I\-X\-\_\-\-V\-E\-C\-T\-O\-R} & $\ast$) lmv \\
+\hline
+{\em (char} & $\ast$) filename\\
+\hline
+\end{DoxyParams}
+\begin{DoxyAuthor}{Author}
+Emanuele Cordano 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+April 2009
+\end{DoxyDate}
+
+
+Definition at line 482 of file bigcells2.\-c.
+
+
+
+References L\-O\-N\-G\-M\-A\-T\-R\-I\-X\-\_\-\-V\-E\-C\-T\-O\-R\-::element, M\-A\-X\-\_\-\-C\-O\-L, L\-O\-N\-G\-M\-A\-T\-R\-I\-X\-::nch, L\-O\-N\-G\-M\-A\-T\-R\-I\-X\-\_\-\-V\-E\-C\-T\-O\-R\-::nh, L\-O\-N\-G\-M\-A\-T\-R\-I\-X\-\_\-\-V\-E\-C\-T\-O\-R\-::nl, L\-O\-N\-G\-M\-A\-T\-R\-I\-X\-::nrh, t\-\_\-fclose(), t\-\_\-fopen(), and write\-\_\-longmatrix\-\_\-elements().
+
+
+
+Referenced by write\-\_\-doublesquare\-\_\-grid().
+

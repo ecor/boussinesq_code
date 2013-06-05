@@ -1,0 +1,202 @@
+\hypertarget{probability_8c}{\section{F\-L\-U\-I\-D\-T\-U\-R\-T\-L\-E\-S/probability.c File Reference}
+\label{probability_8c}\index{F\-L\-U\-I\-D\-T\-U\-R\-T\-L\-E\-S/probability.\-c@{F\-L\-U\-I\-D\-T\-U\-R\-T\-L\-E\-S/probability.\-c}}
+}
+{\ttfamily \#include \char`\"{}turtle.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}t\-\_\-probability.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}t\-\_\-random.\-h\char`\"{}}\\*
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{probability_8c_a598a3330b3c21701223ee0ca14316eca}{P\-I}~3.\-141592654
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+double \hyperlink{probability_8c_a1ab13c6d19ede4b221c76f6d39639655}{expdev} (long $\ast$idum)
+\item 
+double \hyperlink{probability_8c_a2acadc61773e57cfe7d9b92d7253cd69}{poisdev} (float xm, long $\ast$idum)
+\item 
+float \hyperlink{probability_8c_ad5252d6f2898780b85d6d5065d833eab}{bnldev} (float pp, int n, long $\ast$idum)
+\item 
+float \hyperlink{probability_8c_a88d126407fa731a66103a56c1ab75ac6}{gammln} (float xx)
+\item 
+double \hyperlink{probability_8c_ae541158d969998336fcb69f5aa69a86a}{meandoublem} (\hyperlink{struct_d_o_u_b_l_e_m_a_t_r_i_x}{D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X} $\ast$m, \hyperlink{struct_f_l_o_a_t_v_e_c_t_o_r}{F\-L\-O\-A\-T\-V\-E\-C\-T\-O\-R} $\ast$V)
+\item 
+double \hyperlink{probability_8c_ae7e6fb8b52dd682de058f119ef1d1a41}{vardoublem} (\hyperlink{struct_d_o_u_b_l_e_m_a_t_r_i_x}{D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X} $\ast$m, \hyperlink{struct_f_l_o_a_t_v_e_c_t_o_r}{F\-L\-O\-A\-T\-V\-E\-C\-T\-O\-R} $\ast$V)
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{probability_8c_a598a3330b3c21701223ee0ca14316eca}{\index{probability.\-c@{probability.\-c}!P\-I@{P\-I}}
+\index{P\-I@{P\-I}!probability.c@{probability.\-c}}
+\subsubsection[{P\-I}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\-I~3.\-141592654}}\label{probability_8c_a598a3330b3c21701223ee0ca14316eca}
+
+
+Definition at line 4 of file probability.\-c.
+
+
+
+Referenced by bnldev(), and poisdev().
+
+
+
+\subsection{Function Documentation}
+\hypertarget{probability_8c_ad5252d6f2898780b85d6d5065d833eab}{\index{probability.\-c@{probability.\-c}!bnldev@{bnldev}}
+\index{bnldev@{bnldev}!probability.c@{probability.\-c}}
+\subsubsection[{bnldev}]{\setlength{\rightskip}{0pt plus 5cm}float bnldev (
+\begin{DoxyParamCaption}
+\item[{float}]{pp, }
+\item[{int}]{n, }
+\item[{long $\ast$}]{idum}
+\end{DoxyParamCaption}
+)}}\label{probability_8c_ad5252d6f2898780b85d6d5065d833eab}
+Name\-: bnldev
+
+Synopsis\-: float \hyperlink{t__probability_8h_ad5252d6f2898780b85d6d5065d833eab}{bnldev(float pp, int n, long $\ast$idum)};
+
+Version\-: 1.\-0
+
+Description\-: returns as a floating point number an integer value that is a random deviate drawn from a binomial distribution of n trials each of probability pp
+
+Inputs\-: 1-\/ the probability of a trial 2 -\/ the numbe of trials 3 -\/ a pointer to a long (if the long is negative the random number generator is reinitialized)
+
+Return\-: a randonm number with the above distribution
+
+See Also\-: expdev
+
+Notes\-: this code is copyrighted and you need N\-R to use it
+
+References\-: Numerical Recipes, Second Ediction 
+
+Definition at line 55 of file probability.\-c.
+
+
+
+References gammln(), P\-I, and ran3().
+
+\hypertarget{probability_8c_a1ab13c6d19ede4b221c76f6d39639655}{\index{probability.\-c@{probability.\-c}!expdev@{expdev}}
+\index{expdev@{expdev}!probability.c@{probability.\-c}}
+\subsubsection[{expdev}]{\setlength{\rightskip}{0pt plus 5cm}double expdev (
+\begin{DoxyParamCaption}
+\item[{long $\ast$}]{idum}
+\end{DoxyParamCaption}
+)}}\label{probability_8c_a1ab13c6d19ede4b221c76f6d39639655}
+Name\-: expdev
+
+Synopsis\-: double \hyperlink{t__probability_8h_a1ab13c6d19ede4b221c76f6d39639655}{expdev(long $\ast$idum)};
+
+Version\-: 1.\-0
+
+Description\-: produces a random number with gaussian distribution
+
+Authors \& Date\-: Riccardo Rigon, 1998
+
+Inputs\-: a pointer to a long (if the long is negative the random number generator is reinitialized)
+
+Return\-: a random number with gaussian distribution (zero mean and standard deviation 1)
+
+Notes\-: this code is copyrighted and you need N\-R to use it
+
+Keywords\-: random numbers
+
+References\-: Numerical Recipes, Second Edition, pag.\-287 
+
+Definition at line 6 of file probability.\-c.
+
+
+
+References ran3().
+
+\hypertarget{probability_8c_a88d126407fa731a66103a56c1ab75ac6}{\index{probability.\-c@{probability.\-c}!gammln@{gammln}}
+\index{gammln@{gammln}!probability.c@{probability.\-c}}
+\subsubsection[{gammln}]{\setlength{\rightskip}{0pt plus 5cm}float gammln (
+\begin{DoxyParamCaption}
+\item[{float}]{xx}
+\end{DoxyParamCaption}
+)}}\label{probability_8c_a88d126407fa731a66103a56c1ab75ac6}
+Name\-: gammln
+
+Synopsis\-: float \hyperlink{t__probability_8h_a88d126407fa731a66103a56c1ab75ac6}{gammln(float x)};
+
+Version\-: 1.\-0
+
+Description\-: returns the value of log(gamma(x))
+
+Inputs\-: 1-\/ the abscissa for which you need the value of the gamma
+
+Return\-: a randonm number with the above distribution
+
+Notes\-: this code is copyrighted and you need N\-R to use it
+
+References\-: Numerical Recipes, Second Ediction, page 214 
+
+Definition at line 105 of file probability.\-c.
+
+
+
+Referenced by bnldev(), and poisdev().
+
+\hypertarget{probability_8c_ae541158d969998336fcb69f5aa69a86a}{\index{probability.\-c@{probability.\-c}!meandoublem@{meandoublem}}
+\index{meandoublem@{meandoublem}!probability.c@{probability.\-c}}
+\subsubsection[{meandoublem}]{\setlength{\rightskip}{0pt plus 5cm}double meandoublem (
+\begin{DoxyParamCaption}
+\item[{{\bf D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X} $\ast$}]{m, }
+\item[{{\bf F\-L\-O\-A\-T\-V\-E\-C\-T\-O\-R} $\ast$}]{V}
+\end{DoxyParamCaption}
+)}}\label{probability_8c_ae541158d969998336fcb69f5aa69a86a}
+
+
+Definition at line 121 of file probability.\-c.
+
+
+
+References F\-L\-O\-A\-T\-V\-E\-C\-T\-O\-R\-::co, D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X\-::co, D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X\-::nch, F\-L\-O\-A\-T\-V\-E\-C\-T\-O\-R\-::nh, and D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X\-::nrh.
+
+\hypertarget{probability_8c_a2acadc61773e57cfe7d9b92d7253cd69}{\index{probability.\-c@{probability.\-c}!poisdev@{poisdev}}
+\index{poisdev@{poisdev}!probability.c@{probability.\-c}}
+\subsubsection[{poisdev}]{\setlength{\rightskip}{0pt plus 5cm}double poisdev (
+\begin{DoxyParamCaption}
+\item[{float}]{xm, }
+\item[{long $\ast$}]{idum}
+\end{DoxyParamCaption}
+)}}\label{probability_8c_a2acadc61773e57cfe7d9b92d7253cd69}
+Name\-: poisdev
+
+Synopsis\-: double \hyperlink{t__probability_8h_a2acadc61773e57cfe7d9b92d7253cd69}{poisdev(float xm, long $\ast$idum)};
+
+Version\-: 1.\-0
+
+Description\-: Generates a random number with poisson distribution
+
+Inputs\-: 1-\/ the distribution mean 2 -\/ a pointer to a long (if the long is negative the random number generator is reinitialized)
+
+Return\-: a randonm number with poisson distribution
+
+See Also\-: expdev
+
+Notes\-: this code is copyrighted and you need N\-R to use it
+
+References\-: Numerical Recipes, Second Ediction, pag.\-294 
+
+Definition at line 16 of file probability.\-c.
+
+
+
+References gammln(), P\-I, and ran3().
+
+\hypertarget{probability_8c_ae7e6fb8b52dd682de058f119ef1d1a41}{\index{probability.\-c@{probability.\-c}!vardoublem@{vardoublem}}
+\index{vardoublem@{vardoublem}!probability.c@{probability.\-c}}
+\subsubsection[{vardoublem}]{\setlength{\rightskip}{0pt plus 5cm}double vardoublem (
+\begin{DoxyParamCaption}
+\item[{{\bf D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X} $\ast$}]{m, }
+\item[{{\bf F\-L\-O\-A\-T\-V\-E\-C\-T\-O\-R} $\ast$}]{V}
+\end{DoxyParamCaption}
+)}}\label{probability_8c_ae7e6fb8b52dd682de058f119ef1d1a41}
+
+
+Definition at line 142 of file probability.\-c.
+
+
+
+References F\-L\-O\-A\-T\-V\-E\-C\-T\-O\-R\-::co, D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X\-::co, D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X\-::nch, F\-L\-O\-A\-T\-V\-E\-C\-T\-O\-R\-::nh, and D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X\-::nrh.
+

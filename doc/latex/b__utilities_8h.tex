@@ -1,0 +1,554 @@
+\hypertarget{b__utilities_8h}{\section{Boussinesq/b\-\_\-utilities.h File Reference}
+\label{b__utilities_8h}\index{Boussinesq/b\-\_\-utilities.\-h@{Boussinesq/b\-\_\-utilities.\-h}}
+}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{struct_d_o_u_b_l_e_m_a_t_r_i_x}{D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X} $\ast$ \hyperlink{b__utilities_8h_a53f1ba1571048462cb1e64d7a0f9132e}{doublemap\-\_\-from\-\_\-longmap} (\hyperlink{struct_l_o_n_g_m_a_t_r_i_x}{L\-O\-N\-G\-M\-A\-T\-R\-I\-X} $\ast$lmap, long novalue, double dnovalue)
+\item 
+\hyperlink{struct_d_o_u_b_l_e_v_e_c_t_o_r}{D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} $\ast$ \hyperlink{b__utilities_8h_ae2eab05bef93ed0207458ddb4ce9a940}{interpolete\-\_\-volume2lines} (\hyperlink{struct_d_o_u_b_l_e_v_e_c_t_o_r}{D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} $\ast$v, \hyperlink{struct_g_r_i_d}{G\-R\-I\-D} $\ast$grid)
+\item 
+\hyperlink{struct_d_o_u_b_l_e_m_a_t_r_i_x}{D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X} $\ast$ \hyperlink{b__utilities_8h_affed2c9a0562e8ce2429f1a57f34020d}{get\-\_\-doublemap\-\_\-spav} (\hyperlink{struct_l_o_n_g_m_a_t_r_i_x}{L\-O\-N\-G\-M\-A\-T\-R\-I\-X} $\ast$lmap, long novalue, double dnovalue, long dr, long dc, \hyperlink{struct_d_o_u_b_l_e_m_a_t_r_i_x}{D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X} $\ast$Msource)
+\item 
+\hyperlink{struct_d_o_u_b_l_e_v_e_c_t_o_r}{D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} $\ast$ \hyperlink{b__utilities_8h_a21bd1a8a0b22225b2770f94d4c5baa15}{get\-\_\-doublevector\-\_\-for\-\_\-lines} (\hyperlink{struct_l_o_n_g_m_a_t_r_i_x}{L\-O\-N\-G\-M\-A\-T\-R\-I\-X} $\ast$h\-\_\-addresses, \hyperlink{struct_l_o_n_g_m_a_t_r_i_x}{L\-O\-N\-G\-M\-A\-T\-R\-I\-X} $\ast$v\-\_\-addresses, \hyperlink{struct_d_o_u_b_l_e_m_a_t_r_i_x}{D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X} $\ast$mh, \hyperlink{struct_d_o_u_b_l_e_m_a_t_r_i_x}{D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X} $\ast$mv, double novalue)
+\item 
+int \hyperlink{b__utilities_8h_a115cec61014d6f34f8a769a3cfa60269}{write\-\_\-raster\-\_\-from\-\_\-doublevector\-\_\-v2} (char $\ast$filename, \hyperlink{struct_d_o_u_b_l_e_v_e_c_t_o_r}{D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} $\ast$v, long n0, \hyperlink{struct_t___i_n_i_t}{T\-\_\-\-I\-N\-I\-T} $\ast$U\-Vref, \hyperlink{struct_l_o_n_g_m_a_t_r_i_x}{L\-O\-N\-G\-M\-A\-T\-R\-I\-X} $\ast$indices, \hyperlink{struct_d_o_u_b_l_e_m_a_t_r_i_x}{D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X} $\ast$Mref, short float\-\_\-type, short map\-\_\-format)
+\item 
+int \hyperlink{b__utilities_8h_a4001e55c1ab16543b8cc9fcf40b00c73}{write\-\_\-line\-\_\-map} (char $\ast$filename, \hyperlink{struct_d_o_u_b_l_e_v_e_c_t_o_r}{D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} $\ast$v, long n\-\_\-horizontal, \hyperlink{struct_t___i_n_i_t}{T\-\_\-\-I\-N\-I\-T} $\ast$U\-Vref, \hyperlink{struct_l_o_n_g_m_a_t_r_i_x}{L\-O\-N\-G\-M\-A\-T\-R\-I\-X} $\ast$indices\-\_\-h, \hyperlink{struct_l_o_n_g_m_a_t_r_i_x}{L\-O\-N\-G\-M\-A\-T\-R\-I\-X} $\ast$indices\-\_\-v, \hyperlink{struct_d_o_u_b_l_e_m_a_t_r_i_x}{D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X} $\ast$Mref\-\_\-h, \hyperlink{struct_d_o_u_b_l_e_m_a_t_r_i_x}{D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X} $\ast$Mref\-\_\-v, short float\-\_\-type, short map\-\_\-format)
+\item 
+int \hyperlink{b__utilities_8h_afe1820fce637071bab48a7ae4f01db3a}{write\-\_\-lines} (char $\ast$filename, long n\-\_\-lines, long n\-\_\-horizontal, \hyperlink{struct_t___i_n_i_t}{T\-\_\-\-I\-N\-I\-T} $\ast$U\-Vref, \hyperlink{struct_l_o_n_g_m_a_t_r_i_x}{L\-O\-N\-G\-M\-A\-T\-R\-I\-X} $\ast$indices\-\_\-h, \hyperlink{struct_l_o_n_g_m_a_t_r_i_x}{L\-O\-N\-G\-M\-A\-T\-R\-I\-X} $\ast$indices\-\_\-v, \hyperlink{struct_d_o_u_b_l_e_m_a_t_r_i_x}{D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X} $\ast$Mref\-\_\-h, \hyperlink{struct_d_o_u_b_l_e_m_a_t_r_i_x}{D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X} $\ast$Mref\-\_\-v, short float\-\_\-type, short map\-\_\-format)
+\item 
+int \hyperlink{b__utilities_8h_a20598bf65553357ce27e5914499c8219}{write\-\_\-cell} (char $\ast$filename, long n\-\_\-cells, \hyperlink{struct_t___i_n_i_t}{T\-\_\-\-I\-N\-I\-T} $\ast$U\-Vref, \hyperlink{struct_l_o_n_g_m_a_t_r_i_x}{L\-O\-N\-G\-M\-A\-T\-R\-I\-X} $\ast$indices, \hyperlink{struct_d_o_u_b_l_e_m_a_t_r_i_x}{D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X} $\ast$Mref, short float\-\_\-type, short map\-\_\-format)
+\item 
+int \hyperlink{b__utilities_8h_ae9af6c8fbc551092cc233f5b5bbe1fcb}{zeros} (\hyperlink{struct_d_o_u_b_l_e_v_e_c_t_o_r}{D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} $\ast$v)
+\item 
+int \hyperlink{b__utilities_8h_aad7b0a402c786d1bfa0738d676a11277}{check\-\_\-matrices} (\hyperlink{struct_d_o_u_b_l_e_m_a_t_r_i_x}{D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X} $\ast$\hyperlink{random_8c_ac597abe7cf610f262f7aaec53ed1d413}{M1}, \hyperlink{struct_l_o_n_g_m_a_t_r_i_x}{L\-O\-N\-G\-M\-A\-T\-R\-I\-X} $\ast$L1, double dnull, long lnull, short print)
+\item 
+double \hyperlink{b__utilities_8h_a7437aa384ca7ef27b0fd018bd34c12b5}{get\-\_\-value\-\_\-from\-\_\-doublevector} (long k, \hyperlink{struct_d_o_u_b_l_e_v_e_c_t_o_r}{D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} $\ast$v)
+\item 
+int \hyperlink{b__utilities_8h_a3c0dd3adfada3ffd73a3270fca560f0c}{write\-\_\-doublevector\-\_\-in\-\_\-a\-\_\-ascii\-\_\-ft\-\_\-format\-\_\-single\-\_\-file} (char $\ast$fileneme, \hyperlink{struct_d_o_u_b_l_e_v_e_c_t_o_r}{D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} $\ast$v)
+\item 
+\hyperlink{struct_d_o_u_b_l_e_v_e_c_t_o_r}{D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} $\ast$ \hyperlink{b__utilities_8h_afc330877d71d13c3e31f44fca465cc29}{read\-\_\-doublevector\-\_\-from\-\_\-a\-\_\-ft\-\_\-format\-\_\-single\-\_\-file} (char $\ast$filename, short print)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{DoxyAuthor}{Author}
+Emanuele Cordano
+\end{DoxyAuthor}
+\begin{DoxyAttention}{Attention}
+
+\end{DoxyAttention}
+This file is part of Boussinesq.
+
+Boussinesq is free software\-: you can redistribute it and/or modify it under the terms of the G\-N\-U General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
+
+Boussinesq is distributed in the hope that it will be useful, but W\-I\-T\-H\-O\-U\-T A\-N\-Y W\-A\-R\-R\-A\-N\-T\-Y; without even the implied warranty of M\-E\-R\-C\-H\-A\-N\-T\-A\-B\-I\-L\-I\-T\-Y or F\-I\-T\-N\-E\-S\-S F\-O\-R A P\-A\-R\-T\-I\-C\-U\-L\-A\-R P\-U\-R\-P\-O\-S\-E. See the G\-N\-U General Public License for more details.
+
+You should have received a copy of the G\-N\-U General Public License along with Boussinesq. If not, see \href{http://www.gnu.org/licenses/}{\tt http\-://www.\-gnu.\-org/licenses/}. 
+
+Definition in file \hyperlink{b__utilities_8h_source}{b\-\_\-utilities.\-h}.
+
+
+
+\subsection{Function Documentation}
+\hypertarget{b__utilities_8h_aad7b0a402c786d1bfa0738d676a11277}{\index{b\-\_\-utilities.\-h@{b\-\_\-utilities.\-h}!check\-\_\-matrices@{check\-\_\-matrices}}
+\index{check\-\_\-matrices@{check\-\_\-matrices}!b_utilities.h@{b\-\_\-utilities.\-h}}
+\subsubsection[{check\-\_\-matrices}]{\setlength{\rightskip}{0pt plus 5cm}int check\-\_\-matrices (
+\begin{DoxyParamCaption}
+\item[{{\bf D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X} $\ast$}]{M1, }
+\item[{{\bf L\-O\-N\-G\-M\-A\-T\-R\-I\-X} $\ast$}]{L1, }
+\item[{double}]{dnull, }
+\item[{long}]{lnull, }
+\item[{short}]{print}
+\end{DoxyParamCaption}
+)}}\label{b__utilities_8h_aad7b0a402c786d1bfa0738d676a11277}
+\begin{DoxyAuthor}{Author}
+Emanule Cordano 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+26 April 2009
+\end{DoxyDate}
+
+
+Definition at line 392 of file b\-\_\-utilities.\-c.
+
+
+
+References D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X\-::nch, L\-O\-N\-G\-M\-A\-T\-R\-I\-X\-::nch, D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X\-::ncl, D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X\-::nrh, L\-O\-N\-G\-M\-A\-T\-R\-I\-X\-::nrh, and D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X\-::nrl.
+
+\hypertarget{b__utilities_8h_a53f1ba1571048462cb1e64d7a0f9132e}{\index{b\-\_\-utilities.\-h@{b\-\_\-utilities.\-h}!doublemap\-\_\-from\-\_\-longmap@{doublemap\-\_\-from\-\_\-longmap}}
+\index{doublemap\-\_\-from\-\_\-longmap@{doublemap\-\_\-from\-\_\-longmap}!b_utilities.h@{b\-\_\-utilities.\-h}}
+\subsubsection[{doublemap\-\_\-from\-\_\-longmap}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X}$\ast$ doublemap\-\_\-from\-\_\-longmap (
+\begin{DoxyParamCaption}
+\item[{{\bf L\-O\-N\-G\-M\-A\-T\-R\-I\-X} $\ast$}]{lmap, }
+\item[{long}]{novalue, }
+\item[{double}]{dnovalue}
+\end{DoxyParamCaption}
+)}}\label{b__utilities_8h_a53f1ba1571048462cb1e64d7a0f9132e}
+\begin{DoxyAuthor}{Author}
+Emanuele Cordano 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+April 2009
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em lmap} & -\/ (\hyperlink{struct_l_o_n_g_m_a_t_r_i_x}{L\-O\-N\-G\-M\-A\-T\-R\-I\-X} $\ast$) -\/ mask \\
+\hline
+{\em novalue} & -\/ (long) null value (long) \\
+\hline
+{\em dnovalue} & -\/ (double) null value (double)\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\hyperlink{struct_d_o_u_b_l_e_m_a_t_r_i_x}{D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X}
+\end{DoxyReturn}
+
+
+Definition at line 39 of file b\-\_\-utilities.\-c.
+
+
+
+References L\-O\-N\-G\-M\-A\-T\-R\-I\-X\-::nch, L\-O\-N\-G\-M\-A\-T\-R\-I\-X\-::ncl, new\-\_\-doublematrix(), L\-O\-N\-G\-M\-A\-T\-R\-I\-X\-::nrh, and L\-O\-N\-G\-M\-A\-T\-R\-I\-X\-::nrl.
+
+
+
+Referenced by main().
+
+\hypertarget{b__utilities_8h_affed2c9a0562e8ce2429f1a57f34020d}{\index{b\-\_\-utilities.\-h@{b\-\_\-utilities.\-h}!get\-\_\-doublemap\-\_\-spav@{get\-\_\-doublemap\-\_\-spav}}
+\index{get\-\_\-doublemap\-\_\-spav@{get\-\_\-doublemap\-\_\-spav}!b_utilities.h@{b\-\_\-utilities.\-h}}
+\subsubsection[{get\-\_\-doublemap\-\_\-spav}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X}$\ast$ get\-\_\-doublemap\-\_\-spav (
+\begin{DoxyParamCaption}
+\item[{{\bf L\-O\-N\-G\-M\-A\-T\-R\-I\-X} $\ast$}]{lmap, }
+\item[{long}]{novalue, }
+\item[{double}]{dnovalue, }
+\item[{long}]{dr, }
+\item[{long}]{dc, }
+\item[{{\bf D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X} $\ast$}]{Msource}
+\end{DoxyParamCaption}
+)}}\label{b__utilities_8h_affed2c9a0562e8ce2429f1a57f34020d}
+\begin{DoxyAuthor}{Author}
+Emanuele Cordano 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+17 April 2009
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em lmap} & -\/ (\hyperlink{struct_l_o_n_g_m_a_t_r_i_x}{L\-O\-N\-G\-M\-A\-T\-R\-I\-X} $\ast$) -\/ mask \\
+\hline
+{\em novalue} & -\/ (long) null value (long) \\
+\hline
+{\em dnovalue} & -\/ (double) null value (double) \\
+\hline
+{\em dr} & -\/ (long) dr step at row with which function get\-\_\-doublemap\-\_\-spav calculates the average (-\/1 horizontal, 0 vertical) \\
+\hline
+{\em dc} & -\/ (long) dc step at column with which function get\-\_\-doublemap\-\_\-spav calculates the average (0 horizontal, -\/1 vertical) \\
+\hline
+{\em Msource} & -\/ (\hyperlink{struct_d_o_u_b_l_e_m_a_t_r_i_x}{D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X} $\ast$) Msources\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a map whose values are taken from Msource and whose mask is taken from lmap
+\end{DoxyReturn}
+
+
+Definition at line 111 of file b\-\_\-utilities.\-c.
+
+
+
+References D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X\-::nch, L\-O\-N\-G\-M\-A\-T\-R\-I\-X\-::nch, D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X\-::ncl, L\-O\-N\-G\-M\-A\-T\-R\-I\-X\-::ncl, new\-\_\-doublematrix(), D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X\-::nrh, L\-O\-N\-G\-M\-A\-T\-R\-I\-X\-::nrh, D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X\-::nrl, and L\-O\-N\-G\-M\-A\-T\-R\-I\-X\-::nrl.
+
+\hypertarget{b__utilities_8h_a21bd1a8a0b22225b2770f94d4c5baa15}{\index{b\-\_\-utilities.\-h@{b\-\_\-utilities.\-h}!get\-\_\-doublevector\-\_\-for\-\_\-lines@{get\-\_\-doublevector\-\_\-for\-\_\-lines}}
+\index{get\-\_\-doublevector\-\_\-for\-\_\-lines@{get\-\_\-doublevector\-\_\-for\-\_\-lines}!b_utilities.h@{b\-\_\-utilities.\-h}}
+\subsubsection[{get\-\_\-doublevector\-\_\-for\-\_\-lines}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R}$\ast$ get\-\_\-doublevector\-\_\-for\-\_\-lines (
+\begin{DoxyParamCaption}
+\item[{{\bf L\-O\-N\-G\-M\-A\-T\-R\-I\-X} $\ast$}]{h\-\_\-addresses, }
+\item[{{\bf L\-O\-N\-G\-M\-A\-T\-R\-I\-X} $\ast$}]{v\-\_\-addresses, }
+\item[{{\bf D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X} $\ast$}]{mh, }
+\item[{{\bf D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X} $\ast$}]{mv, }
+\item[{double}]{novalue}
+\end{DoxyParamCaption}
+)}}\label{b__utilities_8h_a21bd1a8a0b22225b2770f94d4c5baa15}
+\begin{DoxyAuthor}{Author}
+Emanuele Cordano 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+17 April 2009
+\end{DoxyDate}
+No
+\begin{DoxyParams}{Parameters}
+{\em n\-\_\-horizontal} & (long) -\/ number of horizontal lines No\\
+\hline
+{\em n\-\_\-lins} & (long) -\/ number of lines \\
+\hline
+{\em h\-\_\-addresses} & -\/ (\hyperlink{struct_l_o_n_g_m_a_t_r_i_x}{L\-O\-N\-G\-M\-A\-T\-R\-I\-X} $\ast$) adresses of horizotal lines; \\
+\hline
+{\em v\-\_\-addresses} & -\/ (\hyperlink{struct_l_o_n_g_m_a_t_r_i_x}{L\-O\-N\-G\-M\-A\-T\-R\-I\-X} $\ast$) adresses of vertical lines; \\
+\hline
+{\em mh} & -\/ (\hyperlink{struct_d_o_u_b_l_e_m_a_t_r_i_x}{D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X} $\ast$) matrix for horizontal lines; \\
+\hline
+{\em mv} & -\/ (\hyperlink{struct_d_o_u_b_l_e_m_a_t_r_i_x}{D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X} $\ast$) matrix for vertical lines; \\
+\hline
+{\em novalue} & -\/ (double) novalue\\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 165 of file b\-\_\-utilities.\-c.
+
+
+
+References free\-\_\-doublevector(), get\-\_\-doublevector\-\_\-from\-\_\-doublematrix(), L\-O\-N\-G\-M\-A\-T\-R\-I\-X\-::ncl, new\-\_\-doublevector(), D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R\-::nh, D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R\-::nl, and L\-O\-N\-G\-M\-A\-T\-R\-I\-X\-::nrl.
+
+\hypertarget{b__utilities_8h_a7437aa384ca7ef27b0fd018bd34c12b5}{\index{b\-\_\-utilities.\-h@{b\-\_\-utilities.\-h}!get\-\_\-value\-\_\-from\-\_\-doublevector@{get\-\_\-value\-\_\-from\-\_\-doublevector}}
+\index{get\-\_\-value\-\_\-from\-\_\-doublevector@{get\-\_\-value\-\_\-from\-\_\-doublevector}!b_utilities.h@{b\-\_\-utilities.\-h}}
+\subsubsection[{get\-\_\-value\-\_\-from\-\_\-doublevector}]{\setlength{\rightskip}{0pt plus 5cm}double get\-\_\-value\-\_\-from\-\_\-doublevector (
+\begin{DoxyParamCaption}
+\item[{long}]{k, }
+\item[{{\bf D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} $\ast$}]{v}
+\end{DoxyParamCaption}
+)}}\label{b__utilities_8h_a7437aa384ca7ef27b0fd018bd34c12b5}
+\begin{DoxyAuthor}{Author}
+Emanuele Cordano 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+14 October 2009
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em k} & (long) -\/ element requested \\
+\hline
+{\em v} & (D\-O\-U\-B\-L\-E\-C\-T\-O\-R $\ast$)\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the k-\/th element of the vector v, an error value (-\/9999) in case k exceeds the size of v
+\end{DoxyReturn}
+
+
+Definition at line 417 of file b\-\_\-utilities.\-c.
+
+
+
+References D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R\-::nh, and D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R\-::nl.
+
+
+
+Referenced by read\-\_\-b\-\_\-parameters\-\_\-ft().
+
+\hypertarget{b__utilities_8h_ae2eab05bef93ed0207458ddb4ce9a940}{\index{b\-\_\-utilities.\-h@{b\-\_\-utilities.\-h}!interpolete\-\_\-volume2lines@{interpolete\-\_\-volume2lines}}
+\index{interpolete\-\_\-volume2lines@{interpolete\-\_\-volume2lines}!b_utilities.h@{b\-\_\-utilities.\-h}}
+\subsubsection[{interpolete\-\_\-volume2lines}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R}$\ast$ interpolete\-\_\-volume2lines (
+\begin{DoxyParamCaption}
+\item[{{\bf D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} $\ast$}]{v, }
+\item[{{\bf G\-R\-I\-D} $\ast$}]{grid}
+\end{DoxyParamCaption}
+)}}\label{b__utilities_8h_ae2eab05bef93ed0207458ddb4ce9a940}
+! \begin{DoxyAuthor}{Author}
+Emanuele Cordano 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+April 2009
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em v} & -\/ (\hyperlink{struct_d_o_u_b_l_e_v_e_c_t_o_r}{D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} $\ast$) -\/ vector of the quantiatyies related to the polygons\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a vector of quantity v referred and intarpolated in the lines between two polygons
+\end{DoxyReturn}
+
+
+Definition at line 69 of file b\-\_\-utilities.\-c.
+
+
+
+References G\-R\-I\-D\-::boundary\-\_\-indicator, polygon\-\_\-connection\-\_\-attributes\-::connections, D\-\_\-\-I\-N\-I\-T\-\_\-\-V\-A\-L\-U\-E, P\-O\-L\-Y\-G\-O\-N\-::edge\-\_\-indices, P\-O\-L\-Y\-G\-O\-N\-V\-E\-C\-T\-O\-R\-::element, polygon\-\_\-connection\-\_\-attribute\-\_\-array\-::element, G\-R\-I\-D\-::lines, G\-R\-I\-D\-::links, new\-\_\-doublevector(), L\-I\-N\-E\-V\-E\-C\-T\-O\-R\-::nh, P\-O\-L\-Y\-G\-O\-N\-V\-E\-C\-T\-O\-R\-::nh, D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R\-::nh, L\-O\-N\-G\-V\-E\-C\-T\-O\-R\-::nl, D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R\-::nl, and G\-R\-I\-D\-::polygons.
+
+
+
+Referenced by main().
+
+\hypertarget{b__utilities_8h_afc330877d71d13c3e31f44fca465cc29}{\index{b\-\_\-utilities.\-h@{b\-\_\-utilities.\-h}!read\-\_\-doublevector\-\_\-from\-\_\-a\-\_\-ft\-\_\-format\-\_\-single\-\_\-file@{read\-\_\-doublevector\-\_\-from\-\_\-a\-\_\-ft\-\_\-format\-\_\-single\-\_\-file}}
+\index{read\-\_\-doublevector\-\_\-from\-\_\-a\-\_\-ft\-\_\-format\-\_\-single\-\_\-file@{read\-\_\-doublevector\-\_\-from\-\_\-a\-\_\-ft\-\_\-format\-\_\-single\-\_\-file}!b_utilities.h@{b\-\_\-utilities.\-h}}
+\subsubsection[{read\-\_\-doublevector\-\_\-from\-\_\-a\-\_\-ft\-\_\-format\-\_\-single\-\_\-file}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R}$\ast$ read\-\_\-doublevector\-\_\-from\-\_\-a\-\_\-ft\-\_\-format\-\_\-single\-\_\-file (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{filename, }
+\item[{short}]{print}
+\end{DoxyParamCaption}
+)}}\label{b__utilities_8h_afc330877d71d13c3e31f44fca465cc29}
+\begin{DoxyAuthor}{Author}
+Emanuele Cordano 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+18 March 2010
+\end{DoxyDate}
+
+
+Definition at line 467 of file b\-\_\-utilities.\-c.
+
+
+
+References read\-\_\-doublearray(), and read\-\_\-index().
+
+
+
+Referenced by main().
+
+\hypertarget{b__utilities_8h_a20598bf65553357ce27e5914499c8219}{\index{b\-\_\-utilities.\-h@{b\-\_\-utilities.\-h}!write\-\_\-cell@{write\-\_\-cell}}
+\index{write\-\_\-cell@{write\-\_\-cell}!b_utilities.h@{b\-\_\-utilities.\-h}}
+\subsubsection[{write\-\_\-cell}]{\setlength{\rightskip}{0pt plus 5cm}int write\-\_\-cell (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{filename, }
+\item[{long}]{n\-\_\-cells, }
+\item[{{\bf T\-\_\-\-I\-N\-I\-T} $\ast$}]{U\-Vref, }
+\item[{{\bf L\-O\-N\-G\-M\-A\-T\-R\-I\-X} $\ast$}]{indices, }
+\item[{{\bf D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X} $\ast$}]{Mref, }
+\item[{short}]{float\-\_\-type, }
+\item[{short}]{map\-\_\-format}
+\end{DoxyParamCaption}
+)}}\label{b__utilities_8h_a20598bf65553357ce27e5914499c8219}
+\begin{DoxyAuthor}{Author}
+Emanuele Cordano 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+April 2008
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & (char $\ast$) name of the file \\
+\hline
+{\em ncells} & -\/ (long) number of cells \\
+\hline
+{\em U\-Vref} & -\/ (\hyperlink{struct_t___i_n_i_t}{T\-\_\-\-I\-N\-I\-T} $\ast$) T\-\_\-\-I\-I\-T struct containg ewres and nwres information \\
+\hline
+{\em indices} & (\hyperlink{struct_l_o_n_g_v_e_c_t_o_r}{L\-O\-N\-G\-V\-E\-C\-T\-O\-R} $\ast$) -\/ matrix of indices \\
+\hline
+{\em Mref} & -\/ (\hyperlink{struct_d_o_u_b_l_e_m_a_t_r_i_x}{D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X} $\ast$) -\/ reference raster \\
+\hline
+{\em float\-\_\-type} & -\/ float type for printed values (floating = 0, recommended) \\
+\hline
+{\em map\-\_\-format} & -\/ map asccii format (F\-L\-U\-I\-D\-T\-U\-R\-L\-E, G\-R\-A\-S\-S\-A\-S\-C\-I or E\-S\-R\-I\-A\-S\-C\-I\-I) (G\-R\-A\-S\-S\-A\-S\-C\-I=2 recommended)\\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 352 of file b\-\_\-utilities.\-c.
+
+
+
+References free\-\_\-doublevector(), new\-\_\-doublevector(), D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R\-::nl, and write\-\_\-raster\-\_\-from\-\_\-doublevector\-\_\-v2().
+
+
+
+Referenced by main().
+
+\hypertarget{b__utilities_8h_a3c0dd3adfada3ffd73a3270fca560f0c}{\index{b\-\_\-utilities.\-h@{b\-\_\-utilities.\-h}!write\-\_\-doublevector\-\_\-in\-\_\-a\-\_\-ascii\-\_\-ft\-\_\-format\-\_\-single\-\_\-file@{write\-\_\-doublevector\-\_\-in\-\_\-a\-\_\-ascii\-\_\-ft\-\_\-format\-\_\-single\-\_\-file}}
+\index{write\-\_\-doublevector\-\_\-in\-\_\-a\-\_\-ascii\-\_\-ft\-\_\-format\-\_\-single\-\_\-file@{write\-\_\-doublevector\-\_\-in\-\_\-a\-\_\-ascii\-\_\-ft\-\_\-format\-\_\-single\-\_\-file}!b_utilities.h@{b\-\_\-utilities.\-h}}
+\subsubsection[{write\-\_\-doublevector\-\_\-in\-\_\-a\-\_\-ascii\-\_\-ft\-\_\-format\-\_\-single\-\_\-file}]{\setlength{\rightskip}{0pt plus 5cm}int write\-\_\-doublevector\-\_\-in\-\_\-a\-\_\-ascii\-\_\-ft\-\_\-format\-\_\-single\-\_\-file (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{fileneme, }
+\item[{{\bf D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} $\ast$}]{v}
+\end{DoxyParamCaption}
+)}}\label{b__utilities_8h_a3c0dd3adfada3ffd73a3270fca560f0c}
+
+
+Definition at line 440 of file b\-\_\-utilities.\-c.
+
+
+
+References D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R\-::nh, D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R\-::nl, t\-\_\-fclose(), and t\-\_\-fopen().
+
+
+
+Referenced by write\-\_\-map\-\_\-results().
+
+\hypertarget{b__utilities_8h_a4001e55c1ab16543b8cc9fcf40b00c73}{\index{b\-\_\-utilities.\-h@{b\-\_\-utilities.\-h}!write\-\_\-line\-\_\-map@{write\-\_\-line\-\_\-map}}
+\index{write\-\_\-line\-\_\-map@{write\-\_\-line\-\_\-map}!b_utilities.h@{b\-\_\-utilities.\-h}}
+\subsubsection[{write\-\_\-line\-\_\-map}]{\setlength{\rightskip}{0pt plus 5cm}int write\-\_\-line\-\_\-map (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{filename, }
+\item[{{\bf D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} $\ast$}]{v, }
+\item[{long}]{n\-\_\-horizontal, }
+\item[{{\bf T\-\_\-\-I\-N\-I\-T} $\ast$}]{U\-Vref, }
+\item[{{\bf L\-O\-N\-G\-M\-A\-T\-R\-I\-X} $\ast$}]{indices\-\_\-h, }
+\item[{{\bf L\-O\-N\-G\-M\-A\-T\-R\-I\-X} $\ast$}]{indices\-\_\-v, }
+\item[{{\bf D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X} $\ast$}]{Mref\-\_\-h, }
+\item[{{\bf D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X} $\ast$}]{Mref\-\_\-v, }
+\item[{short}]{float\-\_\-type, }
+\item[{short}]{map\-\_\-format}
+\end{DoxyParamCaption}
+)}}\label{b__utilities_8h_a4001e55c1ab16543b8cc9fcf40b00c73}
+\begin{DoxyAuthor}{Author}
+Emanuele Cordano
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+March 2009
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & (char $\ast$) name of the file \\
+\hline
+{\em v} & -\/ (D\-O\-U\-B\-L\-E\-C\-T\-O\-R $\ast$) -\/ vector to be mapped \\
+\hline
+{\em nhorizontal} & -\/ (long) -\/ number of horizontal lines \\
+\hline
+{\em U\-Vref} & -\/ (\hyperlink{struct_t___i_n_i_t}{T\-\_\-\-I\-N\-I\-T} $\ast$) T\-\_\-\-I\-I\-T struct containg ewres and nwres information \\
+\hline
+{\em indices\-\_\-h} & (\hyperlink{struct_l_o_n_g_v_e_c_t_o_r}{L\-O\-N\-G\-V\-E\-C\-T\-O\-R} $\ast$) -\/ matrix of indices for horizontal lines \\
+\hline
+{\em indices\-\_\-v} & (\hyperlink{struct_l_o_n_g_v_e_c_t_o_r}{L\-O\-N\-G\-V\-E\-C\-T\-O\-R} $\ast$) -\/ matrix of indices for vertical lines \\
+\hline
+{\em Mref\-\_\-h} & -\/ (\hyperlink{struct_d_o_u_b_l_e_m_a_t_r_i_x}{D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X} $\ast$) -\/ reference raster for horizotal lines \\
+\hline
+{\em Mref\-\_\-v} & -\/ (\hyperlink{struct_d_o_u_b_l_e_m_a_t_r_i_x}{D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X} $\ast$) -\/ reference raster for vertical lines \\
+\hline
+{\em float\-\_\-type} & -\/ float type for printed values (floating = 0, recommended) \\
+\hline
+{\em map\-\_\-format} & -\/ map asccii format (F\-L\-U\-I\-D\-T\-U\-R\-L\-E, G\-R\-A\-S\-S\-A\-S\-C\-I or E\-S\-R\-I\-A\-S\-C\-I\-I) (G\-R\-A\-S\-S\-A\-S\-C\-I=2 recommended)\\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 267 of file b\-\_\-utilities.\-c.
+
+
+
+References free\-\_\-doublevector(), join\-\_\-strings(), new\-\_\-doublevector(), D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R\-::nh, D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R\-::nl, and write\-\_\-raster\-\_\-from\-\_\-doublevector\-\_\-v2().
+
+
+
+Referenced by write\-\_\-lines().
+
+\hypertarget{b__utilities_8h_afe1820fce637071bab48a7ae4f01db3a}{\index{b\-\_\-utilities.\-h@{b\-\_\-utilities.\-h}!write\-\_\-lines@{write\-\_\-lines}}
+\index{write\-\_\-lines@{write\-\_\-lines}!b_utilities.h@{b\-\_\-utilities.\-h}}
+\subsubsection[{write\-\_\-lines}]{\setlength{\rightskip}{0pt plus 5cm}int write\-\_\-lines (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{filename, }
+\item[{long}]{n\-\_\-lines, }
+\item[{long}]{n\-\_\-horizontal, }
+\item[{{\bf T\-\_\-\-I\-N\-I\-T} $\ast$}]{U\-Vref, }
+\item[{{\bf L\-O\-N\-G\-M\-A\-T\-R\-I\-X} $\ast$}]{indices\-\_\-h, }
+\item[{{\bf L\-O\-N\-G\-M\-A\-T\-R\-I\-X} $\ast$}]{indices\-\_\-v, }
+\item[{{\bf D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X} $\ast$}]{Mref\-\_\-h, }
+\item[{{\bf D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X} $\ast$}]{Mref\-\_\-v, }
+\item[{short}]{float\-\_\-type, }
+\item[{short}]{map\-\_\-format}
+\end{DoxyParamCaption}
+)}}\label{b__utilities_8h_afe1820fce637071bab48a7ae4f01db3a}
+\begin{DoxyAuthor}{Author}
+Emanuele Cordano 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+April 2009
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & (char $\ast$) name of the file \\
+\hline
+{\em n\-\_\-lines} & -\/ (long) -\/ number of lines \\
+\hline
+{\em nhorizontal} & -\/ (long) -\/ number of horizontal lines \\
+\hline
+{\em U\-Vref} & -\/ (\hyperlink{struct_t___i_n_i_t}{T\-\_\-\-I\-N\-I\-T} $\ast$) T\-\_\-\-I\-I\-T struct containg ewres and nwres information \\
+\hline
+{\em indices\-\_\-h} & (\hyperlink{struct_l_o_n_g_v_e_c_t_o_r}{L\-O\-N\-G\-V\-E\-C\-T\-O\-R} $\ast$) -\/ matrix of indices for horizontal lines \\
+\hline
+{\em indices\-\_\-v} & (\hyperlink{struct_l_o_n_g_v_e_c_t_o_r}{L\-O\-N\-G\-V\-E\-C\-T\-O\-R} $\ast$) -\/ matrix of indices for vertical lines \\
+\hline
+{\em Mref\-\_\-h} & -\/ (\hyperlink{struct_d_o_u_b_l_e_m_a_t_r_i_x}{D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X} $\ast$) -\/ reference raster for horizotal lines \\
+\hline
+{\em Mref\-\_\-v} & -\/ (\hyperlink{struct_d_o_u_b_l_e_m_a_t_r_i_x}{D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X} $\ast$) -\/ reference raster for vertical lines \\
+\hline
+{\em float\-\_\-type} & -\/ float type for printed values (floating = 0, recommended) \\
+\hline
+{\em map\-\_\-format} & -\/ map asccii format (F\-L\-U\-I\-D\-T\-U\-R\-L\-E, G\-R\-A\-S\-S\-A\-S\-C\-I or E\-S\-R\-I\-A\-S\-C\-I\-I) (G\-R\-A\-S\-S\-A\-S\-C\-I=2 recommended)\\
+\hline
+\end{DoxyParams}
+write the addresse map for lines
+
+Definition at line 319 of file b\-\_\-utilities.\-c.
+
+
+
+References free\-\_\-doublevector(), new\-\_\-doublevector(), D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R\-::nl, and write\-\_\-line\-\_\-map().
+
+
+
+Referenced by main().
+
+\hypertarget{b__utilities_8h_a115cec61014d6f34f8a769a3cfa60269}{\index{b\-\_\-utilities.\-h@{b\-\_\-utilities.\-h}!write\-\_\-raster\-\_\-from\-\_\-doublevector\-\_\-v2@{write\-\_\-raster\-\_\-from\-\_\-doublevector\-\_\-v2}}
+\index{write\-\_\-raster\-\_\-from\-\_\-doublevector\-\_\-v2@{write\-\_\-raster\-\_\-from\-\_\-doublevector\-\_\-v2}!b_utilities.h@{b\-\_\-utilities.\-h}}
+\subsubsection[{write\-\_\-raster\-\_\-from\-\_\-doublevector\-\_\-v2}]{\setlength{\rightskip}{0pt plus 5cm}int write\-\_\-raster\-\_\-from\-\_\-doublevector\-\_\-v2 (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{filename, }
+\item[{{\bf D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} $\ast$}]{v, }
+\item[{long}]{n0, }
+\item[{{\bf T\-\_\-\-I\-N\-I\-T} $\ast$}]{U\-Vref, }
+\item[{{\bf L\-O\-N\-G\-M\-A\-T\-R\-I\-X} $\ast$}]{indices, }
+\item[{{\bf D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X} $\ast$}]{Mref, }
+\item[{short}]{float\-\_\-type, }
+\item[{short}]{map\-\_\-format}
+\end{DoxyParamCaption}
+)}}\label{b__utilities_8h_a115cec61014d6f34f8a769a3cfa60269}
+\begin{DoxyAuthor}{Author}
+Emanuele Cordano
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+March 2009
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & (char $\ast$) name of the file \\
+\hline
+{\em v} & -\/ (D\-O\-U\-B\-L\-E\-C\-T\-O\-R $\ast$) -\/ vector to be mapped \\
+\hline
+{\em n0} & -\/ (long) starting point of v (i-\/th element of v is put in the pixels whose index (in indices matrix) is i+n0) \\
+\hline
+{\em U\-Vref} & -\/ (\hyperlink{struct_t___i_n_i_t}{T\-\_\-\-I\-N\-I\-T} $\ast$) T\-\_\-\-I\-I\-T struct containg ewres and nwres information \\
+\hline
+{\em indices} & (\hyperlink{struct_l_o_n_g_v_e_c_t_o_r}{L\-O\-N\-G\-V\-E\-C\-T\-O\-R} $\ast$) -\/ matrix of indices \\
+\hline
+{\em Mref} & -\/ (\hyperlink{struct_d_o_u_b_l_e_m_a_t_r_i_x}{D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X} $\ast$) -\/ reference raster \\
+\hline
+{\em float\-\_\-type} & -\/ float type for printed values (floating = 0, recommended) \\
+\hline
+{\em map\-\_\-format} & -\/ map asccii format (F\-L\-U\-I\-D\-T\-U\-R\-L\-E, G\-R\-A\-S\-S\-A\-S\-C\-I or E\-S\-R\-I\-A\-S\-C\-I\-I) (G\-R\-A\-S\-S\-A\-S\-C\-I=2 recommended)\\
+\hline
+\end{DoxyParams}
+it writes a map from a vector using get\-\_\-doublematrix\-\_\-from\-\_\-doublevecto and write\-\_\-map
+
+Definition at line 224 of file b\-\_\-utilities.\-c.
+
+
+
+References free\-\_\-doublematrix(), get\-\_\-doublematrix\-\_\-from\-\_\-doublevector(), L\-O\-N\-G\-M\-A\-T\-R\-I\-X\-::ncl, L\-O\-N\-G\-M\-A\-T\-R\-I\-X\-::nrl, T\-\_\-\-I\-N\-I\-T\-::\-V, and write\-\_\-map().
+
+
+
+Referenced by write\-\_\-cell(), and write\-\_\-line\-\_\-map().
+
+\hypertarget{b__utilities_8h_ae9af6c8fbc551092cc233f5b5bbe1fcb}{\index{b\-\_\-utilities.\-h@{b\-\_\-utilities.\-h}!zeros@{zeros}}
+\index{zeros@{zeros}!b_utilities.h@{b\-\_\-utilities.\-h}}
+\subsubsection[{zeros}]{\setlength{\rightskip}{0pt plus 5cm}int zeros (
+\begin{DoxyParamCaption}
+\item[{{\bf D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} $\ast$}]{v}
+\end{DoxyParamCaption}
+)}}\label{b__utilities_8h_ae9af6c8fbc551092cc233f5b5bbe1fcb}
+\begin{DoxyAuthor}{Author}
+Emanuele Cordanp
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+19 April 2009
+\end{DoxyDate}
+
+
+Definition at line 378 of file b\-\_\-utilities.\-c.
+
+
+
+References D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R\-::nl.
+

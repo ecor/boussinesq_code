@@ -1,0 +1,620 @@
+\hypertarget{main_8c}{\section{Boussinesq/main.c File Reference}
+\label{main_8c}\index{Boussinesq/main.\-c@{Boussinesq/main.\-c}}
+}
+{\ttfamily \#include $<$sys/stat.\-h$>$}\\*
+{\ttfamily \#include \char`\"{}turtle.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}license.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}get\-\_\-filenames.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}rw\-\_\-maps.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}linear\-\_\-span.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}geometry.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}geometry\-\_\-utilities.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}read\-\_\-command\-\_\-line.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}additional\-\_\-read\-\_\-functions.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}g\-\_\-raster2plvector.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}bigcells2.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}geometry2.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}b\-\_\-solver.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}b\-\_\-readgrid.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}b\-\_\-volumes.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}b\-\_\-utilities.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}keywords\-\_\-file\-\_\-b.\-h\char`\"{}}\\*
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{main_8c_a8b43bafee90b30676faae508c21cb8d7}{P\-R\-I\-N\-T}~print
+\item 
+\#define \hyperlink{main_8c_a51f2d723367d0cf105f4ac7e22bf06a3}{V\-E\-R\-B\-O\-S\-E\-\_\-\-M}~\char`\"{}-\/verbose\char`\"{}
+\item 
+\#define \hyperlink{main_8c_ac3567c0971a0ef6ca7af5dcceeafd0bf}{C\-R\-E\-A\-T\-E\-\_\-\-G\-R\-I\-D}~\char`\"{}-\/creates\-\_\-the\-\_\-grid\char`\"{}
+\item 
+\#define \hyperlink{main_8c_a9bb961bbd83bfc1f55fe6273c18ccb25}{W\-R\-I\-T\-E\-\_\-\-G\-R\-I\-D}~\char`\"{}-\/writes\-\_\-the\-\_\-grid\char`\"{}
+\item 
+\#define \hyperlink{main_8c_a6b06705b41ecb99dd2cf968015814d82}{M\-E\-S\-H\-\_\-\-M}~\char`\"{}-\/only\-\_\-mesh\char`\"{}
+\item 
+\#define \hyperlink{main_8c_aaed390e3ad40887f7ca1c2712895e5d0}{W\-P\-A\-T\-H}~\char`\"{}-\/wpath\char`\"{}
+\item 
+\#define \hyperlink{main_8c_abae16dbebc24cd1ec3410a3be8f9d4ff}{N\-O\-W\-P\-A\-T\-H}~\char`\"{}\char`\"{}
+\item 
+\#define \hyperlink{main_8c_a41cf4177f569cb6b87ec5c90c0165769}{F\-L\-O\-A\-T\-\_\-\-T\-Y\-P\-E}~0
+\item 
+\#define \hyperlink{main_8c_ac8bc30f1f206ba9c0832fcf3d67b4d45}{M\-A\-P\-\_\-\-F\-O\-R\-M\-A\-T}~3
+\item 
+\#define \hyperlink{main_8c_a985bae7b67bcb96c5565a24a5f6d4cba}{B\-O\-U\-N\-D\-A\-R\-Y}~-\/10
+\item 
+\#define \hyperlink{main_8c_acfe2950e31640791ffd282df89ee8d1a}{E\-W\-R\-E\-S}~1
+\item 
+\#define \hyperlink{main_8c_a2b42eb8ceeee0a9d163084323aa021f9}{N\-S\-R\-E\-S}~2
+\item 
+\#define \hyperlink{main_8c_a33cdbb7cb41e940ef8defb56fd2bad8b}{I\-N\-T\-E\-G\-E\-R\-\_\-\-N\-U\-L\-L}~-\/99
+\item 
+\#define \hyperlink{main_8c_a794188a4c55111da20a4fc016816017a}{D\-\_\-\-I\-N\-I\-T}~-\/999.\-0
+\item 
+\#define \hyperlink{main_8c_a6242d3424da6fe6aea68f2a234e014ee}{N\-O\-\_\-\-O\-P\-T\-I\-O\-N}~\char`\"{}missing\-\_\-option\char`\"{}
+\item 
+\#define \hyperlink{main_8c_aadab34763b032b923988558c1a1507be}{A\-R\-I\-T\-H\-M\-E\-T\-I\-C\-\_\-\-M\-E\-A\-N0}~\char`\"{}-\/-\/arithmetic-\/mean0\char`\"{}
+\item 
+\#define \hyperlink{main_8c_a68f109f88bc0b227cff9245a591befaa}{M\-I\-S\-S\-I\-N\-G\-\_\-\-F\-I\-L\-E}~\hyperlink{t__io_8h_a1e1da491f460bfa6dd7f736bf26534e9}{join\-\_\-strings}(\hyperlink{main_8c_aa018d0410be770cac4c05bac5dea04f2}{wpath},\hyperlink{main_8c_a6242d3424da6fe6aea68f2a234e014ee}{N\-O\-\_\-\-O\-P\-T\-I\-O\-N})
+\item 
+\#define \hyperlink{main_8c_a906afbfd1ce81a146b72d1ce928e7abb}{P\-R\-O\-G\-R\-A\-M}~\char`\"{}boussinesq\char`\"{}
+\item 
+\#define \hyperlink{main_8c_a915544e30c5591f5eb8e6862e842ab46}{F\-I\-L\-E\-\_\-\-L\-I\-N\-E\-S}~\char`\"{}-\/lines-\/resume\char`\"{}
+\item 
+\#define \hyperlink{main_8c_a4be7d4859bceedb21a5e94df9d2c89e6}{F\-I\-L\-E\-\_\-\-P\-O\-L\-Y\-G\-O\-N\-S}~\char`\"{}-\/polygons-\/resume\char`\"{}
+\item 
+\#define \hyperlink{main_8c_ab1ee1fa80832c1d947237e5c7be222fb}{F\-I\-L\-E\-\_\-\-C\-O\-N\-N\-E\-C\-T\-I\-O\-N\-S}~\char`\"{}-\/connections-\/resume\char`\"{}
+\item 
+\#define \hyperlink{main_8c_afab38157ff897320fa50b40c9ea6eedf}{R\-E\-S\-U\-L\-T\-S\-\_\-\-F\-I\-L\-E\-S}~\char`\"{}-\/results-\/rasters\char`\"{}
+\item 
+\#define \hyperlink{main_8c_a56c171ce5fb653a8b2a10fa534cd870b}{F\-I\-L\-E\-\_\-\-D\-A\-T\-A}~\char`\"{}data=\char`\"{}
+\item 
+\#define \hyperlink{main_8c_acd8540907d350bf1f00fb940f8e3aa46}{R\-F\-A\-C\-T\-O\-R}~\hyperlink{main_8c_ad8ac9ce29f12815d417a57b2c0dc31fb}{param}-\/$>$max\-\_\-error
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{main_8c_ac90e3da613f731536e2945dc1b296c31}{read\-\_\-b\-\_\-parameters\-\_\-ft} (char $\ast$filename\-\_\-data, short print)
+\item 
+int \hyperlink{main_8c_a0ddf1224851353fc92bfbff6f499fa97}{main} (int argc, char $\ast$argv\mbox{[}$\,$\mbox{]})
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{turtle_8h_ade34e6dff3489a3ddd297f003f01bbd2}{S\-T\-R\-I\-N\-G\-B\-I\-N} $\ast$ \hyperlink{main_8c_a528421ce34267070764970b021f6034a}{filenames}
+\item 
+\hyperlink{struct_d_o_u_b_l_e_s_q_u_a_r_e___g_r_i_d}{D\-O\-U\-B\-L\-E\-S\-Q\-U\-A\-R\-E\-\_\-\-G\-R\-I\-D} $\ast$ \hyperlink{main_8c_a9b5f80541820877b6d4a8841650da32a}{dsq}
+\item 
+\hyperlink{struct_d_o_u_b_l_e___g_r_i_d}{D\-O\-U\-B\-L\-E\-\_\-\-G\-R\-I\-D} $\ast$ \hyperlink{main_8c_ab58c424a59f28ac6b17e7b7f5aae6152}{dgrid}
+\item 
+\hyperlink{struct_d_o_u_b_l_e_r_a_s_t_e_r___m_a_p}{D\-O\-U\-B\-L\-E\-R\-A\-S\-T\-E\-R\-\_\-\-M\-A\-P} $\ast$ \hyperlink{main_8c_a44d81a9ca5648f4ec1c298c7f37fefff}{draster}
+\item 
+\hyperlink{struct_d_o_u_b_l_e_v_e_c_t_o_r}{D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} $\ast$ \hyperlink{main_8c_a48a2ac079f3ec064d28848bcdc54ed7c}{elevation\-\_\-bottom\-\_\-fine}
+\item 
+\hyperlink{struct_d_o_u_b_l_e_v_e_c_t_o_r}{D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} $\ast$ \hyperlink{main_8c_a93f8bd854f98f2abe47c108484cf1c6b}{elevation\-\_\-bottom\-\_\-coarse}
+\item 
+\hyperlink{struct_d_o_u_b_l_e_v_e_c_t_o_r}{D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} $\ast$ \hyperlink{main_8c_a495ebb69c21b8816ee4f7dfe0e1e6d98}{elevation\-\_\-bottom\-\_\-flines}
+\item 
+\hyperlink{struct_d_o_u_b_l_e_v_e_c_t_o_r}{D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} $\ast$ \hyperlink{main_8c_a4cd3286ed17aff6164594f8a2d59f898}{elevation\-\_\-bottom\-\_\-bottom}
+\item 
+\hyperlink{struct_d_o_u_b_l_e_v_e_c_t_o_r}{D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} $\ast$ \hyperlink{main_8c_a2f1a3b2841c6ed8ff4461dabf9a4b03c}{elevation\-\_\-terrain\-\_\-fine}
+\item 
+\hyperlink{struct_d_o_u_b_l_e_v_e_c_t_o_r}{D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} $\ast$ \hyperlink{main_8c_a3328ead9d7ff307ac4b6847cd4a1205b}{elevation\-\_\-terrain\-\_\-flines}
+\item 
+\hyperlink{struct_d_o_u_b_l_e_v_e_c_t_o_r}{D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} $\ast$ \hyperlink{main_8c_acd5b5637e9d24f6f2641e08ed439b8b8}{porosity\-\_\-fine}
+\item 
+\hyperlink{struct_d_o_u_b_l_e_v_e_c_t_o_r}{D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} $\ast$ \hyperlink{main_8c_a8d58cb68a19f9ec3d36dcf606ce6ab8e}{outlet\-\_\-coefficient}
+\item 
+\hyperlink{struct_d_o_u_b_l_e_v_e_c_t_o_r}{D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} $\ast$ \hyperlink{main_8c_ae05985d75f7509463ec3e573aa75da58}{outlet\-\_\-coefficient\-\_\-v\-\_\-fine}
+\item 
+\hyperlink{struct_d_o_u_b_l_e_v_e_c_t_o_r}{D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} $\ast$ \hyperlink{main_8c_a54f93693853ec24ff2fe2dcc95d77e2c}{outlet\-\_\-coefficient\-\_\-surf}
+\item 
+\hyperlink{struct_d_o_u_b_l_e_v_e_c_t_o_r}{D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} $\ast$ \hyperlink{main_8c_aba66333c1b6167838030abf91e54ce8e}{outlet\-\_\-coefficient\-\_\-surf\-\_\-v\-\_\-fine}
+\item 
+\hyperlink{struct_d_o_u_b_l_e_v_e_c_t_o_r}{D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} $\ast$ \hyperlink{main_8c_afe877173190ce3813da775395bdf08bd}{runoff\-\_\-coefficient}
+\item 
+\hyperlink{struct_d_o_u_b_l_e_v_e_c_t_o_r}{D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} $\ast$ \hyperlink{main_8c_aa5dbd28ae3ab0ccc24eb51981b37f696}{runoff\-\_\-coefficient\-\_\-v\-\_\-coarse}
+\item 
+\hyperlink{struct_d_o_u_b_l_e_v_e_c_t_o_r}{D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} $\ast$ \hyperlink{main_8c_a3ace2c97e74d7e8aad3670b479cb606d}{water\-\_\-surface\-\_\-elevation}
+\begin{DoxyCompactList}\small\item\em extern \hyperlink{struct_d_o_u_b_l_e_v_e_c_t_o_r}{D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} {\itshape runoff\-\_\-coefficient; /}!$<$map of the coefficient of the rating curve in the outlet q\-\_\-discharge=C$\ast$h\-\_\-sup$^\wedge$m $\ast$/ \end{DoxyCompactList}\item 
+\hyperlink{struct_d_o_u_b_l_e_v_e_c_t_o_r}{D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} $\ast$ \hyperlink{main_8c_a97eff843a1a4985b0746ef826cc27822}{water\-\_\-mass\-\_\-error}
+\item 
+\hyperlink{struct_d_o_u_b_l_e_v_e_c_t_o_r}{D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} $\ast$ \hyperlink{main_8c_ace3cfe323c8bb9508ed135a5e3be0f8c}{water\-\_\-depth}
+\item 
+\hyperlink{struct_d_o_u_b_l_e_v_e_c_t_o_r}{D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} $\ast$ \hyperlink{main_8c_ac2670c558f0154ba997b23d6d8184b6b}{surface\-\_\-water\-\_\-velocity}
+\item 
+\hyperlink{struct_d_o_u_b_l_e_v_e_c_t_o_r}{D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} $\ast$ \hyperlink{main_8c_ad2a1214f97f2ea07f385b7c6ce403096}{F1\-\_\-wet\-\_\-vert\-\_\-area}
+\item 
+\hyperlink{struct_p_a_r_a_m}{P\-A\-R\-A\-M} $\ast$ \hyperlink{main_8c_ad8ac9ce29f12815d417a57b2c0dc31fb}{param}
+\item 
+\hyperlink{struct_f_l_a_g}{F\-L\-A\-G} $\ast$ \hyperlink{main_8c_af669d66807986c96b4927566ae5e8b45}{flag}
+\item 
+char $\ast$ \hyperlink{main_8c_aa018d0410be770cac4c05bac5dea04f2}{wpath}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{DoxyAuthor}{Author}
+Emanuele Cordano
+\end{DoxyAuthor}
+\begin{DoxyAttention}{Attention}
+
+\end{DoxyAttention}
+This file is part of Boussinesq.
+
+Boussinesq is free software\-: you can redistribute it and/or modify it under the terms of the G\-N\-U General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
+
+Boussinesq is distributed in the hope that it will be useful, but W\-I\-T\-H\-O\-U\-T A\-N\-Y W\-A\-R\-R\-A\-N\-T\-Y; without even the implied warranty of M\-E\-R\-C\-H\-A\-N\-T\-A\-B\-I\-L\-I\-T\-Y or F\-I\-T\-N\-E\-S\-S F\-O\-R A P\-A\-R\-T\-I\-C\-U\-L\-A\-R P\-U\-R\-P\-O\-S\-E. See the G\-N\-U General Public License for more details.
+
+You should have received a copy of the G\-N\-U General Public License along with Boussinesq. If not, see \href{http://www.gnu.org/licenses/}{\tt http\-://www.\-gnu.\-org/licenses/}. 
+
+Definition in file \hyperlink{main_8c_source}{main.\-c}.
+
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{main_8c_aadab34763b032b923988558c1a1507be}{\index{main.\-c@{main.\-c}!A\-R\-I\-T\-H\-M\-E\-T\-I\-C\-\_\-\-M\-E\-A\-N0@{A\-R\-I\-T\-H\-M\-E\-T\-I\-C\-\_\-\-M\-E\-A\-N0}}
+\index{A\-R\-I\-T\-H\-M\-E\-T\-I\-C\-\_\-\-M\-E\-A\-N0@{A\-R\-I\-T\-H\-M\-E\-T\-I\-C\-\_\-\-M\-E\-A\-N0}!main.c@{main.\-c}}
+\subsubsection[{A\-R\-I\-T\-H\-M\-E\-T\-I\-C\-\_\-\-M\-E\-A\-N0}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-R\-I\-T\-H\-M\-E\-T\-I\-C\-\_\-\-M\-E\-A\-N0~\char`\"{}-\/-\/arithmetic-\/mean0\char`\"{}}}\label{main_8c_aadab34763b032b923988558c1a1507be}
+
+
+Definition at line 106 of file main.\-c.
+
+
+
+Referenced by main().
+
+\hypertarget{main_8c_a985bae7b67bcb96c5565a24a5f6d4cba}{\index{main.\-c@{main.\-c}!B\-O\-U\-N\-D\-A\-R\-Y@{B\-O\-U\-N\-D\-A\-R\-Y}}
+\index{B\-O\-U\-N\-D\-A\-R\-Y@{B\-O\-U\-N\-D\-A\-R\-Y}!main.c@{main.\-c}}
+\subsubsection[{B\-O\-U\-N\-D\-A\-R\-Y}]{\setlength{\rightskip}{0pt plus 5cm}\#define B\-O\-U\-N\-D\-A\-R\-Y~-\/10}}\label{main_8c_a985bae7b67bcb96c5565a24a5f6d4cba}
+
+
+Definition at line 98 of file main.\-c.
+
+\hypertarget{main_8c_ac3567c0971a0ef6ca7af5dcceeafd0bf}{\index{main.\-c@{main.\-c}!C\-R\-E\-A\-T\-E\-\_\-\-G\-R\-I\-D@{C\-R\-E\-A\-T\-E\-\_\-\-G\-R\-I\-D}}
+\index{C\-R\-E\-A\-T\-E\-\_\-\-G\-R\-I\-D@{C\-R\-E\-A\-T\-E\-\_\-\-G\-R\-I\-D}!main.c@{main.\-c}}
+\subsubsection[{C\-R\-E\-A\-T\-E\-\_\-\-G\-R\-I\-D}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\-R\-E\-A\-T\-E\-\_\-\-G\-R\-I\-D~\char`\"{}-\/creates\-\_\-the\-\_\-grid\char`\"{}}}\label{main_8c_ac3567c0971a0ef6ca7af5dcceeafd0bf}
+
+
+Definition at line 87 of file main.\-c.
+
+
+
+Referenced by main().
+
+\hypertarget{main_8c_a794188a4c55111da20a4fc016816017a}{\index{main.\-c@{main.\-c}!D\-\_\-\-I\-N\-I\-T@{D\-\_\-\-I\-N\-I\-T}}
+\index{D\-\_\-\-I\-N\-I\-T@{D\-\_\-\-I\-N\-I\-T}!main.c@{main.\-c}}
+\subsubsection[{D\-\_\-\-I\-N\-I\-T}]{\setlength{\rightskip}{0pt plus 5cm}\#define D\-\_\-\-I\-N\-I\-T~-\/999.\-0}}\label{main_8c_a794188a4c55111da20a4fc016816017a}
+
+
+Definition at line 103 of file main.\-c.
+
+\hypertarget{main_8c_acfe2950e31640791ffd282df89ee8d1a}{\index{main.\-c@{main.\-c}!E\-W\-R\-E\-S@{E\-W\-R\-E\-S}}
+\index{E\-W\-R\-E\-S@{E\-W\-R\-E\-S}!main.c@{main.\-c}}
+\subsubsection[{E\-W\-R\-E\-S}]{\setlength{\rightskip}{0pt plus 5cm}\#define E\-W\-R\-E\-S~1}}\label{main_8c_acfe2950e31640791ffd282df89ee8d1a}
+
+
+Definition at line 99 of file main.\-c.
+
+\hypertarget{main_8c_ab1ee1fa80832c1d947237e5c7be222fb}{\index{main.\-c@{main.\-c}!F\-I\-L\-E\-\_\-\-C\-O\-N\-N\-E\-C\-T\-I\-O\-N\-S@{F\-I\-L\-E\-\_\-\-C\-O\-N\-N\-E\-C\-T\-I\-O\-N\-S}}
+\index{F\-I\-L\-E\-\_\-\-C\-O\-N\-N\-E\-C\-T\-I\-O\-N\-S@{F\-I\-L\-E\-\_\-\-C\-O\-N\-N\-E\-C\-T\-I\-O\-N\-S}!main.c@{main.\-c}}
+\subsubsection[{F\-I\-L\-E\-\_\-\-C\-O\-N\-N\-E\-C\-T\-I\-O\-N\-S}]{\setlength{\rightskip}{0pt plus 5cm}\#define F\-I\-L\-E\-\_\-\-C\-O\-N\-N\-E\-C\-T\-I\-O\-N\-S~\char`\"{}-\/connections-\/resume\char`\"{}}}\label{main_8c_ab1ee1fa80832c1d947237e5c7be222fb}
+
+
+Definition at line 112 of file main.\-c.
+
+\hypertarget{main_8c_a56c171ce5fb653a8b2a10fa534cd870b}{\index{main.\-c@{main.\-c}!F\-I\-L\-E\-\_\-\-D\-A\-T\-A@{F\-I\-L\-E\-\_\-\-D\-A\-T\-A}}
+\index{F\-I\-L\-E\-\_\-\-D\-A\-T\-A@{F\-I\-L\-E\-\_\-\-D\-A\-T\-A}!main.c@{main.\-c}}
+\subsubsection[{F\-I\-L\-E\-\_\-\-D\-A\-T\-A}]{\setlength{\rightskip}{0pt plus 5cm}\#define F\-I\-L\-E\-\_\-\-D\-A\-T\-A~\char`\"{}data=\char`\"{}}}\label{main_8c_a56c171ce5fb653a8b2a10fa534cd870b}
+
+
+Definition at line 115 of file main.\-c.
+
+\hypertarget{main_8c_a915544e30c5591f5eb8e6862e842ab46}{\index{main.\-c@{main.\-c}!F\-I\-L\-E\-\_\-\-L\-I\-N\-E\-S@{F\-I\-L\-E\-\_\-\-L\-I\-N\-E\-S}}
+\index{F\-I\-L\-E\-\_\-\-L\-I\-N\-E\-S@{F\-I\-L\-E\-\_\-\-L\-I\-N\-E\-S}!main.c@{main.\-c}}
+\subsubsection[{F\-I\-L\-E\-\_\-\-L\-I\-N\-E\-S}]{\setlength{\rightskip}{0pt plus 5cm}\#define F\-I\-L\-E\-\_\-\-L\-I\-N\-E\-S~\char`\"{}-\/lines-\/resume\char`\"{}}}\label{main_8c_a915544e30c5591f5eb8e6862e842ab46}
+
+
+Definition at line 110 of file main.\-c.
+
+\hypertarget{main_8c_a4be7d4859bceedb21a5e94df9d2c89e6}{\index{main.\-c@{main.\-c}!F\-I\-L\-E\-\_\-\-P\-O\-L\-Y\-G\-O\-N\-S@{F\-I\-L\-E\-\_\-\-P\-O\-L\-Y\-G\-O\-N\-S}}
+\index{F\-I\-L\-E\-\_\-\-P\-O\-L\-Y\-G\-O\-N\-S@{F\-I\-L\-E\-\_\-\-P\-O\-L\-Y\-G\-O\-N\-S}!main.c@{main.\-c}}
+\subsubsection[{F\-I\-L\-E\-\_\-\-P\-O\-L\-Y\-G\-O\-N\-S}]{\setlength{\rightskip}{0pt plus 5cm}\#define F\-I\-L\-E\-\_\-\-P\-O\-L\-Y\-G\-O\-N\-S~\char`\"{}-\/polygons-\/resume\char`\"{}}}\label{main_8c_a4be7d4859bceedb21a5e94df9d2c89e6}
+
+
+Definition at line 111 of file main.\-c.
+
+\hypertarget{main_8c_a41cf4177f569cb6b87ec5c90c0165769}{\index{main.\-c@{main.\-c}!F\-L\-O\-A\-T\-\_\-\-T\-Y\-P\-E@{F\-L\-O\-A\-T\-\_\-\-T\-Y\-P\-E}}
+\index{F\-L\-O\-A\-T\-\_\-\-T\-Y\-P\-E@{F\-L\-O\-A\-T\-\_\-\-T\-Y\-P\-E}!main.c@{main.\-c}}
+\subsubsection[{F\-L\-O\-A\-T\-\_\-\-T\-Y\-P\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define F\-L\-O\-A\-T\-\_\-\-T\-Y\-P\-E~0}}\label{main_8c_a41cf4177f569cb6b87ec5c90c0165769}
+
+
+Definition at line 95 of file main.\-c.
+
+
+
+Referenced by main().
+
+\hypertarget{main_8c_a33cdbb7cb41e940ef8defb56fd2bad8b}{\index{main.\-c@{main.\-c}!I\-N\-T\-E\-G\-E\-R\-\_\-\-N\-U\-L\-L@{I\-N\-T\-E\-G\-E\-R\-\_\-\-N\-U\-L\-L}}
+\index{I\-N\-T\-E\-G\-E\-R\-\_\-\-N\-U\-L\-L@{I\-N\-T\-E\-G\-E\-R\-\_\-\-N\-U\-L\-L}!main.c@{main.\-c}}
+\subsubsection[{I\-N\-T\-E\-G\-E\-R\-\_\-\-N\-U\-L\-L}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\-N\-T\-E\-G\-E\-R\-\_\-\-N\-U\-L\-L~-\/99}}\label{main_8c_a33cdbb7cb41e940ef8defb56fd2bad8b}
+
+
+Definition at line 102 of file main.\-c.
+
+\hypertarget{main_8c_ac8bc30f1f206ba9c0832fcf3d67b4d45}{\index{main.\-c@{main.\-c}!M\-A\-P\-\_\-\-F\-O\-R\-M\-A\-T@{M\-A\-P\-\_\-\-F\-O\-R\-M\-A\-T}}
+\index{M\-A\-P\-\_\-\-F\-O\-R\-M\-A\-T@{M\-A\-P\-\_\-\-F\-O\-R\-M\-A\-T}!main.c@{main.\-c}}
+\subsubsection[{M\-A\-P\-\_\-\-F\-O\-R\-M\-A\-T}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\-A\-P\-\_\-\-F\-O\-R\-M\-A\-T~3}}\label{main_8c_ac8bc30f1f206ba9c0832fcf3d67b4d45}
+
+
+Definition at line 96 of file main.\-c.
+
+
+
+Referenced by main().
+
+\hypertarget{main_8c_a6b06705b41ecb99dd2cf968015814d82}{\index{main.\-c@{main.\-c}!M\-E\-S\-H\-\_\-\-M@{M\-E\-S\-H\-\_\-\-M}}
+\index{M\-E\-S\-H\-\_\-\-M@{M\-E\-S\-H\-\_\-\-M}!main.c@{main.\-c}}
+\subsubsection[{M\-E\-S\-H\-\_\-\-M}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\-E\-S\-H\-\_\-\-M~\char`\"{}-\/only\-\_\-mesh\char`\"{}}}\label{main_8c_a6b06705b41ecb99dd2cf968015814d82}
+
+
+Definition at line 90 of file main.\-c.
+
+\hypertarget{main_8c_a68f109f88bc0b227cff9245a591befaa}{\index{main.\-c@{main.\-c}!M\-I\-S\-S\-I\-N\-G\-\_\-\-F\-I\-L\-E@{M\-I\-S\-S\-I\-N\-G\-\_\-\-F\-I\-L\-E}}
+\index{M\-I\-S\-S\-I\-N\-G\-\_\-\-F\-I\-L\-E@{M\-I\-S\-S\-I\-N\-G\-\_\-\-F\-I\-L\-E}!main.c@{main.\-c}}
+\subsubsection[{M\-I\-S\-S\-I\-N\-G\-\_\-\-F\-I\-L\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\-I\-S\-S\-I\-N\-G\-\_\-\-F\-I\-L\-E~{\bf join\-\_\-strings}({\bf wpath},{\bf N\-O\-\_\-\-O\-P\-T\-I\-O\-N})}}\label{main_8c_a68f109f88bc0b227cff9245a591befaa}
+
+
+Definition at line 107 of file main.\-c.
+
+\hypertarget{main_8c_a6242d3424da6fe6aea68f2a234e014ee}{\index{main.\-c@{main.\-c}!N\-O\-\_\-\-O\-P\-T\-I\-O\-N@{N\-O\-\_\-\-O\-P\-T\-I\-O\-N}}
+\index{N\-O\-\_\-\-O\-P\-T\-I\-O\-N@{N\-O\-\_\-\-O\-P\-T\-I\-O\-N}!main.c@{main.\-c}}
+\subsubsection[{N\-O\-\_\-\-O\-P\-T\-I\-O\-N}]{\setlength{\rightskip}{0pt plus 5cm}\#define N\-O\-\_\-\-O\-P\-T\-I\-O\-N~\char`\"{}missing\-\_\-option\char`\"{}}}\label{main_8c_a6242d3424da6fe6aea68f2a234e014ee}
+
+
+Definition at line 105 of file main.\-c.
+
+\hypertarget{main_8c_abae16dbebc24cd1ec3410a3be8f9d4ff}{\index{main.\-c@{main.\-c}!N\-O\-W\-P\-A\-T\-H@{N\-O\-W\-P\-A\-T\-H}}
+\index{N\-O\-W\-P\-A\-T\-H@{N\-O\-W\-P\-A\-T\-H}!main.c@{main.\-c}}
+\subsubsection[{N\-O\-W\-P\-A\-T\-H}]{\setlength{\rightskip}{0pt plus 5cm}\#define N\-O\-W\-P\-A\-T\-H~\char`\"{}\char`\"{}}}\label{main_8c_abae16dbebc24cd1ec3410a3be8f9d4ff}
+
+
+Definition at line 92 of file main.\-c.
+
+
+
+Referenced by main().
+
+\hypertarget{main_8c_a2b42eb8ceeee0a9d163084323aa021f9}{\index{main.\-c@{main.\-c}!N\-S\-R\-E\-S@{N\-S\-R\-E\-S}}
+\index{N\-S\-R\-E\-S@{N\-S\-R\-E\-S}!main.c@{main.\-c}}
+\subsubsection[{N\-S\-R\-E\-S}]{\setlength{\rightskip}{0pt plus 5cm}\#define N\-S\-R\-E\-S~2}}\label{main_8c_a2b42eb8ceeee0a9d163084323aa021f9}
+
+
+Definition at line 100 of file main.\-c.
+
+\hypertarget{main_8c_a8b43bafee90b30676faae508c21cb8d7}{\index{main.\-c@{main.\-c}!P\-R\-I\-N\-T@{P\-R\-I\-N\-T}}
+\index{P\-R\-I\-N\-T@{P\-R\-I\-N\-T}!main.c@{main.\-c}}
+\subsubsection[{P\-R\-I\-N\-T}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\-R\-I\-N\-T~print}}\label{main_8c_a8b43bafee90b30676faae508c21cb8d7}
+
+
+Definition at line 84 of file main.\-c.
+
+
+
+Referenced by read\-\_\-map().
+
+\hypertarget{main_8c_a906afbfd1ce81a146b72d1ce928e7abb}{\index{main.\-c@{main.\-c}!P\-R\-O\-G\-R\-A\-M@{P\-R\-O\-G\-R\-A\-M}}
+\index{P\-R\-O\-G\-R\-A\-M@{P\-R\-O\-G\-R\-A\-M}!main.c@{main.\-c}}
+\subsubsection[{P\-R\-O\-G\-R\-A\-M}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\-R\-O\-G\-R\-A\-M~\char`\"{}boussinesq\char`\"{}}}\label{main_8c_a906afbfd1ce81a146b72d1ce928e7abb}
+
+
+Definition at line 108 of file main.\-c.
+
+
+
+Referenced by main().
+
+\hypertarget{main_8c_afab38157ff897320fa50b40c9ea6eedf}{\index{main.\-c@{main.\-c}!R\-E\-S\-U\-L\-T\-S\-\_\-\-F\-I\-L\-E\-S@{R\-E\-S\-U\-L\-T\-S\-\_\-\-F\-I\-L\-E\-S}}
+\index{R\-E\-S\-U\-L\-T\-S\-\_\-\-F\-I\-L\-E\-S@{R\-E\-S\-U\-L\-T\-S\-\_\-\-F\-I\-L\-E\-S}!main.c@{main.\-c}}
+\subsubsection[{R\-E\-S\-U\-L\-T\-S\-\_\-\-F\-I\-L\-E\-S}]{\setlength{\rightskip}{0pt plus 5cm}\#define R\-E\-S\-U\-L\-T\-S\-\_\-\-F\-I\-L\-E\-S~\char`\"{}-\/results-\/rasters\char`\"{}}}\label{main_8c_afab38157ff897320fa50b40c9ea6eedf}
+
+
+Definition at line 113 of file main.\-c.
+
+\hypertarget{main_8c_acd8540907d350bf1f00fb940f8e3aa46}{\index{main.\-c@{main.\-c}!R\-F\-A\-C\-T\-O\-R@{R\-F\-A\-C\-T\-O\-R}}
+\index{R\-F\-A\-C\-T\-O\-R@{R\-F\-A\-C\-T\-O\-R}!main.c@{main.\-c}}
+\subsubsection[{R\-F\-A\-C\-T\-O\-R}]{\setlength{\rightskip}{0pt plus 5cm}\#define R\-F\-A\-C\-T\-O\-R~{\bf param}-\/$>$max\-\_\-error}}\label{main_8c_acd8540907d350bf1f00fb940f8e3aa46}
+
+
+Definition at line 117 of file main.\-c.
+
+\hypertarget{main_8c_a51f2d723367d0cf105f4ac7e22bf06a3}{\index{main.\-c@{main.\-c}!V\-E\-R\-B\-O\-S\-E\-\_\-\-M@{V\-E\-R\-B\-O\-S\-E\-\_\-\-M}}
+\index{V\-E\-R\-B\-O\-S\-E\-\_\-\-M@{V\-E\-R\-B\-O\-S\-E\-\_\-\-M}!main.c@{main.\-c}}
+\subsubsection[{V\-E\-R\-B\-O\-S\-E\-\_\-\-M}]{\setlength{\rightskip}{0pt plus 5cm}\#define V\-E\-R\-B\-O\-S\-E\-\_\-\-M~\char`\"{}-\/verbose\char`\"{}}}\label{main_8c_a51f2d723367d0cf105f4ac7e22bf06a3}
+
+
+Definition at line 86 of file main.\-c.
+
+
+
+Referenced by main().
+
+\hypertarget{main_8c_aaed390e3ad40887f7ca1c2712895e5d0}{\index{main.\-c@{main.\-c}!W\-P\-A\-T\-H@{W\-P\-A\-T\-H}}
+\index{W\-P\-A\-T\-H@{W\-P\-A\-T\-H}!main.c@{main.\-c}}
+\subsubsection[{W\-P\-A\-T\-H}]{\setlength{\rightskip}{0pt plus 5cm}\#define W\-P\-A\-T\-H~\char`\"{}-\/wpath\char`\"{}}}\label{main_8c_aaed390e3ad40887f7ca1c2712895e5d0}
+
+
+Definition at line 91 of file main.\-c.
+
+
+
+Referenced by main().
+
+\hypertarget{main_8c_a9bb961bbd83bfc1f55fe6273c18ccb25}{\index{main.\-c@{main.\-c}!W\-R\-I\-T\-E\-\_\-\-G\-R\-I\-D@{W\-R\-I\-T\-E\-\_\-\-G\-R\-I\-D}}
+\index{W\-R\-I\-T\-E\-\_\-\-G\-R\-I\-D@{W\-R\-I\-T\-E\-\_\-\-G\-R\-I\-D}!main.c@{main.\-c}}
+\subsubsection[{W\-R\-I\-T\-E\-\_\-\-G\-R\-I\-D}]{\setlength{\rightskip}{0pt plus 5cm}\#define W\-R\-I\-T\-E\-\_\-\-G\-R\-I\-D~\char`\"{}-\/writes\-\_\-the\-\_\-grid\char`\"{}}}\label{main_8c_a9bb961bbd83bfc1f55fe6273c18ccb25}
+
+
+Definition at line 88 of file main.\-c.
+
+
+
+Referenced by main().
+
+
+
+\subsection{Function Documentation}
+\hypertarget{main_8c_a0ddf1224851353fc92bfbff6f499fa97}{\index{main.\-c@{main.\-c}!main@{main}}
+\index{main@{main}!main.c@{main.\-c}}
+\subsubsection[{main}]{\setlength{\rightskip}{0pt plus 5cm}int main (
+\begin{DoxyParamCaption}
+\item[{int}]{argc, }
+\item[{char $\ast$}]{argv\mbox{[}$\,$\mbox{]}}
+\end{DoxyParamCaption}
+)}}\label{main_8c_a0ddf1224851353fc92bfbff6f499fa97}
+\begin{DoxyAuthor}{Author}
+Emanuele Cordano 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+April 2009
+\end{DoxyDate}
+coefficient F1 for surface flow as reported in Casulli,2008 
+
+Definition at line 153 of file main.\-c.
+
+
+
+References A\-\_\-\-F\-L\-A\-G, F\-L\-A\-G\-::arithmetic\-\_\-mean0, A\-R\-I\-T\-H\-M\-E\-T\-I\-C\-\_\-\-M\-E\-A\-N0, D\-O\-U\-B\-L\-E\-S\-Q\-U\-A\-R\-E\-\_\-\-G\-R\-I\-D\-::big, bubble\-\_\-sort\-\_\-elevation\-\_\-in\-\_\-longbin(), D\-O\-U\-B\-L\-E\-R\-A\-S\-T\-E\-R\-\_\-\-M\-A\-P\-::coarse, C\-R\-E\-A\-T\-E\-\_\-\-G\-R\-I\-D, doublemap\-\_\-from\-\_\-longmap(), D\-T\-M\-\_\-\-M\-A\-S\-K, D\-O\-U\-B\-L\-E\-\_\-\-G\-R\-I\-D\-::fine, D\-O\-U\-B\-L\-E\-S\-Q\-U\-A\-R\-E\-\_\-\-G\-R\-I\-D\-::fine, D\-O\-U\-B\-L\-E\-R\-A\-S\-T\-E\-R\-\_\-\-M\-A\-P\-::fine, F\-L\-O\-A\-T\-\_\-\-T\-Y\-P\-E, free\-\_\-\-D\-O\-U\-B\-L\-E\-\_\-\-G\-R\-I\-D(), free\-\_\-doubleraster\-\_\-map(), free\-\_\-doublesquare\-\_\-grid(), free\-\_\-doublevector(), free\-\_\-stringbin(), get\-\_\-doubleraster\-\_\-map(), get\-\_\-doublesquare\-\_\-grid(), get\-\_\-filenames\-\_\-from\-\_\-keys(), S\-Q\-U\-A\-R\-E\-\_\-\-G\-R\-I\-D\-::grid, H\-\_\-\-M\-A\-S\-K, I\-\_\-\-I\-N\-I\-T\-C\-O\-N\-D\-\_\-\-W\-A\-T\-E\-R\-D\-E\-P\-T\-H, I\-\_\-\-I\-N\-I\-T\-C\-O\-N\-D\-\_\-\-W\-A\-T\-E\-R\-S\-U\-R\-F\-A\-C\-E\-\_\-\-E\-L\-E\-V\-A\-T\-I\-O\-N, I\-\_\-\-I\-N\-I\-T\-I\-A\-L\-\_\-\-V\-E\-L\-O\-C\-I\-T\-Y\-\_\-\-F\-T\-\_\-\-A\-R\-R\-A\-Y, I\-\_\-\-M\-O\-R\-P\-H\-O\-\_\-\-E\-L\-E\-V\-A\-T\-I\-O\-N\-\_\-\-C\-O\-A\-R\-S\-E, I\-\_\-\-M\-O\-R\-P\-H\-O\-\_\-\-E\-L\-E\-V\-A\-T\-I\-O\-N\-\_\-\-F\-I\-N\-E, I\-\_\-\-M\-O\-R\-P\-H\-O\-\_\-\-E\-L\-E\-V\-A\-T\-I\-O\-N\-\_\-\-T\-E\-R\-R\-A\-I\-N\-S\-U\-R\-F\-A\-C\-E\-\_\-\-F\-I\-N\-E, I\-\_\-\-O\-U\-T\-L\-E\-T\-\_\-\-C\-O\-E\-F\-F\-I\-C\-I\-E\-N\-T\-\_\-\-F\-I\-N\-E, I\-\_\-\-O\-U\-T\-L\-E\-T\-\_\-\-C\-O\-E\-F\-F\-I\-C\-I\-E\-N\-T\-\_\-\-S\-U\-R\-F\-\_\-\-F\-I\-N\-E, I\-\_\-\-P\-A\-R\-A\-M\-\_\-\-F\-T\-\_\-\-F\-I\-L\-E, I\-\_\-\-P\-O\-R\-O\-S\-I\-T\-Y\-\_\-\-F\-I\-N\-E, I\-\_\-\-R\-U\-N\-O\-F\-F\-\_\-\-C\-O\-E\-F\-F\-I\-C\-I\-E\-N\-T\-\_\-\-C\-O\-A\-R\-S\-E, index\-\_\-pixel\-\_\-from\-\_\-a\-\_\-bin(), S\-Q\-U\-A\-R\-E\-\_\-\-G\-R\-I\-D\-::indices\-\_\-horizontal\-\_\-lines, S\-Q\-U\-A\-R\-E\-\_\-\-G\-R\-I\-D\-::indices\-\_\-pixel, S\-Q\-U\-A\-R\-E\-\_\-\-G\-R\-I\-D\-::indices\-\_\-vertical\-\_\-lines, interpolete\-\_\-volume2lines(), R\-A\-S\-T\-E\-R\-\_\-\-M\-A\-P\-::layer, G\-R\-I\-D\-::lines, M\-A\-P\-\_\-\-F\-O\-R\-M\-A\-T, min\-\_\-elevation(), N\-\_\-\-M\-A\-P\-S, D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X\-::nch, new\-\_\-double\-\_\-grid\-\_\-from\-\_\-doublesquare\-\_\-grid(), new\-\_\-doublevector(), L\-I\-N\-E\-V\-E\-C\-T\-O\-R\-::nh, P\-O\-L\-Y\-G\-O\-N\-V\-E\-C\-T\-O\-R\-::nh, D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R\-::nh, S\-Q\-U\-A\-R\-E\-\_\-\-G\-R\-I\-D\-::nhorizontal\-\_\-lines, D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R\-::nl, S\-Q\-U\-A\-R\-E\-\_\-\-G\-R\-I\-D\-::novalue, N\-O\-W\-P\-A\-T\-H, O\-\_\-\-C\-O\-A\-R\-S\-E\-M\-A\-P\-\_\-\-I\-N\-D\-E\-X\-\_\-\-C\-E\-L\-L\-S, O\-\_\-\-C\-O\-A\-R\-S\-E\-M\-A\-P\-\_\-\-I\-N\-D\-E\-X\-\_\-\-L\-I\-N\-E\-S, O\-\_\-\-F\-I\-N\-E\-M\-A\-P\-\_\-\-I\-N\-D\-E\-X\-\_\-\-C\-E\-L\-L\-S, O\-\_\-\-F\-I\-N\-E\-M\-A\-P\-\_\-\-I\-N\-D\-E\-X\-\_\-\-L\-I\-N\-E\-S, O\-\_\-\-R\-E\-S\-U\-M\-E\-\_\-\-F\-I\-L\-E\-S, G\-R\-I\-D\-::polygons, P\-R\-O\-G\-R\-A\-M, read\-\_\-b\-\_\-parameters\-\_\-ft(), read\-\_\-doublevector\-\_\-from\-\_\-a\-\_\-ft\-\_\-format\-\_\-single\-\_\-file(), read\-\_\-doublevector\-\_\-from\-\_\-raster(), read\-\_\-flag(), read\-\_\-option\-\_\-string(), D\-O\-U\-B\-L\-E\-\_\-\-G\-R\-I\-D\-::small\-\_\-line\-\_\-content, D\-O\-U\-B\-L\-E\-\_\-\-G\-R\-I\-D\-::small\-\_\-polygon\-\_\-content, t\-\_\-error(), time\-\_\-loop(), R\-A\-S\-T\-E\-R\-\_\-\-M\-A\-P\-::\-U\-V, T\-\_\-\-I\-N\-I\-T\-::\-V, V\-\_\-\-M\-A\-S\-K, V\-E\-R\-B\-O\-S\-E\-\_\-\-M, wpath, W\-P\-A\-T\-H, write\-\_\-cell(), write\-\_\-doublesquare\-\_\-grid(), W\-R\-I\-T\-E\-\_\-\-G\-R\-I\-D, write\-\_\-lines(), and write\-\_\-map\-\_\-results().
+
+\hypertarget{main_8c_ac90e3da613f731536e2945dc1b296c31}{\index{main.\-c@{main.\-c}!read\-\_\-b\-\_\-parameters\-\_\-ft@{read\-\_\-b\-\_\-parameters\-\_\-ft}}
+\index{read\-\_\-b\-\_\-parameters\-\_\-ft@{read\-\_\-b\-\_\-parameters\-\_\-ft}!main.c@{main.\-c}}
+\subsubsection[{read\-\_\-b\-\_\-parameters\-\_\-ft}]{\setlength{\rightskip}{0pt plus 5cm}int read\-\_\-b\-\_\-parameters\-\_\-ft (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{filename\-\_\-data, }
+\item[{short}]{print}
+\end{DoxyParamCaption}
+)}}\label{main_8c_ac90e3da613f731536e2945dc1b296c31}
+\begin{DoxyAuthor}{Author}
+Emanuele Cordano 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+21 April 2009
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & (char$\ast$) -\/ \\
+\hline
+{\em print} & short integer\\
+\hline
+\end{DoxyParams}
+read the scalar data from a suitable ascii files writen in a Fluidturtle Formalism
+
+block 1 -\/ S\-C\-A\-L\-A\-R D\-A\-T\-A 
+
+Definition at line 396 of file main.\-c.
+
+
+
+References P\-A\-R\-A\-M\-::deta, P\-A\-R\-A\-M\-::dt, P\-A\-R\-A\-M\-::dt\-\_\-print, P\-A\-R\-A\-M\-::exp\-\_\-dirichlet, free\-\_\-doublevector(), get\-\_\-value\-\_\-from\-\_\-doublevector(), P\-A\-R\-A\-M\-::gravity, P\-A\-R\-A\-M\-::\-Ks, P\-A\-R\-A\-M\-::max\-\_\-errors, D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R\-::nh, P\-A\-R\-A\-M\-::null\-\_\-dirichlet, P\-A\-R\-A\-M\-::p\-\_\-outlet, P\-A\-R\-A\-M\-::p\-\_\-outlet\-\_\-surf, P\-A\-R\-A\-M\-::p\-\_\-runoff, read\-\_\-doublearray(), read\-\_\-index(), P\-A\-R\-A\-M\-::t, P\-A\-R\-A\-M\-::t\-\_\-end, t\-\_\-error(), t\-\_\-fclose(), t\-\_\-fopen(), P\-A\-R\-A\-M\-::t\-\_\-start, and P\-A\-R\-A\-M\-::x\-\_\-temp\-\_\-adm.
+
+
+
+Referenced by main().
+
+
+
+\subsection{Variable Documentation}
+\hypertarget{main_8c_ab58c424a59f28ac6b17e7b7f5aae6152}{\index{main.\-c@{main.\-c}!dgrid@{dgrid}}
+\index{dgrid@{dgrid}!main.c@{main.\-c}}
+\subsubsection[{dgrid}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\-O\-U\-B\-L\-E\-\_\-\-G\-R\-I\-D}$\ast$ dgrid}}\label{main_8c_ab58c424a59f28ac6b17e7b7f5aae6152}
+
+
+Definition at line 126 of file main.\-c.
+
+
+
+Referenced by new\-\_\-double\-\_\-grid\-\_\-from\-\_\-doublesquare\-\_\-grid().
+
+\hypertarget{main_8c_a44d81a9ca5648f4ec1c298c7f37fefff}{\index{main.\-c@{main.\-c}!draster@{draster}}
+\index{draster@{draster}!main.c@{main.\-c}}
+\subsubsection[{draster}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\-O\-U\-B\-L\-E\-R\-A\-S\-T\-E\-R\-\_\-\-M\-A\-P}$\ast$ draster}}\label{main_8c_a44d81a9ca5648f4ec1c298c7f37fefff}
+
+
+Definition at line 128 of file main.\-c.
+
+
+
+Referenced by get\-\_\-doubleraster\-\_\-map().
+
+\hypertarget{main_8c_a9b5f80541820877b6d4a8841650da32a}{\index{main.\-c@{main.\-c}!dsq@{dsq}}
+\index{dsq@{dsq}!main.c@{main.\-c}}
+\subsubsection[{dsq}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\-O\-U\-B\-L\-E\-S\-Q\-U\-A\-R\-E\-\_\-\-G\-R\-I\-D}$\ast$ dsq}}\label{main_8c_a9b5f80541820877b6d4a8841650da32a}
+
+
+Definition at line 125 of file main.\-c.
+
+
+
+Referenced by get\-\_\-doublesquare\-\_\-grid(), and read\-\_\-doublesquare\-\_\-grid().
+
+\hypertarget{main_8c_a4cd3286ed17aff6164594f8a2d59f898}{\index{main.\-c@{main.\-c}!elevation\-\_\-bottom\-\_\-bottom@{elevation\-\_\-bottom\-\_\-bottom}}
+\index{elevation\-\_\-bottom\-\_\-bottom@{elevation\-\_\-bottom\-\_\-bottom}!main.c@{main.\-c}}
+\subsubsection[{elevation\-\_\-bottom\-\_\-bottom}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R}$\ast$ elevation\-\_\-bottom\-\_\-bottom}}\label{main_8c_a4cd3286ed17aff6164594f8a2d59f898}
+map of the bottom elevation defined in the lines of the fine grid 
+
+Definition at line 134 of file main.\-c.
+
+\hypertarget{main_8c_a93f8bd854f98f2abe47c108484cf1c6b}{\index{main.\-c@{main.\-c}!elevation\-\_\-bottom\-\_\-coarse@{elevation\-\_\-bottom\-\_\-coarse}}
+\index{elevation\-\_\-bottom\-\_\-coarse@{elevation\-\_\-bottom\-\_\-coarse}!main.c@{main.\-c}}
+\subsubsection[{elevation\-\_\-bottom\-\_\-coarse}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R}$\ast$ elevation\-\_\-bottom\-\_\-coarse}}\label{main_8c_a93f8bd854f98f2abe47c108484cf1c6b}
+map of the bottom elevation (fine grid) 
+
+Definition at line 132 of file main.\-c.
+
+\hypertarget{main_8c_a48a2ac079f3ec064d28848bcdc54ed7c}{\index{main.\-c@{main.\-c}!elevation\-\_\-bottom\-\_\-fine@{elevation\-\_\-bottom\-\_\-fine}}
+\index{elevation\-\_\-bottom\-\_\-fine@{elevation\-\_\-bottom\-\_\-fine}!main.c@{main.\-c}}
+\subsubsection[{elevation\-\_\-bottom\-\_\-fine}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R}$\ast$ elevation\-\_\-bottom\-\_\-fine}}\label{main_8c_a48a2ac079f3ec064d28848bcdc54ed7c}
+
+
+Definition at line 131 of file main.\-c.
+
+\hypertarget{main_8c_a495ebb69c21b8816ee4f7dfe0e1e6d98}{\index{main.\-c@{main.\-c}!elevation\-\_\-bottom\-\_\-flines@{elevation\-\_\-bottom\-\_\-flines}}
+\index{elevation\-\_\-bottom\-\_\-flines@{elevation\-\_\-bottom\-\_\-flines}!main.c@{main.\-c}}
+\subsubsection[{elevation\-\_\-bottom\-\_\-flines}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R}$\ast$ elevation\-\_\-bottom\-\_\-flines}}\label{main_8c_a495ebb69c21b8816ee4f7dfe0e1e6d98}
+map of the bottom elevation (coarse grid) 
+
+Definition at line 133 of file main.\-c.
+
+\hypertarget{main_8c_a2f1a3b2841c6ed8ff4461dabf9a4b03c}{\index{main.\-c@{main.\-c}!elevation\-\_\-terrain\-\_\-fine@{elevation\-\_\-terrain\-\_\-fine}}
+\index{elevation\-\_\-terrain\-\_\-fine@{elevation\-\_\-terrain\-\_\-fine}!main.c@{main.\-c}}
+\subsubsection[{elevation\-\_\-terrain\-\_\-fine}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R}$\ast$ elevation\-\_\-terrain\-\_\-fine}}\label{main_8c_a2f1a3b2841c6ed8ff4461dabf9a4b03c}
+map of the elvetion of the bottom of he coarse cells 
+
+Definition at line 135 of file main.\-c.
+
+\hypertarget{main_8c_a3328ead9d7ff307ac4b6847cd4a1205b}{\index{main.\-c@{main.\-c}!elevation\-\_\-terrain\-\_\-flines@{elevation\-\_\-terrain\-\_\-flines}}
+\index{elevation\-\_\-terrain\-\_\-flines@{elevation\-\_\-terrain\-\_\-flines}!main.c@{main.\-c}}
+\subsubsection[{elevation\-\_\-terrain\-\_\-flines}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R}$\ast$ elevation\-\_\-terrain\-\_\-flines}}\label{main_8c_a3328ead9d7ff307ac4b6847cd4a1205b}
+map of the surface terrain elevation (fine grid) 
+
+Definition at line 136 of file main.\-c.
+
+\hypertarget{main_8c_ad2a1214f97f2ea07f385b7c6ce403096}{\index{main.\-c@{main.\-c}!F1\-\_\-wet\-\_\-vert\-\_\-area@{F1\-\_\-wet\-\_\-vert\-\_\-area}}
+\index{F1\-\_\-wet\-\_\-vert\-\_\-area@{F1\-\_\-wet\-\_\-vert\-\_\-area}!main.c@{main.\-c}}
+\subsubsection[{F1\-\_\-wet\-\_\-vert\-\_\-area}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R}$\ast$ F1\-\_\-wet\-\_\-vert\-\_\-area}}\label{main_8c_ad2a1214f97f2ea07f385b7c6ce403096}
+map of the (wet area) surface velocity defined in the lines (velocity is positive when going kp1 to kp2 polygons with kp1$>$kp2 ) 
+
+Definition at line 147 of file main.\-c.
+
+\hypertarget{main_8c_a528421ce34267070764970b021f6034a}{\index{main.\-c@{main.\-c}!filenames@{filenames}}
+\index{filenames@{filenames}!main.c@{main.\-c}}
+\subsubsection[{filenames}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\-T\-R\-I\-N\-G\-B\-I\-N}$\ast$ filenames}}\label{main_8c_a528421ce34267070764970b021f6034a}
+
+
+Definition at line 124 of file main.\-c.
+
+\hypertarget{main_8c_af669d66807986c96b4927566ae5e8b45}{\index{main.\-c@{main.\-c}!flag@{flag}}
+\index{flag@{flag}!main.c@{main.\-c}}
+\subsubsection[{flag}]{\setlength{\rightskip}{0pt plus 5cm}{\bf F\-L\-A\-G}$\ast$ flag}}\label{main_8c_af669d66807986c96b4927566ae5e8b45}
+
+
+Definition at line 149 of file main.\-c.
+
+\hypertarget{main_8c_a8d58cb68a19f9ec3d36dcf606ce6ab8e}{\index{main.\-c@{main.\-c}!outlet\-\_\-coefficient@{outlet\-\_\-coefficient}}
+\index{outlet\-\_\-coefficient@{outlet\-\_\-coefficient}!main.c@{main.\-c}}
+\subsubsection[{outlet\-\_\-coefficient}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R}$\ast$ outlet\-\_\-coefficient}}\label{main_8c_a8d58cb68a19f9ec3d36dcf606ce6ab8e}
+map of porosity defined on the pixels of the fine grid 
+
+Definition at line 138 of file main.\-c.
+
+\hypertarget{main_8c_a54f93693853ec24ff2fe2dcc95d77e2c}{\index{main.\-c@{main.\-c}!outlet\-\_\-coefficient\-\_\-surf@{outlet\-\_\-coefficient\-\_\-surf}}
+\index{outlet\-\_\-coefficient\-\_\-surf@{outlet\-\_\-coefficient\-\_\-surf}!main.c@{main.\-c}}
+\subsubsection[{outlet\-\_\-coefficient\-\_\-surf}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R}$\ast$ outlet\-\_\-coefficient\-\_\-surf}}\label{main_8c_a54f93693853ec24ff2fe2dcc95d77e2c}
+map of the coefficient of the rating curve in the outlet (surface flow) q\-\_\-discharge=C$\ast$h\-\_\-sup$^\wedge$m 
+
+Definition at line 139 of file main.\-c.
+
+\hypertarget{main_8c_aba66333c1b6167838030abf91e54ce8e}{\index{main.\-c@{main.\-c}!outlet\-\_\-coefficient\-\_\-surf\-\_\-v\-\_\-fine@{outlet\-\_\-coefficient\-\_\-surf\-\_\-v\-\_\-fine}}
+\index{outlet\-\_\-coefficient\-\_\-surf\-\_\-v\-\_\-fine@{outlet\-\_\-coefficient\-\_\-surf\-\_\-v\-\_\-fine}!main.c@{main.\-c}}
+\subsubsection[{outlet\-\_\-coefficient\-\_\-surf\-\_\-v\-\_\-fine}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} $\ast$ outlet\-\_\-coefficient\-\_\-surf\-\_\-v\-\_\-fine}}\label{main_8c_aba66333c1b6167838030abf91e54ce8e}
+map of the coefficient of the rating curve in the outlet (surface flow) q\-\_\-discharge=C$\ast$h\-\_\-sup$^\wedge$m 
+
+Definition at line 139 of file main.\-c.
+
+\hypertarget{main_8c_ae05985d75f7509463ec3e573aa75da58}{\index{main.\-c@{main.\-c}!outlet\-\_\-coefficient\-\_\-v\-\_\-fine@{outlet\-\_\-coefficient\-\_\-v\-\_\-fine}}
+\index{outlet\-\_\-coefficient\-\_\-v\-\_\-fine@{outlet\-\_\-coefficient\-\_\-v\-\_\-fine}!main.c@{main.\-c}}
+\subsubsection[{outlet\-\_\-coefficient\-\_\-v\-\_\-fine}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} $\ast$ outlet\-\_\-coefficient\-\_\-v\-\_\-fine}}\label{main_8c_ae05985d75f7509463ec3e573aa75da58}
+map of the coefficient of the rating curve in the outlet (subsurface/groundwater flow) q\-\_\-discharge=C$\ast$h\-\_\-sup$^\wedge$m 
+
+Definition at line 138 of file main.\-c.
+
+\hypertarget{main_8c_ad8ac9ce29f12815d417a57b2c0dc31fb}{\index{main.\-c@{main.\-c}!param@{param}}
+\index{param@{param}!main.c@{main.\-c}}
+\subsubsection[{param}]{\setlength{\rightskip}{0pt plus 5cm}{\bf P\-A\-R\-A\-M}$\ast$ param}}\label{main_8c_ad8ac9ce29f12815d417a57b2c0dc31fb}
+coefficient F1 for surface flow as reported in Casulli,2008 
+
+Definition at line 148 of file main.\-c.
+
+\hypertarget{main_8c_acd5b5637e9d24f6f2641e08ed439b8b8}{\index{main.\-c@{main.\-c}!porosity\-\_\-fine@{porosity\-\_\-fine}}
+\index{porosity\-\_\-fine@{porosity\-\_\-fine}!main.c@{main.\-c}}
+\subsubsection[{porosity\-\_\-fine}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R}$\ast$ porosity\-\_\-fine}}\label{main_8c_acd5b5637e9d24f6f2641e08ed439b8b8}
+map of the surface terrain elevation (fine grid lines) 
+
+Definition at line 137 of file main.\-c.
+
+\hypertarget{main_8c_afe877173190ce3813da775395bdf08bd}{\index{main.\-c@{main.\-c}!runoff\-\_\-coefficient@{runoff\-\_\-coefficient}}
+\index{runoff\-\_\-coefficient@{runoff\-\_\-coefficient}!main.c@{main.\-c}}
+\subsubsection[{runoff\-\_\-coefficient}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R}$\ast$ runoff\-\_\-coefficient}}\label{main_8c_afe877173190ce3813da775395bdf08bd}
+map of porosity defined on the pixels of the fine grid map of the coefficient of the dissipation runoff coefficient C$\ast$(velocity)$^\wedge$p , 
+
+Definition at line 140 of file main.\-c.
+
+\hypertarget{main_8c_aa5dbd28ae3ab0ccc24eb51981b37f696}{\index{main.\-c@{main.\-c}!runoff\-\_\-coefficient\-\_\-v\-\_\-coarse@{runoff\-\_\-coefficient\-\_\-v\-\_\-coarse}}
+\index{runoff\-\_\-coefficient\-\_\-v\-\_\-coarse@{runoff\-\_\-coefficient\-\_\-v\-\_\-coarse}!main.c@{main.\-c}}
+\subsubsection[{runoff\-\_\-coefficient\-\_\-v\-\_\-coarse}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} $\ast$ runoff\-\_\-coefficient\-\_\-v\-\_\-coarse}}\label{main_8c_aa5dbd28ae3ab0ccc24eb51981b37f696}
+map of the coefficient of the dissipation runoff coefficient C$\ast$(velocity)$^\wedge$p , 
+
+Definition at line 140 of file main.\-c.
+
+\hypertarget{main_8c_ac2670c558f0154ba997b23d6d8184b6b}{\index{main.\-c@{main.\-c}!surface\-\_\-water\-\_\-velocity@{surface\-\_\-water\-\_\-velocity}}
+\index{surface\-\_\-water\-\_\-velocity@{surface\-\_\-water\-\_\-velocity}!main.c@{main.\-c}}
+\subsubsection[{surface\-\_\-water\-\_\-velocity}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R}$\ast$ surface\-\_\-water\-\_\-velocity}}\label{main_8c_ac2670c558f0154ba997b23d6d8184b6b}
+map of instantaneous water mass error 
+
+Definition at line 146 of file main.\-c.
+
+\hypertarget{main_8c_ace3cfe323c8bb9508ed135a5e3be0f8c}{\index{main.\-c@{main.\-c}!water\-\_\-depth@{water\-\_\-depth}}
+\index{water\-\_\-depth@{water\-\_\-depth}!main.c@{main.\-c}}
+\subsubsection[{water\-\_\-depth}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R}$\ast$ water\-\_\-depth}}\label{main_8c_ace3cfe323c8bb9508ed135a5e3be0f8c}
+map of instantaneous water mass error 
+
+Definition at line 144 of file main.\-c.
+
+\hypertarget{main_8c_a97eff843a1a4985b0746ef826cc27822}{\index{main.\-c@{main.\-c}!water\-\_\-mass\-\_\-error@{water\-\_\-mass\-\_\-error}}
+\index{water\-\_\-mass\-\_\-error@{water\-\_\-mass\-\_\-error}!main.c@{main.\-c}}
+\subsubsection[{water\-\_\-mass\-\_\-error}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R}$\ast$ water\-\_\-mass\-\_\-error}}\label{main_8c_a97eff843a1a4985b0746ef826cc27822}
+map of instantaneous water surface on the pixels of the coarse grid 
+
+Definition at line 143 of file main.\-c.
+
+\hypertarget{main_8c_a3ace2c97e74d7e8aad3670b479cb606d}{\index{main.\-c@{main.\-c}!water\-\_\-surface\-\_\-elevation@{water\-\_\-surface\-\_\-elevation}}
+\index{water\-\_\-surface\-\_\-elevation@{water\-\_\-surface\-\_\-elevation}!main.c@{main.\-c}}
+\subsubsection[{water\-\_\-surface\-\_\-elevation}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R}$\ast$ water\-\_\-surface\-\_\-elevation}}\label{main_8c_a3ace2c97e74d7e8aad3670b479cb606d}
+
+
+extern \hyperlink{struct_d_o_u_b_l_e_v_e_c_t_o_r}{D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} {\itshape runoff\-\_\-coefficient; /}!$<$map of the coefficient of the rating curve in the outlet q\-\_\-discharge=C$\ast$h\-\_\-sup$^\wedge$m $\ast$/ 
+
+map of porosity defined on the pixels of the fine grid 
+
+Definition at line 142 of file main.\-c.
+
+\hypertarget{main_8c_aa018d0410be770cac4c05bac5dea04f2}{\index{main.\-c@{main.\-c}!wpath@{wpath}}
+\index{wpath@{wpath}!main.c@{main.\-c}}
+\subsubsection[{wpath}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ wpath}}\label{main_8c_aa018d0410be770cac4c05bac5dea04f2}
+
+
+Definition at line 151 of file main.\-c.
+
+
+
+Referenced by main(), and Newton\-\_\-convergence().
+

@@ -1,0 +1,450 @@
+\hypertarget{geometry__io_8c}{\section{B\-G\-E\-O\-M\-E\-T\-R\-Y/geometry\-\_\-io.c File Reference}
+\label{geometry__io_8c}\index{B\-G\-E\-O\-M\-E\-T\-R\-Y/geometry\-\_\-io.\-c@{B\-G\-E\-O\-M\-E\-T\-R\-Y/geometry\-\_\-io.\-c}}
+}
+{\ttfamily \#include \char`\"{}turtle.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}geometry.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}additional\-\_\-read\-\_\-functions.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}geometry\-\_\-utilities.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}geometry\-\_\-io.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}geometry\-\_\-freememory.\-h\char`\"{}}\\*
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{geometry__io_8c_ad740dfc826a6f447cf2c273f0fdfe74a}{D\-E\-L\-I\-M\-I\-T\-E\-R\-S}~\char`\"{};\char`\"{}
+\item 
+\#define \hyperlink{geometry__io_8c_a3b8cb7c2cda80c18f333c00601c6905b}{M\-A\-X\-\_\-\-P\-O\-I\-N\-T\-S}~20
+\item 
+\#define \hyperlink{geometry__io_8c_aff0fa3a7735ac0218d293d0ee2b8f12e}{N\-U\-L\-L\-\_\-\-V\-A\-L\-U\-E}~-\/99
+\item 
+\#define \hyperlink{geometry__io_8c_aae303ab80bd35d40bbf079442b1abea4}{N\-O\-\_\-\-E\-L\-E\-V\-A\-T\-I\-O\-N}~0.\-0
+\item 
+\#define \hyperlink{geometry__io_8c_a32f29ffdf2ec1b6b7d7281ebc4590436}{N\-O\-\_\-\-C\-O\-L\-S\-\_\-\-L\-I\-N\-E\-V\-E\-C\-T\-O\-R\-\_\-\-D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X}~8
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{struct_l_i_n_e}{L\-I\-N\-E} $\ast$ \hyperlink{geometry__io_8c_a94dd01b610a6cd29177c9699f0c34059}{get\-\_\-line} (\hyperlink{struct_d_o_u_b_l_e_v_e_c_t_o_r}{D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} $\ast$vertex\-\_\-x\-\_\-coord, \hyperlink{struct_d_o_u_b_l_e_v_e_c_t_o_r}{D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} $\ast$vertex\-\_\-y\-\_\-coord, long line\-\_\-index, char $\ast$number\-\_\-strings, short print)
+\item 
+\hyperlink{struct_l_i_n_e_v_e_c_t_o_r}{L\-I\-N\-E\-V\-E\-C\-T\-O\-R} $\ast$ \hyperlink{geometry__io_8c_a278c85176af69cbd525bdb129ada2630}{get\-\_\-linevector} (\hyperlink{struct_d_o_u_b_l_e_v_e_c_t_o_r}{D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} $\ast$vertex\-\_\-x\-\_\-coord, \hyperlink{struct_d_o_u_b_l_e_v_e_c_t_o_r}{D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} $\ast$vertex\-\_\-y\-\_\-coord, \hyperlink{turtle_8h_ade34e6dff3489a3ddd297f003f01bbd2}{S\-T\-R\-I\-N\-G\-B\-I\-N} $\ast$line\-\_\-strings, short print)
+\item 
+\hyperlink{struct_l_i_n_e_v_e_c_t_o_r}{L\-I\-N\-E\-V\-E\-C\-T\-O\-R} $\ast$ \hyperlink{geometry__io_8c_abd9f7191fc93e72c4dcb09b60b68f7e0}{extract\-\_\-linvector\-\_\-from\-\_\-linevector} (\hyperlink{struct_l_o_n_g_v_e_c_t_o_r}{L\-O\-N\-G\-V\-E\-C\-T\-O\-R} $\ast$nlines, \hyperlink{struct_l_i_n_e_v_e_c_t_o_r}{L\-I\-N\-E\-V\-E\-C\-T\-O\-R} $\ast$lines)
+\item 
+\hyperlink{struct_p_o_l_y_g_o_n}{P\-O\-L\-Y\-G\-O\-N} $\ast$ \hyperlink{geometry__io_8c_aa9b84509cc8b914d69755985c8ff6db0}{get\-\_\-polygon} (long index, double x, double y, double z, char $\ast$edge\-\_\-index\-\_\-string, \hyperlink{struct_l_i_n_e_v_e_c_t_o_r}{L\-I\-N\-E\-V\-E\-C\-T\-O\-R} $\ast$all\-\_\-lines, short print)
+\item 
+\hyperlink{struct_p_o_l_y_g_o_n_v_e_c_t_o_r}{P\-O\-L\-Y\-G\-O\-N\-V\-E\-C\-T\-O\-R} $\ast$ \hyperlink{geometry__io_8c_a5e71ac151690e8bc6772b1b6b5f2aad3}{get\-\_\-polygonvector} (\hyperlink{struct_d_o_u_b_l_e_v_e_c_t_o_r}{D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} $\ast$centroid\-\_\-x\-\_\-coord, \hyperlink{struct_d_o_u_b_l_e_v_e_c_t_o_r}{D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} $\ast$centroid\-\_\-y\-\_\-coord, \hyperlink{turtle_8h_ade34e6dff3489a3ddd297f003f01bbd2}{S\-T\-R\-I\-N\-G\-B\-I\-N} $\ast$polygon\-\_\-strings, \hyperlink{struct_l_i_n_e_v_e_c_t_o_r}{L\-I\-N\-E\-V\-E\-C\-T\-O\-R} $\ast$all\-\_\-lines, short print)
+\item 
+int \hyperlink{geometry__io_8c_a90857eaff8709a1b27ab54710120c711}{write\-\_\-linevector} (char $\ast$filename, \hyperlink{struct_l_i_n_e_v_e_c_t_o_r}{L\-I\-N\-E\-V\-E\-C\-T\-O\-R} $\ast$lines)
+\item 
+int \hyperlink{geometry__io_8c_a425b6392922ac111e0b26dd217e90675}{write\-\_\-polygonvector} (char $\ast$filename, \hyperlink{struct_p_o_l_y_g_o_n_v_e_c_t_o_r}{P\-O\-L\-Y\-G\-O\-N\-V\-E\-C\-T\-O\-R} $\ast$polygons)
+\item 
+int \hyperlink{geometry__io_8c_a3b6e90cfaeddcbbf03d9483e41f28c89}{fprint\-\_\-linevector} (char $\ast$filename, \hyperlink{struct_l_i_n_e_v_e_c_t_o_r}{L\-I\-N\-E\-V\-E\-C\-T\-O\-R} $\ast$lines)
+\item 
+int \hyperlink{geometry__io_8c_a2c978df6a6d75a62194f61f625001566}{fprint\-\_\-polygonvector} (char $\ast$filename, \hyperlink{struct_p_o_l_y_g_o_n_v_e_c_t_o_r}{P\-O\-L\-Y\-G\-O\-N\-V\-E\-C\-T\-O\-R} $\ast$polygons)
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{geometry__io_8c_ad740dfc826a6f447cf2c273f0fdfe74a}{\index{geometry\-\_\-io.\-c@{geometry\-\_\-io.\-c}!D\-E\-L\-I\-M\-I\-T\-E\-R\-S@{D\-E\-L\-I\-M\-I\-T\-E\-R\-S}}
+\index{D\-E\-L\-I\-M\-I\-T\-E\-R\-S@{D\-E\-L\-I\-M\-I\-T\-E\-R\-S}!geometry_io.c@{geometry\-\_\-io.\-c}}
+\subsubsection[{D\-E\-L\-I\-M\-I\-T\-E\-R\-S}]{\setlength{\rightskip}{0pt plus 5cm}\#define D\-E\-L\-I\-M\-I\-T\-E\-R\-S~\char`\"{};\char`\"{}}}\label{geometry__io_8c_ad740dfc826a6f447cf2c273f0fdfe74a}
+\begin{DoxyVerb}BGEOMETRY BUILDS THE MESH FROM A RASTER FOR THE BOUSSINESQ MODEL
+\end{DoxyVerb}
+ Key\-Palette Version 0.\-9375 K\-Mackenzie
+
+file \hyperlink{geometry__io_8c}{geometry\-\_\-io.\-c}
+
+Copyright, 2009 Emanuele Cordano and Riccardo Rigon
+
+This file is part of B\-G\-E\-O\-M\-E\-T\-R\-Y. B\-G\-E\-O\-M\-E\-T\-R\-Y is free software\-: you can redistribute it and/or modify it under the terms of the G\-N\-U General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
+
+B\-G\-E\-O\-M\-E\-T\-R\-Y is distributed in the hope that it will be useful, but W\-I\-T\-H\-O\-U\-T A\-N\-Y W\-A\-R\-R\-A\-N\-T\-Y; without even the implied warranty of M\-E\-R\-C\-H\-A\-N\-T\-A\-B\-I\-L\-I\-T\-Y or F\-I\-T\-N\-E\-S\-S F\-O\-R A P\-A\-R\-T\-I\-C\-U\-L\-A\-R P\-U\-R\-P\-O\-S\-E. See the G\-N\-U General Public License for more details.
+
+You should have received a copy of the G\-N\-U General Public License along with this program. If not, see \href{http://www.gnu.org/licenses/}{\tt http\-://www.\-gnu.\-org/licenses/}. 
+
+Definition at line 32 of file geometry\-\_\-io.\-c.
+
+
+
+Referenced by get\-\_\-line(), and get\-\_\-polygon().
+
+\hypertarget{geometry__io_8c_a3b8cb7c2cda80c18f333c00601c6905b}{\index{geometry\-\_\-io.\-c@{geometry\-\_\-io.\-c}!M\-A\-X\-\_\-\-P\-O\-I\-N\-T\-S@{M\-A\-X\-\_\-\-P\-O\-I\-N\-T\-S}}
+\index{M\-A\-X\-\_\-\-P\-O\-I\-N\-T\-S@{M\-A\-X\-\_\-\-P\-O\-I\-N\-T\-S}!geometry_io.c@{geometry\-\_\-io.\-c}}
+\subsubsection[{M\-A\-X\-\_\-\-P\-O\-I\-N\-T\-S}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\-A\-X\-\_\-\-P\-O\-I\-N\-T\-S~20}}\label{geometry__io_8c_a3b8cb7c2cda80c18f333c00601c6905b}
+
+
+Definition at line 33 of file geometry\-\_\-io.\-c.
+
+
+
+Referenced by get\-\_\-line(), and get\-\_\-polygon().
+
+\hypertarget{geometry__io_8c_a32f29ffdf2ec1b6b7d7281ebc4590436}{\index{geometry\-\_\-io.\-c@{geometry\-\_\-io.\-c}!N\-O\-\_\-\-C\-O\-L\-S\-\_\-\-L\-I\-N\-E\-V\-E\-C\-T\-O\-R\-\_\-\-D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X@{N\-O\-\_\-\-C\-O\-L\-S\-\_\-\-L\-I\-N\-E\-V\-E\-C\-T\-O\-R\-\_\-\-D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X}}
+\index{N\-O\-\_\-\-C\-O\-L\-S\-\_\-\-L\-I\-N\-E\-V\-E\-C\-T\-O\-R\-\_\-\-D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X@{N\-O\-\_\-\-C\-O\-L\-S\-\_\-\-L\-I\-N\-E\-V\-E\-C\-T\-O\-R\-\_\-\-D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X}!geometry_io.c@{geometry\-\_\-io.\-c}}
+\subsubsection[{N\-O\-\_\-\-C\-O\-L\-S\-\_\-\-L\-I\-N\-E\-V\-E\-C\-T\-O\-R\-\_\-\-D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X}]{\setlength{\rightskip}{0pt plus 5cm}\#define N\-O\-\_\-\-C\-O\-L\-S\-\_\-\-L\-I\-N\-E\-V\-E\-C\-T\-O\-R\-\_\-\-D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X~8}}\label{geometry__io_8c_a32f29ffdf2ec1b6b7d7281ebc4590436}
+
+
+Definition at line 37 of file geometry\-\_\-io.\-c.
+
+
+
+Referenced by write\-\_\-linevector().
+
+\hypertarget{geometry__io_8c_aae303ab80bd35d40bbf079442b1abea4}{\index{geometry\-\_\-io.\-c@{geometry\-\_\-io.\-c}!N\-O\-\_\-\-E\-L\-E\-V\-A\-T\-I\-O\-N@{N\-O\-\_\-\-E\-L\-E\-V\-A\-T\-I\-O\-N}}
+\index{N\-O\-\_\-\-E\-L\-E\-V\-A\-T\-I\-O\-N@{N\-O\-\_\-\-E\-L\-E\-V\-A\-T\-I\-O\-N}!geometry_io.c@{geometry\-\_\-io.\-c}}
+\subsubsection[{N\-O\-\_\-\-E\-L\-E\-V\-A\-T\-I\-O\-N}]{\setlength{\rightskip}{0pt plus 5cm}\#define N\-O\-\_\-\-E\-L\-E\-V\-A\-T\-I\-O\-N~0.\-0}}\label{geometry__io_8c_aae303ab80bd35d40bbf079442b1abea4}
+
+
+Definition at line 35 of file geometry\-\_\-io.\-c.
+
+
+
+Referenced by get\-\_\-line(), and get\-\_\-polygonvector().
+
+\hypertarget{geometry__io_8c_aff0fa3a7735ac0218d293d0ee2b8f12e}{\index{geometry\-\_\-io.\-c@{geometry\-\_\-io.\-c}!N\-U\-L\-L\-\_\-\-V\-A\-L\-U\-E@{N\-U\-L\-L\-\_\-\-V\-A\-L\-U\-E}}
+\index{N\-U\-L\-L\-\_\-\-V\-A\-L\-U\-E@{N\-U\-L\-L\-\_\-\-V\-A\-L\-U\-E}!geometry_io.c@{geometry\-\_\-io.\-c}}
+\subsubsection[{N\-U\-L\-L\-\_\-\-V\-A\-L\-U\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define N\-U\-L\-L\-\_\-\-V\-A\-L\-U\-E~-\/99}}\label{geometry__io_8c_aff0fa3a7735ac0218d293d0ee2b8f12e}
+
+
+Definition at line 34 of file geometry\-\_\-io.\-c.
+
+
+
+Referenced by fprint\-\_\-polygonvector(), and write\-\_\-polygonvector().
+
+
+
+\subsection{Function Documentation}
+\hypertarget{geometry__io_8c_abd9f7191fc93e72c4dcb09b60b68f7e0}{\index{geometry\-\_\-io.\-c@{geometry\-\_\-io.\-c}!extract\-\_\-linvector\-\_\-from\-\_\-linevector@{extract\-\_\-linvector\-\_\-from\-\_\-linevector}}
+\index{extract\-\_\-linvector\-\_\-from\-\_\-linevector@{extract\-\_\-linvector\-\_\-from\-\_\-linevector}!geometry_io.c@{geometry\-\_\-io.\-c}}
+\subsubsection[{extract\-\_\-linvector\-\_\-from\-\_\-linevector}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\-I\-N\-E\-V\-E\-C\-T\-O\-R}$\ast$ extract\-\_\-linvector\-\_\-from\-\_\-linevector (
+\begin{DoxyParamCaption}
+\item[{{\bf L\-O\-N\-G\-V\-E\-C\-T\-O\-R} $\ast$}]{nlines, }
+\item[{{\bf L\-I\-N\-E\-V\-E\-C\-T\-O\-R} $\ast$}]{lines}
+\end{DoxyParamCaption}
+)}}\label{geometry__io_8c_abd9f7191fc93e72c4dcb09b60b68f7e0}
+\begin{DoxyAuthor}{Author}
+Emanuele Cordano 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+November 2008
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em nlines} & -\/ (\hyperlink{struct_l_o_n_g_v_e_c_t_o_r}{L\-O\-N\-G\-V\-E\-C\-T\-O\-R} $\ast$) numbers of lines to be extracted \\
+\hline
+{\em lines} & -\/ (\hyperlink{struct_l_i_n_e_v_e_c_t_o_r}{L\-I\-N\-E\-V\-E\-C\-T\-O\-R} $\ast$) vector of all lines\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a reduced linevoctor with the lines extracted
+\end{DoxyReturn}
+
+
+Definition at line 125 of file geometry\-\_\-io.\-c.
+
+
+
+References L\-I\-N\-E\-::begin, L\-I\-N\-E\-V\-E\-C\-T\-O\-R\-::element, L\-I\-N\-E\-::end, new\-\_\-line\-\_\-from\-\_\-points(), new\-\_\-linevector(), L\-O\-N\-G\-V\-E\-C\-T\-O\-R\-::nh, and L\-I\-N\-E\-V\-E\-C\-T\-O\-R\-::nl.
+
+
+
+Referenced by get\-\_\-polygon(), and new\-\_\-pixel\-\_\-from\-\_\-raster().
+
+\hypertarget{geometry__io_8c_a3b6e90cfaeddcbbf03d9483e41f28c89}{\index{geometry\-\_\-io.\-c@{geometry\-\_\-io.\-c}!fprint\-\_\-linevector@{fprint\-\_\-linevector}}
+\index{fprint\-\_\-linevector@{fprint\-\_\-linevector}!geometry_io.c@{geometry\-\_\-io.\-c}}
+\subsubsection[{fprint\-\_\-linevector}]{\setlength{\rightskip}{0pt plus 5cm}int fprint\-\_\-linevector (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{filename, }
+\item[{{\bf L\-I\-N\-E\-V\-E\-C\-T\-O\-R} $\ast$}]{lines}
+\end{DoxyParamCaption}
+)}}\label{geometry__io_8c_a3b6e90cfaeddcbbf03d9483e41f28c89}
+\begin{DoxyAuthor}{Author}
+Emanuele Cordano  November 2008
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em name} & -\/ (char $\ast$)name of file where to write the linevector properties \\
+\hline
+{\em linevector} & -\/ (\hyperlink{struct_l_i_n_e_v_e_c_t_o_r}{L\-I\-N\-E\-V\-E\-C\-T\-O\-R} $\ast$) the linevector to be printed\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 if the linevector is written correctly, -\/1 otherwise
+\end{DoxyReturn}
+
+
+Definition at line 341 of file geometry\-\_\-io.\-c.
+
+
+
+References L\-I\-N\-E\-::begin, L\-I\-N\-E\-V\-E\-C\-T\-O\-R\-::element, L\-I\-N\-E\-::end, L\-I\-N\-E\-::index, L\-I\-N\-E\-::length2d, L\-I\-N\-E\-V\-E\-C\-T\-O\-R\-::nl, P\-O\-I\-N\-T\-::x, and P\-O\-I\-N\-T\-::y.
+
+\hypertarget{geometry__io_8c_a2c978df6a6d75a62194f61f625001566}{\index{geometry\-\_\-io.\-c@{geometry\-\_\-io.\-c}!fprint\-\_\-polygonvector@{fprint\-\_\-polygonvector}}
+\index{fprint\-\_\-polygonvector@{fprint\-\_\-polygonvector}!geometry_io.c@{geometry\-\_\-io.\-c}}
+\subsubsection[{fprint\-\_\-polygonvector}]{\setlength{\rightskip}{0pt plus 5cm}int fprint\-\_\-polygonvector (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{filename, }
+\item[{{\bf P\-O\-L\-Y\-G\-O\-N\-V\-E\-C\-T\-O\-R} $\ast$}]{polygons}
+\end{DoxyParamCaption}
+)}}\label{geometry__io_8c_a2c978df6a6d75a62194f61f625001566}
+\begin{DoxyAuthor}{Author}
+Emanuele Cordano  November 2008
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em name} & -\/ (char $\ast$)name of file where to write the linevector properties \\
+\hline
+{\em polygons} & -\/ (\hyperlink{struct_p_o_l_y_g_o_n_v_e_c_t_o_r}{P\-O\-L\-Y\-G\-O\-N\-V\-E\-C\-T\-O\-R} $\ast$) the polygonvector to be printed\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 if the polygonvector is written correctly, -\/1 otherwise
+\end{DoxyReturn}
+P\-R\-I\-N\-T \hyperlink{struct_h_e_a_d_e_r}{H\-E\-A\-D\-E\-R}
+
+end print header 
+
+Definition at line 392 of file geometry\-\_\-io.\-c.
+
+
+
+References P\-O\-L\-Y\-G\-O\-N\-::area2\-D, P\-O\-L\-Y\-G\-O\-N\-::centroid, P\-O\-L\-Y\-G\-O\-N\-::edge\-\_\-indices, P\-O\-L\-Y\-G\-O\-N\-V\-E\-C\-T\-O\-R\-::element, P\-O\-L\-Y\-G\-O\-N\-::index, L\-O\-N\-G\-V\-E\-C\-T\-O\-R\-::nh, N\-L, P\-O\-L\-Y\-G\-O\-N\-V\-E\-C\-T\-O\-R\-::nl, L\-O\-N\-G\-V\-E\-C\-T\-O\-R\-::nl, N\-U\-L\-L\-\_\-\-V\-A\-L\-U\-E, P\-O\-I\-N\-T\-::x, and P\-O\-I\-N\-T\-::y.
+
+\hypertarget{geometry__io_8c_a94dd01b610a6cd29177c9699f0c34059}{\index{geometry\-\_\-io.\-c@{geometry\-\_\-io.\-c}!get\-\_\-line@{get\-\_\-line}}
+\index{get\-\_\-line@{get\-\_\-line}!geometry_io.c@{geometry\-\_\-io.\-c}}
+\subsubsection[{get\-\_\-line}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\-I\-N\-E}$\ast$ get\-\_\-line (
+\begin{DoxyParamCaption}
+\item[{{\bf D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} $\ast$}]{vertex\-\_\-x\-\_\-coord, }
+\item[{{\bf D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} $\ast$}]{vertex\-\_\-y\-\_\-coord, }
+\item[{long}]{line\-\_\-index, }
+\item[{char $\ast$}]{number\-\_\-strings, }
+\item[{short}]{print}
+\end{DoxyParamCaption}
+)}}\label{geometry__io_8c_a94dd01b610a6cd29177c9699f0c34059}
+
+\begin{DoxyParams}{Parameters}
+{\em vertex\-\_\-x\-\_\-coord} & -\/ (\hyperlink{struct_d_o_u_b_l_e_v_e_c_t_o_r}{D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} $\ast$) vector of x coordinates \\
+\hline
+{\em vertex\-\_\-y\-\_\-coord} & -\/ (\hyperlink{struct_d_o_u_b_l_e_v_e_c_t_o_r}{D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} $\ast$) vector of y coordinates\\
+\hline
+{\em line\-\_\-index} & -\/ (long int) index of the line \\
+\hline
+{\em number\-\_\-string} & -\/ (char $\ast$) string containing the number of two vertex points \\
+\hline
+{\em print} & -\/ (short) if activated it prints error or warning messages \\
+\hline
+\end{DoxyParams}
+\begin{DoxyAuthor}{Author}
+Emanuele Cordano 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+November 2008
+\end{DoxyDate}
+
+
+Definition at line 39 of file geometry\-\_\-io.\-c.
+
+
+
+References D\-E\-L\-I\-M\-I\-T\-E\-R\-S, free\-\_\-longvector(), free\-\_\-point(), P\-O\-I\-N\-T\-::index, M\-A\-X\-\_\-\-P\-O\-I\-N\-T\-S, new\-\_\-line\-\_\-from\-\_\-points(), new\-\_\-point(), L\-O\-N\-G\-V\-E\-C\-T\-O\-R\-::nh, D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R\-::nh, L\-O\-N\-G\-V\-E\-C\-T\-O\-R\-::nl, N\-O\-\_\-\-E\-L\-E\-V\-A\-T\-I\-O\-N, read\-\_\-longarray\-\_\-from\-\_\-string(), P\-O\-I\-N\-T\-::x, and P\-O\-I\-N\-T\-::y.
+
+
+
+Referenced by get\-\_\-linevector().
+
+\hypertarget{geometry__io_8c_a278c85176af69cbd525bdb129ada2630}{\index{geometry\-\_\-io.\-c@{geometry\-\_\-io.\-c}!get\-\_\-linevector@{get\-\_\-linevector}}
+\index{get\-\_\-linevector@{get\-\_\-linevector}!geometry_io.c@{geometry\-\_\-io.\-c}}
+\subsubsection[{get\-\_\-linevector}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\-I\-N\-E\-V\-E\-C\-T\-O\-R}$\ast$ get\-\_\-linevector (
+\begin{DoxyParamCaption}
+\item[{{\bf D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} $\ast$}]{vertex\-\_\-x\-\_\-coord, }
+\item[{{\bf D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} $\ast$}]{vertex\-\_\-y\-\_\-coord, }
+\item[{{\bf S\-T\-R\-I\-N\-G\-B\-I\-N} $\ast$}]{line\-\_\-strings, }
+\item[{short}]{print}
+\end{DoxyParamCaption}
+)}}\label{geometry__io_8c_a278c85176af69cbd525bdb129ada2630}
+\begin{DoxyAuthor}{Author}
+Emanuele Cordano 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+November 2008
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em vertex\-\_\-x\-\_\-coord} & -\/ (\hyperlink{struct_d_o_u_b_l_e_v_e_c_t_o_r}{D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} $\ast$) vector of x coordinates \\
+\hline
+{\em vertex\-\_\-y\-\_\-coord} & -\/ (\hyperlink{struct_d_o_u_b_l_e_v_e_c_t_o_r}{D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} $\ast$) vector of y coordinates\\
+\hline
+{\em line\-\_\-strings} & -\/ (S\-T\-R\-I\-N\-G\-B\-I\-N $\ast$) string array containing line information \\
+\hline
+{\em print} & -\/ (short int)\\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 90 of file geometry\-\_\-io.\-c.
+
+
+
+References L\-I\-N\-E\-V\-E\-C\-T\-O\-R\-::element, get\-\_\-line(), st\-::index, new\-\_\-linevector(), L\-O\-N\-G\-V\-E\-C\-T\-O\-R\-::nh, and L\-I\-N\-E\-V\-E\-C\-T\-O\-R\-::nl.
+
+\hypertarget{geometry__io_8c_aa9b84509cc8b914d69755985c8ff6db0}{\index{geometry\-\_\-io.\-c@{geometry\-\_\-io.\-c}!get\-\_\-polygon@{get\-\_\-polygon}}
+\index{get\-\_\-polygon@{get\-\_\-polygon}!geometry_io.c@{geometry\-\_\-io.\-c}}
+\subsubsection[{get\-\_\-polygon}]{\setlength{\rightskip}{0pt plus 5cm}{\bf P\-O\-L\-Y\-G\-O\-N}$\ast$ get\-\_\-polygon (
+\begin{DoxyParamCaption}
+\item[{long}]{index, }
+\item[{double}]{x, }
+\item[{double}]{y, }
+\item[{double}]{z, }
+\item[{char $\ast$}]{edge\-\_\-index\-\_\-string, }
+\item[{{\bf L\-I\-N\-E\-V\-E\-C\-T\-O\-R} $\ast$}]{all\-\_\-lines, }
+\item[{short}]{print}
+\end{DoxyParamCaption}
+)}}\label{geometry__io_8c_aa9b84509cc8b914d69755985c8ff6db0}
+\begin{DoxyAuthor}{Author}
+Emanuele Cordano 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+November 2008
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em index} & -\/ (long) index of the centroid and the polygons \\
+\hline
+{\em x} & -\/ (double) x of the centroid \\
+\hline
+{\em y} & -\/ (double) y of the centroid \\
+\hline
+{\em z} & -\/ (double) z of the centroid\\
+\hline
+{\em edge\-\_\-line\-\_\-index} & -\/ (char $\ast$) string containing the edge indices\\
+\hline
+{\em all\-\_\-lines} & -\/ (\hyperlink{struct_l_i_n_e_v_e_c_t_o_r}{L\-I\-N\-E\-V\-E\-C\-T\-O\-R} $\ast$) vector of all lines \\
+\hline
+{\em print} & -\/ (short)\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a polygon (Attributes are not allocated!!)
+\end{DoxyReturn}
+
+
+Definition at line 153 of file geometry\-\_\-io.\-c.
+
+
+
+References D\-E\-L\-I\-M\-I\-T\-E\-R\-S, extract\-\_\-linvector\-\_\-from\-\_\-linevector(), free\-\_\-linevector(), free\-\_\-longvector(), free\-\_\-point(), M\-A\-X\-\_\-\-P\-O\-I\-N\-T\-S, new\-\_\-point(), new\-\_\-polygon\-\_\-from\-\_\-a\-\_\-linevector(), and read\-\_\-longarray\-\_\-from\-\_\-string().
+
+
+
+Referenced by get\-\_\-polygonvector().
+
+\hypertarget{geometry__io_8c_a5e71ac151690e8bc6772b1b6b5f2aad3}{\index{geometry\-\_\-io.\-c@{geometry\-\_\-io.\-c}!get\-\_\-polygonvector@{get\-\_\-polygonvector}}
+\index{get\-\_\-polygonvector@{get\-\_\-polygonvector}!geometry_io.c@{geometry\-\_\-io.\-c}}
+\subsubsection[{get\-\_\-polygonvector}]{\setlength{\rightskip}{0pt plus 5cm}{\bf P\-O\-L\-Y\-G\-O\-N\-V\-E\-C\-T\-O\-R}$\ast$ get\-\_\-polygonvector (
+\begin{DoxyParamCaption}
+\item[{{\bf D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} $\ast$}]{centroid\-\_\-x\-\_\-coord, }
+\item[{{\bf D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R} $\ast$}]{centroid\-\_\-y\-\_\-coord, }
+\item[{{\bf S\-T\-R\-I\-N\-G\-B\-I\-N} $\ast$}]{polygon\-\_\-strings, }
+\item[{{\bf L\-I\-N\-E\-V\-E\-C\-T\-O\-R} $\ast$}]{all\-\_\-lines, }
+\item[{short}]{print}
+\end{DoxyParamCaption}
+)}}\label{geometry__io_8c_a5e71ac151690e8bc6772b1b6b5f2aad3}
+\begin{DoxyAuthor}{Author}
+Emanuele Cordano 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+November 2008
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em centroid\-\_\-x\-\_\-coord} & -\/ (D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R$\ast$) vector of centroid x coordinates \\
+\hline
+{\em centroid\-\_\-y\-\_\-coord} & -\/ (D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R$\ast$) vector of centroid y coordinates \\
+\hline
+{\em polygon\-\_\-strings} & -\/ (S\-T\-R\-I\-N\-G\-B\-I\-N $\ast$) string containing polygon information \\
+\hline
+{\em lines} & -\/ (\hyperlink{struct_l_i_n_e_v_e_c_t_o_r}{L\-I\-N\-E\-V\-E\-C\-T\-O\-R} $\ast$) vector containing all the lines \\
+\hline
+{\em print} & -\/ (short)\\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 191 of file geometry\-\_\-io.\-c.
+
+
+
+References P\-O\-L\-Y\-G\-O\-N\-V\-E\-C\-T\-O\-R\-::element, get\-\_\-polygon(), st\-::index, new\-\_\-polygonvector(), L\-O\-N\-G\-V\-E\-C\-T\-O\-R\-::nh, D\-O\-U\-B\-L\-E\-V\-E\-C\-T\-O\-R\-::nh, P\-O\-L\-Y\-G\-O\-N\-V\-E\-C\-T\-O\-R\-::nl, and N\-O\-\_\-\-E\-L\-E\-V\-A\-T\-I\-O\-N.
+
+\hypertarget{geometry__io_8c_a90857eaff8709a1b27ab54710120c711}{\index{geometry\-\_\-io.\-c@{geometry\-\_\-io.\-c}!write\-\_\-linevector@{write\-\_\-linevector}}
+\index{write\-\_\-linevector@{write\-\_\-linevector}!geometry_io.c@{geometry\-\_\-io.\-c}}
+\subsubsection[{write\-\_\-linevector}]{\setlength{\rightskip}{0pt plus 5cm}int write\-\_\-linevector (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{filename, }
+\item[{{\bf L\-I\-N\-E\-V\-E\-C\-T\-O\-R} $\ast$}]{lines}
+\end{DoxyParamCaption}
+)}}\label{geometry__io_8c_a90857eaff8709a1b27ab54710120c711}
+\begin{DoxyAuthor}{Author}
+Emanuele Cordano  November 2008
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em name} & -\/ (char $\ast$)name of file where to write the linevector properties \\
+\hline
+{\em linevector} & -\/ (\hyperlink{struct_l_i_n_e_v_e_c_t_o_r}{L\-I\-N\-E\-V\-E\-C\-T\-O\-R} $\ast$) the linevector to be printed\\
+\hline
+\end{DoxyParams}
+write a linevecto in a fluidturtle formalism.
+
+\begin{DoxyReturn}{Returns}
+0 if the linevector is written correctly, -\/1 otherwise
+\end{DoxyReturn}
+
+
+Definition at line 219 of file geometry\-\_\-io.\-c.
+
+
+
+References L\-I\-N\-E\-::begin, L\-I\-N\-E\-V\-E\-C\-T\-O\-R\-::element, L\-I\-N\-E\-::end, L\-I\-N\-E\-::index, L\-I\-N\-E\-::length2d, L\-I\-N\-E\-V\-E\-C\-T\-O\-R\-::nh, L\-I\-N\-E\-V\-E\-C\-T\-O\-R\-::nl, N\-O\-\_\-\-C\-O\-L\-S\-\_\-\-L\-I\-N\-E\-V\-E\-C\-T\-O\-R\-\_\-\-D\-O\-U\-B\-L\-E\-M\-A\-T\-R\-I\-X, P\-O\-I\-N\-T\-::x, and P\-O\-I\-N\-T\-::y.
+
+
+
+Referenced by write\-\_\-grid().
+
+\hypertarget{geometry__io_8c_a425b6392922ac111e0b26dd217e90675}{\index{geometry\-\_\-io.\-c@{geometry\-\_\-io.\-c}!write\-\_\-polygonvector@{write\-\_\-polygonvector}}
+\index{write\-\_\-polygonvector@{write\-\_\-polygonvector}!geometry_io.c@{geometry\-\_\-io.\-c}}
+\subsubsection[{write\-\_\-polygonvector}]{\setlength{\rightskip}{0pt plus 5cm}int write\-\_\-polygonvector (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{filename, }
+\item[{{\bf P\-O\-L\-Y\-G\-O\-N\-V\-E\-C\-T\-O\-R} $\ast$}]{polygons}
+\end{DoxyParamCaption}
+)}}\label{geometry__io_8c_a425b6392922ac111e0b26dd217e90675}
+\begin{DoxyAuthor}{Author}
+Emanuele Cordano  May 2009
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em name} & -\/ (char $\ast$)name of file where to write the linevector properties \\
+\hline
+{\em polygons} & -\/ (\hyperlink{struct_p_o_l_y_g_o_n_v_e_c_t_o_r}{P\-O\-L\-Y\-G\-O\-N\-V\-E\-C\-T\-O\-R} $\ast$) the polygonvector to be printed\\
+\hline
+\end{DoxyParams}
+This functions writes a polygonvector in an ascii files with fluidturle formalism
+
+\begin{DoxyReturn}{Returns}
+0 if the polygonvector is written correctly, -\/1 otherwise
+\end{DoxyReturn}
+P\-R\-I\-N\-T \hyperlink{struct_h_e_a_d_e_r}{H\-E\-A\-D\-E\-R}
+
+end print header 
+
+Definition at line 271 of file geometry\-\_\-io.\-c.
+
+
+
+References P\-O\-L\-Y\-G\-O\-N\-::area2\-D, P\-O\-L\-Y\-G\-O\-N\-::centroid, P\-O\-L\-Y\-G\-O\-N\-::edge\-\_\-indices, P\-O\-L\-Y\-G\-O\-N\-V\-E\-C\-T\-O\-R\-::element, P\-O\-L\-Y\-G\-O\-N\-::index, P\-O\-L\-Y\-G\-O\-N\-V\-E\-C\-T\-O\-R\-::nh, L\-O\-N\-G\-V\-E\-C\-T\-O\-R\-::nh, N\-L, P\-O\-L\-Y\-G\-O\-N\-V\-E\-C\-T\-O\-R\-::nl, L\-O\-N\-G\-V\-E\-C\-T\-O\-R\-::nl, N\-U\-L\-L\-\_\-\-V\-A\-L\-U\-E, P\-O\-I\-N\-T\-::x, and P\-O\-I\-N\-T\-::y.
+
+
+
+Referenced by write\-\_\-grid().
+

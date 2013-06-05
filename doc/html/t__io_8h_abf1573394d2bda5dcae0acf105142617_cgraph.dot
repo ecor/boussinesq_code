@@ -1,0 +1,37 @@
+digraph "read_doublearray"
+{
+  bgcolor="transparent";
+  edge [fontname="FreeSans",fontsize="10",labelfontname="FreeSans",labelfontsize="10"];
+  node [fontname="FreeSans",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="read_doublearray",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node2 [label="free_header",height=0.2,width=0.4,color="black",URL="$alloc_8c.html#ab34729f5dfee5755cc6a29fdadc39e08"];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node3 [label="header_scan",height=0.2,width=0.4,color="black",URL="$t__io_8c.html#af433a9538cd3814bd8f400569204cc1f"];
+  Node3 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node4 [label="iscomment",height=0.2,width=0.4,color="black",URL="$t__io_8c.html#a7c23c08c6ea72264dc91ddab0d36e918"];
+  Node4 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node5 [label="skip_whitespaces",height=0.2,width=0.4,color="black",URL="$t__io_8c.html#a52f4f85b1ef75f4ccd947da5d1a28af6"];
+  Node3 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node6 [label="query_for_label",height=0.2,width=0.4,color="black",URL="$t__io_8c.html#acb404df2728e7f58f17a304f56e261d5"];
+  Node6 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node6 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node7 [label="t_error",height=0.2,width=0.4,color="black",URL="$error_8c.html#af79ef7c6656ef0f3d2786e2b09c1755f"];
+  Node3 -> Node8 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node8 [label="read_comment",height=0.2,width=0.4,color="black",URL="$t__io_8c.html#a8b4a8b2cd01f0fb435ec5e7340f80d87"];
+  Node8 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node8 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node3 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node3 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node1 -> Node9 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node9 [label="new_doublevector",height=0.2,width=0.4,color="black",URL="$alloc_8c.html#a724e4d54ff17ee3caa26463378109887"];
+  Node9 -> Node10 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node10 [label="dvector",height=0.2,width=0.4,color="black",URL="$alloc_8c.html#ae21c4c252ad5d5710ebd03d6f07e40de"];
+  Node10 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node9 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node1 -> Node11 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node11 [label="print_header",height=0.2,width=0.4,color="black",URL="$t__io_8c.html#a5018217dd5fbb080ef3de64ac6ec68f7"];
+  Node1 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node1 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+}

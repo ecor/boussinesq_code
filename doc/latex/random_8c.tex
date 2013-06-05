@@ -1,0 +1,557 @@
+\hypertarget{random_8c}{\section{F\-L\-U\-I\-D\-T\-U\-R\-T\-L\-E\-S/random.c File Reference}
+\label{random_8c}\index{F\-L\-U\-I\-D\-T\-U\-R\-T\-L\-E\-S/random.\-c@{F\-L\-U\-I\-D\-T\-U\-R\-T\-L\-E\-S/random.\-c}}
+}
+{\ttfamily \#include \char`\"{}turtle.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}t\-\_\-random.\-h\char`\"{}}\\*
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{random_8c_a598a3330b3c21701223ee0ca14316eca}{P\-I}~3.\-141592654
+\item 
+\#define \hyperlink{random_8c_ae4b0efde4fa4613b407716d265d19b0a}{I\-A}~16807
+\item 
+\#define \hyperlink{random_8c_a51c0dfe766601d31e907fceae818a7ca}{I\-M}~2147483647
+\item 
+\#define \hyperlink{random_8c_ad301e6a88b1c01108f4867f2ea6f683c}{A\-M}~(1.\-0/\hyperlink{random_8c_a51c0dfe766601d31e907fceae818a7ca}{I\-M})
+\item 
+\#define \hyperlink{random_8c_ab7c5f3342853af6bb48d0ca00b05efbe}{I\-Q}~127773
+\item 
+\#define \hyperlink{random_8c_a68e22635ff207d8ca10459833856bd75}{I\-R}~2836
+\item 
+\#define \hyperlink{random_8c_ac597abe7cf610f262f7aaec53ed1d413}{M1}~259200
+\item 
+\#define \hyperlink{random_8c_a6ef2749dca39c605c3d033f788afe6e3}{I\-A1}~7141
+\item 
+\#define \hyperlink{random_8c_a22017c9bdcf5c378445e622d59bf40bc}{I\-C1}~54773
+\item 
+\#define \hyperlink{random_8c_a407c3d1db124bc9cc56391671626eadf}{R\-M1}~(1.\-0/\hyperlink{random_8c_ac597abe7cf610f262f7aaec53ed1d413}{M1})
+\item 
+\#define \hyperlink{random_8c_a2a187ef3afced0eb4c4cb99515e5429c}{M2}~134456
+\item 
+\#define \hyperlink{random_8c_a372a58d7e9e25912fd79e7afaa06cc7a}{I\-A2}~8121
+\item 
+\#define \hyperlink{random_8c_a435a4d5a5b006f6a50ee01f7e31dbab6}{I\-C2}~28411
+\item 
+\#define \hyperlink{random_8c_a3744b1d837ab7b3e266dca6994fb54bb}{R\-M2}~(1.\-0/\hyperlink{random_8c_a2a187ef3afced0eb4c4cb99515e5429c}{M2})
+\item 
+\#define \hyperlink{random_8c_ad801d72bd01ef1ac9b86dbf4de0d355d}{M3}~243000
+\item 
+\#define \hyperlink{random_8c_abc6ff7d82f60287cf60b423418357655}{I\-A3}~4561
+\item 
+\#define \hyperlink{random_8c_a0e4e0c520a4251953aacbdd4c0da200b}{I\-C3}~51349
+\item 
+\#define \hyperlink{random_8c_a71212bcd68ee44b80905c37c538cecff}{N\-R\-\_\-\-E\-N\-D}~1
+\item 
+\#define \hyperlink{random_8c_a78325bdf48423acef7c012567628b391}{I\-M1}~2147483563
+\item 
+\#define \hyperlink{random_8c_ad8c519de7e5de4ae35344ddcf21fd062}{I\-M2}~2147483399
+\item 
+\#define \hyperlink{random_8c_a21b1fba51df35c5c4d705453535a98f6}{A\-M1}~(1.\-0/\hyperlink{random_8c_a78325bdf48423acef7c012567628b391}{I\-M1})
+\item 
+\#define \hyperlink{random_8c_a87a6e0054f9d827c979c43aa0d5e621a}{I\-M\-M1}~(\hyperlink{random_8c_a78325bdf48423acef7c012567628b391}{I\-M1}-\/1)
+\item 
+\#define \hyperlink{random_8c_ac87911f735991094b87fcb2e57702c14}{I\-A\-A1}~40014
+\item 
+\#define \hyperlink{random_8c_acffadac51b250946afacf2645ffdbf74}{I\-A\-A2}~40692
+\item 
+\#define \hyperlink{random_8c_a9afa86ff22da69bda72fe271ae71ad46}{I\-Q1}~53668
+\item 
+\#define \hyperlink{random_8c_abae040385946a6acdf5e10d2efd86f3d}{I\-Q2}~52774
+\item 
+\#define \hyperlink{random_8c_a7b2b32709f9770a283701ffcf3723497}{I\-R1}~12211
+\item 
+\#define \hyperlink{random_8c_a5a08e4f5cb3582e623cc14a6c92d48de}{I\-R2}~3791
+\item 
+\#define \hyperlink{random_8c_a0e93cfb2d62849853fd34957ba6e6fdc}{N\-T\-A\-B}~32
+\item 
+\#define \hyperlink{random_8c_a62339d74dd5d9d00480e1a288cf88fe8}{N\-D\-I\-V}~(1+\hyperlink{random_8c_a87a6e0054f9d827c979c43aa0d5e621a}{I\-M\-M1}/\hyperlink{random_8c_a0e93cfb2d62849853fd34957ba6e6fdc}{N\-T\-A\-B})
+\item 
+\#define \hyperlink{random_8c_a6ebf6899d6c1c8b7b9d09be872c05aae}{E\-P\-S}~1.\-2e-\/7
+\item 
+\#define \hyperlink{random_8c_aa7436c9270ffb06f8c1eae8d2e605cec}{R\-N\-M\-X}~(1.\-0 -\/ \hyperlink{random_8c_a6ebf6899d6c1c8b7b9d09be872c05aae}{E\-P\-S})
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+long \hyperlink{random_8c_a91d0be67345c586cb825ace82e209e46}{urand} (long $\ast$idum, long range)
+\item 
+double \hyperlink{random_8c_a1b3a69f1cc435a6a5dbedfa65c6796c0}{ran1} (long $\ast$idum)
+\item 
+double \hyperlink{random_8c_afba975c2629ded7c68cb21cfbeb4b496}{ran2} (long $\ast$idum)
+\item 
+double \hyperlink{random_8c_a134a1615385678b211f780f55b0095df}{ran3} (long $\ast$idum)
+\item 
+double \hyperlink{random_8c_a812e3f2194a184e15cfea303519d8579}{uuvel} (float vmed, float vvar)
+\item 
+double \hyperlink{random_8c_a437c75aa3f473fe4da9dce897bc40f00}{gasdev} (long $\ast$idum)
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{random_8c_ad301e6a88b1c01108f4867f2ea6f683c}{\index{random.\-c@{random.\-c}!A\-M@{A\-M}}
+\index{A\-M@{A\-M}!random.c@{random.\-c}}
+\subsubsection[{A\-M}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-M~(1.\-0/{\bf I\-M})}}\label{random_8c_ad301e6a88b1c01108f4867f2ea6f683c}
+
+
+Definition at line 8 of file random.\-c.
+
+
+
+Referenced by ran3().
+
+\hypertarget{random_8c_a21b1fba51df35c5c4d705453535a98f6}{\index{random.\-c@{random.\-c}!A\-M1@{A\-M1}}
+\index{A\-M1@{A\-M1}!random.c@{random.\-c}}
+\subsubsection[{A\-M1}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-M1~(1.\-0/{\bf I\-M1})}}\label{random_8c_a21b1fba51df35c5c4d705453535a98f6}
+
+
+Definition at line 27 of file random.\-c.
+
+
+
+Referenced by ran2().
+
+\hypertarget{random_8c_a6ebf6899d6c1c8b7b9d09be872c05aae}{\index{random.\-c@{random.\-c}!E\-P\-S@{E\-P\-S}}
+\index{E\-P\-S@{E\-P\-S}!random.c@{random.\-c}}
+\subsubsection[{E\-P\-S}]{\setlength{\rightskip}{0pt plus 5cm}\#define E\-P\-S~1.\-2e-\/7}}\label{random_8c_a6ebf6899d6c1c8b7b9d09be872c05aae}
+
+
+Definition at line 37 of file random.\-c.
+
+\hypertarget{random_8c_ae4b0efde4fa4613b407716d265d19b0a}{\index{random.\-c@{random.\-c}!I\-A@{I\-A}}
+\index{I\-A@{I\-A}!random.c@{random.\-c}}
+\subsubsection[{I\-A}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\-A~16807}}\label{random_8c_ae4b0efde4fa4613b407716d265d19b0a}
+
+
+Definition at line 6 of file random.\-c.
+
+
+
+Referenced by ran3().
+
+\hypertarget{random_8c_a6ef2749dca39c605c3d033f788afe6e3}{\index{random.\-c@{random.\-c}!I\-A1@{I\-A1}}
+\index{I\-A1@{I\-A1}!random.c@{random.\-c}}
+\subsubsection[{I\-A1}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\-A1~7141}}\label{random_8c_a6ef2749dca39c605c3d033f788afe6e3}
+
+
+Definition at line 12 of file random.\-c.
+
+
+
+Referenced by ran1().
+
+\hypertarget{random_8c_a372a58d7e9e25912fd79e7afaa06cc7a}{\index{random.\-c@{random.\-c}!I\-A2@{I\-A2}}
+\index{I\-A2@{I\-A2}!random.c@{random.\-c}}
+\subsubsection[{I\-A2}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\-A2~8121}}\label{random_8c_a372a58d7e9e25912fd79e7afaa06cc7a}
+
+
+Definition at line 16 of file random.\-c.
+
+
+
+Referenced by ran1().
+
+\hypertarget{random_8c_abc6ff7d82f60287cf60b423418357655}{\index{random.\-c@{random.\-c}!I\-A3@{I\-A3}}
+\index{I\-A3@{I\-A3}!random.c@{random.\-c}}
+\subsubsection[{I\-A3}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\-A3~4561}}\label{random_8c_abc6ff7d82f60287cf60b423418357655}
+
+
+Definition at line 20 of file random.\-c.
+
+
+
+Referenced by ran1().
+
+\hypertarget{random_8c_ac87911f735991094b87fcb2e57702c14}{\index{random.\-c@{random.\-c}!I\-A\-A1@{I\-A\-A1}}
+\index{I\-A\-A1@{I\-A\-A1}!random.c@{random.\-c}}
+\subsubsection[{I\-A\-A1}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\-A\-A1~40014}}\label{random_8c_ac87911f735991094b87fcb2e57702c14}
+
+
+Definition at line 29 of file random.\-c.
+
+
+
+Referenced by ran2().
+
+\hypertarget{random_8c_acffadac51b250946afacf2645ffdbf74}{\index{random.\-c@{random.\-c}!I\-A\-A2@{I\-A\-A2}}
+\index{I\-A\-A2@{I\-A\-A2}!random.c@{random.\-c}}
+\subsubsection[{I\-A\-A2}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\-A\-A2~40692}}\label{random_8c_acffadac51b250946afacf2645ffdbf74}
+
+
+Definition at line 30 of file random.\-c.
+
+
+
+Referenced by ran2().
+
+\hypertarget{random_8c_a22017c9bdcf5c378445e622d59bf40bc}{\index{random.\-c@{random.\-c}!I\-C1@{I\-C1}}
+\index{I\-C1@{I\-C1}!random.c@{random.\-c}}
+\subsubsection[{I\-C1}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\-C1~54773}}\label{random_8c_a22017c9bdcf5c378445e622d59bf40bc}
+
+
+Definition at line 13 of file random.\-c.
+
+
+
+Referenced by ran1().
+
+\hypertarget{random_8c_a435a4d5a5b006f6a50ee01f7e31dbab6}{\index{random.\-c@{random.\-c}!I\-C2@{I\-C2}}
+\index{I\-C2@{I\-C2}!random.c@{random.\-c}}
+\subsubsection[{I\-C2}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\-C2~28411}}\label{random_8c_a435a4d5a5b006f6a50ee01f7e31dbab6}
+
+
+Definition at line 17 of file random.\-c.
+
+
+
+Referenced by ran1().
+
+\hypertarget{random_8c_a0e4e0c520a4251953aacbdd4c0da200b}{\index{random.\-c@{random.\-c}!I\-C3@{I\-C3}}
+\index{I\-C3@{I\-C3}!random.c@{random.\-c}}
+\subsubsection[{I\-C3}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\-C3~51349}}\label{random_8c_a0e4e0c520a4251953aacbdd4c0da200b}
+
+
+Definition at line 21 of file random.\-c.
+
+
+
+Referenced by ran1().
+
+\hypertarget{random_8c_a51c0dfe766601d31e907fceae818a7ca}{\index{random.\-c@{random.\-c}!I\-M@{I\-M}}
+\index{I\-M@{I\-M}!random.c@{random.\-c}}
+\subsubsection[{I\-M}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\-M~2147483647}}\label{random_8c_a51c0dfe766601d31e907fceae818a7ca}
+
+
+Definition at line 7 of file random.\-c.
+
+
+
+Referenced by ran3().
+
+\hypertarget{random_8c_a78325bdf48423acef7c012567628b391}{\index{random.\-c@{random.\-c}!I\-M1@{I\-M1}}
+\index{I\-M1@{I\-M1}!random.c@{random.\-c}}
+\subsubsection[{I\-M1}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\-M1~2147483563}}\label{random_8c_a78325bdf48423acef7c012567628b391}
+
+
+Definition at line 25 of file random.\-c.
+
+
+
+Referenced by ran2().
+
+\hypertarget{random_8c_ad8c519de7e5de4ae35344ddcf21fd062}{\index{random.\-c@{random.\-c}!I\-M2@{I\-M2}}
+\index{I\-M2@{I\-M2}!random.c@{random.\-c}}
+\subsubsection[{I\-M2}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\-M2~2147483399}}\label{random_8c_ad8c519de7e5de4ae35344ddcf21fd062}
+
+
+Definition at line 26 of file random.\-c.
+
+
+
+Referenced by ran2().
+
+\hypertarget{random_8c_a87a6e0054f9d827c979c43aa0d5e621a}{\index{random.\-c@{random.\-c}!I\-M\-M1@{I\-M\-M1}}
+\index{I\-M\-M1@{I\-M\-M1}!random.c@{random.\-c}}
+\subsubsection[{I\-M\-M1}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\-M\-M1~({\bf I\-M1}-\/1)}}\label{random_8c_a87a6e0054f9d827c979c43aa0d5e621a}
+
+
+Definition at line 28 of file random.\-c.
+
+
+
+Referenced by ran2().
+
+\hypertarget{random_8c_ab7c5f3342853af6bb48d0ca00b05efbe}{\index{random.\-c@{random.\-c}!I\-Q@{I\-Q}}
+\index{I\-Q@{I\-Q}!random.c@{random.\-c}}
+\subsubsection[{I\-Q}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\-Q~127773}}\label{random_8c_ab7c5f3342853af6bb48d0ca00b05efbe}
+
+
+Definition at line 9 of file random.\-c.
+
+
+
+Referenced by ran3().
+
+\hypertarget{random_8c_a9afa86ff22da69bda72fe271ae71ad46}{\index{random.\-c@{random.\-c}!I\-Q1@{I\-Q1}}
+\index{I\-Q1@{I\-Q1}!random.c@{random.\-c}}
+\subsubsection[{I\-Q1}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\-Q1~53668}}\label{random_8c_a9afa86ff22da69bda72fe271ae71ad46}
+
+
+Definition at line 31 of file random.\-c.
+
+
+
+Referenced by ran2().
+
+\hypertarget{random_8c_abae040385946a6acdf5e10d2efd86f3d}{\index{random.\-c@{random.\-c}!I\-Q2@{I\-Q2}}
+\index{I\-Q2@{I\-Q2}!random.c@{random.\-c}}
+\subsubsection[{I\-Q2}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\-Q2~52774}}\label{random_8c_abae040385946a6acdf5e10d2efd86f3d}
+
+
+Definition at line 32 of file random.\-c.
+
+
+
+Referenced by ran2().
+
+\hypertarget{random_8c_a68e22635ff207d8ca10459833856bd75}{\index{random.\-c@{random.\-c}!I\-R@{I\-R}}
+\index{I\-R@{I\-R}!random.c@{random.\-c}}
+\subsubsection[{I\-R}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\-R~2836}}\label{random_8c_a68e22635ff207d8ca10459833856bd75}
+
+
+Definition at line 10 of file random.\-c.
+
+
+
+Referenced by ran3().
+
+\hypertarget{random_8c_a7b2b32709f9770a283701ffcf3723497}{\index{random.\-c@{random.\-c}!I\-R1@{I\-R1}}
+\index{I\-R1@{I\-R1}!random.c@{random.\-c}}
+\subsubsection[{I\-R1}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\-R1~12211}}\label{random_8c_a7b2b32709f9770a283701ffcf3723497}
+
+
+Definition at line 33 of file random.\-c.
+
+
+
+Referenced by ran2().
+
+\hypertarget{random_8c_a5a08e4f5cb3582e623cc14a6c92d48de}{\index{random.\-c@{random.\-c}!I\-R2@{I\-R2}}
+\index{I\-R2@{I\-R2}!random.c@{random.\-c}}
+\subsubsection[{I\-R2}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\-R2~3791}}\label{random_8c_a5a08e4f5cb3582e623cc14a6c92d48de}
+
+
+Definition at line 34 of file random.\-c.
+
+
+
+Referenced by ran2().
+
+\hypertarget{random_8c_ac597abe7cf610f262f7aaec53ed1d413}{\index{random.\-c@{random.\-c}!M1@{M1}}
+\index{M1@{M1}!random.c@{random.\-c}}
+\subsubsection[{M1}]{\setlength{\rightskip}{0pt plus 5cm}\#define M1~259200}}\label{random_8c_ac597abe7cf610f262f7aaec53ed1d413}
+
+
+Definition at line 11 of file random.\-c.
+
+
+
+Referenced by ran1().
+
+\hypertarget{random_8c_a2a187ef3afced0eb4c4cb99515e5429c}{\index{random.\-c@{random.\-c}!M2@{M2}}
+\index{M2@{M2}!random.c@{random.\-c}}
+\subsubsection[{M2}]{\setlength{\rightskip}{0pt plus 5cm}\#define M2~134456}}\label{random_8c_a2a187ef3afced0eb4c4cb99515e5429c}
+
+
+Definition at line 15 of file random.\-c.
+
+
+
+Referenced by ran1().
+
+\hypertarget{random_8c_ad801d72bd01ef1ac9b86dbf4de0d355d}{\index{random.\-c@{random.\-c}!M3@{M3}}
+\index{M3@{M3}!random.c@{random.\-c}}
+\subsubsection[{M3}]{\setlength{\rightskip}{0pt plus 5cm}\#define M3~243000}}\label{random_8c_ad801d72bd01ef1ac9b86dbf4de0d355d}
+
+
+Definition at line 19 of file random.\-c.
+
+
+
+Referenced by ran1().
+
+\hypertarget{random_8c_a62339d74dd5d9d00480e1a288cf88fe8}{\index{random.\-c@{random.\-c}!N\-D\-I\-V@{N\-D\-I\-V}}
+\index{N\-D\-I\-V@{N\-D\-I\-V}!random.c@{random.\-c}}
+\subsubsection[{N\-D\-I\-V}]{\setlength{\rightskip}{0pt plus 5cm}\#define N\-D\-I\-V~(1+{\bf I\-M\-M1}/{\bf N\-T\-A\-B})}}\label{random_8c_a62339d74dd5d9d00480e1a288cf88fe8}
+
+
+Definition at line 36 of file random.\-c.
+
+
+
+Referenced by ran2(), and ran3().
+
+\hypertarget{random_8c_a71212bcd68ee44b80905c37c538cecff}{\index{random.\-c@{random.\-c}!N\-R\-\_\-\-E\-N\-D@{N\-R\-\_\-\-E\-N\-D}}
+\index{N\-R\-\_\-\-E\-N\-D@{N\-R\-\_\-\-E\-N\-D}!random.c@{random.\-c}}
+\subsubsection[{N\-R\-\_\-\-E\-N\-D}]{\setlength{\rightskip}{0pt plus 5cm}\#define N\-R\-\_\-\-E\-N\-D~1}}\label{random_8c_a71212bcd68ee44b80905c37c538cecff}
+
+
+Definition at line 22 of file random.\-c.
+
+
+
+Referenced by charmatrix(), cvector(), d3tensor(), dmatrix(), dvector(), esponentialsplit(), esponentialsplit2realvectors(), free\-\_\-charmatrix(), free\-\_\-cvector(), free\-\_\-d3tensor(), free\-\_\-dmatrix(), free\-\_\-doublebin(), free\-\_\-dvector(), free\-\_\-imatrix(), free\-\_\-intbin(), free\-\_\-ivector(), free\-\_\-lmatrix(), free\-\_\-longbin(), free\-\_\-lvector(), free\-\_\-matrix(), free\-\_\-shortbin(), free\-\_\-smatrix(), free\-\_\-stringbin(), free\-\_\-svector(), free\-\_\-vector(), imatrix(), ivector(), lmatrix(), lvector(), matrix(), new\-\_\-connection\-\_\-attributes(), new\-\_\-doublebin(), new\-\_\-intbin(), new\-\_\-linevector(), new\-\_\-longbin(), new\-\_\-longmatrix\-\_\-vector(), new\-\_\-polygonvector(), new\-\_\-raster\-\_\-map(), new\-\_\-shortbin(), new\-\_\-stringbin(), read\-\_\-keywords\-\_\-list(), reorder\-\_\-keywords\-\_\-list(), smatrix(), split(), split2realvectors(), svector(), and vector().
+
+\hypertarget{random_8c_a0e93cfb2d62849853fd34957ba6e6fdc}{\index{random.\-c@{random.\-c}!N\-T\-A\-B@{N\-T\-A\-B}}
+\index{N\-T\-A\-B@{N\-T\-A\-B}!random.c@{random.\-c}}
+\subsubsection[{N\-T\-A\-B}]{\setlength{\rightskip}{0pt plus 5cm}\#define N\-T\-A\-B~32}}\label{random_8c_a0e93cfb2d62849853fd34957ba6e6fdc}
+
+
+Definition at line 35 of file random.\-c.
+
+
+
+Referenced by ran2(), and ran3().
+
+\hypertarget{random_8c_a598a3330b3c21701223ee0ca14316eca}{\index{random.\-c@{random.\-c}!P\-I@{P\-I}}
+\index{P\-I@{P\-I}!random.c@{random.\-c}}
+\subsubsection[{P\-I}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\-I~3.\-141592654}}\label{random_8c_a598a3330b3c21701223ee0ca14316eca}
+
+
+Definition at line 5 of file random.\-c.
+
+\hypertarget{random_8c_a407c3d1db124bc9cc56391671626eadf}{\index{random.\-c@{random.\-c}!R\-M1@{R\-M1}}
+\index{R\-M1@{R\-M1}!random.c@{random.\-c}}
+\subsubsection[{R\-M1}]{\setlength{\rightskip}{0pt plus 5cm}\#define R\-M1~(1.\-0/{\bf M1})}}\label{random_8c_a407c3d1db124bc9cc56391671626eadf}
+
+
+Definition at line 14 of file random.\-c.
+
+
+
+Referenced by ran1().
+
+\hypertarget{random_8c_a3744b1d837ab7b3e266dca6994fb54bb}{\index{random.\-c@{random.\-c}!R\-M2@{R\-M2}}
+\index{R\-M2@{R\-M2}!random.c@{random.\-c}}
+\subsubsection[{R\-M2}]{\setlength{\rightskip}{0pt plus 5cm}\#define R\-M2~(1.\-0/{\bf M2})}}\label{random_8c_a3744b1d837ab7b3e266dca6994fb54bb}
+
+
+Definition at line 18 of file random.\-c.
+
+
+
+Referenced by ran1().
+
+\hypertarget{random_8c_aa7436c9270ffb06f8c1eae8d2e605cec}{\index{random.\-c@{random.\-c}!R\-N\-M\-X@{R\-N\-M\-X}}
+\index{R\-N\-M\-X@{R\-N\-M\-X}!random.c@{random.\-c}}
+\subsubsection[{R\-N\-M\-X}]{\setlength{\rightskip}{0pt plus 5cm}\#define R\-N\-M\-X~(1.\-0 -\/ {\bf E\-P\-S})}}\label{random_8c_aa7436c9270ffb06f8c1eae8d2e605cec}
+
+
+Definition at line 38 of file random.\-c.
+
+
+
+Referenced by ran2(), and ran3().
+
+
+
+\subsection{Function Documentation}
+\hypertarget{random_8c_a437c75aa3f473fe4da9dce897bc40f00}{\index{random.\-c@{random.\-c}!gasdev@{gasdev}}
+\index{gasdev@{gasdev}!random.c@{random.\-c}}
+\subsubsection[{gasdev}]{\setlength{\rightskip}{0pt plus 5cm}double gasdev (
+\begin{DoxyParamCaption}
+\item[{long $\ast$}]{idum}
+\end{DoxyParamCaption}
+)}}\label{random_8c_a437c75aa3f473fe4da9dce897bc40f00}
+
+
+Definition at line 267 of file random.\-c.
+
+
+
+References ran1().
+
+
+
+Referenced by uuvel().
+
+\hypertarget{random_8c_a1b3a69f1cc435a6a5dbedfa65c6796c0}{\index{random.\-c@{random.\-c}!ran1@{ran1}}
+\index{ran1@{ran1}!random.c@{random.\-c}}
+\subsubsection[{ran1}]{\setlength{\rightskip}{0pt plus 5cm}double ran1 (
+\begin{DoxyParamCaption}
+\item[{long $\ast$}]{idum}
+\end{DoxyParamCaption}
+)}}\label{random_8c_a1b3a69f1cc435a6a5dbedfa65c6796c0}
+
+
+Definition at line 75 of file random.\-c.
+
+
+
+References I\-A1, I\-A2, I\-A3, I\-C1, I\-C2, I\-C3, M1, M2, M3, R\-M1, R\-M2, and t\-\_\-error().
+
+
+
+Referenced by gasdev().
+
+\hypertarget{random_8c_afba975c2629ded7c68cb21cfbeb4b496}{\index{random.\-c@{random.\-c}!ran2@{ran2}}
+\index{ran2@{ran2}!random.c@{random.\-c}}
+\subsubsection[{ran2}]{\setlength{\rightskip}{0pt plus 5cm}double ran2 (
+\begin{DoxyParamCaption}
+\item[{long $\ast$}]{idum}
+\end{DoxyParamCaption}
+)}}\label{random_8c_afba975c2629ded7c68cb21cfbeb4b496}
+
+
+Definition at line 112 of file random.\-c.
+
+
+
+References A\-M1, I\-A\-A1, I\-A\-A2, I\-M1, I\-M2, I\-M\-M1, I\-Q1, I\-Q2, I\-R1, I\-R2, N\-D\-I\-V, N\-T\-A\-B, and R\-N\-M\-X.
+
+\hypertarget{random_8c_a134a1615385678b211f780f55b0095df}{\index{random.\-c@{random.\-c}!ran3@{ran3}}
+\index{ran3@{ran3}!random.c@{random.\-c}}
+\subsubsection[{ran3}]{\setlength{\rightskip}{0pt plus 5cm}double ran3 (
+\begin{DoxyParamCaption}
+\item[{long $\ast$}]{idum}
+\end{DoxyParamCaption}
+)}}\label{random_8c_a134a1615385678b211f780f55b0095df}
+
+
+Definition at line 156 of file random.\-c.
+
+
+
+References A\-M, I\-A, I\-M, I\-Q, I\-R, N\-D\-I\-V, N\-T\-A\-B, and R\-N\-M\-X.
+
+
+
+Referenced by bnldev(), expdev(), and poisdev().
+
+\hypertarget{random_8c_a91d0be67345c586cb825ace82e209e46}{\index{random.\-c@{random.\-c}!urand@{urand}}
+\index{urand@{urand}!random.c@{random.\-c}}
+\subsubsection[{urand}]{\setlength{\rightskip}{0pt plus 5cm}long urand (
+\begin{DoxyParamCaption}
+\item[{long $\ast$}]{, }
+\item[{long}]{}
+\end{DoxyParamCaption}
+)}}\label{random_8c_a91d0be67345c586cb825ace82e209e46}
+Name\-:
+
+Synopsis\-:
+
+Version\-: 1.\-0
+
+Description\-:
+
+Authors \& Date\-: Riccardo Rigon, 1998
+
+F\-I\-L\-E\-: L\-I\-B\-R\-A\-R\-I\-E\-S/\-B\-A\-S\-I\-C\-S/t\-\_\-random.\-h, L\-I\-B\-R\-A\-R\-I\-E\-S/\-B\-A\-S\-I\-C\-S/random.\-c
+
+Inputs\-:
+
+Return\-:
+
+See Also\-:
+
+Keywords\-:
+
+Examples\-: 1.\-example.\-c, 2.\-example.\-c 
+
+Definition at line 45 of file random.\-c.
+
+\hypertarget{random_8c_a812e3f2194a184e15cfea303519d8579}{\index{random.\-c@{random.\-c}!uuvel@{uuvel}}
+\index{uuvel@{uuvel}!random.c@{random.\-c}}
+\subsubsection[{uuvel}]{\setlength{\rightskip}{0pt plus 5cm}double uuvel (
+\begin{DoxyParamCaption}
+\item[{float}]{vmed, }
+\item[{float}]{vvar}
+\end{DoxyParamCaption}
+)}}\label{random_8c_a812e3f2194a184e15cfea303519d8579}
+
+
+Definition at line 251 of file random.\-c.
+
+
+
+References gasdev().
+

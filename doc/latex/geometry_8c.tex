@@ -1,0 +1,209 @@
+\hypertarget{geometry_8c}{\section{B\-G\-E\-O\-M\-E\-T\-R\-Y/geometry.c File Reference}
+\label{geometry_8c}\index{B\-G\-E\-O\-M\-E\-T\-R\-Y/geometry.\-c@{B\-G\-E\-O\-M\-E\-T\-R\-Y/geometry.\-c}}
+}
+{\ttfamily \#include \char`\"{}turtle.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}geometry.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}geometry\-\_\-utilities.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}geometry\-\_\-freememory.\-h\char`\"{}}\\*
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{struct_p_o_i_n_t}{P\-O\-I\-N\-T} $\ast$ \hyperlink{geometry_8c_a49193cd7a27109da689dd26a0ce1fc75}{new\-\_\-point} (long index, double x, double y, double z)
+\item 
+\hyperlink{struct_l_i_n_e}{L\-I\-N\-E} $\ast$ \hyperlink{geometry_8c_aeec151f90d957e9639e59915dbdebb31}{new\-\_\-line\-\_\-from\-\_\-points} (long index, \hyperlink{struct_p_o_i_n_t}{P\-O\-I\-N\-T} $\ast$P1, \hyperlink{struct_p_o_i_n_t}{P\-O\-I\-N\-T} $\ast$P2)
+\item 
+\hyperlink{struct_l_i_n_e_v_e_c_t_o_r}{L\-I\-N\-E\-V\-E\-C\-T\-O\-R} $\ast$ \hyperlink{geometry_8c_a3e74bec1227ed7fad579095dca7841f1}{new\-\_\-linevector} (long nh)
+\item 
+\hyperlink{struct_p_o_l_y_g_o_n_v_e_c_t_o_r}{P\-O\-L\-Y\-G\-O\-N\-V\-E\-C\-T\-O\-R} $\ast$ \hyperlink{geometry_8c_a52f72d805ab7de74072297b0487c10cc}{new\-\_\-polygonvector} (long nh)
+\item 
+\hyperlink{struct_p_o_l_y_g_o_n}{P\-O\-L\-Y\-G\-O\-N} $\ast$ \hyperlink{geometry_8c_a249283b40c80bec62d22c49f1160ceb1}{new\-\_\-polygon\-\_\-from\-\_\-a\-\_\-linevector} (\hyperlink{struct_l_i_n_e_v_e_c_t_o_r}{L\-I\-N\-E\-V\-E\-C\-T\-O\-R} $\ast$lines, \hyperlink{struct_p_o_i_n_t}{P\-O\-I\-N\-T} $\ast$centroid)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{geometry_8c_aeec151f90d957e9639e59915dbdebb31}{\index{geometry.\-c@{geometry.\-c}!new\-\_\-line\-\_\-from\-\_\-points@{new\-\_\-line\-\_\-from\-\_\-points}}
+\index{new\-\_\-line\-\_\-from\-\_\-points@{new\-\_\-line\-\_\-from\-\_\-points}!geometry.c@{geometry.\-c}}
+\subsubsection[{new\-\_\-line\-\_\-from\-\_\-points}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\-I\-N\-E}$\ast$ new\-\_\-line\-\_\-from\-\_\-points (
+\begin{DoxyParamCaption}
+\item[{long}]{index, }
+\item[{{\bf P\-O\-I\-N\-T} $\ast$}]{P1, }
+\item[{{\bf P\-O\-I\-N\-T} $\ast$}]{P2}
+\end{DoxyParamCaption}
+)}}\label{geometry_8c_aeec151f90d957e9639e59915dbdebb31}
+\begin{DoxyAuthor}{Author}
+Emanuele Cordano 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+October 2008
+\end{DoxyDate}
+index -\/ (long) line index 
+\begin{DoxyParams}{Parameters}
+{\em P1} & -\/ (\hyperlink{struct_p_o_i_n_t}{P\-O\-I\-N\-T} $\ast$) begin point of the line \\
+\hline
+{\em P2} & -\/ (\hyperlink{struct_p_o_i_n_t}{P\-O\-I\-N\-T} $\ast$) end point of the line\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+creates a line between two point 
+\end{DoxyReturn}
+\begin{DoxyWarning}{Warning}
+Once allocated the line, the two points P1 and P2 are dellacated!!!
+\end{DoxyWarning}
+
+
+Definition at line 62 of file geometry.\-c.
+
+
+
+References L\-I\-N\-E\-::begin, distance2\-D(), L\-I\-N\-E\-::end, P\-O\-I\-N\-T\-::index, L\-I\-N\-E\-::index, L\-I\-N\-E\-::length2d, new\-\_\-point(), t\-\_\-error(), P\-O\-I\-N\-T\-::x, P\-O\-I\-N\-T\-::y, and P\-O\-I\-N\-T\-::z.
+
+
+
+Referenced by extract\-\_\-linvector\-\_\-from\-\_\-linevector(), get\-\_\-line(), new\-\_\-horizontal\-\_\-line\-\_\-from\-\_\-raster(), new\-\_\-line\-\_\-from\-\_\-line(), new\-\_\-vertical\-\_\-line\-\_\-from\-\_\-raster(), and read\-\_\-linevector().
+
+\hypertarget{geometry_8c_a3e74bec1227ed7fad579095dca7841f1}{\index{geometry.\-c@{geometry.\-c}!new\-\_\-linevector@{new\-\_\-linevector}}
+\index{new\-\_\-linevector@{new\-\_\-linevector}!geometry.c@{geometry.\-c}}
+\subsubsection[{new\-\_\-linevector}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\-I\-N\-E\-V\-E\-C\-T\-O\-R}$\ast$ new\-\_\-linevector (
+\begin{DoxyParamCaption}
+\item[{long}]{nh}
+\end{DoxyParamCaption}
+)}}\label{geometry_8c_a3e74bec1227ed7fad579095dca7841f1}
+\begin{DoxyAuthor}{Author}
+Emanuele Cordano 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+November 2008
+\end{DoxyDate}
+\begin{DoxyReturn}{Returns}
+allocates a line vector with nh elements
+\end{DoxyReturn}
+
+
+Definition at line 94 of file geometry.\-c.
+
+
+
+References L\-I\-N\-E\-V\-E\-C\-T\-O\-R\-::element, is\-Dynamic, L\-I\-N\-E\-V\-E\-C\-T\-O\-R\-::isdynamic, L\-I\-N\-E\-V\-E\-C\-T\-O\-R\-::nh, N\-L, L\-I\-N\-E\-V\-E\-C\-T\-O\-R\-::nl, N\-R\-\_\-\-E\-N\-D, and t\-\_\-error().
+
+
+
+Referenced by extract\-\_\-linvector\-\_\-from\-\_\-linevector(), get\-\_\-linevector(), get\-\_\-linevector\-\_\-from\-\_\-raster\-\_\-grid(), new\-\_\-linevector\-\_\-from\-\_\-linevector(), and read\-\_\-linevector().
+
+\hypertarget{geometry_8c_a49193cd7a27109da689dd26a0ce1fc75}{\index{geometry.\-c@{geometry.\-c}!new\-\_\-point@{new\-\_\-point}}
+\index{new\-\_\-point@{new\-\_\-point}!geometry.c@{geometry.\-c}}
+\subsubsection[{new\-\_\-point}]{\setlength{\rightskip}{0pt plus 5cm}{\bf P\-O\-I\-N\-T}$\ast$ new\-\_\-point (
+\begin{DoxyParamCaption}
+\item[{long}]{index, }
+\item[{double}]{x, }
+\item[{double}]{y, }
+\item[{double}]{z}
+\end{DoxyParamCaption}
+)}}\label{geometry_8c_a49193cd7a27109da689dd26a0ce1fc75}
+\begin{DoxyVerb}BGEOMETRY BUILDS THE MESH FROM A RASTER FOR THE BOUSSINESQ MODEL
+\end{DoxyVerb}
+ Key\-Palette Version 0.\-9375 K\-Mackenzie
+
+file \hyperlink{geometry_8c}{geometry.\-c}
+
+Copyright, 2009 Emanuele Cordano and Riccardo Rigon
+
+This file is part of B\-G\-E\-O\-M\-E\-T\-R\-Y. B\-G\-E\-O\-M\-E\-T\-R\-Y is free software\-: you can redistribute it and/or modify it under the terms of the G\-N\-U General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
+
+B\-G\-E\-O\-M\-E\-T\-R\-Y is distributed in the hope that it will be useful, but W\-I\-T\-H\-O\-U\-T A\-N\-Y W\-A\-R\-R\-A\-N\-T\-Y; without even the implied warranty of M\-E\-R\-C\-H\-A\-N\-T\-A\-B\-I\-L\-I\-T\-Y or F\-I\-T\-N\-E\-S\-S F\-O\-R A P\-A\-R\-T\-I\-C\-U\-L\-A\-R P\-U\-R\-P\-O\-S\-E. See the G\-N\-U General Public License for more details.
+
+You should have received a copy of the G\-N\-U General Public License along with this program. If not, see \href{http://www.gnu.org/licenses/}{\tt http\-://www.\-gnu.\-org/licenses/}. \begin{DoxyAuthor}{Author}
+Emanuele Cordano 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+October 2008
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em index} & -\/ (long) point index \\
+\hline
+{\em x} & -\/ (double) x coordinate \\
+\hline
+{\em y} & -\/ (doulbe) y coordinate \\
+\hline
+{\em z} & -\/ (double) z coordinate\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+cretes a new point with fixed coordinates and index (Point Attributes are not allocated!!)
+\end{DoxyReturn}
+
+
+Definition at line 29 of file geometry.\-c.
+
+
+
+References P\-O\-I\-N\-T\-::index, t\-\_\-error(), P\-O\-I\-N\-T\-::x, P\-O\-I\-N\-T\-::y, and P\-O\-I\-N\-T\-::z.
+
+
+
+Referenced by get\-\_\-line(), get\-\_\-polygon(), new\-\_\-line\-\_\-from\-\_\-points(), new\-\_\-point\-\_\-from\-\_\-point(), new\-\_\-point\-\_\-from\-\_\-raster(), new\-\_\-polygon\-\_\-from\-\_\-a\-\_\-linevector(), read\-\_\-linevector(), and read\-\_\-polygon().
+
+\hypertarget{geometry_8c_a249283b40c80bec62d22c49f1160ceb1}{\index{geometry.\-c@{geometry.\-c}!new\-\_\-polygon\-\_\-from\-\_\-a\-\_\-linevector@{new\-\_\-polygon\-\_\-from\-\_\-a\-\_\-linevector}}
+\index{new\-\_\-polygon\-\_\-from\-\_\-a\-\_\-linevector@{new\-\_\-polygon\-\_\-from\-\_\-a\-\_\-linevector}!geometry.c@{geometry.\-c}}
+\subsubsection[{new\-\_\-polygon\-\_\-from\-\_\-a\-\_\-linevector}]{\setlength{\rightskip}{0pt plus 5cm}{\bf P\-O\-L\-Y\-G\-O\-N}$\ast$ new\-\_\-polygon\-\_\-from\-\_\-a\-\_\-linevector (
+\begin{DoxyParamCaption}
+\item[{{\bf L\-I\-N\-E\-V\-E\-C\-T\-O\-R} $\ast$}]{lines, }
+\item[{{\bf P\-O\-I\-N\-T} $\ast$}]{centroid}
+\end{DoxyParamCaption}
+)}}\label{geometry_8c_a249283b40c80bec62d22c49f1160ceb1}
+\begin{DoxyAuthor}{Author}
+Emanuele Cordano, Davide Giacomelli 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+October 2008
+\end{DoxyDate}
+
+\begin{DoxyParams}{Parameters}
+{\em lines} & -\/ (\hyperlink{struct_l_i_n_e_v_e_c_t_o_r}{L\-I\-N\-E\-V\-E\-C\-T\-O\-R} $\ast$) a vector of lines \\
+\hline
+{\em centrod} & -\/ (\hyperlink{struct_p_o_i_n_t}{P\-O\-I\-N\-T} $\ast$) the centroid of the polygon\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+creates a polygon with edges taken by the line vector (Polygon Attributes are not allocated!!)
+\end{DoxyReturn}
+
+
+Definition at line 145 of file geometry.\-c.
+
+
+
+References P\-O\-L\-Y\-G\-O\-N\-::area2\-D, area2d(), L\-I\-N\-E\-::begin, P\-O\-L\-Y\-G\-O\-N\-::centroid, P\-O\-L\-Y\-G\-O\-N\-::edge\-\_\-indices, L\-I\-N\-E\-V\-E\-C\-T\-O\-R\-::element, L\-I\-N\-E\-::end, free\-\_\-longvector(), P\-O\-I\-N\-T\-::index, L\-I\-N\-E\-::index, P\-O\-L\-Y\-G\-O\-N\-::index, new\-\_\-longvector(), new\-\_\-point(), L\-I\-N\-E\-V\-E\-C\-T\-O\-R\-::nh, L\-I\-N\-E\-V\-E\-C\-T\-O\-R\-::nl, query\-\_\-freq\-\_\-longvector(), segment\-\_\-intersection\-\_\-occurence(), t\-\_\-error(), P\-O\-I\-N\-T\-::x, P\-O\-I\-N\-T\-::y, and P\-O\-I\-N\-T\-::z.
+
+
+
+Referenced by get\-\_\-polygon(), and new\-\_\-pixel\-\_\-from\-\_\-raster().
+
+\hypertarget{geometry_8c_a52f72d805ab7de74072297b0487c10cc}{\index{geometry.\-c@{geometry.\-c}!new\-\_\-polygonvector@{new\-\_\-polygonvector}}
+\index{new\-\_\-polygonvector@{new\-\_\-polygonvector}!geometry.c@{geometry.\-c}}
+\subsubsection[{new\-\_\-polygonvector}]{\setlength{\rightskip}{0pt plus 5cm}{\bf P\-O\-L\-Y\-G\-O\-N\-V\-E\-C\-T\-O\-R}$\ast$ new\-\_\-polygonvector (
+\begin{DoxyParamCaption}
+\item[{long}]{nh}
+\end{DoxyParamCaption}
+)}}\label{geometry_8c_a52f72d805ab7de74072297b0487c10cc}
+\begin{DoxyAuthor}{Author}
+Emanuele Cordano 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+November 2008
+\end{DoxyDate}
+\begin{DoxyReturn}{Returns}
+allocates a polygon vector with nh elements
+\end{DoxyReturn}
+
+
+Definition at line 119 of file geometry.\-c.
+
+
+
+References P\-O\-L\-Y\-G\-O\-N\-V\-E\-C\-T\-O\-R\-::element, is\-Dynamic, P\-O\-L\-Y\-G\-O\-N\-V\-E\-C\-T\-O\-R\-::isdynamic, P\-O\-L\-Y\-G\-O\-N\-V\-E\-C\-T\-O\-R\-::nh, N\-L, P\-O\-L\-Y\-G\-O\-N\-V\-E\-C\-T\-O\-R\-::nl, N\-R\-\_\-\-E\-N\-D, and t\-\_\-error().
+
+
+
+Referenced by get\-\_\-polygonvector(), get\-\_\-polygonvector\-\_\-from\-\_\-raster(), new\-\_\-polygonvector\-\_\-from\-\_\-polygonvector(), and read\-\_\-polygonvector().
+

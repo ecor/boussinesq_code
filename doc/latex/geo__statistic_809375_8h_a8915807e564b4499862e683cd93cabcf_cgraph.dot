@@ -1,0 +1,11 @@
+digraph "gamma2"
+{
+  bgcolor="transparent";
+  edge [fontname="FreeSans",fontsize="10",labelfontname="FreeSans",labelfontsize="10"];
+  node [fontname="FreeSans",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="gamma2",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="gamma2",height=0.2,width=0.4,color="black",URL="$geo__statistic_809375_8c.html#a8915807e564b4499862e683cd93cabcf"];
+  Node2 -> Node2 [color="midnightblue",fontsize="10",style="solid"];
+}
