@@ -30,11 +30,12 @@
       <section>
         <p>The Boussinesq Model</p>
 
-<p>This code implements a new conservative finite-volume numerical solution for the two-dimensional groundwater flow (Boussinesq) equation, which can be used for investigations of hillslope subsurface flow processes and simulations of catchment hydrology. The Boussinesq equation, which is integrated for each grid element, can take account of the local variations of topography and soil properties within the individual elements. The numerical method allows for wetting and drying of the water table, without “ad hoc assumptions.” The stability and convergence of the method is shown to be guaranteed a priori by the properties of the solver itself, even with respect to the boundary conditions, an aspect that has been neglected in previous literature. The numeric solutions were validated against some approximate analytical solutions and compared to those of another (1-D) numerical solver of the Boussinesq equation. Further theoretical details are now available on <a href="http://onlinelibrary.wiley.com/doi/10.1002/wrcr.20072/abstract">http://onlinelibrary.wiley.com/doi/10.1002/wrcr.20072/abstract</a> .</p>
+<p>This code implements a new conservative finite-volume numerical solution for the two-dimensional groundwater flow (Boussinesq) equation, which can be used for investigations of hillslope subsurface flow processes and simulations of catchment hydrology. The Boussinesq equation, which is integrated for each grid element, can take account of the local variations of topography and soil properties within the individual elements. The numerical method allows for wetting and drying of the water table, without “ad hoc assumptions.” The stability and convergence of the method is shown to be guaranteed a priori by the properties of the solver itself, even with respect to the boundary conditions, an aspect that has been neglected in previous literature. The numeric solutions were validated against some approximate analytical solutions and compared to those of another (1-D) numerical solver of the Boussinesq equation. Further theoretical details are now available on <a href="http://onlinelibrary.wiley.com/doi/10.1002/wrcr.20072/abstract">http://onlinelibrary.wiley.com/doi/10.1002/wrcr.20072/abstract</a> or can be asked the authors (<a href="mailto:emanuele.cordano@gmail.com">emanuele.cordano@gmail.com</a>) without any hesitation.</p>
 
-<p>Brief Historical Introduction </p>
+<hr><p>Brief Historical Introduction </p>
 
-<p>The earliest drafts of code were borm from an idea of Dr. Emanuele Cordano, Prof. Riccardo Rigon and Prof. Vincenzo Casulli about numerical methods for solving groundwater equation  preserving the mass conservation principle and taking into account the possible variability of bedrock topograhy and soil properties within the integration cell. </p>
+<p>The earliest drafts of code were borm from an idea of Dr. Emanuele Cordano, Prof. Riccardo Rigon and Prof. Vincenzo Casulli (University of Trento) about numerical methods for solving groundwater equation  preserving the mass conservation principle and taking into account the possible variability of bedrock topograhy and soil properties within the integration cell. 
+Some of the first 2009/2010 informal presentations introduce the physical problem and are available here. </p>
 
 <p>
   
@@ -43,13 +44,18 @@
 <a href="http://www.slideshare.net/EmanueleCordano/boussinesq-real-bookv3" title="Double-grid 2D solver for Boussinesq Equation (BEq) ... Draft" target="_blank">Double-grid 2D solver for Boussinesq Equation (BEq) ... Draft </a> </strong> from <strong><a href="http://www.slideshare.net/EmanueleCordano" target="_blank">Emanuele Cordano</a></strong> </div>
 
 
-<p>Code </p>
+<p>
+  </p><div> <strong> <a href="http://www.slideshare.net/posterVienna/coupledmodel" title="CoupledModel" target="_blank">CoupledModel</a> </strong> from <strong><a href="http://www.slideshare.net/posterVienna" target="_blank">posterVienna</a></strong> </div>
 
-<p>Doxygen documentation of the code is available on the subdirectory "doc" and on <a href="https://github.com/ecor/boussinesq/blob/master/doc/html/index.html">https://github.com/ecor/boussinesq/blob/master/doc/html/index.html</a></p>
 
-<p>Instructions for Usage </p>
+<hr><p>Code </p>
 
-<p>This automatic page generator is the easiest way to create beautiful pages for all of your projects. Author your page content here using GitHub Flavored Markdown, select a template crafted by a designer, and publish. After your page is generated, you can check out the new branch:</p>
+<p>The code is available with GPL 3.0 license (<a href="http://www.gnu.org">www.gnu.org</a>) and can be downloaded via GitHUb. A Doxygen-generated documentation of the code is available on the subdirectory "doc" and on <a href="https://github.com/ecor/boussinesq/blob/master/doc/html/index.html">https://github.com/ecor/boussinesq/blob/master/doc/html/index.html</a> . The source code is mostly written in C using FluidTurtle formalism (Rigon et al., 1990s, <a href="http://www.ing.unitn.it/%7Erigon/fluidturtles_new/html/menu.htm">http://www.ing.unitn.it/~rigon/fluidturtles_new/html/menu.htm</a>). </p>
+
+<hr><p>Instructions for Usage </p>
+
+<p>This section is UNDER CONSTRUSCTION.
+This automatic page generator is the easiest way to create beautiful pages for all of your projects. Author your page content here using GitHub Flavored Markdown, select a template crafted by a designer, and publish. After your page is generated, you can check out the new branch:</p>
 
 <pre><code>$ cd your_repo_root/repo_name
 $ git fetch origin
