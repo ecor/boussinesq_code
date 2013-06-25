@@ -400,11 +400,12 @@ The  solution  of (\ref{def_solver}) is unique and can be implemented   \citep{C
 	long time_0=0;
 	long time_1=0;
 	double elapsed;
+	double volume_term=0.0,be_term=0.0;
 #ifdef WRITE_ITERATION_NUMBER
 	char *LOG_FILE_NAME=join_strings(wpath,"boussinesq_iterations.log");
 	long kcnt=0;
 	FILE *FILE_LOG;
-	double volume_term=0.0,be_term=0.0;
+
 	FILE_LOG=fopen(LOG_FILE_NAME,"a");
 #endif
 	double initial_residual;
