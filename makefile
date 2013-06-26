@@ -3,9 +3,9 @@
 #################################################################################
 # Author: Emanuele Cordano
 # Date:   24 jun 2013
-# Comment: The binary will be created in the same folder where the makefile is.
+# Comment: The binary executable file will be created as ./bin/boussinesq
 
-# link: http://stackoverflow.com/questions/15965390/simple-makefile-not-taking-include-path
+
 SHELL = /bin/sh
 CC=gcc
 CFLAGS=-g -Wall
